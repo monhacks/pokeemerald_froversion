@@ -264,16 +264,16 @@ static void Task_OptionMenuFadeIn(u8 taskId)
 
 static void Task_OptionMenuProcessInput(u8 taskId)
 {
-    if (gMain.newKeys & A_BUTTON)
+    if (JOY_NEW(A_BUTTON))
     {
         if (gTasks[taskId].data[TD_MENUSELECTION] == MENUITEM_CANCEL)
             gTasks[taskId].func = Task_OptionMenuSave;
     }
-    else if (gMain.newKeys & B_BUTTON)
+    else if (JOY_NEW(B_BUTTON))
     {
         gTasks[taskId].func = Task_OptionMenuSave;
     }
-    else if (gMain.newKeys & DPAD_UP)
+    else if (JOY_NEW(DPAD_UP))
     {
         if (gTasks[taskId].data[TD_MENUSELECTION] > 0)
             gTasks[taskId].data[TD_MENUSELECTION]--;
@@ -281,7 +281,7 @@ static void Task_OptionMenuProcessInput(u8 taskId)
             gTasks[taskId].data[TD_MENUSELECTION] = MENUITEM_CANCEL;
         HighlightOptionMenuItem(gTasks[taskId].data[TD_MENUSELECTION]);
     }
-    else if (gMain.newKeys & DPAD_DOWN)
+    else if (JOY_NEW(DPAD_DOWN))
     {
         if (gTasks[taskId].data[TD_MENUSELECTION] < MENUITEM_CANCEL)
             gTasks[taskId].data[TD_MENUSELECTION]++;
@@ -390,7 +390,7 @@ static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style)
 
 static u8 TextSpeed_ProcessInput(u8 selection)
 {
-    if (gMain.newKeys & DPAD_RIGHT)
+    if (JOY_NEW(DPAD_RIGHT))
     {
         if (selection <= 1)
             selection++;
@@ -399,7 +399,7 @@ static u8 TextSpeed_ProcessInput(u8 selection)
 
         sArrowPressed = TRUE;
     }
-    if (gMain.newKeys & DPAD_LEFT)
+    if (JOY_NEW(DPAD_LEFT))
     {
         if (selection != 0)
             selection--;
@@ -436,7 +436,7 @@ static void TextSpeed_DrawChoices(u8 selection)
 
 static u8 BattleScene_ProcessInput(u8 selection)
 {
-    if (gMain.newKeys & (DPAD_LEFT | DPAD_RIGHT))
+    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
     {
         selection ^= 1;
         sArrowPressed = TRUE;
@@ -459,7 +459,7 @@ static void BattleScene_DrawChoices(u8 selection)
 
 static u8 Sound_ProcessInput(u8 selection)
 {
-    if (gMain.newKeys & (DPAD_LEFT | DPAD_RIGHT))
+    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
     {
         selection ^= 1;
         SetPokemonCryStereo(selection);
@@ -483,7 +483,7 @@ static void Sound_DrawChoices(u8 selection)
 
 static u8 FrameType_ProcessInput(u8 selection)
 {
-    if (gMain.newKeys & DPAD_RIGHT)
+    if (JOY_NEW(DPAD_RIGHT))
     {
         if (selection < WINDOW_FRAMES_COUNT - 1)
             selection++;
@@ -494,7 +494,7 @@ static u8 FrameType_ProcessInput(u8 selection)
         LoadPalette(GetWindowFrameTilesPal(selection)->pal, 0x70, 0x20);
         sArrowPressed = TRUE;
     }
-    if (gMain.newKeys & DPAD_LEFT)
+    if (JOY_NEW(DPAD_LEFT))
     {
         if (selection != 0)
             selection--;
@@ -541,7 +541,7 @@ static void FrameType_DrawChoices(u8 selection)
 
 static u8 ButtonMode_ProcessInput(u8 selection)
 {
-    if (gMain.newKeys & DPAD_RIGHT)
+    if (JOY_NEW(DPAD_RIGHT))
     {
         if (selection <= 1)
             selection++;
@@ -550,7 +550,7 @@ static u8 ButtonMode_ProcessInput(u8 selection)
 
         sArrowPressed = TRUE;
     }
-    if (gMain.newKeys & DPAD_LEFT)
+    if (JOY_NEW(DPAD_LEFT))
     {
         if (selection != 0)
             selection--;
