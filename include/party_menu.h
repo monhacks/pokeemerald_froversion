@@ -90,4 +90,6 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
+u16 GetAbilityLearnsetAbility(u16 species, u8 num);
+
 #endif // GUARD_PARTY_MENU_H

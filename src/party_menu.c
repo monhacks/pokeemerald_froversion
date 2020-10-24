@@ -6362,6 +6362,16 @@ void IsLastMonThatKnowsSurf(void)
 #include "constants/abilities.h"
 #include "data/pokemon/ability_sets.h"
 
+u16 GetAbilityLearnsetAbility(u16 species, u8 num)
+{
+    return sAbilitySetterLearnsets[species][num].ability;
+}
+
+static u8 GetAbilityLearnsetAbilityLevel(u16 species, u8 num)
+{
+    return sAbilitySetterLearnsets[species][num].level;
+}
+
 static u8 BuildAbilitySetterWindow(void)
 {
     struct WindowTemplate window;
@@ -6373,7 +6383,7 @@ static u8 BuildAbilitySetterWindow(void)
     u8 fontColorsId = 3;
     
     sPartyMenuInternal->numActions = 0;
-    while (level > sAbilitySetterLearnsets[species][sPartyMenuInternal->numActions].level && sAbilitySetterLearnsets[species][sPartyMenuInternal->numActions].ability != 0xFF)
+    while (level >= GetAbilityLearnsetAbilityLevel(species, sPartyMenuInternal->numActions) && GetAbilityLearnsetAbility(species, sPartyMenuInternal->numActions) != 0xFF)
         sPartyMenuInternal->numActions++;
     
     if (sPartyMenuInternal->numActions == 0)
@@ -6415,13 +6425,13 @@ static void Task_HandleAbilitySetter(u8 taskId)
         break;
     default:
         PlaySE(SE_SELECT);
-        
-        // to do - different ability setter
         index = Menu_GetCursorPos();
-        SetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_ABILITY_NUM, &index);
-        gTasks[taskId].func = CursorCb_Cancel1;
         
-        //sCursorOptions[sPartyMenuInternal->actions[input]].func(taskId);
+        
+        if (GetAbilityLearnsetAbility(GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES), index) != 0xFF)
+            SetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_ABILITY_NUM, &index);
+        
+        gTasks[taskId].func = CursorCb_Cancel1;
         break;
     }
 }

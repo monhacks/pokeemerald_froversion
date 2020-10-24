@@ -4159,10 +4159,12 @@ u8 GetMonsStateToDoubles_2(void)
 
 u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
 {
+    gLastUsedAbility = GetAbilityLearnsetAbility(species, abilityNum);
+    /*
     if (abilityNum)
         gLastUsedAbility = gBaseStats[species].abilities[1];
     else
-        gLastUsedAbility = gBaseStats[species].abilities[0];
+        gLastUsedAbility = gBaseStats[species].abilities[0];*/
 
     return gLastUsedAbility;
 }
