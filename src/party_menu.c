@@ -117,7 +117,7 @@ struct PartyMenuInternal
     u32 spriteIdCancelPokeball:7;
     u32 messageId:14;
     u8 windowId[3];
-    u8 actions[8];
+    u8 actions[9];
     u8 numActions;
     // In vanilla Emerald, only the first 0xB0 hwords (0x160 bytes) are actually used.
     // However, a full 0x100 hwords (0x200 bytes) are allocated.
@@ -399,6 +399,7 @@ static void CursorCb_Register(u8);
 static void CursorCb_Trade1(u8);
 static void CursorCb_Trade2(u8);
 static void CursorCb_Toss(u8);
+static void CursorCb_AbilitySetter(u8 taskId);
 static void CursorCb_FieldMove(u8);
 static bool8 SetUpFieldMove_Surf(void);
 static bool8 SetUpFieldMove_Fly(void);
@@ -2404,6 +2405,7 @@ void DisplayPartyMenuStdMessage(u32 stringId)
             break;
         case PARTY_MSG_RESTORE_WHICH_MOVE:
         case PARTY_MSG_BOOST_PP_WHICH_MOVE:
+        case PARTY_MSG_WHICH_ABILITY:
             *windowPtr = AddWindow(&sWhichMoveMsgWindowTemplate);
             break;
         case PARTY_MSG_ALREADY_HOLDING_ONE:
@@ -2559,6 +2561,8 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
         else
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_ITEM);
     }
+    
+    AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_ABILITY);
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_CANCEL1);
 }
 
@@ -6352,3 +6356,96 @@ void IsLastMonThatKnowsSurf(void)
             gSpecialVar_Result = TRUE;
     }
 }
+
+////////////////////////
+//// ABILITY SETTER ////
+#include "constants/abilities.h"
+#include "data/pokemon/ability_sets.h"
+
+static u8 BuildAbilitySetterWindow(void)
+{
+    struct WindowTemplate window;
+    u8 cursorDimension;
+    u8 fontAttribute;
+    u8 i;
+    u16 species = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES);
+    u8 level = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_LEVEL);
+    u8 fontColorsId = 3;
+    
+    sPartyMenuInternal->numActions = 0;
+    while (level > sAbilitySetterLearnsets[species][sPartyMenuInternal->numActions].level && sAbilitySetterLearnsets[species][sPartyMenuInternal->numActions].ability != 0xFF)
+        sPartyMenuInternal->numActions++;
+    
+    if (sPartyMenuInternal->numActions == 0)
+        return 0xFF;
+    
+    sPartyMenuInternal->numActions++;   //cancel
+    SetWindowTemplateFields(&window, 2, 19, 19 - (sPartyMenuInternal->numActions * 2), 10, sPartyMenuInternal->numActions * 2, 14, 0x2E9);
+    sPartyMenuInternal->windowId[0] = AddWindow(&window);
+    DrawStdFrameWithCustomTileAndPalette(sPartyMenuInternal->windowId[0], FALSE, 0x4F, 13);
+    cursorDimension = GetMenuCursorDimensionByFont(1, 0);
+    fontAttribute = GetFontAttribute(1, 2);
+
+    for (i = 0; i < (sPartyMenuInternal->numActions - 1); i++)
+    {
+        AddTextPrinterParameterized4(sPartyMenuInternal->windowId[0], 1, cursorDimension, (i * 16) + 1, fontAttribute, 0, sFontColorTable[fontColorsId], 0, gAbilityNames[sAbilitySetterLearnsets[species][i].ability]);
+    }
+    AddTextPrinterParameterized4(sPartyMenuInternal->windowId[0], 1, cursorDimension, (i * 16) + 1, fontAttribute, 0, sFontColorTable[fontColorsId], 0, gText_Cancel);
+
+    InitMenuInUpperLeftCorner(sPartyMenuInternal->windowId[0], sPartyMenuInternal->numActions, 0, 1);
+    ScheduleBgCopyTilemapToVram(2);
+
+    return sPartyMenuInternal->windowId[0];
+}
+
+static void Task_HandleAbilitySetter(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    u8 index;
+    
+    //data[0] = Menu_GetCursorPos();
+    switch (ProcessMenuInput_other())
+    {
+    case MENU_NOTHING_CHOSEN:
+        break;
+    case MENU_B_PRESSED:
+        PlaySE(SE_SELECT);
+        gTasks[taskId].func = CursorCb_Cancel1;
+        //sCursorOptions[sPartyMenuInternal->actions[sPartyMenuInternal->numActions - 1]].func(taskId);
+        break;
+    default:
+        PlaySE(SE_SELECT);
+        
+        // to do - different ability setter
+        index = Menu_GetCursorPos();
+        SetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_ABILITY_NUM, &index);
+        gTasks[taskId].func = CursorCb_Cancel1;
+        
+        //sCursorOptions[sPartyMenuInternal->actions[input]].func(taskId);
+        break;
+    }
+}
+
+static void CursorCb_AbilitySetter(u8 taskId)
+{   
+    PlaySE(SE_SELECT);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
+    
+    if (BuildAbilitySetterWindow() == 0xFF)
+    {
+        // mon has no abilities
+        if (gPartyMenu.menuType == PARTY_MENU_TYPE_DAYCARE)
+            DisplayPartyMenuStdMessage(PARTY_MSG_CHOOSE_MON_2);
+        else
+            DisplayPartyMenuStdMessage(PARTY_MSG_CHOOSE_MON);
+        
+        gTasks[taskId].func = Task_HandleChooseMonInput;
+        return;
+    }
+    
+    DisplayPartyMenuStdMessage(PARTY_MSG_WHICH_ABILITY);
+    gTasks[taskId].data[0] = 0xFF;
+    gTasks[taskId].func = Task_HandleAbilitySetter;
+}
+
