@@ -2,7 +2,7 @@
 
 struct AbilitySetter
 {
-    u8 ability;
+    u16 ability;
     u8 level;
 };
 
@@ -10,10 +10,6 @@ static const struct AbilitySetter sBulbasaurAbilitySet[] =
 {
     {ABILITY_OVERGROW, 1},
     {ABILITY_CHLOROPHYLL, 10},
-    //testing
-    {ABILITY_WONDER_GUARD, 11},
-    {ABILITY_DROUGHT, 13},
-    {ABILITY_DRIZZLE, 14},
     ABILITY_SET_END
 };
 

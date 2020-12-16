@@ -5291,6 +5291,9 @@ BattleScript_LevelUp::
 	printstring STRINGID_PKMNGREWTOLV
 	setbyte sLVLBOX_STATE, 0x0
 	drawlvlupbox
+	tryunlockability BattleScript_LevelUpLearnMove
+	printstring STRINGID_UNLOCKABILITY	
+BattleScript_LevelUpLearnMove:
 	handlelearnnewmove BattleScript_LearnedNewMove, BattleScript_LearnMoveReturn, TRUE
 	goto BattleScript_AskToLearnMove
 BattleScript_TryLearnMoveLoop::

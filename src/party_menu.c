@@ -340,6 +340,8 @@ static void DisplayLevelUpStatsPg1(u8);
 static void Task_DisplayLevelUpStatsPg2(u8);
 static void DisplayLevelUpStatsPg2(u8);
 static void Task_TryLearnNewMoves(u8);
+static void Task_PartyMenuTryUnlockAbility(u8);
+static void Task_PartyMenuUnlockAbility(u8);
 static void PartyMenuTryEvolution(u8);
 static void DisplayMonNeedsToReplaceMove(u8);
 static void DisplayMonLearnedMove(u8, u16);
@@ -4951,7 +4953,7 @@ static void Task_DisplayLevelUpStatsPg2(u8 taskId)
     {
         PlaySE(SE_SELECT);
         DisplayLevelUpStatsPg2(taskId);
-        gTasks[taskId].func = Task_TryLearnNewMoves;
+        gTasks[taskId].func = Task_PartyMenuTryUnlockAbility;
     }
 }
 
@@ -4974,30 +4976,60 @@ static void DisplayLevelUpStatsPg2(u8 taskId)
     ScheduleBgCopyTilemapToVram(2);
 }
 
+static void Task_PartyMenuTryUnlockAbility(u8 taskId)
+{
+    if (WaitFanfare(0) && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
+    {
+        u16 species = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES, 0);
+        u8 level = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_LEVEL, NULL);
+        u32 num = 0;
+        
+        RemoveLevelUpStatsWindow();
+        do {
+            if (GetAbilityLearnsetAbilityLevel(species, num) == level)
+            {
+                StringCopy(gStringVar2, gAbilityNames[GetAbilityLearnsetAbility(species, num)]);
+                PlayFanfare(MUS_LEVEL_UP);
+                StringExpandPlaceholders(gStringVar4, gText_UnlockedAbility);
+                DisplayPartyMenuMessage(gStringVar4, TRUE);
+                ScheduleBgCopyTilemapToVram(2);
+                gTasks[taskId].func = Task_PartyMenuUnlockAbility;
+                return;
+            }
+            num++;
+        } while(GetAbilityLearnsetAbility(species, num) != 0xFF);
+        
+        gTasks[taskId].func = Task_TryLearnNewMoves;
+    }
+}
+
+static void Task_PartyMenuUnlockAbility(u8 taskId)
+{
+    if (WaitFanfare(0) && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
+        gTasks[taskId].func = Task_TryLearnNewMoves;
+}
+
 static void Task_TryLearnNewMoves(u8 taskId)
 {
     u16 learnMove;
 
-    if (WaitFanfare(0) && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
+    //RemoveLevelUpStatsWindow();
+    learnMove = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], TRUE);
+    gPartyMenu.learnMoveState = 1;
+    switch (learnMove)
     {
-        RemoveLevelUpStatsWindow();
-        learnMove = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], TRUE);
-        gPartyMenu.learnMoveState = 1;
-        switch (learnMove)
-        {
-        case 0: // No moves to learn
-            PartyMenuTryEvolution(taskId);
-            break;
-        case MON_HAS_MAX_MOVES:
-            DisplayMonNeedsToReplaceMove(taskId);
-            break;
-        case MON_ALREADY_KNOWS_MOVE:
-            gTasks[taskId].func = Task_TryLearningNextMove;
-            break;
-        default:
-            DisplayMonLearnedMove(taskId, learnMove);
-            break;
-        }
+    case 0: // No moves to learn
+        PartyMenuTryEvolution(taskId);
+        break;
+    case MON_HAS_MAX_MOVES:
+        DisplayMonNeedsToReplaceMove(taskId);
+        break;
+    case MON_ALREADY_KNOWS_MOVE:
+        gTasks[taskId].func = Task_TryLearningNextMove;
+        break;
+    default:
+        DisplayMonLearnedMove(taskId, learnMove);
+        break;
     }
 }
 
@@ -6370,7 +6402,7 @@ u16 GetAbilityLearnsetAbility(u16 species, u8 num)
     return sAbilitySetterLearnsets[species][num].ability;
 }
 
-static u8 GetAbilityLearnsetAbilityLevel(u16 species, u8 num)
+u8 GetAbilityLearnsetAbilityLevel(u16 species, u8 num)
 {
     return sAbilitySetterLearnsets[species][num].level;
 }
