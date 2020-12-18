@@ -1760,6 +1760,11 @@
 	various BS_ABILITY_BATTLER, VARIOUS_DESTROY_ABILITY_POPUP
 	.endm
 	
+	.macro tryunlockability ptr:req
+	various BS_ATTACKER, VARIOUS_TRY_UNLOCK_ABILITY
+	.4byte \ptr
+	.endm
+	
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER \stat | \stages << 3 | \down << 7

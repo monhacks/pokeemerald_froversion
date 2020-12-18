@@ -117,7 +117,7 @@ struct PartyMenuInternal
     u32 spriteIdCancelPokeball:7;
     u32 messageId:14;
     u8 windowId[3];
-    u8 actions[8];
+    u8 actions[9];
     u8 numActions;
     // In vanilla Emerald, only the first 0xB0 hwords (0x160 bytes) are actually used.
     // However, a full 0x100 hwords (0x200 bytes) are allocated.
@@ -340,6 +340,8 @@ static void DisplayLevelUpStatsPg1(u8);
 static void Task_DisplayLevelUpStatsPg2(u8);
 static void DisplayLevelUpStatsPg2(u8);
 static void Task_TryLearnNewMoves(u8);
+static void Task_PartyMenuTryUnlockAbility(u8);
+static void Task_PartyMenuUnlockAbility(u8);
 static void PartyMenuTryEvolution(u8);
 static void DisplayMonNeedsToReplaceMove(u8);
 static void DisplayMonLearnedMove(u8, u16);
@@ -399,6 +401,7 @@ static void CursorCb_Register(u8);
 static void CursorCb_Trade1(u8);
 static void CursorCb_Trade2(u8);
 static void CursorCb_Toss(u8);
+static void CursorCb_AbilitySetter(u8 taskId);
 static void CursorCb_FieldMove(u8);
 static bool8 SetUpFieldMove_Surf(void);
 static bool8 SetUpFieldMove_Fly(void);
@@ -2404,6 +2407,7 @@ void DisplayPartyMenuStdMessage(u32 stringId)
             break;
         case PARTY_MSG_RESTORE_WHICH_MOVE:
         case PARTY_MSG_BOOST_PP_WHICH_MOVE:
+        case PARTY_MSG_WHICH_ABILITY:
             *windowPtr = AddWindow(&sWhichMoveMsgWindowTemplate);
             break;
         case PARTY_MSG_ALREADY_HOLDING_ONE:
@@ -2559,6 +2563,8 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
         else
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_ITEM);
     }
+    
+    AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_ABILITY);
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_CANCEL1);
 }
 
@@ -5047,7 +5053,7 @@ static void Task_DisplayLevelUpStatsPg2(u8 taskId)
     {
         PlaySE(SE_SELECT);
         DisplayLevelUpStatsPg2(taskId);
-        gTasks[taskId].func = Task_TryLearnNewMoves;
+        gTasks[taskId].func = Task_PartyMenuTryUnlockAbility;
     }
 }
 
@@ -5070,30 +5076,60 @@ static void DisplayLevelUpStatsPg2(u8 taskId)
     ScheduleBgCopyTilemapToVram(2);
 }
 
+static void Task_PartyMenuTryUnlockAbility(u8 taskId)
+{
+    if (WaitFanfare(0) && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
+    {
+        u16 species = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES, 0);
+        u8 level = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_LEVEL, NULL);
+        u32 num = 0;
+        
+        RemoveLevelUpStatsWindow();
+        do {
+            if (GetAbilityLearnsetAbilityLevel(species, num) == level)
+            {
+                StringCopy(gStringVar2, gAbilityNames[GetAbilityLearnsetAbility(species, num)]);
+                PlayFanfare(MUS_LEVEL_UP);
+                StringExpandPlaceholders(gStringVar4, gText_UnlockedAbility);
+                DisplayPartyMenuMessage(gStringVar4, TRUE);
+                ScheduleBgCopyTilemapToVram(2);
+                gTasks[taskId].func = Task_PartyMenuUnlockAbility;
+                return;
+            }
+            num++;
+        } while(GetAbilityLearnsetAbility(species, num) != 0xFF);
+        
+        gTasks[taskId].func = Task_TryLearnNewMoves;
+    }
+}
+
+static void Task_PartyMenuUnlockAbility(u8 taskId)
+{
+    if (WaitFanfare(0) && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
+        gTasks[taskId].func = Task_TryLearnNewMoves;
+}
+
 static void Task_TryLearnNewMoves(u8 taskId)
 {
     u16 learnMove;
 
-    if (WaitFanfare(0) && ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON))))
+    //RemoveLevelUpStatsWindow();
+    learnMove = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], TRUE);
+    gPartyMenu.learnMoveState = 1;
+    switch (learnMove)
     {
-        RemoveLevelUpStatsWindow();
-        learnMove = MonTryLearningNewMove(&gPlayerParty[gPartyMenu.slotId], TRUE);
-        gPartyMenu.learnMoveState = 1;
-        switch (learnMove)
-        {
-        case 0: // No moves to learn
-            PartyMenuTryEvolution(taskId);
-            break;
-        case MON_HAS_MAX_MOVES:
-            DisplayMonNeedsToReplaceMove(taskId);
-            break;
-        case MON_ALREADY_KNOWS_MOVE:
-            gTasks[taskId].func = Task_TryLearningNextMove;
-            break;
-        default:
-            DisplayMonLearnedMove(taskId, learnMove);
-            break;
-        }
+    case 0: // No moves to learn
+        PartyMenuTryEvolution(taskId);
+        break;
+    case MON_HAS_MAX_MOVES:
+        DisplayMonNeedsToReplaceMove(taskId);
+        break;
+    case MON_ALREADY_KNOWS_MOVE:
+        gTasks[taskId].func = Task_TryLearningNextMove;
+        break;
+    default:
+        DisplayMonLearnedMove(taskId, learnMove);
+        break;
     }
 }
 
@@ -6455,3 +6491,106 @@ void IsLastMonThatKnowsSurf(void)
             gSpecialVar_Result = TRUE;
     }
 }
+
+////////////////////////
+//// ABILITY SETTER ////
+#include "constants/abilities.h"
+#include "data/pokemon/ability_sets.h"
+
+u16 GetAbilityLearnsetAbility(u16 species, u8 num)
+{
+    return sAbilitySetterLearnsets[species][num].ability;
+}
+
+u8 GetAbilityLearnsetAbilityLevel(u16 species, u8 num)
+{
+    return sAbilitySetterLearnsets[species][num].level;
+}
+
+static u8 BuildAbilitySetterWindow(void)
+{
+    struct WindowTemplate window;
+    u8 cursorDimension;
+    u8 fontAttribute;
+    u8 i;
+    u16 species = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES);
+    u8 level = GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_LEVEL);
+    u8 fontColorsId = 3;
+    
+    sPartyMenuInternal->numActions = 0;
+    while (level >= GetAbilityLearnsetAbilityLevel(species, sPartyMenuInternal->numActions) && GetAbilityLearnsetAbility(species, sPartyMenuInternal->numActions) != 0xFF)
+        sPartyMenuInternal->numActions++;
+    
+    if (sPartyMenuInternal->numActions == 0)
+        return 0xFF;
+    
+    sPartyMenuInternal->numActions++;   //cancel
+    SetWindowTemplateFields(&window, 2, 19, 19 - (sPartyMenuInternal->numActions * 2), 10, sPartyMenuInternal->numActions * 2, 14, 0x2E9);
+    sPartyMenuInternal->windowId[0] = AddWindow(&window);
+    DrawStdFrameWithCustomTileAndPalette(sPartyMenuInternal->windowId[0], FALSE, 0x4F, 13);
+    cursorDimension = GetMenuCursorDimensionByFont(1, 0);
+    fontAttribute = GetFontAttribute(1, 2);
+
+    for (i = 0; i < (sPartyMenuInternal->numActions - 1); i++)
+    {
+        AddTextPrinterParameterized4(sPartyMenuInternal->windowId[0], 1, cursorDimension, (i * 16) + 1, fontAttribute, 0, sFontColorTable[fontColorsId], 0, gAbilityNames[sAbilitySetterLearnsets[species][i].ability]);
+    }
+    AddTextPrinterParameterized4(sPartyMenuInternal->windowId[0], 1, cursorDimension, (i * 16) + 1, fontAttribute, 0, sFontColorTable[fontColorsId], 0, gText_Cancel);
+
+    InitMenuInUpperLeftCorner(sPartyMenuInternal->windowId[0], sPartyMenuInternal->numActions, 0, 1);
+    ScheduleBgCopyTilemapToVram(2);
+
+    return sPartyMenuInternal->windowId[0];
+}
+
+static void Task_HandleAbilitySetter(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    u8 index;
+    
+    //data[0] = Menu_GetCursorPos();
+    switch (ProcessMenuInput_other())
+    {
+    case MENU_NOTHING_CHOSEN:
+        break;
+    case MENU_B_PRESSED:
+        PlaySE(SE_SELECT);
+        gTasks[taskId].func = CursorCb_Cancel1;
+        //sCursorOptions[sPartyMenuInternal->actions[sPartyMenuInternal->numActions - 1]].func(taskId);
+        break;
+    default:
+        PlaySE(SE_SELECT);
+        index = Menu_GetCursorPos();
+        
+        
+        if (GetAbilityLearnsetAbility(GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_SPECIES), index) != 0xFF)
+            SetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_ABILITY_NUM, &index);
+        
+        gTasks[taskId].func = CursorCb_Cancel1;
+        break;
+    }
+}
+
+static void CursorCb_AbilitySetter(u8 taskId)
+{   
+    PlaySE(SE_SELECT);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
+    
+    if (BuildAbilitySetterWindow() == 0xFF)
+    {
+        // mon has no abilities
+        if (gPartyMenu.menuType == PARTY_MENU_TYPE_DAYCARE)
+            DisplayPartyMenuStdMessage(PARTY_MSG_CHOOSE_MON_2);
+        else
+            DisplayPartyMenuStdMessage(PARTY_MSG_CHOOSE_MON);
+        
+        gTasks[taskId].func = Task_HandleChooseMonInput;
+        return;
+    }
+    
+    DisplayPartyMenuStdMessage(PARTY_MSG_WHICH_ABILITY);
+    gTasks[taskId].data[0] = 0xFF;
+    gTasks[taskId].func = Task_HandleAbilitySetter;
+}
+

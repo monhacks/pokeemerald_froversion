@@ -8305,6 +8305,27 @@ static void Cmd_various(void)
     case VARIOUS_DESTROY_ABILITY_POPUP:
         DestroyAbilityPopUp(gActiveBattler);
         break;
+    case VARIOUS_TRY_UNLOCK_ABILITY:
+        {
+            u8 num = 0;
+            u16 species = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPECIES);
+            u8 level = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL);
+            do {
+                u32 abilityLevel = GetAbilityLearnsetAbilityLevel(species, num);
+                if (abilityLevel > level)
+                    break;
+                if (abilityLevel == level)
+                {
+                    PREPARE_ABILITY_BUFFER(gBattleTextBuff3, GetAbilityLearnsetAbility(species, num));
+                    PlayFanfare(MUS_LEVEL_UP);
+                    gBattlescriptCurrInstr += 7;
+                    return;
+                }
+                num++;
+            } while(GetAbilityLearnsetAbility(species, num) != 0xFF);
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);   //fail
+            return;
+        }
     }
 
     gBattlescriptCurrInstr += 3;

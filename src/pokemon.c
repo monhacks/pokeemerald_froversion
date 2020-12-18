@@ -2267,11 +2267,12 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, &iv);
     }
 
+    /* all mons start with ability 1
     if (gBaseStats[species].abilities[1])
     {
         value = personality & 1;
         SetBoxMonData(boxMon, MON_DATA_ABILITY_NUM, &value);
-    }
+    }*/
 
     GiveBoxMonInitialMoveset(boxMon);
 }
@@ -4169,10 +4170,12 @@ u8 GetMonsStateToDoubles_2(void)
 
 u16 GetAbilityBySpecies(u16 species, u8 abilityNum)
 {
+    gLastUsedAbility = GetAbilityLearnsetAbility(species, abilityNum);
+    /*
     if (abilityNum)
         gLastUsedAbility = gBaseStats[species].abilities[1];
     else
-        gLastUsedAbility = gBaseStats[species].abilities[0];
+        gLastUsedAbility = gBaseStats[species].abilities[0];*/
 
     return gLastUsedAbility;
 }
