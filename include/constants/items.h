@@ -656,7 +656,35 @@
 #define ITEM_SHINY_CHARM 566
 #define ITEM_OVAL_CHARM 567
 
-#define ITEMS_COUNT 568
+// Mints
+#define ITEM_ADAMANT_MINT        568
+#define ITEM_BOLD_MINT           569
+#define ITEM_BRAVE_MINT          570
+#define ITEM_CALM_MINT           571
+#define ITEM_CAREFUL_MINT        572
+#define ITEM_GENTLE_MINT         573
+#define ITEM_HASTY_MINT          574
+#define ITEM_IMPISH_MINT         575
+#define ITEM_JOLLY_MINT          576
+#define ITEM_LAX_MINT            577
+#define ITEM_LONELY_MINT         578
+#define ITEM_MILD_MINT           579
+#define ITEM_MODEST_MINT         580
+#define ITEM_NAIVE_MINT          581
+#define ITEM_NAUGHTY_MINT        582
+#define ITEM_QUIET_MINT          583
+#define ITEM_RASH_MINT           584
+#define ITEM_RELAXED_MINT        585
+#define ITEM_SASSY_MINT          586
+#define ITEM_SERIOUS_MINT        587
+#define ITEM_TIMID_MINT          589
+
+
+#define ITEMS_COUNT 590
+=======
+
+
+
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 #define FIRST_BERRY_INDEX             ITEM_CHERI_BERRY

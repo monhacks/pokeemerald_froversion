@@ -930,7 +930,7 @@ void LaunchAnimationTaskForBackSprite(struct Sprite *sprite, u8 backAnimSet)
     gTasks[taskId].tPtrLo = (u32)(sprite);
 
     battlerId = sprite->data[0];
-    nature = GetNature(&gPlayerParty[gBattlerPartyIndexes[battlerId]]);
+    nature = GetNature(&gPlayerParty[gBattlerPartyIndexes[battlerId]], FALSE);
 
     animId = 3 * backAnimSet + sBackAnimNatureModTable[nature];
     gTasks[taskId].tAnimId = sBackAnimationIds[animId];
@@ -1041,6 +1041,15 @@ static void sub_817F77C(struct Sprite *sprite)
         sprite->oam.matrixNum |= (sprite->hFlip << 3);
         sprite->oam.affineMode = ST_OAM_AFFINE_OFF;
     }
+#ifdef BUGFIX
+    else
+    {
+        // FIX: Reset these back to normal after they were changed so Poké Ball catch/release
+        // animations without a screen transition in between don't break
+        sprite->affineAnimPaused = FALSE;
+        sprite->affineAnims = gUnknown_082FF694;
+    }
+#endif // BUGFIX
 }
 
 static void pokemonanimfunc_01(struct Sprite *sprite)

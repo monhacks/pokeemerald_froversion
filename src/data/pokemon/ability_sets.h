@@ -10,6 +10,15 @@ static const struct AbilitySetter sBulbasaurAbilitySet[] =
 {
     {ABILITY_OVERGROW, 1},
     {ABILITY_CHLOROPHYLL, 10},
+    {ABILITY_SWARM, 20},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMudkipAbilitySet[] = 
+{
+    {ABILITY_DROUGHT, 1},
+    {ABILITY_MAGIC_BOUNCE, 10},
+    {ABILITY_AIR_LOCK, 20},
     ABILITY_SET_END
 };
 
@@ -18,5 +27,6 @@ static const struct AbilitySetter sBulbasaurAbilitySet[] =
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
+    [SPECIES_MUDKIP] = sMudkipAbilitySet,
     //etc...
 };
