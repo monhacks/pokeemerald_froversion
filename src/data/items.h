@@ -7587,6 +7587,7 @@ const struct Item gItems[] =
         .type = 4,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
+    },
     
     //mints
     [ITEM_ADAMANT_MINT] = 
