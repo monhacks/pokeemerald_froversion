@@ -4889,6 +4889,11 @@ u8 GetCollisionAtCoords(struct ObjectEvent *objectEvent, s16 x, s16 y, u32 dir)
     u8 currentBehavior = MapGridGetMetatileBehaviorAt(objectEvent->currentCoords.x, objectEvent->currentCoords.y);
     u8 nextBehavior = MapGridGetMetatileBehaviorAt(x, y);
     u8 collision;
+
+    #if DEBUG //DEBUG
+    if (FlagGet(FLAG_SYS_NO_COLLISION))
+        return COLLISION_NONE;
+#endif //
     
     objectEvent->directionOverwrite = DIR_NONE;
     
