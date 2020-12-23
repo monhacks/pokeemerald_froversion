@@ -301,3 +301,4 @@ EventScript_FailSweetScent:: @ 8290CAE
 
 Text_FailSweetScent: @ 8290CB7
 	.string "Looks like there's nothing here…$"
+
