@@ -17,8 +17,8 @@
 #include "constants/items.h"
 #include "constants/script_menu.h"
 #include "constants/songs.h"
-
 #include "data/script_menu.h"
+#include "list_menu.h"
 
 static EWRAM_DATA u8 sProcessInputDelay = 0;
 
@@ -762,4 +762,164 @@ int ScriptMenu_AdjustLeftCoordFromWidth(int left, int width)
     }
 
     return adjustedLeft;
+}
+
+
+//Scrolling Multichoice Code
+// Text displayed as options.
+static const u8 sText_Example1[] = _("Example 1");
+static const u8 sText_Example2[] = _("Example 2");
+static const u8 sText_Example3[] = _("Example 3");
+static const u8 sText_Example4[] = _("Example 4");
+static const u8 sText_Example5[] = _("Example 5");
+static const u8 sText_Example6[] = _("Example 6");
+static const u8 sText_Example7[] = _("Example 7");
+static const u8 sText_Example8[] = _("Example 8");
+static const u8 sText_Example9[] = _("Example 9");
+static const u8 sText_KickAss[]= _("Kick Ass");
+static const u8 sText_MomAndDad[]= _("Mom and Dad");
+static const u8 sText_NationalTreasure[]= _("National Treasure");
+static const u8 sText_Knowing[]= _("Knowing");
+static const u8 sText_DogEatDog[]= _("Dog Eat Dog");
+static const u8 sText_Rage[]= _("Rage");
+static const u8 sText_GhostRider[]= _("Ghost Rider");
+static const u8 sText_TheRock[]= _("The Rock");
+static const u8 sText_ConAir[]= _("Con Air");
+
+// Sets of multichoices.
+static const struct ListMenuItem sSet1[] =
+{
+    {sText_Example1, 0},
+    {sText_Example2, 1},
+    {sText_Example3, 2},
+    {sText_Example4, 3},
+    {sText_Example5, 4},
+    {sText_Example6, 5},
+    {sText_Example7, 6},
+    {sText_Example8, 7},
+    {sText_Example9, 8},
+};
+
+static const struct ListMenuItem sSet2[] =
+{
+    {sText_Example9, 0},
+    {sText_Example8, 1},
+    {sText_Example7, 2},
+    {sText_Example6, 3},
+    {sText_Example5, 4},
+    {sText_Example4, 5},
+    {sText_Example3, 6},
+    {sText_Example2, 7},
+    {sText_Example1, 8},
+};
+
+static const struct ListMenuItem sNicCageMovies[] =
+{
+    {sText_KickAss, 0},
+    {sText_GhostRider, 1},
+    {sText_Knowing, 2},
+    {sText_NationalTreasure, 3},
+    {sText_Rage, 4},
+    {sText_DogEatDog, 5},
+    {sText_MomAndDad, 6},
+    {sText_ConAir, 7},
+    {sText_TheRock, 8},
+};
+
+
+// Table of your multichoice sets.
+struct
+{
+    const struct ListMenuItem *set;
+    int count;
+} static const sScrollingSets[] =
+{
+    {sSet1, ARRAY_COUNT(sSet1)},
+    {sSet2, ARRAY_COUNT(sSet2)},
+    {sNicCageMovies, ARRAY_COUNT(sNicCageMovies)},
+};
+
+static void Task_ScrollingMultichoiceInput(u8 taskId);
+
+static const struct ListMenuTemplate sMultichoiceListTemplate =
+{
+    .header_X = 0,
+    .item_X = 8,
+    .cursor_X = 0,
+    .upText_Y = 1,
+    .cursorPal = 2,
+    .fillValue = 1,
+    .cursorShadowPal = 3,
+    .lettersSpacing = 1,
+    .itemVerticalPadding = 0,
+    .scrollMultiple = LIST_NO_MULTIPLE_SCROLL,
+    .fontId = 1,
+    .cursorKind = 0
+};
+
+// 0x8004 = set id
+// 0x8005 = window X
+// 0x8006 = window y
+// 0x8007 = showed at once
+// 0x8008 = Allow B press
+void ScriptMenu_ScrollingMultichoice(void)
+{
+    int i, windowId, taskId, width = 0;
+    int setId = gSpecialVar_0x8004;
+    int left = gSpecialVar_0x8005;
+    int top = gSpecialVar_0x8006;
+    int maxShowed = gSpecialVar_0x8007;
+
+    for (i = 0; i < sScrollingSets[setId].count; i++)
+        width = DisplayTextAndGetWidth(sScrollingSets[setId].set[i].name, width);
+
+    width = ConvertPixelWidthToTileWidth(width);
+    left = ScriptMenu_AdjustLeftCoordFromWidth(left, width);
+    windowId = CreateWindowFromRect(left, top, width, maxShowed * 2);
+    SetStandardWindowBorderStyle(windowId, 0);
+    CopyWindowToVram(windowId, 3);
+
+    gMultiuseListMenuTemplate = sMultichoiceListTemplate;
+    gMultiuseListMenuTemplate.windowId = windowId;
+    gMultiuseListMenuTemplate.items = sScrollingSets[setId].set;
+    gMultiuseListMenuTemplate.totalItems = sScrollingSets[setId].count;
+    gMultiuseListMenuTemplate.maxShowed = maxShowed;
+
+    taskId = CreateTask(Task_ScrollingMultichoiceInput, 0);
+    gTasks[taskId].data[0] = ListMenuInit(&gMultiuseListMenuTemplate, 0, 0);
+    gTasks[taskId].data[1] = gSpecialVar_0x8008;
+    gTasks[taskId].data[2] = windowId;
+}
+
+static void Task_ScrollingMultichoiceInput(u8 taskId)
+{
+    bool32 done = FALSE;
+    s32 input = ListMenu_ProcessInput(gTasks[taskId].data[0]);
+
+    switch (input)
+    {
+    case LIST_HEADER:
+    case LIST_NOTHING_CHOSEN:
+        break;
+    case LIST_CANCEL:
+        if (gTasks[taskId].data[1])
+        {
+            gSpecialVar_Result = 0x7F;
+            done = TRUE;
+        }
+        break;
+    default:
+        gSpecialVar_Result = input;
+        done = TRUE;
+        break;
+    }
+
+    if (done)
+    {
+        DestroyListMenuTask(gTasks[taskId].data[0], NULL, NULL);
+        ClearStdWindowAndFrame(gTasks[taskId].data[2], TRUE);
+        RemoveWindow(gTasks[taskId].data[2]);
+        EnableBothScriptContexts();
+        DestroyTask(taskId);
+    }
 }
