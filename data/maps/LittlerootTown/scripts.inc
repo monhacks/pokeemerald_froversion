@@ -960,6 +960,91 @@ LittlerootTown_EventScript_GiveRunningShoes:: @ 81E8693
 	delay 30
 	return
 
+
+// NICOLAS CAGE EVENT TEST 
+Script_NicolasCageNPC::
+lock
+goto_if_set FLAG_NICOLAS_CAGE_QUIZ_COMPLETE, Script_QuizDone
+goto_if_set FLAG_NICOLAS_CAGE_INTRO , Script_RestartQuiz
+msgbox Text_NicCageIntro, MSGBOX_DEFAULT
+setflag FLAG_NICOLAS_CAGE_INTRO 
+closemessage
+scrollingmultichoice 2, 2, 3, 10, TRUE
+compare VAR_RESULT, 0
+goto_if_eq Script_KickAssQuiz
+goto_if_eq TestGoodMovie
+release
+end
+
+Script_QuizDone:
+msgbox Text_QuizDone, MSGBOX_NPC
+release
+end
+
+Script_RestartQuiz:
+msgbox Text_RestartQuiz, MSGBOX_YESNO
+compare VAR_RESULT, 0
+goto_if_eq Script_MaybeAnotherTime
+msgbox Text_FavoriteNicCageMovie
+scrollingmultichoice 2, 2, 3, 10, TRUE
+compare VAR_RESULT, 0
+goto_if_eq Script_KickAssQuiz
+release
+end
+
+
+Script_KickAssQuiz:
+msgbox Text_KickAssQuiz, MSGBOX_DEFAULT
+closemessage
+scrollingmultichoice 3, 2, 3, 4, FALSE
+compare VAR_RESULT, 2
+goto_if_eq Script_KickAssQuestion2
+msgbox Text_WrongAnswer, MSGBOX_NPC
+release
+end
+
+Script_KickAssQuestion2:
+msgbox Text_KickAssQuestion2, MSGBOX_DEFAULT
+closemessage
+scrollingmultichoice 4, 2, 3, 4, FALSE
+compare VAR_RESULT, 3
+goto_if_eq Script_KickAssQuestion3
+msgbox Text_WrongAnswer, MSGBOX_NPC
+release
+end
+
+Script_KickAssQuestion3:
+msgbox Text_KickAssQuestion3, MSGBOX_DEFAULT
+closemessage
+scrollingmultichoice 5, 2, 3, 4, FALSE
+compare VAR_RESULT, 0
+goto_if_eq Script_KickAssQuizWon
+msgbox Text_WrongAnswer, MSGBOX_NPC
+release
+end
+
+Script_KickAssQuizWon:
+msgbox Text_NicCageQuizWon, MSGBOX_DEFAULT
+closemessage
+giveitem ITEM_POTION, 1
+setflag FLAG_NICOLAS_CAGE_QUIZ_COMPLETE
+release
+end
+
+
+Script_MaybeAnotherTime:
+msgbox TestText_GoodMovie, MSGBOX_NPC
+release
+end
+
+TestGoodMovie:
+msgbox TestText_GoodMovie, MSGBOX_NPC
+release
+end
+
+
+
+
 LittlerootTown_Text_OurNewHomeLetsGoInside: @ 81E86BC
 	.string "MOM: {PLAYER}, we're here, honey!\p"
 	.string "It must be tiring riding with our things\n"
@@ -1070,3 +1155,56 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab: @ 81E8DA2
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+//NICOLAS CAGE TEXT TEST 
+Text_NicCageIntro:
+    .string "Hi there!\p"
+    .string "...\p"
+    .string "What you don't recognize me?\p"
+    .string "I can't expect everyone to know my\n"
+    .string "face, I've only been in around 112\l"
+    .string "movies.\p"
+    .string "I'm Nicolas Cage! Live and in person!\p"
+    .string "Oh so you do know me?\p"
+    .string "Fro: Yea, I think you're a highly\n"
+    .string "underrated actor! I'm a huge fan!\p"
+    .string "Nicholas Cage: Oh why thank you kind\n"
+    .string "sir! Do you mind if I ask which one of\l"
+    .string "films is your favorite?$"
+
+Text_RestartQuiz:
+    .string "Would you like to try again?$"
+
+Text_FavoriteNicCageMovie:
+	.string "Let's try again, which movie is your favorite?$"
+
+Text_KickAssQuiz:
+    .string "Ah, Kick Ass? Good choice! Let me ask\n"
+    .string "a few questions to see how big of a\l"
+    .string "you really are.\p"
+    .string "In Kick Ass, what is the name of the\n"
+    .string "character I portrayed?$"
+
+Text_KickAssQuestion2:
+    .string "Correct! Now, what year was Kick Ass\n"
+    .string "released?$"
+
+Text_KickAssQuestion3:
+    .string "Good job! Now for the last question,\n"
+    .string "how do I die in Kick Ass?"
+
+Text_WrongAnswer:
+    .string "That is incorrect! You call yourself a fan?$"
+
+Text_QuizDone:
+    .string "Thanks for being a true fan!\n"
+    .string "I hope you can make time to see\l"
+    .string "My new film Are We Alone 3. It\l"
+    .string "is set for release soon!$"
+
+Text_NicCageQuizWon:
+    .string "Wow you answered all my questions\n"
+    .string "correctly. I guess you are my\l"
+    .string "biggest fan. I want you to have this!$"
+
+TestText_GoodMovie:
+	.string "Good Movie$"

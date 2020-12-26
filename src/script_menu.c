@@ -785,6 +785,18 @@ static const u8 sText_Rage[]= _("Rage");
 static const u8 sText_GhostRider[]= _("Ghost Rider");
 static const u8 sText_TheRock[]= _("The Rock");
 static const u8 sText_ConAir[]= _("Con Air");
+static const u8 sText_DaveLizewski[] =_("Dave Lizewski");
+static const u8 sText_HugeGoon[] =_("Huge Goon");
+static const u8 sText_BigDaddy[] =_("Big Daddy");
+static const u8 sText_RedMist[] =_("Red Mist");
+static const u8 sText_2007[] =_("2007");
+static const u8 sText_2008[] =_("2008");
+static const u8 sText_2009[] =_("2009");
+static const u8 sText_2010[] =_("2010");
+static const u8 sText_Fire[] =_("Fire");
+static const u8 sText_Gun[] =_("Gun");
+static const u8 sText_Knife[] =_("Knife");
+static const u8 sText_OldAge[] =_("Old Age");
 
 // Sets of multichoices.
 static const struct ListMenuItem sSet1[] =
@@ -826,6 +838,32 @@ static const struct ListMenuItem sNicCageMovies[] =
     {sText_TheRock, 8},
 };
 
+static const struct ListMenuItem sKickAssQuestion1[] =
+{
+    {sText_DaveLizewski, 0},
+    {sText_HugeGoon, 1},
+    {sText_BigDaddy, 2},
+    {sText_RedMist, 3},
+};
+
+static const struct ListMenuItem sKickAssQuestion2[] =
+{
+    {sText_2007, 0},
+    {sText_2008, 1},
+    {sText_2009, 2},
+    {sText_2010, 3},
+};
+
+static const struct ListMenuItem sKickAssQuestion3[] =
+{
+    {sText_Fire, 0},
+    {sText_Gun, 1},
+    {sText_Knife, 2},
+    {sText_OldAge, 3},
+};
+
+
+
 
 // Table of your multichoice sets.
 struct
@@ -837,6 +875,9 @@ struct
     {sSet1, ARRAY_COUNT(sSet1)},
     {sSet2, ARRAY_COUNT(sSet2)},
     {sNicCageMovies, ARRAY_COUNT(sNicCageMovies)},
+    {sKickAssQuestion1, ARRAY_COUNT(sKickAssQuestion1)},
+    {sKickAssQuestion2, ARRAY_COUNT(sKickAssQuestion2)},
+    {sKickAssQuestion3, ARRAY_COUNT(sKickAssQuestion3)},
 };
 
 static void Task_ScrollingMultichoiceInput(u8 taskId);
