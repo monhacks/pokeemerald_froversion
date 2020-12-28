@@ -1190,10 +1190,10 @@ Text_KickAssQuestion2:
 
 Text_KickAssQuestion3:
     .string "Good job! Now for the last question,\n"
-    .string "how do I die in Kick Ass?"
+    .string "how do I die in Kick Ass?$"
 
 Text_WrongAnswer:
-    .string "That is incorrect! You call yourself a fan?$"
+    .string "That is incorrect! You call yourself a \nfan?$"
 
 Text_QuizDone:
     .string "Thanks for being a true fan!\n"
