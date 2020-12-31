@@ -264,6 +264,7 @@ LittlerootTown_EventScript_FatMan:: @ 81E8022
 
 LittlerootTown_EventScript_Boy:: @ 81E802B
 	msgbox LittlerootTown_Text_BirchSpendsDaysInLab, MSGBOX_NPC
+	givecustommon SPECIES_MEWTWO, 2, ITEM_DUSK_BALL, ITEM_DUSK_BALL, NATURE_RASH, 0, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, MOVE_PSYCHIC, MOVE_NONE, MOVE_NONE, MOVE_NONE, 1
 	end
 
 LittlerootTown_EventScript_Twin:: @ 81E8034
