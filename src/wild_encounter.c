@@ -666,7 +666,6 @@ bool8 StandardWildEncounter(u16 currMetaTileBehavior, u16 previousMetaTileBehavi
                     {
                         BattleSetup_StartWildBattle();
                     }
-
                     return TRUE;
                 }
 
