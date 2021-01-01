@@ -1,0 +1,5 @@
+Files to get from old pokefro
+
+ include/constants/region_map_sections.h
+src/data/region_map/region_map_entries.h
+src/map_name_popup.c
