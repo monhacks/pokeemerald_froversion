@@ -440,3 +440,10 @@ bool8 LoadTrainerObjectScript(void)
     sScriptContext1.scriptPtr = gApproachingTrainers[gNoOfApproachingTrainers - 1].trainerScriptPtr;
 }
 
+u8* ReadWord(u8 index)
+{
+    struct ScriptContext *ctx = &sScriptContext1;
+    
+    return (T1_READ_PTR(&ctx->data[index]));
+}
+

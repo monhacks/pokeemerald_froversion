@@ -230,6 +230,10 @@ gScriptCmdTable:: @ 81DB67C
 	.4byte ScrCmd_showitemdesc              @ 0xe3
 	.4byte ScrCmd_hideitemdesc              @ 0xe4
 	.4byte ScrCmd_givecustommon
+    .4byte ScrCmd_setfollower               @ 0xe3
+    .4byte ScrCmd_destroyfollower           @ 0xe4
+    .4byte ScrCmd_facefollower              @ 0xe5
+    .4byte ScrCmd_checkfollower             @ 0xe6
 
 gScriptCmdTableEnd:: @ 81DBA08
 	.4byte ScrCmd_nop
