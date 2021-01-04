@@ -445,6 +445,10 @@ void CB2_InitBattle(void)
     AllocateMonSpritesGfx();
     sub_8185F84();
 
+if (FlagGet (FLAG_FORCE_BATTLE_STYLE_SET))
+    gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET;
+
+
     if (gBattleTypeFlags & BATTLE_TYPE_MULTI)
     {
         if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
@@ -4636,6 +4640,7 @@ static void RunTurnActionsFunctions(void)
 static void HandleEndTurn_BattleWon(void)
 {
     gCurrentActionFuncId = 0;
+    gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SHIFT;
 
     if (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_x2000000))
     {

@@ -1,6 +1,19 @@
 Route102_MapScripts:: @ 81EC0E0
 	.byte 0
 
+ScriptFlagSetSign::
+	goto_if_set FLAG_FORCE_BATTLE_STYLE_SET, ScriptFlagUnsetSign
+	msgbox T_Flag0x2B9set, MSGBOX_SIGN
+	setflag FLAG_FORCE_BATTLE_STYLE_SET
+	release
+	end
+
+ScriptFlagUnsetSign:
+	msgbox T_Flag0x2B9unset, MSGBOX_SIGN
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
+	release
+	end
+
 Route102_EventScript_LittleBoy:: @ 81EC0E1
 	msgbox Route102_Text_ImNotVeryTall, MSGBOX_NPC
 	end
@@ -109,3 +122,9 @@ Route102_Text_RouteSignOldale: @ 81EC35B
 Route102_Text_RouteSignPetalburg: @ 81EC373
 	.string "ROUTE 102\n"
 	.string "{LEFT_ARROW} PETALBURG CITY$"
+
+T_Flag0x2B9set:
+	.string "FLAG UNUSED 0x2B9 SET$"
+
+T_Flag0x2B9unset:
+	.string "FLAG UNUSED 0x2B9 UNSET$"
