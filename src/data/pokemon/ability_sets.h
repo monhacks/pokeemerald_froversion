@@ -161,6 +161,76 @@ static const struct AbilitySetter sEspeonAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sWeedleAbilitySet[] = 
+{
+    {ABILITY_SHIELD_DUST, 1},
+    {ABILITY_RUN_AWAY, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sKakunaAbilitySet[] = 
+{
+    {ABILITY_SHED_SKIN, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sBeedrillAbilitySet[] = 
+{
+    {ABILITY_SWARM, 1},
+    {ABILITY_SNIPER, 10},
+    {ABILITY_ADAPTABILITY, 21},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sCaterpieAbilitySet[] = 
+{
+    {ABILITY_SHIELD_DUST, 1},
+    {ABILITY_RUN_AWAY, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetapodAbilitySet[] = 
+{
+    {ABILITY_SHED_SKIN, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sButterfreeAbilitySet[] = 
+{
+    {ABILITY_COMPOUND_EYES, 1},
+    {ABILITY_TINTED_LENS, 10},
+    {ABILITY_EFFECT_SPORE, 21},
+    ABILITY_SET_END
+};
+
+
+static const struct AbilitySetter sChinchouAbilitySet[] = 
+{
+    {ABILITY_ILLUMINATE, 1},
+    {ABILITY_VOLT_ABSORB, 16},
+    {ABILITY_WATER_ABSORB, 28},
+    {ABILITY_LIGHTNING_ROD, 41},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sHoothootAbilitySet[] = 
+{
+    {ABILITY_KEEN_EYE, 1},
+    {ABILITY_SNIPER, 14},
+    {ABILITY_INSOMNIA, 28},
+    {ABILITY_TINTED_LENS, 41},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSpinarakAbilitySet[] = 
+{
+    {ABILITY_SWARM, 1},
+    {ABILITY_INSOMNIA, 17},
+    {ABILITY_SNIPER, 32},
+    {ABILITY_POISON_HEAL, 48},
+    ABILITY_SET_END
+};
+
 
 //etc...
 
@@ -196,6 +266,21 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_FLAREON] = sFlareonAbilitySet,
     [SPECIES_UMBREON] = sUmbreonAbilitySet,
     [SPECIES_ESPEON] = sEspeonAbilitySet,
+    [SPECIES_WEEDLE] = sWeedleAbilitySet,
+    [SPECIES_KAKUNA] = sKakunaAbilitySet,
+    [SPECIES_BEEDRILL] = sBeedrillAbilitySet,
+    [SPECIES_CATERPIE] = sCaterpieAbilitySet,
+    [SPECIES_METAPOD] = sMetapodAbilitySet,
+    [SPECIES_BUTTERFREE] = sButterfreeAbilitySet,
+    [SPECIES_CHINCHOU] = sChinchouAbilitySet,
+    [SPECIES_LANTURN] = sChinchouAbilitySet,
+    [SPECIES_HOOTHOOT] = sHoothootAbilitySet,
+    [SPECIES_NOCTOWL] = sHoothootAbilitySet,
+    [SPECIES_SPINARAK] = sSpinarakAbilitySet,
+    [SPECIES_ARIADOS] = sSpinarakAbilitySet,
+
+
+
 
 
     //etc...
