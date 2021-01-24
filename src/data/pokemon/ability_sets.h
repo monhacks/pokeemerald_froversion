@@ -17,7 +17,7 @@ static const struct AbilitySetter sBulbasaurAbilitySet[] =
 static const struct AbilitySetter sMudkipAbilitySet[] = 
 {
     {ABILITY_DROUGHT, 1},
-    {ABILITY_MAGIC_BOUNCE, 10},
+    {ABILITY_MAGIC_BOUNCE, 9},
     {ABILITY_AIR_LOCK, 20},
     ABILITY_SET_END
 };
