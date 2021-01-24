@@ -22,11 +22,181 @@ static const struct AbilitySetter sMudkipAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sPidgeyAbilitySet[] = 
+{
+    {ABILITY_KEEN_EYE, 1},
+    {ABILITY_TANGLED_FEET, 18},
+    {ABILITY_BIG_PECKS, 37},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSentretAbilitySet[] = 
+{
+    {ABILITY_KEEN_EYE, 1},
+    {ABILITY_CUTE_CHARM, 14},
+    {ABILITY_FRISK, 31},
+    {ABILITY_OBLIVIOUS, 46},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sLileepAbilitySet[] = 
+{
+    {ABILITY_SUCTION_CUPS, 1},
+    {ABILITY_SOLAR_POWER, 14},
+    {ABILITY_ROUGH_SKIN, 22},
+    {ABILITY_STORM_DRAIN, 32},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sAnorithAbilitySet[] = 
+{
+    {ABILITY_BATTLE_ARMOR, 1},
+    {ABILITY_IMMUNITY, 18},
+    {ABILITY_STAMINA, 36},
+    {ABILITY_SWIFT_SWIM, 51},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMagnemiteAbilitySet[] = 
+{
+    {ABILITY_MAGNET_PULL, 1},
+    {ABILITY_STURDY, 15},
+    {ABILITY_ANALYTIC, 32},
+    {ABILITY_LIGHTNING_ROD, 45},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSandshrewAbilitySet[] = 
+{
+    {ABILITY_SAND_RUSH, 1},
+    {ABILITY_SAND_FORCE, 25},
+    {ABILITY_SAND_VEIL, 55},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sOddishAbilitySet[] = 
+{
+    {ABILITY_CHLOROPHYLL, 1},
+    {ABILITY_EFFECT_SPORE, 17},
+    {ABILITY_SAP_SIPPER, 42},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sGrowlitheAbilitySet[] = 
+{
+    {ABILITY_INTIMIDATE, 1},
+    {ABILITY_FLASH_FIRE, 16},
+    {ABILITY_JUSTIFIED, 38},
+    {ABILITY_SPEED_BOOST, 68},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sPhanpyAbilitySet[] = 
+{
+    {ABILITY_STURDY, 1},
+    {ABILITY_STAMINA, 17},
+    {ABILITY_SAND_VEIL, 29},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sRhyhornAbilitySet[] = 
+{
+    {ABILITY_LIGHTNING_ROD, 1},
+    {ABILITY_ROCK_HEAD, 16},
+    {ABILITY_RECKLESS, 35},
+    {ABILITY_SOLID_ROCK, 52},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sEeveeAbilitySet[] = 
+{
+    {ABILITY_RUN_AWAY, 1},
+    {ABILITY_ADAPTABILITY, 16},
+    {ABILITY_ANTICIPATION, 24},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sJolteonAbilitySet[] = 
+{
+    {ABILITY_VOLT_ABSORB, 1},
+    {ABILITY_QUICK_FEET, 1},
+    {ABILITY_STATIC, 36},
+    {ABILITY_ELECTRIC_SURGE, 52},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sVaporeonAbilitySet[] = 
+{
+    {ABILITY_WATER_ABSORB, 1},
+    {ABILITY_HYDRATION, 1},
+    {ABILITY_REGENERATOR, 36},
+    {ABILITY_DRIZZLE, 52},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sFlareonAbilitySet[] = 
+{
+    {ABILITY_FLASH_FIRE, 1},
+    {ABILITY_GUTS, 1},
+    {ABILITY_FLAME_BODY, 36},
+    {ABILITY_DROUGHT, 52},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sUmbreonAbilitySet[] = 
+{
+    {ABILITY_SYNCHRONIZE, 1},
+    {ABILITY_INNER_FOCUS, 1},
+    {ABILITY_FILTER, 36},
+    {ABILITY_DAUNTLESS_SHIELD, 52},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sEspeonAbilitySet[] = 
+{
+    {ABILITY_SYNCHRONIZE, 1},
+    {ABILITY_MAGIC_BOUNCE, 1},
+    {ABILITY_NEUROFORCE, 36},
+    {ABILITY_PSYCHIC_SURGE, 52},
+    ABILITY_SET_END
+};
+
+
 //etc...
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
     [SPECIES_MUDKIP] = sMudkipAbilitySet,
+    [SPECIES_PIDGEY] = sPidgeyAbilitySet,
+    [SPECIES_PIDGEOTTO] = sPidgeyAbilitySet,
+    [SPECIES_PIDGEOT] = sPidgeyAbilitySet,
+    [SPECIES_SENTRET] = sSentretAbilitySet,
+    [SPECIES_FURRET] = sSentretAbilitySet,
+    [SPECIES_LILEEP] = sLileepAbilitySet,
+    [SPECIES_CRADILY] = sLileepAbilitySet,
+    [SPECIES_ANORITH] = sAnorithAbilitySet,
+    [SPECIES_ARMALDO] = sAnorithAbilitySet,
+    [SPECIES_MAGNEMITE] = sMagnemiteAbilitySet,
+    [SPECIES_MAGNETON] = sMagnemiteAbilitySet,
+    [SPECIES_SANDSHREW] = sSandshrewAbilitySet,
+    [SPECIES_SANDSLASH] = sSandshrewAbilitySet,
+    [SPECIES_ODDISH] = sOddishAbilitySet,
+    [SPECIES_GLOOM] = sOddishAbilitySet,
+    [SPECIES_VILEPLUME] = sOddishAbilitySet,
+    [SPECIES_GROWLITHE] = sGrowlitheAbilitySet,
+    [SPECIES_ARCANINE] = sGrowlitheAbilitySet,
+    [SPECIES_PHANPY] = sPhanpyAbilitySet,
+    [SPECIES_DONPHAN] = sPhanpyAbilitySet,
+    [SPECIES_RHYHORN] = sRhyhornAbilitySet,
+    [SPECIES_RHYDON] = sRhyhornAbilitySet,
+    [SPECIES_EEVEE] = sEeveeAbilitySet,
+    [SPECIES_JOLTEON] = sJolteonAbilitySet,
+    [SPECIES_VAPOREON] = sVaporeonAbilitySet,
+    [SPECIES_FLAREON] = sFlareonAbilitySet,
+    [SPECIES_UMBREON] = sUmbreonAbilitySet,
+    [SPECIES_ESPEON] = sEspeonAbilitySet,
+
+
     //etc...
 };
