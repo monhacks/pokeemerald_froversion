@@ -231,6 +231,48 @@ static const struct AbilitySetter sSpinarakAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sMurkrowAbilitySet[] = 
+{
+    {ABILITY_INSOMNIA, 1},
+    {ABILITY_SUPER_LUCK, 16},
+    {ABILITY_PRANKSTER, 37},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMisdreavusAbilitySet[] = 
+{
+    {ABILITY_LEVITATE, 1},
+    {ABILITY_MAGICIAN, 34},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sHoundourAbilitySet[] = 
+{
+    {ABILITY_EARLY_BIRD, 1},
+    {ABILITY_UNNERVE, 24},
+    {ABILITY_FLASH_FIRE, 35},
+    {ABILITY_SOLAR_POWER, 51},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sScytherAbilitySet[] = 
+{
+    {ABILITY_SWARM, 1},
+    {ABILITY_TECHNICIAN, 17},
+    {ABILITY_SNIPER, 32},
+    {ABILITY_POISON_HEAL, 48},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sScizorAbilitySet[] = 
+{
+    {ABILITY_SWARM, 1},
+    {ABILITY_TECHNICIAN, 17},
+    {ABILITY_SNIPER, 32},
+    {ABILITY_HEATPROOF, 48},
+    ABILITY_SET_END
+};
+
 
 //etc...
 
@@ -278,6 +320,15 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_NOCTOWL] = sHoothootAbilitySet,
     [SPECIES_SPINARAK] = sSpinarakAbilitySet,
     [SPECIES_ARIADOS] = sSpinarakAbilitySet,
+    [SPECIES_MURKROW] = sMurkrowAbilitySet,
+    [SPECIES_MISDREAVUS] = sMisdreavusAbilitySet,
+    [SPECIES_HOUNDOUR] = sHoundourAbilitySet,
+    [SPECIES_HOUNDOOM] = sHoundourAbilitySet,
+    [SPECIES_SCYTHER] = sScytherAbilitySet,
+    [SPECIES_SCIZOR] = sScizorAbilitySet,
+    
+
+
 
 
 
