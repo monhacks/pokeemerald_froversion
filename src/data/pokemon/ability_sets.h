@@ -273,6 +273,68 @@ static const struct AbilitySetter sScizorAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sDuskullAbilitySet[] = 
+{
+    {ABILITY_LEVITATE, 1},
+    {ABILITY_FRISK, 21},
+    {ABILITY_CURSED_BODY, 32},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sDusclopsAbilitySet[] = 
+{
+    {ABILITY_FRISK, 1},
+    {ABILITY_PRESSURE, 41},
+    {ABILITY_PERISH_BODY, 52},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSlakothAbilitySet[] =
+{
+    {ABILITY_TRUANT, 1},
+    {ABILITY_SLOW_START, 46},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sNinjaskAbilitySet[] =
+{
+    {ABILITY_INFILTRATOR, 1},
+    {ABILITY_SPEED_BOOST, 19},
+    {ABILITY_HUGE_POWER, 33},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sShedinjaAbilitySet[] =
+{
+    {ABILITY_PRANKSTER, 1},
+    {ABILITY_WONDER_GUARD, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sClefairyAbilitySet[] =
+{
+    {ABILITY_CUTE_CHARM, 1},
+    {ABILITY_UNAWARE, 14},
+    {ABILITY_MAGIC_GUARD, 26},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMankeyAbilitySet[] =
+{
+    {ABILITY_VITAL_SPIRIT, 1},
+    {ABILITY_ANGER_POINT, 12},
+    {ABILITY_DEFIANT, 21},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMachopAbilitySet[] =
+{
+    {ABILITY_STEADFAST, 1},
+    {ABILITY_GUTS, 23},
+    {ABILITY_NO_GUARD, 44},
+    ABILITY_SET_END
+};
+
 
 //etc...
 
@@ -326,7 +388,24 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_HOUNDOOM] = sHoundourAbilitySet,
     [SPECIES_SCYTHER] = sScytherAbilitySet,
     [SPECIES_SCIZOR] = sScizorAbilitySet,
+    [SPECIES_DUSKULL] = sDuskullAbilitySet,
+    [SPECIES_DUSCLOPS] = sDusclopsAbilitySet,
+    [SPECIES_SLAKOTH] = sSlakothAbilitySet,
+    [SPECIES_VIGOROTH] = sSlakothAbilitySet,
+    [SPECIES_SLAKING] = sSlakothAbilitySet,
+    [SPECIES_NINJASK] = sNinjaskAbilitySet,
+    [SPECIES_SHEDINJA] = sShedinjaAbilitySet,
+    [SPECIES_CLEFAIRY] = sClefairyAbilitySet,
+    [SPECIES_CLEFABLE] = sClefairyAbilitySet,
+    [SPECIES_MANKEY] = sMankeyAbilitySet,
+    [SPECIES_PRIMEAPE] = sMankeyAbilitySet,
+    [SPECIES_MACHOP] = sMachopAbilitySet,
+    [SPECIES_MACHOKE] = sMachopAbilitySet,
+    [SPECIES_MACHAMP] = sMachopAbilitySet,
     
+
+
+     
 
 
 
