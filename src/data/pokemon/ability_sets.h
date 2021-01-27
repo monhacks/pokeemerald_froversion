@@ -430,6 +430,144 @@ static const struct AbilitySetter sDiglettAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sSableyeAbilitySet[] =
+{
+    {ABILITY_KEEN_EYE, 1},
+    {ABILITY_PICKPOCKET, 8},
+    {ABILITY_PRANKSTER, 19},
+    {ABILITY_MAGIC_BOUNCE, 31},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sLunatoneAbilitySet[] =
+{
+    {ABILITY_LEVITATE, 1},
+    {ABILITY_HEALER, 13},
+    {ABILITY_TELEPATHY, 20},
+    {ABILITY_SWEET_VEIL, 26},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSolrockAbilitySet[] =
+{
+    {ABILITY_LEVITATE, 1},
+    {ABILITY_SCREEN_CLEANER, 13},
+    {ABILITY_TELEPATHY, 20},
+    {ABILITY_BATTERY, 26},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sZubatAbilitySet[] =
+{
+    {ABILITY_INNER_FOCUS, 1},
+    {ABILITY_INFILTRATOR, 18},
+    {ABILITY_RECKLESS, 33},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sKoffingbilitySet[] =
+{
+    {ABILITY_LEVITATE, 1},
+    {ABILITY_STENCH, 20},
+    {ABILITY_CORROSION, 38},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMagmarAbilitySet[] =
+{
+    {ABILITY_FLAME_BODY, 1},
+    {ABILITY_VITAL_SPIRIT, 24},
+    {ABILITY_BERSERK, 41},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSlugmaAbilitySet[] =
+{
+    {ABILITY_MAGMA_ARMOR, 1},
+    {ABILITY_FLAME_BODY, 13},
+    {ABILITY_WEAK_ARMOR, 20},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMagcargoAbilitySet[] =
+{
+    {ABILITY_MAGMA_ARMOR, 1},
+    {ABILITY_FLAME_BODY, 13},
+    {ABILITY_WEAK_ARMOR, 20},
+    {ABILITY_SHELL_ARMOR, 28},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sNumelAbilitySet[] =
+{
+    {ABILITY_MAGMA_ARMOR, 1},
+    {ABILITY_SOLID_ROCK, 13},
+    {ABILITY_ANGER_POINT, 20},
+    {ABILITY_SHEER_FORCE, 28},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sJynxAbilitySet[] =
+{
+    {ABILITY_OBLIVIOUS, 1},
+    {ABILITY_DRY_SKIN, 16},
+    {ABILITY_FOREWARN, 29},
+    {ABILITY_SNOW_CLOAK, 38},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSneaselAbilitySet[] =
+{
+    {ABILITY_PRESSURE, 1},
+    {ABILITY_PICKPOCKET, 18},
+    {ABILITY_REFRIGERATE, 28},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSnoruntAbilitySet[] =
+{
+    {ABILITY_INNER_FOCUS, 1},
+    {ABILITY_ICE_BODY, 11},
+    {ABILITY_MOODY, 23},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sGlalieAbilitySet[] =
+{
+    {ABILITY_INNER_FOCUS, 1},
+    {ABILITY_ICE_BODY, 11},
+    {ABILITY_MOODY, 23},
+    {ABILITY_REFRIGERATE, 32},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sTeddiursaAbilitySet[] =
+{
+    {ABILITY_PICKUP, 1},
+    {ABILITY_QUICK_FEET, 11},
+    {ABILITY_HONEY_GATHER, 19},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sUrsaringAbilitySet[] =
+{
+    {ABILITY_INTIMIDATE, 1},
+    {ABILITY_GUTS, 30},
+    {ABILITY_UNNERVE, 30},
+    {ABILITY_FUR_COAT, 38},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSwinubAbilitySet[] =
+{
+    {ABILITY_OBLIVIOUS, 1},
+    {ABILITY_THICK_FAT, 15},
+    {ABILITY_SNOW_CLOAK, 33},
+    {ABILITY_SAND_VEIL, 33},
+    ABILITY_SET_END
+};
+
+
 //etc...
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
@@ -517,6 +655,38 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_HARIYAMA] = sMakuhitaAbilitySet,
     [SPECIES_DIGLETT] = sDiglettAbilitySet,
     [SPECIES_DUGTRIO] = sDiglettAbilitySet,
+    [SPECIES_SABLEYE] = sSableyeAbilitySet,
+    [SPECIES_LUNATONE] = sLunatoneAbilitySet,
+    [SPECIES_SOLROCK] = sSolrockAbilitySet,
+    [SPECIES_ZUBAT] = sZubatAbilitySet,
+    [SPECIES_GOLBAT] = sZubatAbilitySet,
+    [SPECIES_CROBAT] = sZubatAbilitySet,
+    [SPECIES_KOFFING] = sKoffingbilitySet,
+    [SPECIES_WEEZING] = sKoffingbilitySet,
+    [SPECIES_MAGMAR] = sMagmarAbilitySet,
+    [SPECIES_SLUGMA] = sSlugmaAbilitySet,
+    [SPECIES_MAGCARGO] = sMagcargoAbilitySet,
+    [SPECIES_NUMEL] = sNumelAbilitySet,
+    [SPECIES_CAMERUPT] = sNumelAbilitySet,
+    [SPECIES_JYNX] = sJynxAbilitySet,
+    [SPECIES_SNEASEL] = sSneaselAbilitySet,
+    [SPECIES_SNORUNT] = sSnoruntAbilitySet,
+    [SPECIES_GLALIE] = sGlalieAbilitySet,
+    [SPECIES_TEDDIURSA] = sTeddiursaAbilitySet,
+    [SPECIES_URSARING] = sUrsaringAbilitySet,
+    [SPECIES_SWINUB] = sSwinubAbilitySet,
+    [SPECIES_PILOSWINE] = sSwinubAbilitySet,
+
+
+
+
+
+
+
+
+
+
+
 
 //etc...
 };
