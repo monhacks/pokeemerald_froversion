@@ -335,6 +335,100 @@ static const struct AbilitySetter sMachopAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sGeodudeAbilitySet[] =
+{
+    {ABILITY_STURDY, 1},
+    {ABILITY_ROCK_HEAD, 19},
+    {ABILITY_SAND_VEIL, 35},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sCuboneAbilitySet[] =
+{
+    {ABILITY_ROCK_HEAD, 1},
+    {ABILITY_BATTLE_ARMOR, 14},
+    {ABILITY_LIGHTNING_ROD, 25},
+    {ABILITY_SAND_RUSH, 34},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sOnixAbilitySet[] =
+{
+    {ABILITY_STURDY, 1},
+    {ABILITY_ROCK_HEAD, 12},
+    {ABILITY_WEAK_ARMOR, 22},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSteelixAbilitySet[] =
+{
+    {ABILITY_STURDY, 1},
+    {ABILITY_ROCK_HEAD, 12},
+    {ABILITY_SHEER_FORCE, 34},
+    {ABILITY_SAND_FORCE, 46},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSnorlaxAbilitySet[] =
+{
+    {ABILITY_IMMUNITY, 1},
+    {ABILITY_THICK_FAT, 16},
+    {ABILITY_GLUTTONY, 35},
+    {ABILITY_EARLY_BIRD, 54},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sHoppipAbilitySet[] =
+{
+    {ABILITY_INFILTRATOR, 1},
+    {ABILITY_LEAF_GUARD, 18},
+    {ABILITY_CHLOROPHYLL, 31},
+    {ABILITY_FLOWER_VEIL, 47},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sAbsolAbilitySet[] =
+{
+    {ABILITY_PRESSURE, 1},
+    {ABILITY_SUPER_LUCK, 15},
+    {ABILITY_JUSTIFIED, 37},
+    {ABILITY_MAGIC_BOUNCE, 53},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sAronAbilitySet[] =
+{
+    {ABILITY_STURDY, 1},
+    {ABILITY_ROCK_HEAD, 9},
+    {ABILITY_HEAVY_METAL, 31},
+    {ABILITY_FILTER, 50},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMedititeAbilitySet[] =
+{
+    {ABILITY_TELEPATHY, 1},
+    {ABILITY_SCRAPPY, 14},
+    {ABILITY_PURE_POWER, 30},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMakuhitaAbilitySet[] =
+{
+    {ABILITY_THICK_FAT, 1},
+    {ABILITY_GUTS, 17},
+    {ABILITY_SHEER_FORCE, 31},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sDiglettAbilitySet[] =
+{
+    {ABILITY_RUN_AWAY, 1},
+    {ABILITY_SAND_FORCE, 13},
+    {ABILITY_SAND_VEIL, 27},
+    {ABILITY_ARENA_TRAP, 41},
+    ABILITY_SET_END
+};
 
 //etc...
 
@@ -402,16 +496,27 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_MACHOP] = sMachopAbilitySet,
     [SPECIES_MACHOKE] = sMachopAbilitySet,
     [SPECIES_MACHAMP] = sMachopAbilitySet,
-    
+    [SPECIES_GEODUDE] = sGeodudeAbilitySet,
+    [SPECIES_GRAVELER] = sGeodudeAbilitySet,
+    [SPECIES_GOLEM] = sGeodudeAbilitySet,
+    [SPECIES_CUBONE] = sCuboneAbilitySet,
+    [SPECIES_MAROWAK] = sCuboneAbilitySet,
+    [SPECIES_ONIX] = sOnixAbilitySet,
+    [SPECIES_STEELIX] = sSteelixAbilitySet,
+    [SPECIES_SNORLAX] = sSnorlaxAbilitySet,
+    [SPECIES_HOPPIP] = sHoppipAbilitySet,
+    [SPECIES_SKIPLOOM] = sHoppipAbilitySet,
+    [SPECIES_JUMPLUFF] = sHoppipAbilitySet,
+    [SPECIES_ABSOL] = sAbsolAbilitySet,
+    [SPECIES_ARON] = sAronAbilitySet,
+    [SPECIES_LAIRON] = sAronAbilitySet,
+    [SPECIES_AGGRON] = sAronAbilitySet,
+    [SPECIES_MEDITITE] = sMedititeAbilitySet,
+    [SPECIES_MEDICHAM] = sMedititeAbilitySet,
+    [SPECIES_MAKUHITA] = sMakuhitaAbilitySet,
+    [SPECIES_HARIYAMA] = sMakuhitaAbilitySet,
+    [SPECIES_DIGLETT] = sDiglettAbilitySet,
+    [SPECIES_DUGTRIO] = sDiglettAbilitySet,
 
-
-     
-
-
-
-
-
-
-
-    //etc...
+//etc...
 };
