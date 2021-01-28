@@ -148,7 +148,7 @@ static const struct AbilitySetter sUmbreonAbilitySet[] =
     {ABILITY_SYNCHRONIZE, 1},
     {ABILITY_INNER_FOCUS, 1},
     {ABILITY_FILTER, 36},
-    {ABILITY_DAUNTLESS_SHIELD, 52},
+    {ABILITY_STAMINA, 52},
     ABILITY_SET_END
 };
 
@@ -242,7 +242,6 @@ static const struct AbilitySetter sMurkrowAbilitySet[] =
 static const struct AbilitySetter sMisdreavusAbilitySet[] = 
 {
     {ABILITY_LEVITATE, 1},
-    {ABILITY_MAGICIAN, 34},
     ABILITY_SET_END
 };
 
@@ -349,6 +348,7 @@ static const struct AbilitySetter sCuboneAbilitySet[] =
     {ABILITY_BATTLE_ARMOR, 14},
     {ABILITY_LIGHTNING_ROD, 25},
     {ABILITY_SAND_RUSH, 34},
+    {ABILITY_PARENTAL_BOND, 42},
     ABILITY_SET_END
 };
 
@@ -563,11 +563,119 @@ static const struct AbilitySetter sSwinubAbilitySet[] =
     {ABILITY_OBLIVIOUS, 1},
     {ABILITY_THICK_FAT, 15},
     {ABILITY_SNOW_CLOAK, 33},
-    {ABILITY_SAND_VEIL, 33},
+    {ABILITY_SAND_VEIL, 34},
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sMarillAbilitySet[] =
+{
+    {ABILITY_THICK_FAT, 1},
+    {ABILITY_HYDRATION, 18},
+    {ABILITY_HUGE_POWER, 35},
+    {ABILITY_SAP_SIPPER, 53},
+    ABILITY_SET_END
+};
 
+static const struct AbilitySetter sPoliwagAbilitySet[] =
+{
+    {ABILITY_DAMP, 1},
+    {ABILITY_WATER_ABSORB, 14},
+    {ABILITY_SWIFT_SWIM, 36},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sPoliwhirlAbilitySet[] =
+{
+    {ABILITY_DAMP, 1},
+    {ABILITY_WATER_ABSORB, 14},
+    {ABILITY_IRON_FIST, 25},
+    {ABILITY_SWIFT_SWIM, 36},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sTangelaAbilitySet[] =
+{
+    {ABILITY_CHLOROPHYLL, 1},
+    {ABILITY_LEAF_GUARD, 17},
+    {ABILITY_REGENERATOR, 39},
+    {ABILITY_GRASSY_SURGE, 47},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sYanmaAbilitySet[] =
+{
+    {ABILITY_COMPOUND_EYES, 1},
+    {ABILITY_FRISK, 14},
+    {ABILITY_SPEED_BOOST, 26},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sRattataAbilitySet[] =
+{
+    {ABILITY_RUN_AWAY, 1},
+    {ABILITY_HUSTLE, 9},
+    {ABILITY_GUTS, 21},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sGrimerAbilitySet[] =
+{
+    {ABILITY_STENCH, 1},
+    {ABILITY_STICKY_HOLD, 19},
+    {ABILITY_POISON_TOUCH, 32},
+    {ABILITY_POWER_OF_ALCHEMY, 47},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sAbraAbilitySet[] =
+{
+    {ABILITY_SYNCHRONIZE, 1},
+    {ABILITY_INNER_FOCUS, 8},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sAlakazamAbilitySet[] =
+{
+    {ABILITY_SYNCHRONIZE, 1},
+    {ABILITY_INNER_FOCUS, 1},
+    {ABILITY_MAGIC_GUARD, 32},
+    {ABILITY_TRACE, 47},
+    //{ABILITY_NEUTRALIZING_GAS, 47}, //if this gets coded it will be his ability with a new name as a regional variant
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sElectabuzzAbilitySet[] =
+{
+    {ABILITY_VITAL_SPIRIT, 1},
+    {ABILITY_STATIC, 21},
+    //{ABILITY_AMPED, 36}, //code ability that boosts spAtk in electric terrain
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sFeebasAbilitySet[] =
+{
+    {ABILITY_CUTE_CHARM, 1},
+    {ABILITY_COMPETITIVE, 15},
+    {ABILITY_SWIFT_SWIM, 30},
+    {ABILITY_MARVEL_SCALE, 45},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMagikarpAbilitySet[] =
+{
+    {ABILITY_SWIFT_SWIM, 1},
+    {ABILITY_RATTLED, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sGyaradosAbilitySet[] =
+{
+    {ABILITY_INTIMIDATE, 1},
+    {ABILITY_MOXIE, 20},
+    {ABILITY_MOLD_BREAKER, 30},
+    {ABILITY_SWIFT_SWIM, 40},
+    ABILITY_SET_END
+};
 //etc...
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
@@ -676,6 +784,29 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_URSARING] = sUrsaringAbilitySet,
     [SPECIES_SWINUB] = sSwinubAbilitySet,
     [SPECIES_PILOSWINE] = sSwinubAbilitySet,
+    [SPECIES_MARILL] = sMarillAbilitySet,
+    [SPECIES_AZUMARILL] = sMarillAbilitySet,
+    [SPECIES_POLIWAG] = sPoliwagAbilitySet,
+    [SPECIES_POLIWHIRL] = sPoliwhirlAbilitySet,
+    [SPECIES_POLIWRATH] = sPoliwhirlAbilitySet,
+    [SPECIES_TANGELA] = sTangelaAbilitySet,
+    [SPECIES_YANMA] = sYanmaAbilitySet,
+    [SPECIES_RATTATA] = sRattataAbilitySet,
+    [SPECIES_RATICATE] = sRattataAbilitySet,
+    [SPECIES_GRIMER] = sGrimerAbilitySet,
+    [SPECIES_MUK] = sGrimerAbilitySet,
+    [SPECIES_ABRA] = sAbraAbilitySet,
+    [SPECIES_KADABRA] = sAbraAbilitySet,
+    [SPECIES_ALAKAZAM] = sAlakazamAbilitySet,
+    [SPECIES_ELECTABUZZ] = sElectabuzzAbilitySet,
+    [SPECIES_FEEBAS] = sFeebasAbilitySet,
+    [SPECIES_MILOTIC] = sFeebasAbilitySet,
+    [SPECIES_MAGIKARP] = sMagikarpAbilitySet,
+    [SPECIES_GYARADOS] = sGyaradosAbilitySet,
+    
+
+
+
 
 
 
