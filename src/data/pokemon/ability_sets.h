@@ -676,8 +676,153 @@ static const struct AbilitySetter sGyaradosAbilitySet[] =
     {ABILITY_SWIFT_SWIM, 40},
     ABILITY_SET_END
 };
+
+static const struct AbilitySetter sCorsolaAbilitySet[] =
+{
+    {ABILITY_HUSTLE, 1},
+    {ABILITY_REGENERATOR, 15},
+    {ABILITY_NATURAL_CURE, 27},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sGastlyAbilitySet[] =
+{
+    {ABILITY_LEVITATE, 1},
+    {ABILITY_CURSED_BODY, 12},
+    {ABILITY_COMPETITIVE, 32},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sGengarAbilitySet[] =
+{
+    {ABILITY_LEVITATE, 1},
+    {ABILITY_CURSED_BODY, 12},
+    {ABILITY_COMPETITIVE, 32},
+    {ABILITY_SHADOW_TAG, 47},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSeelAbilitySet[] =
+{
+    {ABILITY_THICK_FAT, 1},
+    {ABILITY_HYDRATION, 16},
+    {ABILITY_ICE_BODY, 38},
+    ABILITY_SET_END
+};
+
+// static const struct AbilitySetter sDewgongRegionalAbilitySet[] =
+// {
+//     {ABILITY_CUSTOM1, 1}, //code an ability that allows for regeneration of health at end of each turn and heal status condition every 4 turns (this could change)
+//     ABILITY_SET_END
+// };
+
+
 //etc...
 
+static const struct AbilitySetter sDratiniAbilitySet[] =
+{
+    {ABILITY_SHED_SKIN, 1},
+    {ABILITY_MARVEL_SCALE, 35},
+    {ABILITY_DAZZLING, 60},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sDragoniteAbilitySet[] =
+{
+    {ABILITY_THICK_FAT, 1},
+    {ABILITY_INTIMIDATE, 1},
+    {ABILITY_MULTISCALE, 65},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sLarvitarAbilitySet[] =
+{
+    {ABILITY_GUTS, 1},
+    {ABILITY_SAND_VEIL, 35},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sPupitarAbilitySet[] =
+{
+    {ABILITY_SHED_SKIN, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sTyranitarAbilitySet[] =
+{
+    {ABILITY_UNNERVE, 1},
+    {ABILITY_SAND_STREAM, 1},
+    //{ABILITY_CUSTOM2, 65}, //Sandstream + sand veil combined.
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sBagonAbilitySet[] =
+{
+    {ABILITY_ROCK_HEAD, 1},
+    {ABILITY_SHEER_FORCE, 35},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sShelgonAbilitySet[] =
+{
+    {ABILITY_ROCK_HEAD, 1},
+    {ABILITY_OVERCOAT, 35},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSalamenceAbilitySet[] =
+{
+    {ABILITY_ROCK_HEAD, 1},
+    {ABILITY_SHEER_FORCE, 1},
+    {ABILITY_INTIMIDATE, 1},
+    {ABILITY_MOXIE, 52},
+    {ABILITY_AERILATE, 65},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMareepAbilitySet[] =
+{
+    {ABILITY_STATIC, 1},
+    {ABILITY_PLUS, 13},
+    {ABILITY_FLUFFY, 20},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sAmpharosAbilitySet[] =
+{
+    {ABILITY_STATIC, 1},
+    {ABILITY_PLUS, 13},
+    {ABILITY_MOLD_BREAKER, 20},
+    {ABILITY_SURGE_SURFER, 33},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sPikachuAbilitySet[] =
+{
+    {ABILITY_STATIC, 1},
+    {ABILITY_MINUS, 1},
+    {ABILITY_LIGHTNING_ROD, 16},
+    {ABILITY_LEVITATE, 32},
+    //{ABILITY_POWER_SURGE, 47}, //code ability to boost electric type attacks on electric terrain
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sRiachuAbilitySet[] =
+{
+    {ABILITY_STATIC, 1},
+    {ABILITY_MINUS, 1},
+    {ABILITY_LIGHTNING_ROD, 16},
+    //{ABILITY_SURGE_SHIELD, 43}, //code ability that boosts sp def and def on electric terrain
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sVoltorbAbilitySet[] =
+{
+    {ABILITY_SOUNDPROOF, 1},
+    {ABILITY_STATIC, 19},
+    {ABILITY_AFTERMATH, 42},
+    ABILITY_SET_END
+};
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
@@ -803,6 +948,34 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_MILOTIC] = sFeebasAbilitySet,
     [SPECIES_MAGIKARP] = sMagikarpAbilitySet,
     [SPECIES_GYARADOS] = sGyaradosAbilitySet,
+    [SPECIES_CORSOLA] = sCorsolaAbilitySet,
+    [SPECIES_GASTLY] = sGastlyAbilitySet,
+    [SPECIES_HAUNTER] = sGastlyAbilitySet,
+    [SPECIES_GENGAR] = sGengarAbilitySet,
+    [SPECIES_SEEL] = sSeelAbilitySet,
+    [SPECIES_DEWGONG] = sSeelAbilitySet,
+    //[SPECIES_DEWGONG_REGIONAL] = sDewgongRegionalAbilitySet,
+    [SPECIES_DRATINI] = sDratiniAbilitySet,
+    [SPECIES_DRAGONAIR] = sDratiniAbilitySet,
+    [SPECIES_DRAGONITE] = sDragoniteAbilitySet,
+    [SPECIES_LARVITAR] = sLarvitarAbilitySet,
+    [SPECIES_PUPITAR] = sPupitarAbilitySet,
+    [SPECIES_TYRANITAR] = sTyranitarAbilitySet,
+    [SPECIES_BAGON] = sBagonAbilitySet,
+    [SPECIES_SHELGON] = sShelgonAbilitySet,
+    [SPECIES_SALAMENCE] = sSalamenceAbilitySet,
+    [SPECIES_MAREEP] = sMareepAbilitySet,
+    [SPECIES_FLAAFFY] = sMareepAbilitySet,
+    [SPECIES_AMPHAROS] = sAmpharosAbilitySet,
+    [SPECIES_PIKACHU] = sPikachuAbilitySet,
+    [SPECIES_RAICHU] = sRiachuAbilitySet,
+    [SPECIES_VOLTORB] = sVoltorbAbilitySet,
+    [SPECIES_ELECTRODE] = sVoltorbAbilitySet,
+
+
+
+
+
 
 
 
