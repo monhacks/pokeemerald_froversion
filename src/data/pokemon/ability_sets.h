@@ -148,7 +148,7 @@ static const struct AbilitySetter sUmbreonAbilitySet[] =
     {ABILITY_SYNCHRONIZE, 1},
     {ABILITY_INNER_FOCUS, 1},
     {ABILITY_FILTER, 36},
-    {ABILITY_STAMINA, 52},
+    {ABILITY_SPACE_SHIFT, 52},
     ABILITY_SET_END
 };
 
@@ -803,7 +803,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_MILOTIC] = sFeebasAbilitySet,
     [SPECIES_MAGIKARP] = sMagikarpAbilitySet,
     [SPECIES_GYARADOS] = sGyaradosAbilitySet,
-    
+
 
 
 

@@ -6894,6 +6894,14 @@ BattleScript_ElectricSurgeActivates::
 	playanimation BS_SCRIPTING, B_ANIM_TERRAIN_ELECTRIC, NULL
 	end3
 
+BattleScript_SpaceShiftActivates::
+	pause 0x20
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_PKMNTWISTEDDIMENSIONS
+	waitstate
+	playanimation BS_BATTLER_0, BG_TRICK_ROOM, NULL
+	end3
+
 BattleScript_MistySurgeActivates::
 	pause 0x20
 	call BattleScript_AbilityPopUp

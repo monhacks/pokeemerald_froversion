@@ -3881,6 +3881,13 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 effect++;
             }
             break;
+        case ABILITY_SPACE_SHIFT:
+            if (TryChangeBattleTerrain(battler, STATUS_FIELD_TRICK_ROOM, &gFieldTimers.trickRoomTimer))
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_SpaceShiftActivates);
+                effect++;
+            }
+            break;
         case ABILITY_ELECTRIC_SURGE:
             if (TryChangeBattleTerrain(battler, STATUS_FIELD_ELECTRIC_TERRAIN, &gFieldTimers.electricTerrainTimer))
             {
