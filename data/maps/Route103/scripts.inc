@@ -63,19 +63,19 @@ Route103_EventScript_RivalBrendan:: @ 81EC434
 	end
 
 Route103_EventScript_StartMayBattleTreecko:: @ 81EC48E
-	setvar VAR_MUGSHOT_ID, MUGSHOT_SIDNEY 
+	setvar VAR_MUGSHOT_ID, MUGSHOT_JOHNM 
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
 
 Route103_EventScript_StartMayBattleTorchic:: @ 81EC49E
-	setvar VAR_MUGSHOT_ID, MUGSHOT_SIDNEY 
+	setvar VAR_MUGSHOT_ID, MUGSHOT_JOHNM
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TORCHIC, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
 
 Route103_EventScript_StartMayBattleMudkip:: @ 81EC4AE
-	setvar VAR_MUGSHOT_ID, MUGSHOT_SIDNEY 
+	setvar VAR_MUGSHOT_ID, MUGSHOT_JOHNM 
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end

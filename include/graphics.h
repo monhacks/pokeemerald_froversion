@@ -2993,6 +2993,14 @@ extern const u32 gTrainerFrontPic_Leaf[];
 extern const u32 gTrainerFrontPic_RubySapphireBrendan[];
 extern const u32 gTrainerFrontPic_RubySapphireMay[];
 
+////////////////////////////
+////FROVERSION TRAINERS////
+///////////////////////////
+
+extern const u32 gTrainerFrontPic_JohnM[];
+
+extern const u32 gTrainerPalette_JohnM[];
+
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];
 extern const u32 gTrainerPalette_PokemonBreederF[];
