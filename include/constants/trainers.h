@@ -116,6 +116,7 @@
 //////////////////////////////////
 
 #define TRAINER_PIC_JOHNM                 93
+#define TRAINER_PIC_BOBBYW                94
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1

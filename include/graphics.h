@@ -2998,8 +2998,10 @@ extern const u32 gTrainerFrontPic_RubySapphireMay[];
 ///////////////////////////
 
 extern const u32 gTrainerFrontPic_JohnM[];
+extern const u32 gTrainerFrontPic_BobbyW[];
 
 extern const u32 gTrainerPalette_JohnM[];
+extern const u32 gTrainerPalette_BobbyW[];
 
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];
