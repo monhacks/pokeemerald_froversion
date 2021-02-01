@@ -528,7 +528,9 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     //////FROVERSION MUGSHOTS//////
     //////////////////////////////
     [MUGSHOT_JOHNM] = TRAINER_PIC_JOHNM,
-    [MUGSHOT_BOBBYW] = TRAINER_PIC_BOBBYW,
+    [MUGSHOT_WASULA] = TRAINER_PIC_WASULA,
+    [MUGSHOT_COLANGELO] = TRAINER_PIC_COLANGELO,
+    [MUGSHOT_OFFICE_DWIGHT] = TRAINER_PIC_OFFICE_DWIGHT,
     
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
@@ -540,7 +542,9 @@ static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
     [MUGSHOT_DRAKE] =    {0x1A0, 0x1A0},
     [MUGSHOT_CHAMPION] = {0x188, 0x188},
     [MUGSHOT_JOHNM]    =   {0x1A0, 0x1A0},
-    [MUGSHOT_BOBBYW]    =   {0x1A0, 0x1A0},
+    [MUGSHOT_WASULA]    =   {0x1A0, 0x1A0},
+    [MUGSHOT_COLANGELO]    =   {0x1A0, 0x1A0},
+    [MUGSHOT_OFFICE_DWIGHT]    =   {0x1A0, 0x1A0},
 };
 static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
 {
@@ -551,7 +555,9 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     [MUGSHOT_DRAKE] =    {0,     5},
     [MUGSHOT_CHAMPION] = {-8,    7},
     [MUGSHOT_JOHNM] =    {8,     4},
-    [MUGSHOT_BOBBYW] =    {0,     6},
+    [MUGSHOT_WASULA] =   {0,     6},
+    [MUGSHOT_COLANGELO] = {0,     6},
+    [MUGSHOT_OFFICE_DWIGHT] = {-4,     6},
 };
 
 static const TransitionSpriteCallback sTrainerPicSpriteCbs[] =
@@ -845,7 +851,10 @@ static const u16 sMugshotPal_Champion[] = INCBIN_U16("graphics/battle_transition
 static const u16 sMugshotPal_Brendan[] = INCBIN_U16("graphics/battle_transitions/brendan_bg.gbapal");
 static const u16 sMugshotPal_May[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 static const u16 sMugshotPal_JohnM[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
-static const u16 sMugshotPal_BobbyW[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_Wasula[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_Colangelo[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_OfficeDwight[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+
 
 static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
 {
@@ -856,7 +865,9 @@ static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
     [MUGSHOT_DRAKE] = sMugshotPal_Drake,
     [MUGSHOT_CHAMPION] = sMugshotPal_Champion,
     [MUGSHOT_JOHNM] = sMugshotPal_Glacia,
-    [MUGSHOT_BOBBYW] = sMugshotPal_Glacia
+    [MUGSHOT_WASULA] = sMugshotPal_Glacia,
+    [MUGSHOT_COLANGELO] = sMugshotPal_Glacia,
+    [MUGSHOT_OFFICE_DWIGHT] = sMugshotPal_Drake
 };
 
 static const u16 *const sPlayerMugshotsPals[GENDER_COUNT] =
