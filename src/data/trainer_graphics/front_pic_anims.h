@@ -394,6 +394,14 @@ static const union AnimCmd *const sAnims_Jerett[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_OfficeJim[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_Dawson[] ={
+    sAnim_GeneralFrame0,
+};
+
 
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
@@ -499,5 +507,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_OFFICE_DWIGHT] = sAnims_OfficeDwight,
     [TRAINER_PIC_GRANT_HASELEY] = sAnims_GrantHaseley,
     [TRAINER_PIC_JERETT] = sAnims_Jerett,
+    [TRAINER_PIC_OFFICE_JIM] = sAnims_OfficeJim,
+    [TRAINER_PIC_DAWSON] = sAnims_Dawson,
 
 };

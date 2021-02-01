@@ -299,7 +299,8 @@ const u32 gTrainerFrontPic_Colangelo[] = INCBIN_U32("graphics/trainers/front_pic
 const u32 gTrainerFrontPic_OfficeDwight[] = INCBIN_U32("graphics/trainers/front_pics/office_dwight_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_GrantHaseley[] = INCBIN_U32("graphics/trainers/front_pics/grant_haseley_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_Jerett[] = INCBIN_U32("graphics/trainers/front_pics/jerett_front_pic.4bpp.lz");
-
+const u32 gTrainerFrontPic_OfficeJim[] = INCBIN_U32("graphics/trainers/front_pics/office_jim_front_pic.4bpp.lz");
+const u32 gTrainerFrontPic_Dawson[] = INCBIN_U32("graphics/trainers/front_pics/dawson_front_pic.4bpp.lz");
 
 const u32 gTrainerPalette_JohnM[] = INCBIN_U32("graphics/trainers/palettes/johnm.gbapal.lz");
 const u32 gTrainerPalette_Wasula[] = INCBIN_U32("graphics/trainers/palettes/wasula.gbapal.lz");
@@ -307,3 +308,6 @@ const u32 gTrainerPalette_Colangelo[] = INCBIN_U32("graphics/trainers/palettes/c
 const u32 gTrainerPalette_OfficeDwight[] = INCBIN_U32("graphics/trainers/palettes/office_dwight.gbapal.lz");
 const u32 gTrainerPalette_GrantHaseley[] = INCBIN_U32("graphics/trainers/palettes/grant_haseley.gbapal.lz");
 const u32 gTrainerPalette_Jerett[] = INCBIN_U32("graphics/trainers/palettes/jerett.gbapal.lz");
+const u32 gTrainerPalette_OfficeJim[] = INCBIN_U32("graphics/trainers/palettes/office_jim.gbapal.lz");
+const u32 gTrainerPalette_Dawson[] = INCBIN_U32("graphics/trainers/palettes/dawson.gbapal.lz");
+
