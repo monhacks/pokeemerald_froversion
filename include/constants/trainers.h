@@ -120,6 +120,7 @@
 #define TRAINER_PIC_COLANGELO             95
 #define TRAINER_PIC_OFFICE_DWIGHT         96
 #define TRAINER_PIC_GRANT_HASELEY         97
+#define TRAINER_PIC_JERETT                100
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1
