@@ -124,6 +124,15 @@
 #define TRAINER_PIC_OFFICE_JIM            101
 #define TRAINER_PIC_DAWSON                102
 #define TRAINER_PIC_LATTKA                103
+#define TRAINER_PIC_MARRIOTT              104
+#define TRAINER_PIC_MESSENGER             105
+#define TRAINER_PIC_CIOTUSZYNSKI          106
+#define TRAINER_PIC_HAIGH                 107
+#define TRAINER_PIC_OFFICE_MICHAEL        108
+#define TRAINER_PIC_OFFICE_PAM            109
+#define TRAINER_PIC_SHAWN_HASELEY         110
+#define TRAINER_PIC_WES_THOMPSON          111
+#define TRAINER_PIC_ZENDANO               112
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1

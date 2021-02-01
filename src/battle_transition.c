@@ -536,6 +536,15 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_OFFICE_JIM] = TRAINER_PIC_OFFICE_JIM,
     [MUGSHOT_DAWSON] = TRAINER_PIC_DAWSON,
     [MUGSHOT_LATTKA] = TRAINER_PIC_LATTKA,
+    [MUGSHOT_MARRIOTT] = TRAINER_PIC_MARRIOTT,
+    [MUGSHOT_MESSENGER] = TRAINER_PIC_MESSENGER,
+    [MUGSHOT_OFFICE_MICHAEL] = TRAINER_PIC_OFFICE_MICHAEL,
+    [MUGSHOT_OFFICE_PAM] = TRAINER_PIC_OFFICE_PAM,
+    [MUGSHOT_CIOTUSZYNSKI] = TRAINER_PIC_CIOTUSZYNSKI,
+    [MUGSHOT_HAIGH] = TRAINER_PIC_HAIGH,
+    [MUGSHOT_SHAWN_HASELEY] = TRAINER_PIC_SHAWN_HASELEY,
+    [MUGSHOT_WES_THOMPSON] = TRAINER_PIC_WES_THOMPSON,
+    [MUGSHOT_ZENDANO] = TRAINER_PIC_ZENDANO,
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
@@ -554,6 +563,16 @@ static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
     [MUGSHOT_OFFICE_JIM]    =   {0x1A0, 0x1A0},
     [MUGSHOT_DAWSON]    =   {0x1A0, 0x1A0},
     [MUGSHOT_LATTKA]    =   {0x1A0, 0x1A0},
+    [MUGSHOT_MARRIOTT]    =   {0x1A0, 0x1A0},
+    [MUGSHOT_MESSENGER] = {0x1A0, 0x1A0},
+    [MUGSHOT_OFFICE_MICHAEL] = {0x1A0, 0x1A0},
+    [MUGSHOT_OFFICE_PAM] = {0x1A0, 0x1A0},
+    [MUGSHOT_CIOTUSZYNSKI] = {0x1A0, 0x1A0},
+    [MUGSHOT_HAIGH] = {0x1A0, 0x1A0},
+    [MUGSHOT_SHAWN_HASELEY] = {0x1A0, 0x1A0},
+    [MUGSHOT_WES_THOMPSON] = {0x1A0, 0x1A0},
+    [MUGSHOT_ZENDANO] = {0x1A0, 0x1A0},
+    
 };
 static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
 {
@@ -572,6 +591,16 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     [MUGSHOT_OFFICE_JIM] = {-4,     6},
     [MUGSHOT_DAWSON] = {-4,     6},
     [MUGSHOT_LATTKA] = {-4,     6},
+    [MUGSHOT_MARRIOTT] = {-4,     6},
+    [MUGSHOT_MESSENGER] = {-4,     6},
+    [MUGSHOT_OFFICE_MICHAEL] = {-4,     6},
+    [MUGSHOT_OFFICE_PAM] = {-4,     6},
+    [MUGSHOT_CIOTUSZYNSKI] = {-4,     6},
+    [MUGSHOT_HAIGH] = {-8,     6},
+    [MUGSHOT_SHAWN_HASELEY] = {-4,     6},
+    [MUGSHOT_WES_THOMPSON] = {-4,     6},
+    [MUGSHOT_ZENDANO] = {-4,     6},
+    
 };
 
 static const TransitionSpriteCallback sTrainerPicSpriteCbs[] =
@@ -873,6 +902,15 @@ static const u16 sMugshotPal_Jerett[] = INCBIN_U16("graphics/battle_transitions/
 static const u16 sMugshotPal_OfficeJim[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 static const u16 sMugshotPal_Dawson[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 static const u16 sMugshotPal_Lattka[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_Marriott[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_Messenger[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_OfficeMichael[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_OfficePam[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_Ciotuszynski[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_Haigh[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_ShawnHaseley[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_WesThompson[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_Zendano[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 
 
 static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
@@ -891,7 +929,16 @@ static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
     [MUGSHOT_JERETT] = sMugshotPal_Drake,
     [MUGSHOT_OFFICE_JIM] = sMugshotPal_Drake,
     [MUGSHOT_DAWSON] = sMugshotPal_Drake,
-    [MUGSHOT_LATTKA] = sMugshotPal_Drake
+    [MUGSHOT_LATTKA] = sMugshotPal_Drake,
+    [MUGSHOT_MARRIOTT] = sMugshotPal_Champion,
+    [MUGSHOT_MESSENGER] = sMugshotPal_Champion,
+    [MUGSHOT_OFFICE_MICHAEL] = sMugshotPal_Champion,
+    [MUGSHOT_OFFICE_PAM] = sMugshotPal_Champion,
+    [MUGSHOT_CIOTUSZYNSKI] = sMugshotPal_Champion,
+    [MUGSHOT_HAIGH] = sMugshotPal_Champion,
+    [MUGSHOT_SHAWN_HASELEY] = sMugshotPal_Champion,
+    [MUGSHOT_WES_THOMPSON] = sMugshotPal_Champion,
+    [MUGSHOT_ZENDANO] = sMugshotPal_Champion
 };
 
 static const u16 *const sPlayerMugshotsPals[GENDER_COUNT] =

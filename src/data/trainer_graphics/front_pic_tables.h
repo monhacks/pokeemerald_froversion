@@ -102,6 +102,15 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_OFFICE_JIM] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_DAWSON] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_LATTKA] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_MESSENGER] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_OFFICE_MICHAEL] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_OFFICE_PAM] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_CIOTUSZYNSKI] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_HAIGH] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_SHAWN_HASELEY] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_WES_THOMPSON] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ZENDANO] = {.size = 8, .y_offset = 1},
+
 };
 
 #define TRAINER_SPRITE(trainerPic, sprite, size) [TRAINER_PIC_##trainerPic] = {sprite, size, TRAINER_PIC_##trainerPic}
@@ -213,6 +222,15 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(OFFICE_JIM, gTrainerFrontPic_OfficeJim, 0x800),
     TRAINER_SPRITE(DAWSON, gTrainerFrontPic_Dawson, 0x800),
     TRAINER_SPRITE(LATTKA, gTrainerFrontPic_Lattka, 0x800),
+    TRAINER_SPRITE(MARRIOTT, gTrainerFrontPic_Marriott, 0x800),
+    TRAINER_SPRITE(MESSENGER, gTrainerFrontPic_Messenger, 0x800),
+    TRAINER_SPRITE(CIOTUSZYNSKI, gTrainerFrontPic_Ciotuszynski, 0x800),
+    TRAINER_SPRITE(HAIGH, gTrainerFrontPic_Haigh, 0x800),
+    TRAINER_SPRITE(OFFICE_MICHAEL, gTrainerFrontPic_OfficeMichael, 0x800),
+    TRAINER_SPRITE(OFFICE_PAM, gTrainerFrontPic_OfficePam, 0x800),
+    TRAINER_SPRITE(SHAWN_HASELEY, gTrainerFrontPic_ShawnHaseley, 0x800),
+    TRAINER_SPRITE(WES_THOMPSON, gTrainerFrontPic_WesThompson, 0x800),
+    TRAINER_SPRITE(ZENDANO, gTrainerFrontPic_Zendano, 0x800),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -321,4 +339,13 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(OFFICE_JIM, gTrainerPalette_OfficeJim),
     TRAINER_PAL(DAWSON, gTrainerPalette_Dawson),
     TRAINER_PAL(LATTKA, gTrainerPalette_Lattka),
+    TRAINER_PAL(MARRIOTT, gTrainerPalette_Marriott),
+    TRAINER_PAL(MESSENGER, gTrainerPalette_Messenger),
+    TRAINER_PAL(CIOTUSZYNSKI, gTrainerPalette_Ciotuszynski),
+    TRAINER_PAL(HAIGH, gTrainerPalette_Haigh),
+    TRAINER_PAL(OFFICE_MICHAEL, gTrainerPalette_OfficeMichael),
+    TRAINER_PAL(OFFICE_PAM, gTrainerPalette_OfficePam),
+    TRAINER_PAL(SHAWN_HASELEY, gTrainerPalette_ShawnHaseley),
+    TRAINER_PAL(WES_THOMPSON, gTrainerPalette_WesThompson),
+    TRAINER_PAL(ZENDANO, gTrainerPalette_Zendano),
 };

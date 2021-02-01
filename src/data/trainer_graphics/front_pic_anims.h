@@ -406,6 +406,14 @@ static const union AnimCmd *const sAnims_Lattka[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_Marriott[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_FroversionTrainers[] ={
+    sAnim_GeneralFrame0,
+};
+
 
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
@@ -514,5 +522,14 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_OFFICE_JIM] = sAnims_OfficeJim,
     [TRAINER_PIC_DAWSON] = sAnims_Dawson,
     [TRAINER_PIC_LATTKA] = sAnims_Lattka,
+    [TRAINER_PIC_MARRIOTT] = sAnims_Marriott,
+    [TRAINER_PIC_MESSENGER] = sAnims_FroversionTrainers,
+    [TRAINER_PIC_OFFICE_MICHAEL] = sAnims_FroversionTrainers,
+    [TRAINER_PIC_OFFICE_PAM] = sAnims_FroversionTrainers,
+    [TRAINER_PIC_CIOTUSZYNSKI] = sAnims_FroversionTrainers,
+    [TRAINER_PIC_HAIGH] = sAnims_FroversionTrainers,
+    [TRAINER_PIC_SHAWN_HASELEY] = sAnims_FroversionTrainers,
+    [TRAINER_PIC_WES_THOMPSON] = sAnims_FroversionTrainers,
+    [TRAINER_PIC_ZENDANO] = sAnims_FroversionTrainers,
 
 };
