@@ -531,6 +531,7 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_WASULA] = TRAINER_PIC_WASULA,
     [MUGSHOT_COLANGELO] = TRAINER_PIC_COLANGELO,
     [MUGSHOT_OFFICE_DWIGHT] = TRAINER_PIC_OFFICE_DWIGHT,
+    [MUGSHOT_GRANT_HASELEY] = TRAINER_PIC_GRANT_HASELEY,
     
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
@@ -545,6 +546,7 @@ static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
     [MUGSHOT_WASULA]    =   {0x1A0, 0x1A0},
     [MUGSHOT_COLANGELO]    =   {0x1A0, 0x1A0},
     [MUGSHOT_OFFICE_DWIGHT]    =   {0x1A0, 0x1A0},
+    [MUGSHOT_GRANT_HASELEY]    =   {0x1A0, 0x1A0},
 };
 static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
 {
@@ -558,6 +560,7 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     [MUGSHOT_WASULA] =   {0,     6},
     [MUGSHOT_COLANGELO] = {0,     6},
     [MUGSHOT_OFFICE_DWIGHT] = {-4,     6},
+    [MUGSHOT_GRANT_HASELEY] = {-4,     6},
 };
 
 static const TransitionSpriteCallback sTrainerPicSpriteCbs[] =
@@ -854,6 +857,7 @@ static const u16 sMugshotPal_JohnM[] = INCBIN_U16("graphics/battle_transitions/m
 static const u16 sMugshotPal_Wasula[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 static const u16 sMugshotPal_Colangelo[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 static const u16 sMugshotPal_OfficeDwight[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_GrantHaseley[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 
 
 static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
@@ -867,7 +871,8 @@ static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
     [MUGSHOT_JOHNM] = sMugshotPal_Glacia,
     [MUGSHOT_WASULA] = sMugshotPal_Glacia,
     [MUGSHOT_COLANGELO] = sMugshotPal_Glacia,
-    [MUGSHOT_OFFICE_DWIGHT] = sMugshotPal_Drake
+    [MUGSHOT_OFFICE_DWIGHT] = sMugshotPal_Drake,
+    [MUGSHOT_GRANT_HASELEY] = sMugshotPal_Drake
 };
 
 static const u16 *const sPlayerMugshotsPals[GENDER_COUNT] =
