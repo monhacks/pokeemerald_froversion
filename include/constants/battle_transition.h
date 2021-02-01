@@ -15,8 +15,9 @@
 #define MUGSHOT_JERETT      11
 #define MUGSHOT_OFFICE_JIM 12
 #define MUGSHOT_DAWSON      13
+#define MUGSHOT_LATTKA      14
 
 
-#define MUGSHOTS_COUNT      14
+#define MUGSHOTS_COUNT      15
 
 #endif //GUARD_CONSTANTS_BATTLE_TRANSITION_H

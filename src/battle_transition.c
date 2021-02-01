@@ -535,6 +535,7 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_JERETT] = TRAINER_PIC_JERETT,
     [MUGSHOT_OFFICE_JIM] = TRAINER_PIC_OFFICE_JIM,
     [MUGSHOT_DAWSON] = TRAINER_PIC_DAWSON,
+    [MUGSHOT_LATTKA] = TRAINER_PIC_LATTKA,
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
@@ -552,6 +553,7 @@ static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
     [MUGSHOT_JERETT]    =   {0x1A0, 0x1A0},
     [MUGSHOT_OFFICE_JIM]    =   {0x1A0, 0x1A0},
     [MUGSHOT_DAWSON]    =   {0x1A0, 0x1A0},
+    [MUGSHOT_LATTKA]    =   {0x1A0, 0x1A0},
 };
 static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
 {
@@ -569,6 +571,7 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     [MUGSHOT_JERETT] = {-4,     6},
     [MUGSHOT_OFFICE_JIM] = {-4,     6},
     [MUGSHOT_DAWSON] = {-4,     6},
+    [MUGSHOT_LATTKA] = {-4,     6},
 };
 
 static const TransitionSpriteCallback sTrainerPicSpriteCbs[] =
@@ -869,6 +872,7 @@ static const u16 sMugshotPal_GrantHaseley[] = INCBIN_U16("graphics/battle_transi
 static const u16 sMugshotPal_Jerett[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 static const u16 sMugshotPal_OfficeJim[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 static const u16 sMugshotPal_Dawson[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_Lattka[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 
 
 static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
@@ -886,7 +890,8 @@ static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
     [MUGSHOT_GRANT_HASELEY] = sMugshotPal_Drake,
     [MUGSHOT_JERETT] = sMugshotPal_Drake,
     [MUGSHOT_OFFICE_JIM] = sMugshotPal_Drake,
-    [MUGSHOT_DAWSON] = sMugshotPal_Drake
+    [MUGSHOT_DAWSON] = sMugshotPal_Drake,
+    [MUGSHOT_LATTKA] = sMugshotPal_Drake
 };
 
 static const u16 *const sPlayerMugshotsPals[GENDER_COUNT] =

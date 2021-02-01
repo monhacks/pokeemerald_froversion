@@ -123,6 +123,7 @@
 #define TRAINER_PIC_JERETT                100
 #define TRAINER_PIC_OFFICE_JIM            101
 #define TRAINER_PIC_DAWSON                102
+#define TRAINER_PIC_LATTKA                103
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1
