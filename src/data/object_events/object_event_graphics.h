@@ -378,3 +378,7 @@ const u32 gObjectEventPic_JohnM[] = INCBIN_U32("graphics/object_events/pics/peop
 const u16 gObjectEventPal_JohnM[] = INCBIN_U16("graphics/object_events/palettes/johnm.gbapal");
 const u32 gObjectEventPic_Amneet[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/amneet.4bpp");
 const u16 gObjectEventPal_Amneet[] = INCBIN_U16("graphics/object_events/palettes/amneet.gbapal");
+const u32 gObjectEventPic_Klender[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/klender.4bpp");
+const u16 gObjectEventPal_Klender[] = INCBIN_U16("graphics/object_events/palettes/klender.gbapal");
+const u32 gObjectEventPic_Ciotuszynski[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/ciotuszynski.4bpp");
+const u16 gObjectEventPal_Ciotuszynski[] = INCBIN_U16("graphics/object_events/palettes/ciotuszynski.gbapal");
