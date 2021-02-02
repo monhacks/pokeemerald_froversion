@@ -244,8 +244,27 @@
 #define OBJ_EVENT_GFX_AMNEET                     240
 #define OBJ_EVENT_GFX_KLENDER                    241
 #define OBJ_EVENT_GFX_CIOTSZYNSKI                242
+#define OBJ_EVENT_GFX_COLANGELO                  243
+#define OBJ_EVENT_GFX_GRANT_HASELEY              244
+#define OBJ_EVENT_GFX_HAIGH                      245
+#define OBJ_EVENT_GFX_JERETT                     246
+#define OBJ_EVENT_GFX_DAWSON                     247
+#define OBJ_EVENT_GFX_LATTKA                     248
+#define OBJ_EVENT_GFX_MAGA_GRUNT_1               249
+#define OBJ_EVENT_GFX_MAGA_GRUNT_2               250
+#define OBJ_EVENT_GFX_MARRIOTT                   251
+#define OBJ_EVENT_GFX_MESSENGER                  252
+#define OBJ_EVENT_GFX_OFFICE_DWIGHT              253
+#define OBJ_EVENT_GFX_OFFICE_JIM                 254
+#define OBJ_EVENT_GFX_OFFICE_MICAHEL             255
+#define OBJ_EVENT_GFX_OFFICE_PAM                 256
+#define OBJ_EVENT_GFX_SHAWN_HASELEY              257
+#define OBJ_EVENT_GFX_WASULA                     258
+#define OBJ_EVENT_GFX_WES_THOMPSON               259
+#define OBJ_EVENT_GFX_ZENDANO                    260
 
-#define NUM_OBJ_EVENT_GFX                        243
+
+#define NUM_OBJ_EVENT_GFX                        261
 
 
 // These are dynamic object gfx ids.

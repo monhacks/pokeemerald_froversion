@@ -248,6 +248,25 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JohnM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Amneet;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Klender;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ciotuszynski;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Colangelo;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GrantHaseley;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Haigh;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jerett;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dawson;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lattka;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MagaGrunt1;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MagaGrunt2;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Marriott;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Messenger;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OfficeDwight;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OfficeJim;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OfficeMicahel;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OfficePam;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ShawnHaseley;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Wasula;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WesThompson;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zendano;
+
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -494,6 +513,25 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_AMNEET] =                   &gObjectEventGraphicsInfo_Amneet,
     [OBJ_EVENT_GFX_KLENDER] =                  &gObjectEventGraphicsInfo_Klender,
     [OBJ_EVENT_GFX_CIOTSZYNSKI] =              &gObjectEventGraphicsInfo_Ciotuszynski,
+    [OBJ_EVENT_GFX_COLANGELO] =                &gObjectEventGraphicsInfo_Colangelo,
+    [OBJ_EVENT_GFX_GRANT_HASELEY] =            &gObjectEventGraphicsInfo_GrantHaseley,
+    [OBJ_EVENT_GFX_HAIGH] =                    &gObjectEventGraphicsInfo_Haigh,
+    [OBJ_EVENT_GFX_JERETT] =                   &gObjectEventGraphicsInfo_Jerett,
+    [OBJ_EVENT_GFX_DAWSON] =                   &gObjectEventGraphicsInfo_Dawson,
+    [OBJ_EVENT_GFX_LATTKA] =                   &gObjectEventGraphicsInfo_Lattka,
+    [OBJ_EVENT_GFX_MAGA_GRUNT_1] =             &gObjectEventGraphicsInfo_MagaGrunt1,
+    [OBJ_EVENT_GFX_MAGA_GRUNT_2] =             &gObjectEventGraphicsInfo_MagaGrunt2,
+    [OBJ_EVENT_GFX_MARRIOTT] =                 &gObjectEventGraphicsInfo_Marriott,
+    [OBJ_EVENT_GFX_MESSENGER] =                &gObjectEventGraphicsInfo_Messenger,
+    [OBJ_EVENT_GFX_OFFICE_DWIGHT] =            &gObjectEventGraphicsInfo_OfficeDwight,
+    [OBJ_EVENT_GFX_OFFICE_JIM] =               &gObjectEventGraphicsInfo_OfficeJim,
+    [OBJ_EVENT_GFX_OFFICE_MICAHEL] =           &gObjectEventGraphicsInfo_OfficeMicahel,
+    [OBJ_EVENT_GFX_OFFICE_PAM] =               &gObjectEventGraphicsInfo_OfficePam,
+    [OBJ_EVENT_GFX_SHAWN_HASELEY] =            &gObjectEventGraphicsInfo_ShawnHaseley,
+    [OBJ_EVENT_GFX_WASULA] =                   &gObjectEventGraphicsInfo_Wasula,
+    [OBJ_EVENT_GFX_WES_THOMPSON] =             &gObjectEventGraphicsInfo_WesThompson,
+    [OBJ_EVENT_GFX_ZENDANO] =                  &gObjectEventGraphicsInfo_Zendano,
+
 
 };
 

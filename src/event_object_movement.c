@@ -441,6 +441,24 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_AMNEET                  0x1125
 #define OBJ_EVENT_PAL_TAG_KLENDER                 0x1126
 #define OBJ_EVENT_PAL_TAG_CIOTUSZYNSKI            0x1127
+#define OBJ_EVENT_PAL_TAG_COLANGELO               0x1128
+#define OBJ_EVENT_PAL_TAG_GRANT_HASELEY           0x1129
+#define OBJ_EVENT_PAL_TAG_HAIGH                   0x112A
+#define OBJ_EVENT_PAL_TAG_JERETT                  0x112B
+#define OBJ_EVENT_PAL_TAG_DAWSON                  0x112C
+#define OBJ_EVENT_PAL_TAG_LATTKA                  0x112D
+#define OBJ_EVENT_PAL_TAG_MAGA_GRUNT_1            0x112E
+#define OBJ_EVENT_PAL_TAG_MAGA_GRUNT_2            0x112F
+#define OBJ_EVENT_PAL_TAG_MARRIOTT                0x1130
+#define OBJ_EVENT_PAL_TAG_MESSENGER               0x1131
+#define OBJ_EVENT_PAL_TAG_OFFICE_DWIGHT           0x1132
+#define OBJ_EVENT_PAL_TAG_OFFICE_JIM              0x1133
+#define OBJ_EVENT_PAL_TAG_OFFICE_MICAHEL          0x1134
+#define OBJ_EVENT_PAL_TAG_OFFICE_PAM              0x1135
+#define OBJ_EVENT_PAL_TAG_SHAWN_HASELEY           0x1136
+#define OBJ_EVENT_PAL_TAG_WASULA                  0x1137
+#define OBJ_EVENT_PAL_TAG_WES_THOMPSON            0x1138
+#define OBJ_EVENT_PAL_TAG_ZENDANO                 0x1139
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -491,6 +509,26 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Amneet,                OBJ_EVENT_PAL_TAG_AMNEET},
     {gObjectEventPal_Klender,               OBJ_EVENT_PAL_TAG_KLENDER},
     {gObjectEventPal_Ciotuszynski,          OBJ_EVENT_PAL_TAG_CIOTUSZYNSKI},
+    {gObjectEventPal_Colangelo,             OBJ_EVENT_PAL_TAG_COLANGELO},
+    {gObjectEventPal_GrantHaseley,          OBJ_EVENT_PAL_TAG_GRANT_HASELEY},
+    {gObjectEventPal_Haigh,                 OBJ_EVENT_PAL_TAG_HAIGH},
+    {gObjectEventPal_Jerett,                OBJ_EVENT_PAL_TAG_JERETT},
+    {gObjectEventPal_Dawson,                OBJ_EVENT_PAL_TAG_DAWSON},
+    {gObjectEventPal_Lattka,                OBJ_EVENT_PAL_TAG_LATTKA},
+    {gObjectEventPal_MagaGrunt 1,           OBJ_EVENT_PAL_TAG_MAGA_GRUNT_1},
+    {gObjectEventPal_MagaGrunt 2,           OBJ_EVENT_PAL_TAG_MAGA_GRUNT_2},
+    {gObjectEventPal_Marriott,              OBJ_EVENT_PAL_TAG_MARRIOTT},
+    {gObjectEventPal_Messenger,             OBJ_EVENT_PAL_TAG_MESSENGER},       
+    {gObjectEventPal_OfficeDwight,          OBJ_EVENT_PAL_TAG_OFFICE_DWIGHT},
+    {gObjectEventPal_OfficeJim,             OBJ_EVENT_PAL_TAG_OFFICE_JIM},
+    {gObjectEventPal_OfficeMicahel,         OBJ_EVENT_PAL_TAG_OFFICE_MICHAEL},
+    {gObjectEventPal_OfficePam,             OBJ_EVENT_PAL_TAG_OFFICE_PAM},
+    {gObjectEventPal_ShawnHaseley,          OBJ_EVENT_PAL_TAG_SHAWN_HASELEY},  
+    {gObjectEventPal_Wasula,                OBJ_EVENT_PAL_TAG_WASULA},
+    {gObjectEventPal_WesThompson,           OBJ_EVENT_PAL_TAG_WES_THOMSPON},
+    {gObjectEventPal_Zendano,               OBJ_EVENT_PAL_TAG_ZENDANO},
+
+    
     {NULL,                                  0x0000},
 };
 
