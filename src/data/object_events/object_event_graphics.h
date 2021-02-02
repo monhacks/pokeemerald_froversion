@@ -376,3 +376,5 @@ const u32 gObjectEventPic_HoOh[] = INCBIN_U32("graphics/object_events/pics/pokem
 const u16 gObjectEventPal_HoOh[] = INCBIN_U16("graphics/object_events/palettes/ho_oh.gbapal");
 const u32 gObjectEventPic_JohnM[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/johnm.4bpp");
 const u16 gObjectEventPal_JohnM[] = INCBIN_U16("graphics/object_events/palettes/johnm.gbapal");
+const u32 gObjectEventPic_Amneet[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/amneet.4bpp");
+const u16 gObjectEventPal_Amneet[] = INCBIN_U16("graphics/object_events/palettes/amneet.gbapal");
