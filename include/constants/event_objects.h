@@ -256,7 +256,7 @@
 #define OBJ_EVENT_GFX_MESSENGER                  252
 #define OBJ_EVENT_GFX_OFFICE_DWIGHT              253
 #define OBJ_EVENT_GFX_OFFICE_JIM                 254
-#define OBJ_EVENT_GFX_OFFICE_MICAHEL             255
+#define OBJ_EVENT_GFX_OFFICE_MICHAEL             255
 #define OBJ_EVENT_GFX_OFFICE_PAM                 256
 #define OBJ_EVENT_GFX_SHAWN_HASELEY              257
 #define OBJ_EVENT_GFX_WASULA                     258

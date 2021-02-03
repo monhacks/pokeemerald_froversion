@@ -717,7 +717,7 @@ $(OBJEVENTGFXDIR)/people/froversion_trainers/johnm.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/froversion_trainers/amneet.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 2 -mheight 
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 	
 $(OBJEVENTGFXDIR)/people/froversion_trainers/klender.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
