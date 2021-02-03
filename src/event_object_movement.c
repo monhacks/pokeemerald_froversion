@@ -453,7 +453,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_MESSENGER               0x1131
 #define OBJ_EVENT_PAL_TAG_OFFICE_DWIGHT           0x1132
 #define OBJ_EVENT_PAL_TAG_OFFICE_JIM              0x1133
-#define OBJ_EVENT_PAL_TAG_OFFICE_MICAHEL          0x1134
+#define OBJ_EVENT_PAL_TAG_OFFICE_MICHAEL          0x1134
 #define OBJ_EVENT_PAL_TAG_OFFICE_PAM              0x1135
 #define OBJ_EVENT_PAL_TAG_SHAWN_HASELEY           0x1136
 #define OBJ_EVENT_PAL_TAG_WASULA                  0x1137
@@ -515,13 +515,13 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Jerett,                OBJ_EVENT_PAL_TAG_JERETT},
     {gObjectEventPal_Dawson,                OBJ_EVENT_PAL_TAG_DAWSON},
     {gObjectEventPal_Lattka,                OBJ_EVENT_PAL_TAG_LATTKA},
-    {gObjectEventPal_MagaGrunt 1,           OBJ_EVENT_PAL_TAG_MAGA_GRUNT_1},
-    {gObjectEventPal_MagaGrunt 2,           OBJ_EVENT_PAL_TAG_MAGA_GRUNT_2},
+    {gObjectEventPal_MagaGrunt1,            OBJ_EVENT_PAL_TAG_MAGA_GRUNT_1},
+    {gObjectEventPal_MagaGrunt2,            OBJ_EVENT_PAL_TAG_MAGA_GRUNT_2},
     {gObjectEventPal_Marriott,              OBJ_EVENT_PAL_TAG_MARRIOTT},
     {gObjectEventPal_Messenger,             OBJ_EVENT_PAL_TAG_MESSENGER},       
     {gObjectEventPal_OfficeDwight,          OBJ_EVENT_PAL_TAG_OFFICE_DWIGHT},
     {gObjectEventPal_OfficeJim,             OBJ_EVENT_PAL_TAG_OFFICE_JIM},
-    {gObjectEventPal_OfficeMicahel,         OBJ_EVENT_PAL_TAG_OFFICE_MICHAEL},
+    {gObjectEventPal_OfficeMichael,         OBJ_EVENT_PAL_TAG_OFFICE_MICHAEL},
     {gObjectEventPal_OfficePam,             OBJ_EVENT_PAL_TAG_OFFICE_PAM},
     {gObjectEventPal_ShawnHaseley,          OBJ_EVENT_PAL_TAG_SHAWN_HASELEY},  
     {gObjectEventPal_Wasula,                OBJ_EVENT_PAL_TAG_WASULA},

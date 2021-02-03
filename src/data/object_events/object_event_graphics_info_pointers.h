@@ -260,7 +260,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Marriott;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Messenger;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OfficeDwight;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OfficeJim;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OfficeMicahel;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OfficeMichael;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OfficePam;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ShawnHaseley;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Wasula;
@@ -525,7 +525,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MESSENGER] =                &gObjectEventGraphicsInfo_Messenger,
     [OBJ_EVENT_GFX_OFFICE_DWIGHT] =            &gObjectEventGraphicsInfo_OfficeDwight,
     [OBJ_EVENT_GFX_OFFICE_JIM] =               &gObjectEventGraphicsInfo_OfficeJim,
-    [OBJ_EVENT_GFX_OFFICE_MICAHEL] =           &gObjectEventGraphicsInfo_OfficeMicahel,
+    [OBJ_EVENT_GFX_OFFICE_MICHAEL] =           &gObjectEventGraphicsInfo_OfficeMichael,
     [OBJ_EVENT_GFX_OFFICE_PAM] =               &gObjectEventGraphicsInfo_OfficePam,
     [OBJ_EVENT_GFX_SHAWN_HASELEY] =            &gObjectEventGraphicsInfo_ShawnHaseley,
     [OBJ_EVENT_GFX_WASULA] =                   &gObjectEventGraphicsInfo_Wasula,
