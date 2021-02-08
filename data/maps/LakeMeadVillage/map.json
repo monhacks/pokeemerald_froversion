@@ -1,0 +1,182 @@
+{
+  "id": "MAP_LAKE_MEAD_VILLAGE",
+  "name": "LakeMeadVillage",
+  "layout": "LAYOUT_LAKE_MEAD_VILLAGE",
+  "music": "MUS_MISHIRO",
+  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "up",
+      "offset": -16,
+      "map": "MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
+      "x": 17,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Script_LakeMeadVillage_NPC_LittleBoy",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
+      "x": 20,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "x": 15,
+      "y": 24,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Script_LakeMeadVillage_NPC_Boy1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 10,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Script_LakeMeadVillage_NPC_Isiah",
+      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_ISIAH"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_1",
+      "x": 8,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Script_LMV_NPC_SoLGrunt1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_2",
+      "x": 9,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Script_LMV_NPC_SoLGrunt2",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_1",
+      "x": 9,
+      "y": 1,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
+      "var_value": "1",
+      "script": "Script_LakeMeadVillage_TilyouStopsYouFromLeaving1"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
+      "var_value": "1",
+      "script": "Script_LakeMeadVillage_TilyouStopsYouFromLeaving2"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
+      "var_value": "0",
+      "script": "Script_LakeMeadVillage_KidStopsYouFromLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
+      "var_value": "0",
+      "script": "Script_LakeMeadVillage_KidStopsYouFromLeaving"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Script_LakeMeadVillage_FerlitoHouseholdSign"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Script_LakeMeadVillage_NallsResidenceSign"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Script_LakeMeadVillage_TilyouLabSign"
+    }
+  ]
+}

@@ -830,3 +830,14 @@ gTileset_UnionRoom:: @ 83DFDFC
 	.4byte gMetatiles_UnionRoom
 	.4byte gMetatileAttributes_UnionRoom
 	.4byte NULL @ animation callback
+
+	.align 2
+gTileset_LakeMeadVillage::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_LakeMeadVillage
+	.4byte gTilesetPalettes_LakeMeadVillage
+	.4byte gMetatiles_LakeMeadVillage
+	.4byte gMetatileAttributes_LakeMeadVillage
+	.4byte NULL

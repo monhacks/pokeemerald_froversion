@@ -4410,6 +4410,16 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAKE_MEAD_VILLAGE",
+      "name": "LakeMeadVillage_Layout",
+      "width": 30,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LakeMeadVillage",
+      "border_filepath": "data/layouts/LakeMeadVillage/border.bin",
+      "blockdata_filepath": "data/layouts/LakeMeadVillage/map.bin"
     }
   ]
 }
