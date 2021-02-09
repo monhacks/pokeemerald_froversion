@@ -2,8 +2,8 @@
   "id": "MAP_LAKE_MEAD_VILLAGE",
   "name": "LakeMeadVillage",
   "layout": "LAYOUT_LAKE_MEAD_VILLAGE",
-  "music": "MUS_MISHIRO",
-  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "music": "MUS_LITTLEROOT",
+  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",
@@ -113,7 +113,27 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 11,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_LAKE_MEAD_VILLAGE_FROS_HOUSE_1F",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 22,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_LAKE_MEAD_VILLAGE_NALLS_RESIDENCE_1F",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 22,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
     {
@@ -121,7 +141,7 @@
       "x": 29,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
       "var_value": "1",
       "script": "Script_LakeMeadVillage_TilyouStopsYouFromLeaving1"
     },
@@ -130,7 +150,7 @@
       "x": 29,
       "y": 15,
       "elevation": 0,
-      "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
       "var_value": "1",
       "script": "Script_LakeMeadVillage_TilyouStopsYouFromLeaving2"
     },
@@ -139,7 +159,7 @@
       "x": 28,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
       "var_value": "0",
       "script": "Script_LakeMeadVillage_KidStopsYouFromLeaving"
     },
@@ -148,7 +168,7 @@
       "x": 28,
       "y": 15,
       "elevation": 0,
-      "var": "VAR_LAKE_MEAD_VILLAGE_TOWN_STATE",
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
       "var_value": "0",
       "script": "Script_LakeMeadVillage_KidStopsYouFromLeaving"
     }

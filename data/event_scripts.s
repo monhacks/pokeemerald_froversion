@@ -1066,3 +1066,13 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/LakeMeadVillage/scripts.inc"
+
+	.include "data/maps/LakeMeadVillage_FrosHouse_1F/scripts.inc"
+
+	.include "data/maps/LakeMeadVillage_FrosHouse_Basement/scripts.inc"
+
+	.include "data/maps/LakeMeadVillage_NallsResidence_1F/scripts.inc"
+
+	.include "data/maps/LakeMeadVillage_NallsResidence_2F/scripts.inc"
+
+	.include "data/maps/LakeMeadVillage_TilyousLab/scripts.inc"

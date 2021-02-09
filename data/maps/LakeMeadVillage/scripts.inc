@@ -5,48 +5,48 @@ LakeMeadVillage_MapScripts::
 	.byte 0
 
 //Variables
-// VAR_LAKE_MEAD_VILLAGE_INTRO_STATE 0 = Intro state which triggers intro event when warping to starting map. sets var to 1 after initial cutscene
-// VAR_LAKE_MEAD_VILLAGE_INTRO_STATE 1 = In this state the player must speak to angelina to trigger event which allows player to enter the basement. sets var to 2 when complete
-// VAR_LAKE_MEAD_VILLAGE_INTRO_STATE 2 = In this state the player must go to their room and go to sleep, ending the prolouge event and setting the var to 3
-// VAR_LAKE_MEAD_VILLAGE_INTRO_STATE 3 = Player must enter Isiahs house; when set to 3 isiahs mom event will trigger promting you to return home and setting var to 4
-// VAR_LAKE_MEAD_VILLAGE_INTRO_STATE 4 = Upon returning home mom event occurs; sets VAR_LAKE_MEAD_VILLAGE_INTRO_STATE to 5 and VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 1, allowing professor give pokemon event to trigger
-// VAR_LAKE_MEAD_VILLAGE_INTRO_STATE 5 =  as of now this serves as the final variable currently coded no special events (except 6 which offers one special dialouge option)
-// VAR_LAKE_MEAD_VILLAGE_INTRO_STATE 6 = Unlocks special dialouge option for Isiah in village
+// VAR_LITTLEROOT_INTRO_STATE 0 = Intro state which triggers intro event when warping to starting map. sets var to 1 after initial cutscene
+// VAR_LITTLEROOT_INTRO_STATE 1 = In this state the player must speak to angelina to trigger event which allows player to enter the basement. sets var to 2 when complete
+// VAR_LITTLEROOT_INTRO_STATE 2 = In this state the player must go to their room and go to sleep, ending the prolouge event and setting the var to 3
+// VAR_LITTLEROOT_INTRO_STATE 3 = Player must enter Isiahs house; when set to 3 isiahs mom event will trigger promting you to return home and setting var to 4
+// VAR_LITTLEROOT_INTRO_STATE 4 = Upon returning home mom event occurs; sets VAR_LITTLEROOT_INTRO_STATE to 5 and VAR_LITTLEROOT_TOWN_STATE 1, allowing professor give pokemon event to trigger
+// VAR_LITTLEROOT_INTRO_STATE 5 =  as of now this serves as the final variable currently coded no special events (except 6 which offers one special dialouge option)
+// VAR_LITTLEROOT_INTRO_STATE 6 = Unlocks special dialouge option for Isiah in village
 
 
-// VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 0 = Default Town State, preventrs player from leaving town befoe finding professor and picking pokemon
-// VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 1 = Mom has told you Isiah was just here looking for you. Now you can try to leave town and professor will stop you and take you to his lab
-// VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 2 = Set after professor takes you to his lab. 
-// VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 3 = Set after dialouge telling you to pick pokemon inside lab. also prevents player from leaving lab without picking pokemon
-// VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 4 = set after you pick pokemon. You can now leave the lab. Triggers battle with john when leaving Lake mead village going to Jagow Way for the first time
-// VAR_LAKE_MEAD_VILLAGE_TOWN_STATE 5 = set after battle with john. Final state as of now.
+// VAR_LITTLEROOT_TOWN_STATE 0 = Default Town State, preventrs player from leaving town befoe finding professor and picking pokemon
+// VAR_LITTLEROOT_TOWN_STATE 1 = Mom has told you Isiah was just here looking for you. Now you can try to leave town and professor will stop you and take you to his lab
+// VAR_LITTLEROOT_TOWN_STATE 2 = Set after professor takes you to his lab. 
+// VAR_LITTLEROOT_TOWN_STATE 3 = Set after dialouge telling you to pick pokemon inside lab. also prevents player from leaving lab without picking pokemon
+// VAR_LITTLEROOT_TOWN_STATE 4 = set after you pick pokemon. You can now leave the lab. Triggers battle with john when leaving Lake mead village going to Jagow Way for the first time
+// VAR_LITTLEROOT_TOWN_STATE 5 = set after battle with john. Final state as of now.
 
 
-// VAR_WALMORE_TOWN_STATE 1 = this will be set to 1 in walmore town by visiting the pokemart. When set to 1 professor will give pokedex then set VAR_WALMORE_TOWN_STATE to 2.
-// VAR_WALMORE_TOWN_STATE 2 = Set to this after recieved pokedex. Final state as of right now.
+// VAR_OLDALE_TOWN_STATE 1 = this will be set to 1 in walmore town by visiting the pokemart. When set to 1 professor will give pokedex then set VAR_OLDALE_TOWN_STATE to 2.
+// VAR_OLDALE_TOWN_STATE 2 = Set to this after recieved pokedex. Final state as of right now.
 
 
 
 //Mapscripts
 
 LakeMeadVillage_OnFrame:
-map_script_2 VAR_WALMORE_TOWN_STATE, 2, Script_LMV_MoveIsiah
-map_script_2 VAR_WALMORE_TOWN_STATE, 3, Script_LMV_IsiahCaught
+map_script_2 VAR_OLDALE_TOWN_STATE, 2, Script_LMV_MoveIsiah
+map_script_2 VAR_OLDALE_TOWN_STATE, 3, Script_LMV_IsiahCaught
 .2byte 0
 
 LakeMeadVillage_OnLoad:
 	removeobject 2
 	setflag FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU
-	compare VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 0
+	compare VAR_LITTLEROOT_TOWN_STATE, 0
 	goto_if_eq Script_LakeMeadVillage_MoveLittleBoyRemoveIsiah
-	compare VAR_WALMORE_TOWN_STATE, 3
+	compare VAR_OLDALE_TOWN_STATE, 3
 	goto_if_eq Script_LMV_MoveIsiah2
-	compare VAR_WALMORE_TOWN_STATE, 4
+	compare VAR_OLDALE_TOWN_STATE, 4
 	goto_if_eq Script_LMV_IsiahAndCaptainPosition
 	end
 
 LakeMeadVillage_OnWarp:
-	map_script_2 VAR_WALMORE_TOWN_STATE, 3, Script_LMV_WarpToCutscene
+	map_script_2 VAR_OLDALE_TOWN_STATE, 3, Script_LMV_WarpToCutscene
 	.2byte 0
 	
 
@@ -75,7 +75,7 @@ Script_LakeMeadVillage_KidStopsYouFromLeaving::
 
 Script_LakeMeadVillage_TilyouStopsYouFromLeaving1::
 	lock
-	playSE MUS_RG_OHKIDO
+	playSE MUS_RG_OAK
 	msgbox T_TilyouHeyWait, MSGBOX_DEFAULT
 	applymovement OBJ_EVENT_ID_PLAYER, M_PlayerStopsAndTurns
 	playSE SE_PIN
@@ -98,7 +98,7 @@ Script_LakeMeadVillage_TilyouStopsYouFromLeaving1::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	closedoor 15 16
 	waitdooranim
-	setvar VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 2
+	setvar VAR_LITTLEROOT_TOWN_STATE, 2
 	warp MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 0, 6, 12
 	waitstate
 	release
@@ -106,7 +106,7 @@ Script_LakeMeadVillage_TilyouStopsYouFromLeaving1::
 	
 Script_LakeMeadVillage_TilyouStopsYouFromLeaving2::
 	lock
-	playSE MUS_RG_OHKIDO
+	playSE MUS_RG_OAK
 	msgbox T_TilyouHeyWait, MSGBOX_DEFAULT
 	applymovement OBJ_EVENT_ID_PLAYER, M_PlayerStopsAndTurns
 	playSE SE_PIN
@@ -129,7 +129,7 @@ Script_LakeMeadVillage_TilyouStopsYouFromLeaving2::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	closedoor 15 16
 	waitdooranim
-	setvar VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 2
+	setvar VAR_LITTLEROOT_TOWN_STATE, 2
 	warp MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 0, 6, 12
 	waitstate
 	release
@@ -137,12 +137,14 @@ Script_LakeMeadVillage_TilyouStopsYouFromLeaving2::
 
 Script_LMV_WarpToCutscene::
 hideobjectat OBJ_EVENT_ID_PLAYER, MAP_LAKE_MEAD_VILLAGE
+hideobjectat  4, MAP_LAKE_MEAD_VILLAGE
+hideobjectat  7, MAP_LAKE_MEAD_VILLAGE
 release
 end 
 
 Script_LMV_MoveIsiah::
 lockall
-setvar VAR_WALMORE_TOWN_STATE, 3
+setvar VAR_OLDALE_TOWN_STATE, 3
 warpsilent MAP_LAKE_MEAD_VILLAGE, 255, 9, 5
 releaseall
 end
@@ -150,16 +152,17 @@ end
 Script_LMV_MoveIsiah2::
 setobjectxyperm 4, 9, 0
 setobjectmovementtype 4, MOVEMENT_TYPE_NONE
-setobjectxyperm 7, 9, 0
+setobjectxyperm 7, 8, 0
 setobjectmovementtype 7, MOVEMENT_TYPE_NONE
 end
 
 Script_LMV_IsiahAndCaptainPosition:
 setobjectxyperm 4, 9, 4
 setobjectmovementtype 4, MOVEMENT_TYPE_NONE
-setobjectxyperm 7, 8, 4
+setobjectxyperm 7, 8, 0
+setobjectxyperm 5, 9, 3
 setobjectmovementtype 7, MOVEMENT_TYPE_NONE
-setobjectmovementtype 5, MOVEMENT_TYPE_FACE_UP
+setobjectmovementtype 5, MOVEMENT_TYPE_NONE
 setobjectmovementtype 6, MOVEMENT_TYPE_FACE_UP
 end
 
@@ -169,21 +172,63 @@ delay 30
 msgbox T_LMV_TwoSoldiersTalking, MSGBOX_DEFAULT
 applymovement 5, M_LookUp
 applymovement 6, M_LookUp
+waitmovement 6
+showobjectat 4, MAP_LAKE_MEAD_VILLAGE
+showobjectat 7, MAP_LAKE_MEAD_VILLAGE
 applymovement 4, M_LMV_IsiahCaught
 applymovement 7, M_LMV_Soldier1CaughtIsiah
 waitmovement 7
 msgbox T_LMV_Soldier3CaughtIsiah, MSGBOX_DEFAULT
+applymovement 7, M_LMV_CaptainExits
+applymovement 5 M_LMV_StoneDetainsIsiah
+waitmovement 7
+delay 30
 warpsilent MAP_LAKE_MEAD_VILLAGE, 255, 22, 23
-setvar VAR_WALMORE_TOWN_STATE, 4
+setvar VAR_OLDALE_TOWN_STATE, 4
+end
+
+Script_LMV_DoubleBattleVarCompare::
+lockall
+compare VAR_OLDALE_TOWN_STATE, 4
+goto_if_eq Script_LMV_DoubleBattleTrigger
+releaseall
+end
+
+Script_LMV_DoubleBattleTrigger::
+lockall
+applymovement 6, Common_Movement_FacePlayer
+msgbox T_LMV_StartBattleSequence, MSGBOX_DEFAULT
+applymovement OBJ_EVENT_ID_PLAYER, M_LMV_FroToBattlePosition
+waitmovement OBJ_EVENT_ID_PLAYER
+trainerbattle_double TRAINER_JOHN_AND_JAY_1, T_LMV_SoldierBattleStart, T_LMV_JohnDefeat, T_LMV_JohnNotEnoughMons, Script_LMV_IsiahSaved
+releaseall
 end
 
 Script_LMV_SaveIsiah::
-m
+lockall
+msgbox T_LMV_StartBattleSequence, MSGBOX_NPC
+trainerbattle_double TRAINER_JOHN_AND_JAY_1, T_LMV_SoldierBattleStart, T_LMV_JohnDefeat, T_LMV_JohnNotEnoughMons, Script_LMV_IsiahSaved
+releaseall
+end
+
+Script_LMV_IsiahSaved::
+lockall
+msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
+applymovement 5, M_LMV_StoneRetreat
+applymovement 6, M_LMV_BudRetreat
+waitmovement 6
+applymovement 4, M_LMV_IsiahToFro
+waitmovement 4
+msgbox T_LMV_IsiahThanksFro, MSGBOX_DEFAULT
+delay 30
+warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
+releaseall
+end
 
 //NPCs
 Script_LakeMeadVillage_NPC_LittleBoy::
 	lock
-	compare VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 0
+	compare VAR_LITTLEROOT_TOWN_STATE, 0
 	goto_if_eq Script_LakeMeadVillage_NPC_LittleBoyTilyouDialouge
 	goto_if_gt Script_LakeMeadVillage_NPC_LittleBoyStandardDialouge
 	release
@@ -198,7 +243,7 @@ Script_LakeMeadVillage_NPC_LittleBoyStandardDialouge:
 	end
 	
 Script_LakeMeadVillage_NPC_Boy1::
-	compare VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 0
+	compare VAR_LITTLEROOT_TOWN_STATE, 0
 	goto_if_eq Script_LakeMeadVillage_NPC_Boy1Dialouge1
 	goto_if_gt Script_LakeMeadVillage_NPC_Boy1Dialouge2
 	end
@@ -212,13 +257,13 @@ Script_LakeMeadVillage_NPC_Boy1Dialouge2:
 	end
 	
 Script_LakeMeadVillage_NPC_Isiah::
-	compare VAR_LAKE_MEAD_VILLAGE_TOWN_STATE, 2
+	compare VAR_LITTLEROOT_TOWN_STATE, 2
 	goto_if_lt Script_LakeMeadVillage_NPC_IsiahBeforeRecievedPoke
 	goto_if_ge Script_LakeMeadVillage_NPC_IsiahAfterRecievedPoke
 	end
 	
 Script_LakeMeadVillage_NPC_IsiahBeforeRecievedPoke:
-	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 6
+	compare VAR_LITTLEROOT_INTRO_STATE, 6
 	goto_if_ge Script_LakeMeadVillage_IsiahBeforeRecievedPokeDesserChecked
 	checkitem ITEM_POTION, 1
 	compare VAR_RESULT, 1
@@ -247,7 +292,7 @@ Script_LakeMeadVillage_NPC_IsiahTakePotionDresserChecked1:
 
 
 Script_LakeMeadVillage_NPC_IsiahAfterRecievedPoke:
-	compare VAR_LAKE_MEAD_VILLAGE_INTRO_STATE, 6
+	compare VAR_LITTLEROOT_INTRO_STATE, 6
 	goto_if_ge Script_LakeMeadVillage_IsiahAfterRecievedPokeDesserChecked
 	checkitem ITEM_POTION, 1
 	compare VAR_RESULT, 1
@@ -273,18 +318,70 @@ Script_LakeMeadVillage_NPC_IsiahTakePotionDresserChecked2:
 	end
 
 Script_LMV_NPC_SoLGrunt1::
-compare VAR_WALMORE_TOWN_STATE, 4
-goto if_eq Script_LMV_SaveIsiah
+compare VAR_OLDALE_TOWN_STATE, 4
+goto_if_eq Script_LMV_SaveIsiah
 msgbox T_LMV_SoLGrunt1, MSGBOX_NPC
 end
 
 Script_LMV_NPC_SoLGrunt2::
-compare VAR_WALMORE_TOWN_STATE, 4
-goto if_eq Script_LMV_SaveIsiah
+compare VAR_OLDALE_TOWN_STATE, 4
+goto_if_eq Script_LMV_SaveIsiah
 msgbox T_LMV_SoLGrunt2, MSGBOX_NPC
 end
 
 //Movements
+M_LMV_IsiahToFro:
+walk_fastest_down
+step_end
+
+M_LMV_FroToBattlePosition:
+walk_fastest_down
+walk_fastest_right
+face_up
+step_end
+
+
+M_LMV_StoneRetreat:
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+step_end
+
+M_LMV_BudRetreat:
+walk_left
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+step_end
+
+M_LMV_CaptainExits:
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+walk_fastest_up
+step_end
+
+
+M_LMV_StoneDetainsIsiah:
+walk_up
+walk_up
+walk_right
+face_down
+step_end
+
+
+
+M_LMV_Soldier1CaughtIsiah:
+walk_down
+walk_down
+walk_down
+walk_down
+step_end
 
 M_LookUp:
 face_up
@@ -297,13 +394,6 @@ walk_down
 walk_down
 step_end
 
-M_LMV_Soldier1CaughtIsiah:
-walk_down
-walk_down
-walk_down
-walk_left
-walk_down
-step_end
 
 M_KidFaceLeft:
 face_left
@@ -512,8 +602,7 @@ T_LakeMeadVillage_Isiah_HaventSeenThemTakePotionDresserChecked:
 
 T_LMV_SoLGrunt1:
 	.string "Hey kid, {COLOR RED}stop {COLOR DARK_GREY}bothering me. We're in\n"
-	.string "the middle of very important\l"
-	.string "research.$"
+	.string "the middle of very important\lresearch.$"
 
 T_LMV_SoLGrunt2:
 	.string "We're on strict orders not to let\n"
@@ -521,7 +610,7 @@ T_LMV_SoLGrunt2:
 	.string "We will be done soon. Please move along.$"
 
 T_LMV_TwoSoldiersTalking:
-	.string "Soldier 1: This is so boring. I wish \nwe could be doing something with a\l little more action!\p"
+	.string "Soldier 1: This is so boring. I wish \nwe could be doing something with a\llittle more action!\p"
 	.string "Soldier 2: It might not be the most \nfun, but we can't let anyone from town\lsee what we are doing, or it could \lruin our plans.\p"
 	.string "Soldier 1: Yea but this town only has \nlike 10 residents, who is going to try \lto sneak in? Besides it's not like \lthere has to be two of us here to be \lon lookout.\p"
 	.string "Soldier 2: Quiet down, captain is \ncoming back.$"
@@ -531,5 +620,23 @@ T_LMV_Soldier3CaughtIsiah:
 	.string "Soldier 1: Sir, I... We...\p"
 	.string "Captian: I don't want to hear any \nexcuses. It doesn't matter now, we \lwill just have to detain him \lindefinitely.\p"
 	.string "Isiah: You can't do that! You have \nto let me go!\p"
-	.string "Captain: Quiet vermin!\pStone, Granger, you're relieved of \nyour lookout duties and will be \lreplaced by someone more qualified. \pI want you to take this child back \nto headquarters and have him locked \laway, he can't tell anyone about \lwhat he has seen. \pAnd don't mess up this time!\p"
+	.string "Captain: Quiet vermin!\pStone, Granger, you're relieved of \nyour lookout duties as we are \ldone in this area anyway. \pI want you to take this child back \nto headquarters and have him locked \laway, he can't tell anyone about \lwhat he has seen. \pI'm going to go grab the rest of the \ngear and I'll meet you back at \lheadquarters.\pOh, and don't mess up this time!\p"
 	.string "Stone, Granger: Sir, yes sir!$"
+
+T_LMV_StartBattleSequence:
+	.string "Granger: Hey kid get out of the way!\nWe are in the middle of something very important!\p...$"
+
+T_LMV_SoldierBattleStart:
+	.string "You can't stop us from detaining \nyour friend, he was tresspassing and \lmust be punished accordingly. \pFine, you don't want to move?\n Then we will have to make you!$"
+
+T_LMV_JohnNotEnoughMons:
+	.string "You're to weak to stop us any. \nYou don't even have two pokemon!\pNow run along and play hero somewhere else$"
+
+T_LMV_IsiahSaved:
+	.string "I can't believe we lost to a child. \nHow embarassing. \pLet's retreat back to headquarters. \nThis isn't the last you've seen of\lTeam MAGA.$"
+
+T_LMV_JohnDefeat:
+	.string "Oh, Captain is going to be so mad!$"
+
+T_LMV_IsiahThanksFro:
+	.string "Thanks Fro!$"

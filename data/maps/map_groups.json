@@ -101,7 +101,12 @@
     "LittlerootTown_BrendansHouse_2F",
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
-    "LittlerootTown_ProfessorBirchsLab"
+    "LittlerootTown_ProfessorBirchsLab",
+    "LakeMeadVillage_FrosHouse_1F",
+    "LakeMeadVillage_FrosHouse_Basement",
+    "LakeMeadVillage_NallsResidence_1F",
+    "LakeMeadVillage_NallsResidence_2F",
+    "LakeMeadVillage_TilyousLab"
   ],
   "gMapGroup2": [
     "OldaleTown_House1",

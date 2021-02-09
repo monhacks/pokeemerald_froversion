@@ -1299,16 +1299,16 @@
 #define FLAG_UNUSED_0x4E3                                           0x4E3 // Unused Flag
 #define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
 #define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
-#define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
-#define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
-#define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
-#define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
-#define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
-#define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
-#define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
-#define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
-#define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_CHARMANDER          0x4E6 // Hides "charmander" until after starter choice made
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_SQUIRTLE            0x4E7 // Hides "squirtle" after starter choice made
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BULBASAUR           0x4E8 // Hides "bulbasaur" after starter choice made
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU              0x4E9 // Hides Tilyou in his lab before you go into wild
+#define FLAG_HIDE_NALLS_RESIDENCE_1F_ISIAH                          0x4EA // Hides Isiah in his house until intro sequence is done
+#define FLAG_HIDE_MOM                                               0x4EB // Hides Fros Mom for intro sequence
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN                0x4EC // Hides John in Tilyous Lab
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY               0x4ED // Hides Bobby in Tilyous Lab
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_ISIAH                           0x4EE // Hides Isiah in Lake Mead
+#define FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU                          0x4EF // Hides Tilyou in Lab in lake mead village
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
