@@ -1076,3 +1076,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/LakeMeadVillage_NallsResidence_2F/scripts.inc"
 
 	.include "data/maps/LakeMeadVillage_TilyousLab/scripts.inc"
+
+	.include "data/maps/JagowWay/scripts.inc"

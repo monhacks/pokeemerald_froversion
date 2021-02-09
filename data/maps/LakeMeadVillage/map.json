@@ -17,6 +17,11 @@
       "direction": "up",
       "offset": -16,
       "map": "MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE"
+    },
+    {
+      "direction": "right",
+      "offset": 6,
+      "map": "MAP_JAGOW_WAY"
     }
   ],
   "object_events": [
