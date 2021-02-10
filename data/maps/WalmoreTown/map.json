@@ -75,13 +75,6 @@
   ],
   "warp_events": [
     {
-      "x": 11,
-      "y": 31,
-      "elevation": 0,
-      "dest_map": "MAP_WALMORE_TOWN",
-      "dest_warp_id": 0
-    },
-    {
       "x": 13,
       "y": 40,
       "elevation": 0,
@@ -96,8 +89,8 @@
       "dest_warp_id": 0
     },
     {
-      "x": 30,
-      "y": 41,
+      "x": 21,
+      "y": 28,
       "elevation": 0,
       "dest_map": "MAP_WALMORE_TOWN",
       "dest_warp_id": 0
@@ -107,6 +100,13 @@
       "y": 31,
       "elevation": 0,
       "dest_map": "MAP_WALMORE_TOWN_MART",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 11,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_WALMORE_TOWN",
       "dest_warp_id": 0
     }
   ],
