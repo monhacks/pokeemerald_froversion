@@ -95,7 +95,8 @@
     "Underwater_Route105",
     "Underwater_Route125",
     "LakeMeadVillage",
-    "JagowWay"
+    "JagowWay",
+    "WalmoreTown"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",
@@ -114,7 +115,8 @@
     "OldaleTown_House2",
     "OldaleTown_PokemonCenter_1F",
     "OldaleTown_PokemonCenter_2F",
-    "OldaleTown_Mart"
+    "OldaleTown_Mart",
+    "WalmoreTown_Mart"
   ],
   "gMapGroup3": [
     "DewfordTown_House1",

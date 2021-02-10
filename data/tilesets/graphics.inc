@@ -1749,3 +1749,23 @@ gTilesetPalettes_LakeMeadVillage::
 	.align 2
 gTilesetTiles_LakeMeadVillage::
 	.incbin "data/tilesets/secondary/lakemeadvillage/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_WalmoreTown::
+	.incbin "data/tilesets/secondary/walmoretown/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/walmoretown/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_WalmoreTown::
+	.incbin "data/tilesets/secondary/walmoretown/tiles.4bpp.lz"

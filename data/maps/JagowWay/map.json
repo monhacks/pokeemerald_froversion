@@ -17,6 +17,11 @@
       "direction": "left",
       "offset": -6,
       "map": "MAP_LAKE_MEAD_VILLAGE"
+    },
+    {
+      "direction": "right",
+      "offset": 37,
+      "map": "MAP_WALMORE_TOWN"
     }
   ],
   "object_events": [

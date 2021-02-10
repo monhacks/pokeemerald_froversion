@@ -4480,6 +4480,26 @@
       "secondary_tileset": "gTileset_LakeMeadVillage",
       "border_filepath": "data/layouts/JagowWay/border.bin",
       "blockdata_filepath": "data/layouts/JagowWay/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALMORE_TOWN",
+      "name": "WalmoreTown_Layout",
+      "width": 53,
+      "height": 51,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_WalmoreTown",
+      "border_filepath": "data/layouts/WalmoreTown/border.bin",
+      "blockdata_filepath": "data/layouts/WalmoreTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALMORE_TOWN_MART",
+      "name": "WalmoreTown_Mart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/WalmoreTown_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/WalmoreTown_Mart/map.bin"
     }
   ]
 }

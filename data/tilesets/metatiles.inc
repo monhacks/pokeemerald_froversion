@@ -565,3 +565,10 @@ gMetatiles_LakeMeadVillage::
 	.align 1
 gMetatileAttributes_LakeMeadVillage::
 	.incbin "data/tilesets/secondary/lakemeadvillage/metatile_attributes.bin"
+	.align 1
+gMetatiles_WalmoreTown::
+	.incbin "data/tilesets/secondary/walmoretown/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_WalmoreTown::
+	.incbin "data/tilesets/secondary/walmoretown/metatile_attributes.bin"

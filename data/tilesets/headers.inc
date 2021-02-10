@@ -841,3 +841,14 @@ gTileset_LakeMeadVillage::
 	.4byte gMetatiles_LakeMeadVillage
 	.4byte gMetatileAttributes_LakeMeadVillage
 	.4byte NULL
+
+	.align 2
+gTileset_WalmoreTown::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_WalmoreTown
+	.4byte gTilesetPalettes_WalmoreTown
+	.4byte gMetatiles_WalmoreTown
+	.4byte gMetatileAttributes_WalmoreTown
+	.4byte NULL
