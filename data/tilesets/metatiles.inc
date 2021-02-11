@@ -572,3 +572,17 @@ gMetatiles_WalmoreTown::
 	.align 1
 gMetatileAttributes_WalmoreTown::
 	.incbin "data/tilesets/secondary/walmoretown/metatile_attributes.bin"
+	.align 1
+gMetatiles_SummitCity::
+	.incbin "data/tilesets/secondary/summitcity/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SummitCity::
+	.incbin "data/tilesets/secondary/summitcity/metatile_attributes.bin"
+	.align 1
+gMetatiles_SummitGeneral::
+	.incbin "data/tilesets/primary/summitgeneral/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SummitGeneral::
+	.incbin "data/tilesets/primary/summitgeneral/metatile_attributes.bin"

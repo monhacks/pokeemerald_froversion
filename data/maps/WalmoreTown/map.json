@@ -17,6 +17,11 @@
       "direction": "left",
       "offset": -37,
       "map": "MAP_JAGOW_WAY"
+    },
+    {
+      "direction": "right",
+      "offset": 6,
+      "map": "MAP_LANCELOT_PATH"
     }
   ],
   "object_events": [

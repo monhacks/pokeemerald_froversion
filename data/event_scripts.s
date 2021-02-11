@@ -1082,3 +1082,7 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/WalmoreTown/scripts.inc"
 
 	.include "data/maps/WalmoreTown_Mart/scripts.inc"
+
+	.include "data/maps/LancelotPath/scripts.inc"
+
+	.include "data/maps/SummitCity/scripts.inc"

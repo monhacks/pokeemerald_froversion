@@ -1769,3 +1769,43 @@ gTilesetPalettes_WalmoreTown::
 	.align 2
 gTilesetTiles_WalmoreTown::
 	.incbin "data/tilesets/secondary/walmoretown/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SummitCity::
+	.incbin "data/tilesets/secondary/summitcity/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/summitcity/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SummitCity::
+	.incbin "data/tilesets/secondary/summitcity/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SummitGeneral::
+	.incbin "data/tilesets/primary/summitgeneral/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/summitgeneral/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/summitgeneral/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/summitgeneral/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/summitgeneral/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/summitgeneral/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/summitgeneral/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/summitgeneral/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/summitgeneral/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/summitgeneral/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/summitgeneral/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/summitgeneral/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/summitgeneral/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SummitGeneral::
+	.incbin "data/tilesets/primary/summitgeneral/tiles.4bpp.lz"

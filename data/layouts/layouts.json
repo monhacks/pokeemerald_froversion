@@ -4500,6 +4500,26 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/WalmoreTown_Mart/border.bin",
       "blockdata_filepath": "data/layouts/WalmoreTown_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_LANCELOT_PATH",
+      "name": "LancelotPath_Layout",
+      "width": 40,
+      "height": 100,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/LancelotPath/border.bin",
+      "blockdata_filepath": "data/layouts/LancelotPath/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUMMIT_CITY",
+      "name": "SummitCity_Layout",
+      "width": 50,
+      "height": 60,
+      "primary_tileset": "gTileset_SummitGeneral",
+      "secondary_tileset": "gTileset_SummitCity",
+      "border_filepath": "data/layouts/SummitCity/border.bin",
+      "blockdata_filepath": "data/layouts/SummitCity/map.bin"
     }
   ]
 }

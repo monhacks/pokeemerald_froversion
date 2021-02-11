@@ -852,3 +852,25 @@ gTileset_WalmoreTown::
 	.4byte gMetatiles_WalmoreTown
 	.4byte gMetatileAttributes_WalmoreTown
 	.4byte NULL
+
+	.align 2
+gTileset_SummitCity::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_SummitCity
+	.4byte gTilesetPalettes_SummitCity
+	.4byte gMetatiles_SummitCity
+	.4byte gMetatileAttributes_SummitCity
+	.4byte NULL
+
+	.align 2
+gTileset_SummitGeneral::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_SummitGeneral
+	.4byte gTilesetPalettes_SummitGeneral
+	.4byte gMetatiles_SummitGeneral
+	.4byte gMetatileAttributes_SummitGeneral
+	.4byte NULL
