@@ -4520,6 +4520,16 @@
       "secondary_tileset": "gTileset_SummitCity",
       "border_filepath": "data/layouts/SummitCity/border.bin",
       "blockdata_filepath": "data/layouts/SummitCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_JAGOW_WAY_LOWER",
+      "name": "JagowWayLower_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_SummitGeneral",
+      "secondary_tileset": "gTileset_SummitCity",
+      "border_filepath": "data/layouts/JagowWayLower/border.bin",
+      "blockdata_filepath": "data/layouts/JagowWayLower/map.bin"
     }
   ]
 }

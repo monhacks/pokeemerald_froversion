@@ -1086,3 +1086,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/LancelotPath/scripts.inc"
 
 	.include "data/maps/SummitCity/scripts.inc"
+
+	.include "data/maps/JagowWayLower/scripts.inc"

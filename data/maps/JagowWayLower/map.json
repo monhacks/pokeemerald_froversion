@@ -1,12 +1,12 @@
 {
-  "id": "MAP_SUMMIT_CITY",
-  "name": "SummitCity",
-  "layout": "LAYOUT_SUMMIT_CITY",
+  "id": "MAP_JAGOW_WAY_LOWER",
+  "name": "JagowWayLower",
+  "layout": "LAYOUT_JAGOW_WAY_LOWER",
   "music": "MUS_LITTLEROOT",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
@@ -14,22 +14,16 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
-      "offset": 30,
-      "map": "MAP_JAGOW_WAY_LOWER"
+      "direction": "down",
+      "offset": -30,
+      "map": "MAP_SUMMIT_CITY"
     }
   ],
   "object_events": [
 
   ],
   "warp_events": [
-    {
-      "x": 30,
-      "y": 22,
-      "elevation": 0,
-      "dest_map": "MAP_SUMMIT_CITY",
-      "dest_warp_id": 0
-    }
+
   ],
   "coord_events": [
 
