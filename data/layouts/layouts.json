@@ -3005,7 +3005,7 @@
       "id": "LAYOUT_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE",
       "name": "Route124_DivingTreasureHuntersHouse_Layout",
       "width": 10,
-      "height": 9,
+      "height": 110,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Route124_DivingTreasureHuntersHouse/border.bin",
@@ -4475,7 +4475,7 @@
       "id": "LAYOUT_JAGOW_WAY",
       "name": "JagowWay_Layout",
       "width": 20,
-      "height": 100,
+      "height": 88,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_LakeMeadVillage",
       "border_filepath": "data/layouts/JagowWay/border.bin",
@@ -4530,6 +4530,246 @@
       "secondary_tileset": "gTileset_SummitCity",
       "border_filepath": "data/layouts/JagowWayLower/border.bin",
       "blockdata_filepath": "data/layouts/JagowWayLower/map.bin"
+    },
+    {
+      "id": "LAYOUT_LYNCH_PARK",
+      "name": "LynchPark_Layout",
+      "width": 35,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LynchPark",
+      "border_filepath": "data/layouts/LynchPark/border.bin",
+      "blockdata_filepath": "data/layouts/LynchPark/map.bin"
+    },
+    {
+      "id": "LAYOUT_WILLIAMS_TRAIL_EAST",
+      "name": "WilliamsTrailEast_Layout",
+      "width": 62,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LynchPark",
+      "border_filepath": "data/layouts/WilliamsTrailEast/border.bin",
+      "blockdata_filepath": "data/layouts/WilliamsTrailEast/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIAGARA_RIVER_NORTH1",
+      "name": "NiagaraRiverNorth1_Layout",
+      "width": 25,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LynchPark",
+      "border_filepath": "data/layouts/NiagaraRiverNorth1/border.bin",
+      "blockdata_filepath": "data/layouts/NiagaraRiverNorth1/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIARAGA_RIVER_NORTH2",
+      "name": "NiaragaRiverNorth2_Layout",
+      "width": 20,
+      "height": 71,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NiaragaRiverNorth2/border.bin",
+      "blockdata_filepath": "data/layouts/NiaragaRiverNorth2/map.bin"
+    },
+    {
+      "id": "LAYOUT_RAINTREE_ISLAND",
+      "name": "RaintreeIsland_Layout",
+      "width": 35,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/RaintreeIsland/border.bin",
+      "blockdata_filepath": "data/layouts/RaintreeIsland/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIAGARA_RIVER_SOUTH",
+      "name": "NiagaraRiverSouth_Layout",
+      "width": 60,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NiagaraRiverSouth/border.bin",
+      "blockdata_filepath": "data/layouts/NiagaraRiverSouth/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAND_ISLAND",
+      "name": "GrandIsland_Layout",
+      "width": 45,
+      "height": 35,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/GrandIsland/border.bin",
+      "blockdata_filepath": "data/layouts/GrandIsland/map.bin"
+    },
+    {
+      "id": "LAYOUT_LASALLE_BIKE_PATH",
+      "name": "LasalleBikePath_Layout",
+      "width": 20,
+      "height": 90,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/LasalleBikePath/border.bin",
+      "blockdata_filepath": "data/layouts/LasalleBikePath/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAND_ISLAND_VALLEY",
+      "name": "GrandIslandValley_Layout",
+      "width": 70,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/GrandIslandValley/border.bin",
+      "blockdata_filepath": "data/layouts/GrandIslandValley/map.bin"
+    },
+    {
+      "id": "LAYOUT_MILITARY_ROAD",
+      "name": "MilitaryRoad_Layout",
+      "width": 76,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/MilitaryRoad/border.bin",
+      "blockdata_filepath": "data/layouts/MilitaryRoad/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_TOWN",
+      "name": "HomesteadTown_Layout",
+      "width": 23,
+      "height": 31,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HomesteadTown/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_TUSCORORA_PATH",
+      "name": "TuscororaPath_Layout",
+      "width": 17,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/TuscororaPath/border.bin",
+      "blockdata_filepath": "data/layouts/TuscororaPath/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIVER_PASSAGE",
+      "name": "RiverPassage_Layout",
+      "width": 24,
+      "height": 89,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/RiverPassage/border.bin",
+      "blockdata_filepath": "data/layouts/RiverPassage/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIVER_PASSAGE2",
+      "name": "RiverPassage2_Layout",
+      "width": 26,
+      "height": 113,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/RiverPassage2/border.bin",
+      "blockdata_filepath": "data/layouts/RiverPassage2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WITMER_SWAMPLANDS",
+      "name": "WitmerSwamplands_Layout",
+      "width": 115,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WitmerSwamplands/border.bin",
+      "blockdata_filepath": "data/layouts/WitmerSwamplands/map.bin"
+    },
+    {
+      "id": "LAYOUT_DAWN_OUTPOST",
+      "name": "DawnOutpost_Layout",
+      "width": 25,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/DawnOutpost/border.bin",
+      "blockdata_filepath": "data/layouts/DawnOutpost/map.bin"
+    },
+    {
+      "id": "LAYOUT_FERCHEN_TRAIL",
+      "name": "FerchenTrail_Layout",
+      "width": 16,
+      "height": 31,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/FerchenTrail/border.bin",
+      "blockdata_filepath": "data/layouts/FerchenTrail/map.bin"
+    },
+    {
+      "id": "LAYOUT_SY_PATHWAY",
+      "name": "SyPathway_Layout",
+      "width": 40,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SyPathway/border.bin",
+      "blockdata_filepath": "data/layouts/SyPathway/map.bin"
+    },
+    {
+      "id": "LAYOUT_JAGOW_SY_CONNECTION1",
+      "name": "JagowSyConnection1_Layout",
+      "width": 11,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/JagowSyConnection1/border.bin",
+      "blockdata_filepath": "data/layouts/JagowSyConnection1/map.bin"
+    },
+    {
+      "id": "LAYOUT_JAGOW_SY_CONNECTION2",
+      "name": "JagowSyConnection2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/JagowSyConnection2/border.bin",
+      "blockdata_filepath": "data/layouts/JagowSyConnection2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WITMER_SWAMPLANDS_WEST",
+      "name": "WitmerSwamplandsWest_Layout",
+      "width": 63,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WitmerSwamplandsWest/border.bin",
+      "blockdata_filepath": "data/layouts/WitmerSwamplandsWest/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIAGARA_VILLAGE",
+      "name": "NiagaraVillage_Layout",
+      "width": 21,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NiagaraVillage/border.bin",
+      "blockdata_filepath": "data/layouts/NiagaraVillage/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE_STENZIL",
+      "name": "RouteStenzil_Layout",
+      "width": 18,
+      "height": 42,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/RouteStenzil/border.bin",
+      "blockdata_filepath": "data/layouts/RouteStenzil/map.bin"
+    },
+    {
+      "id": "LAYOUT_WARD_TOWN",
+      "name": "WardTown_Layout",
+      "width": 28,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WardTown/border.bin",
+      "blockdata_filepath": "data/layouts/WardTown/map.bin"
     }
   ]
 }

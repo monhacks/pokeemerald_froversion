@@ -1,0 +1,39 @@
+{
+  "id": "MAP_NIARAGA_RIVER_NORTH2",
+  "name": "NiaragaRiverNorth2",
+  "layout": "LAYOUT_NIARAGA_RIVER_NORTH2",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_OCEAN_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "up",
+      "offset": -5,
+      "map": "MAP_NIAGARA_RIVER_NORTH1"
+    },
+    {
+      "direction": "down",
+      "offset": -7,
+      "map": "MAP_RAINTREE_ISLAND"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

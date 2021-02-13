@@ -99,7 +99,30 @@
     "WalmoreTown",
     "LancelotPath",
     "SummitCity",
-    "JagowWayLower"
+    "JagowWayLower",
+    "LynchPark",
+    "WilliamsTrailEast",
+    "NiagaraRiverNorth1",
+    "NiaragaRiverNorth2",
+    "RaintreeIsland",
+    "NiagaraRiverSouth",
+    "GrandIsland",
+    "LasalleBikePath",
+    "GrandIslandValley",
+    "MilitaryRoad",
+    "HomesteadTown",
+    "TuscororaPath",
+    "RiverPassage",
+    "RiverPassage2",
+    "WitmerSwamplands",
+    "DawnOutpost",
+    "FerchenTrail",
+    "SyPathway",
+    "JagowSyConnection2",
+    "WitmerSwamplandsWest",
+    "NiagaraVillage",
+    "RouteStenzil",
+    "WardTown"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",
@@ -632,6 +655,7 @@
     "Route119_House"
   ],
   "gMapGroup33": [
-    "Route124_DivingTreasureHuntersHouse"
+    "Route124_DivingTreasureHuntersHouse",
+    "JagowSyConnection1"
   ]
 }

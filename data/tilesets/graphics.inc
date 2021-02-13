@@ -1809,3 +1809,23 @@ gTilesetPalettes_SummitGeneral::
 	.align 2
 gTilesetTiles_SummitGeneral::
 	.incbin "data/tilesets/primary/summitgeneral/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_LynchPark::
+	.incbin "data/tilesets/secondary/lynchpark/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/lynchpark/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/lynchpark/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/lynchpark/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/lynchpark/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/lynchpark/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/lynchpark/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/lynchpark/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/lynchpark/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/lynchpark/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/lynchpark/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/lynchpark/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/lynchpark/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_LynchPark::
+	.incbin "data/tilesets/secondary/lynchpark/tiles.4bpp.lz"

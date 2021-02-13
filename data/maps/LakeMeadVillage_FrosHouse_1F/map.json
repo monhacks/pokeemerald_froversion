@@ -3,7 +3,7 @@
   "name": "LakeMeadVillage_FrosHouse_1F",
   "layout": "LAYOUT_LAKE_MEAD_VILLAGE_FROS_HOUSE_1F",
   "music": "MUS_LITTLEROOT",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

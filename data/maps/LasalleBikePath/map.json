@@ -1,0 +1,39 @@
+{
+  "id": "MAP_LASALLE_BIKE_PATH",
+  "name": "LasalleBikePath",
+  "layout": "LAYOUT_LASALLE_BIKE_PATH",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "down",
+      "offset": -4,
+      "map": "MAP_GRAND_ISLAND"
+    },
+    {
+      "direction": "up",
+      "offset": -20,
+      "map": "MAP_WILLIAMS_TRAIL_EAST"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

@@ -3,7 +3,7 @@
   "name": "LakeMeadVillage_NallsResidence_1F",
   "layout": "LAYOUT_LAKE_MEAD_VILLAGE_NALLS_RESIDENCE_1F",
   "music": "MUS_AQUA_MAGMA_HIDEOUT ",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

@@ -874,3 +874,14 @@ gTileset_SummitGeneral::
 	.4byte gMetatiles_SummitGeneral
 	.4byte gMetatileAttributes_SummitGeneral
 	.4byte NULL
+
+	.align 2
+gTileset_LynchPark::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_LynchPark
+	.4byte gTilesetPalettes_LynchPark
+	.4byte gMetatiles_LynchPark
+	.4byte gMetatileAttributes_LynchPark
+	.4byte NULL

@@ -3,7 +3,7 @@
   "name": "LancelotPath",
   "layout": "LAYOUT_LANCELOT_PATH",
   "music": "MUS_ABANDONED_SHIP",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
@@ -15,8 +15,13 @@
   "connections": [
     {
       "direction": "left",
-      "offset": -6,
+      "offset": -10,
       "map": "MAP_WALMORE_TOWN"
+    },
+    {
+      "direction": "right",
+      "offset": 71,
+      "map": "MAP_WILLIAMS_TRAIL_EAST"
     }
   ],
   "object_events": [

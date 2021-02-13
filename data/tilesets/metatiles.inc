@@ -586,3 +586,10 @@ gMetatiles_SummitGeneral::
 	.align 1
 gMetatileAttributes_SummitGeneral::
 	.incbin "data/tilesets/primary/summitgeneral/metatile_attributes.bin"
+	.align 1
+gMetatiles_LynchPark::
+	.incbin "data/tilesets/secondary/lynchpark/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_LynchPark::
+	.incbin "data/tilesets/secondary/lynchpark/metatile_attributes.bin"

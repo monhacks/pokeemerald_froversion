@@ -1,0 +1,49 @@
+{
+  "id": "MAP_WILLIAMS_TRAIL_EAST",
+  "name": "WilliamsTrailEast",
+  "layout": "LAYOUT_WILLIAMS_TRAIL_EAST",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "left",
+      "offset": -71,
+      "map": "MAP_LANCELOT_PATH"
+    },
+    {
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_LYNCH_PARK"
+    },
+    {
+      "direction": "down",
+      "offset": 20,
+      "map": "MAP_LASALLE_BIKE_PATH"
+    },
+    {
+      "direction": "up",
+      "offset": 31,
+      "map": "MAP_RIVER_PASSAGE"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

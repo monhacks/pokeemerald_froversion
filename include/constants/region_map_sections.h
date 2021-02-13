@@ -1,7 +1,7 @@
 #ifndef GUARD_REGIONMAPSEC_H
 #define GUARD_REGIONMAPSEC_H
 
-#define MAPSEC_LITTLEROOT_TOWN              0x00
+#define MAPSEC_LAKE_MEAD_VILLAGE              0x00
 #define MAPSEC_OLDALE_TOWN                  0x01
 #define MAPSEC_DEWFORD_TOWN                 0x02
 #define MAPSEC_LAVARIDGE_TOWN               0x03
@@ -89,7 +89,7 @@
 #define MAPSEC_SKY_PILLAR                   0x55
 #define MAPSEC_SECRET_BASE                  0x56
 #define MAPSEC_DYNAMIC                      0x57
-#define MAPSEC_PALLET_TOWN                  0x58
+#define MAPSEC_PALLET_TOWN            0x58
 #define MAPSEC_VIRIDIAN_CITY                0x59
 #define MAPSEC_PEWTER_CITY                  0x5A
 #define MAPSEC_CERULEAN_CITY                0x5B
@@ -214,6 +214,7 @@
 #define MAPSEC_ALTERING_CAVE                0xD2
 #define MAPSEC_NAVEL_ROCK                   0xD3
 #define MAPSEC_TRAINER_HILL                 0xD4
+
 #define MAPSEC_NONE                         0xD5
 
 #define METLOC_SPECIAL_EGG                  0xFD

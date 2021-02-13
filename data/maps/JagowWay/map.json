@@ -3,7 +3,7 @@
   "name": "JagowWay",
   "layout": "LAYOUT_JAGOW_WAY",
   "music": "MUS_LITTLEROOT",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -22,6 +22,31 @@
       "direction": "right",
       "offset": 37,
       "map": "MAP_WALMORE_TOWN"
+    },
+    {
+      "direction": "up",
+      "offset": 11,
+      "map": "MAP_SY_PATHWAY"
+    },
+    {
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_JAGOW_SY_CONNECTION1"
+    },
+    {
+      "direction": "up",
+      "offset": 11,
+      "map": "MAP_SY_PATHWAY"
+    },
+    {
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_JAGOW_SY_CONNECTION2"
+    },
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_JAGOW_WAY_LOWER"
     }
   ],
   "object_events": [

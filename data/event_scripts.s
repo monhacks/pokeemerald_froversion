@@ -1088,3 +1088,51 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/SummitCity/scripts.inc"
 
 	.include "data/maps/JagowWayLower/scripts.inc"
+
+	.include "data/maps/LynchPark/scripts.inc"
+
+	.include "data/maps/WilliamsTrailEast/scripts.inc"
+
+	.include "data/maps/NiagaraRiverNorth1/scripts.inc"
+
+	.include "data/maps/NiaragaRiverNorth2/scripts.inc"
+
+	.include "data/maps/RaintreeIsland/scripts.inc"
+
+	.include "data/maps/NiagaraRiverSouth/scripts.inc"
+
+	.include "data/maps/GrandIsland/scripts.inc"
+
+	.include "data/maps/LasalleBikePath/scripts.inc"
+
+	.include "data/maps/GrandIslandValley/scripts.inc"
+
+	.include "data/maps/MilitaryRoad/scripts.inc"
+
+	.include "data/maps/HomesteadTown/scripts.inc"
+
+	.include "data/maps/TuscororaPath/scripts.inc"
+
+	.include "data/maps/RiverPassage/scripts.inc"
+
+	.include "data/maps/RiverPassage2/scripts.inc"
+
+	.include "data/maps/WitmerSwamplands/scripts.inc"
+
+	.include "data/maps/DawnOutpost/scripts.inc"
+
+	.include "data/maps/FerchenTrail/scripts.inc"
+
+	.include "data/maps/SyPathway/scripts.inc"
+
+	.include "data/maps/JagowSyConnection1/scripts.inc"
+
+	.include "data/maps/JagowSyConnection2/scripts.inc"
+
+	.include "data/maps/WitmerSwamplandsWest/scripts.inc"
+
+	.include "data/maps/NiagaraVillage/scripts.inc"
+
+	.include "data/maps/RouteStenzil/scripts.inc"
+
+	.include "data/maps/WardTown/scripts.inc"
