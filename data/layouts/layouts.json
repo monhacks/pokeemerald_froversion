@@ -4770,6 +4770,66 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/WardTown/border.bin",
       "blockdata_filepath": "data/layouts/WardTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALMORE_TRAIL1",
+      "name": "WalmoreTrail1_Layout",
+      "width": 26,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WalmoreTrail1/border.bin",
+      "blockdata_filepath": "data/layouts/WalmoreTrail1/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOCKPORT_TRAIL",
+      "name": "LockportTrail_Layout",
+      "width": 12,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/LockportTrail/border.bin",
+      "blockdata_filepath": "data/layouts/LockportTrail/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALMORE_TRAIL2",
+      "name": "WalmoreTrail2_Layout",
+      "width": 17,
+      "height": 11,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WalmoreTrail2/border.bin",
+      "blockdata_filepath": "data/layouts/WalmoreTrail2/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAUNDERS_QUARRY",
+      "name": "SaundersQuarry_Layout",
+      "width": 20,
+      "height": 76,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SaundersQuarry/border.bin",
+      "blockdata_filepath": "data/layouts/SaundersQuarry/map.bin"
+    },
+    {
+      "id": "LAYOUT_SMOKIN_JOES_TRADING_OUTPOST",
+      "name": "SmokinJoesTradingOutpost_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/SmokinJoesTradingOutpost/border.bin",
+      "blockdata_filepath": "data/layouts/SmokinJoesTradingOutpost/map.bin"
+    },
+    {
+      "id": "LAYOUT_WHEATFIELD_CENTRAL",
+      "name": "WheatfieldCentral_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WheatfieldCentral/border.bin",
+      "blockdata_filepath": "data/layouts/WheatfieldCentral/map.bin"
     }
   ]
 }

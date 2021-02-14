@@ -122,7 +122,13 @@
     "WitmerSwamplandsWest",
     "NiagaraVillage",
     "RouteStenzil",
-    "WardTown"
+    "WardTown",
+    "WalmoreTrail1",
+    "LockportTrail",
+    "WalmoreTrail2",
+    "SaundersQuarry",
+    "SmokinJoesTradingOutpost",
+    "WheatfieldCentral"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",

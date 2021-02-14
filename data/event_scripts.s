@@ -1136,3 +1136,15 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/RouteStenzil/scripts.inc"
 
 	.include "data/maps/WardTown/scripts.inc"
+
+	.include "data/maps/WalmoreTrail1/scripts.inc"
+
+	.include "data/maps/LockportTrail/scripts.inc"
+
+	.include "data/maps/WalmoreTrail2/scripts.inc"
+
+	.include "data/maps/SaundersQuarry/scripts.inc"
+
+	.include "data/maps/SmokinJoesTradingOutpost/scripts.inc"
+
+	.include "data/maps/WheatfieldCentral/scripts.inc"
