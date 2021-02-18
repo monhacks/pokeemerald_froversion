@@ -94,6 +94,9 @@
 #define MAP_SAUNDERS_QUARRY             (89 | (0 << 8))
 #define MAP_SMOKIN_JOES_TRADING_OUTPOST (90 | (0 << 8))
 #define MAP_WHEATFIELD_CENTRAL          (91 | (0 << 8))
+#define MAP_WILLIAMS_TRAIL_WEST         (92 | (0 << 8))
+#define MAP_GRATWICK_PEAKS              (93 | (0 << 8))
+#define MAP_GRATWICK_GRAVEYARD          (94 | (0 << 8))
 
 // Map Group 1
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F     (0 | (1 << 8))

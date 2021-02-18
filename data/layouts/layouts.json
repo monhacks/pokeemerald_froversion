@@ -4830,6 +4830,36 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/WheatfieldCentral/border.bin",
       "blockdata_filepath": "data/layouts/WheatfieldCentral/map.bin"
+    },
+    {
+      "id": "LAYOUT_WILLIAMS_TRAIL_WEST",
+      "name": "WilliamsTrailWest_Layout",
+      "width": 25,
+      "height": 14,
+      "primary_tileset": "gTileset_SummitGeneral",
+      "secondary_tileset": "gTileset_SummitCity",
+      "border_filepath": "data/layouts/WilliamsTrailWest/border.bin",
+      "blockdata_filepath": "data/layouts/WilliamsTrailWest/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRATWICK_PEAKS",
+      "name": "GratwickPeaks_Layout",
+      "width": 70,
+      "height": 60,
+      "primary_tileset": "gTileset_GeneralSnow",
+      "secondary_tileset": "gTileset_GratwickPeaks",
+      "border_filepath": "data/layouts/GratwickPeaks/border.bin",
+      "blockdata_filepath": "data/layouts/GratwickPeaks/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRATWICK_GRAVEYARD",
+      "name": "GratwickGraveyard_Layout",
+      "width": 70,
+      "height": 33,
+      "primary_tileset": "gTileset_GeneralSnow",
+      "secondary_tileset": "gTileset_GratwickGraveyard",
+      "border_filepath": "data/layouts/GratwickGraveyard/border.bin",
+      "blockdata_filepath": "data/layouts/GratwickGraveyard/map.bin"
     }
   ]
 }

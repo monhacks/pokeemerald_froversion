@@ -885,3 +885,36 @@ gTileset_LynchPark::
 	.4byte gMetatiles_LynchPark
 	.4byte gMetatileAttributes_LynchPark
 	.4byte NULL
+
+	.align 2
+gTileset_GeneralSnow::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_GeneralSnow
+	.4byte gTilesetPalettes_GeneralSnow
+	.4byte gMetatiles_GeneralSnow
+	.4byte gMetatileAttributes_GeneralSnow
+	.4byte NULL
+
+	.align 2
+gTileset_GratwickPeaks::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_GratwickPeaks
+	.4byte gTilesetPalettes_GratwickPeaks
+	.4byte gMetatiles_GratwickPeaks
+	.4byte gMetatileAttributes_GratwickPeaks
+	.4byte NULL
+
+	.align 2
+gTileset_GratwickGraveyard::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_GratwickGraveyard
+	.4byte gTilesetPalettes_GratwickGraveyard
+	.4byte gMetatiles_GratwickGraveyard
+	.4byte gMetatileAttributes_GratwickGraveyard
+	.4byte NULL

@@ -593,3 +593,24 @@ gMetatiles_LynchPark::
 	.align 1
 gMetatileAttributes_LynchPark::
 	.incbin "data/tilesets/secondary/lynchpark/metatile_attributes.bin"
+	.align 1
+gMetatiles_GeneralSnow::
+	.incbin "data/tilesets/primary/generalsnow/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_GeneralSnow::
+	.incbin "data/tilesets/primary/generalsnow/metatile_attributes.bin"
+	.align 1
+gMetatiles_GratwickPeaks::
+	.incbin "data/tilesets/secondary/gratwickpeaks/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_GratwickPeaks::
+	.incbin "data/tilesets/secondary/gratwickpeaks/metatile_attributes.bin"
+	.align 1
+gMetatiles_GratwickGraveyard::
+	.incbin "data/tilesets/secondary/gratwickgraveyard/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_GratwickGraveyard::
+	.incbin "data/tilesets/secondary/gratwickgraveyard/metatile_attributes.bin"

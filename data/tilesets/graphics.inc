@@ -1829,3 +1829,63 @@ gTilesetPalettes_LynchPark::
 	.align 2
 gTilesetTiles_LynchPark::
 	.incbin "data/tilesets/secondary/lynchpark/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_GeneralSnow::
+	.incbin "data/tilesets/primary/generalsnow/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/generalsnow/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/generalsnow/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/generalsnow/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/generalsnow/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/generalsnow/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/generalsnow/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/generalsnow/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/generalsnow/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/generalsnow/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/generalsnow/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/generalsnow/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/generalsnow/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_GeneralSnow::
+	.incbin "data/tilesets/primary/generalsnow/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_GratwickPeaks::
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/gratwickpeaks/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_GratwickPeaks::
+	.incbin "data/tilesets/secondary/gratwickpeaks/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_GratwickGraveyard::
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/gratwickgraveyard/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_GratwickGraveyard::
+	.incbin "data/tilesets/secondary/gratwickgraveyard/tiles.4bpp.lz"
