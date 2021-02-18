@@ -294,7 +294,7 @@ void InitIntrHandlers(void)
 
     REG_IME = 1;
 
-    EnableInterrupts(0x1);
+    EnableInterrupts(INTR_FLAG_VBLANK);
 }
 
 void SetVBlankCallback(IntrCallback callback)
