@@ -11596,6 +11596,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Darius[] = {
 };
 
 static const struct TrainerMonItemCustomMoves sParty_Steven[] = {
+
     {
     .iv = 255,
     .lvl = 77,
@@ -12432,5 +12433,32 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLinkPlaceholder[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_KYOGRE,
+    }
+};
+
+
+///////////////////////////////////////////////////
+//////////FROVERSION TRAINER PARTIES///////////////
+/////////////////////////////////////////////////
+
+static const struct TrainerMonItemDefaultMoves sParty_WasulaLakeMeadVillage_Emboryps[] = {
+    {
+    .iv = 100,
+    .lvl = 8,
+    .species = SPECIES_TORCHIC,
+    .heldItem = ITEM_LEFTOVERS
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_MagaGruntBudAndStone[] = {
+    {
+    .iv = 200,
+    .lvl = 7,
+    .species = SPECIES_ZUBAT,
+    },
+    {
+    .iv = 200,
+    .lvl = 6,
+    .species = SPECIES_GRIMER,
     }
 };

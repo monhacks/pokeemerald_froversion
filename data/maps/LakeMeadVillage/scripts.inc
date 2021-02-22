@@ -1,3 +1,5 @@
+.set LOCALID_WASULA, 8
+
 LakeMeadVillage_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, LakeMeadVillage_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeMeadVillage_OnFrame
@@ -160,7 +162,7 @@ Script_LMV_IsiahAndCaptainPosition:
 setobjectxyperm 4, 9, 4
 setobjectmovementtype 4, MOVEMENT_TYPE_NONE
 setobjectxyperm 7, 8, 0
-setobjectxyperm 5, 9, 3
+//setobjectxyperm 5, 9, 3
 setobjectmovementtype 7, MOVEMENT_TYPE_NONE
 setobjectmovementtype 5, MOVEMENT_TYPE_NONE
 setobjectmovementtype 6, MOVEMENT_TYPE_FACE_UP
@@ -198,28 +200,101 @@ Script_LMV_DoubleBattleTrigger::
 lockall
 applymovement 6, Common_Movement_FacePlayer
 msgbox T_LMV_StartBattleSequence, MSGBOX_DEFAULT
+msgbox T_LMV_SoldierBattleStart, MSGBOX_NPC
 applymovement OBJ_EVENT_ID_PLAYER, M_LMV_FroToBattlePosition
 waitmovement OBJ_EVENT_ID_PLAYER
-trainerbattle_double TRAINER_JOHN_AND_JAY_1, T_LMV_SoldierBattleStart, T_LMV_JohnDefeat, T_LMV_JohnNotEnoughMons, Script_LMV_IsiahSaved
-releaseall
-end
-
-Script_LMV_SaveIsiah::
-lockall
-msgbox T_LMV_StartBattleSequence, MSGBOX_NPC
-trainerbattle_double TRAINER_JOHN_AND_JAY_1, T_LMV_SoldierBattleStart, T_LMV_JohnDefeat, T_LMV_JohnNotEnoughMons, Script_LMV_IsiahSaved
-releaseall
-end
-
-Script_LMV_IsiahSaved::
-lockall
+multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_STEVEN, TRAINER_BACK_PIC_STEVEN
+waitstate
+specialvar VAR_RESULT, GetBattleOutcome
+compare VAR_RESULT, B_OUTCOME_LOST
+goto_if_eq Script_LMV_PlayerLoseDoubleBattle
 msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
 applymovement 5, M_LMV_StoneRetreat
 applymovement 6, M_LMV_BudRetreat
 waitmovement 6
 applymovement 4, M_LMV_IsiahToFro
 waitmovement 4
-msgbox T_LMV_IsiahThanksFro, MSGBOX_DEFAULT
+msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
+delay 30
+warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
+releaseall
+end
+
+Script_LMV_SaveIsiahGrunt1::
+lockall
+msgbox T_LMV_StartBattleSequence, MSGBOX_NPC
+msgbox T_LMV_SoldierBattleStart, MSGBOX_NPC
+clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+addobject LOCALID_WASULA, MAP_LAKE_MEAD_VILLAGE
+applymovement LOCALID_WASULA, M_LMV_WasulaHelpsFro1
+waitmovement LOCALID_WASULA
+msgbox T_LMV_WasulaHelpsFro, MSGBOX_NPC
+multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_STEVEN, TRAINER_BACK_PIC_STEVEN
+//waitstate
+setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+specialvar VAR_RESULT, GetBattleOutcome
+compare VAR_RESULT, B_OUTCOME_LOST
+goto_if_eq Script_LMV_PlayerLoseDoubleBattle
+msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
+applymovement 5, M_LMV_StoneRetreat
+applymovement 6, M_LMV_BudRetreat
+waitmovement 6
+applymovement 4, M_LMV_IsiahToFro
+waitmovement 4
+msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
+delay 30
+warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
+releaseall
+end
+
+Script_LMV_SaveIsiahGrunt2::
+lockall
+msgbox T_LMV_StartBattleSequence, MSGBOX_NPC
+msgbox T_LMV_SoldierBattleStart, MSGBOX_NPC
+clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+addobject LOCALID_WASULA
+applymovement LOCALID_WASULA, M_LMV_WasulaHelpsFro2
+waitmovement LOCALID_WASULA
+msgbox T_LMV_WasulaHelpsFro, MSGBOX_NPC
+multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_STEVEN, TRAINER_BACK_PIC_STEVEN
+//waitstate
+setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+specialvar VAR_RESULT, GetBattleOutcome
+compare VAR_RESULT, B_OUTCOME_LOST
+goto_if_eq Script_LMV_PlayerLoseDoubleBattle
+msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
+applymovement 5, M_LMV_StoneRetreat
+applymovement 6, M_LMV_BudRetreat
+waitmovement 6
+applymovement 4, M_LMV_IsiahToFro
+waitmovement 4
+msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
+delay 30
+warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
+releaseall
+end
+
+Script_LMV_IsiahSaved:
+msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
+applymovement 5, M_LMV_StoneRetreat
+applymovement 6, M_LMV_BudRetreat
+waitmovement 6
+applymovement 4, M_LMV_IsiahToFro
+waitmovement 4
+msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
+delay 30
+warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
+releaseall
+end
+
+Script_LMV_PlayerLoseDoubleBattle::
+msgbox T_LMV_IsiahNotSaved, MSGBOX_DEFAULT
+applymovement 5, M_LMV_StoneRetreat
+applymovement 6, M_LMV_BudRetreat
+waitmovement 6
+applymovement 4, M_LMV_IsiahToFro
+waitmovement 4
+msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
 delay 30
 warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
 releaseall
@@ -319,17 +394,44 @@ Script_LakeMeadVillage_NPC_IsiahTakePotionDresserChecked2:
 
 Script_LMV_NPC_SoLGrunt1::
 compare VAR_OLDALE_TOWN_STATE, 4
-goto_if_eq Script_LMV_SaveIsiah
+goto_if_eq Script_LMV_SaveIsiahGrunt1
 msgbox T_LMV_SoLGrunt1, MSGBOX_NPC
 end
 
 Script_LMV_NPC_SoLGrunt2::
 compare VAR_OLDALE_TOWN_STATE, 4
-goto_if_eq Script_LMV_SaveIsiah
+goto_if_eq Script_LMV_SaveIsiahGrunt2
 msgbox T_LMV_SoLGrunt2, MSGBOX_NPC
 end
 
 //Movements
+
+M_LMV_WasulaHelpsFro1:
+walk_fastest_left
+walk_fastest_left
+walk_fastest_left
+walk_fastest_left
+walk_fastest_left
+walk_fastest_left
+walk_fastest_left
+walk_fastest_up
+walk_fastest_up
+step_end
+
+
+M_LMV_WasulaHelpsFro2:
+walk_fastest_left
+walk_fastest_left
+walk_fastest_left
+walk_fastest_left
+walk_fastest_left
+walk_fastest_left
+walk_fastest_left
+walk_fastest_left
+walk_fastest_up
+walk_fastest_up
+step_end
+
 M_LMV_IsiahToFro:
 walk_fastest_down
 step_end
@@ -638,5 +740,15 @@ T_LMV_IsiahSaved:
 T_LMV_JohnDefeat:
 	.string "Oh, Captain is going to be so mad!$"
 
-T_LMV_IsiahThanksFro:
-	.string "Thanks Fro!$"
+T_LMV_IsiahThanksFroAndBob:
+	.string "Thanks Guys, you saved me! \pThat was really scary! \pYou wouldn't believe what I saw. \nI think that Team MAGA is up to \lsomething. \pMeet me at the lab, I want to tell \nProf. Tilyou about this!$"
+
+T_LMV_IsiahNotSaved:
+	.string "Bud: You're no match for team MAGA! \nHow embarassing for you. \pBobby: You think we were trying to win? \nWe were just stalling.\p"
+	.string "Now your Pokemon are too weak to battle \nand I've brought 10 max revives, \lso I could quite literally do this \lall day.\p"
+	.string "I also happen to know Isiah stole all \nyour healing items while we had you \ldistracted in battle, so I suggest \lyou leave unless you think you can do \lthat 10 more times without healing. \pStone: He's right, I don't have any \nhealing items! \pBud: Grrrr, Let's retreat back to \nheadquarters. \pThis isn't the last you've seen of\nTeam MAGA.$"
+
+T_LMV_WasulaHelpsFro:
+	.string "Bobby: What's going on here?\p"
+	.string "Are these thugs trying to kidnap \nIsiah?\p"
+	.string "Come on Fro, let's show these clowns \nwhat's up!$"

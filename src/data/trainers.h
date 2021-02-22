@@ -9542,7 +9542,8 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_JOHN_AND_JAY_1] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        //.partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_OLD_COUPLE,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_OLD_COUPLE,
@@ -9550,8 +9551,10 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_JohnAndJay1),
-        .party = {.NoItemCustomMoves = sParty_JohnAndJay1},
+        //.partySize = ARRAY_COUNT(sParty_JohnAndJay1),
+        //.party = {.NoItemCustomMoves = sParty_JohnAndJay1},
+        .partySize = ARRAY_COUNT(sParty_MagaGruntBudAndStone),
+        .party = {.NoItemDefaultMoves = sParty_MagaGruntBudAndStone},
     },
 
     [TRAINER_JOHN_AND_JAY_2] =
@@ -11264,7 +11267,8 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_STEVEN] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        //.partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM,
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_STEVEN,
@@ -11272,8 +11276,10 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Steven),
-        .party = {.ItemCustomMoves = sParty_Steven},
+        //.partySize = ARRAY_COUNT(sParty_Steven),
+        //.party = {.ItemCustomMoves = sParty_Steven},
+        .partySize = ARRAY_COUNT(sParty_WasulaLakeMeadVillage_Emboryps),
+        .party = {.ItemDefaultMoves = sParty_WasulaLakeMeadVillage_Emboryps},
     },
 
     [TRAINER_ANABEL] =
