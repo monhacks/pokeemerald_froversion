@@ -4779,3 +4779,35 @@ Route134_Text_HudsonPostBattle: @ 82A4AD8
 	.string "Our boat drifted out to sea.\p"
 	.string "My buddy's a timid fellow, so I'm\n"
 	.string "worried about him.$"
+
+/////////////////////////////////////////
+////////FROVERSION TEXTS/////////////////
+////////////////////////////////////////
+
+GeneralTrainer_Text_MessengerIntro:
+	.string "Hello weary traveler. Have you heard \nof The Messengers before?\p"
+	.string "Oh you haven't? We are guardians of \nsacred texts that speak of an \lunimaginable power.\p"
+	.string "Only those who devote themselves \nfully to our teachings have any chance \lof discovering the truth.\p"
+	.string "I, along with 11 fellow disciples, \nhave been tasked with spreading \lour gospel to the world.\p"
+	.string "We each hold an important message \nthat will reveal this power to \l{COLOR RED}The one.{COLOR DARK_GREY}\p"
+	.string "We will reveal these messages to any \ntrainer that can defeat us after \lbattle, but only {COLOR RED}The one.{COLOR DARK_GREY} will be \lable to understand their true meaning.$"
+
+LancelotPath_Text_CalvinIntro:
+	.string "Hahah! Our eyes met!\n"
+	.string "I'll take you on with my Pokémon!$"
+
+LancelotPath_Text_CalvinDefeated:
+	.string "Ow! Down and out!$"
+
+LancelotPath_Text_CalvinPostBattle:
+	.string "If you lock eyes with a TRAINER,\n"
+	.string "you have to challenge! It's a rule!$"
+
+LancelotPath_Text_Messenger1:
+	.string "Are you ready to learn the ways of \nThe Messengers?$"
+
+LancelotPath_Text_Messenger1Defeated:
+	.string "This plane is going down in flames \nand this time, there's no black box \lto capture your last words.$"
+
+
+

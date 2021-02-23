@@ -45,6 +45,8 @@ LakeMeadVillage_OnLoad:
 	goto_if_eq Script_LMV_MoveIsiah2
 	compare VAR_OLDALE_TOWN_STATE, 4
 	goto_if_eq Script_LMV_IsiahAndCaptainPosition
+	compare VAR_OLDALE_TOWN_STATE, 5
+	goto_if_eq Script_LMV_RemoveSoldiersAndIsiah
 	end
 
 LakeMeadVillage_OnWarp:
@@ -168,6 +170,15 @@ setobjectmovementtype 5, MOVEMENT_TYPE_NONE
 setobjectmovementtype 6, MOVEMENT_TYPE_FACE_UP
 end
 
+Script_LMV_RemoveSoldiersAndIsiah:
+removeobject 5
+removeobject 6
+removeobject 7
+removeobject 4
+setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_ISIAH
+setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS
+end
+
 Script_LMV_IsiahCaught:
 lockall
 delay 30
@@ -189,37 +200,6 @@ warpsilent MAP_LAKE_MEAD_VILLAGE, 255, 22, 23
 setvar VAR_OLDALE_TOWN_STATE, 4
 end
 
-Script_LMV_DoubleBattleVarCompare::
-lockall
-compare VAR_OLDALE_TOWN_STATE, 4
-goto_if_eq Script_LMV_DoubleBattleTrigger
-releaseall
-end
-
-Script_LMV_DoubleBattleTrigger::
-lockall
-applymovement 6, Common_Movement_FacePlayer
-msgbox T_LMV_StartBattleSequence, MSGBOX_DEFAULT
-msgbox T_LMV_SoldierBattleStart, MSGBOX_NPC
-applymovement OBJ_EVENT_ID_PLAYER, M_LMV_FroToBattlePosition
-waitmovement OBJ_EVENT_ID_PLAYER
-multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_STEVEN, TRAINER_BACK_PIC_STEVEN
-waitstate
-specialvar VAR_RESULT, GetBattleOutcome
-compare VAR_RESULT, B_OUTCOME_LOST
-goto_if_eq Script_LMV_PlayerLoseDoubleBattle
-msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
-applymovement 5, M_LMV_StoneRetreat
-applymovement 6, M_LMV_BudRetreat
-waitmovement 6
-applymovement 4, M_LMV_IsiahToFro
-waitmovement 4
-msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
-delay 30
-warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
-releaseall
-end
-
 Script_LMV_SaveIsiahGrunt1::
 lockall
 msgbox T_LMV_StartBattleSequence, MSGBOX_NPC
@@ -230,7 +210,6 @@ applymovement LOCALID_WASULA, M_LMV_WasulaHelpsFro1
 waitmovement LOCALID_WASULA
 msgbox T_LMV_WasulaHelpsFro, MSGBOX_NPC
 multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_STEVEN, TRAINER_BACK_PIC_STEVEN
-//waitstate
 setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 specialvar VAR_RESULT, GetBattleOutcome
 compare VAR_RESULT, B_OUTCOME_LOST
@@ -242,6 +221,7 @@ waitmovement 6
 applymovement 4, M_LMV_IsiahToFro
 waitmovement 4
 msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
+setvar VAR_OLDALE_TOWN_STATE, 5
 delay 30
 warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
 releaseall
@@ -257,7 +237,6 @@ applymovement LOCALID_WASULA, M_LMV_WasulaHelpsFro2
 waitmovement LOCALID_WASULA
 msgbox T_LMV_WasulaHelpsFro, MSGBOX_NPC
 multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_STEVEN, TRAINER_BACK_PIC_STEVEN
-//waitstate
 setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 specialvar VAR_RESULT, GetBattleOutcome
 compare VAR_RESULT, B_OUTCOME_LOST
@@ -269,6 +248,7 @@ waitmovement 6
 applymovement 4, M_LMV_IsiahToFro
 waitmovement 4
 msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
+setvar VAR_OLDALE_TOWN_STATE, 5
 delay 30
 warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
 releaseall
@@ -282,6 +262,7 @@ waitmovement 6
 applymovement 4, M_LMV_IsiahToFro
 waitmovement 4
 msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
+setvar VAR_OLDALE_TOWN_STATE, 5
 delay 30
 warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
 releaseall
@@ -295,6 +276,7 @@ waitmovement 6
 applymovement 4, M_LMV_IsiahToFro
 waitmovement 4
 msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
+setvar VAR_OLDALE_TOWN_STATE, 5
 delay 30
 warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
 releaseall
@@ -448,6 +430,7 @@ walk_fastest_up
 walk_fastest_up
 walk_fastest_up
 walk_fastest_up
+walk_fastest_up
 step_end
 
 M_LMV_BudRetreat:
@@ -457,9 +440,11 @@ walk_fastest_up
 walk_fastest_up
 walk_fastest_up
 walk_fastest_up
+walk_fastest_up
 step_end
 
 M_LMV_CaptainExits:
+walk_fastest_up
 walk_fastest_up
 walk_fastest_up
 walk_fastest_up

@@ -4591,18 +4591,18 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Dillon},
     },
 
-    [TRAINER_CALVIN_2] =
+    [TRAINER_MESSENGER_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_YOUNGSTER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_YOUNGSTER,
-        .trainerName = _("CALVIN"),
+        .trainerClass = TRAINER_CLASS_MESSENGER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerPic = TRAINER_PIC_MESSENGER,
+        .trainerName = _("David"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Calvin2),
-        .party = {.NoItemDefaultMoves = sParty_Calvin2},
+        .partySize = ARRAY_COUNT(sParty_Messenger1),
+        .party = {.NoItemDefaultMoves = sParty_Messenger1},
     },
 
     [TRAINER_CALVIN_3] =

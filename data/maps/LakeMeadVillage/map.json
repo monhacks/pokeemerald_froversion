@@ -88,7 +88,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Script_LMV_NPC_SoLGrunt1",
-      "flag": "0"
+      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_2",
@@ -101,7 +101,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Script_LMV_NPC_SoLGrunt2",
-      "flag": "0"
+      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_1",
@@ -114,7 +114,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WASULA",

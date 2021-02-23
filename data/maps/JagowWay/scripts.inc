@@ -80,7 +80,6 @@ Script_JagowWay_StarterBattle2::
 Script_JagowWay_AfterJohnBattle:
 setvar VAR_LITTLEROOT_TOWN_STATE, 5
 msgbox T_JohnAfterBattle MSGBOX_DEFAULT
-giveitem ITEM_POKE_BALL, 5
 msgbox T_JW_JagowWoodsClosed, MSGBOX_DEFAULT
 closemessage
 fadedefaultbgm
@@ -161,8 +160,6 @@ T_JagowWay_JohnDefeated:
 	
 T_JohnAfterBattle:
 	.string "John: Great job Fro. I look forward \nto seeing you grow as a trainer. \pNext time I won't take it easy on \nyou.\p"
-	.string "Oh yea, I just remembered,\nyou've never caught a Pokémon in the\lwild!\p" 
-	.string "I hear Walmore Town's Pokémart is \nsold out of Pokéballs. \pHere take these.$"
 
 T_JagowWay_TrainTracks:
 	.string "Mom always says to stay of the \ntrain tracks. You could get hurt.$"

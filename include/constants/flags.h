@@ -1297,8 +1297,8 @@
 #define FLAG_UNUSED_0x4E1                                           0x4E1 // Unused Flag
 #define FLAG_UNUSED_0x4E2                                           0x4E2 // Unused Flag
 #define FLAG_UNUSED_0x4E3                                           0x4E3 // Unused Flag
-#define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
-#define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
+#define FLAG_SPOKE_TO_FIRST_MESSENGER                               0x4E4 // Used to stop intro dialouge from triggering for messenger battles
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS                        0x4E5 // Hides all soldiers after team maga battle
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_CHARMANDER          0x4E6 // Hides "charmander" until after starter choice made
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_SQUIRTLE            0x4E7 // Hides "squirtle" after starter choice made
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BULBASAUR           0x4E8 // Hides "bulbasaur" after starter choice made
