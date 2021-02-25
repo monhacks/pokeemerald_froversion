@@ -251,7 +251,6 @@ msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
 setvar VAR_OLDALE_TOWN_STATE, 5
 delay 30
 warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
-releaseall
 end
 
 Script_LMV_IsiahSaved:

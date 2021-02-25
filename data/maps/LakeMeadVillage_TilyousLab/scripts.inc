@@ -1,6 +1,7 @@
 LakeMeadVillage_TilyousLab_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, MS_LakeMeadVillage_TilyousLab_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, MS_LakeMeadVillage_TilyousLab_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, MS_LakeMeadVillage_TilyousLab_OnWarp
 	.byte 0
 
 //Variables
@@ -26,7 +27,14 @@ LakeMeadVillage_TilyousLab_MapScripts::
 
 // Map Scripts
 
+MS_LakeMeadVillage_TilyousLab_OnWarp:
+	map_script_2 VAR_OLDALE_TOWN_STATE, 5, Script_TilyousLab_SetFroNorth
+	.2byte 0
+	
+
 MS_LakeMeadVillage_TilyousLab_OnLoad::
+	compare VAR_OLDALE_TOWN_STATE, 5
+	goto_if_eq Script_TilyousLab_MoveBobbyAndTilyou
 	compare VAR_LITTLEROOT_TOWN_STATE, 2
 	goto_if_lt Script_TilyousLab_RemoveTilyouBobbyJohn
 	goto_if_eq Script_TilyousLab_ShowTilyouBobbyJohn
@@ -35,6 +43,7 @@ MS_LakeMeadVillage_TilyousLab_OnLoad::
 	end
 
 MS_LakeMeadVillage_TilyousLab_OnFrame::
+	map_script_2 VAR_OLDALE_TOWN_STATE, 5, Script_TilyousLab_IsiahTellsProfessorAboutTeamMAGA
 	map_script_2 VAR_LITTLEROOT_TOWN_STATE, 2, Script_TilyousLab_PickAPokemon
 	.2byte 0
 	
@@ -45,13 +54,29 @@ setobjectxyperm 1, 3, 2
 setobjectmovementtype 1, MOVEMENT_TYPE_FACE_UP
 end
 
+Script_TilyousLab_SetFroNorth:
+turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+end
+
+Script_TilyousLab_MoveBobbyAndTilyou:
+clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+addobject 2
+setobjectxyperm 1, 6, 5
+setobjectmovementtype 1, MOVEMENT_TYPE_NONE
+setobjectxyperm 2, 5, 6
+setobjectmovementtype 2, MOVEMENT_TYPE_FACE_UP
+end
+
+
 Script_TilyousLab_RemoveTilyouBobbyJohn:
 	removeobject 1
 	removeobject 2
 	removeobject 3
+	removeobject 9
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
+	setflag FLAG_HIDE_TILYOUS_LAB_ISIAH
 	end
 
 Script_TilyousLab_ShowTilyouBobbyJohn:
@@ -302,7 +327,50 @@ Script_TilyousLab_ProfTilyousPokeball:
 	release
 	end
 
+Script_TilyousLab_IsiahTellsProfessorAboutTeamMAGA::
+lockall
+msgbox T_TilyousLab_IsiahExplainsWhatHeSaw, MSGBOX_NPC
+applymovement 9, M_TilyousLab_IsiahLeavesAfterSavingIsiah
+waitmovement 9
+msgbox T_TilyousLab_ComeOnFroLetsGo, MSGBOX_NPC
+applymovement 2, M_TilyousLab_BobbyLeavesAfterSavingIsiah
+waitmovement 2
+setvar VAR_OLDALE_TOWN_STATE, 6
+removeobject 2
+setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+removeobject 9
+setflag FLAG_HIDE_TILYOUS_LAB_ISIAH
+releaseall
+end
+
+
+
 // Movements
+
+M_TilyousLab_BobbyLeavesAfterSavingIsiah:
+walk_fastest_down
+walk_fastest_down
+walk_fastest_down
+walk_fastest_down
+walk_fastest_down
+walk_fastest_down
+walk_fastest_down
+walk_fastest_down
+walk_fastest_down
+step_end
+
+M_TilyousLab_IsiahLeavesAfterSavingIsiah:
+walk_down
+walk_down
+walk_down
+walk_down
+walk_down
+walk_down
+walk_down
+walk_down
+walk_down
+walk_down
+step_end
 
 M_TilyousLab_JohnSQUIRTLE:
 walk_down
@@ -498,6 +566,8 @@ step_end
 
 Script_TilyousLab_NPC_Tilyou::
 lock
+compare VAR_OLDALE_TOWN_STATE, 6
+goto_if_eq Script_TilyousLab_Script_PostTeamMAGADialouge
 compare VAR_OLDALE_TOWN_STATE, 1
 goto_if_eq Script_TilyousLab_TilyouGivesPokedex
 compare VAR_LITTLEROOT_TOWN_STATE, 3
@@ -524,9 +594,11 @@ closemessage
 release
 end
 
-
+Script_TilyousLab_Script_PostTeamMAGADialouge:
+faceplayer
+msgbox T_TilyousLab_GetLeadersTogether, MSGBOX_NPC
+release
 end
-
 
 Script_TilyousLab_GoAheadAnthony:
 msgbox T_TilyousLab_GoAheadAnthony, MSGBOX_NPC
@@ -687,4 +759,16 @@ T_TilyousLab_ExplainPokedex:
 	.string "and records its data in the Pokédex,\l"
 	.string "he looks for me while I'm out\l"
 	.string "doing fieldwork, and shows me.$"
+
+T_TilyousLab_IsiahExplainsWhatHeSaw:
+	.string "Isiah: ...and that is when Fro and \nBobby showed up an saved me.\p"
+	.string "Prof Tilyou: So you saw team MAGA \ntaking a caged, mutated Pokémon, along \lwith equipment down into Lake Mead's \lnatural caverns?\p"
+	.string "That does not sound good. I will get \nthe Village Leaders together and \linvestigate. \pYou kids need to be more careful, \nteam MAGA is not to be taken lightly. \pIf Bobby and Fro didn't come to your \nrescue who knows what could have \lhappened.\p"
+	.string "Thank you for letting me know what you \nsaw. I don't want any of you messing \laround at the Lake until we can look \linto this futher. \pPlease continue on your gym challenge \nand try to stay out of team MAGA's \lway if you run into them\p"
+	.string "Isiah: Thank you professor, I will \nbe more careful not to get caught \ldoing anything wrong from now on.$"
 	
+T_TilyousLab_ComeOnFroLetsGo:
+	.string "Bobby: Okay Mr. Tilyou, no problem. \nI'm going to head back towards \lLynch Park, I bet this unforeseen \ldelay has given John a considerable \lheadstart. \pCome on Fro, lets go!$"
+
+T_TilyousLab_GetLeadersTogether:
+	.string "I will get the Village Leaders \ntogether and investigate. \pYou kids need to be more careful, \nteam MAGA is not to be taken lightly.$"
