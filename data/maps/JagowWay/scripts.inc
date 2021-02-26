@@ -80,6 +80,7 @@ Script_JagowWay_StarterBattle2::
 Script_JagowWay_AfterJohnBattle:
 setvar VAR_LITTLEROOT_TOWN_STATE, 5
 msgbox T_JohnAfterBattle MSGBOX_DEFAULT
+special HealPlayerParty
 msgbox T_JW_JagowWoodsClosed, MSGBOX_DEFAULT
 closemessage
 fadedefaultbgm
@@ -159,13 +160,12 @@ T_JagowWay_JohnDefeated:
 	.string "John: You're a natural, Fro!$"
 	
 T_JohnAfterBattle:
-	.string "John: Great job Fro. I look forward \nto seeing you grow as a trainer. \pNext time I won't take it easy on \nyou.\p"
+	.string "John: Great job Fro. I look forward \nto seeing you grow as a trainer. \pLet me heal your Pokemon.\p$"
 
 T_JagowWay_TrainTracks:
 	.string "Mom always says to stay of the \ntrain tracks. You could get hurt.$"
 
 T_JW_JagowWoodsClosed:
-	.string "You want to use these once you've \nweakened a wild Pokémon, it will be \leasier to catch that way.\p"
 	.string "Normally I would say to go to Summit\nCity and start your Gym Challenge \lthere"
 	.string "but Bobby already\lmade it there and the entrance is \lblocked.\p"
 	.string "Looks like all of us will have to \nstart the Gym Challenge in Lynch \lPark instead.\p"

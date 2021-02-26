@@ -60,7 +60,9 @@ end
 
 Script_TilyousLab_MoveBobbyAndTilyou:
 clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+clearflag FLAG_HIDE_TILYOUS_LAB_ISIAH
 addobject 2
+addobject 9
 setobjectxyperm 1, 6, 5
 setobjectmovementtype 1, MOVEMENT_TYPE_NONE
 setobjectxyperm 2, 5, 6
@@ -332,6 +334,12 @@ lockall
 msgbox T_TilyousLab_IsiahExplainsWhatHeSaw, MSGBOX_NPC
 applymovement 9, M_TilyousLab_IsiahLeavesAfterSavingIsiah
 waitmovement 9
+applymovement 2, M_TilyousLab_BobbyFaceRight
+waitmovement 2
+msgbox T_TilyousLab_BobbyGivesFroPokeballs, MSGBOX_NPC
+giveitem ITEM_POKE_BALL, 5
+msgbox T_TilyousLab_BobbyGivesExpShare, MSGBOX_NPC
+giveitem ITEM_EXP_SHARE, 1
 msgbox T_TilyousLab_ComeOnFroLetsGo, MSGBOX_NPC
 applymovement 2, M_TilyousLab_BobbyLeavesAfterSavingIsiah
 waitmovement 2
@@ -561,6 +569,10 @@ walk_up
 walk_up
 step_end
 
+M_TilyousLab_BobbyFaceRight:
+face_right
+step_end
+
 
 //NPCS
 
@@ -768,7 +780,18 @@ T_TilyousLab_IsiahExplainsWhatHeSaw:
 	.string "Isiah: Thank you professor, I will \nbe more careful not to get caught \ldoing anything wrong from now on.$"
 	
 T_TilyousLab_ComeOnFroLetsGo:
-	.string "Bobby: Okay Mr. Tilyou, no problem. \nI'm going to head back towards \lLynch Park, I bet this unforeseen \ldelay has given John a considerable \lheadstart. \pCome on Fro, lets go!$"
+	.string "I'm going to head back towards \nLynch Park, I bet this unforeseen \ldelay has given John a considerable \lheadstart. \pCome on Fro, lets go!$"
 
 T_TilyousLab_GetLeadersTogether:
 	.string "I will get the Village Leaders \ntogether and investigate. \pYou kids need to be more careful, \nteam MAGA is not to be taken lightly.$"
+
+T_TilyousLab_BobbyGivesFroPokeballs: 
+	.string "Bobby: Hey Fro, I just remembered,\nyou've never caught a Pokémon in the\lwild!\p" 
+	.string "I hear Walmore Town's Pokémart was \nsold out of Pokéballs. \pHere take these.\p"
+	.string "You want to use these once you've \nweakened a wild Pokémon, it will be \leasier to catch that way.$"
+
+T_TilyousLab_BobbyGivesExpShare:
+	.string "One last thing. I also want you to \ntake this Exp. Share.\p"
+	.string "This makes raising multiple Pokemon \nmuch easier by giving a portion of \lExp. to all Pokémon in your party, \leven the ones who didn't participate \lin battle!\p"
+	.string "Place it in your Key Items pocket \nin your bag, and you can turn it on \lor off depending on how much of a \lchallenge you want.$"
+
