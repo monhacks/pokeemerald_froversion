@@ -2319,3 +2319,425 @@ const u8 gDeoxysPokedexText[] = _(
     "extraterrestrial virus exposed to a laser\n"
     "beam. Its body is configured for superior\n"
     "agility and speed.");
+
+const u8 gRascalootPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gBandithugPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gRuthlashPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFlobraPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMorphloPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMechobraPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gEmborypsPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gHuntorypsPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gRiptorypsPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gSpiritombPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gSnoumesePokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gSnoubaulPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gNevawokPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gWokaginPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gVaypingPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gKabowlPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gBowlastPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gPhokaiPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gPhotasmPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gPhotogeistPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gTogekissPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gOtdorblePokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gLutradorPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gDumbellionPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gBarbellionPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gOctirePokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gInvertebrakePokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gHaagletPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gWarthaagPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gTaquittlePokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gEscaratacoPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gChad_Bug_1PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gChad_Bug_2PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gPilopooPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gBillfaloPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gSablizzardPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gPassimianPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gRock_Cactus_Stage_1PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gRock_Cactus_Stage_2PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gCracktussPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gDracasterPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gBlue EyesPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_1PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_2PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_3PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_4PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_5PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_6PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_7PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_8PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_9PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_10PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_11PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_12PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_13PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_14PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_15PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_16PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_17PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_18PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_19PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_20PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_21PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_22PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_23PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_24PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_25PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_26PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_27PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_28PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_29PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_30PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_31PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_32PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_33PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_34PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_35PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_36PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_37PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_38PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_39PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_40PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_41PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gFiller_42PokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+
