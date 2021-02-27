@@ -4929,12 +4929,6 @@ static const union AnimCmd sAnim_PHOTOGEIST_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_TOGEPI_1[] = 
-{
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 20),
-    ANIMCMD_END,
-};
 static const union AnimCmd sAnim_TOGEKISS_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
@@ -7548,10 +7542,6 @@ static const union AnimCmd *const sAnims_PHOTOGEIST[] ={
     sAnim_GeneralFrame0,
     sAnim_PHOTOGEIST_1,
 };
-static const union AnimCmd *const sAnims_TOGEPI[] ={
-    sAnim_GeneralFrame0,
-    sAnim_TOGEPI_1,
-};
 static const union AnimCmd *const sAnims_TOGEKISS[] ={
     sAnim_GeneralFrame0,
     sAnim_TOGEKISS_1,
@@ -8282,7 +8272,6 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(PHOKAI),
     ANIM_CMD(PHOTASM),
     ANIM_CMD(PHOTOGEIST),
-    ANIM_CMD(TOGEPI),
     ANIM_CMD(TOGEKISS),
     ANIM_CMD(OTDORBLE),
     ANIM_CMD(LUTRADOR),
