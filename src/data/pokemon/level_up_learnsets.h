@@ -8066,7 +8066,7 @@ static const struct LevelUpMove sDracasterLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };
-static const struct LevelUpMove sBlue EyesLevelUpLearnset[] = {
+static const struct LevelUpMove sBlue_EyesLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };

@@ -5098,12 +5098,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_BLUE EYES] =
+[NATIONAL_DEX_BLUE_EYES] =
     {
         .categoryName = _(""NEW SPECIES"")
         .height = 15,
         .weight = 330,
-        .description = gBlue EyesPokedexText,
+        .description = gBlue_EyesPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,

@@ -430,7 +430,7 @@ cry Cry_Rock_Cactus_Stage_1
 cry Cry_Rock_Cactus_Stage_2
 cry Cry_Cracktuss
 cry Cry_Dracaster
-cry Cry_Blue Eyes
+cry Cry_Blue_Eyes
 cry Cry_Filler_1
 cry Cry_Filler_2
 cry Cry_Filler_3
@@ -906,7 +906,7 @@ cry2 Cry_Rock_Cactus_Stage_1
 cry2 Cry_Rock_Cactus_Stage_2
 cry2 Cry_Cracktuss
 cry2 Cry_Dracaster
-cry2 Cry_Blue Eyes
+cry2 Cry_Blue_Eyes
 cry2 Cry_Filler_1
 cry2 Cry_Filler_2
 cry2 Cry_Filler_3

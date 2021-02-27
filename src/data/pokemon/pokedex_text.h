@@ -2525,7 +2525,7 @@ const u8 gDracasterPokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gBlue EyesPokedexText[] = _(
+const u8 gBlue_EyesPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"

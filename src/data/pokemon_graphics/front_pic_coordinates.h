@@ -2410,7 +2410,7 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_BLUE EYES] =
+    [SPECIES_BLUE_EYES] =
     {
         .size = 0x88,
         .y_offset = 0x00,

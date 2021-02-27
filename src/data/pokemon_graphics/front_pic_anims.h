@@ -5061,7 +5061,7 @@ static const union AnimCmd sAnim_DRACASTER_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_BLUE EYES_1[] = 
+static const union AnimCmd sAnim_BLUE_EYES_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
@@ -7636,9 +7636,9 @@ static const union AnimCmd *const sAnims_DRACASTER[] ={
     sAnim_GeneralFrame0,
     sAnim_DRACASTER_1,
 };
-static const union AnimCmd *const sAnims_BLUE EYES[] ={
+static const union AnimCmd *const sAnims_BLUE_EYES[] ={
     sAnim_GeneralFrame0,
-    sAnim_BLUE EYES_1,
+    sAnim_BLUE_EYES_1,
 };
 static const union AnimCmd *const sAnims_FILLER_1[] ={
     sAnim_GeneralFrame0,
@@ -8304,7 +8304,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(ROCK_CACTUS_STAGE_2),
     ANIM_CMD(CRACKTUSS),
     ANIM_CMD(DRACASTER),
-    ANIM_CMD(BLUE EYES),
+    ANIM_CMD(BLUE_EYES),
     ANIM_CMD(FILLER_1),
     ANIM_CMD(FILLER_2),
     ANIM_CMD(FILLER_3),
