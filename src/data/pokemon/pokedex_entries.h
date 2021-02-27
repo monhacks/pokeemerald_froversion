@@ -4643,13 +4643,13 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-};
+
 
 //froversion fakemon
 
 [NATIONAL_DEX_RASCALOOT] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gRascalootPokedexText,
@@ -4660,7 +4660,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_BANDITHUG] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gBandithugPokedexText,
@@ -4671,7 +4671,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_RUTHLASH] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gRuthlashPokedexText,
@@ -4682,7 +4682,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FLOBRA] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFlobraPokedexText,
@@ -4693,7 +4693,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_MORPHLO] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMorphloPokedexText,
@@ -4704,7 +4704,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_MECHOBRA] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMechobraPokedexText,
@@ -4715,7 +4715,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_EMBORYPS] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gEmborypsPokedexText,
@@ -4726,7 +4726,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_HUNTORYPS] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gHuntorypsPokedexText,
@@ -4737,7 +4737,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_RIPTORYPS] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gRiptorypsPokedexText,
@@ -4748,7 +4748,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_SPIRITOMB] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gSpiritombPokedexText,
@@ -4759,7 +4759,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_SNOUMESE] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gSnoumesePokedexText,
@@ -4770,7 +4770,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_SNOUBAUL] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gSnoubaulPokedexText,
@@ -4781,7 +4781,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_NEVAWOK] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gNevawokPokedexText,
@@ -4792,7 +4792,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_WOKAGIN] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gWokaginPokedexText,
@@ -4803,7 +4803,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_VAYPING] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gVaypingPokedexText,
@@ -4814,7 +4814,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_KABOWL] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gKabowlPokedexText,
@@ -4825,7 +4825,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_BOWLAST] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gBowlastPokedexText,
@@ -4836,7 +4836,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_PHOKAI] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gPhokaiPokedexText,
@@ -4847,7 +4847,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_PHOTASM] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gPhotasmPokedexText,
@@ -4858,7 +4858,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_PHOTOGEIST] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gPhotogeistPokedexText,
@@ -4869,7 +4869,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_TOGEKISS] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gTogekissPokedexText,
@@ -4880,7 +4880,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_OTDORBLE] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gOtdorblePokedexText,
@@ -4891,7 +4891,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_LUTRADOR] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gLutradorPokedexText,
@@ -4902,7 +4902,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_DUMBELLION] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gDumbellionPokedexText,
@@ -4913,7 +4913,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_BARBELLION] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gBarbellionPokedexText,
@@ -4924,7 +4924,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_OCTIRE] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gOctirePokedexText,
@@ -4935,7 +4935,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_INVERTEBRAKE] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gInvertebrakePokedexText,
@@ -4946,7 +4946,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_HAAGLET] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gHaagletPokedexText,
@@ -4957,7 +4957,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_WARTHAAG] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gWarthaagPokedexText,
@@ -4968,7 +4968,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_TAQUITTLE] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gTaquittlePokedexText,
@@ -4979,7 +4979,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_ESCARATACO] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gEscaratacoPokedexText,
@@ -4990,7 +4990,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_CHAD_BUG_1] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gChad_Bug_1PokedexText,
@@ -5001,7 +5001,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_CHAD_BUG_2] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gChad_Bug_2PokedexText,
@@ -5012,7 +5012,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_PILOPOO] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gPilopooPokedexText,
@@ -5023,7 +5023,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_BILLFALO] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gBillfaloPokedexText,
@@ -5034,7 +5034,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_SABLIZZARD] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gSablizzardPokedexText,
@@ -5045,7 +5045,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_PASSIMIAN] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gPassimianPokedexText,
@@ -5056,7 +5056,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_ROCK_CACTUS_STAGE_1] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gRock_Cactus_Stage_1PokedexText,
@@ -5067,7 +5067,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_ROCK_CACTUS_STAGE_2] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gRock_Cactus_Stage_2PokedexText,
@@ -5078,7 +5078,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_CRACKTUSS] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gCracktussPokedexText,
@@ -5089,7 +5089,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_DRACASTER] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gDracasterPokedexText,
@@ -5100,7 +5100,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_BLUE_EYES] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gBlue_EyesPokedexText,
@@ -5111,7 +5111,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_1] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_1PokedexText,
@@ -5122,7 +5122,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_2] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_2PokedexText,
@@ -5133,7 +5133,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_3] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_3PokedexText,
@@ -5144,7 +5144,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_4] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_4PokedexText,
@@ -5155,7 +5155,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_5] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_5PokedexText,
@@ -5166,7 +5166,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_6] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_6PokedexText,
@@ -5177,7 +5177,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_7] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_7PokedexText,
@@ -5188,7 +5188,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_8] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_8PokedexText,
@@ -5199,7 +5199,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_9] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_9PokedexText,
@@ -5210,7 +5210,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_10] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_10PokedexText,
@@ -5221,7 +5221,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_11] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_11PokedexText,
@@ -5232,7 +5232,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_12] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_12PokedexText,
@@ -5243,7 +5243,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_13] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_13PokedexText,
@@ -5254,7 +5254,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_14] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_14PokedexText,
@@ -5265,7 +5265,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_15] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_15PokedexText,
@@ -5276,7 +5276,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_16] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_16PokedexText,
@@ -5287,7 +5287,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_17] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_17PokedexText,
@@ -5298,7 +5298,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_18] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_18PokedexText,
@@ -5309,7 +5309,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_19] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_19PokedexText,
@@ -5320,7 +5320,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_20] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_20PokedexText,
@@ -5331,7 +5331,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_21] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_21PokedexText,
@@ -5342,7 +5342,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_22] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_22PokedexText,
@@ -5353,7 +5353,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_23] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_23PokedexText,
@@ -5364,7 +5364,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_24] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_24PokedexText,
@@ -5375,7 +5375,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_25] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_25PokedexText,
@@ -5386,7 +5386,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_26] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_26PokedexText,
@@ -5397,7 +5397,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_27] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_27PokedexText,
@@ -5408,7 +5408,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_28] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_28PokedexText,
@@ -5419,7 +5419,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_29] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_29PokedexText,
@@ -5430,7 +5430,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_30] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_30PokedexText,
@@ -5441,7 +5441,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_31] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_31PokedexText,
@@ -5452,7 +5452,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_32] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_32PokedexText,
@@ -5463,7 +5463,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_33] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_33PokedexText,
@@ -5474,7 +5474,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_34] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_34PokedexText,
@@ -5485,7 +5485,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_35] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_35PokedexText,
@@ -5496,7 +5496,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_36] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_36PokedexText,
@@ -5507,7 +5507,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_37] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_37PokedexText,
@@ -5518,7 +5518,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_38] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_38PokedexText,
@@ -5529,7 +5529,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_39] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_39PokedexText,
@@ -5540,7 +5540,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_40] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_40PokedexText,
@@ -5551,7 +5551,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_41] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_41PokedexText,
@@ -5562,7 +5562,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_FILLER_42] =
     {
-        .categoryName = _(""NEW SPECIES"")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gFiller_42PokedexText,
@@ -5571,4 +5571,4 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-
+};

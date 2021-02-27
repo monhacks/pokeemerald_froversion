@@ -448,7 +448,6 @@ const u32 gMonFrontPic_Bowlast[] = INCBIN_U32("graphics/pokemon/bowlast/anim_fro
 const u32 gMonFrontPic_Phokai[] = INCBIN_U32("graphics/pokemon/phokai/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Photasm[] = INCBIN_U32("graphics/pokemon/photasm/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Photogeist[] = INCBIN_U32("graphics/pokemon/photogeist/anim_front.4bpp.lz");
-const u32 gMonFrontPic_Togepi[] = INCBIN_U32("graphics/pokemon/togepi/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Togekiss[] = INCBIN_U32("graphics/pokemon/togekiss/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Otdorble[] = INCBIN_U32("graphics/pokemon/otdorble/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Lutrador[] = INCBIN_U32("graphics/pokemon/lutrador/anim_front.4bpp.lz");
