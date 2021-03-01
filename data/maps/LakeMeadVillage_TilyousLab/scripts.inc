@@ -85,6 +85,8 @@ Script_TilyousLab_ShowTilyouBobbyJohn:
 	addobject 1
 	addobject 2
 	addobject 3
+	removeobject 9
+	setflag FLAG_HIDE_TILYOUS_LAB_ISIAH
 	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU
 	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
@@ -121,28 +123,28 @@ Script_TilyousLab_DontLeaveBeforePickingAPokemon::
 	release
 	end
 
-Script_TilyousLab_BULBASAURPokeball::
+Script_TilyousLab_RascalootPokeball::
 	lock
 	compare VAR_LITTLEROOT_TOWN_STATE, 3
 	goto_if_lt Script_TilyousLab_ProfTilyousPokeball
-	showmonpic SPECIES_BULBASAUR, 10, 3
-	msgbox T_TilyousLab_PickBULBASAUR, MSGBOX_YESNO
+	showmonpic SPECIES_RASCALOOT, 10, 3
+	msgbox T_TilyousLab_PickRascaloot, MSGBOX_YESNO
 	hidemonpic
 	compare VAR_RESULT, 1
-	goto_if_eq Script_TilyousLab_BULBASAURYes
+	goto_if_eq Script_TilyousLab_RascalootYes
 	closemessage
 	release
 	end
 	
-Script_TilyousLab_BULBASAURYes:
+Script_TilyousLab_RascalootYes:
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 1
-	givemon SPECIES_BULBASAUR, 5, ITEM_NONE
+	givemon SPECIES_RASCALOOT, 5, ITEM_NONE
 	playfanfare MUS_OBTAIN_ITEM
 	removeobject 4
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BULBASAUR
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_RASCALOOT
 	waitfanfare
-	msgbox T_TilyousLab_BULBASAURYes, MSGBOX_YESNO
+	msgbox T_TilyousLab_RascalootYes, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq TilyousLab_EventScript_NicknameStarter
 	compare VAR_RESULT, NO
@@ -165,33 +167,33 @@ TilyousLab_BobbyAndJohnPick:
 	msgbox T_TilyousLab_JohnSoundsGood, MSGBOX_DEFAULT
 	closemessage
 	compare VAR_STARTER_MON, 1
-	goto_if_eq Script_TilyousLab_FroTookBULBASAUR
+	goto_if_eq Script_TilyousLab_FroTookRascaloot
 	compare VAR_STARTER_MON, 2
-	goto_if_eq Script_TilyousLab_FroTookSQUIRTLE
+	goto_if_eq Script_TilyousLab_FroTookFlobra
 	compare VAR_STARTER_MON, 3
-	goto_if_eq Script_TilyousLab_FroTookCHARMANDER
+	goto_if_eq Script_TilyousLab_FroTookEmboryps
 	release
 	end
 
-Script_TilyousLab_FroTookBULBASAUR:
-	applymovement 3, M_TilyousLab_JohnCHARMANDER
+Script_TilyousLab_FroTookRascaloot:
+	applymovement 3, M_TilyousLab_JohnEmboryps
 	waitmovement 3
 	removeobject 6
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_CHARMANDER
-	msgbox T_TilyousLab_JohnCHARMANDER, MSGBOX_DEFAULT
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS
+	msgbox T_TilyousLab_JohnEmboryps, MSGBOX_DEFAULT
 	closemessage
 	msgbox T_TilyousLab_TilyouBobbysTurn, MSGBOX_DEFAULT
 	closemessage
-	applymovement 3, M_TilyousLab_JohnCHARMANDERReturn
-	applymovement 2, M_TilyousLab_BobbySQUIRTLE
+	applymovement 3, M_TilyousLab_JohnEmborypsReturn
+	applymovement 2, M_TilyousLab_BobbyFlobra
 	waitmovement 2
 	removeobject 5
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_SQUIRTLE
-	msgbox T_TilyousLab_BobbySQUIRTLE
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_FLOBRA
+	msgbox T_TilyousLab_BobbyFlobra
 	closemessage
 	msgbox T_TilyousLab_YouAllHaveStarters, MSGBOX_DEFAULT
 	closemessage
-	applymovement 2, M_TilyousLab_BobbySQUIRTLEExit
+	applymovement 2, M_TilyousLab_BobbyFlobraExit
 	applymovement 3, M_TilyousLab_JohnExits
 	waitmovement 3
 	removeobject 2
@@ -203,29 +205,29 @@ Script_TilyousLab_FroTookBULBASAUR:
 	release
 	end
 
-Script_TilyousLab_SQUIRTLEPokeball::
+Script_TilyousLab_FlobraPokeball::
 	lock
 	compare VAR_LITTLEROOT_TOWN_STATE, 3
 	goto_if_lt Script_TilyousLab_ProfTilyousPokeball
-	showmonpic SPECIES_SQUIRTLE, 10, 3
-	msgbox T_TilyousLab_PickSQUIRTLE, MSGBOX_YESNO
+	showmonpic SPECIES_FLOBRA, 10, 3
+	msgbox T_TilyousLab_PickFlobra, MSGBOX_YESNO
 	hidemonpic
 	compare VAR_RESULT, 1
-	goto_if_eq Script_TilyousLab_SQUIRTLEYes
+	goto_if_eq Script_TilyousLab_FlobraYes
 	closemessage
 	release
 	end
 	
 	
-Script_TilyousLab_SQUIRTLEYes:
+Script_TilyousLab_FlobraYes:
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 2
-	givemon SPECIES_SQUIRTLE, 5, ITEM_NONE
+	givemon SPECIES_FLOBRA, 5, ITEM_NONE
 	playfanfare MUS_OBTAIN_ITEM
 	removeobject 5
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_SQUIRTLE
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_FLOBRA
 	waitfanfare
-	msgbox T_TilyousLab_SQUIRTLEYes, MSGBOX_YESNO
+	msgbox T_TilyousLab_FlobraYes, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq TilyousLab_EventScript_NicknameStarter
 	compare VAR_RESULT, NO
@@ -234,25 +236,25 @@ Script_TilyousLab_SQUIRTLEYes:
 	release
 	end	
 	
-Script_TilyousLab_FroTookSQUIRTLE:
-	applymovement 3, M_TilyousLab_JohnBULBASAUR
+Script_TilyousLab_FroTookFlobra:
+	applymovement 3, M_TilyousLab_JohnRascaloot
 	waitmovement 3
 	removeobject 4
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BULBASAUR
-	msgbox T_TilyousLab_JohnBULBASAUR, MSGBOX_DEFAULT
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_RASCALOOT
+	msgbox T_TilyousLab_JohnRascaloot, MSGBOX_DEFAULT
 	closemessage
 	msgbox T_TilyousLab_TilyouBobbysTurn, MSGBOX_DEFAULT
 	closemessage
-	applymovement 3, M_TilyousLab_JohnBULBASAURReturn
-	applymovement 2, M_TilyousLab_BobbyCHARMANDER
+	applymovement 3, M_TilyousLab_JohnRascalootReturn
+	applymovement 2, M_TilyousLab_BobbyEmboryps
 	waitmovement 2
 	removeobject 6
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_CHARMANDER
-	msgbox T_TilyousLab_BobbyCHARMANDER
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS
+	msgbox T_TilyousLab_BobbyEmboryps
 	closemessage
 	msgbox T_TilyousLab_YouAllHaveStarters, MSGBOX_DEFAULT
 	closemessage
-	applymovement 2, M_TilyousLab_BobbyCHARMANDERExit
+	applymovement 2, M_TilyousLab_BobbyEmborypsExit
 	applymovement 3, M_TilyousLab_JohnExits
 	waitmovement 3
 	removeobject 2
@@ -263,29 +265,29 @@ Script_TilyousLab_FroTookSQUIRTLE:
 	release
 	end	
 	
-Script_TilyousLab_CHARMANDERPokeball::
+Script_TilyousLab_EmborypsPokeball::
 	lock
 	compare VAR_LITTLEROOT_TOWN_STATE, 3
 	goto_if_lt Script_TilyousLab_ProfTilyousPokeball
-	showmonpic SPECIES_CHARMANDER, 10, 3
-	msgbox T_TilyousLab_PickCHARMANDER, MSGBOX_YESNO
+	showmonpic SPECIES_EMBORYPS, 10, 3
+	msgbox T_TilyousLab_PickEmboryps, MSGBOX_YESNO
 	hidemonpic
 	compare VAR_RESULT, 1
-	goto_if_eq Script_TilyousLab_CHARMANDERYes
+	goto_if_eq Script_TilyousLab_EmborypsYes
 	closemessage
 	release
 	end
 	
 	
-Script_TilyousLab_CHARMANDERYes:
+Script_TilyousLab_EmborypsYes:
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 3
-	givemon SPECIES_CHARMANDER, 5, ITEM_NONE
+	givemon SPECIES_EMBORYPS, 5, ITEM_NONE
 	playfanfare MUS_OBTAIN_ITEM
 	removeobject 6
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_CHARMANDER
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS
 	waitfanfare
-	msgbox T_TilyousLab_CHARMANDERYes, MSGBOX_YESNO
+	msgbox T_TilyousLab_EmborypsYes, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq TilyousLab_EventScript_NicknameStarter
 	compare VAR_RESULT, NO
@@ -294,25 +296,25 @@ Script_TilyousLab_CHARMANDERYes:
 	release
 	end	
 	
-Script_TilyousLab_FroTookCHARMANDER:
-	applymovement 3, M_TilyousLab_JohnSQUIRTLE
+Script_TilyousLab_FroTookEmboryps:
+	applymovement 3, M_TilyousLab_JohnFlobra
 	waitmovement 3
 	removeobject 5
-	msgbox T_TilyousLab_JohnSQUIRTLE, MSGBOX_DEFAULT
+	msgbox T_TilyousLab_JohnFlobra, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_SQUIRTLE
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_FLOBRA
 	msgbox T_TilyousLab_TilyouBobbysTurn, MSGBOX_DEFAULT
 	closemessage
-	applymovement 3, M_TilyousLab_JohnSQUIRTLEReturn
-	applymovement 2, M_TilyousLab_BobbyBULBASAUR
+	applymovement 3, M_TilyousLab_JohnFlobraReturn
+	applymovement 2, M_TilyousLab_BobbyRascaloot
 	waitmovement 2
 	removeobject 4
-	msgbox T_TilyousLab_BobbyBULBASAUR
+	msgbox T_TilyousLab_BobbyRascaloot
 	closemessage
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BULBASAUR
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_RASCALOOT
 	msgbox T_TilyousLab_YouAllHaveStarters, MSGBOX_DEFAULT
 	closemessage
-	applymovement 2, M_TilyousLab_BobbyBULBASAURExit
+	applymovement 2, M_TilyousLab_BobbyRascalootExit
 	applymovement 3, M_TilyousLab_JohnExits
 	waitmovement 3
 	removeobject 2
@@ -380,7 +382,7 @@ walk_down
 walk_down
 step_end
 
-M_TilyousLab_JohnSQUIRTLE:
+M_TilyousLab_JohnFlobra:
 walk_down
 walk_right
 walk_right
@@ -390,7 +392,7 @@ walk_right
 face_up
 step_end
 
-M_TilyousLab_JohnSQUIRTLEReturn:
+M_TilyousLab_JohnFlobraReturn:
 walk_left
 walk_left
 walk_left
@@ -400,7 +402,7 @@ walk_up
 face_down
 step_end
 
-M_TilyousLab_BobbyBULBASAUR:
+M_TilyousLab_BobbyRascaloot:
 walk_down
 walk_down
 walk_right
@@ -411,7 +413,7 @@ walk_right
 walk_up
 step_end
 
-M_TilyousLab_BobbyBULBASAURExit:
+M_TilyousLab_BobbyRascalootExit:
 walk_down
 walk_down
 walk_down
@@ -423,7 +425,7 @@ walk_down
 walk_down
 step_end
 
-M_TilyousLab_JohnBULBASAUR:
+M_TilyousLab_JohnRascaloot:
 walk_down
 walk_right
 walk_right
@@ -432,7 +434,7 @@ walk_right
 face_up
 step_end
 
-M_TilyousLab_JohnBULBASAURReturn:
+M_TilyousLab_JohnRascalootReturn:
 walk_left
 walk_left
 walk_left
@@ -441,7 +443,7 @@ walk_up
 face_down
 step_end
 
-M_TilyousLab_BobbyCHARMANDER:
+M_TilyousLab_BobbyEmboryps:
 walk_down
 walk_down
 walk_right
@@ -454,7 +456,7 @@ walk_right
 walk_up
 step_end
 
-M_TilyousLab_BobbyCHARMANDERExit:
+M_TilyousLab_BobbyEmborypsExit:
 walk_down
 walk_left
 walk_left
@@ -479,7 +481,7 @@ walk_down
 walk_down
 step_end
 
-M_TilyousLab_BobbySQUIRTLEExit:
+M_TilyousLab_BobbyFlobraExit:
 walk_down
 walk_left
 walk_down
@@ -491,7 +493,7 @@ walk_down
 walk_down
 step_end
 
-M_TilyousLab_BobbySQUIRTLE:
+M_TilyousLab_BobbyFlobra:
 walk_down
 walk_right
 walk_right
@@ -504,7 +506,7 @@ walk_up
 step_end
 
 
-M_TilyousLab_JohnCHARMANDERReturn:
+M_TilyousLab_JohnEmborypsReturn:
 walk_down
 walk_left
 walk_left
@@ -517,7 +519,7 @@ walk_up
 face_down
 step_end
 
-M_TilyousLab_JohnCHARMANDER:
+M_TilyousLab_JohnEmboryps:
 walk_down
 walk_down
 walk_right
@@ -668,12 +670,12 @@ T_TilyousLab_HeyDontGoYet:
 T_TilyousLab_ProfTilyousPokemon:
 	.string "A Pokéball belonging to Prof. \nTilyou. \pYou can hear a quite buzz coming \nfrom inside of it.$"
 	
-T_TilyousLab_PickBULBASAUR:
-	.string "The Pokéball contains the grass \ntype Bandicoot Pokémon BULBASAUR. \pIs this the Pokémon you choose?$"
+T_TilyousLab_PickRascaloot:
+	.string "The Pokéball contains the grass \ntype Bandicoot Pokémon Rascaloot. \pIs this the Pokémon you choose?$"
 	
-T_TilyousLab_BULBASAURYes:
+T_TilyousLab_RascalootYes:
 
-	.string "You've recieved BULBASAUR!\p"
+	.string "You've recieved Rascaloot!\p"
 	.string "Why don't you give it a nickname?$"
 
 T_TilyousLab_OkJohnYoureUp:
@@ -682,15 +684,15 @@ T_TilyousLab_OkJohnYoureUp:
 T_TilyousLab_JohnSoundsGood:
 	.string "John: Sounds good! I know who I \nwant!$"
 	
-T_TilyousLab_JohnCHARMANDER:
-	.string "John took the Fire Pokémon, \nCHARMANDER!\p"
-	.string "John: CHARMANDER is so lit!$"
+T_TilyousLab_JohnEmboryps:
+	.string "John took the Fire Pokémon, \nEmboryps!\p"
+	.string "John: Emboryps is so lit!$"
 
 T_TilyousLab_TilyouBobbysTurn:
 	.string "Prof. Tilyou: Great pick Johnny \nWaffles. \pNow it's time for Bobby to pick!$"
 	
-T_TilyousLab_BobbySQUIRTLE:
-	.string "Bobby took the Water Pokémon, \nSQUIRTLE!$"
+T_TilyousLab_BobbyFlobra:
+	.string "Bobby took the Water Pokémon, \nFlobra!$"
 
 T_TilyousLab_YouAllHaveStarters:
 	.string "Prof Tilyou: Well it looks like you \nall have companions for your \ljourney. Get out there and start \ltraining your Pokémon!\p"
@@ -711,35 +713,35 @@ T_TilyousLab_JohnLongTimeNoSee:
 	.string "Hurry up and pick a Pokémon. We've \nbeen waiting the whole year on you.\p"
 	.string "Don't make us wait any longer!$"
 	
-T_TilyousLab_PickSQUIRTLE:
-	.string "The Pokéball contains the water \ntype Pokémon SQUIRTLE. \pIs this the Pokémon you choose?$"
+T_TilyousLab_PickFlobra:
+	.string "The Pokéball contains the water \ntype Pokémon Flobra. \pIs this the Pokémon you choose?$"
 	
-T_TilyousLab_SQUIRTLEYes:
+T_TilyousLab_FlobraYes:
 
-	.string "You've recieved SQUIRTLE!\p"
+	.string "You've recieved Flobra!\p"
 	.string "Why don't you give it a nickname?$"
 	
-T_TilyousLab_JohnBULBASAUR:
-	.string "John took the Grass Pokémon, \nBULBASAUR!\p"
-	.string "John: My BULBASAUR is on fleek!$"
+T_TilyousLab_JohnRascaloot:
+	.string "John took the Grass Pokémon, \nRascaloot!\p"
+	.string "John: My Rascaloot is on fleek!$"
 	
-T_TilyousLab_BobbyCHARMANDER:
-	.string "Bobby took the Fire Pokémon, \nCHARMANDER!$"
+T_TilyousLab_BobbyEmboryps:
+	.string "Bobby took the Fire Pokémon, \nEmboryps!$"
 	
-T_TilyousLab_PickCHARMANDER:
-	.string "The Pokéball contains the Fire \ntype Pokémon CHARMANDER. \pIs this the Pokémon you choose?$"
+T_TilyousLab_PickEmboryps:
+	.string "The Pokéball contains the Fire \ntype Pokémon Emboryps. \pIs this the Pokémon you choose?$"
 	
-T_TilyousLab_CHARMANDERYes:
+T_TilyousLab_EmborypsYes:
 
-	.string "You've recieved CHARMANDER!\p"
+	.string "You've recieved Emboryps!\p"
 	.string "Why don't you give it a nickname?$"
 	
-T_TilyousLab_JohnSQUIRTLE:
-	.string "John took the Water Pokémon, \nSQUIRTLE!\p"
-	.string "John: SQUIRTLE is dirty A F!$"
+T_TilyousLab_JohnFlobra:
+	.string "John took the Water Pokémon, \nFlobra!\p"
+	.string "John: Flobra is dirty A F!$"
 	
-T_TilyousLab_BobbyBULBASAUR:
-	.string "Bobby took the Grass Pokémon, \nBULBASAUR!$"
+T_TilyousLab_BobbyRascaloot:
+	.string "Bobby took the Grass Pokémon, \nRascaloot!$"
 	
 T_TilyousLab_DoesntSpendAlotOfTimeInLab:
 	.string "I'm not sure where Prof. Tilyou is. \nHe is not in the Lab very often. He \lprefers to do field work.\p"

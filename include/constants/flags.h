@@ -1299,9 +1299,9 @@
 #define FLAG_HIDE_TILYOUS_LAB_ISIAH                                 0x4E3 // Hides Isiah In Tilyous Lab
 #define FLAG_SPOKE_TO_FIRST_MESSENGER                               0x4E4 // Used to stop intro dialouge from triggering for messenger battles
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS                        0x4E5 // Hides all soldiers after team maga battle
-#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_CHARMANDER          0x4E6 // Hides "charmander" until after starter choice made
-#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_SQUIRTLE            0x4E7 // Hides "squirtle" after starter choice made
-#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BULBASAUR           0x4E8 // Hides "bulbasaur" after starter choice made
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS         0x4E6 // Hides "charmander" until after starter choice made
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_FLOBRA            0x4E7 // Hides "squirtle" after starter choice made
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_RASCALOOT          0x4E8 // Hides "bulbasaur" after starter choice made
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU              0x4E9 // Hides Tilyou in his lab before you go into wild
 #define FLAG_HIDE_NALLS_RESIDENCE_1F_ISIAH                          0x4EA // Hides Isiah in his house until intro sequence is done
 #define FLAG_HIDE_MOM                                               0x4EB // Hides Fros Mom for intro sequence

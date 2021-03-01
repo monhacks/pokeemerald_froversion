@@ -842,6 +842,43 @@ static const struct AbilitySetter sMorphloAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sRascalootAbilitySet[] = 
+{
+    {ABILITY_OVERGROW, 1},
+    {ABILITY_SKILL_LINK, 15},
+    {ABILITY_HARVEST, 30},
+    {ABILITY_INTIMIDATE, 45},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sEmborypsAbilitySet[] = 
+{
+    {ABILITY_BLAZE, 1},
+    {ABILITY_MAGMA_ARMOR, 15},
+    {ABILITY_FLASH_FIRE, 30},
+    {ABILITY_FLARE_BOOST, 45},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sHuntorypsAbilitySet[] = 
+{
+    {ABILITY_BLAZE, 1},
+    {ABILITY_MAGMA_ARMOR, 15},
+    {ABILITY_FLASH_FIRE, 30},
+    {ABILITY_EARLY_BIRD, 45},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sRiptorypsAbilitySet[] = 
+{
+    {ABILITY_BLAZE, 1},
+    {ABILITY_MAGMA_ARMOR, 15},
+    {ABILITY_FLASH_FIRE, 30},
+    {ABILITY_MULTISCALE, 45},
+    ABILITY_SET_END
+};
+
+
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
@@ -993,6 +1030,12 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_FLOBRA] = sFlobraAbilitySet,
     [SPECIES_MORPHLO] = sMorphloAbilitySet,
     [SPECIES_MECHOBRA] = sMorphloAbilitySet,
+    [SPECIES_RASCALOOT] = sRascalootAbilitySet,
+    [SPECIES_BANDITHUG] = sRascalootAbilitySet,
+    [SPECIES_RUTHLASH] = sRascalootAbilitySet,
+    [SPECIES_EMBORYPS] = sEmborypsAbilitySet,
+    [SPECIES_HUNTORYPS] = sHuntorypsAbilitySet,
+    [SPECIES_RIPTORYPS] = sRiptorypsAbilitySet,
 
 
 
