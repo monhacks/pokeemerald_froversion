@@ -926,8 +926,8 @@ const struct Item gItems[] =
         .price = 9800,
         .description = sHPUpDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
     },
 
     [ITEM_PROTEIN] =
@@ -937,8 +937,8 @@ const struct Item gItems[] =
         .price = 9800,
         .description = sProteinDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
     },
 
     [ITEM_IRON] =
@@ -948,8 +948,8 @@ const struct Item gItems[] =
         .price = 9800,
         .description = sIronDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
     },
 
     [ITEM_CARBOS] =
@@ -959,8 +959,8 @@ const struct Item gItems[] =
         .price = 9800,
         .description = sCarbosDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
     },
 
     [ITEM_CALCIUM] =
@@ -970,8 +970,8 @@ const struct Item gItems[] =
         .price = 9800,
         .description = sCalciumDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
     },
 
     [ITEM_RARE_CANDY] =
@@ -981,8 +981,8 @@ const struct Item gItems[] =
         .price = 4800,
         .description = sRareCandyDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
     },
 
     [ITEM_PP_UP] =
@@ -992,8 +992,8 @@ const struct Item gItems[] =
         .price = 9800,
         .description = sPPUpDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
     },
 
     [ITEM_ZINC] =
@@ -1003,8 +1003,8 @@ const struct Item gItems[] =
         .price = 9800,
         .description = sZincDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
     },
 
     [ITEM_PP_MAX] =

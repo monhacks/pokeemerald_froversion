@@ -823,6 +823,25 @@ static const struct AbilitySetter sVoltorbAbilitySet[] =
     {ABILITY_AFTERMATH, 42},
     ABILITY_SET_END
 };
+
+static const struct AbilitySetter sFlobraAbilitySet[] = 
+{
+    {ABILITY_TORRENT, 1},
+    {ABILITY_CONTRARY, 15},
+    {ABILITY_LIBERO, 35},
+    {ABILITY_DOWNLOAD, 54},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMorphloAbilitySet[] = 
+{
+    {ABILITY_TORRENT, 1},
+    {ABILITY_CONTRARY, 15},
+    {ABILITY_ARENA_TRAP, 35},
+    {ABILITY_DOWNLOAD, 54},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
@@ -971,6 +990,9 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_RAICHU] = sRiachuAbilitySet,
     [SPECIES_VOLTORB] = sVoltorbAbilitySet,
     [SPECIES_ELECTRODE] = sVoltorbAbilitySet,
+    [SPECIES_FLOBRA] = sFlobraAbilitySet,
+    [SPECIES_MORPHLO] = sMorphloAbilitySet,
+    [SPECIES_MECHOBRA] = sMorphloAbilitySet,
 
 
 
