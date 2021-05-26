@@ -20,8 +20,13 @@
     },
     {
       "direction": "down",
-      "offset": 0,
-      "map": "MAP_LITTLEROOT_TOWN"
+      "offset": 2,
+      "map": "MAP_LAKE_MEAD_VILLAGE"
+    },
+    {
+      "direction": "down",
+      "offset": 2,
+      "map": "MAP_LAKE_MEAD_VILLAGE"
     }
   ],
   "object_events": [

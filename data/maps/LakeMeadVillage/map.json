@@ -22,6 +22,11 @@
       "direction": "right",
       "offset": 6,
       "map": "MAP_JAGOW_WAY"
+    },
+    {
+      "direction": "up",
+      "offset": -2,
+      "map": "MAP_ROUTE101"
     }
   ],
   "object_events": [
