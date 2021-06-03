@@ -133,6 +133,7 @@
 #define TRAINER_PIC_SHAWN_HASELEY         110
 #define TRAINER_PIC_WES_THOMPSON          111
 #define TRAINER_PIC_ZENDANO               112
+#define TRAINER_PIC_CHADANDMARK           113
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1

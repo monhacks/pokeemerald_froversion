@@ -7,7 +7,7 @@
       "width": 30,
       "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_LynchPark",
       "border_filepath": "data/layouts/PetalburgCity/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgCity/map.bin"
     },
@@ -174,7 +174,7 @@
     {
       "id": "LAYOUT_ROUTE102",
       "name": "Route102_Layout",
-      "width": 50,
+      "width": 32,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -4860,6 +4860,16 @@
       "secondary_tileset": "gTileset_GratwickGraveyard",
       "border_filepath": "data/layouts/GratwickGraveyard/border.bin",
       "blockdata_filepath": "data/layouts/GratwickGraveyard/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1022",
+      "name": "Route1022_Layout",
+      "width": 18,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LynchPark",
+      "border_filepath": "data/layouts/Route1022/border.bin",
+      "blockdata_filepath": "data/layouts/Route1022/map.bin"
     }
   ]
 }

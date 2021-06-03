@@ -28,6 +28,7 @@ Route103_EventScript_Rival:: @ 81EC3C1
 	goto_if_eq Route103_EventScript_RivalBrendan
 	end
 
+
 Route103_EventScript_RivalMay:: @ 81EC3DA
 	msgbox Route103_Text_MayRoute103Pokemon, MSGBOX_DEFAULT
 	closemessage
@@ -361,3 +362,14 @@ Route103_Text_RouteSign: @ 81ECC1A
 	.string "ROUTE 103\n"
 	.string "{DOWN_ARROW} OLDALE TOWN$"
 
+//////FROVERSION SCRIPTS///////////
+Route103_EventScript_General_MessengerIntro::
+	msgbox GeneralTrainer_Text_MessengerIntro, MSGBOX_NPC
+	trainerbattle_single TRAINER_MESSENGER_1, LancelotPath_Text_Messenger1, LancelotPath_Text_Messenger1Defeated, Route103_EventScript_AfterMessengerBattle
+	msgbox LancelotPath_Text_Messenger1Defeated, MSGBOX_AUTOCLOSE
+	end
+
+	Route103_EventScript_AfterMessengerBattle:
+	setvar VAR_OLDALE_TOWN_STATE, 7
+	msgbox LancelotPath_Text_Messenger1Defeated, MSGBOX_AUTOCLOSE
+	end

@@ -1154,3 +1154,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/GratwickPeaks/scripts.inc"
 
 	.include "data/maps/GratwickGraveyard/scripts.inc"
+
+	.include "data/maps/Route1022/scripts.inc"

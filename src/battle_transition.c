@@ -545,6 +545,7 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_SHAWN_HASELEY] = TRAINER_PIC_SHAWN_HASELEY,
     [MUGSHOT_WES_THOMPSON] = TRAINER_PIC_WES_THOMPSON,
     [MUGSHOT_ZENDANO] = TRAINER_PIC_ZENDANO,
+    [MUGSHOT_CHADANDMARK] = TRAINER_PIC_CHADANDMARK,
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
@@ -572,6 +573,7 @@ static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
     [MUGSHOT_SHAWN_HASELEY] = {0x1A0, 0x1A0},
     [MUGSHOT_WES_THOMPSON] = {0x1A0, 0x1A0},
     [MUGSHOT_ZENDANO] = {0x1A0, 0x1A0},
+    [MUGSHOT_CHADANDMARK] = {0x1A0, 0x1A0},
     
 };
 static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
@@ -600,6 +602,7 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     [MUGSHOT_SHAWN_HASELEY] = {-4,     6},
     [MUGSHOT_WES_THOMPSON] = {-4,     6},
     [MUGSHOT_ZENDANO] = {-4,     6},
+    [MUGSHOT_CHADANDMARK] = {-4,     6},
     
 };
 
@@ -911,6 +914,7 @@ static const u16 sMugshotPal_Haigh[] = INCBIN_U16("graphics/battle_transitions/m
 static const u16 sMugshotPal_ShawnHaseley[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 static const u16 sMugshotPal_WesThompson[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 static const u16 sMugshotPal_Zendano[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
+static const u16 sMugshotPal_ChadAndMark[] = INCBIN_U16("graphics/battle_transitions/may_bg.gbapal");
 
 
 static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
@@ -938,7 +942,8 @@ static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
     [MUGSHOT_HAIGH] = sMugshotPal_Champion,
     [MUGSHOT_SHAWN_HASELEY] = sMugshotPal_Champion,
     [MUGSHOT_WES_THOMPSON] = sMugshotPal_Champion,
-    [MUGSHOT_ZENDANO] = sMugshotPal_Champion
+    [MUGSHOT_ZENDANO] = sMugshotPal_Champion,
+    [MUGSHOT_CHADANDMARK] = sMugshotPal_Champion
 };
 
 static const u16 *const sPlayerMugshotsPals[GENDER_COUNT] =

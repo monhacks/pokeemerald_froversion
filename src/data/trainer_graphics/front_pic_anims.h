@@ -531,5 +531,6 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_SHAWN_HASELEY] = sAnims_FroversionTrainers,
     [TRAINER_PIC_WES_THOMPSON] = sAnims_FroversionTrainers,
     [TRAINER_PIC_ZENDANO] = sAnims_FroversionTrainers,
+    [TRAINER_PIC_CHADANDMARK] = sAnims_FroversionTrainers,
 
 };

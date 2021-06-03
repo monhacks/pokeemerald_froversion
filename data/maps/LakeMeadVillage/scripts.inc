@@ -39,6 +39,7 @@ map_script_2 VAR_OLDALE_TOWN_STATE, 3, Script_LMV_IsiahCaught
 LakeMeadVillage_OnLoad:
 	removeobject 2
 	setflag FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 	compare VAR_LITTLEROOT_TOWN_STATE, 0
 	goto_if_eq Script_LakeMeadVillage_MoveLittleBoyRemoveIsiah
 	compare VAR_OLDALE_TOWN_STATE, 3
@@ -218,6 +219,10 @@ msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
 applymovement 5, M_LMV_StoneRetreat
 applymovement 6, M_LMV_BudRetreat
 waitmovement 6
+setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+setflag FLAG_HIDE_ROUTE_101_ZIGZAGOON
+setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS
 applymovement 4, M_LMV_IsiahToFro
 waitmovement 4
 msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
@@ -245,6 +250,10 @@ msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
 applymovement 5, M_LMV_StoneRetreat
 applymovement 6, M_LMV_BudRetreat
 waitmovement 6
+setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+setflag FLAG_HIDE_ROUTE_101_ZIGZAGOON
+setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS
 applymovement 4, M_LMV_IsiahToFro
 waitmovement 4
 msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
@@ -258,6 +267,10 @@ msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
 applymovement 5, M_LMV_StoneRetreat
 applymovement 6, M_LMV_BudRetreat
 waitmovement 6
+setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+setflag FLAG_HIDE_ROUTE_101_ZIGZAGOON
+setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS
 applymovement 4, M_LMV_IsiahToFro
 waitmovement 4
 msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
@@ -272,6 +285,10 @@ msgbox T_LMV_IsiahNotSaved, MSGBOX_DEFAULT
 applymovement 5, M_LMV_StoneRetreat
 applymovement 6, M_LMV_BudRetreat
 waitmovement 6
+setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+setflag FLAG_HIDE_ROUTE_101_ZIGZAGOON
+setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS
 applymovement 4, M_LMV_IsiahToFro
 waitmovement 4
 msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT

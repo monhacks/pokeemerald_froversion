@@ -299,6 +299,6 @@ Route101_Text_WildPokemonInTallGrass: @ 81EC04A
 	.string "to go into the tall grass and search.$"
 
 Route101_Text_RouteSign: @ 81EC0C8
-	.string "ROUTE 101\n"
+	.string "Lake Mead\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
 

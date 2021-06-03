@@ -77,7 +77,7 @@ static const struct AbilitySetter sSandshrewAbilitySet[] =
 static const struct AbilitySetter sOddishAbilitySet[] = 
 {
     {ABILITY_CHLOROPHYLL, 1},
-    {ABILITY_EFFECT_SPORE, 17},
+    {ABILITY_EFFECT_SPORE, 16},
     {ABILITY_SAP_SIPPER, 42},
     ABILITY_SET_END
 };
@@ -878,6 +878,31 @@ static const struct AbilitySetter sRiptorypsAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sVaypingAbilitySet[] = 
+{
+    {ABILITY_LEVITATE, 1},
+    {ABILITY_STENCH, 20},
+    {ABILITY_VOLT_ABSORB, 40},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sChad_Bug_1AbilitySet[] = 
+{
+    {ABILITY_POISON_POINT, 1},
+    {ABILITY_SKILL_LINK, 16},
+    {ABILITY_COMPOUND_EYES, 34},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sKabowlAbilitySet[] = 
+{
+    {ABILITY_FLAME_BODY, 1},
+    {ABILITY_SERENE_GRACE, 20},
+    {ABILITY_FLASH_FIRE, 40},
+    ABILITY_SET_END
+};
+
+
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
@@ -1036,6 +1061,11 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_EMBORYPS] = sEmborypsAbilitySet,
     [SPECIES_HUNTORYPS] = sHuntorypsAbilitySet,
     [SPECIES_RIPTORYPS] = sRiptorypsAbilitySet,
+    [SPECIES_VAYPING] = sVaypingAbilitySet,
+    [SPECIES_CHAD_BUG_1] = sChad_Bug_1AbilitySet,
+    [SPECIES_CHAD_BUG_2] = sChad_Bug_1AbilitySet,
+    [SPECIES_KABOWL] = sKabowlAbilitySet,
+    [SPECIES_BOWLAST] = sKabowlAbilitySet,
 
 
 
