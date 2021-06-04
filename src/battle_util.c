@@ -3600,6 +3600,7 @@ static u8 ForewarnChooseMove(u32 battler)
 
 u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 moveArg)
 {
+    u32 weather;
     u8 effect = 0;
     u32 speciesAtk, speciesDef;
     u32 pidAtk, pidDef;
@@ -3639,7 +3640,16 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
         case ABILITYEFFECT_SWITCH_IN_WEATHER:
             if (!(gBattleTypeFlags & BATTLE_TYPE_RECORDED))
             {
-                switch (GetCurrentWeather())
+                weather = GetCurrentWeather();
+                    
+                    if (FlagGet(FLAG_UNUSED_0x4E2))
+                        weather = WEATHER_DROUGHT;
+                    else if (FlagGet(FLAG_UNUSED_0x4E1))
+                        weather = WEATHER_DOWNPOUR;
+                    else if (FlagGet(FLAG_UNUSED_0x4E0))
+                        weather = WEATHER_SANDSTORM;
+                    
+                switch (weather)
                 {
                 case WEATHER_RAIN:
                 case WEATHER_RAIN_THUNDERSTORM:
@@ -3680,7 +3690,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             }
             if (effect)
             {
-                gBattleCommunication[MULTISTRING_CHOOSER] = GetCurrentWeather();
+                gBattleCommunication[MULTISTRING_CHOOSER] = weather;
                 BattleScriptPushCursorAndCallback(BattleScript_OverworldWeatherStarts);
             }
             break;
