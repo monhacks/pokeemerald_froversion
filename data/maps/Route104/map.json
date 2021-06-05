@@ -529,6 +529,20 @@
       "elevation": 3,
       "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": 5
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE104",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 25,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE_STENZIL",
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [
@@ -561,8 +575,8 @@
     },
     {
       "type": "sign",
-      "x": 23,
-      "y": 5,
+      "x": 28,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route104_EventScript_RouteSignRustboro"

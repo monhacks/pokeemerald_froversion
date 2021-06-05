@@ -175,8 +175,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 36,
-      "y": 51,
+      "x": 34,
+      "y": 48,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -322,6 +322,13 @@
       "y": 46,
       "elevation": 0,
       "dest_map": "MAP_RUSTBORO_CITY_HOUSE3",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 15,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE_STENZIL",
       "dest_warp_id": 0
     }
   ],
@@ -519,7 +526,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 23,
+      "x": 29,
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

@@ -36,8 +36,8 @@
       "name": "RustboroCity_Layout",
       "width": 40,
       "height": 60,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "primary_tileset": "gTileset_SummitGeneral",
+      "secondary_tileset": "gTileset_SummitCity",
       "border_filepath": "data/layouts/RustboroCity/border.bin",
       "blockdata_filepath": "data/layouts/RustboroCity/map.bin"
     },
@@ -4754,10 +4754,10 @@
     {
       "id": "LAYOUT_ROUTE_STENZIL",
       "name": "RouteStenzil_Layout",
-      "width": 18,
-      "height": 42,
+      "width": 42,
+      "height": 22,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/RouteStenzil/border.bin",
       "blockdata_filepath": "data/layouts/RouteStenzil/map.bin"
     },
