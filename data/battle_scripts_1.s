@@ -5430,6 +5430,7 @@ BattleScript_OverworldWeatherStarts::
 	printfromtable gWeatherStartsStringIds
 	waitmessage 0x40
 	playanimation2 BS_ATTACKER, sB_ANIM_ARG1, NULL
+	playanimation2 BS_TARGET, sB_ANIM_ARG1, NULL
 	end3
 
 BattleScript_SideStatusWoreOff::

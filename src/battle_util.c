@@ -3726,6 +3726,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     gBattleWeather = WEATHER_DREAM_FOG_ANY;
                     gBattleScripting.animArg1 = B_ANIM_DREAM_FOG_CONTINUES;
                     gBattleScripting.battler = battler;
+                    gBattlerTarget = B_POSITION_OPPONENT_LEFT;
                     for (i = 0; i < gBattlersCount; ++i)
                         gBattleStruct->dreamFogTimers[i] = 1;
                     effect++;
