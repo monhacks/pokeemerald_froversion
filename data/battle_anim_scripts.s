@@ -826,6 +826,7 @@ gBattleAnims_General::
 	.4byte General_SlideOffScreen           @ B_ANIM_SLIDE_OFFSCREEN
 	.4byte General_RestoreBg                @ B_ANIM_RESTORE_BG
 	.4byte General_TotemFlare               @ B_ANIM_TOTEM_FLARE
+        .4byte General_DreamFog                 @ B_ANIM_DREAM_FOG_CONTINUES:
 
 	.align 2
 gBattleAnims_Special::
@@ -24419,6 +24420,9 @@ General_TotemFlare::
 	blendoff
 	clearmonbg ANIM_ATTACKER
 	end
+
+General_DreamFog:
+	goto Move_MIST
 
 RainbowEndureEffect:
 	launchtemplate gBlueEndureEnergySpriteTemplate 0x2 0x4 0x0 0xffe8 0x1a 0x2

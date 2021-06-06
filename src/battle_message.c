@@ -692,7 +692,9 @@ static const u8 sText_ASandstormKickedUp[] = _("A sandstorm kicked up!");
 static const u8 sText_PkmnsWillPerishIn3Turns[] = _("Both Pokémon will perish\nin three turns!");
 static const u8 sText_AbilityRaisedStatDrastically[] = _("{B_DEF_ABILITY} raised {B_DEF_NAME_WITH_PREFIX}'s\n{B_BUFF1} drastically!");
 static const u8 sText_UnlockedAbility[] = _("{B_ATK_NAME_WITH_PREFIX} unlocked {B_BUFF3}!\p");
-
+static const u8 sText_DreamFogPresent[] = _("A dreamy fog covers\nthe battlefield!");
+static const u8 sText_DreamFogYawn[] = _("{B_ATK_NAME_WITH_PREFIX}\nis drowsy!");
+static const u8 sText_DreamFogFellAsleep[] = _("{B_ATK_NAME_WITH_PREFIX}\nfell into a restful sleep!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1248,6 +1250,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_AURABREAKENTERS - 12] = sText_AuraBreakActivates,
     [STRINGID_COMATOSEENTERS - 12] = sText_ComatoseActivates,
     [STRINGID_SCREENCLEANERENTERS - 12] = sText_ScreenCleanerActivates,
+    [STRINGID_DREAMFOGPRESENT - 12] = sText_DreamFogPresent,
+    [STRINGID_DREAMFOGYAWN - 12] = sText_DreamFogYawn,
+    [STRINGID_DREAMFOGFELLASLEEP - 12] = sText_DreamFogFellAsleep,
 };
 
 const u16 gTerrainStringIds[] =
@@ -1522,7 +1527,8 @@ const u16 gWeatherStartsStringIds[] =
     [WEATHER_DROUGHT]            = STRINGID_SUNLIGHTSTRONG,
     [WEATHER_DOWNPOUR]           = STRINGID_ITISRAINING,
     [WEATHER_UNDERWATER_BUBBLES] = STRINGID_ITISRAINING,
-    [WEATHER_ABNORMAL]           = STRINGID_ITISRAINING
+    [WEATHER_ABNORMAL]           = STRINGID_ITISRAINING,
+    [WEATHER_DREAM_FOG]          = STRINGID_DREAMFOGPRESENT,
 };
 
 const u16 gInobedientStringIds[] =

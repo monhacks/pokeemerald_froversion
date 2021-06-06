@@ -1639,6 +1639,7 @@ enum
     ENDTURN_SANDSTORM,
     ENDTURN_SUN,
     ENDTURN_HAIL,
+    ENDTURN_DREAM_FOG,
     ENDTURN_GRAVITY,
     ENDTURN_WATER_SPORT,
     ENDTURN_MUD_SPORT,
@@ -1971,6 +1972,39 @@ u8 DoFieldEndTurnEffects(void)
                 effect++;
             }
             gBattleStruct->turnCountersTracker++;
+            break;
+        case ENDTURN_DREAM_FOG:
+            if (gBattleWeather & WEATHER_DREAM_FOG_ANY
+             && gBattleStruct->turnEffectsBattlerId < gBattlersCount)
+            {
+                gActiveBattler = gBattlerByTurnOrder[gBattleStruct->turnEffectsBattlerId];
+                if (!(gAbsentBattlerFlags & gBitTable[gActiveBattler])
+                 && !(gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP)
+                 && GetBattlerAbility(gActiveBattler) != ABILITY_COMATOSE)
+                {
+                    gBattlerAttacker = gBattlerTarget = gActiveBattler;
+                    switch (++gBattleStruct->dreamFogTimers[gActiveBattler])
+                    {
+                    case 2:
+                        gBattlescriptCurrInstr = BattleScript_DreamFogYawn;
+                        break;
+
+                    case 4:
+                        gBattleStruct->dreamFogTimers[gActiveBattler] = 0;
+                        gBattleMoveDamage = -gBattleMons[gActiveBattler].maxHP;
+                        gBattlescriptCurrInstr = BattleScript_DreamFogEffect;
+                        break;
+                    }
+                    BattleScriptExecute(gBattlescriptCurrInstr);
+                    effect++;
+                }
+                gBattleStruct->turnEffectsBattlerId++;
+            }
+            else
+            {
+                gBattleStruct->turnCountersTracker++;
+                gBattleStruct->turnEffectsBattlerId = 0;
+            }
             break;
         case ENDTURN_TRICK_ROOM:
             if (gFieldStatuses & STATUS_FIELD_TRICK_ROOM && --gFieldTimers.trickRoomTimer == 0)
@@ -3648,6 +3682,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                         weather = WEATHER_DOWNPOUR;
                     else if (FlagGet(FLAG_UNUSED_0x4E0))
                         weather = WEATHER_SANDSTORM;
+                    else if (FlagGet(FLAG_UNUSED_0x4DF))
+                        weather = WEATHER_DREAM_FOG;
                     
                 switch (weather)
                 {
@@ -3685,6 +3721,14 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                         gBattleScripting.battler = battler;
                         effect++;
                     }
+                    break;
+                case WEATHER_DREAM_FOG:
+                    gBattleWeather = WEATHER_DREAM_FOG_ANY;
+                    gBattleScripting.animArg1 = B_ANIM_DREAM_FOG_CONTINUES;
+                    gBattleScripting.battler = battler;
+                    for (i = 0; i < gBattlersCount; ++i)
+                        gBattleStruct->dreamFogTimers[i] = 1;
+                    effect++;
                     break;
                 }
             }

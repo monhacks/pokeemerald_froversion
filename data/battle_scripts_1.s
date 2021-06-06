@@ -5400,6 +5400,32 @@ BattleScript_SunlightFaded::
 	waitmessage 0x40
 	end2
 
+BattleScript_DreamFogYawn::
+	printstring STRINGID_DREAMFOGYAWN
+	waitmessage 0x40
+	end2
+
+BattleScript_DreamFogEffect::
+	jumpifcantmakeasleep BattleScript_DreamFogCantSleep
+	trysetrest NULL
+	pause 0x20
+	printstring STRINGID_DREAMFOGFELLASLEEP
+	waitmessage 0x40
+	updatestatusicon BS_ATTACKER
+	waitstate
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	printstring STRINGID_PKMNREGAINEDHEALTH
+	waitmessage 0x40
+	end2
+
+BattleScript_DreamFogCantSleep:
+	pause 0x40
+	printfromtable gUproarAwakeStringIds
+	waitmessage 0x40
+	end2
+
 BattleScript_OverworldWeatherStarts::
 	printfromtable gWeatherStartsStringIds
 	waitmessage 0x40
