@@ -1978,7 +1978,7 @@ u8 DoFieldEndTurnEffects(void)
              && gBattleStruct->turnEffectsBattlerId < gBattlersCount)
             {
                 gActiveBattler = gBattlerByTurnOrder[gBattleStruct->turnEffectsBattlerId];
-                if (!(gAbsentBattlerFlags & gBitTable[gActiveBattler])
+                if (IsBattlerAlive(gActiveBattler)
                  && !(gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP)
                  && GetBattlerAbility(gActiveBattler) != ABILITY_COMATOSE)
                 {
