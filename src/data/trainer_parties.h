@@ -4248,22 +4248,22 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Billy[] = {
 static const struct TrainerMonNoItemCustomMoves sParty_Josh[] = {
     {
     .iv = 100,
-    .lvl = 10,
-    .species = SPECIES_RHYHORN,
-    .moves = {MOVE_TACKLE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .lvl = 13,
+    .species = SPECIES_GRIMER,
+    .moves = {MOVE_DISABLE, MOVE_POISON_GAS, MOVE_ACID, MOVE_NONE}
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Tommy[] = {
     {
     .iv = 110,
-    .lvl = 8,
-    .species = SPECIES_RHYHORN,
+    .lvl = 11,
+    .species = SPECIES_NIDORAN_M,
     },
     {
     .iv = 120,
-    .lvl = 8,
-    .species = SPECIES_RHYHORN,
+    .lvl = 11,
+    .species = SPECIES_ZUBAT,
     }
 };
 
@@ -7677,13 +7677,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntJaggedPass[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Marc[] = {
     {
     .iv = 120,
-    .lvl = 8,
-    .species = SPECIES_RHYHORN,
+    .lvl = 12,
+    .species = SPECIES_ZUBAT,
     },
     {
     .iv = 130,
-    .lvl = 8,
-    .species = SPECIES_RHYHORN,
+    .lvl = 12,
+    .species = SPECIES_GRIMER,
     }
 };
 

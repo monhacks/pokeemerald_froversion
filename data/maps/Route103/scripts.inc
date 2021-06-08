@@ -363,7 +363,15 @@ Route103_Text_RouteSign: @ 81ECC1A
 	.string "{DOWN_ARROW} OLDALE TOWN$"
 
 //////FROVERSION SCRIPTS///////////
-Route103_EventScript_General_MessengerIntro::
+
+Route103_EventScript_Messenger::
+	compare VAR_OLDALE_TOWN_STATE, 7
+	goto_if_lt Route103_EventScript_General_MessengerIntro
+	trainerbattle_single TRAINER_MESSENGER_1, LancelotPath_Text_Messenger1, LancelotPath_Text_Messenger1Defeated, Route103_EventScript_AfterMessengerBattle
+	msgbox LancelotPath_Text_Messenger1Defeated, MSGBOX_AUTOCLOSE
+	end
+
+Route103_EventScript_General_MessengerIntro:
 	msgbox GeneralTrainer_Text_MessengerIntro, MSGBOX_NPC
 	trainerbattle_single TRAINER_MESSENGER_1, LancelotPath_Text_Messenger1, LancelotPath_Text_Messenger1Defeated, Route103_EventScript_AfterMessengerBattle
 	msgbox LancelotPath_Text_Messenger1Defeated, MSGBOX_AUTOCLOSE
