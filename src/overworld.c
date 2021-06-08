@@ -412,7 +412,12 @@ static void Overworld_ResetStateAfterWhiteOut(void)
         VarSet(VAR_SHOULD_END_ABNORMAL_WEATHER, 0);
         VarSet(VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_NONE);
     }
-    
+    FlagClear(FLAG_BATTLE_ROULETTE);
+    FlagClear(FLAG_BATTLE_DARKNESS);
+    FlagClear(FLAG_BATTLE_DREAM_FOG);
+    FlagClear(FLAG_BATTLE_SANDSTORM);
+    FlagClear(FLAG_BATTLE_RAIN);
+    FlagClear(FLAG_BATTLE_SUN);
     FollowMe_TryRemoveFollowerOnWhiteOut();
 }
 
