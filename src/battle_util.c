@@ -1653,6 +1653,7 @@ enum
     ENDTURN_PSYCHIC_TERRAIN,
     ENDTURN_ION_DELUGE,
     ENDTURN_FAIRY_LOCK,
+    ENDTURN_ROULETTE,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -2132,6 +2133,17 @@ u8 DoFieldEndTurnEffects(void)
             }
             gBattleStruct->turnCountersTracker++;
             break;
+        case ENDTURN_ROULETTE:
+            if (FlagGet(FLAG_BATTLE_ROULETTE))
+            {
+                effect = Random() % 6;
+                gBattleStruct->rouletteEffect = effect + 1;
+                gBattleCommunication[MULTISTRING_CHOOSER] = effect;
+                BattleScriptExecute(BattleScript_AnnounceRoulette);
+                effect++;
+            }
+            gBattleStruct->turnCountersTracker++;
+            break;
         case ENDTURN_FIELD_COUNT:
             effect++;
             break;
@@ -2191,10 +2203,15 @@ s32 GetDrainedBigRootHp(u32 battler, s32 hp)
 
 #define MAGIC_GAURD_CHECK \
 if (ability == ABILITY_MAGIC_GUARD) \
-{\
-    RecordAbilityBattle(gActiveBattler, ability);\
-    gBattleStruct->turnEffectsTracker++;\
+{ \
+    RecordAbilityBattle(gActiveBattler, ability); \
+    gBattleStruct->turnEffectsTracker++; \
             break;\
+} \
+else if (gBattleStruct->rouletteEffect == 2) \
+{ \
+    gBattleStruct->turnEffectsTracker++; \
+    break; \
 }
 
 
@@ -6046,7 +6063,8 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 if (TARGET_TURN_DAMAGED
                     && IsMoveMakingContact(gCurrentMove, gBattlerAttacker)
                     && IsBattlerAlive(gBattlerAttacker)
-                    && GetBattlerAbility(gBattlerAttacker) != ABILITY_MAGIC_GUARD)
+                    && GetBattlerAbility(gBattlerAttacker) != ABILITY_MAGIC_GUARD
+                    && gBattleStruct->rouletteEffect != 2)
                 {
                     gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 6;
                     if (gBattleMoveDamage == 0)
@@ -7127,31 +7145,36 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     u8 atkStage;
     u32 atkStat;
     u16 modifier;
+    u32 stat;
 
     if (gBattleMoves[move].effect == EFFECT_FOUL_PLAY)
     {
-        if (IS_MOVE_PHYSICAL(move))
+        if (IS_MOVE_PHYSICAL(move) == (gBattleStruct->rouletteEffect != 6))
         {
             atkStat = gBattleMons[battlerDef].attack;
             atkStage = gBattleMons[battlerDef].statStages[STAT_ATK];
+            stat = STAT_ATK;
         }
         else
         {
             atkStat = gBattleMons[battlerDef].spAttack;
             atkStage = gBattleMons[battlerDef].statStages[STAT_SPATK];
+            stat = STAT_SPATK;
         }
     }
     else
     {
-        if (IS_MOVE_PHYSICAL(move))
+        if (IS_MOVE_PHYSICAL(move) == (gBattleStruct->rouletteEffect != 6))
         {
             atkStat = gBattleMons[battlerAtk].attack;
             atkStage = gBattleMons[battlerAtk].statStages[STAT_ATK];
+            stat = STAT_ATK;
         }
         else
         {
             atkStat = gBattleMons[battlerAtk].spAttack;
             atkStage = gBattleMons[battlerAtk].statStages[STAT_SPATK];
+            stat = STAT_SPATK;
         }
     }
 
@@ -7173,7 +7196,7 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     {
     case ABILITY_HUGE_POWER:
     case ABILITY_PURE_POWER:
-        if (IS_MOVE_PHYSICAL(move))
+        if (stat == STAT_ATK)
             MulModifier(&modifier, UQ_4_12(2.0));
         break;
     case ABILITY_SLOW_START:
@@ -7181,7 +7204,7 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
             MulModifier(&modifier, UQ_4_12(0.5));
         break;
     case ABILITY_SOLAR_POWER:
-        if (IS_MOVE_SPECIAL(move) && WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SUN_ANY)
+        if (stat == STAT_SPATK && WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SUN_ANY)
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
     case ABILITY_DEFEATIST:
@@ -7213,16 +7236,16 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
         if (IsBattlerAlive(BATTLE_PARTNER(battlerAtk)))
         {
             u32 partnerAbility = GetBattlerAbility(BATTLE_PARTNER(battlerAtk));
-            if (partnerAbility == ABILITY_PLUS || partnerAbility == ABILITY_MINUS)
+            if (stat == STAT_SPATK && (partnerAbility == ABILITY_PLUS || partnerAbility == ABILITY_MINUS))
                 MulModifier(&modifier, UQ_4_12(1.5));
         }
         break;
     case ABILITY_FLOWER_GIFT:
-        if (gBattleMons[battlerAtk].species == SPECIES_CHERRIM && WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_SUN_ANY) && IS_MOVE_PHYSICAL(move))
+        if (gBattleMons[battlerAtk].species == SPECIES_CHERRIM && WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_SUN_ANY) && stat == STAT_ATK)
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
     case ABILITY_HUSTLE:
-        if (IS_MOVE_PHYSICAL(move))
+        if (stat == STAT_ATK)
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
     case ABILITY_STAKEOUT:
@@ -7230,7 +7253,7 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
             MulModifier(&modifier, UQ_4_12(2.0));
         break;
     case ABILITY_GUTS:
-        if (gBattleMons[battlerAtk].status1 & STATUS1_ANY && IS_MOVE_PHYSICAL(move))
+        if (gBattleMons[battlerAtk].status1 & STATUS1_ANY && stat == STAT_ATK)
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
     }
@@ -7258,7 +7281,7 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
         switch (GetBattlerAbility(BATTLE_PARTNER(battlerAtk)))
         {
         case ABILITY_FLOWER_GIFT:
-            if (gBattleMons[BATTLE_PARTNER(battlerAtk)].species == SPECIES_CHERRIM && IS_MOVE_PHYSICAL(move))
+            if (gBattleMons[BATTLE_PARTNER(battlerAtk)].species == SPECIES_CHERRIM && stat == STAT_ATK)
                 MulModifier(&modifier, UQ_4_12(1.5));
             break;
         }
@@ -7270,11 +7293,11 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     case HOLD_EFFECT_THICK_CLUB:
         if ((GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species) == SPECIES_CUBONE
          || GET_BASE_SPECIES_ID(gBattleMons[battlerAtk].species) == SPECIES_MAROWAK)
-         && IS_MOVE_PHYSICAL(move))
+         && stat == STAT_ATK)
             MulModifier(&modifier, UQ_4_12(2.0));
         break;
     case HOLD_EFFECT_DEEP_SEA_TOOTH:
-        if (gBattleMons[battlerAtk].species == SPECIES_CLAMPERL && IS_MOVE_SPECIAL(move))
+        if (gBattleMons[battlerAtk].species == SPECIES_CLAMPERL && stat == STAT_SPATK)
             MulModifier(&modifier, UQ_4_12(2.0));
         break;
     case HOLD_EFFECT_LIGHT_BALL:
@@ -7282,20 +7305,20 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
             MulModifier(&modifier, UQ_4_12(2.0));
         break;
     case HOLD_EFFECT_CHOICE_BAND:
-        if (IS_MOVE_PHYSICAL(move))
+        if (stat == STAT_ATK)
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
     case HOLD_EFFECT_CHOICE_SPECS:
-        if (IS_MOVE_SPECIAL(move))
+        if (stat == STAT_SPATK)
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
     }
 
     // The offensive stats of a Player's Pokémon are boosted by x1.1 (+10%) if they have the 1st badge and 7th badges.
     // Having the 1st badge boosts physical attack while having the 7th badge boosts special attack.
-    if (ShouldGetStatBadgeBoost(FLAG_BADGE01_GET, battlerAtk) && IS_MOVE_PHYSICAL(move))
+    if (ShouldGetStatBadgeBoost(FLAG_BADGE01_GET, battlerAtk) && stat == STAT_ATK)
         MulModifier(&modifier, UQ_4_12(1.1));
-    if (ShouldGetStatBadgeBoost(FLAG_BADGE07_GET, battlerAtk) && IS_MOVE_SPECIAL(move))
+    if (ShouldGetStatBadgeBoost(FLAG_BADGE07_GET, battlerAtk) && stat == STAT_SPATK)
         MulModifier(&modifier, UQ_4_12(1.1));
 
     return ApplyModifier(modifier, atkStat);
@@ -7768,10 +7791,15 @@ u16 CalcPartyMonTypeEffectivenessMultiplier(u16 move, u16 speciesDef, u16 abilit
 
 u16 GetTypeModifier(u8 atkType, u8 defType)
 {
-    if (B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE))
+    if ((B_FLAG_INVERSE_BATTLE != 0 && FlagGet(B_FLAG_INVERSE_BATTLE))
+     || gBattleStruct->rouletteEffect == 4)
+    {
         return sInverseTypeEffectivenessTable[atkType][defType];
+    }
     else
+    {
         return sTypeEffectivenessTable[atkType][defType];
+    }
 }
 
 s32 GetStealthHazardDamage(u8 hazardType, u8 battlerId)

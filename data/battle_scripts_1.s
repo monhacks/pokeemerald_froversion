@@ -7879,3 +7879,8 @@ BattleScript_AnnounceAirLockCloudNine::
 	waitmessage 0x40
 	call BattleScript_WeatherFormChanges
 	end3
+
+BattleScript_AnnounceRoulette::
+	printfromtable gRouletteStringIds
+	waitmessage 0x40
+	end2

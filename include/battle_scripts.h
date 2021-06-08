@@ -364,5 +364,6 @@ extern const u8 BattleScript_CottonDownActivates[];
 extern const u8 BattleScript_BallFetch[];
 extern const u8 BattleScript_SandSpitActivates[];
 extern const u8 BattleScript_PerishBodyActivates[];
+extern const u8 BattleScript_AnnounceRoulette[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

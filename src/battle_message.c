@@ -698,6 +698,12 @@ static const u8 sText_DreamFogFellAsleep[] = _("{B_ATK_NAME_WITH_PREFIX}\nfell i
 static const u8 sText_ItIsDark[] = _("It is dark!");
 static const u8 sText_FlashLitUpDarkness[] = _("{B_ATK_NAME_WITH_PREFIX}'s Flash\ndispelled the darkness!");
 static const u8 sText_DarknessReturned[] = _("The darkness returned\nto the battlefield!");
+static const u8 sText_Roulette1[] = _("Moves are critical hits!");
+static const u8 sText_Roulette2[] = _("No damage can be dealt!");
+static const u8 sText_Roulette3[] = _("All moves are Normal-type!");
+static const u8 sText_Roulette4[] = _("Effectiveness inverted!");
+static const u8 sText_Roulette5[] = _("Slower Pokémon move first!");
+static const u8 sText_Roulette6[] = _("Physical and Special switched!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1259,6 +1265,12 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ITISDARK - 12] = sText_ItIsDark,
     [STRINGID_FLASHLITUPDARKNESS - 12] = sText_FlashLitUpDarkness,
     [STRINGID_DARKNESSRETURNED - 12] = sText_DarknessReturned,
+    [STRINGID_ROULETTE1 - 12] = sText_Roulette1,
+    [STRINGID_ROULETTE2 - 12] = sText_Roulette2,
+    [STRINGID_ROULETTE3 - 12] = sText_Roulette3,
+    [STRINGID_ROULETTE4 - 12] = sText_Roulette4,
+    [STRINGID_ROULETTE5 - 12] = sText_Roulette5,
+    [STRINGID_ROULETTE6 - 12] = sText_Roulette6,
 };
 
 const u16 gTerrainStringIds[] =
@@ -1611,6 +1623,12 @@ const u16 gRoomsStringIds[] =
 const u16 gStatusConditionsStringIds[] =
 {
     STRINGID_PKMNWASPOISONED, STRINGID_PKMNBADLYPOISONED, STRINGID_PKMNWASBURNED, STRINGID_PKMNWASPARALYZED, STRINGID_PKMNFELLASLEEP
+};
+
+const u16 gRouletteStringIds[] =
+{
+    STRINGID_ROULETTE1, STRINGID_ROULETTE2, STRINGID_ROULETTE3,
+    STRINGID_ROULETTE4, STRINGID_ROULETTE5, STRINGID_ROULETTE6,
 };
 
 const u8 gText_PkmnIsEvolving[] = _("What?\n{STR_VAR_1} is evolving!");
