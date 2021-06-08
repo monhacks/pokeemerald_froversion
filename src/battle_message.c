@@ -704,6 +704,8 @@ static const u8 sText_Roulette3[] = _("All moves are Normal-type!");
 static const u8 sText_Roulette4[] = _("Effectiveness inverted!");
 static const u8 sText_Roulette5[] = _("Slower Pokémon move first!");
 static const u8 sText_Roulette6[] = _("Physical and Special switched!");
+static const u8 sText_ActiveFainted[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nfainted!");
+static const u8 sText_Haunting[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} changed form\nand returned to haunt {B_PLAYER_NAME}!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1271,6 +1273,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ROULETTE4 - 12] = sText_Roulette4,
     [STRINGID_ROULETTE5 - 12] = sText_Roulette5,
     [STRINGID_ROULETTE6 - 12] = sText_Roulette6,
+    [STRINGID_ACTIVEFAINTED - 12] = sText_ActiveFainted,
+    [STRINGID_HAUNTING - 12] = sText_Haunting,
 };
 
 const u16 gTerrainStringIds[] =

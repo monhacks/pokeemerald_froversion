@@ -7884,3 +7884,17 @@ BattleScript_AnnounceRoulette::
 	printfromtable gRouletteStringIds
 	waitmessage 0x40
 	end2
+
+BattleScript_Haunting::
+	printstring STRINGID_ACTIVEFAINTED
+	waitmessage 0x40
+	handleformchange BS_SCRIPTING, 0
+	handleformchange BS_SCRIPTING, 1
+	playanimation BS_SCRIPTING, B_ANIM_FORM_CHANGE, NULL
+	waitanimation
+	handleformchange BS_SCRIPTING, 2
+	healthbarupdate BS_SCRIPTING
+	datahpupdate BS_SCRIPTING
+	printstring STRINGID_HAUNTING
+	waitmessage 0x40
+	return

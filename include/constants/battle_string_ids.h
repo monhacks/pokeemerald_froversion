@@ -577,8 +577,10 @@
 #define STRINGID_ROULETTE4 573
 #define STRINGID_ROULETTE5 574
 #define STRINGID_ROULETTE6 575
+#define STRINGID_ACTIVEFAINTED 576
+#define STRINGID_HAUNTING 577
 
-#define BATTLESTRINGS_COUNT     576
+#define BATTLESTRINGS_COUNT     578
 
 //// multichoice message IDs
 // switch in ability message

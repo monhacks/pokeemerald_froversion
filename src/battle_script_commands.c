@@ -3337,6 +3337,26 @@ static void Cmd_tryfaintmon(void)
             battlerId = gBattlerAttacker;
             BS_ptr = BattleScript_FaintTarget;
         }
+
+        if (!(gAbsentBattlerFlags & gBitTable[gActiveBattler])
+         && gBattleMons[gActiveBattler].hp == 0
+         && FlagGet(FLAG_BATTLE_HAUNTING)
+         && GetBattlerSide(gActiveBattler) == B_SIDE_OPPONENT)
+        {
+            const struct Evolution *evolution = &gEvolutionTable[gBattleMons[gActiveBattler].species][0];
+            if (evolution->method != 0
+             && evolution->method != EVO_MEGA_EVOLUTION
+             && evolution->method != EVO_MOVE_MEGA_EVOLUTION)
+            {
+                gBattleMons[gActiveBattler].species = evolution->targetSpecies;
+                gBattleMoveDamage = -1000;
+                gBattleScripting.battler = gActiveBattler;
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_Haunting;
+                return;
+            }
+        }
+
         if (!(gAbsentBattlerFlags & gBitTable[gActiveBattler])
          && gBattleMons[gActiveBattler].hp == 0)
         {
