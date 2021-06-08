@@ -3675,16 +3675,16 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!(gBattleTypeFlags & BATTLE_TYPE_RECORDED))
             {
                 weather = GetCurrentWeather();
-                    
-                    if (FlagGet(FLAG_UNUSED_0x4E2))
-                        weather = WEATHER_DROUGHT;
-                    else if (FlagGet(FLAG_UNUSED_0x4E1))
-                        weather = WEATHER_DOWNPOUR;
-                    else if (FlagGet(FLAG_UNUSED_0x4E0))
-                        weather = WEATHER_SANDSTORM;
-                    else if (FlagGet(FLAG_UNUSED_0x4DF))
-                        weather = WEATHER_DREAM_FOG;
-                    
+
+                if (FlagGet(FLAG_BATTLE_SUN))
+                    weather = WEATHER_DROUGHT;
+                else if (FlagGet(FLAG_BATTLE_RAIN))
+                    weather = WEATHER_DOWNPOUR;
+                else if (FlagGet(FLAG_BATTLE_SANDSTORM))
+                    weather = WEATHER_SANDSTORM;
+                else if (FlagGet(FLAG_BATTLE_DREAM_FOG))
+                    weather = WEATHER_DREAM_FOG;
+
                 switch (weather)
                 {
                 case WEATHER_RAIN:

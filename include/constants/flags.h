@@ -1292,10 +1292,10 @@
 #define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
 #define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag
 #define FLAG_UNUSED_0x4DE                                           0x4DE // Unused Flag
-#define FLAG_UNUSED_0x4DF                                           0x4DF // Unused Flag
-#define FLAG_UNUSED_0x4E0                                           0x4E0 // Unused Flag
-#define FLAG_UNUSED_0x4E1                                           0x4E1 // Unused Flag
-#define FLAG_UNUSED_0x4E2                                           0x4E2 // Unused Flag
+#define FLAG_BATTLE_DREAM_FOG                                       0x4DF // Automatic dream fog
+#define FLAG_BATTLE_SANDSTORM                                       0x4E0 // Automatic sandstorm
+#define FLAG_BATTLE_RAIN                                            0x4E1 // Automatic rain
+#define FLAG_BATTLE_SUN                                             0x4E2 // Automatic sun
 #define FLAG_HIDE_TILYOUS_LAB_ISIAH                                 0x4E3 // Hides Isiah In Tilyous Lab
 #define FLAG_SPOKE_TO_FIRST_MESSENGER                               0x4E4 // Used to stop intro dialouge from triggering for messenger battles
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS                        0x4E5 // Hides all soldiers after team maga battle
