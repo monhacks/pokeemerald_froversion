@@ -1320,3 +1320,46 @@ RustboroCity_Text_YouCanHave2On2Battle: @ 81E249D
 	.string "they'll both challenge you.\p"
 	.string "Don't you think it'd be cool if you\n"
 	.string "could beat two TRAINERS by yourself?$"
+
+
+//froversion scripts
+
+SummitCity_EventScript_Hiker::
+	lock
+	faceplayer
+	goto_if_set FLAG_BADGE01_GET, SummitCity_EventScript_HikerPathClear
+	msgbox SummitCity_Text_CaveNotSafe, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, LP_M_PlayerStepBack
+	waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
+
+SummitCity_EventScript_HikerPathClear:
+	msgbox SummitCity_Text_CaveIsSafe
+	release
+	end
+
+SummitCity_EventScript_HikerBlockPathTrigger::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_SummitCity_PlayerFaceHiker
+	applymovement 17, Movement_SummitCity_HikerFacePlayer
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox SummitCity_Text_CaveNotSafe, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, LP_M_PlayerStepBack
+	waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
+
+Movement_SummitCity_PlayerFaceHiker:
+	face_right
+	step_end
+
+Movement_SummitCity_HikerFacePlayer:
+	face_left
+	step_end
+
+SummitCity_Text_CaveNotSafe:
+	.string "This cave collapsed and we are \lclearning out the rubble. \pIt's not safe right now.$"
+
+SummitCity_Text_CaveIsSafe:
+	.string "The rubble is all cleared out now.$"

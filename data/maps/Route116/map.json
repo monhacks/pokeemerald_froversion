@@ -17,11 +17,6 @@
       "direction": "down",
       "offset": 80,
       "map": "MAP_VERDANTURF_TOWN"
-    },
-    {
-      "direction": "left",
-      "offset": 0,
-      "map": "MAP_RUSTBORO_CITY"
     }
   ],
   "object_events": [
@@ -425,6 +420,13 @@
       "elevation": 0,
       "dest_map": "MAP_TERRA_CAVE_ENTRANCE",
       "dest_warp_id": 0
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_RUSTBORO_CITY",
+      "dest_warp_id": 14
     }
   ],
   "coord_events": [
