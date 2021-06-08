@@ -2321,7 +2321,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         #else
             .accuracy = 70,
         #endif
-        .effect = EFFECT_ACCURACY_DOWN,
+        .effect = EFFECT_FLASH,
         .power = 0,
         .type = TYPE_NORMAL,
         .pp = 20,

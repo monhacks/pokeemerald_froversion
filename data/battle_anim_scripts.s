@@ -826,7 +826,8 @@ gBattleAnims_General::
 	.4byte General_SlideOffScreen           @ B_ANIM_SLIDE_OFFSCREEN
 	.4byte General_RestoreBg                @ B_ANIM_RESTORE_BG
 	.4byte General_TotemFlare               @ B_ANIM_TOTEM_FLARE
-        .4byte General_DreamFog                 @ B_ANIM_DREAM_FOG_CONTINUES:
+        .4byte General_DreamFog                 @ B_ANIM_DREAM_FOG_CONTINUES
+        .4byte General_Darkness                 @ B_ANIM_DARKNESS_CONTINUES
 
 	.align 2
 gBattleAnims_Special::
@@ -24423,6 +24424,14 @@ General_TotemFlare::
 
 General_DreamFog:
 	goto Move_MIST
+
+General_Darkness:
+	createvisualtask AnimTask_BlendBattleAnimPal, 5, 1, 0, 0, 16, RGB_BLACK
+	waitforvisualfinish
+	delay 20
+	createvisualtask AnimTask_BlendBattleAnimPal, 5, 1, 0, 16, 0, RGB_BLACK
+	waitforvisualfinish
+	end
 
 RainbowEndureEffect:
 	launchtemplate gBlueEndureEnergySpriteTemplate 0x2 0x4 0x0 0xffe8 0x1a 0x2

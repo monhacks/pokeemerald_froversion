@@ -1291,7 +1291,7 @@
 #define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
 #define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
 #define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag
-#define FLAG_UNUSED_0x4DE                                           0x4DE // Unused Flag
+#define FLAG_BATTLE_DARKNESS                                        0x4DE // Automatic darkness
 #define FLAG_BATTLE_DREAM_FOG                                       0x4DF // Automatic dream fog
 #define FLAG_BATTLE_SANDSTORM                                       0x4E0 // Automatic sandstorm
 #define FLAG_BATTLE_RAIN                                            0x4E1 // Automatic rain
