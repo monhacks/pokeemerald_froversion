@@ -1341,6 +1341,7 @@ SummitCity_EventScript_HikerPathClear:
 
 SummitCity_EventScript_HikerBlockPathTrigger::
 	lock
+	faceplayer
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_SummitCity_PlayerFaceHiker
 	applymovement 17, Movement_SummitCity_HikerFacePlayer
 	waitmovement OBJ_EVENT_ID_PLAYER

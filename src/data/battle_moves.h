@@ -2317,11 +2317,11 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FLASH] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_4
-            .accuracy = 100,
+            .accuracy = 0,
         #else
-            .accuracy = 70,
+            .accuracy = 0,
         #endif
-        .effect = EFFECT_ACCURACY_DOWN,
+        .effect = EFFECT_FLASH,
         .power = 0,
         .type = TYPE_NORMAL,
         .pp = 20,

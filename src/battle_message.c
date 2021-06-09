@@ -695,6 +695,9 @@ static const u8 sText_UnlockedAbility[] = _("{B_ATK_NAME_WITH_PREFIX} unlocked {
 static const u8 sText_DreamFogPresent[] = _("A dreamy fog covers\nthe battlefield!");
 static const u8 sText_DreamFogYawn[] = _("{B_ATK_NAME_WITH_PREFIX}\nis drowsy!");
 static const u8 sText_DreamFogFellAsleep[] = _("{B_ATK_NAME_WITH_PREFIX}\nfell into a restful sleep!");
+static const u8 sText_ItIsDark[] = _("It is dark!");
+static const u8 sText_FlashLitUpDarkness[] = _("{B_ATK_NAME_WITH_PREFIX}'s Flash\ndispelled the darkness!");
+static const u8 sText_DarknessReturned[] = _("The darkness returned\nto the battlefield!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1253,6 +1256,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_DREAMFOGPRESENT - 12] = sText_DreamFogPresent,
     [STRINGID_DREAMFOGYAWN - 12] = sText_DreamFogYawn,
     [STRINGID_DREAMFOGFELLASLEEP - 12] = sText_DreamFogFellAsleep,
+    [STRINGID_ITISDARK - 12] = sText_ItIsDark,
+    [STRINGID_FLASHLITUPDARKNESS - 12] = sText_FlashLitUpDarkness,
+    [STRINGID_DARKNESSRETURNED - 12] = sText_DarknessReturned,
 };
 
 const u16 gTerrainStringIds[] =
@@ -1529,6 +1535,7 @@ const u16 gWeatherStartsStringIds[] =
     [WEATHER_UNDERWATER_BUBBLES] = STRINGID_ITISRAINING,
     [WEATHER_ABNORMAL]           = STRINGID_ITISRAINING,
     [WEATHER_DREAM_FOG]          = STRINGID_DREAMFOGPRESENT,
+    [WEATHER_DARKNESS]           = STRINGID_ITISDARK,
 };
 
 const u16 gInobedientStringIds[] =

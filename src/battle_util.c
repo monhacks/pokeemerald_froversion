@@ -1640,6 +1640,7 @@ enum
     ENDTURN_SUN,
     ENDTURN_HAIL,
     ENDTURN_DREAM_FOG,
+    ENDTURN_DARKNESS,
     ENDTURN_GRAVITY,
     ENDTURN_WATER_SPORT,
     ENDTURN_MUD_SPORT,
@@ -2005,6 +2006,29 @@ u8 DoFieldEndTurnEffects(void)
                 gBattleStruct->turnCountersTracker++;
                 gBattleStruct->turnEffectsBattlerId = 0;
             }
+            break;
+        case ENDTURN_DARKNESS:
+            // NOTE: This is after other weather effects so that their
+            // "fade" message prints and is immediately followed by the
+            // darkness returning message.
+            if (gBattleWeather & WEATHER_DARKNESS_ANY)
+            {
+                gBattlescriptCurrInstr = BattleScript_DarknessContinues;
+                BattleScriptExecute(gBattlescriptCurrInstr);
+                effect++;
+            }
+            else if (gBattleStruct->darknessTimer > 0)
+            {
+                gBattleStruct->darknessTimer--;
+                if (gBattleStruct->darknessTimer == 0)
+                {
+                    gBattleWeather = WEATHER_DARKNESS_ANY;
+                    gBattlescriptCurrInstr = BattleScript_DarknessReturns;
+                    BattleScriptExecute(gBattlescriptCurrInstr);
+                    effect++;
+                }
+            }
+            gBattleStruct->turnCountersTracker++;
             break;
         case ENDTURN_TRICK_ROOM:
             if (gFieldStatuses & STATUS_FIELD_TRICK_ROOM && --gFieldTimers.trickRoomTimer == 0)
@@ -3497,7 +3521,13 @@ static const u16 sWeatherFlagsInfo[][3] =
 
 bool32 TryChangeBattleWeather(u8 battler, u32 weatherEnumId, bool32 viaAbility)
 {
-    if (viaAbility && B_ABILITY_WEATHER <= GEN_5
+    bool32 wasDarkness = gBattleWeather & WEATHER_DARKNESS_ANY;
+
+    if (weatherEnumId != ENUM_WEATHER_SUN && wasDarkness)
+    {
+        return FALSE;
+    }
+    else if (viaAbility && B_ABILITY_WEATHER <= GEN_5
         && !(gBattleWeather & sWeatherFlagsInfo[weatherEnumId][1]))
     {
         gBattleWeather = (sWeatherFlagsInfo[weatherEnumId][0] | sWeatherFlagsInfo[weatherEnumId][1]);
@@ -3506,10 +3536,22 @@ bool32 TryChangeBattleWeather(u8 battler, u32 weatherEnumId, bool32 viaAbility)
     else if (!(gBattleWeather & (sWeatherFlagsInfo[weatherEnumId][0] | sWeatherFlagsInfo[weatherEnumId][1])))
     {
         gBattleWeather = (sWeatherFlagsInfo[weatherEnumId][0]);
-        if (GetBattlerHoldEffect(battler, TRUE) == sWeatherFlagsInfo[weatherEnumId][2])
+        if (weatherEnumId != ENUM_WEATHER_SUN && gBattleStruct->darknessTimer > 0)
+        {
+            gWishFutureKnock.weatherDuration = 1;
+            gBattleStruct->darknessTimer = 1;
+        }
+        else if (GetBattlerHoldEffect(battler, TRUE) == sWeatherFlagsInfo[weatherEnumId][2])
+        {
             gWishFutureKnock.weatherDuration = 8;
+        }
         else
+        {
             gWishFutureKnock.weatherDuration = 5;
+        }
+
+        if (wasDarkness)
+            gBattleStruct->darknessTimer = gWishFutureKnock.weatherDuration;
 
         return TRUE;
     }
@@ -3675,16 +3717,18 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!(gBattleTypeFlags & BATTLE_TYPE_RECORDED))
             {
                 weather = GetCurrentWeather();
-                    
-                    if (FlagGet(FLAG_UNUSED_0x4E2))
-                        weather = WEATHER_DROUGHT;
-                    else if (FlagGet(FLAG_UNUSED_0x4E1))
-                        weather = WEATHER_DOWNPOUR;
-                    else if (FlagGet(FLAG_UNUSED_0x4E0))
-                        weather = WEATHER_SANDSTORM;
-                    else if (FlagGet(FLAG_UNUSED_0x4DF))
-                        weather = WEATHER_DREAM_FOG;
-                    
+
+                if (FlagGet(FLAG_BATTLE_SUN))
+                    weather = WEATHER_DROUGHT;
+                else if (FlagGet(FLAG_BATTLE_RAIN))
+                    weather = WEATHER_DOWNPOUR;
+                else if (FlagGet(FLAG_BATTLE_SANDSTORM))
+                    weather = WEATHER_SANDSTORM;
+                else if (FlagGet(FLAG_BATTLE_DREAM_FOG))
+                    weather = WEATHER_DREAM_FOG;
+                else if (FlagGet(FLAG_BATTLE_DARKNESS))
+                    weather = WEATHER_DARKNESS;
+
                 switch (weather)
                 {
                 case WEATHER_RAIN:
@@ -3731,12 +3775,20 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                         gBattleStruct->dreamFogTimers[i] = 1;
                     effect++;
                     break;
+                case WEATHER_DARKNESS:
+                    gBattleWeather = WEATHER_DARKNESS_ANY;
+                    gBattleScripting.animArg1 = B_ANIM_DARKNESS_CONTINUES;
+                    effect++;
+                    break;
                 }
             }
             if (effect)
             {
                 gBattleCommunication[MULTISTRING_CHOOSER] = weather;
-                BattleScriptPushCursorAndCallback(BattleScript_OverworldWeatherStarts);
+                if (weather == WEATHER_DARKNESS)
+                    BattleScriptPushCursorAndCallback(BattleScript_OverworldWeatherStarts1);
+                else
+                    BattleScriptPushCursorAndCallback(BattleScript_OverworldWeatherStarts);
             }
             break;
         case ABILITY_IMPOSTER:

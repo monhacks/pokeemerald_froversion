@@ -1566,6 +1566,9 @@ u32 GetTotalAccuracy(u32 battlerAtk, u32 battlerDef, u32 move)
     else if (atkHoldEffect == HOLD_EFFECT_ZOOM_LENS && GetBattlerTurnOrderNum(battlerAtk) > GetBattlerTurnOrderNum(battlerDef));
         calc = (calc * (100 + atkParam)) / 100;
 
+    if (gBattleWeather & WEATHER_DARKNESS_ANY && !IS_BATTLER_OF_TYPE(battlerAtk, TYPE_DARK))
+        calc = (calc * 25) / 100;
+
     return calc;
 }
 
@@ -8345,8 +8348,17 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr += 7;    // exit if loop failed (failsafe)
         }
         return;
+    case VARIOUS_FLASH_DARKNESS:
+        if (gBattleWeather & WEATHER_DARKNESS_ANY)
+        {
+            gBattleStruct->darknessTimer = 3;
+            gBattleWeather &= ~WEATHER_DARKNESS_ANY;
+            BattleScriptPush(gBattlescriptCurrInstr + 3);
+            gBattlescriptCurrInstr = BattleScript_FlashDarkness;
+            return;
+        }
+        break;
     }
-    
 
     gBattlescriptCurrInstr += 3;
 }

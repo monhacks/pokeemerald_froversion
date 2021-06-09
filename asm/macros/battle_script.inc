@@ -1769,6 +1769,10 @@
 	various BS_ATTACKER, VARIOUS_TRY_UNLOCK_ABILITY
 	.4byte \ptr
 	.endm
+
+	.macro flashdarkness
+	various BS_ATTACKER, VARIOUS_FLASH_DARKNESS
+	.endm
 	
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
