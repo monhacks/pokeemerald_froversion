@@ -6975,7 +6975,7 @@ BattleScript_SpaceShiftActivates::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNTWISTEDDIMENSIONS
 	waitstate
-	playanimation BS_BATTLER_0, BG_TRICK_ROOM, NULL
+	playanimation BS_ATTACKER, B_ANIM_TRICK_ROOM, NULL
 	end3
 
 BattleScript_MistySurgeActivates::
@@ -7879,3 +7879,22 @@ BattleScript_AnnounceAirLockCloudNine::
 	waitmessage 0x40
 	call BattleScript_WeatherFormChanges
 	end3
+
+BattleScript_AnnounceRoulette::
+	printfromtable gRouletteStringIds
+	waitmessage 0x40
+	end2
+
+BattleScript_Haunting::
+	printstring STRINGID_ACTIVEFAINTED
+	waitmessage 0x40
+	handleformchange BS_SCRIPTING, 0
+	handleformchange BS_SCRIPTING, 1
+	playanimation BS_SCRIPTING, B_ANIM_FORM_CHANGE, NULL
+	waitanimation
+	handleformchange BS_SCRIPTING, 2
+	healthbarupdate BS_SCRIPTING
+	datahpupdate BS_SCRIPTING
+	printstring STRINGID_HAUNTING
+	waitmessage 0x40
+	return

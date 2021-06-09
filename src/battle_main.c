@@ -4405,7 +4405,7 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
             else if (speedBattler1 < speedBattler2)
             {
                 // battler2 has more speed
-                if (gFieldStatuses & STATUS_FIELD_TRICK_ROOM)
+                if (gFieldStatuses & STATUS_FIELD_TRICK_ROOM || gBattleStruct->rouletteEffect == 5)
                     strikesFirst = 0;
                 else
                     strikesFirst = 1;
@@ -4413,7 +4413,7 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
             else
             {
                 // battler1 has more speed
-                if (gFieldStatuses & STATUS_FIELD_TRICK_ROOM)
+                if (gFieldStatuses & STATUS_FIELD_TRICK_ROOM || gBattleStruct->rouletteEffect == 5)
                     strikesFirst = 1;
                 else
                     strikesFirst = 0;
@@ -5046,6 +5046,7 @@ void SetTypeBeforeUsingMove(u16 move, u8 battlerAtk)
 
     attackerAbility = GetBattlerAbility(battlerAtk);
     GET_MOVE_TYPE(move, moveType);
+
     if ((gFieldStatuses & STATUS_FIELD_ION_DELUGE && moveType == TYPE_NORMAL)
         || gStatuses3[battlerAtk] & STATUS3_ELECTRIFIED)
     {
@@ -5087,6 +5088,11 @@ void SetTypeBeforeUsingMove(u16 move, u8 battlerAtk)
     {
         gSpecialStatuses[battlerAtk].gemParam = GetBattlerHoldEffectParam(battlerAtk);
         gSpecialStatuses[battlerAtk].gemBoost = 1;
+    }
+
+    if (gBattleStruct->rouletteEffect == 3)
+    {
+        gBattleStruct->dynamicMoveType = 0x80 | TYPE_NORMAL;
     }
 }
 

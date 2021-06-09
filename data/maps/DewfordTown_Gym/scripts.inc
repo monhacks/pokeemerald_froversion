@@ -146,7 +146,7 @@ DewfordTown_Gym_EventScript_StopCountingTrainers:: @ 81FC7C1
 DewfordTown_Gym_EventScript_Brawly:: @ 81FC7C2
 	// setweather WEATHER_DROUGHT
 	// doweather
-	setflag	FLAG_BATTLE_DARKNESS
+	setflag	FLAG_BATTLE_SUN
 	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
@@ -160,7 +160,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated:: @ 81FC7F7
 	call DewfordTown_Gym_EventScript_AnimateFlashFullBrightness
 	message DewfordTown_Gym_Text_ReceivedKnuckleBadge
 	waitmessage
-	clearflag FLAG_BATTLE_DARKNESS
+	clearflag FLAG_BATTLE_SUN
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_DEWFORD_GYM

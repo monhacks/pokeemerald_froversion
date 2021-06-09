@@ -544,6 +544,7 @@ struct BattleStruct
     u16 changedSpecies[PARTY_SIZE]; // For Zygarde or future forms when multiple mons can change into the same pokemon.
     u8 dreamFogTimers[MAX_BATTLERS_COUNT];
     u8 darknessTimer;
+    u8 rouletteEffect;
 };
 
 #define GET_MOVE_TYPE(move, typeArg)                        \

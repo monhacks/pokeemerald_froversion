@@ -828,6 +828,7 @@ gBattleAnims_General::
 	.4byte General_TotemFlare               @ B_ANIM_TOTEM_FLARE
         .4byte General_DreamFog                 @ B_ANIM_DREAM_FOG_CONTINUES
         .4byte General_Darkness                 @ B_ANIM_DARKNESS_CONTINUES
+		.4byte General_Space_Shift 				@B_ANIM_TRICK_ROOM
 
 	.align 2
 gBattleAnims_Special::
@@ -24172,6 +24173,9 @@ General_Sandstorm:
 
 General_Hail:
 	goto Move_HAIL
+
+General_Space_Shift:
+	goto Move_TRICK_ROOM
 
 General_LeechSeedDrain:
 	createvisualtask AnimTask_GetBattlersFromArg, 5
