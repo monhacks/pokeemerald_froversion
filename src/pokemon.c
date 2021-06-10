@@ -47,6 +47,11 @@
 #include "constants/trainers.h"
 #include "constants/battle_config.h"
 
+typedef char PokemonSubstruct0SizeIs12Bytes[sizeof(struct PokemonSubstruct0) == 12 ? 0 : -1];
+typedef char PokemonSubstruct1SizeIs12Bytes[sizeof(struct PokemonSubstruct1) == 12 ? 0 : -1];
+typedef char PokemonSubstruct2SizeIs12Bytes[sizeof(struct PokemonSubstruct2) == 12 ? 0 : -1];
+typedef char PokemonSubstruct3SizeIs12Bytes[sizeof(struct PokemonSubstruct3) == 12 ? 0 : -1];
+
 struct SpeciesItem
 {
     u16 species;
