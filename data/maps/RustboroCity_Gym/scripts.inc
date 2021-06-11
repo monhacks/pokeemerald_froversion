@@ -110,21 +110,21 @@ RustboroCity_Gym_EventScript_RegisterRoxanne:: @ 821307B
 RustboroCity_Gym_Text_GymGuideAdvice: @ 821309D
 	.string "Yo, how's it going?\p"
 	.string "Listen, my friend!\n"
-	.string "Would you like to become the CHAMPION?\p"
-	.string "I'm no TRAINER, not me, but I can\n"
+	.string "Would you like to become the Champion?\p"
+	.string "I'm no Champion, not me, but I can\n"
 	.string "sure give you winning advice.\p"
 	.string "That's settled, then! We'll aim for the\n"
-	.string "Pokémon CHAMPIONSHIP together!\p"
-	.string "It's your job as a TRAINER to collect\n"
-	.string "GYM BADGES, am I right?\p"
-	.string "But Gym LeaderS aren't pushovers!\p"
+	.string "Pokémon Championship together!\p"
+	.string "It's your job as a Champion to collect\n"
+	.string "Gym Badges, am I right?\p"
+	.string "But Gym Leaders aren't pushovers!\p"
 	.string "And that's where I come in!\n"
 	.string "I'm here to provide expert advice!\p"
-	.string "Chad And Mark, the Gym Leader, is a user\n"
-	.string "of ROCK-type Pokémon.\p"
-	.string "The ROCK type is very durable, but\n"
-	.string "it can't stand WATER-type and\l"
-	.string "GRASS-type moves.\p"
+	.string "Chad And Mark, the Gym Leader's, are\n"
+	.string "users of Poison-type Pokémon.\p"
+	.string "The Poison type is very durable, but\n"
+	.string "it can't stand Rock-type and\l"
+	.string "Ground-type moves.\p"
 	.string "Come see me afterwards, if you beat\n"
 	.string "the Gym Leader.\p"
 	.string "Well, go for it!$"
@@ -133,23 +133,23 @@ RustboroCity_Gym_Text_GymGuidePostVictory: @ 82132E2
 	.string "Whoa! What a breathtaking victory!\n"
 	.string "My cheering must've worked!\p"
 	.string "Great!\n"
-	.string "Check your TRAINER CARD.\p"
+	.string "Check your Trainer Card.\p"
 	.string "The STONE BADGE you got should be\n"
 	.string "properly recorded on it.\p"
 	.string "In other words…\p"
 	.string "You've climbed the first step on\n"
-	.string "the stairs to the CHAMPIONSHIP!\p"
+	.string "the stairs to the Championship!\p"
 	.string "That's got to feel awesome!$"
 
 RustboroCity_Gym_Text_JoshIntro: @ 82133E9
-	.string "Don't take us GYM Trainers lightly!\n"
+	.string "Don't take us Gym Trainers lightly!\n"
 	.string "I'll show you why we're better!$"
 
 RustboroCity_Gym_Text_JoshDefeat: @ 821342D
 	.string "You were too good for me…$"
 
 RustboroCity_Gym_Text_JoshPostBattle: @ 8213447
-	.string "You haven't seen anything of the ROCK\n"
+	.string "You haven't seen anything of the Poison\n"
 	.string "type's terrifying power!$"
 
 RustboroCity_Gym_Text_TommyIntro: @ 8213486
@@ -160,14 +160,14 @@ RustboroCity_Gym_Text_TommyDefeat: @ 82134C6
 	.string "Wow! You've got some potential!$"
 
 RustboroCity_Gym_Text_TommyPostBattle: @ 82134E6
-	.string "Chad And Mark is stronger than me by\n"
+	.string "Chad And Mark are stronger than me by\n"
 	.string "several times.\p"
 	.string "You'd better be on your guard!$"
 
 RustboroCity_Gym_Text_MarcIntro: @ 8213533
 	.string "We might be in the middle of town,\n"
 	.string "but so what?\p"
-	.string "My ROCK Pokémon need room to\n"
+	.string "My Poison Pokémon need room to\n"
 	.string "rampage!$"
 
 RustboroCity_Gym_Text_MarcDefeat: @ 8213589
@@ -175,9 +175,9 @@ RustboroCity_Gym_Text_MarcDefeat: @ 8213589
 	.string "Our challenger is one feisty customer!$"
 
 RustboroCity_Gym_Text_MarcPostBattle: @ 82135C0
-	.string "I have to hand it to our LEADER.\p"
-	.string "It took smarts and sense for her to\n"
-	.string "pick the ROCK type at her young age.$"
+	.string "I have to hand it to our Leaders.\p"
+	.string "It took smarts and sense for them to\n"
+	.string "pick the Poison type at her young age.$"
 
 RustboroCity_Gym_Text_RoxanneIntro: @ 821362A
 	.string "Since you've been grounded we have\n"
@@ -187,15 +187,13 @@ RustboroCity_Gym_Text_RoxanneIntro: @ 821362A
 	.string "Let's see what you've got buddy!$"
 
 RustboroCity_Gym_Text_RoxanneDefeat: @ 821370B
-	.string "So…\n"
-	.string "I lost…\p"
-	.string "It seems that I still have much more\n"
-	.string "to learn…\p"
-	.string "I understand.\p"
-	.string "The Pokémon League's rules state\n"
+	.string "Chad: So…\n"
+	.string "We lost…\p"
+	.string "Mark: That was INTERESTING!!!!\p"
+	.string "Chad: The Pokémon League's rules state\n"
 	.string "that Trainers are to be given this\l"
 	.string "if they defeat a Gym Leader.\p"
-	.string "Please accept the official Pokémon\n"
+	.string "Mark: Please accept the official Pokémon\n"
 	.string "League STONE BADGE.$"
 
 RustboroCity_Gym_Text_ReceivedStoneBadge: @ 82137EC
@@ -219,29 +217,29 @@ RustboroCity_Gym_Text_ExplainRockTomb: @ 82138B1
 
 RustboroCity_Gym_Text_RoxannePostBattle: @ 82139A7
 	.string "Since you are so strong, you should\n"
-	.string "challenge other Gym LeaderS.\p"
+	.string "challenge other Gym Leaders.\p"
 	.string "By battling many Trainers, you should\n"
 	.string "learn many things.$"
 
 RustboroCity_Gym_Text_GymStatue: @ 8213A21
-	.string "RUSTBORO CITY Pokémon GYM$"
+	.string "Summit City Pokémon Gym$"
 
 RustboroCity_Gym_Text_GymStatueCertified: @ 8213A3B
-	.string "RUSTBORO CITY Pokémon GYM\p"
-	.string "Chad'S CERTIFIED Trainers:\n"
+	.string "Summit City Pokémon Gym\p"
+	.string "Chad's Certified Trainers:\n"
 	.string "{PLAYER}$"
 
 RustboroCity_Gym_Text_RoxanneRegisterCall: @ 8213A76
 	.string "… … … … … …\n"
 	.string "… … … … … Beep!\p"
 	.string "Chad: Oh, hello, {PLAYER}?\n"
-	.string "This is Chad of RUSTBORO CITY.\p"
-	.string "I heard from BRAWLY that you're\n"
+	.string "This is Chad of Summit City.\p"
+	.string "I heard from Wes that you're\n"
 	.string "moving up through the ranks of\l"
 	.string "Trainers at an incredible clip.\p"
 	.string "Well, I'd rather not think that\n"
 	.string "I can't beat you.\p"
-	.string "I promise, I will shape up my GYM\n"
+	.string "I promise, I will shape up my Gym\n"
 	.string "so that you may challenge us again.\p"
 	.string "I hope you'll be looking forward to\n"
 	.string "that occasion as much as me!\p"
@@ -262,7 +260,7 @@ RustboroCity_Gym_Text_RoxannePreRematch: @ 8213C2F
 
 RustboroCity_Gym_Text_RoxanneRematchDefeat: @ 8213CF9
 	.string "Grr…\n"
-	.string "Again, I have lost…$"
+	.string "Again, we have lost…$"
 
 RustboroCity_Gym_Text_RoxannePostRematch: @ 8213D12
 	.string "Chad And Mark: I still have much to learn\n"
