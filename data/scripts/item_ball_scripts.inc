@@ -374,8 +374,8 @@ FieryPath_EventScript_ItemFireStone:: @ 8291191
 	finditem ITEM_FIRE_STONE
 	end
 
-FieryPath_EventScript_ItemTM06:: @ 829119E
-	finditem ITEM_TM06
+FieryPath_EventScript_ItemTM39:: @ 829119E
+	finditem ITEM_TM39
 	end
 
 MeteorFalls_1F_1R_EventScript_ItemTM23:: @ 82911AB
@@ -458,8 +458,8 @@ AbandonedShip_HiddenFloorRooms_EventScript_ItemTM18:: @ 82912A2
 	finditem ITEM_TM18
 	end
 
-ScorchedSlab_EventScript_ItemTM11:: @ 82912AF
-	finditem ITEM_TM11
+ScorchedSlab_EventScript_ItemTM08:: @ 82912AF
+	finditem ITEM_TM08
 	end
 
 SafariZone_Northwest_EventScript_ItemTM22:: @ 82912BC

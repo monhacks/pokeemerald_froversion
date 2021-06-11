@@ -147,11 +147,13 @@ DewfordTown_Gym_EventScript_Brawly:: @ 81FC7C2
 	// setweather WEATHER_DROUGHT
 	// doweather
 	setflag	FLAG_BATTLE_SUN
+	setvar VAR_MUGSHOT_ID, MUGSHOT_WES_THOMPSON
 	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
+	clearflag FLAG_BATTLE_SUN
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq DewfordTown_Gym_EventScript_BrawlyRematch
-	goto_if_unset FLAG_RECEIVED_TM08, DewfordTown_Gym_EventScript_GiveBulkUp2
+	goto_if_unset FLAG_RECEIVED_TM11, DewfordTown_Gym_EventScript_GiveBulkUp2
 	msgbox DewfordTown_Gym_Text_BrawlyPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -185,19 +187,19 @@ DewfordTown_Gym_EventScript_BrawlyDefeated:: @ 81FC7F7
 	end
 
 DewfordTown_Gym_EventScript_GiveBulkUp:: @ 81FC855
-	giveitem ITEM_TM08
+	giveitem ITEM_TM11
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_BagIsFull
 	msgbox DewfordTown_Gym_Text_ExplainBulkUp, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_TM08
+	setflag FLAG_RECEIVED_TM11
 	return
 
 DewfordTown_Gym_EventScript_GiveBulkUp2: @ 81FC878
-	giveitem ITEM_TM08
+	giveitem ITEM_TM11
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	msgbox DewfordTown_Gym_Text_ExplainBulkUp, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_TM08
+	setflag FLAG_RECEIVED_TM11
 	release
 	end
 
@@ -304,7 +306,7 @@ DewfordTown_Gym_EventScript_GymStatue:: @ 81FC9CC
 DewfordTown_Gym_Text_GymGuideAdvice: @ 81FC9D6
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
-	.string "DEWFORD's GYM LEADER BRAWLY commands\n"
+	.string "DEWFORD's Gym Leader BRAWLY commands\n"
 	.string "FIGHTING-type POKéMON.\p"
 	.string "Going against him with NORMAL-type\n"
 	.string "POKéMON is asking for trouble.\p"
@@ -344,7 +346,7 @@ DewfordTown_Gym_Text_JocelynDefeat: @ 81FCC45
 DewfordTown_Gym_Text_JocelynPostBattle: @ 81FCC6B
 	.string "I'm not going to waste this loss.\n"
 	.string "I'll use it to motivate me to train!\p"
-	.string "One day I'll become a GYM LEADER…\p"
+	.string "One day I'll become a Gym Leader…\p"
 	.string "No, I'll become the POKéMON LEAGUE\n"
 	.string "CHAMPION!$"
 
@@ -384,7 +386,7 @@ DewfordTown_Gym_Text_BrendenDefeat: @ 81FCE75
 
 DewfordTown_Gym_Text_BrendenPostBattle: @ 81FCEAB
 	.string "Oh, aye! You're worthy of seeing\n"
-	.string "our GYM LEADER.$"
+	.string "our Gym Leader.$"
 
 DewfordTown_Gym_Text_CristianIntro: @ 81FCEDC
 	.string "If you mean to pass, it has to be\n"
@@ -399,8 +401,8 @@ DewfordTown_Gym_Text_CristianPostBattle: @ 81FCF26
 	.string "Go after that BADGE!$"
 
 DewfordTown_Gym_Text_BrawlyIntro: @ 81FCF44
-	.string "I'm BRAWLY!\n"
-	.string "DEWFORD's GYM LEADER!\p"
+	.string "I'm Wess!\n"
+	.string "Dewfords's Gym Leader!\p"
 	.string "I've been churned in the rough waves\n"
 	.string "of these parts, and I've grown tough\l"
 	.string "in the pitch-black cave!\p"
@@ -412,11 +414,11 @@ DewfordTown_Gym_Text_BrawlyDefeat: @ 81FD008
 	.string "splash than I expected!\p"
 	.string "You swamped me!\p"
 	.string "Okay, you've got me.\n"
-	.string "Take this GYM BADGE!$"
+	.string "Take this Gym Badge!$"
 
 DewfordTown_Gym_Text_ReceivedKnuckleBadge: @ 81FD07D
-	.string "{PLAYER} received the KNUCKLE BADGE\n"
-	.string "from BRAWLY.$"
+	.string "{PLAYER} received the Strike Badge\n"
+	.string "from Wesss.$"
 
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis: @ 81FD0A8
 	.string "The KNUCKLE BADGE makes all POKéMON\n"
@@ -428,13 +430,13 @@ DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis: @ 81FD0A8
 	.string "MACHINE, too.$"
 
 DewfordTown_Gym_Text_ExplainBulkUp: @ 81FD181
-	.string "That TM08 contains BULK UP.\p"
-	.string "It's a move that raises both ATTACK\n"
-	.string "and DEFENSE stats.\p"
-	.string "… … … … … …$"
+	.string "That TM11 contains Sunny Day.\p"
+	.string "It's a move that makes the field\n"
+	.string "sunny to power up fire moves and\l"
+	.string "weaken water moves.$"
 
 DewfordTown_Gym_Text_RegisteredBrawly: @ 81FD1E0
-	.string "Registered GYM LEADER BRAWLY\n"
+	.string "Registered Gym Leader Wesss\n"
 	.string "in the POKéNAV.$"
 
 DewfordTown_Gym_Text_BrawlyPostBattle: @ 81FD20D
