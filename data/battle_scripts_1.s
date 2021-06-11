@@ -2100,6 +2100,7 @@ BattleScript_HitFromAtkAnimation::
 	waitmessage 0x40
 	seteffectwithchance
 	tryfaintmon BS_TARGET, FALSE, NULL
+	trysteelgymrecharge
 BattleScript_MoveEnd::
 	moveendall
 	end

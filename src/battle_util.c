@@ -7642,6 +7642,9 @@ static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 move
     if (gBattleMoves[move].flags & FLAG_DMG_IN_AIR      && gStatuses3[battlerDef] & STATUS3_ON_AIR)
         MulModifier(&finalModifier, UQ_4_12(2.0));
 
+    if (FlagGet(FLAG_BATTLE_RECHARGE))
+        MulModifier(&finalModifier, UQ_4_12(1.75));
+
     dmg = ApplyModifier(finalModifier, dmg);
     if (dmg == 0)
         dmg = 1;

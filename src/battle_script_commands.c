@@ -8396,6 +8396,14 @@ static void Cmd_various(void)
     case VARIOUS_POST_PRODUCTION_MOVE:
         gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];
         return;
+    case VARIOUS_STEEL_GYM_RECHARGE:
+        if (FlagGet(FLAG_BATTLE_RECHARGE))
+        {
+            gBattleMons[gActiveBattler].status2 |= STATUS2_RECHARGE;
+            gDisableStructs[gActiveBattler].rechargeTimer = 2;
+            gLockedMoves[gActiveBattler] = gCurrentMove;
+        }
+        break;
     }
 
     gBattlescriptCurrInstr += 3;

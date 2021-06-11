@@ -1782,6 +1782,10 @@
 	various BS_ATTACKER, VARIOUS_POST_PRODUCTION_MOVE
 	.endm
 
+	.macro trysteelgymrecharge
+	various BS_ATTACKER, VARIOUS_STEEL_GYM_RECHARGE
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER \stat | \stages << 3 | \down << 7
