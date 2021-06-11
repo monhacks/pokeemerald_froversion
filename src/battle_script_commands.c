@@ -5807,6 +5807,24 @@ static void Cmd_switchineffects(void)
     gHitMarker &= ~(HITMARKER_FAINTED(gActiveBattler));
     gSpecialStatuses[gActiveBattler].flag40 = 0;
 
+    if (!(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_POISON_FIELD_DAMAGED)
+     && FlagGet(FLAG_BATTLE_POISON_FIELD))
+    {
+        gSideStatuses[GetBattlerSide(gActiveBattler)] |= SIDE_STATUS_POISON_FIELD_DAMAGED;
+        if (!(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
+            && GetBattlerAbility(gActiveBattler) != ABILITY_IMMUNITY
+            && !(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SAFEGUARD))
+        {
+            gBattleMons[gActiveBattler].status1 |= STATUS1_POISON;
+            BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+            MarkBattlerForControllerExec(gActiveBattler);
+            gBattleScripting.battler = gActiveBattler;
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_PoisonFieldPoisoned;
+            return;
+        }
+    }
+
     if (!(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES_DAMAGED)
         && (gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES)
         && GetBattlerAbility(gActiveBattler) != ABILITY_MAGIC_GUARD
@@ -5893,7 +5911,7 @@ static void Cmd_switchineffects(void)
             || AbilityBattleEffects(ABILITYEFFECT_FORECAST, 0, 0, 0, 0))
             return;
 
-        gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~(SIDE_STATUS_SPIKES_DAMAGED | SIDE_STATUS_TOXIC_SPIKES_DAMAGED | SIDE_STATUS_STEALTH_ROCK_DAMAGED | SIDE_STATUS_STICKY_WEB_DAMAGED);
+        gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~(SIDE_STATUS_SPIKES_DAMAGED | SIDE_STATUS_TOXIC_SPIKES_DAMAGED | SIDE_STATUS_STEALTH_ROCK_DAMAGED | SIDE_STATUS_STICKY_WEB_DAMAGED | SIDE_STATUS_POISON_FIELD_DAMAGED);
 
         for (i = 0; i < gBattlersCount; i++)
         {

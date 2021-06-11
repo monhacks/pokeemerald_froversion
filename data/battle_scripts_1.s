@@ -5483,6 +5483,11 @@ BattleScript_OverworldWeatherStarts1::
 	playanimation2 BS_ATTACKER, sB_ANIM_ARG1, NULL
 	end3
 
+BattleScript_PoisonFieldStarts::
+	printstring STRINGID_POISONFIELDSTARTS
+	waitmessage 0x40
+	end3
+
 BattleScript_SideStatusWoreOff::
 	printstring STRINGID_PKMNSXWOREOFF
 	waitmessage 0x40
@@ -5824,6 +5829,22 @@ BattleScript_StickyWebOnSwitchInPrintStatMsg:
 BattleScript_StickyWebOnSwitchInEnd:
 	restoretarget
 	return
+
+BattleScript_PoisonFieldPoisoned::
+	printstring STRINGID_POISONFIELDSWITCHIN
+	waitmessage 0x40
+	statusanimation BS_SCRIPTING
+	updatestatusicon BS_SCRIPTING
+	waitstate
+	return
+
+BattleScript_PoisonFieldPoisonedEnd3::
+	printstring STRINGID_POISONFIELDSWITCHIN
+	waitmessage 0x40
+	statusanimation BS_SCRIPTING
+	updatestatusicon BS_SCRIPTING
+	waitstate
+	end3
 
 BattleScript_PerishSongTakesLife::
 	printstring STRINGID_PKMNPERISHCOUNTFELL
@@ -6378,6 +6399,15 @@ BattleScript_DoTurnDmg:
 	tryfaintmon BS_ATTACKER, FALSE, NULL
 	atk24 BattleScript_DoTurnDmgEnd
 BattleScript_DoTurnDmgEnd:
+	end2
+
+BattleScript_PoisonTurnHeal::
+	printstring STRINGID_POISONHEALHPUP
+	waitmessage 0x40
+	statusanimation BS_ATTACKER
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
 	end2
 
 BattleScript_PoisonHealActivates::
@@ -7904,3 +7934,8 @@ BattleScript_PostProduction::
 	postproductionpopup
 	pause 40
 	postproductionmove
+
+BattleScript_PoisonFieldIntensifies::
+	printstring STRINGID_POISONFIELDINTENSIFIES
+	waitmessage 0x40
+	end2

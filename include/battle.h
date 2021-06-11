@@ -545,6 +545,9 @@ struct BattleStruct
     u8 dreamFogTimers[MAX_BATTLERS_COUNT];
     u8 darknessTimer;
     u8 rouletteEffect;
+    u8 poisonFieldTimer;
+    u8 poisonFieldIntensity;
+    u8 poisonFieldSwitchInCounter;
 };
 
 #define GET_MOVE_TYPE(move, typeArg)                        \

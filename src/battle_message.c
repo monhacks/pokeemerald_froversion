@@ -706,6 +706,9 @@ static const u8 sText_Roulette5[] = _("Slower Pokémon move first!");
 static const u8 sText_Roulette6[] = _("Physical and Special switched!");
 static const u8 sText_ActiveFainted[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nfainted!");
 static const u8 sText_Haunting[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} changed form\nand returned to haunt {B_PLAYER_NAME}!");
+static const u8 sText_PoisonFieldStarts[] = _("The battlefield is filled\nwith poisonous fumes!");
+static const u8 sText_PoisonFieldSwitchIn[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nwas poisoned!");
+static const u8 sText_PoisonFieldIntensifies[] = _("The poisonous fumes intensify!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1275,6 +1278,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ROULETTE6 - 12] = sText_Roulette6,
     [STRINGID_ACTIVEFAINTED - 12] = sText_ActiveFainted,
     [STRINGID_HAUNTING - 12] = sText_Haunting,
+    [STRINGID_POISONFIELDSTARTS - 12] = sText_PoisonFieldStarts,
+    [STRINGID_POISONFIELDSWITCHIN - 12] = sText_PoisonFieldSwitchIn,
+    [STRINGID_POISONFIELDINTENSIFIES - 12] = sText_PoisonFieldIntensifies,
 };
 
 const u16 gTerrainStringIds[] =

@@ -1684,6 +1684,7 @@ enum
     ENDTURN_ION_DELUGE,
     ENDTURN_FAIRY_LOCK,
     ENDTURN_ROULETTE,
+    ENDTURN_POISON_FIELD,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -2174,6 +2175,19 @@ u8 DoFieldEndTurnEffects(void)
             }
             gBattleStruct->turnCountersTracker++;
             break;
+        case ENDTURN_POISON_FIELD:
+            if (FlagGet(FLAG_BATTLE_POISON_FIELD)
+             && gBattleStruct->poisonFieldIntensity < 15
+             && ++gBattleStruct->poisonFieldTimer == 3)
+            {
+                gBattleStruct->poisonFieldTimer = 0;
+                gBattleStruct->poisonFieldIntensity++;
+                gBattlescriptCurrInstr = BattleScript_PoisonFieldIntensifies;
+                BattleScriptExecute(gBattlescriptCurrInstr);
+                effect++;
+            }
+            gBattleStruct->turnCountersTracker++;
+            break;
         case ENDTURN_FIELD_COUNT:
             effect++;
             break;
@@ -2339,6 +2353,26 @@ u8 DoBattlerEndTurnEffects(void)
                             gBattleMoveDamage = 1;
                         gBattleMoveDamage *= -1;
                         BattleScriptExecute(BattleScript_PoisonHealActivates);
+                        effect++;
+                    }
+                }
+                else if (FlagGet(FLAG_BATTLE_POISON_FIELD))
+                {
+                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP * (gBattleStruct->poisonFieldIntensity + 1) / 16;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    if (IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_POISON))
+                    {
+                        gBattleMoveDamage *= -1;
+                        if (gBattleMons[gActiveBattler].hp != gBattleMons[gActiveBattler].maxHP)
+                        {
+                            BattleScriptExecute(BattleScript_PoisonTurnHeal);
+                            effect++;
+                        }
+                    }
+                    else
+                    {
+                        BattleScriptExecute(BattleScript_PoisonTurnDmg);
                         effect++;
                     }
                 }

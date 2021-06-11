@@ -1286,7 +1286,7 @@
 #define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
 #define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
 #define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
-#define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
+#define FLAG_BATTLE_POISON_FIELD                                    0x4D9 // Enable poison build-up
 #define FLAG_BATTLE_RECHARGE                                        0x4DA // Enable recharge effect for attacking moves
 #define FLAG_BATTLE_POST_PRODUCTION                                 0x4DB // Enable post-production effect
 #define FLAG_BATTLE_HAUNTING                                        0x4DC // Enable haunting

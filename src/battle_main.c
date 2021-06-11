@@ -3501,6 +3501,32 @@ static void TryDoEventsBeforeFirstTurn(void)
         return;
     }
 
+    if (FlagGet(FLAG_BATTLE_POISON_FIELD))
+    {
+        if (gBattleStruct->poisonFieldSwitchInCounter == 0)
+        {
+            gBattleStruct->poisonFieldSwitchInCounter++;
+            BattleScriptPushCursorAndCallback(BattleScript_PoisonFieldStarts);
+            return;
+        }
+
+        while (gBattleStruct->poisonFieldSwitchInCounter < gBattlersCount + 1)
+        {
+            gActiveBattler = gBattlerByTurnOrder[gBattleStruct->poisonFieldSwitchInCounter - 1];
+            gBattleStruct->poisonFieldSwitchInCounter++;
+            if (!(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
+                && GetBattlerAbility(gActiveBattler) != ABILITY_IMMUNITY)
+            {
+                gBattleMons[gActiveBattler].status1 |= STATUS1_POISON;
+                BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+                MarkBattlerForControllerExec(gActiveBattler);
+                gBattleScripting.battler = gActiveBattler;
+                BattleScriptPushCursorAndCallback(BattleScript_PoisonFieldPoisonedEnd3);
+                return;
+            }
+        }
+    }
+
     // Totem boosts
     for (i = 0; i < gBattlersCount; i++)
     {
