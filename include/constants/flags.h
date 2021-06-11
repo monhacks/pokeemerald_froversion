@@ -1288,7 +1288,7 @@
 #define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
 #define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
 #define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
-#define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
+#define FLAG_BATTLE_POST_PRODUCTION                                 0x4DB // Enable post-production effect
 #define FLAG_BATTLE_HAUNTING                                        0x4DC // Enable haunting
 #define FLAG_BATTLE_ROULETTE                                        0x4DD // Enable roulette
 #define FLAG_BATTLE_DARKNESS                                        0x4DE // Automatic darkness

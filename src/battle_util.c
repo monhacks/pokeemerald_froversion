@@ -63,9 +63,20 @@ static const u8 sPkblToEscapeFactor[][3] = {{0, 0, 0}, {3, 5, 0}, {2, 3, 0}, {1,
 static const u8 sGoNearCounterToCatchFactor[] = {4, 3, 2, 1};
 static const u8 sGoNearCounterToEscapeFactor[] = {4, 4, 4, 4};
 
+static const u16 sPostProductionMoves[PARTY_SIZE][3] =
+{
+    { MOVE_TACKLE, MOVE_GROWL, MOVE_HOWL },
+    { MOVE_STRUGGLE },
+    { MOVE_STRUGGLE },
+    { MOVE_STRUGGLE },
+    { MOVE_STRUGGLE },
+    { MOVE_STRUGGLE },
+};
+
 void HandleAction_UseMove(void)
 {
     u32 i, side, moveType, var = 4;
+    bool32 postProduction = FALSE;
 
     gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
     if (gBattleStruct->field_91 & gBitTable[gBattlerAttacker] || !IsBattlerAlive(gBattlerAttacker))
@@ -121,6 +132,21 @@ void HandleAction_UseMove(void)
     else
     {
         gCurrentMove = gChosenMove = gBattleMons[gBattlerAttacker].moves[gCurrMovePos];
+    }
+
+    if (FlagGet(FLAG_BATTLE_POST_PRODUCTION)
+     && GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER
+     && Random() % 100 < 10) // 10% chance.
+    {
+        u32 partyIndex = gBattlerPartyIndexes[GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)];
+        int i;
+        for (i = 0; i < NELEMS(sPostProductionMoves[partyIndex]); ++i)
+        {
+            if (sPostProductionMoves[partyIndex][i] == MOVE_NONE)
+                break;
+        }
+        gCurrentMove = sPostProductionMoves[partyIndex][Random() % i];
+        postProduction = TRUE;
     }
 
     if (gBattleMons[gBattlerAttacker].hp != 0)
@@ -307,6 +333,10 @@ void HandleAction_UseMove(void)
             gBattleCommunication[MULTISTRING_CHOOSER] = 4;
             gBattlescriptCurrInstr = BattleScript_MoveUsedLoafingAround;
         }
+    }
+    else if (postProduction)
+    {
+        gBattlescriptCurrInstr = BattleScript_PostProduction;
     }
     else
     {

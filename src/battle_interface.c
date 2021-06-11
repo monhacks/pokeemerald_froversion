@@ -1,6 +1,7 @@
 #include "global.h"
 #include "malloc.h"
 #include "battle.h"
+#include "battle_setup.h"
 #include "pokemon.h"
 #include "battle_controllers.h"
 #include "battle_interface.h"
@@ -2888,9 +2889,9 @@ static void PrintOnAbilityPopUp(const u8 *str, u8 *spriteTileData1, u8 *spriteTi
     }
 }
 
-static void PrintBattlerOnAbilityPopUp(u8 battlerId, u8 spriteId1, u8 spriteId2)
+static void PrintHeaderOnAbilityPopUp(const u8 *header, u8 spriteId1, u8 spriteId2)
 {
-    PrintOnAbilityPopUp(gBattleMons[battlerId].nickname,
+    PrintOnAbilityPopUp(header,
                         (void*)(OBJ_VRAM0) + (gSprites[spriteId1].oam.tileNum * 32),
                         (void*)(OBJ_VRAM0) + (gSprites[spriteId2].oam.tileNum * 32),
                         7, 0,
@@ -2898,9 +2899,9 @@ static void PrintBattlerOnAbilityPopUp(u8 battlerId, u8 spriteId1, u8 spriteId2)
                         2, 7, 1);
 }
 
-static void PrintAbilityOnAbilityPopUp(u32 ability, u8 spriteId1, u8 spriteId2)
+static void PrintTextOnAbilityPopUp(const u8 *text, u8 spriteId1, u8 spriteId2)
 {
-    PrintOnAbilityPopUp(gAbilityNames[ability],
+    PrintOnAbilityPopUp(text,
                         (void*)(OBJ_VRAM0) + (gSprites[spriteId1].oam.tileNum * 32) + 256,
                         (void*)(OBJ_VRAM0) + (gSprites[spriteId2].oam.tileNum * 32) + 256,
                         7, 1,
@@ -3010,7 +3011,7 @@ static void RestoreOverwrittenPixels(u8 *tiles)
 	Free(buffer);
 }
 
-void CreateAbilityPopUp(u8 battlerId, u32 ability, bool32 isDoubleBattle)
+static void CreateAbilityPopUp_(u8 battlerId, bool32 isDoubleBattle, const u8 *header, const u8 *text)
 {
     const s16 (*coords)[2];
     u8 spriteId1, spriteId2, battlerPosition, taskId;
@@ -3076,9 +3077,21 @@ void CreateAbilityPopUp(u8 battlerId, u32 ability, bool32 isDoubleBattle)
     StartSpriteAnim(&gSprites[spriteId1], 0);
     StartSpriteAnim(&gSprites[spriteId2], 0);
 
-    PrintBattlerOnAbilityPopUp(battlerId, spriteId1, spriteId2);
-    PrintAbilityOnAbilityPopUp(ability, spriteId1, spriteId2);
+    PrintHeaderOnAbilityPopUp(header, spriteId1, spriteId2);
+    PrintTextOnAbilityPopUp(text, spriteId1, spriteId2);
     RestoreOverwrittenPixels((void*)(OBJ_VRAM0) + (gSprites[spriteId1].oam.tileNum * 32));
+}
+
+void CreateAbilityPopUp(u8 battlerId, u32 ability, bool32 isDoubleBattle)
+{
+    CreateAbilityPopUp_(battlerId, isDoubleBattle, gBattleMons[battlerId].nickname, gAbilityNames[ability]);
+}
+
+static const u8 sText_PostProduction[] = _("Post Production");
+
+void CreatePostProductionPopUp(u8 battlerId, bool32 isDoubleBattle)
+{
+    CreateAbilityPopUp_(battlerId, isDoubleBattle, gTrainers[gTrainerBattleOpponent_A].trainerName, sText_PostProduction);
 }
 
 #define FRAMES_TO_WAIT 48

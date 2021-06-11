@@ -412,6 +412,7 @@ static void Overworld_ResetStateAfterWhiteOut(void)
         VarSet(VAR_SHOULD_END_ABNORMAL_WEATHER, 0);
         VarSet(VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_NONE);
     }
+    FlagClear(FLAG_BATTLE_POST_PRODUCTION);
     FlagClear(FLAG_BATTLE_HAUNTING);
     FlagClear(FLAG_BATTLE_ROULETTE);
     FlagClear(FLAG_BATTLE_DARKNESS);

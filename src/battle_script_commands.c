@@ -8390,6 +8390,12 @@ static void Cmd_various(void)
             return;
         }
         break;
+    case VARIOUS_POST_PRODUCTION_POPUP:
+        CreatePostProductionPopUp(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
+        break;
+    case VARIOUS_POST_PRODUCTION_MOVE:
+        gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];
+        return;
     }
 
     gBattlescriptCurrInstr += 3;

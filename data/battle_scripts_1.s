@@ -7898,3 +7898,8 @@ BattleScript_Haunting::
 	printstring STRINGID_HAUNTING
 	waitmessage 0x40
 	return
+
+BattleScript_PostProduction::
+	postproductionpopup
+	pause 40
+	postproductionmove
