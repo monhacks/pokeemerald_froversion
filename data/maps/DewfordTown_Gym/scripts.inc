@@ -147,9 +147,13 @@ DewfordTown_Gym_EventScript_Brawly:: @ 81FC7C2
 	// setweather WEATHER_DROUGHT
 	// doweather
 	setflag	FLAG_BATTLE_SUN
+	setflag FLAG_SYS_NO_BAG_USE
+	setflag FLAG_FORCE_BATTLE_STYLE_SET
 	setvar VAR_MUGSHOT_ID, MUGSHOT_WES_THOMPSON
 	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
 	clearflag FLAG_BATTLE_SUN
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq DewfordTown_Gym_EventScript_BrawlyRematch
@@ -163,6 +167,8 @@ DewfordTown_Gym_EventScript_BrawlyDefeated:: @ 81FC7F7
 	message DewfordTown_Gym_Text_ReceivedKnuckleBadge
 	waitmessage
 	clearflag FLAG_BATTLE_SUN
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_DEWFORD_GYM
