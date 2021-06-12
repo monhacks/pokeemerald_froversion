@@ -3,7 +3,9 @@ RustboroCity_Gym_MapScripts:: @ 8212F30
 
 RustboroCity_Gym_EventScript_Roxanne:: @ 8212F31
 	setvar VAR_MUGSHOT_ID, MUGSHOT_CHADANDMARK
+	setflag FLAG_BATTLE_POISON_FIELD
 	trainerbattle_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_MarkAndChadNeedTwoMons, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
+	clearflag FLAG_BATTLE_POISON_FIELD
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq RustboroCity_Gym_EventScript_RoxanneRematch
@@ -13,6 +15,7 @@ RustboroCity_Gym_EventScript_Roxanne:: @ 8212F31
 	end
 
 RustboroCity_Gym_EventScript_RoxanneDefeated:: @ 8212F66
+	clearflag FLAG_BATTLE_POISON_FIELD
 	message RustboroCity_Gym_Text_ReceivedStoneBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
