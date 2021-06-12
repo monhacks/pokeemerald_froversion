@@ -268,6 +268,7 @@ extern const u8 BattleScript_ToxicSpikesPoisoned[];
 extern const u8 BattleScript_ToxicSpikesAbsorbed[];
 extern const u8 BattleScript_StickyWebOnSwitchIn[];
 extern const u8 BattleScript_PoisonFieldPoisoned[];
+extern const u8 BattleScript_PoisonFieldPoisonedEnd2[];
 extern const u8 BattleScript_PoisonFieldPoisonedEnd3[];
 extern const u8 BattleScript_SolarPowerActivates[];
 extern const u8 BattleScript_CursedBodyActivates[];

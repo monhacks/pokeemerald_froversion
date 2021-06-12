@@ -5838,12 +5838,12 @@ BattleScript_PoisonFieldPoisoned::
 	waitstate
 	return
 
+BattleScript_PoisonFieldPoisonedEnd2::
+	call BattleScript_PoisonFieldPoisoned
+	end2
+
 BattleScript_PoisonFieldPoisonedEnd3::
-	printstring STRINGID_POISONFIELDSWITCHIN
-	waitmessage 0x40
-	statusanimation BS_SCRIPTING
-	updatestatusicon BS_SCRIPTING
-	waitstate
+	call BattleScript_PoisonFieldPoisoned
 	end3
 
 BattleScript_PerishSongTakesLife::

@@ -1685,6 +1685,7 @@ enum
     ENDTURN_FAIRY_LOCK,
     ENDTURN_ROULETTE,
     ENDTURN_POISON_FIELD,
+    ENDTURN_POISON_FIELD_BATTLERS,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -2187,6 +2188,30 @@ u8 DoFieldEndTurnEffects(void)
                 effect++;
             }
             gBattleStruct->turnCountersTracker++;
+            break;
+        case ENDTURN_POISON_FIELD_BATTLERS:
+            if (FlagGet(FLAG_BATTLE_POISON_FIELD)
+             && gBattleStruct->turnEffectsBattlerId < gBattlersCount)
+            {
+                gActiveBattler = gBattlerByTurnOrder[gBattleStruct->turnEffectsBattlerId++];
+                if (!(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
+                    && GetBattlerAbility(gActiveBattler) != ABILITY_IMMUNITY
+                    && !(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SAFEGUARD))
+                {
+                    gBattleMons[gActiveBattler].status1 |= STATUS1_POISON;
+                    BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);
+                    MarkBattlerForControllerExec(gActiveBattler);
+                    gBattleScripting.battler = gActiveBattler;
+                    gBattlescriptCurrInstr = BattleScript_PoisonFieldPoisonedEnd2;
+                    BattleScriptExecute(gBattlescriptCurrInstr);
+                    effect++;
+                }
+            }
+            else
+            {
+                gBattleStruct->turnCountersTracker++;
+                gBattleStruct->turnEffectsBattlerId = 0;
+            }
             break;
         case ENDTURN_FIELD_COUNT:
             effect++;
