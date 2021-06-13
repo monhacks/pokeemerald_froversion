@@ -148,9 +148,9 @@ SlateportCity_EventScript_EnergyGuru:: @ 81DCDBD
 	end
 
 SlateportCity_Pokemart_EnergyGuru: @ 81DCDD4
-	.2byte ITEM_PROTEIN
-	.2byte ITEM_IRON
-	.2byte ITEM_CARBOS
+	.2byte ITEM_SEA_INCENSE
+	.2byte ITEM_CHARCOAL
+	.2byte ITEM_MIRACLE_SEED
 	.2byte ITEM_ZINC
 	.2byte ITEM_CALCIUM
 	.2byte ITEM_HP_UP

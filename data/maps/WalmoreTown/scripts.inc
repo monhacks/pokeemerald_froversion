@@ -5,6 +5,9 @@ WalmoreTown_MapScripts::
 // Scripts	
 
 
+Script_WalmoreTown_AmneetIntroduction::
+
+
 Script_WalmoreTown_IsflagSet::
 	lock
 	checkflag FLAG_SYS_POKEDEX_GET

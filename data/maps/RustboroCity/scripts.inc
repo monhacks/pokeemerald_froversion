@@ -1351,6 +1351,27 @@ SummitCity_EventScript_HikerBlockPathTrigger::
 	release
 	end
 
+SummitCity_EventScript_AmneetTravelingMerchant::
+	lock
+	faceplayer
+	message SummitCity_Text_AmneetSummitCityMerchant
+	waitmessage
+	pokemart SummitCity_Pokemart_Amneet
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+SummitCity_Pokemart_Amneet:
+	.2byte ITEM_SEA_INCENSE
+	.2byte ITEM_CHARCOAL
+	.2byte ITEM_MIRACLE_SEED
+	.2byte ITEM_ZINC
+	.2byte ITEM_CALCIUM
+	.2byte ITEM_HP_UP
+	.2byte ITEM_NONE
+	release
+	end
+
 Movement_SummitCity_PlayerFaceHiker:
 	face_right
 	step_end
@@ -1364,3 +1385,8 @@ SummitCity_Text_CaveNotSafe:
 
 SummitCity_Text_CaveIsSafe:
 	.string "The rubble is all cleared out now.$"
+
+SummitCity_Text_AmneetSummitCityMerchant:
+	.string "Hey {PLAYER}. Good to see you.\n"
+	.string "I've got some stuff that might\l"
+	.string "help you out.$"
