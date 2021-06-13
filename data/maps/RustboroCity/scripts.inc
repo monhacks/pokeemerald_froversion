@@ -1361,6 +1361,7 @@ SummitCity_EventScript_AmneetTravelingMerchant::
 	release
 	end
 
+	.align 2
 SummitCity_Pokemart_Amneet:
 	.2byte ITEM_SEA_INCENSE
 	.2byte ITEM_CHARCOAL
