@@ -5655,6 +5655,22 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 BattleScriptPushCursorAndCallback(BattleScript_AirBaloonMsgIn);
                 RecordItemEffectBattle(battlerId, HOLD_EFFECT_AIR_BALLOON);
                 break;
+            case HOLD_EFFECT_TYPE_CHANGE:
+                i = ItemId_GetSecondaryId(gLastUsedItem);
+                if (gBattleMons[battlerId].type1 != i
+                 && gBattleMons[battlerId].type2 != i
+                 && gBattleMons[battlerId].type3 != i)
+                {
+                    gBattleScripting.battler = battlerId;
+                    gBattleMons[battlerId].type1 = i;
+                    gDisableStructs[battlerId].hasType1 = TRUE;
+                    gDisableStructs[battlerId].type1 = i;
+                    PREPARE_TYPE_BUFFER(gBattleTextBuff1, i);
+                    BattleScriptPushCursorAndCallback(BattleScript_TypeChangeItem);
+                    RecordItemEffectBattle(battlerId, battlerHoldEffect);
+                    effect = ITEM_EFFECT_OTHER;
+                }
+                break;
             }
 
             if (effect)

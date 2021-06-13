@@ -7479,4 +7479,16 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Mints,
         .secondaryId = NATURE_TIMID,
     },
+    [ITEM_NORMAL_CAMOUFLAGE] =
+    {
+        .name = _("Normal Camo"),
+        .itemId = ITEM_NORMAL_CAMOUFLAGE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
+        .description = sNormalCamouflageDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = TYPE_NORMAL,
+    },
 };

@@ -7939,3 +7939,10 @@ BattleScript_PoisonFieldIntensifies::
 	printstring STRINGID_POISONFIELDINTENSIFIES
 	waitmessage 0x40
 	end2
+
+BattleScript_TypeChangeItem::
+	playanimation BS_ATTACKER, B_ANIM_HELD_ITEM_EFFECT, NULL
+	printstring STRINGID_TYPECHANGEITEM
+	waitmessage 0x40
+	removeitem BS_SCRIPTING
+	end3

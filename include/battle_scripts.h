@@ -373,5 +373,6 @@ extern const u8 BattleScript_AnnounceRoulette[];
 extern const u8 BattleScript_Haunting[];
 extern const u8 BattleScript_PostProduction[];
 extern const u8 BattleScript_PoisonFieldIntensifies[];
+extern const u8 BattleScript_TypeChangeItem[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

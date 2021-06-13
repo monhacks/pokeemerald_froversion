@@ -709,6 +709,7 @@ static const u8 sText_Haunting[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} changed fo
 static const u8 sText_PoisonFieldStarts[] = _("The battlefield is filled\nwith poisonous fumes!");
 static const u8 sText_PoisonFieldSwitchIn[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nwas poisoned!");
 static const u8 sText_PoisonFieldIntensifies[] = _("The poisonous fumes intensify!");
+static const u8 sText_TypeChangeItem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nmade it {B_BUFF1} type!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1281,6 +1282,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_POISONFIELDSTARTS - 12] = sText_PoisonFieldStarts,
     [STRINGID_POISONFIELDSWITCHIN - 12] = sText_PoisonFieldSwitchIn,
     [STRINGID_POISONFIELDINTENSIFIES - 12] = sText_PoisonFieldIntensifies,
+    [STRINGID_TYPECHANGEITEM - 12] = sText_TypeChangeItem,
 };
 
 const u16 gTerrainStringIds[] =

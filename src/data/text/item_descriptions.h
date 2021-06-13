@@ -2934,3 +2934,8 @@ static const u8 sTimidMintDesc[] = _(
     "Changes the nature\n"
     "of a Pokémon to\n"
     "Timid");
+
+static const u8 sNormalCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "NORMAL-type.");

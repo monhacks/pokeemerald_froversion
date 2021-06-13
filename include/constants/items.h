@@ -686,8 +686,10 @@
 #define ITEM_SERIOUS_MINT        587
 #define ITEM_TIMID_MINT          589
 
+// Type changers
+#define ITEM_NORMAL_CAMOUFLAGE   590
 
-#define ITEMS_COUNT 590
+#define ITEMS_COUNT 591
 
 
 
