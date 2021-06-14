@@ -4870,6 +4870,16 @@
       "secondary_tileset": "gTileset_LynchPark",
       "border_filepath": "data/layouts/Route1022/border.bin",
       "blockdata_filepath": "data/layouts/Route1022/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALMORE_TOWN_POKEMON_CENTER",
+      "name": "WalmoreTown_PokemonCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/WalmoreTown_PokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/WalmoreTown_PokemonCenter/map.bin"
     }
   ]
 }

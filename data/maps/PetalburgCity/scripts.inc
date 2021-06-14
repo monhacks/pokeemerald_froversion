@@ -22,7 +22,7 @@ PetalburgCity_OnTransition: @ 81DC2D7
 	end
 
 PetalburgCity_EventScript_MoveGymBoyToWestEntrance:: @ 81DC307
-	setobjectxyperm LOCALID_GYM_BOY, 5, 11
+	setobjectxyperm LOCALID_GYM_BOY, 9, 11
 	return
 
 PetalburgCity_EventScript_DisableMapNameAndMusic:: @ 81DC30F
@@ -518,7 +518,7 @@ PetalburgCity_EventScript_Scott0:: @ 81DC691
 	lockall
 	addobject LOCALID_SCOTT
 	setvar VAR_0x8008, 0
-	setobjectxy LOCALID_SCOTT, 13, 10
+	setobjectxy LOCALID_SCOTT, 17, 10
 	goto PetalburgCity_EventScript_Scott
 	end
 
@@ -526,7 +526,7 @@ PetalburgCity_EventScript_Scott1:: @ 81DC6A7
 	lockall
 	addobject LOCALID_SCOTT
 	setvar VAR_0x8008, 1
-	setobjectxy LOCALID_SCOTT, 13, 11
+	setobjectxy LOCALID_SCOTT, 17, 11
 	goto PetalburgCity_EventScript_Scott
 	end
 
@@ -534,7 +534,7 @@ PetalburgCity_EventScript_Scott2:: @ 81DC6BD
 	lockall
 	addobject LOCALID_SCOTT
 	setvar VAR_0x8008, 2
-	setobjectxy LOCALID_SCOTT, 13, 12
+	setobjectxy LOCALID_SCOTT, 17, 12
 	goto PetalburgCity_EventScript_Scott
 	end
 
@@ -542,7 +542,7 @@ PetalburgCity_EventScript_Scott3:: @ 81DC6D3
 	lockall
 	addobject LOCALID_SCOTT
 	setvar VAR_0x8008, 3
-	setobjectxy LOCALID_SCOTT, 13, 13
+	setobjectxy LOCALID_SCOTT, 17, 13
 	goto PetalburgCity_EventScript_Scott
 	end
 

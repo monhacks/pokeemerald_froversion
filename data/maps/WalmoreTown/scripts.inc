@@ -1,3 +1,6 @@
+.set LOCALID_AMNEET, 1
+.set LOCALID_FREEWOMAN, 2
+
 WalmoreTown_MapScripts::
 	.byte 0
 
@@ -5,7 +8,109 @@ WalmoreTown_MapScripts::
 // Scripts	
 
 
-Script_WalmoreTown_AmneetIntroduction::
+Script_WalmoreTown_AmneetIntroductionTrigger1::
+	lock
+	goto_if_set FLAG_HIDE_WMT_AMNEET, Script_WalmoreTown_AmneetIntroductionDone
+	applymovement OBJ_EVENT_ID_PLAYER, M_WMT_MoveForAmneetIntro1
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox T_WMT_AmneetIntro, MSGBOX_DEFAULT
+	applymovement LOCALID_FREEWOMAN, M_WMT_FreeWomanLeaves
+	waitmovement LOCALID_FREEWOMAN
+	applymovement LOCALID_AMNEET, Common_Movement_FacePlayer
+	waitmovement LOCALID_AMNEET
+	msgbox T_WMT_AmneetText2, MSGBOX_DEFAULT
+	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
+	waitmovement LOCALID_AMNEET
+	setflag FLAG_HIDE_WMT_AMNEET
+	release
+	end
+
+Script_WalmoreTown_AmneetIntroductionTrigger2::
+	lock
+	goto_if_set FLAG_HIDE_WMT_AMNEET, Script_WalmoreTown_AmneetIntroductionDone
+	applymovement OBJ_EVENT_ID_PLAYER, M_WMT_MoveForAmneetIntro2
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox T_WMT_AmneetIntro, MSGBOX_DEFAULT
+	applymovement LOCALID_FREEWOMAN, M_WMT_FreeWomanLeaves
+	waitmovement LOCALID_FREEWOMAN
+	applymovement LOCALID_AMNEET, Common_Movement_FacePlayer
+	waitmovement LOCALID_AMNEET
+	msgbox T_WMT_AmneetText2, MSGBOX_DEFAULT
+	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
+	waitmovement LOCALID_AMNEET
+	setflag FLAG_HIDE_WMT_AMNEET
+	release
+	end
+
+Script_WalmoreTown_AmneetIntroductionTrigger3::
+	lock
+	goto_if_set FLAG_HIDE_WMT_AMNEET, Script_WalmoreTown_AmneetIntroductionDone
+	applymovement OBJ_EVENT_ID_PLAYER, M_WMT_MoveForAmneetIntro3
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox T_WMT_AmneetIntro, MSGBOX_DEFAULT
+	applymovement LOCALID_FREEWOMAN, M_WMT_FreeWomanLeaves
+	waitmovement LOCALID_FREEWOMAN
+	applymovement LOCALID_AMNEET, Common_Movement_FacePlayer
+	waitmovement LOCALID_AMNEET
+	msgbox T_WMT_AmneetText2, MSGBOX_DEFAULT
+	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
+	waitmovement LOCALID_AMNEET
+	setflag FLAG_HIDE_WMT_AMNEET
+	release
+	end
+
+Script_WalmoreTown_AmneetIntroductionDone:
+	release
+	end
+
+
+M_WMT_MoveForAmneetIntro1:
+	walk_right
+	walk_down
+	walk_right
+	walk_right
+	face_up
+	step_end
+
+M_WMT_MoveForAmneetIntro2:
+	walk_right
+	walk_right
+	walk_right
+	face_up
+	step_end
+
+M_WMT_MoveForAmneetIntro3:
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	step_end
+	
+M_WMT_FreeWomanLeaves:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+M_WMT_AmneetLeaves:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 
 
 Script_WalmoreTown_IsflagSet::
@@ -47,3 +152,24 @@ T_WMT_CheckOutTheTown:
 	.string "{COLOR RED}Hey, why so {COLOR BLUE}quick to pass through \n{COLOR DARK_GREY}town? Take a look around!$"
 T_WMT_WelcomeSign:
 	.string "Walmore Town. Where friends are made!$"
+
+T_WMT_AmneetIntro:
+	.string "Salesman: So would you like 2 watches \n"
+	.string "for 10 dollars each, or would you \l"
+	.string "prefer 1 watch for 20 dollars and you\l"
+	.string "get an additional watch for free?\p"
+	.string "Woman: I LIKE THE FREE!!!\p"
+	.string "Salesman: Excellent, thank you for \n"
+	.string "your patronage. Have a baller day!$"
+
+T_WMT_AmneetText2:
+	.string "Salesman: Yo, is that Fro!?\p"
+	.string "Sup dude, it's me Amneet!\p"
+	.string "Since Pokémon were discovered my \n"
+	.string "business has been boomin'! \p"
+	.string "I'm a traveling merchant now, so I \n"
+	.string "go all around the region selling \l"
+	.string "all sorts of stuff.\p"
+	.string "In fact I'm on my way to Summit City\n"
+	.string "right now, so I can't stay and chat, \l"
+	.string "but I hope to see you around!$"

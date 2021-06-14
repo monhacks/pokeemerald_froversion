@@ -75,6 +75,7 @@ WalmoreTown_Mart_EventScript_PokeBallsInStock::
 	end
 
 WalmoreTown_Mart_EventScript_Boy::
+	giveitem ITEM_POTION
 	msgbox WalmoreTown_Mart_Text_RestoreHPWithPotion, MSGBOX_NPC
 	end
 
@@ -85,7 +86,7 @@ walk_up
 walk_up
 walk_up
 walk_up
-face_left
+walk_left
 step_end
 
 //Text

@@ -22,29 +22,29 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_AMNEET",
-      "x": 36,
+      "x": 37,
       "y": 32,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OldaleTown_EventScript_MartEmployee",
-      "flag": "0"
+      "flag": "FLAG_HIDE_WMT_AMNEET"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BARD",
-      "x": 25,
-      "y": 33,
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
+      "x": 36,
+      "y": 32,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_WMT_AMNEET"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BALTOY_DOLL",
@@ -105,7 +105,7 @@
       "x": 21,
       "y": 28,
       "elevation": 0,
-      "dest_map": "MAP_WALMORE_TOWN",
+      "dest_map": "MAP_WALMORE_TOWN_POKEMON_CENTER",
       "dest_warp_id": 0
     },
     {
@@ -126,24 +126,6 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 44,
-      "y": 33,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Script_WalmoreTown_IsflagSet"
-    },
-    {
-      "type": "trigger",
-      "x": 44,
-      "y": 34,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "Script_WalmoreTown_IsflagSet"
-    },
-    {
-      "type": "trigger",
       "x": 13,
       "y": 41,
       "elevation": 0,
@@ -153,12 +135,30 @@
     },
     {
       "type": "trigger",
-      "x": 44,
+      "x": 34,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Script_WalmoreTown_AmneetIntroductionTrigger3"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 33,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Script_WalmoreTown_AmneetIntroductionTrigger2"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
       "y": 32,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Script_WalmoreTown_IsflagSet"
+      "script": "Script_WalmoreTown_AmneetIntroductionTrigger1"
     }
   ],
   "bg_events": [
