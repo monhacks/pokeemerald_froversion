@@ -49,6 +49,7 @@ RustboroCity_House1_EventScript_TradeCompleted:: @ 82159D5
 	end
 
 RustboroCity_House1_EventScript_Hiker:: @ 82159DF
+	giveitem ITEM_NORMAL_CAMOUFLAGE
 	msgbox RustboroCity_House1_Text_AllSortsOfPlaces, MSGBOX_NPC
 	end
 
