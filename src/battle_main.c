@@ -3516,7 +3516,7 @@ static void TryDoEventsBeforeFirstTurn(void)
 
         while (gBattleStruct->poisonFieldSwitchInCounter < gBattlersCount + 1)
         {
-            gActiveBattler = gBattlerByTurnOrder[gBattleStruct->poisonFieldSwitchInCounter - 1];
+            gActiveBattler = gBattleStruct->poisonFieldSwitchInCounter - 1;
             gBattleStruct->poisonFieldSwitchInCounter++;
             if (!(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
                 && GetBattlerAbility(gActiveBattler) != ABILITY_IMMUNITY)
