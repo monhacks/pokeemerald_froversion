@@ -1367,8 +1367,8 @@ SummitCity_Pokemart_Amneet:
 	.2byte ITEM_CHARCOAL
 	.2byte ITEM_MIRACLE_SEED
 	.2byte ITEM_ZINC
-	.2byte ITEM_CALCIUM
-	.2byte ITEM_HP_UP
+	.2byte ITEM_POISON_CAMOUFLAGE
+	.2byte ITEM_SASSY_MINT
 	.2byte ITEM_NONE
 	release
 	end

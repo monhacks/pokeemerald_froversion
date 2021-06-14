@@ -7483,7 +7483,7 @@ const struct Item gItems[] =
     {
         .name = _("Normal Camo"),
         .itemId = ITEM_NORMAL_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sNormalCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7495,7 +7495,7 @@ const struct Item gItems[] =
     {
         .name = _("Fire Camo"),
         .itemId = ITEM_FIRE_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sFireCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7507,7 +7507,7 @@ const struct Item gItems[] =
     {
         .name = _("Water Camo"),
         .itemId = ITEM_WATER_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sWaterCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7519,19 +7519,7 @@ const struct Item gItems[] =
     {
         .name = _("Grass Camo"),
         .itemId = ITEM_GRASS_CAMOUFLAGE,
-        .price = 0,
-        .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
-        .description = sGrassCamouflageDesc,
-        .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = TYPE_GRASS,
-    },
-    [ITEM_GRASS_CAMOUFLAGE] =
-    {
-        .name = _("Grass Camo"),
-        .itemId = ITEM_GRASS_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sGrassCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7543,7 +7531,7 @@ const struct Item gItems[] =
     {
         .name = _("Electric Camo"),
         .itemId = ITEM_ELECTRIC_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sElectricCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7555,7 +7543,7 @@ const struct Item gItems[] =
     {
         .name = _("Ice Camo"),
         .itemId = ITEM_ICE_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sIceCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7567,7 +7555,7 @@ const struct Item gItems[] =
     {
         .name = _("Fighting Camo"),
         .itemId = ITEM_FIGHTING_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sFightingCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7579,7 +7567,7 @@ const struct Item gItems[] =
     {
         .name = _("Poison Camo"),
         .itemId = ITEM_POISON_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sPoisonCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7591,7 +7579,7 @@ const struct Item gItems[] =
     {
         .name = _("Ground Camo"),
         .itemId = ITEM_GROUND_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sGroundCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7603,7 +7591,7 @@ const struct Item gItems[] =
     {
         .name = _("Flying Camo"),
         .itemId = ITEM_FLYING_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sFlyingCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7615,7 +7603,7 @@ const struct Item gItems[] =
     {
         .name = _("Psychic Camo"),
         .itemId = ITEM_PSYCHIC_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sPsychicCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7627,7 +7615,7 @@ const struct Item gItems[] =
     {
         .name = _("Bug Camo"),
         .itemId = ITEM_BUG_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sBugCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7639,7 +7627,7 @@ const struct Item gItems[] =
     {
         .name = _("Rock Camo"),
         .itemId = ITEM_ROCK_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sRockCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7651,7 +7639,7 @@ const struct Item gItems[] =
     {
         .name = _("Ghost Camo"),
         .itemId = ITEM_GHOST_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sGhostCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7663,7 +7651,7 @@ const struct Item gItems[] =
     {
         .name = _("Dark Camo"),
         .itemId = ITEM_DARK_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sDarkCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7675,7 +7663,7 @@ const struct Item gItems[] =
     {
         .name = _("Dragon Camo"),
         .itemId = ITEM_DRAGON_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sDragonCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7687,7 +7675,7 @@ const struct Item gItems[] =
     {
         .name = _("Steel Camo"),
         .itemId = ITEM_STEEL_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sSteelCamouflageDesc,
         .pocket = POCKET_ITEMS,
@@ -7699,7 +7687,7 @@ const struct Item gItems[] =
     {
         .name = _("Fairy Camo"),
         .itemId = ITEM_FAIRY_CAMOUFLAGE,
-        .price = 0,
+        .price = 5000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sFairyCamouflageDesc,
         .pocket = POCKET_ITEMS,

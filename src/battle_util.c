@@ -2194,8 +2194,8 @@ u8 DoFieldEndTurnEffects(void)
              && gBattleStruct->turnEffectsBattlerId < gBattlersCount)
             {
                 gActiveBattler = gBattlerByTurnOrder[gBattleStruct->turnEffectsBattlerId++];
-                if (!(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
-                    && GetBattlerAbility(gActiveBattler) != ABILITY_IMMUNITY
+                if (IsBattlerAlive(gActiveBattler)
+                    && !(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
                     && !(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SAFEGUARD))
                 {
                     gBattleMons[gActiveBattler].status1 |= STATUS1_POISON;

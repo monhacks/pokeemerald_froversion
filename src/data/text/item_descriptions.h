@@ -2939,3 +2939,90 @@ static const u8 sNormalCamouflageDesc[] = _(
     "Camouflages the\n"
     "holder as\n"
     "NORMAL-type.");
+
+static const u8 sFireCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Fire-type.");
+
+static const u8 sWaterCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Water-type.");
+
+static const u8 sElectricCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Electric-type.");
+
+static const u8 sGrassCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Grass-type.");
+
+static const u8 sIceCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Ice-type.");
+
+static const u8 sFightingCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Fighting-type.");
+
+static const u8 sPoisonCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Poison-type.");
+
+static const u8 sGroundCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Ground-type.");
+
+static const u8 sFlyingCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Flying-type.");
+
+static const u8 sPsychicCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Psychic-type.");
+
+static const u8 sBugCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Bug-type.");
+    
+static const u8 sRockCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Rock-type.");
+
+static const u8 sGhostCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Ghost-type.");
+
+static const u8 sDarkCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Dark-type.");
+
+static const u8 sDragonCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Dragon-type.");
+
+static const u8 sSteelCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Steel-type.");
+
+static const u8 sFairyCamouflageDesc[] = _(
+    "Camouflages the\n"
+    "holder as\n"
+    "Fairy-type.");
+
+
