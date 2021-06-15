@@ -1789,6 +1789,24 @@ static void Cmd_adjustdamage(void)
     if (gBattleMons[gBattlerTarget].hp > gBattleMoveDamage)
         goto END;
 
+    if (gProtectStructs[gBattlerTarget].countered)
+    {
+        gBattleStruct->counterDamage += gBattleMoveDamage;
+        gBattleMoveDamage = 0;
+        goto END;
+    }
+    else if (GetBattlerAbility(gBattlerTarget) == ABILITY_COUNTER
+     && IS_MOVE_PHYSICAL(gCurrentMove)
+     && !(gWishFutureKnock.counterMons[GetBattlerSide(gBattlerTarget)] & gBitTable[gBattlerPartyIndexes[gBattlerTarget]]))
+    {
+        gWishFutureKnock.counterMons[GetBattlerSide(gBattlerTarget)] |= gBitTable[gBattlerPartyIndexes[gBattlerTarget]];
+        RecordAbilityBattle(gBattlerTarget, ABILITY_COUNTER);
+        gProtectStructs[gBattlerTarget].countered = 1;
+        gBattleStruct->counterDamage = gBattleMoveDamage;
+        gBattleMoveDamage = 0;
+        goto END;
+    }
+
     holdEffect = GetBattlerHoldEffect(gBattlerTarget, TRUE);
     param = GetBattlerHoldEffectParam(gBattlerTarget);
 
@@ -5103,6 +5121,20 @@ static void Cmd_moveend(void)
             }
             gBattleScripting.moveendState++;
             break;
+        case MOVEEND_COUNTER:
+            if (gProtectStructs[gBattlerTarget].countered)
+            {
+                gProtectStructs[gBattlerTarget].countered = 0;
+                gBattleMoveDamage = gBattleStruct->counterDamage / 4;
+                if (gBattleMoveDamage == 0)
+                    gBattleMoveDamage = 1;
+                SET_STATCHANGER(STAT_SPEED, 1, TRUE);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_CounterActivates;
+                return;
+            }
+            gBattleScripting.moveendState++;
+            break;
         case MOVEEND_CLEAR_BITS: // Clear/Set bits for things like using a move for all targets and all hits.
             if (gSpecialStatuses[gBattlerAttacker].instructedChosenTarget)
                 *(gBattleStruct->moveTarget + gBattlerAttacker) = gSpecialStatuses[gBattlerAttacker].instructedChosenTarget & 0x3;
@@ -5207,6 +5239,17 @@ static void Cmd_switchindataupdate(void)
         for (i = 0; i < NUM_BATTLE_STATS; i++)
         {
             gBattleMons[gActiveBattler].statStages[i] = oldData.statStages[i];
+        }
+        if (gSpecialStatuses[gActiveBattler].berryBoosted)
+        {
+            for (i = 0; gBerryBoosts[i].item != 0xFFFF; i++)
+            {
+                if (gBerryBoosts[i].item == gBattleMons[gActiveBattler].item)
+                {
+                    gBattleMons[gActiveBattler].statStages[gBerryBoosts[i].stat1] -= gBerryBoosts[i].boost1;
+                    gBattleMons[gActiveBattler].statStages[gBerryBoosts[i].stat2] -= gBerryBoosts[i].boost2;
+                }
+            }
         }
         gBattleMons[gActiveBattler].status2 = oldData.status2;
     }
@@ -6534,6 +6577,32 @@ static bool32 TryCheekPouch(u32 battlerId, u32 itemId)
     return FALSE;
 }
 
+static bool32 TryDeactivateBerryBoost(u32 battlerId, u32 itemId)
+{
+    int i;
+
+    if (!gSpecialStatuses[battlerId].berryBoosted)
+        return FALSE;
+
+    for (i = 0; gBerryBoosts[i].item != 0xFFFF; i++)
+    {
+        if (gBerryBoosts[i].item == itemId)
+        {
+            gSpecialStatuses[battlerId].berryBoosted = 0;
+            SET_STATCHANGER(gBerryBoosts[i].stat1, gBerryBoosts[i].boost1, TRUE);
+            if (gBerryBoosts[i].boost2)
+                SET_STATCHANGER2(gBattleScripting.savedStatChanger, gBerryBoosts[i].stat2, gBerryBoosts[i].boost2, TRUE);
+            else
+                gBattleScripting.savedStatChanger = 0;
+            gBattlerAbility = battlerId;
+            BattleScriptPush(gBattlescriptCurrInstr + 2);
+            gBattlescriptCurrInstr = BattleScript_BerryBoostDeactivates;
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
 static void Cmd_removeitem(void)
 {
     u16 itemId = 0;
@@ -6552,8 +6621,11 @@ static void Cmd_removeitem(void)
     MarkBattlerForControllerExec(gActiveBattler);
 
     ClearBattlerItemEffectHistory(gActiveBattler);
-    if (!TryCheekPouch(gActiveBattler, itemId))
+    if (!TryCheekPouch(gActiveBattler, itemId)
+     && !TryDeactivateBerryBoost(gActiveBattler, itemId))
+    {
         gBattlescriptCurrInstr += 2;
+    }
 }
 
 static void Cmd_atknameinbuff1(void)
@@ -9396,12 +9468,12 @@ static void Cmd_forcerandomswitch(void)
 
         if (validMons <= minNeeded)
         {
-            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 9);
         }
         else
         {
             *(gBattleStruct->field_58 + gBattlerTarget) = gBattlerPartyIndexes[gBattlerTarget];
-            gBattlescriptCurrInstr = BattleScript_RoarSuccessSwitch;
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
 
             do
             {
@@ -9436,9 +9508,9 @@ static void Cmd_forcerandomswitch(void)
     {
         // In normal wild doubles, Roar will always fail if the user's level is less than the target's.
         if (gBattleMons[gBattlerAttacker].level >= gBattleMons[gBattlerTarget].level)
-            gBattlescriptCurrInstr = BattleScript_RoarSuccessEndBattle;
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
         else
-            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 9);
     }
 }
 

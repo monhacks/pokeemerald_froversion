@@ -2559,7 +2559,7 @@ BattleScript_EffectRoar::
 	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
 	jumpifbattletype BATTLE_TYPE_ARENA, BattleScript_ButItFailed
 BattleScript_ForceRandomSwitch::
-	forcerandomswitch BattleScript_ButItFailed
+	forcerandomswitch BattleScript_RoarSuccessSwitch BattleScript_RoarSuccessEndBattle BattleScript_ButItFailed
 
 BattleScript_EffectMultiHit::
 	attackcanceler
@@ -7946,3 +7946,99 @@ BattleScript_TypeChangeItem::
 	waitmessage 0x40
 	removeitem BS_SCRIPTING
 	end3
+
+BattleScript_BerryBoostActivates::
+	copybyte gBattlerAbility, gBattlerAttacker
+	call BattleScript_AbilityPopUp
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_NOT_PROTECT_AFFECTED | MOVE_EFFECT_CERTAIN, BattleScript_BerryBoostActivates2
+	setgraphicalstatchangevalues
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	waitanimation
+	printfromtable gStatUpStringIds
+	waitmessage 0x40
+BattleScript_BerryBoostActivates2:
+	jumpifbyteequal sSAVED_STAT_CHANGER, sZero, BattleScript_BerryBoostActivatesEnd
+	copybyte sSTATCHANGER, sSAVED_STAT_CHANGER
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_NOT_PROTECT_AFFECTED | MOVE_EFFECT_CERTAIN, BattleScript_BerryBoostActivatesEnd
+	setgraphicalstatchangevalues
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	waitanimation
+	printfromtable gStatUpStringIds
+	waitmessage 0x40
+BattleScript_BerryBoostActivatesEnd:
+	end3
+
+BattleScript_BerryBoostDeactivates::
+	copybyte sSAVED_BATTLER, gBattlerAttacker
+	copybyte gBattlerAttacker, gBattlerAbility
+	call BattleScript_AbilityPopUp
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_NOT_PROTECT_AFFECTED | MOVE_EFFECT_CERTAIN, BattleScript_BerryBoostDeactivates2
+	setgraphicalstatchangevalues
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	waitanimation
+	printfromtable gStatDownStringIds
+	waitmessage 0x40
+BattleScript_BerryBoostDeactivates2:
+	jumpifbyteequal sSAVED_STAT_CHANGER, sZero, BattleScript_BerryBoostDeactivatesEnd
+	copybyte sSTATCHANGER, sSAVED_STAT_CHANGER
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_NOT_PROTECT_AFFECTED | MOVE_EFFECT_CERTAIN, BattleScript_BerryBoostDeactivatesEnd
+	setgraphicalstatchangevalues
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	waitanimation
+	printfromtable gStatDownStringIds
+	waitmessage 0x40
+BattleScript_BerryBoostDeactivatesEnd:
+	copybyte gBattlerAttacker, sSAVED_BATTLER
+	return
+
+BattleScript_AutosubActivates::
+	call BattleScript_AbilityPopUp
+	playmoveanimation BS_ABILITY_BATTLER, MOVE_SUBSTITUTE
+	waitanimation
+	printstring STRINGID_AUTOSUB
+	waitmessage 0x40
+	end3
+
+BattleScript_CounterActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_COUNTERED
+	waitmessage 0x40
+	copybyte sBATTLER, gBattlerTarget
+	copybyte gBattlerTarget, gBattlerAttacker
+	copybyte gBattlerAttacker, sBATTLER
+	playmoveanimation BS_ATTACKER, MOVE_COUNTER
+	waitanimation
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	bichalfword gMoveResultFlags, MOVE_RESULT_NO_EFFECT
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	tryfaintmon BS_TARGET, FALSE, NULL
+	forcerandomswitch BattleScript_CounterSwitch BattleScript_CounterLowerSpeed BattleScript_CounterLowerSpeed
+
+BattleScript_CounterSwitch:
+	switchoutabilities BS_TARGET
+	returntoball BS_TARGET
+	waitstate
+	getswitchedmondata BS_TARGET
+	switchindataupdate BS_TARGET
+	switchinanim BS_TARGET, FALSE
+	waitstate
+	printstring STRINGID_PKMNWASDRAGGEDOUT
+	switchineffects BS_TARGET
+	copybyte sBATTLER, gBattlerTarget
+	copybyte gBattlerTarget, gBattlerAttacker
+	copybyte gBattlerAttacker, sBATTLER
+	return
+
+BattleScript_CounterLowerSpeed:
+	setgraphicalstatchangevalues
+	statbuffchange MOVE_EFFECT_CERTAIN, BattleScript_CounterLowerSpeedEnd
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	waitanimation
+	printfromtable gStatDownStringIds
+	waitmessage 0x40
+BattleScript_CounterLowerSpeedEnd:
+	copybyte sBATTLER, gBattlerTarget
+	copybyte gBattlerTarget, gBattlerAttacker
+	copybyte gBattlerAttacker, sBATTLER
+	return

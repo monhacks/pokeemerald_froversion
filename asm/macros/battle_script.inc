@@ -775,9 +775,11 @@
 	.byte 0x8e
 	.endm
 
-	.macro forcerandomswitch param0:req
+	.macro forcerandomswitch switch:req, noswitch:req, fail:req
 	.byte 0x8f
-	.4byte \param0
+	.4byte \switch
+	.4byte \noswitch
+	.4byte \fail
 	.endm
 
 	.macro tryconversiontypechange param0:req
