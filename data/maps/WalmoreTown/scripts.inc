@@ -7,6 +7,43 @@ WalmoreTown_MapScripts::
 
 // Scripts	
 
+Script_WMT_Signpost_JohnsHouse:
+	lock
+	msgbox Text_Signpost_WMT_JohnsHouse, MSGBOX_SIGN
+	release
+	end
+
+Script_WMT_Signpost_BobbysHouse:
+	lock
+	msgbox Text_Signpost_WMT_BobbysHouse, MSGBOX_SIGN
+	release
+	end
+
+Script_WalmoreTown_KickDownDoor::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox T_WMT_KickDownDoor, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, WalmoreTown_EventScript_DidntAttemptKick
+	case YES, WalmoreTown_EventScript_TooWeakToKick
+	case MULTI_B_PRESSED, WalmoreTown_EventScript_DidntAttemptKick
+	release
+	end
+
+WalmoreTown_EventScript_DidntAttemptKick:
+	msgbox T_WMT_DidntAttemptKick, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
+
+WalmoreTown_EventScript_TooWeakToKick:
+	msgbox T_WMT_TooWeakToKick, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
 
 Script_WalmoreTown_AmneetIntroductionTrigger1::
 	lock
@@ -173,3 +210,20 @@ T_WMT_AmneetText2:
 	.string "In fact I'm on my way to Summit City\n"
 	.string "right now, so I can't stay and chat, \l"
 	.string "but I hope to see you around!$"
+
+T_WMT_DidntAttemptKick:
+	.string "Better not, John would probably get\n"
+	.string "grounded again.$"
+
+T_WMT_TooWeakToKick:
+	.string "The Door didn't budge. Paul must have\n"
+	.string "reinforced the door.$"
+
+T_WMT_KickDownDoor:
+	.string "The door is locked. Kick it down?$"
+
+Text_Signpost_WMT_JohnsHouse:	
+	.string "Mis Household$"
+
+Text_Signpost_WMT_BobbysHouse:
+	.string "Wasula Residence$"

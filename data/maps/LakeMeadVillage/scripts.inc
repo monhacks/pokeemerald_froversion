@@ -727,7 +727,7 @@ T_LMV_Soldier3CaughtIsiah:
 	.string "Stone, Granger: Sir, yes sir!$"
 
 T_LMV_StartBattleSequence:
-	.string "Granger: Hey kid get out of the way!\nWe are in the middle of something very important!\p...$"
+	.string "Granger: Hey kid get out of the way!\nWe are in the middle of something very\limportant!\p...$"
 
 T_LMV_SoldierBattleStart:
 	.string "You can't stop us from detaining \nyour friend, he was tresspassing and \lmust be punished accordingly. \pFine, you don't want to move?\n Then we will have to make you!$"

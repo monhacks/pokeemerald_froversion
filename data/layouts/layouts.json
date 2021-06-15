@@ -4890,6 +4890,16 @@
       "secondary_tileset": "gTileset_PokemonSchool",
       "border_filepath": "data/layouts/WalmoreTown_PokemonSchool/border.bin",
       "blockdata_filepath": "data/layouts/WalmoreTown_PokemonSchool/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALMORE_TOWN_BOBBY_HOUSE",
+      "name": "WalmoreTown_BobbyHouse_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/WalmoreTown_BobbyHouse/border.bin",
+      "blockdata_filepath": "data/layouts/WalmoreTown_BobbyHouse/map.bin"
     }
   ]
 }

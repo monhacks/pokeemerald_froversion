@@ -98,7 +98,7 @@
       "x": 29,
       "y": 32,
       "elevation": 0,
-      "dest_map": "MAP_WALMORE_TOWN",
+      "dest_map": "MAP_WALMORE_TOWN_BOBBY_HOUSE",
       "dest_warp_id": 0
     },
     {
@@ -131,7 +131,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Script_WalmoreTown_KickDownDoor"
     },
     {
       "type": "trigger",

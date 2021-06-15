@@ -38,6 +38,26 @@ WalmoreTown_PokemonSchool_EventScript_ExitTopicSelect:: @ 8213F5D
 	releaseall
 	end
 
+WalmoreTown_PokemonSchool_EventScript_GameboyKid1:: @ 8213F5F
+	msgbox WalmoreTown_PokemonSchool_Text_NotPayingAttention, MSGBOX_NPC
+	end
+
+WalmoreTown_PokemonSchool_EventScript_GameboyKid2:: @ 8213F68
+	msgbox WalmoreTown_PokemonSchool_Text_TryingToLearn, MSGBOX_NPC
+	end
+
+WalmoreTown_PokemonSchool_EventScript_SchoolKidM:: @ 8213F71
+	msgbox WalmoreTown_PokemonSchool_Text_PokemonTrainingTip, MSGBOX_NPC
+	end
+
+WalmoreTown_PokemonSchool_EventScript_Lass:: @ 8213F7A
+	msgbox WalmoreTown_PokemonSchool_Text_GainExpEvenWhenCatching, MSGBOX_NPC
+	end
+
+WalmoreTown_PokemonSchool_EventScript_Teacher::
+	msgbox WalmoreTown_PokemonSchool_Text_TeachingIsHard, MSGBOX_NPC
+	end
+
 ///////////////////////////////////////////
 ////////////////TEXTS//////////////////////
 ///////////////////////////////////////////
@@ -71,3 +91,31 @@ WalmoreTown_PokemonSchool_Text_ExplainHeldItems:
 	.string "For example, a Choice Scarf will make\n"
 	.string "your Pokémon super fast, but limit the\l"
 	.string "moves they can select.$"
+
+WalmoreTown_PokemonSchool_Text_NotPayingAttention:
+	.string "I'm supposed to be paying attention to\n"
+	.string "learn about Pokémon, but I would rather\l"
+	.string "talk to my friend.$"
+
+WalmoreTown_PokemonSchool_Text_TryingToLearn:
+	.string "I come here to learn, but it's hard when\n"
+	.string "my friends would rather chat than listen\l"
+	.string "To the teacher.$"
+
+WalmoreTown_PokemonSchool_Text_PokemonTrainingTip:
+	.string "Teach says to always keep in mind a\n"
+	.string "Pokémon's nature. Different natures\l"
+	.string "boost different stats, but they also\l"
+	.string "lower a stat as well.\p"
+	.string "You can tell a Pokémon's nature and\n"
+	.string "what stats they affect in the summary\l"
+	.string "screen!$"
+
+WalmoreTown_PokemonSchool_Text_GainExpEvenWhenCatching:
+	.string "Your Pokémon will gain Exp when you\n"
+	.string "catch wild Pokémon!$"
+
+WalmoreTown_PokemonSchool_Text_TeachingIsHard:
+	.string "It is hard to teach everything\n"
+	.string "there is to know about Pokémon battles\p"
+	.string "Did you know there are 17 types of \nPokémon?$"
