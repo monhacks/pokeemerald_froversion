@@ -73,6 +73,13 @@ static const u16 sPostProductionMoves[PARTY_SIZE][3] =
     { MOVE_STRUGGLE },
 };
 
+const struct BerryBoost gBerryBoosts[] =
+{
+    { ITEM_ORAN_BERRY, STAT_ATK, 1, STAT_DEF, 1 },
+    { ITEM_CHERI_BERRY, STAT_SPEED, 1 },
+    { 0xFFFF },
+};
+
 void HandleAction_UseMove(void)
 {
     u32 i, side, moveType, var = 4;
@@ -4217,6 +4224,28 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 effect++;
             }
             break;
+        case ABILITY_BERRY_BOOST:
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+                gSpecialStatuses[battler].switchInAbilityDone = 1;
+                gLastUsedItem = gBattleMons[battler].item;
+                for (i = 0; gBerryBoosts[i].item != 0xFFFF; i++)
+                {
+                    if (gBerryBoosts[i].item == gLastUsedItem)
+                    {
+                        gSpecialStatuses[battler].berryBoosted = 1;
+                        SET_STATCHANGER(gBerryBoosts[i].stat1, gBerryBoosts[i].boost1, FALSE);
+                        if (gBerryBoosts[i].boost2)
+                            SET_STATCHANGER2(gBattleScripting.savedStatChanger, gBerryBoosts[i].stat2, gBerryBoosts[i].boost2, FALSE);
+                        else
+                            gBattleScripting.savedStatChanger = 0;
+                        BattleScriptPushCursorAndCallback(BattleScript_BerryBoostActivates);
+                        effect++;
+                        break;
+                    }
+                }
+            }
+            break;
         }
         break;
     case ABILITYEFFECT_ENDTURN: // 1
@@ -5362,6 +5391,8 @@ static u8 HealConfuseBerry(u32 battlerId, u32 itemId, u8 flavorId)
         PREPARE_FLAVOR_BUFFER(gBattleTextBuff1, flavorId);
 
         gBattleMoveDamage = gBattleMons[battlerId].maxHP / GetBattlerHoldEffectParam(battlerId);
+        if (GetBattlerAbility(battlerId) == ABILITY_BERRY_BOOST)
+            gBattleMoveDamage *= 2;
         if (gBattleMoveDamage == 0)
             gBattleMoveDamage = 1;
         gBattleMoveDamage *= -1;
@@ -5380,10 +5411,19 @@ static u8 StatRaiseBerry(u32 battlerId, u32 itemId, u32 statId)
     if (gBattleMons[battlerId].statStages[statId] < 0xC && HasEnoughHpToEatBerry(battlerId, GetBattlerHoldEffectParam(battlerId), itemId))
     {
         PREPARE_STAT_BUFFER(gBattleTextBuff1, statId);
-        PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_STATROSE);
+
+        if (GetBattlerAbility(battlerId) == ABILITY_BERRY_BOOST)
+        {
+            PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_STATSHARPLY);
+            SET_STATCHANGER(statId, 2, FALSE);
+        }
+        else
+        {
+            PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_STATROSE);
+            SET_STATCHANGER(statId, 1, FALSE);
+        }
 
         gEffectBattler = battlerId;
-        SET_STATCHANGER(statId, 1, FALSE);
         gBattleScripting.animArg1 = 0xE + statId;
         gBattleScripting.animArg2 = 0;
         BattleScriptExecute(BattleScript_BerryStatRaiseEnd2);
@@ -5420,7 +5460,7 @@ static u8 RandomStatRaiseBerry(u32 battlerId, u32 itemId)
         gBattleTextBuff2[7] = EOS;
 
         gEffectBattler = battlerId;
-        SET_STATCHANGER(i + 1, 2, FALSE);
+        SET_STATCHANGER(i + 1, 2 * (GetBattlerAbility(battlerId) == ABILITY_BERRY_BOOST ? 2 : 1), FALSE);
         gBattleScripting.animArg1 = 0x21 + i + 6;
         gBattleScripting.animArg2 = 0;
         BattleScriptExecute(BattleScript_BerryStatRaiseEnd2);
@@ -5431,12 +5471,17 @@ static u8 RandomStatRaiseBerry(u32 battlerId, u32 itemId)
 
 static u8 ItemHealHp(u32 battlerId, u32 itemId, bool32 end2, bool32 percentHeal)
 {
+    u32 effect;
     if (HasEnoughHpToEatBerry(battlerId, 2, itemId))
     {
+        effect = GetBattlerHoldEffectParam(battlerId);
+        if (GetBattlerAbility(battlerId) == ABILITY_BERRY_BOOST)
+            effect *= 2;
+
         if (percentHeal)
-            gBattleMoveDamage = (gBattleMons[battlerId].maxHP * GetBattlerHoldEffectParam(battlerId) / 100) * -1;
+            gBattleMoveDamage = (gBattleMons[battlerId].maxHP * effect / 100) * -1;
         else
-            gBattleMoveDamage = GetBattlerHoldEffectParam(battlerId) * -1;
+            gBattleMoveDamage = effect * -1;
 
         if (end2)
         {
@@ -5726,10 +5771,9 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     if (i != MAX_MON_MOVES)
                     {
                         u8 maxPP = CalculatePPWithBonus(move, ppBonuses, i);
-                        if (changedPP + GetBattlerHoldEffectParam(battlerId) > maxPP)
+                        changedPP = GetBattlerHoldEffectParam(battlerId) * (GetBattlerAbility(battlerId) == ABILITY_BERRY_BOOST ? 2 : 1);
+                        if (changedPP > maxPP)
                             changedPP = maxPP;
-                        else
-                            changedPP = changedPP + GetBattlerHoldEffectParam(battlerId);
 
                         PREPARE_MOVE_BUFFER(gBattleTextBuff1, move);
 
@@ -7701,7 +7745,10 @@ static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 move
         if (moveType == GetBattlerHoldEffectParam(battlerDef)
             && (moveType == TYPE_NORMAL || typeEffectivenessModifier >= UQ_4_12(2.0)))
         {
-            MulModifier(&finalModifier, UQ_4_12(0.5));
+            if (GetBattlerAbility(battlerDef) == ABILITY_BERRY_BOOST)
+                MulModifier(&finalModifier, UQ_4_12(0.25));
+            else
+                MulModifier(&finalModifier, UQ_4_12(0.5));
             if (updateFlags)
                 gSpecialStatuses[battlerDef].berryReduced = 1;
         }

@@ -374,5 +374,7 @@ extern const u8 BattleScript_Haunting[];
 extern const u8 BattleScript_PostProduction[];
 extern const u8 BattleScript_PoisonFieldIntensifies[];
 extern const u8 BattleScript_TypeChangeItem[];
+extern const u8 BattleScript_BerryBoostActivates[];
+extern const u8 BattleScript_BerryBoostDeactivates[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

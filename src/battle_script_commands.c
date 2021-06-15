@@ -5208,6 +5208,17 @@ static void Cmd_switchindataupdate(void)
         {
             gBattleMons[gActiveBattler].statStages[i] = oldData.statStages[i];
         }
+        if (gSpecialStatuses[gActiveBattler].berryBoosted)
+        {
+            for (i = 0; gBerryBoosts[i].item != 0xFFFF; i++)
+            {
+                if (gBerryBoosts[i].item == gBattleMons[gActiveBattler].item)
+                {
+                    gBattleMons[gActiveBattler].statStages[gBerryBoosts[i].stat1] -= gBerryBoosts[i].boost1;
+                    gBattleMons[gActiveBattler].statStages[gBerryBoosts[i].stat2] -= gBerryBoosts[i].boost2;
+                }
+            }
+        }
         gBattleMons[gActiveBattler].status2 = oldData.status2;
     }
 
@@ -6534,6 +6545,32 @@ static bool32 TryCheekPouch(u32 battlerId, u32 itemId)
     return FALSE;
 }
 
+static bool32 TryDeactivateBerryBoost(u32 battlerId, u32 itemId)
+{
+    int i;
+
+    if (!gSpecialStatuses[battlerId].berryBoosted)
+        return FALSE;
+
+    for (i = 0; gBerryBoosts[i].item != 0xFFFF; i++)
+    {
+        if (gBerryBoosts[i].item == itemId)
+        {
+            gSpecialStatuses[battlerId].berryBoosted = 0;
+            SET_STATCHANGER(gBerryBoosts[i].stat1, gBerryBoosts[i].boost1, TRUE);
+            if (gBerryBoosts[i].boost2)
+                SET_STATCHANGER2(gBattleScripting.savedStatChanger, gBerryBoosts[i].stat2, gBerryBoosts[i].boost2, TRUE);
+            else
+                gBattleScripting.savedStatChanger = 0;
+            gBattlerAbility = battlerId;
+            BattleScriptPush(gBattlescriptCurrInstr + 2);
+            gBattlescriptCurrInstr = BattleScript_BerryBoostDeactivates;
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
 static void Cmd_removeitem(void)
 {
     u16 itemId = 0;
@@ -6552,8 +6589,11 @@ static void Cmd_removeitem(void)
     MarkBattlerForControllerExec(gActiveBattler);
 
     ClearBattlerItemEffectHistory(gActiveBattler);
-    if (!TryCheekPouch(gActiveBattler, itemId))
+    if (!TryCheekPouch(gActiveBattler, itemId)
+     && !TryDeactivateBerryBoost(gActiveBattler, itemId))
+    {
         gBattlescriptCurrInstr += 2;
+    }
 }
 
 static void Cmd_atknameinbuff1(void)
