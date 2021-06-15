@@ -77,19 +77,19 @@ RustboroCity_PokemonSchool_EventScript_StudentNotebook:: @ 8213F8C
 RustboroCity_PokemonSchool_EventScript_Teacher:: @ 8213F95
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_ASSUALT_VEST, RustboroCity_PokemonSchool_EventScript_GaveQuickClaw
+	goto_if_set FLAG_RECEIVED_QUICK_CLAW, RustboroCity_PokemonSchool_EventScript_GaveQuickClaw
 	compare VAR_FACING, DIR_EAST
 	call_if_eq RustboroCity_PokemonSchool_EventScript_TeacherCheckOnStudentsEast
 	compare VAR_FACING, DIR_WEST
 	call_if_eq RustboroCity_PokemonSchool_EventScript_TeacherCheckOnStudentsWest
 	msgbox RustboroCity_PokemonSchool_Text_StudentsWhoDontStudyGetQuickClaw, MSGBOX_DEFAULT
-	giveitem ITEM_ASSAULT_VEST
+	giveitem ITEM_QUICK_CLAW
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	closemessage
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFastestDown
 	waitmovement 0
-	setflag FLAG_RECEIVED_ASSUALT_VEST
+	setflag FLAG_RECEIVED_QUICK_CLAW
 	release
 	end
 
@@ -248,7 +248,7 @@ RustboroCity_PokemonSchool_Text_ExplainFreeze: @ 82143B8
 
 RustboroCity_PokemonSchool_Text_StudentsWhoDontStudyGetQuickClaw: @ 8214433
 	.string "Students who don't study get a little\n"
-	.string "taste of my Assualt Vest.\p"
+	.string "taste of my Quick Claw.\p"
 	.string "Whether or not you are a good student \n"
 	.string "will be evident from the way you use\l"
 	.string "this item.$"
