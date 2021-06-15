@@ -4880,6 +4880,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/WalmoreTown_PokemonCenter/border.bin",
       "blockdata_filepath": "data/layouts/WalmoreTown_PokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALMORE_TOWN_POKEMON_SCHOOL",
+      "name": "WalmoreTown_PokemonSchool_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonSchool",
+      "border_filepath": "data/layouts/WalmoreTown_PokemonSchool/border.bin",
+      "blockdata_filepath": "data/layouts/WalmoreTown_PokemonSchool/map.bin"
     }
   ]
 }

@@ -1158,3 +1158,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/Route1022/scripts.inc"
 
 	.include "data/maps/WalmoreTown_PokemonCenter/scripts.inc"
+
+	.include "data/maps/WalmoreTown_PokemonSchool/scripts.inc"

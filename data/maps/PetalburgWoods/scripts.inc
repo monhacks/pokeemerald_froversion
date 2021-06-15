@@ -9,7 +9,7 @@ PetalburgWoods_EventScript_DevonResearcherLeft:: @ 822DFD7
 	call PetalburgWoods_EventScript_DevonResearcherIntro
 	applymovement LOCALID_DEVON_EMPLOYEE, PetalburgWoods_Movement_DevonResearcherApproachPlayerLeft
 	waitmovement 0
-	msgbox PetalburgWoods_Text_HaveYouSeenShroomish, MSGBOX_DEFAULT
+	msgbox PetalburgWoods_Text_HaveYouSeenSeedot, MSGBOX_DEFAULT
 	closemessage
 	playbgm MUS_ENCOUNTER_AQUA, 0
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaEntrance
@@ -46,7 +46,7 @@ PetalburgWoods_EventScript_DevonResearcherRight:: @ 822E079
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestLeft
 	waitmovement 0
-	msgbox PetalburgWoods_Text_HaveYouSeenShroomish, MSGBOX_DEFAULT
+	msgbox PetalburgWoods_Text_HaveYouSeenSeedot, MSGBOX_DEFAULT
 	closemessage
 	playbgm MUS_ENCOUNTER_AQUA, 0
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaEntrance
@@ -103,7 +103,7 @@ PetalburgWoods_EventScript_BagFull:: @ 822E17D
 	end
 
 PetalburgWoods_EventScript_DevonResearcherFinish:: @ 822E18B
-	msgbox PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro, MSGBOX_DEFAULT
+	msgbox PetalburgWoods_Text_TeamAquaAfterSomethingInSummit, MSGBOX_DEFAULT
 	applymovement LOCALID_DEVON_EMPLOYEE, PetalburgWoods_Movement_DevonResearcherStartExit
 	waitmovement 0
 	msgbox PetalburgWoods_Text_ICantBeWastingTime, MSGBOX_DEFAULT
