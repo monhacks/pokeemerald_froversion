@@ -7990,3 +7990,11 @@ BattleScript_BerryBoostDeactivates2:
 BattleScript_BerryBoostDeactivatesEnd:
 	copybyte gBattlerAttacker, sSAVED_BATTLER
 	return
+
+BattleScript_AutosubActivates::
+	call BattleScript_AbilityPopUp
+	playmoveanimation BS_ABILITY_BATTLER, MOVE_SUBSTITUTE
+	waitanimation
+	printstring STRINGID_AUTOSUB
+	waitmessage 0x40
+	end3

@@ -228,6 +228,7 @@ struct WishFutureKnock
     u8 wishMonId[MAX_BATTLERS_COUNT];
     u8 weatherDuration;
     u8 knockedOffMons[2]; // Each battler is represented by a bit. The array entry is dependent on the battler's side.
+    u8 autosubMons[2];
 };
 
 struct AI_SavedBattleMon

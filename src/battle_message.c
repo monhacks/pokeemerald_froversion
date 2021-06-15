@@ -710,6 +710,7 @@ static const u8 sText_PoisonFieldStarts[] = _("The battlefield is filled\nwith p
 static const u8 sText_PoisonFieldSwitchIn[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nwas poisoned!");
 static const u8 sText_PoisonFieldIntensifies[] = _("The poisonous fumes intensify!");
 static const u8 sText_TypeChangeItem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nmade it {B_BUFF1} type!");
+static const u8 sText_Autosub[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade a SUBSTITUTE!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1283,6 +1284,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_POISONFIELDSWITCHIN - 12] = sText_PoisonFieldSwitchIn,
     [STRINGID_POISONFIELDINTENSIFIES - 12] = sText_PoisonFieldIntensifies,
     [STRINGID_TYPECHANGEITEM - 12] = sText_TypeChangeItem,
+    [STRINGID_AUTOSUB - 12] = sText_Autosub,
 };
 
 const u16 gTerrainStringIds[] =

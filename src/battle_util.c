@@ -4246,6 +4246,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 }
             }
             break;
+        case ABILITY_AUTOSUB:
+            if (!(gBattleMons[battler].status2 & STATUS2_SUBSTITUTE)
+             && !(gWishFutureKnock.autosubMons[GetBattlerSide(battler)] & gBitTable[gBattlerPartyIndexes[battler]]))
+            {
+                gBattleScripting.battler = gBattlerAbility = battler;
+                gWishFutureKnock.autosubMons[GetBattlerSide(battler)] |= gBitTable[gBattlerPartyIndexes[battler]];
+                gBattleMons[battler].status2 |= STATUS2_SUBSTITUTE;
+                gBattleMons[battler].status2 &= ~(STATUS2_WRAPPED);
+                gDisableStructs[battler].substituteHP = gBattleMons[battler].maxHP / 4;
+                BattleScriptPushCursorAndCallback(BattleScript_AutosubActivates);
+                effect++;
+                break;
+            }
         }
         break;
     case ABILITYEFFECT_ENDTURN: // 1

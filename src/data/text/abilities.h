@@ -256,6 +256,7 @@ static const u8 sGrimNeighDescription[] = _("KOs boost Sp. Atk stat.");
 static const u8 sAsOneIceRiderDescription[] = _("Unnerve and Chilling Neigh.");
 static const u8 sAsOneShadowRiderDescription[] = _("Unnerve and Grim Neigh.");
 static const u8 sBerryBoostDescription[] = _("Powered up by berries.");
+static const u8 sAutosubDescription[] = _("One-time duplicate.");
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 {
@@ -530,6 +531,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_AS_ONE_SHADOW_RIDER] = _("As One"),
     [ABILITY_SPACE_SHIFT] = _("Space Shift"),
     [ABILITY_BERRY_BOOST] = _("Berry Boost"),
+    [ABILITY_AUTOSUB] = _("Autosub"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -804,4 +806,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_AS_ONE_SHADOW_RIDER] = sAsOneShadowRiderDescription,
     [ABILITY_SPACE_SHIFT] = sSpaceShiftDescription,
     [ABILITY_BERRY_BOOST] = sBerryBoostDescription,
+    [ABILITY_AUTOSUB] = sAutosubDescription,
 };
