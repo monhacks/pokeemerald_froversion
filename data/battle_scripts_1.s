@@ -2559,7 +2559,7 @@ BattleScript_EffectRoar::
 	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
 	jumpifbattletype BATTLE_TYPE_ARENA, BattleScript_ButItFailed
 BattleScript_ForceRandomSwitch::
-	forcerandomswitch BattleScript_ButItFailed
+	forcerandomswitch BattleScript_RoarSuccessSwitch BattleScript_RoarSuccessEndBattle BattleScript_ButItFailed
 
 BattleScript_EffectMultiHit::
 	attackcanceler
@@ -7998,3 +7998,47 @@ BattleScript_AutosubActivates::
 	printstring STRINGID_AUTOSUB
 	waitmessage 0x40
 	end3
+
+BattleScript_CounterActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_COUNTERED
+	waitmessage 0x40
+	copybyte sBATTLER, gBattlerTarget
+	copybyte gBattlerTarget, gBattlerAttacker
+	copybyte gBattlerAttacker, sBATTLER
+	playmoveanimation BS_ATTACKER, MOVE_COUNTER
+	waitanimation
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	bichalfword gMoveResultFlags, MOVE_RESULT_NO_EFFECT
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	tryfaintmon BS_TARGET, FALSE, NULL
+	forcerandomswitch BattleScript_CounterSwitch BattleScript_CounterLowerSpeed BattleScript_CounterLowerSpeed
+
+BattleScript_CounterSwitch:
+	switchoutabilities BS_TARGET
+	returntoball BS_TARGET
+	waitstate
+	getswitchedmondata BS_TARGET
+	switchindataupdate BS_TARGET
+	switchinanim BS_TARGET, FALSE
+	waitstate
+	printstring STRINGID_PKMNWASDRAGGEDOUT
+	switchineffects BS_TARGET
+	copybyte sBATTLER, gBattlerTarget
+	copybyte gBattlerTarget, gBattlerAttacker
+	copybyte gBattlerAttacker, sBATTLER
+	return
+
+BattleScript_CounterLowerSpeed:
+	setgraphicalstatchangevalues
+	statbuffchange MOVE_EFFECT_CERTAIN, BattleScript_CounterLowerSpeedEnd
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	waitanimation
+	printfromtable gStatDownStringIds
+	waitmessage 0x40
+BattleScript_CounterLowerSpeedEnd:
+	copybyte sBATTLER, gBattlerTarget
+	copybyte gBattlerTarget, gBattlerAttacker
+	copybyte gBattlerAttacker, sBATTLER
+	return

@@ -377,5 +377,6 @@ extern const u8 BattleScript_TypeChangeItem[];
 extern const u8 BattleScript_BerryBoostActivates[];
 extern const u8 BattleScript_BerryBoostDeactivates[];
 extern const u8 BattleScript_AutosubActivates[];
+extern const u8 BattleScript_CounterActivates[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

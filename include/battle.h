@@ -119,6 +119,7 @@ struct ProtectStruct
     u32 spikyShielded:1;
     u32 kingsShielded:1;
     u32 banefulBunkered:1;
+    u32 countered:1;
     u32 endured:1;
     u32 noValidMoves:1;
     u32 helpingHand:1;
@@ -229,6 +230,7 @@ struct WishFutureKnock
     u8 weatherDuration;
     u8 knockedOffMons[2]; // Each battler is represented by a bit. The array entry is dependent on the battler's side.
     u8 autosubMons[2];
+    u8 counterMons[2];
 };
 
 struct AI_SavedBattleMon
@@ -552,6 +554,7 @@ struct BattleStruct
     u8 poisonFieldTimer;
     u8 poisonFieldIntensity;
     u8 poisonFieldSwitchInCounter;
+    u16 counterDamage;
 };
 
 #define GET_MOVE_TYPE(move, typeArg)                        \

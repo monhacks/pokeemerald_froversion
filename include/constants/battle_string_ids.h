@@ -584,8 +584,9 @@
 #define STRINGID_POISONFIELDINTENSIFIES 580
 #define STRINGID_TYPECHANGEITEM 581
 #define STRINGID_AUTOSUB 582
+#define STRINGID_COUNTERED 583
 
-#define BATTLESTRINGS_COUNT     583
+#define BATTLESTRINGS_COUNT     584
 
 //// multichoice message IDs
 // switch in ability message

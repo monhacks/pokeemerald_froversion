@@ -1789,6 +1789,24 @@ static void Cmd_adjustdamage(void)
     if (gBattleMons[gBattlerTarget].hp > gBattleMoveDamage)
         goto END;
 
+    if (gProtectStructs[gBattlerTarget].countered)
+    {
+        gBattleStruct->counterDamage += gBattleMoveDamage;
+        gBattleMoveDamage = 0;
+        goto END;
+    }
+    else if (GetBattlerAbility(gBattlerTarget) == ABILITY_COUNTER
+     && IS_MOVE_PHYSICAL(gCurrentMove)
+     && !(gWishFutureKnock.counterMons[GetBattlerSide(gBattlerTarget)] & gBitTable[gBattlerPartyIndexes[gBattlerTarget]]))
+    {
+        gWishFutureKnock.counterMons[GetBattlerSide(gBattlerTarget)] |= gBitTable[gBattlerPartyIndexes[gBattlerTarget]];
+        RecordAbilityBattle(gBattlerTarget, ABILITY_COUNTER);
+        gProtectStructs[gBattlerTarget].countered = 1;
+        gBattleStruct->counterDamage = gBattleMoveDamage;
+        gBattleMoveDamage = 0;
+        goto END;
+    }
+
     holdEffect = GetBattlerHoldEffect(gBattlerTarget, TRUE);
     param = GetBattlerHoldEffectParam(gBattlerTarget);
 
@@ -5100,6 +5118,20 @@ static void Cmd_moveend(void)
                     }
                     return;
                 }
+            }
+            gBattleScripting.moveendState++;
+            break;
+        case MOVEEND_COUNTER:
+            if (gProtectStructs[gBattlerTarget].countered)
+            {
+                gProtectStructs[gBattlerTarget].countered = 0;
+                gBattleMoveDamage = gBattleStruct->counterDamage / 4;
+                if (gBattleMoveDamage == 0)
+                    gBattleMoveDamage = 1;
+                SET_STATCHANGER(STAT_SPEED, 1, TRUE);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_CounterActivates;
+                return;
             }
             gBattleScripting.moveendState++;
             break;
@@ -9436,12 +9468,12 @@ static void Cmd_forcerandomswitch(void)
 
         if (validMons <= minNeeded)
         {
-            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 9);
         }
         else
         {
             *(gBattleStruct->field_58 + gBattlerTarget) = gBattlerPartyIndexes[gBattlerTarget];
-            gBattlescriptCurrInstr = BattleScript_RoarSuccessSwitch;
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
 
             do
             {
@@ -9476,9 +9508,9 @@ static void Cmd_forcerandomswitch(void)
     {
         // In normal wild doubles, Roar will always fail if the user's level is less than the target's.
         if (gBattleMons[gBattlerAttacker].level >= gBattleMons[gBattlerTarget].level)
-            gBattlescriptCurrInstr = BattleScript_RoarSuccessEndBattle;
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
         else
-            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 9);
     }
 }
 
