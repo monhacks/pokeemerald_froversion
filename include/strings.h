@@ -1297,7 +1297,7 @@ extern const u8 gText_TrainerHill2F[];
 extern const u8 gText_TrainerHill3F[];
 extern const u8 gText_TrainerHill4F[];
 extern const u8 gText_AbilityLearnsets[];
-extern const u8 gText_NatureMints[];
+extern const u8 gText_TypeEffectiveness[];
 
 // Cable Club multichoice text
 extern const u8 CableClub_Text_TradeUsingLinkCable[];

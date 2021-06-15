@@ -774,7 +774,7 @@ static const struct MenuAction MultichoiceList_TagMatchType[] =
 static const struct MenuAction MultichoiceList_NewMechanics[] =
 {
     {gText_AbilityLearnsets},
-    {gText_NatureMints},
+    {gText_TypeEffectiveness},
     {gText_HeldItems},
     {gText_Exit},
 };

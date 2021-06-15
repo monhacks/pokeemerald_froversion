@@ -6988,7 +6988,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Mudkip[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute103Treecko[] = {
     {
     .iv = 0,
-    .lvl = 5,
+    .lvl = 3,
     .species = SPECIES_RASCALOOT,
     }
 };
