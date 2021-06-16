@@ -838,7 +838,7 @@ static const struct AbilitySetter sMorphloAbilitySet[] =
     {ABILITY_TORRENT, 1},
     {ABILITY_CONTRARY, 15},
     {ABILITY_ARENA_TRAP, 35},
-    {ABILITY_DOWNLOAD, 54},
+    {ABILITY_COUNTER, 45},
     ABILITY_SET_END
 };
 
@@ -847,7 +847,7 @@ static const struct AbilitySetter sRascalootAbilitySet[] =
     {ABILITY_OVERGROW, 1},
     {ABILITY_SKILL_LINK, 15},
     {ABILITY_HARVEST, 30},
-    {ABILITY_INTIMIDATE, 45},
+    {ABILITY_BERRY_BOOST, 45},
     ABILITY_SET_END
 };
 
@@ -856,16 +856,16 @@ static const struct AbilitySetter sEmborypsAbilitySet[] =
     {ABILITY_BLAZE, 1},
     {ABILITY_MAGMA_ARMOR, 15},
     {ABILITY_FLASH_FIRE, 30},
-    {ABILITY_FLARE_BOOST, 45},
+    {ABILITY_AUTOSUB, 45},
     ABILITY_SET_END
 };
 
 static const struct AbilitySetter sHuntorypsAbilitySet[] = 
 {
     {ABILITY_BLAZE, 1},
-    {ABILITY_MAGMA_ARMOR, 15},
-    {ABILITY_FLASH_FIRE, 30},
-    {ABILITY_EARLY_BIRD, 45},
+    {ABILITY_FLASH_FIRE, 15},
+    {ABILITY_EARLY_BIRD, 30},
+    {ABILITY_AUTOSUB, 45},
     ABILITY_SET_END
 };
 
@@ -874,7 +874,7 @@ static const struct AbilitySetter sRiptorypsAbilitySet[] =
     {ABILITY_BLAZE, 1},
     {ABILITY_MAGMA_ARMOR, 15},
     {ABILITY_FLASH_FIRE, 30},
-    {ABILITY_MULTISCALE, 45},
+    {ABILITY_AUTOSUB, 45},
     ABILITY_SET_END
 };
 
