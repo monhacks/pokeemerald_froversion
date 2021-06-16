@@ -5125,13 +5125,16 @@ static void Cmd_moveend(void)
             if (gProtectStructs[gBattlerTarget].countered)
             {
                 gProtectStructs[gBattlerTarget].countered = 0;
-                gBattleMoveDamage = gBattleStruct->counterDamage / 4;
-                if (gBattleMoveDamage == 0)
-                    gBattleMoveDamage = 1;
-                SET_STATCHANGER(STAT_SPEED, 1, TRUE);
-                BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_CounterActivates;
-                return;
+                if (IsBattlerAlive(gBattlerAttacker))
+                {
+                    gBattleMoveDamage = gBattleStruct->counterDamage / 4;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    SET_STATCHANGER(STAT_SPEED, 1, TRUE);
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_CounterActivates;
+                    return;
+                }
             }
             gBattleScripting.moveendState++;
             break;
