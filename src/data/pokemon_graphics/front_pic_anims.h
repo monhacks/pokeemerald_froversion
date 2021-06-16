@@ -5031,7 +5031,7 @@ static const union AnimCmd sAnim_PASSIMIAN_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_ROCK_CACTUS_STAGE_1_1[] = 
+static const union AnimCmd sAnim_CACTAR_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
@@ -7610,9 +7610,9 @@ static const union AnimCmd *const sAnims_PASSIMIAN[] ={
     sAnim_GeneralFrame0,
     sAnim_PASSIMIAN_1,
 };
-static const union AnimCmd *const sAnims_ROCK_CACTUS_STAGE_1[] ={
+static const union AnimCmd *const sAnims_CACTAR[] ={
     sAnim_GeneralFrame0,
-    sAnim_ROCK_CACTUS_STAGE_1_1,
+    sAnim_CACTAR_1,
 };
 static const union AnimCmd *const sAnims_ROCK_CACTUS_STAGE_2[] ={
     sAnim_GeneralFrame0,
@@ -8289,7 +8289,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(BILLFALO),
     ANIM_CMD(SABLIZZARD),
     ANIM_CMD(PASSIMIAN),
-    ANIM_CMD(ROCK_CACTUS_STAGE_1),
+    ANIM_CMD(CACTAR),
     ANIM_CMD(ROCK_CACTUS_STAGE_2),
     ANIM_CMD(CRACKTUSS),
     ANIM_CMD(DRACASTER),

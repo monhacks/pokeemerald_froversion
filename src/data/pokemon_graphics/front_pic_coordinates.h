@@ -2390,7 +2390,7 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_ROCK_CACTUS_STAGE_1] =
+    [SPECIES_CACTAR] =
     {
         .size = 0x88,
         .y_offset = 0x00,

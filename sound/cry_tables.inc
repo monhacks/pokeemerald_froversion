@@ -426,7 +426,7 @@ cry Cry_Pilopoo
 cry Cry_Billfalo
 cry Cry_Sablizzard
 cry Cry_Passimian
-cry Cry_Rock_Cactus_Stage_1
+cry Cry_Cactar
 cry Cry_Rock_Cactus_Stage_2
 cry Cry_Cracktuss
 cry Cry_Dracaster
@@ -902,7 +902,7 @@ cry2 Cry_Pilopoo
 cry2 Cry_Billfalo
 cry2 Cry_Sablizzard
 cry2 Cry_Passimian
-cry2 Cry_Rock_Cactus_Stage_1
+cry2 Cry_Cactar
 cry2 Cry_Rock_Cactus_Stage_2
 cry2 Cry_Cracktuss
 cry2 Cry_Dracaster

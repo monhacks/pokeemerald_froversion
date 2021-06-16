@@ -902,6 +902,15 @@ static const struct AbilitySetter sKabowlAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sCactarAbilitySet[] = 
+{
+    {ABILITY_ROUGH_SKIN, 1},
+    {ABILITY_STURDY, 22},
+    {ABILITY_SAND_FORCE, 41},
+    ABILITY_SET_END
+};
+
+
 
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
@@ -1066,6 +1075,9 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_CHAD_BUG_2] = sChad_Bug_1AbilitySet,
     [SPECIES_KABOWL] = sKabowlAbilitySet,
     [SPECIES_BOWLAST] = sKabowlAbilitySet,
+    [SPECIES_CACTAR] = sCactarAbilitySet,
+    [SPECIES_ROCK_CACTUS_STAGE_2] = sCactarAbilitySet,
+    [SPECIES_CRACKTUSS] = sCactarAbilitySet,
 
 
 

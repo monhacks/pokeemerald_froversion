@@ -5054,12 +5054,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_ROCK_CACTUS_STAGE_1] =
+[NATIONAL_DEX_CACTAR] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gRock_Cactus_Stage_1PokedexText,
+        .description = gCactarPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,

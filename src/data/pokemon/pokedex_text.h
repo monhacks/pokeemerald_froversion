@@ -2505,7 +2505,7 @@ const u8 gPassimianPokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gRock_Cactus_Stage_1PokedexText[] = _(
+const u8 gCactarPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"
