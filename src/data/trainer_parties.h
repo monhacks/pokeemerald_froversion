@@ -3444,23 +3444,26 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     {
     .iv = 200,
     .lvl = 33,
-    .species = SPECIES_CRADILY,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_SHOCK_WAVE, MOVE_LEER, MOVE_QUICK_ATTACK, MOVE_HOWL}
+    .species = SPECIES_SANDSLASH,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_DIG, MOVE_FURY_SWIPES, MOVE_ROCK_TOMB, MOVE_DEFENSE_CURL},
+    .abilityNum = 1
     },
     {
     .iv = 220,
     .lvl = 33,
     .species = SPECIES_RHYHORN,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SUPERSONIC, MOVE_SHOCK_WAVE, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM}
+    .moves = {MOVE_BULLDOZE, MOVE_CHIP_AWAY, MOVE_DRILL_RUN, MOVE_ROCK_TOMB},
+    .abilityNum = 2
     },
     {
     .iv = 250,
     .lvl = 35,
-    .species = SPECIES_ROCK_CACTUS_STAGE_2,
+    .species = SPECIES_CRACKTUSS,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE, MOVE_SHOCK_WAVE, MOVE_HOWL}
+    .moves = {MOVE_INGRAIN, MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_ROCK_TOMB},
+    .abilityNum = 0
     }
 };
 
