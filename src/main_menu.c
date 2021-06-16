@@ -1704,7 +1704,10 @@ static void Task_NewGameBirchSpeech_WaitForSpriteFadeInAndTextPrinter(u8 taskId)
             // NewGameBirchSpeech_StartFadeOutTarget1InTarget2(taskId, 2);
             // NewGameBirchSpeech_StartFadePlatformIn(taskId, 1);
             gTasks[taskId].tTimer = 64;
-            gTasks[taskId].func = Task_NewGameBirchSpeech_AreYouReady;
+            //gTasks[taskId].func = Task_NewGameBirchSpeech_AreYouReady;
+            StringExpandPlaceholders(gStringVar4, gText_Birch_AreYouReady);
+            AddTextPrinterForMessage(1);
+            gTasks[taskId].func = Task_NewGameBirchSpeech_ShrinkPlayer;
         }
     }
 }
@@ -1753,7 +1756,7 @@ static void Task_NewGameBirchSpeech_ShrinkPlayer(u8 taskId)
             gSprites[spriteId].affineAnims = sSpriteAffineAnimTable_PlayerShrink;
             InitSpriteAffineAnim(&gSprites[spriteId]);
             StartSpriteAffineAnim(&gSprites[spriteId], 0);
-            gSprites[spriteId].callback = SpriteCB_MovePlayerDownWhileShrinking;
+			gSprites[spriteId].callback = SpriteCB_MovePlayerDownWhileShrinking;
             BeginNormalPaletteFade(0x0000FFFF, 0, 0, 16, RGB_BLACK);
             FadeOutBGM(4);
             gTasks[taskId].func = Task_NewGameBirchSpeech_WaitForPlayerShrink;
@@ -1766,7 +1769,11 @@ static void Task_NewGameBirchSpeech_WaitForPlayerShrink(u8 taskId)
     u8 spriteId = gTasks[taskId].tPlayerSpriteId;
 
     if (gSprites[spriteId].affineAnimEnded)
-        gTasks[taskId].func = Task_NewGameBirchSpeech_FadePlayerToWhite;
+    gSprites[gTasks[taskId].tBirchSpriteId].oam.objMode = ST_OAM_OBJ_BLEND;
+    gSprites[gTasks[taskId].tLotadSpriteId].oam.objMode = ST_OAM_OBJ_BLEND;
+    NewGameBirchSpeech_StartFadeOutTarget1InTarget2(taskId, 2);
+    NewGameBirchSpeech_StartFadePlatformIn(taskId, 1);    
+	gTasks[taskId].func = Task_NewGameBirchSpeech_FadePlayerToWhite;
 }
 
 static void Task_NewGameBirchSpeech_FadePlayerToWhite(u8 taskId)
