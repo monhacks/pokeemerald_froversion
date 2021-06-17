@@ -664,7 +664,7 @@ T_LakeMeadVillage_Isiah_ProfIsOut:
 	.string "Sup Fro, I came by your house to \ntell you the professor is out in \ldoing field research and to look \lfor him on Jagow Way.$"
 	
 T_LakeMeadVillage_Isiah_ProfIsOutTakePotion:
-	.string "Sup Fro, I came by your house to \ntell you the professor is out in \llook for him on Jagow Way.\p"
+	.string "Sup Fro, I came by your house to \ntell you the professor is out and \llook for him on Jagow Way.\p"
 	.string "Isiah stole a potion from your bag.$"
 
 T_LakeMeadVillage_Isiah_HaventSeenThem:
