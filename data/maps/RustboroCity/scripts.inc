@@ -142,7 +142,7 @@ RustboroCity_Movement_ScientistLeave: @ 81E085D
 RustboroCity_EventScript_FatMan:: @ 81E085F
 	lock
 	faceplayer
-	goto_if_set FLAG_DEVON_GOODS_STOLEN, RustboroCity_EventScript_FatManSawGrunt
+	goto_if_set FLAG_COLANGELO_GEARS_STOLEN, RustboroCity_EventScript_FatManSawGrunt
 	msgbox RustboroCity_Text_WeShortenItToDevon, MSGBOX_DEFAULT
 	release
 	end
@@ -201,8 +201,8 @@ RustboroCity_EventScript_TunnelSign:: @ 81E08E3
 	msgbox RustboroCity_Text_TunnelNearingCompletion, MSGBOX_SIGN
 	end
 
-RustboroCity_EventScript_DevonCorpSign:: @ 81E08EC
-	msgbox RustboroCity_Text_DevonCorpSign, MSGBOX_SIGN
+RustboroCity_EventScript_ColangeloGraphicsSign:: @ 81E08EC
+	msgbox RustboroCity_Text_ColangeloGraphicsSign, MSGBOX_SIGN
 	end
 
 RustboroCity_EventScript_GymSign:: @ 81E08F5
@@ -210,8 +210,8 @@ RustboroCity_EventScript_GymSign:: @ 81E08F5
 	end
 
 @ Unused
-RustboroCity_EventScript_DevonCorpBranchOfficeSign:: @ 81E08FE
-	msgbox RustboroCity_Text_DevonCorpBranchOfficeSign, MSGBOX_SIGN
+RustboroCity_EventScript_ColangeloGraphicsBranchOfficeSign:: @ 81E08FE
+	msgbox RustboroCity_Text_ColangeloGraphicsBranchOfficeSign, MSGBOX_SIGN
 	end
 
 RustboroCity_EventScript_CitySign:: @ 81E0907
@@ -310,7 +310,7 @@ RustboroCity_EventScript_StolenGoodsScene:: @ 81E09CD
 	removeobject LOCALID_DEVON_EMPLOYEE
 	setobjectxyperm LOCALID_DEVON_EMPLOYEE, 30, 10
 	clearflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
-	setflag FLAG_DEVON_GOODS_STOLEN
+	setflag FLAG_COLANGELO_GEARS_STOLEN
 	setvar VAR_RUSTBORO_CITY_STATE, 2
 	setvar VAR_RUSTURF_TUNNEL_STATE, 2
 	setvar VAR_ROUTE116_STATE, 1
@@ -470,7 +470,7 @@ RustboroCity_Movement_EmployeeApproachPlayerFar: @ 81E0AD5
 RustboroCity_EventScript_DevonEmployee1:: @ 81E0ADD
 	lock
 	faceplayer
-	goto_if_set FLAG_RECOVERED_DEVON_GOODS, RustboroCity_EventScript_ReturnGoodsSpokeToEmployee
+	goto_if_set FLAG_RECOVERED_COLANGELO_GEARS, RustboroCity_EventScript_ReturnGoodsSpokeToEmployee
 	msgbox RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel, MSGBOX_DEFAULT
 	release
 	end
@@ -617,11 +617,11 @@ RustboroCity_EventScript_ReturnGoods:: @ 81E0C5B
 	call_if_eq RustboroCity_EventScript_BagFull
 	msgbox RustboroCity_Text_PleaseComeWithMe, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_RETURNED_DEVON_GOODS
+	setflag FLAG_RETURNED_COLANGELO_GEARS
 	setflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
 	setvar VAR_RUSTBORO_CITY_STATE, 5
 	delay 30
-	warp MAP_RUSTBORO_CITY_DEVON_CORP_3F, 255, 2, 2
+	warp MAP_RUSTBORO_CITY_COLANGELO_GRAPHICS_3F, 255, 2, 2
 	waitstate
 	releaseall
 	end
@@ -1125,14 +1125,14 @@ RustboroCity_Text_OutOfTheWay: @ 81E17FE
 
 RustboroCity_Text_WaitDontTakeMyGoods: @ 81E1817
 	.string "Wait! Pleeeaaase!\p"
-	.string "Don't take my GOODS!$"
+	.string "Don't take my Manifest!$"
 
 RustboroCity_Text_HelpMeIWasRobbed: @ 81E183E
 	.string "Oh, it's you!\p"
-	.string "You're that fantastic TRAINER who\n"
-	.string "helped me in PETALBURG WOODS!\p"
+	.string "You're that fantastic trainer who\n"
+	.string "helped me in Jagow Woods!\p"
 	.string "Help me! I was robbed by TEAM AQUA!\n"
-	.string "I have to get the DEVON GOODS back!\p"
+	.string "I have to get the Colangelo Gears \lback!\p"
 	.string "If I don't…\n"
 	.string "I'm going to be in serious trouble.$"
 
@@ -1142,7 +1142,7 @@ RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel: @ 81E1904
 
 RustboroCity_Text_YouGotItThankYou: @ 81E194D
 	.string "Oh! How did it go?\n"
-	.string "The DEVON GOODS?\p"
+	.string "The Colangelo Gears?\p"
 	.string "You did!\n"
 	.string "You got them back!\p"
 	.string "You really are a great TRAINER!\p"
@@ -1257,7 +1257,7 @@ RustboroCity_Text_TunnelNearingCompletion: @ 81E20A6
 	.string "there's also a big “X” splashed\l"
 	.string "across it in red paint…$"
 
-RustboroCity_Text_DevonCorpSign: @ 81E2128
+RustboroCity_Text_ColangeloGraphicsSign: @ 81E2128
 	.string "DEVON CORPORATION\p"
 	.string "“For all your living needs, we make\n"
 	.string "it all.”$"
@@ -1267,7 +1267,7 @@ RustboroCity_Text_GymSign: @ 81E2167
 	.string "LEADER: ROXANNE\p"
 	.string "“The ROCK-loving honors student!”$"
 
-RustboroCity_Text_DevonCorpBranchOfficeSign: @ 81E21B3
+RustboroCity_Text_ColangeloGraphicsBranchOfficeSign: @ 81E21B3
 	.string "DEVON CORP. BRANCH OFFICE\p"
 	.string "“Access limited to DEVON employees\n"
 	.string "and authorized personnel.”$"

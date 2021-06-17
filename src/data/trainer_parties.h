@@ -2341,13 +2341,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout8[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Shawn[] = {
     {
     .iv = 100,
-    .lvl = 17,
-    .species = SPECIES_VOLTORB,
+    .lvl = 27,
+    .species = SPECIES_RHYHORN,
     },
     {
     .iv = 100,
-    .lvl = 17,
-    .species = SPECIES_MAGNEMITE,
+    .lvl = 28,
+    .species = SPECIES_GEODUDE,
     }
 };
 

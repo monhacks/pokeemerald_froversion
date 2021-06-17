@@ -5037,7 +5037,7 @@ static const union AnimCmd sAnim_CACTAR_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_ROCK_CACTUS_STAGE_2_1[] = 
+static const union AnimCmd sAnim_CRACTHORN_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
@@ -7614,9 +7614,9 @@ static const union AnimCmd *const sAnims_CACTAR[] ={
     sAnim_GeneralFrame0,
     sAnim_CACTAR_1,
 };
-static const union AnimCmd *const sAnims_ROCK_CACTUS_STAGE_2[] ={
+static const union AnimCmd *const sAnims_CRACTHORN[] ={
     sAnim_GeneralFrame0,
-    sAnim_ROCK_CACTUS_STAGE_2_1,
+    sAnim_CRACTHORN_1,
 };
 static const union AnimCmd *const sAnims_CRACKTUSS[] ={
     sAnim_GeneralFrame0,
@@ -8290,7 +8290,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(SABLIZZARD),
     ANIM_CMD(PASSIMIAN),
     ANIM_CMD(CACTAR),
-    ANIM_CMD(ROCK_CACTUS_STAGE_2),
+    ANIM_CMD(CRACTHORN),
     ANIM_CMD(CRACKTUSS),
     ANIM_CMD(DRACASTER),
     ANIM_CMD(BLUE_EYES),

@@ -2510,7 +2510,7 @@ const u8 gCactarPokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gRock_Cactus_Stage_2PokedexText[] = _(
+const u8 gCracthornPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"

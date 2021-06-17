@@ -186,8 +186,8 @@ DewfordTown_EventScript_SailToSlateport:: @ 81E96E7
 	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	hideobjectat LOCALID_BOAT_DEWFORD, MAP_DEWFORD_TOWN
-	call_if_unset FLAG_DELIVERED_DEVON_GOODS, DewfordTown_EventScript_LandedSlateportDeliverGoods
-	call_if_set FLAG_DELIVERED_DEVON_GOODS, DewfordTown_EventScript_LandedSlateport
+	call_if_unset FLAG_DELIVERED_COLANGELO_GOODS, DewfordTown_EventScript_LandedSlateportDeliverGoods
+	call_if_set FLAG_DELIVERED_COLANGELO_GOODS, DewfordTown_EventScript_LandedSlateport
 	closemessage
 	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
 	resetobjectpriority OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN

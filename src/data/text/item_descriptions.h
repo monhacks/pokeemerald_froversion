@@ -1435,7 +1435,7 @@ static const u8 sWailmerPailDesc[] = _(
     "watering BERRIES\n"
     "and plants.");
 
-static const u8 sDevonGoodsDesc[] = _(
+static const u8 sColangeloGearsDesc[] = _(
     "A package that\n"
     "contains DEVON's\n"
     "machine parts.");

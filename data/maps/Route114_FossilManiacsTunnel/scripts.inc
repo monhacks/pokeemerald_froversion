@@ -48,7 +48,7 @@ Route114_FossilManiacsTunnel_EventScript_FossilManiac:: @ 822AF87
 	end
 
 Route114_FossilManiacsTunnel_EventScript_PlayerHasFossil:: @ 822AFBC
-	msgbox Route114_FossilManiacsTunnel_Text_DevonCorpRevivingFossils, MSGBOX_DEFAULT
+	msgbox Route114_FossilManiacsTunnel_Text_ColangeloGraphicsRevivingFossils, MSGBOX_DEFAULT
 	release
 	end
 
@@ -68,7 +68,7 @@ Route114_FossilManiacsTunnel_Text_LookInDesertForFossils: @ 822AFD0
 	.string "are boulders and sand that may hide\l"
 	.string "FOSSILS…$"
 
-Route114_FossilManiacsTunnel_Text_DevonCorpRevivingFossils: @ 822B0D6
+Route114_FossilManiacsTunnel_Text_ColangeloGraphicsRevivingFossils: @ 822B0D6
 	.string "You found a FOSSIL, didn't you?\n"
 	.string "That's so nice… It's so dreamy…\p"
 	.string "What are you going to do with that\n"

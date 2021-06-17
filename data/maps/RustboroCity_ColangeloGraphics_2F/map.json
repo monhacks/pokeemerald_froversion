@@ -1,7 +1,7 @@
 {
-  "id": "MAP_RUSTBORO_CITY_DEVON_CORP_2F",
-  "name": "RustboroCity_DevonCorp_2F",
-  "layout": "LAYOUT_RUSTBORO_CITY_DEVON_CORP_2F",
+  "id": "MAP_RUSTBORO_CITY_COLANGELO_GRAPHICS_2F",
+  "name": "RustboroCity_ColangeloGraphics_2F",
+  "layout": "LAYOUT_RUSTBORO_CITY_COLANGELO_GRAPHICS_2F",
   "music": "MUS_RUSTBORO",
   "region_map_section": "MAPSEC_RUSTBORO_CITY",
   "requires_flash": false,
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "RustboroCity_DevonCorp_2F_EventScript_TalkToPokemonScientist",
+      "script": "RustboroCity_ColangeloGraphics_2F_EventScript_TalkToPokemonScientist",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "RustboroCity_DevonCorp_2F_EventScript_BallScientist",
+      "script": "RustboroCity_ColangeloGraphics_2F_EventScript_BallScientist",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "RustboroCity_DevonCorp_2F_EventScript_PokenavScientist",
+      "script": "RustboroCity_ColangeloGraphics_2F_EventScript_PokenavScientist",
       "flag": "0"
     },
     {
@@ -63,7 +63,7 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "RustboroCity_DevonCorp_2F_EventScript_PokemonDreamsScientist",
+      "script": "RustboroCity_ColangeloGraphics_2F_EventScript_PokemonDreamsScientist",
       "flag": "0"
     },
     {
@@ -76,7 +76,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "RustboroCity_DevonCorp_2F_EventScript_FossilScientist",
+      "script": "RustboroCity_ColangeloGraphics_2F_EventScript_FossilScientist",
       "flag": "0"
     },
     {
@@ -89,7 +89,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "RustboroCity_DevonCorp_2F_EventScript_MatchCallScientist",
+      "script": "RustboroCity_ColangeloGraphics_2F_EventScript_MatchCallScientist",
       "flag": "0"
     }
   ],
@@ -98,14 +98,14 @@
       "x": 14,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_RUSTBORO_CITY_DEVON_CORP_1F",
+      "dest_map": "MAP_RUSTBORO_CITY_COLANGELO_GRAPHICS_1F",
       "dest_warp_id": 2
     },
     {
       "x": 2,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_RUSTBORO_CITY_DEVON_CORP_3F",
+      "dest_map": "MAP_RUSTBORO_CITY_COLANGELO_GRAPHICS_3F",
       "dest_warp_id": 0
     }
   ],
