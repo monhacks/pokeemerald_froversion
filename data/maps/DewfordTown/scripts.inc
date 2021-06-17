@@ -810,3 +810,35 @@ DewfordTown_Text_YeahDefinitionOfInRightNow: @ 81EA491
 	.string "Yeah, absolutely right!\p"
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
+
+
+////////////////////////////////
+//////Froversion Scripts///////
+//////////////////////////////
+
+RaintreeIsland_EventScript_AmneetTravelingMerchant::
+	lock
+	faceplayer
+	message RaintreeIsland_Text_AmneetRaintreeIslandMerchant
+	waitmessage
+	pokemart RaintreeIsland_Pokemart_Amneet
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+RaintreeIsland_Pokemart_Amneet:
+	.2byte ITEM_SEA_INCENSE
+	.2byte ITEM_CHARCOAL
+	.2byte ITEM_MIRACLE_SEED
+	.2byte ITEM_WIDE_LENS
+	.2byte ITEM_ASSAULT_VEST
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_NONE
+	release
+	end
+
+RaintreeIsland_Text_AmneetRaintreeIslandMerchant:
+	.string "Hey {PLAYER}. Good to see you.\n"
+	.string "I've got some stuff that might\l"
+	.string "help you out.$"
