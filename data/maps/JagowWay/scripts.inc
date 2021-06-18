@@ -37,6 +37,7 @@ Script_JagowWay_StarterBattle::
 	msgbox T_JagowWay_JohnBattleDialouge, MSGBOX_DEFAULT
 	closemessage
 	msgbox T_JagowWay_JohnBattleDialouge2, MSGBOX_DEFAULT
+	setflag FLAG_CAN_LOSE_NEXT_BATTLE
 	switch VAR_STARTER_MON
 	case 1, Script_JagowWay_StarterBattleRascaloot
 	case 2, Script_JagowWay_StarterBattleFlobra

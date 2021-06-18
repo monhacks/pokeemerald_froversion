@@ -7961,7 +7961,7 @@ static const struct LevelUpMove sRuthlashLevelUpLearnset[] = {
 static const struct LevelUpMove sFlobraLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_MOVE( 5, MOVE_WATER_GUN),
+    LEVEL_UP_MOVE( 6, MOVE_WATER_GUN),
     LEVEL_UP_MOVE( 9, MOVE_WRAP),
     LEVEL_UP_MOVE( 13, MOVE_QUICK_ATTACK),
     LEVEL_UP_MOVE( 18, MOVE_COIL),
