@@ -8,7 +8,7 @@ Route116_MapScripts:: @ 81F2C0C
 	.byte 0
 
 Route116_OnTransition: @ 81F2C1C
-	call_if_set FLAG_RECOVERED_DEVON_GOODS, Route116_EventScript_SetWandasBoyfriendPos
+	call_if_set FLAG_RECOVERED_COLANGELO_GEARS, Route116_EventScript_SetWandasBoyfriendPos
 	compare VAR_SHOULD_END_ABNORMAL_WEATHER, 1
 	call_if_eq AbnormalWeather_EventScript_HideMapNamePopup
 	compare VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_116_NORTH
@@ -35,8 +35,8 @@ Route116_OnFrame: @ 81F2C66
 Route116_EventScript_WandasBoyfriend:: @ 81F2C70
 	lock
 	faceplayer
-	goto_if_set FLAG_RECOVERED_DEVON_GOODS, Route116_EventScript_BoyfriendGruntLeftTunnel
-	goto_if_set FLAG_DEVON_GOODS_STOLEN, Route116_EventScript_BoyfriendGruntInTunnel
+	goto_if_set FLAG_RECOVERED_COLANGELO_GEARS, Route116_EventScript_BoyfriendGruntLeftTunnel
+	goto_if_set FLAG_COLANGELO_GEARS_STOLEN, Route116_EventScript_BoyfriendGruntInTunnel
 	msgbox Route116_Text_WantToDigTunnel, MSGBOX_DEFAULT
 	release
 	end
@@ -75,7 +75,7 @@ Route116_EventScript_GiveRepeatBall:: @ 81F2CBB
 	compare VAR_FACING, DIR_EAST
 	call_if_eq Route116_EventScript_DevonEmployeeExitEast
 	removeobject VAR_LAST_TALKED
-	clearflag FLAG_HIDE_RUSTBORO_CITY_DEVON_CORP_3F_EMPLOYEE
+	clearflag FLAG_HIDE_RUSTBORO_CITY_COLANGELO_GRAPHICS_3F_EMPLOYEE
 	setflag FLAG_RECEIVED_REPEAT_BALL
 	release
 	end

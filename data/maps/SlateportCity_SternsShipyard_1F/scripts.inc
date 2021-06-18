@@ -7,8 +7,8 @@ SlateportCity_SternsShipyard_1F_EventScript_Dock:: @ 8207F40
 	lockall
 	goto_if_set FLAG_SYS_GAME_CLEAR, SlateportCity_SternsShipyard_1F_EventScript_FerryReady
 	goto_if_set FLAG_BADGE07_GET, SlateportCity_SternsShipyard_1F_EventScript_BrineyJoined
-	goto_if_set FLAG_DELIVERED_DEVON_GOODS, SlateportCity_SternsShipyard_1F_EventScript_NeedVeteran
-	goto_if_set FLAG_DOCK_REJECTED_DEVON_GOODS, SlateportCity_SternsShipyard_1F_EventScript_GoFindStern
+	goto_if_set FLAG_DELIVERED_COLANGELO_GOODS, SlateportCity_SternsShipyard_1F_EventScript_NeedVeteran
+	goto_if_set FLAG_DOCK_REJECTED_COLANGELO_GEARS, SlateportCity_SternsShipyard_1F_EventScript_GoFindStern
 	msgbox SlateportCity_SternsShipyard_1F_Text_CantMakeHeadsOrTails, MSGBOX_DEFAULT
 	applymovement LOCALID_DOCK, Common_Movement_FacePlayer
 	waitmovement 0
@@ -16,7 +16,7 @@ SlateportCity_SternsShipyard_1F_EventScript_Dock:: @ 8207F40
 	closemessage
 	applymovement LOCALID_DOCK, Common_Movement_FaceOriginalDirection
 	waitmovement 0
-	setflag FLAG_DOCK_REJECTED_DEVON_GOODS
+	setflag FLAG_DOCK_REJECTED_COLANGELO_GEARS
 	setflag FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA
 	releaseall
 	end
@@ -78,7 +78,7 @@ SlateportCity_SternsShipyard_1F_Text_MeetDockDeliverToStern: @ 82080A5
 	.string "CAPT. STERN commissioned me to\n"
 	.string "design a ferry.\p"
 	.string "Oh! That there…\n"
-	.string "Are they DEVON GOODS?\p"
+	.string "Are they Colangelo Gears?\p"
 	.string "But, hmm…\n"
 	.string "This won't do…\p"
 	.string "CAPT. STERN went off somewhere.\n"

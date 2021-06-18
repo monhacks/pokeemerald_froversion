@@ -13620,7 +13620,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_ROCK_CACTUS_STAGE_2] =
+[SPECIES_CRACTHORN] =
     {
         .baseHP        = 67,
         .baseAttack    = 59,

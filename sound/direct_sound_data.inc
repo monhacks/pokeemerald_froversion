@@ -2289,8 +2289,8 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
     Cry_Cactar::
 	.incbin "sound/direct_sound_samples/cries/cactar.bin"
 .align 2
-    Cry_Rock_Cactus_Stage_2::
-	.incbin "sound/direct_sound_samples/cries/rock_cactus_stage_2.bin"
+    Cry_Cracthorn::
+	.incbin "sound/direct_sound_samples/cries/cracthorn.bin"
 .align 2
     Cry_Cracktuss::
 	.incbin "sound/direct_sound_samples/cries/cracktuss.bin"

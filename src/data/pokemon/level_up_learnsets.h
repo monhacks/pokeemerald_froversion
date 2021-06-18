@@ -8260,7 +8260,7 @@ static const struct LevelUpMove sCactarLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 48, MOVE_SANDSTORM),
     LEVEL_UP_END
 };
-static const struct LevelUpMove sRock_Cactus_Stage_2LevelUpLearnset[] = {
+static const struct LevelUpMove sCracthornLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_MUD_SPORT),
     LEVEL_UP_MOVE( 9, MOVE_ROCK_THROW),

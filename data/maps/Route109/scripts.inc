@@ -275,8 +275,8 @@ Route109_Movement_BrineyExitBoat: @ 81EE90D
 Route109_EventScript_MrBriney:: @ 81EE910
 	lock
 	faceplayer
-	goto_if_unset FLAG_DELIVERED_DEVON_GOODS, Route109_EventScript_HaveNotDeliveredDevonGood
-	goto Route109_EventScript_DeliveredDevonGoods
+	goto_if_unset FLAG_DELIVERED_COLANGELO_GOODS, Route109_EventScript_HaveNotDeliveredDevonGood
+	goto Route109_EventScript_DeliveredColangeloGears
 	end
 
 Route109_EventScript_HaveNotDeliveredDevonGood:: @ 81EE921
@@ -287,7 +287,7 @@ Route109_EventScript_HaveNotDeliveredDevonGood:: @ 81EE921
 	goto Route109_EventScript_SailToDewford
 	end
 
-Route109_EventScript_DeliveredDevonGoods:: @ 81EE93F
+Route109_EventScript_DeliveredColangeloGears:: @ 81EE93F
 	message Route109_Text_BrineyWhereAreWeBound
 	waitmessage
 	multichoicedefault 21, 8, MULTI_BRINEY_OFF_DEWFORD, 1, 0
@@ -304,7 +304,7 @@ Route109_EventScript_SailToDewford:: @ 81EE972
 	end
 
 Route109_EventScript_StayHere:: @ 81EE981
-	msgbox Route109_Text_BrineyDeliverDevonGoods, MSGBOX_DEFAULT
+	msgbox Route109_Text_BrineyDeliverColangeloGears, MSGBOX_DEFAULT
 	release
 	end
 
@@ -484,11 +484,11 @@ DewfordTown_Text_BrineyLandedInSlateportDeliverGoods: @ 81EEC1D
 	.string "MR. BRINEY: Ahoy!\n"
 	.string "We've made land in SLATEPORT!\p"
 	.string "I suppose you're going to visit CAPT.\n"
-	.string "STERN and deliver the DEVON GOODS?$"
+	.string "STERN and deliver the Colangelo Gears?$"
 
 Route109_Text_BrineySailToDewfordQuestion: @ 81EEC96
 	.string "MR. BRINEY: I thought you're supposed\n"
-	.string "to deliver the DEVON GOODS.\p"
+	.string "to deliver the Colangelo Gears.\p"
 	.string "Would you like to sail back to\n"
 	.string "DEWFORD, then?$"
 
@@ -497,9 +497,9 @@ Route109_Text_BrineyDewfordItIs: @ 81EED06
 	.string "Anchors aweigh!\n"
 	.string "PEEKO, we're setting sail, my darling!$"
 
-Route109_Text_BrineyDeliverDevonGoods: @ 81EED5E
+Route109_Text_BrineyDeliverColangeloGears: @ 81EED5E
 	.string "MR. BRINEY: Then you go on and deliver\n"
-	.string "the DEVON GOODS. I'll be waiting.$"
+	.string "the Colangelo Gears. I'll be waiting.$"
 
 DewfordTown_Text_BrineyLandedInSlateport: @ 81EEDA7
 	.string "MR. BRINEY: Ahoy! We've made land in\n"

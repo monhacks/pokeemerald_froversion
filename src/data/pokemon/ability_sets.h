@@ -1076,7 +1076,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_KABOWL] = sKabowlAbilitySet,
     [SPECIES_BOWLAST] = sKabowlAbilitySet,
     [SPECIES_CACTAR] = sCactarAbilitySet,
-    [SPECIES_ROCK_CACTUS_STAGE_2] = sCactarAbilitySet,
+    [SPECIES_CRACTHORN] = sCactarAbilitySet,
     [SPECIES_CRACKTUSS] = sCactarAbilitySet,
 
 

@@ -159,14 +159,14 @@
 #define FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY   0x8B
 #define FLAG_RECEIVED_6_SODA_POP             0x8C
 #define FLAG_DEFEATED_SEASHORE_HOUSE         0x8D
-#define FLAG_DEVON_GOODS_STOLEN              0x8E
-#define FLAG_RECOVERED_DEVON_GOODS           0x8F
-#define FLAG_RETURNED_DEVON_GOODS            0x90
+#define FLAG_COLANGELO_GEARS_STOLEN              0x8E
+#define FLAG_RECOVERED_COLANGELO_GEARS           0x8F
+#define FLAG_RETURNED_COLANGELO_GEARS            0x90
 #define FLAG_CAUGHT_LUGIA                    0x91
 #define FLAG_CAUGHT_HO_OH                    0x92
 #define FLAG_MR_BRINEY_SAILING_INTRO         0x93
-#define FLAG_DOCK_REJECTED_DEVON_GOODS       0x94
-#define FLAG_DELIVERED_DEVON_GOODS           0x95
+#define FLAG_DOCK_REJECTED_COLANGELO_GEARS       0x94
+#define FLAG_DELIVERED_COLANGELO_GOODS           0x95
 #define FLAG_RECEIVED_CONTEST_PASS           0x96 // Unused, leftover from R/S
 #define FLAG_RECEIVED_CASTFORM               0x97
 #define FLAG_RECEIVED_SUPER_ROD              0x98
@@ -991,7 +991,7 @@
 #define FLAG_HIDE_SEAFLOOR_CAVERN_AQUA_GRUNTS                       0x3B2
 #define FLAG_HIDE_ROUTE_116_DEVON_EMPLOYEE                          0x3B3
 #define FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN                        0x3B4
-#define FLAG_HIDE_RUSTBORO_CITY_DEVON_CORP_3F_EMPLOYEE              0x3B5
+#define FLAG_HIDE_RUSTBORO_CITY_COLANGELO_GRAPHICS_3F_EMPLOYEE              0x3B5
 #define FLAG_HIDE_SS_TIDAL_CORRIDOR_MR_BRINEY                       0x3B6
 #define FLAG_HIDE_SS_TIDAL_ROOMS_SNATCH_GIVER                       0x3B7
 #define FLAG_RECEIVED_SHOAL_SALT_1                                  0x3B8
@@ -1640,7 +1640,8 @@
 #define FLAG_ENABLE_MULTI_CORRIDOR_DOOR         (SPECIAL_FLAGS_START + 0x2)
 #define FLAG_SPECIAL_FLAG_UNUSED_0x4003         (SPECIAL_FLAGS_START + 0x3) // Unused Flag
 #define FLAG_STORING_ITEMS_IN_PYRAMID_BAG       (SPECIAL_FLAGS_START + 0x4)
-// FLAG_SPECIAL_FLAG_0x4005 - 0x407F also exist and are unused
+#define FLAG_CAN_LOSE_NEXT_BATTLE               (SPECIAL_FLAGS_START + 0x5) // Will not white out if the next battle is lost. Automatically cleared after the battle.
+// FLAG_SPECIAL_FLAG_0x4006 - 0x407F also exist and are unused
 #define SPECIAL_FLAGS_END                       (SPECIAL_FLAGS_START + 0x7F)
 
 #endif // GUARD_CONSTANTS_FLAGS_H
