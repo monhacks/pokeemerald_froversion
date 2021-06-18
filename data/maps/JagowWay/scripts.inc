@@ -47,18 +47,27 @@ Script_JagowWay_StarterBattle::
 Script_JagowWay_StarterBattleRascaloot:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JOHNM
 	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_MUDKIP, T_JagowWay_JohnDefeated
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq Script_JagowWay_AfterJohnBattleLost
 	goto Script_JagowWay_AfterJohnBattle
 	end
 
 Script_JagowWay_StarterBattleFlobra:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JOHNM
 	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_TREECKO, T_JagowWay_JohnDefeated
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq Script_JagowWay_AfterJohnBattleLost
 	goto Script_JagowWay_AfterJohnBattle
 	end
 
 Script_JagowWay_StarterBattleEmboryps:
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JOHNM
 	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_TORCHIC, T_JagowWay_JohnDefeated
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq Script_JagowWay_AfterJohnBattleLost
 	goto Script_JagowWay_AfterJohnBattle
 	end	
 	
@@ -72,6 +81,7 @@ Script_JagowWay_StarterBattle2::
 	msgbox T_JagowWay_JohnBattleDialouge, MSGBOX_DEFAULT
 	closemessage
 	msgbox T_JagowWay_JohnBattleDialouge2, MSGBOX_DEFAULT
+	setflag FLAG_CAN_LOSE_NEXT_BATTLE
 	switch VAR_STARTER_MON
 	case 1, Script_JagowWay_StarterBattleRascaloot
 	case 2, Script_JagowWay_StarterBattleFlobra
@@ -81,6 +91,20 @@ Script_JagowWay_StarterBattle2::
 Script_JagowWay_AfterJohnBattle:
 setvar VAR_LITTLEROOT_TOWN_STATE, 5
 msgbox T_JohnAfterBattle MSGBOX_DEFAULT
+special HealPlayerParty
+msgbox T_JW_JagowWoodsClosed, MSGBOX_DEFAULT
+closemessage
+fadedefaultbgm
+applymovement 1, M_JagowWay_JohnLeaves
+waitmovement 1
+removeobject 1
+setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
+release
+end
+
+Script_JagowWay_AfterJohnBattleLost:
+setvar VAR_LITTLEROOT_TOWN_STATE, 5
+msgbox T_JohnAfterBattleLost MSGBOX_DEFAULT
 special HealPlayerParty
 msgbox T_JW_JagowWoodsClosed, MSGBOX_DEFAULT
 closemessage
@@ -163,12 +187,20 @@ T_JagowWay_JohnDefeated:
 T_JohnAfterBattle:
 	.string "John: Great job Fro. I look forward \nto seeing you grow as a trainer. \pLet me heal your Pokemon.\p$"
 
+T_JohnAfterBattleLost:
+	.string "John: Great try Fro.\p You're kinda trash right now tbh though\nlol. \pI look forward \nto seeing you grow as a trainer. \pLet me heal your Pokemon.\p$"
+
 T_JagowWay_TrainTracks:
 	.string "Mom always says to stay of the \ntrain tracks. You could get hurt.$"
 
 T_JW_JagowWoodsClosed:
-	.string "Normally I would say to go to Summit\nCity and start your Gym Challenge \lthere"
-	.string "but Bobby already\lmade it there and the entrance is \lblocked.\p"
-	.string "Looks like all of us will have to \nstart the Gym Challenge in Lynch \lPark instead.\p"
-	.string "I'm going to stop home real quick \nsince it's on the way, but you can \ljust take Walmore to Lancelot to get \lthere.\p"
-	.string "Better get going, we've got a lot of \ncatching up to do. \pSee you, and good luck!$"
+	.string "As a Trainer, the easiest way to test\n"
+	.string "yourself is to take the Gym Challenge.\p"
+	.string "A lot of our friends have embraced this\n"
+	.string "new world we live in, and either taken\l"
+	.string "the challenge, or became gym leaders\l"
+	.string "of this region themselves.\p"
+	.string "I'm going to head home to Walmore Town\n"
+	.string "quickly before making my way to Summit\l"
+	.string "City to challenge the gym leaders there.\p"
+	.string "I'll see you around Fro, good luck!$"
