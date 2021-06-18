@@ -655,7 +655,7 @@ T_NPC_LittleBoyDialouge:
 	
 	
 T_NPC_Boy1_BeforeRecievedPokemon:
-	.string "Professor Tilyou has been leading \nthe field in PokéResearch. \pI'm so glad he moved here for his \nstudies. \pHe has really helped all the \naspiring young trainers get ready \lfor their jouneys.$"
+	.string "Professor Tilyou has been leading \nthe field in PokéResearch. \pI'm so glad he moved here for his \nstudies. \pHe has really helped all the \naspiring young trainers get ready \lfor their journeys.$"
 
 T_NPC_Boy1_AfterRecievedPokemon: 
 	.string "It's amazing how fast the world has \nadapated to Pokémon. \pWe use them for all kinds of \nthings now like travel, law \lenforcement, and even nursing!$"
@@ -664,7 +664,7 @@ T_LakeMeadVillage_Isiah_ProfIsOut:
 	.string "Sup Fro, I came by your house to \ntell you the professor is out in \ldoing field research and to look \lfor him on Jagow Way.$"
 	
 T_LakeMeadVillage_Isiah_ProfIsOutTakePotion:
-	.string "Sup Fro, I came by your house to \ntell you the professor is out in \llook for him on Jagow Way.\p"
+	.string "Sup Fro, I came by your house to \ntell you the professor is out and \llook for him on Jagow Way.\p"
 	.string "Isiah stole a potion from your bag.$"
 
 T_LakeMeadVillage_Isiah_HaventSeenThem:
