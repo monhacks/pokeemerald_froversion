@@ -7567,7 +7567,7 @@ const struct Item gItems[] =
     {
         .name = _("Poison Camo"),
         .itemId = ITEM_POISON_CAMOUFLAGE,
-        .price = 5000,
+        .price = 2000,
         .holdEffect = HOLD_EFFECT_TYPE_CHANGE,
         .description = sPoisonCamouflageDesc,
         .pocket = POCKET_ITEMS,

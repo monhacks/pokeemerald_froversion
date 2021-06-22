@@ -3,7 +3,7 @@
 
 static const u8 sMapName_LakeMeadVillage[] = _("Lake Mead Village");
 static const u8 sMapName_OldaleTown[] = _("OLDALE TOWN");
-static const u8 sMapName_DewfordTown[] = _("DEWFORD TOWN");
+static const u8 sMapName_DewfordTown[] = _("RainTree Island");
 static const u8 sMapName_LavaridgeTown[] = _("LAVARIDGE TOWN");
 static const u8 sMapName_FallarborTown[] = _("FALLARBOR TOWN");
 static const u8 sMapName_VerdanturfTown[] = _("VERDANTURF TOWN");
@@ -11,7 +11,7 @@ static const u8 sMapName_PacifidlogTown[] = _("PACIFIDLOG TOWN");
 static const u8 sMapName_PetalburgCity[] = _("PETALBURG CITY");
 static const u8 sMapName_SlateportCity[] = _("SLATEPORT CITY");
 static const u8 sMapName_MauvilleCity[] = _("MAUVILLE CITY");
-static const u8 sMapName_RustboroCity[] = _("RUSTBORO CITY");
+static const u8 sMapName_RustboroCity[] = _("Summit City");
 static const u8 sMapName_FortreeCity[] = _("FORTREE CITY");
 static const u8 sMapName_LilycoveCity[] = _("LILYCOVE CITY");
 static const u8 sMapName_MossdeepCity[] = _("MOSSDEEP CITY");
@@ -56,7 +56,7 @@ static const u8 sMapName_GraniteCave[] = _("GRANITE CAVE");
 static const u8 sMapName_MtChimney[] = _("MT. CHIMNEY");
 static const u8 sMapName_SafariZone[] = _("SAFARI ZONE");
 static const u8 sMapName_BattleFrontier[] = _("BATTLE FRONTIER");
-static const u8 sMapName_PetalburgWoods[] = _("PETALBURG WOODS");
+static const u8 sMapName_PetalburgWoods[] = _("Jagow Woods");
 static const u8 sMapName_RusturfTunnel[] = _("RUSTURF TUNNEL");
 static const u8 sMapName_AbandonedShip[] = _("ABANDONED SHIP");
 static const u8 sMapName_NewMauville[] = _("NEW MAUVILLE");

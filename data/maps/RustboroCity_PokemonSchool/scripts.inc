@@ -83,7 +83,7 @@ RustboroCity_PokemonSchool_EventScript_Teacher:: @ 8213F95
 	compare VAR_FACING, DIR_WEST
 	call_if_eq RustboroCity_PokemonSchool_EventScript_TeacherCheckOnStudentsWest
 	msgbox RustboroCity_PokemonSchool_Text_StudentsWhoDontStudyGetQuickClaw, MSGBOX_DEFAULT
-	giveitem ITEM_QUICK_CLAW
+	giveitem ITEM_ASSAULT_VEST
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	closemessage
@@ -248,13 +248,13 @@ RustboroCity_PokemonSchool_Text_ExplainFreeze: @ 82143B8
 
 RustboroCity_PokemonSchool_Text_StudentsWhoDontStudyGetQuickClaw: @ 8214433
 	.string "Students who don't study get a little\n"
-	.string "taste of my Quick Claw.\p"
+	.string "taste of my Assault Vest.\p"
 	.string "Whether or not you are a good student \n"
 	.string "will be evident from the way you use\l"
 	.string "this item.$"
 
 RustboroCity_PokemonSchool_Text_ExplainQuickClaw: @ 82144C8
-	.string "A Pokémon holding the Assualt Vest will\n"
+	.string "A Pokémon holding the Assault Vest will\n"
 	.string "have it's Sp. Def boosted, but be unable\l"
 	.string "to use any status moves.\p"
 	.string "There are many other items that are\n"
@@ -263,12 +263,16 @@ RustboroCity_PokemonSchool_Text_ExplainQuickClaw: @ 82144C8
 	.string "topics to study!$"
 
 RustboroCity_PokemonSchool_Text_TradingRightNow: @ 821459F
-	.string "I'm trading Pokémon with my friend\n"
-	.string "right now.$"
+	.string "There is a traveling merchant in town.\n"
+	.string "I've heard that he has an item that can\l"
+	.string "really help facing the Gym leaders of\l"
+	.string "this town."
 
 RustboroCity_PokemonSchool_Text_AlwaysWantedSeedot: @ 82145CD
-	.string "I always wanted a SEEDOT, and\n"
-	.string "I'm finally getting one!$"
+	.string "There are these items called Pops.\n"
+	.string "Pokémon love to eat them!\p"
+	.string "They change a Pokémon's primary Type\n"
+	.string "based on the flavor of the Pop!$"
 
 RustboroCity_PokemonSchool_Text_PokemontCantUseManMadeItems: @ 8214604
 	.string "Pokémon can hold items, but they\n"

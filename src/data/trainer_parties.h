@@ -3371,7 +3371,7 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
 
 static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     {
-    .iv = 25,
+    .iv = 100,
     .lvl = 15,
     .species = SPECIES_BEEDRILL,
     .heldItem = ITEM_INSECT_PLATE,
@@ -3379,15 +3379,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     .abilityNum = 1
     },
     {
-    .iv = 25,
-    .lvl = 15,
-    .species = SPECIES_GLOOM,
-    .heldItem = ITEM_OCCA_BERRY,
-    .moves = {MOVE_ABSORB, MOVE_ACID, MOVE_NONE},
-    .abilityNum = 1
-    },
-    {
-    .iv = 75,
+    .iv = 125,
     .lvl = 17,
     .species = SPECIES_CHAD_BUG_1,
     .heldItem = ITEM_POISON_CAMOUFLAGE,
@@ -3395,7 +3387,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     .abilityNum = 1
     },
     {
-    .iv = 75,
+    .iv = 125,
     .lvl = 16,
     .species = SPECIES_VAYPING,
     .heldItem = ITEM_BLACK_SLUDGE,
