@@ -200,60 +200,60 @@ RustboroCity_ColangeloGraphics_3F_EventScript_RareRocksDisplay:: @ 8212600
 	end
 
 RustboroCity_ColangeloGraphics_3F_Text_MrStoneIHaveFavor: @ 8212609
-	.string "I'm MR. STONE, the PRESIDENT of\n"
-	.string "the DEVON CORPORATION.\p"
+	.string "I'm Dom, the President of\n"
+	.string "the Colangelo Graphics.\p"
 	.string "I'd just got word about you!\p"
 	.string "You saved our staff not just once,\n"
 	.string "but twice!\p"
 	.string "I have a favor to ask of an amazing\n"
 	.string "person like you.\p"
 	.string "I understand that you're delivering\n"
-	.string "a package to SLATEPORT's SHIPYARD.\p"
+	.string "a package to SLATEPORT's Shipyard.\p"
 	.string "Well, on the way, could you stop off in\n"
-	.string "DEWFORD TOWN?\p"
+	.string "Raintree Island?\p"
 	.string "I was hoping that you'd deliver a\n"
-	.string "LETTER to STEVEN in DEWFORD.$"
+	.string "Letter to Steven in Raintree.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_MrStoneWantYouToHaveThis: @ 821277C
-	.string "MR. STONE: Now, you should know that\n"
-	.string "I am a great PRESIDENT.\p"
+	.string "Dom: Now, you should know that\n"
+	.string "I am a great President.\p"
 	.string "So, I'd never be so cheap as to ask\n"
 	.string "a favor for nothing in return.\p"
 	.string "That's why I want you to have this!$"
 
 RustboroCity_ColangeloGraphics_3F_Text_ReceivedPokenav: @ 8212820
-	.string "{PLAYER} received a POKéNAV.$"
+	.string "{PLAYER} received a Pokénav.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_MrStoneExplainPokenavRestUp: @ 8212837
-	.string "MR. STONE: That device…\p"
-	.string "It's a POKéMON NAVIGATOR, or POKéNAV\n"
+	.string "Dom: That device…\p"
+	.string "It's a Pokémon Navigator, or Pokénav\n"
 	.string "for short.\p"
 	.string "It's an indispensable tool for any\n"
-	.string "TRAINER on an adventure.\p"
-	.string "It has a map of the HOENN region.\p"
+	.string "Trainer on an adventure.\p"
+	.string "It has a map of the Niagara region.\p"
 	.string "You can check the locations of\n"
-	.string "DEWFORD and SLATEPORT easily!\p"
+	.string "Raintree and SLATEPORT easily!\p"
 	.string "By the way, I've heard that sinister\n"
-	.string "criminals--MAGMA and AQUA, I believe--\l"
+	.string "criminals--MAGA, I believe--\l"
 	.string "have been making trouble far and wide.\p"
 	.string "I think it would be best if you rested\n"
 	.string "up before you go on your way.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_MrStoneGoWithCautionAndCare: @ 82129D2
-	.string "MR. STONE: Well, then, {PLAYER}{KUN},\n"
+	.string "Dom: Well, then, {PLAYER}{KUN},\n"
 	.string "go with caution and care!$"
 
 RustboroCity_ColangeloGraphics_3F_Text_CountingOnYou: @ 8212A09
-	.string "MR. STONE: I'm counting on you!$"
+	.string "Dom: I'm counting on you!$"
 
 RustboroCity_ColangeloGraphics_3F_Text_ThankYouForDeliveringLetter: @ 8212A29
-	.string "MR. STONE: You delivered my LETTER?\n"
+	.string "Dom: You delivered my Letter?\n"
 	.string "Thank you kindly!\p"
 	.string "This is my way of thanking you.\n"
-	.string "It should help you, a TRAINER.$"
+	.string "It should help you, a Trainer.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_ExplainExpShare: @ 8212A9E
-	.string "MR. STONE: A POKéMON holding that\n"
+	.string "Dom: A POKéMON holding that\n"
 	.string "EXP. SHARE will be given some of the\l"
 	.string "EXP Points from battle.\p"
 	.string "It will get EXP Points even if it didn't\n"
@@ -262,24 +262,24 @@ RustboroCity_ColangeloGraphics_3F_Text_ExplainExpShare: @ 8212A9E
 	.string "for raising weak POKéMON.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_NotFamiliarWithTrends: @ 8212B78
-	.string "MR. STONE: Since my youth, I've immersed\n"
+	.string "Dom: Since my youth, I've immersed\n"
 	.string "myself in work.\p"
 	.string "Consequently, I'm not familiar with\n"
 	.string "trends and that sort of thing.\p"
 	.string "But do young people all want to be\n"
-	.string "TRAINERS in the POKéMON LEAGUE?$"
+	.string "TrainerS in the POKéMON LEAGUE?$"
 
 RustboroCity_ColangeloGraphics_3F_Text_ThisIs3rdFloorWaitHere: @ 8212C37
-	.string "This is the DEVON CORPORATION's\n"
+	.string "This is the Colangelo Graphics's\n"
 	.string "third floor.\p"
-	.string "Our PRESIDENT's OFFICE is on\n"
+	.string "Our President's OFFICE is on\n"
 	.string "this floor.\p"
 	.string "Anyway, I can't tell you how much I'm\n"
 	.string "grateful for what you've done.\p"
 	.string "Um… By the way, that parcel\n"
 	.string "you got back for us…\p"
 	.string "Could I get you to deliver that to\n"
-	.string "the SHIPYARD in SLATEPORT?\p"
+	.string "the Shipyard in SLATEPORT?\p"
 	.string "It would be awful if those robbers\n"
 	.string "tried to take it again.\p"
 	.string "Uh… Hehehe, so, uh, could I count\n"
@@ -288,7 +288,7 @@ RustboroCity_ColangeloGraphics_3F_Text_ThisIs3rdFloorWaitHere: @ 8212C37
 	.string "Could you wait here a second?$"
 
 RustboroCity_ColangeloGraphics_3F_Text_WordWithPresidentComeWithMe: @ 8212DE8
-	.string "Our PRESIDENT would like to have\n"
+	.string "Our President would like to have\n"
 	.string "a word with you.\p"
 	.string "Please come with me.$"
 
@@ -296,15 +296,15 @@ RustboroCity_ColangeloGraphics_3F_Text_PleaseGoAhead: @ 8212E2F
 	.string "Please, go ahead.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_VisitCaptSternShipyard: @ 8212E41
-	.string "If you visit the SHIPYARD in SLATEPORT,\n"
+	.string "If you visit the Shipyard in SLATEPORT,\n"
 	.string "you should go see CAPT. STERN.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_RepeatAndTimerHugelyPopular: @ 8212E88
 	.string "DEVON's new products, the REPEAT BALL\n"
 	.string "and TIMER BALL, have become hugely\l"
-	.string "popular among TRAINERS.$"
+	.string "popular among TrainerS.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_RareRocksDisplay: @ 8212EE9
 	.string "It's a collection of rare rocks and\n"
-	.string "stones assembled by the PRESIDENT.$"
+	.string "stones assembled by the President.$"
 

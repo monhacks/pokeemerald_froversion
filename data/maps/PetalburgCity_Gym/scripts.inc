@@ -1269,7 +1269,7 @@ PetalburgCity_Gym_Text_DadPlayerGoWithWally: @ 82059E8
 	.string "Grant: Steak, you heard that,\n"
 	.string "right?\p"
 	.string "Go with Wally and make sure that he\n"
-	.string "safely catches a Pokémon.\p
+	.string "safely catches a Pokémon.\p"
 	.string "I don't get around so well since I\n"
 	.string "tore my ACL.$"
 
@@ -1588,14 +1588,14 @@ PetalburgCity_Gym_Text_JodyDefeat: @ 82070E6
 PetalburgCity_Gym_Text_JodyPostBattle: @ 82070FB
 	.string "The way you use your Pokémon…\n"
 	.string "It's like your father's style.\p"
-	.string "Go on through! The Gym Leader, your\n"
-	.string "father, is waiting!$"
+	.string "Go on through! The Gym Leader, Grant\n"
+	.string "is waiting!$"
 
 PetalburgCity_Gym_Text_JodyPostBadge: @ 8207170
 	.string "Sure, it's fine to make your Pokémon\n"
 	.string "stronger.\p"
 	.string "But what decides the winner?\p"
-	.string "Why, it's the feelings TrainerS have\n"
+	.string "Why, it's the feelings Trainers have\n"
 	.string "for their Pokémon.$"
 
 PetalburgCity_Gym_Text_DoorAppearsLocked: @ 82071F4
@@ -1636,7 +1636,7 @@ PetalburgCity_Gym_Text_EnterOHKORoom: @ 82073A7
 	.string "Do you want to go through?$"
 
 PetalburgCity_Gym_Text_EnterGymLeadersRoom: @ 82073E4
-	.string "“Gym Leader's Room\p"
+	.string "“Gym Leader's Room”\p"
 	.string "“See for yourself what Pokémon await\n"
 	.string "you!” the sign says.\p"
 	.string "Do you want to go through?$"
@@ -1681,7 +1681,7 @@ PetalburgCity_Gym_Text_NormanRematchNeedTwoMons: @ 820764A
 	.string "Inside a Gym, it doesn't matter that\n"
 	.string "we are a parent and child.\p"
 	.string "Hm? Wait a second, {PLAYER}.\p"
-	.string "Do you only have one Pokémon that is\n"
+	.string "Do you only have one Pokémon that is\n"	
 	.string "capable of battle?\p"
 	.string "Sorry, but you'll have to come back\n"
 	.string "with at least two Pokémon.$"
