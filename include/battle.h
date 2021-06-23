@@ -202,6 +202,7 @@ struct SideTimer
     u8 tailwindBattlerId;
     u8 luckyChantTimer;
     u8 luckyChantBattlerId;
+    u16 landmineBaseDamage;
 };
 
 struct FieldTimer

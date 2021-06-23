@@ -1788,6 +1788,11 @@
 	various BS_ATTACKER, VARIOUS_STEEL_GYM_RECHARGE
 	.endm
 
+	.macro trysetlandmine onfail:req
+	various BS_ATTACKER, VARIOUS_LANDMINE
+	.4byte \onfail
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER \stat | \stages << 3 | \down << 7

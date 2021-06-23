@@ -391,6 +391,7 @@
 #define ANIM_TAG_DREEPY                     (ANIM_SPRITES_START + 379)
 #define ANIM_TAG_ICE_ROCK_SINGLE            (ANIM_SPRITES_START + 380)
 #define ANIM_TAG_STONE_PILLAR_MULTI         (ANIM_SPRITES_START + 381)
+#define ANIM_TAG_LANDMINE                   (ANIM_SPRITES_START + 382)
 
 // battlers
 #define ANIM_ATTACKER    0
@@ -530,6 +531,7 @@
 #define B_ANIM_DREAM_FOG_CONTINUES      33
 #define B_ANIM_DARKNESS_CONTINUES       34
 #define B_ANIM_TRICK_ROOM               35
+#define B_ANIM_EXPLOSION                36
 
 // special animations table (gBattleAnims_Special)
 #define B_ANIM_LVL_UP                   0

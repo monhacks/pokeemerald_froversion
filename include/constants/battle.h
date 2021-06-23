@@ -220,6 +220,7 @@
 #define SIDE_STATUS_CRAFTY_SHIELD           (1 << 20)
 #define SIDE_STATUS_MAT_BLOCK               (1 << 21)
 #define SIDE_STATUS_POISON_FIELD_DAMAGED    (1 << 22)
+#define SIDE_STATUS_LANDMINE                (1 << 23)
 
 // Field affecting statuses.
 #define STATUS_FIELD_MAGIC_ROOM         0x1

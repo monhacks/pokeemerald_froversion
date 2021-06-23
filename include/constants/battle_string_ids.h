@@ -585,8 +585,10 @@
 #define STRINGID_TYPECHANGEITEM 581
 #define STRINGID_AUTOSUB 582
 #define STRINGID_COUNTERED 583
+#define STRINGID_LANDMINEDMG 584
+#define STRINGID_LANDMINEPLANTED 585
 
-#define BATTLESTRINGS_COUNT     584
+#define BATTLESTRINGS_COUNT     586
 
 //// multichoice message IDs
 // switch in ability message

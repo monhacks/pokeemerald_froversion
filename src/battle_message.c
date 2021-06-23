@@ -712,6 +712,8 @@ static const u8 sText_PoisonFieldIntensifies[] = _("The poisonous fumes intensif
 static const u8 sText_TypeChangeItem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ITEM}\nmade it {B_BUFF1} type!");
 static const u8 sText_Autosub[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade a SUBSTITUTE!");
 static const u8 sText_Countered[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nlet it endure the hit!");
+static const u8 sText_LandmineDmg[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nstepped on the landmine!");
+static const u8 sText_LandminePlanted[] = _("A landmine was planted at\n{B_DEF_NAME_WITH_PREFIX}'s feet!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1287,6 +1289,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_TYPECHANGEITEM - 12] = sText_TypeChangeItem,
     [STRINGID_AUTOSUB - 12] = sText_Autosub,
     [STRINGID_COUNTERED - 12] = sText_Countered,
+    [STRINGID_LANDMINEDMG - 12] = sText_LandmineDmg,
+    [STRINGID_LANDMINEPLANTED - 12] = sText_LandminePlanted,
 };
 
 const u16 gTerrainStringIds[] =
@@ -1311,7 +1315,7 @@ const u16 gHealingWishStringIds[] =
 
 const u16 gDmgHazardsStringIds[] =
 {
-    STRINGID_PKMNHURTBYSPIKES, STRINGID_STEALTHROCKDMG
+    STRINGID_PKMNHURTBYSPIKES, STRINGID_STEALTHROCKDMG, STRINGID_LANDMINEDMG
 };
 
 const u16 gSwitchInAbilityStringIds[] =

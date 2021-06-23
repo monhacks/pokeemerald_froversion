@@ -265,6 +265,17 @@ const struct SpriteTemplate gToxicSpikesSpriteTemplate =
     .callback = AnimSpikes,
 };
 
+const struct SpriteTemplate gLandmineSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_LANDMINE,
+    .paletteTag = ANIM_TAG_LANDMINE,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimSpikes,
+};
+
 const union AnimCmd gLeerAnimCmds[] =
 {
     ANIMCMD_FRAME(0, 3),

@@ -366,6 +366,18 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectAllySwitch
 	.4byte BattleScript_EffectSleepHit
 	.4byte BattleScript_EffectFlash
+	.4byte BattleScript_EffectLandmine
+
+BattleScript_EffectLandmine:
+	attackcanceler
+	trysetlandmine BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring STRINGID_LANDMINEPLANTED
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
 
 @ Copied from AccuracyDown.
 BattleScript_EffectFlash:
@@ -5798,6 +5810,18 @@ BattleScript_PrintHurtByDmgHazards::
 	printfromtable gDmgHazardsStringIds
 	waitmessage 0x40
 	return
+
+BattleScript_DmgLandmineOnAttacker::
+	playanimation BS_ATTACKER, B_ANIM_EXPLOSION, NULL
+	goto BattleScript_DmgHazardsOnAttacker
+
+BattleScript_DmgLandmineOnTarget::
+	playanimation BS_TARGET, B_ANIM_EXPLOSION, NULL
+	goto BattleScript_DmgHazardsOnTarget
+
+BattleScript_DmgLandmineOnFaintedBattler::
+	playanimation BS_FAINTED, B_ANIM_EXPLOSION, NULL
+	goto BattleScript_DmgHazardsOnFaintedBattler
 
 BattleScript_ToxicSpikesAbsorbed::
 	printstring STRINGID_TOXICSPIKESABSORBED

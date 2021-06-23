@@ -7302,7 +7302,7 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
     return ApplyModifier(modifier, basePower);
 }
 
-static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 isCrit, bool32 updateFlags)
+u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 isCrit, bool32 updateFlags)
 {
     u8 atkStage;
     u32 atkStat;
@@ -7344,7 +7344,7 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     if (isCrit && atkStage < 6)
         atkStage = 6;
     // pokemon with unaware ignore attack stat changes while taking damage
-    if (GetBattlerAbility(battlerDef) == ABILITY_UNAWARE)
+    if (battlerDef < gBattlersCount && GetBattlerAbility(battlerDef) == ABILITY_UNAWARE)
         atkStage = 6;
 
     atkStat *= gStatStageRatios[atkStage][0];
@@ -7411,7 +7411,7 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
     case ABILITY_STAKEOUT:
-        if (gDisableStructs[battlerDef].isFirstTurn == 2) // just switched in
+        if (battlerDef < gBattlersCount && gDisableStructs[battlerDef].isFirstTurn == 2) // just switched in
             MulModifier(&modifier, UQ_4_12(2.0));
         break;
     case ABILITY_GUTS:
@@ -7421,20 +7421,23 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     }
 
     // target's abilities
-    switch (GetBattlerAbility(battlerDef))
+    if (battlerDef < gBattlersCount)
     {
-    case ABILITY_THICK_FAT:
-        if (moveType == TYPE_FIRE || moveType == TYPE_ICE)
+        switch (GetBattlerAbility(battlerDef))
         {
-            MulModifier(&modifier, UQ_4_12(0.5));
-            if (updateFlags)
-                RecordAbilityBattle(battlerDef, ABILITY_THICK_FAT);
+        case ABILITY_THICK_FAT:
+            if (moveType == TYPE_FIRE || moveType == TYPE_ICE)
+            {
+                MulModifier(&modifier, UQ_4_12(0.5));
+                if (updateFlags)
+                    RecordAbilityBattle(battlerDef, ABILITY_THICK_FAT);
+            }
+            break;
+        case ABILITY_ICE_SCALES:
+            if (IS_MOVE_SPECIAL(move))
+                MulModifier(&modifier, UQ_4_12(0.5));
+            break;
         }
-        break;
-    case ABILITY_ICE_SCALES:
-        if (IS_MOVE_SPECIAL(move))
-            MulModifier(&modifier, UQ_4_12(0.5));            
-        break;
     }
 
     // ally's abilities
@@ -7498,7 +7501,7 @@ static bool32 CanEvolve(u32 species)
     return FALSE;
 }
 
-static u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 isCrit, bool32 updateFlags)
+u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 isCrit, bool32 updateFlags)
 {
     bool32 usesDefStat;
     u8 defStage;
@@ -7533,7 +7536,7 @@ static u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, 
     if (isCrit && defStage > 6)
         defStage = 6;
     // pokemon with unaware ignore defense stat changes while dealing damage
-    if (GetBattlerAbility(battlerAtk) == ABILITY_UNAWARE)
+    if (battlerAtk < gBattlersCount && GetBattlerAbility(battlerAtk) == ABILITY_UNAWARE)
         defStage = 6;
     // certain moves also ignore stat changes
     if (gBattleMoves[move].flags & FLAG_STAT_STAGES_IGNORED)
@@ -8013,6 +8016,38 @@ s32 GetStealthHazardDamage(u8 hazardType, u8 battlerId)
             dmg = 1;
         break;
     }
+
+    return dmg;
+}
+
+s32 GetLandmineHazardDamage(u8 hazardType, u8 power, u8 battlerId)
+{
+    u8 type1 = gBattleMons[battlerId].type1;
+    u8 type2 = gBattleMons[battlerId].type2;
+    s32 dmg = 0;
+    u16 modifier = UQ_4_12(1.0);
+
+    MulModifier(&modifier, GetTypeModifier(hazardType, type1));
+    if (type2 != type1)
+        MulModifier(&modifier, GetTypeModifier(hazardType, type2));
+
+    // Based on CalculateMoveDamage.
+    if (modifier == UQ_4_12(0))
+        return 0;
+
+    dmg = gSideTimers[GetBattlerSide(battlerId)].landmineBaseDamage;
+    dmg *= power;
+    // MOVE_POUND is just a generic physical move.
+    dmg /= CalcDefenseStat(MOVE_POUND, 0xFF, battlerId, hazardType, FALSE, FALSE);
+    dmg = (dmg / 50) + 2;
+
+    ApplyModifier(modifier, dmg);
+
+    dmg *= 100 - (Random() % 16);
+    dmg /= 100;
+
+    if (modifier != UQ_4_12(0.0) && dmg == 0)
+        dmg = 1;
 
     return dmg;
 }

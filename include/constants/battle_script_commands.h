@@ -173,6 +173,7 @@
 #define VARIOUS_POST_PRODUCTION_POPUP           106
 #define VARIOUS_POST_PRODUCTION_MOVE            107
 #define VARIOUS_STEEL_GYM_RECHARGE              108
+#define VARIOUS_LANDMINE                        109
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0

@@ -776,6 +776,7 @@ gBattleAnims_Moves::
 	.4byte Move_GLACIAL_LANCE
 	.4byte Move_ASTRAL_BARRAGE
 	.4byte Move_EERIE_SPELL
+	.4byte Move_LANDMINE
 	.4byte Move_COUNT @ cannot be reached, because last move is Eerie Spell
 
 	.align 2
@@ -828,7 +829,8 @@ gBattleAnims_General::
 	.4byte General_TotemFlare               @ B_ANIM_TOTEM_FLARE
         .4byte General_DreamFog                 @ B_ANIM_DREAM_FOG_CONTINUES
         .4byte General_Darkness                 @ B_ANIM_DARKNESS_CONTINUES
-		.4byte General_Space_Shift 				@B_ANIM_TRICK_ROOM
+	.4byte General_Space_Shift              @ B_ANIM_TRICK_ROOM
+	.4byte General_Explosion                @ B_ANIM_EXPLOSION
 
 	.align 2
 gBattleAnims_Special::
@@ -23550,6 +23552,16 @@ WeatherBallIce:
 	waitforvisualfinish
 	end
 
+Move_LANDMINE:
+	loadspritegfx ANIM_TAG_LANDMINE
+	monbg ANIM_DEF_PARTNER
+	playsewithpan SE_M_JUMP_KICK, SOUND_PAN_ATTACKER
+	waitplaysewithpan SE_M_HORN_ATTACK, SOUND_PAN_TARGET, 28
+	createsprite gLandmineSpriteTemplate, ANIM_TARGET, 2, 20, 0, 0, 24, 30
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	end
+
 Move_COUNT:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
@@ -24436,6 +24448,9 @@ General_Darkness:
 	createvisualtask AnimTask_BlendBattleAnimPal, 5, 1, 0, 16, 0, RGB_BLACK
 	waitforvisualfinish
 	end
+
+General_Explosion:
+	goto Move_EXPLOSION
 
 RainbowEndureEffect:
 	launchtemplate gBlueEndureEnergySpriteTemplate 0x2 0x4 0x0 0xffe8 0x1a 0x2

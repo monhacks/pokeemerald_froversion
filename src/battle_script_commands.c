@@ -5843,6 +5843,22 @@ static void SetDmgHazardsBattlescript(u8 battlerId, u8 multistringId)
         gBattlescriptCurrInstr = BattleScript_DmgHazardsOnFaintedBattler;
 }
 
+static void SetLandmineBattlescript(u8 battlerId, u8 multistringId)
+{
+    gBattleMons[battlerId].status2 &= ~(STATUS2_DESTINY_BOND);
+    gHitMarker &= ~(HITMARKER_DESTINYBOND);
+    gBattleScripting.battler = battlerId;
+    gBattleCommunication[MULTISTRING_CHOOSER] = multistringId;
+
+    BattleScriptPushCursor();
+    if (gBattlescriptCurrInstr[1] == BS_TARGET)
+        gBattlescriptCurrInstr = BattleScript_DmgLandmineOnTarget;
+    else if (gBattlescriptCurrInstr[1] == BS_ATTACKER)
+        gBattlescriptCurrInstr = BattleScript_DmgLandmineOnAttacker;
+    else
+        gBattlescriptCurrInstr = BattleScript_DmgLandmineOnFaintedBattler;
+}
+
 static void Cmd_switchineffects(void)
 {
     s32 i;
@@ -5938,6 +5954,15 @@ static void Cmd_switchineffects(void)
         SET_STATCHANGER(STAT_SPEED, 1, TRUE);
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_StickyWebOnSwitchIn;
+    }
+    else if ((gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_LANDMINE)
+        && GetBattlerAbility(gActiveBattler) != ABILITY_MAGIC_GUARD
+        && gBattleStruct->rouletteEffect != 2
+        && IsBattlerGrounded(gActiveBattler))
+    {
+        gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~SIDE_STATUS_LANDMINE;
+        gBattleMoveDamage = GetLandmineHazardDamage(TYPE_NORMAL, 100, gActiveBattler);
+        SetLandmineBattlescript(gActiveBattler, 2);
     }
     else
     {
@@ -8497,6 +8522,21 @@ static void Cmd_various(void)
             gLockedMoves[gActiveBattler] = gCurrentMove;
         }
         break;
+    case VARIOUS_LANDMINE:
+        if (!(gSideStatuses[GetBattlerSide(gBattlerTarget)] & SIDE_STATUS_LANDMINE))
+        {
+            gSideStatuses[GetBattlerSide(gBattlerTarget)] |= SIDE_STATUS_LANDMINE;
+            // MOVE_POUND is just a generic physical move.
+            gSideTimers[GetBattlerSide(gBattlerTarget)].landmineBaseDamage
+                = (((gBattleMons[gBattlerAttacker].level * 2) / 5) + 2)
+                * CalcAttackStat(MOVE_POUND, gBattlerAttacker, 0xFF, TYPE_MYSTERY, FALSE, FALSE);
+            gBattlescriptCurrInstr += 7;
+        }
+        else
+        {
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+        }
+        return;
     }
 
     gBattlescriptCurrInstr += 3;
