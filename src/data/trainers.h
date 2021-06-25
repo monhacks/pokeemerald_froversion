@@ -9549,10 +9549,10 @@ const struct Trainer gTrainers[] = {
     {
         //.partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_OLD_COUPLE,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_OLD_COUPLE,
-        .trainerName = _("JOHN & JAY"),
+        .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
+        .trainerName = _("Bud & Stone"),
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,

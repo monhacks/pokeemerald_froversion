@@ -134,6 +134,9 @@
 #define TRAINER_PIC_WES_THOMPSON          111
 #define TRAINER_PIC_ZENDANO               112
 #define TRAINER_PIC_CHADANDMARK           113
+#define TRAINER_PIC_MAGA_GRUNT_A          114
+#define TRAINER_PIC_MAGA_GRUNT_B          115
+#define TRAINER_PIC_MAGA_GRUNTS           116
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1
