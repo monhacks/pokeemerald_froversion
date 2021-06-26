@@ -370,6 +370,43 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectSpinningPunch
 	.4byte BattleScript_EffectElementalBreath
 	.4byte BattleScript_EffectMagicMirror
+	.4byte BattleScript_EffectWarriorsSacrifice
+
+BattleScript_EffectWarriorsSacrifice::
+	attackcanceler
+	jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	instanthpdrop BS_ATTACKER
+	setatkhptozero
+	tryfaintmon BS_ATTACKER, FALSE, NULL
+	openpartyscreen 0x1, BattleScript_EffectWarriorsSacrificeEnd
+	switchoutabilities BS_ATTACKER
+	waitstate
+	switchhandleorder BS_ATTACKER, 0x2
+	returnatktoball
+	getswitchedmondata BS_ATTACKER
+	switchindataupdate BS_ATTACKER
+	hpthresholds BS_ATTACKER
+	printstring STRINGID_SWITCHINMON
+	switchinanim BS_ATTACKER, TRUE
+	waitstate
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_ATK | BIT_DEF, 0x0
+	setstatchanger STAT_ATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, NULL
+	printfromtable gStatUpStringIds
+	waitmessage 0x40
+	setstatchanger STAT_DEF, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, NULL
+	printfromtable gStatUpStringIds
+	waitmessage 0x40
+	switchineffects BS_ATTACKER
+BattleScript_EffectWarriorsSacrificeEnd:
+	moveendall
+	end
 
 BattleScript_EffectMagicMirror::
 	attackcanceler

@@ -11590,4 +11590,17 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_MIRROR_MOVE_AFFECTED,
         .split = SPLIT_STATUS,
     },
+    [MOVE_WARRIORS_SACRIFICE] =
+    {
+        .effect = EFFECT_WARRIORS_SACRIFICE,
+        .power = 0,
+        .type = TYPE_FIGHTING,
+        .accuracy = 0,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_DEPENDS,
+        .priority = 0,
+        .flags = FLAG_MIRROR_MOVE_AFFECTED,
+        .split = SPLIT_STATUS,
+    },
 };

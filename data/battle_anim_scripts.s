@@ -780,6 +780,7 @@ gBattleAnims_Moves::
 	.4byte Move_SPINNING_PUNCH
 	.4byte Move_ELEMENTAL_BREATH
 	.4byte Move_MAGIC_MIRROR
+	.4byte Move_WARRIORS_SACRIFICE
 	.4byte Move_COUNT @ cannot be reached, because last move is Eerie Spell
 
 	.align 2
@@ -23643,6 +23644,18 @@ ElementalBreathIce:
 
 Move_MAGIC_MIRROR:
 	goto Move_MAGIC_COAT
+
+Move_WARRIORS_SACRIFICE:
+	setalpha 0, 16
+	delay 1
+	createvisualtask AnimTask_InitMementoShadow, 2
+	delay 1
+	createvisualtask AnimTask_MoveAttackerMementoShadow, 5
+	playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
+	delay 48
+	playsewithpan SE_M_PSYBEAM2, SOUND_PAN_ATTACKER
+	waitforvisualfinish
+	end
 
 Move_COUNT:
 	loadspritegfx ANIM_TAG_IMPACT
