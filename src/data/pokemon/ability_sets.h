@@ -910,6 +910,13 @@ static const struct AbilitySetter sCactarAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sLutradorAbilitySet[] = 
+{
+    {ABILITY_IRON_FIST, 1},
+    {ABILITY_SCRAPPY, 30},
+    {ABILITY_SWIFT_SWIM, 60},
+    ABILITY_SET_END
+};
 
 
 
@@ -1078,7 +1085,8 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_CACTAR] = sCactarAbilitySet,
     [SPECIES_CRACTHORN] = sCactarAbilitySet,
     [SPECIES_CRACKTUSS] = sCactarAbilitySet,
-
+    [SPECIES_OTDORBLE] = sLutradorAbilitySet,
+    [SPECIES_LUTRADOR] = sLutradorAbilitySet,
 
 
 
