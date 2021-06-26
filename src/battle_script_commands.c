@@ -1929,6 +1929,7 @@ static void Cmd_attackanimation(void)
         if ((gBattleMoves[gCurrentMove].target & MOVE_TARGET_BOTH
              || gBattleMoves[gCurrentMove].target & MOVE_TARGET_FOES_AND_ALLY
              || gBattleMoves[gCurrentMove].target & MOVE_TARGET_DEPENDS)
+            && gCurrentMove != MOVE_SPINNING_PUNCH
             && gBattleScripting.animTargetsHit)
         {
             gBattlescriptCurrInstr++;

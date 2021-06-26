@@ -367,6 +367,63 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectSleepHit
 	.4byte BattleScript_EffectFlash
 	.4byte BattleScript_EffectLandmine
+	.4byte BattleScript_EffectSpinningPunch
+
+BattleScript_EffectSpinningPunch::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	setmultihitcounter 0x0
+	initmultihitstring
+	sethword sMULTIHIT_EFFECT, 0x0
+	sethword sTRIPLE_KICK_POWER, 0x0
+BattleScript_SpinningPunchLoop::
+	jumpifhasnohp BS_ATTACKER, BattleScript_SpinningPunchEnd
+	jumpifhasnohp BS_TARGET, BattleScript_SpinningPunchPrintStrings
+	jumpifhalfword CMP_EQUAL, gChosenMove, MOVE_SLEEP_TALK, BattleScript_DoSpinningPunch
+	jumpifstatus BS_ATTACKER, STATUS1_SLEEP, BattleScript_SpinningPunchPrintStrings
+BattleScript_DoSpinningPunch::
+	movevaluescleanup
+	copyhword sMOVE_EFFECT, sMULTIHIT_EFFECT
+	addbyte sTRIPLE_KICK_POWER, 5
+	critcalc
+	damagecalc
+	jumpifmovehadnoeffect BattleScript_SpinningPunchNoMoreHits
+	adjustdamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	multihitresultmessage
+	printstring STRINGID_EMPTYSTRING3
+	waitmessage 0x1
+	addbyte sMULTIHIT_STRING + 4, 0x1
+	moveendto MOVEEND_NEXT_TARGET
+	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_FOE_ENDURED, BattleScript_SpinningPunchPrintStrings
+	decrementmultihit BattleScript_SpinningPunchLoop
+	goto BattleScript_SpinningPunchPrintStrings
+BattleScript_SpinningPunchNoMoreHits::
+	pause 0x20
+BattleScript_SpinningPunchPrintStrings::
+	resultmessage
+	waitmessage 0x40
+	jumpifmovehadnoeffect BattleScript_SpinningPunchEnd
+	copyarray gBattleTextBuff1, sMULTIHIT_STRING, 0x6
+	printstring STRINGID_HITXTIMES
+	waitmessage 0x40
+BattleScript_SpinningPunchEnd::
+	setmoveeffect MOVE_EFFECT_RAPIDSPIN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
+	seteffectwithchance
+	tryfaintmon BS_TARGET, FALSE, NULL
+	moveendcase MOVEEND_SYNCHRONIZE_TARGET
+	moveendfrom MOVEEND_STATUS_IMMUNITY_ABILITIES
+	end
 
 BattleScript_EffectLandmine:
 	attackcanceler

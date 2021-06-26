@@ -6893,6 +6893,7 @@ static u16 CalcMoveBasePower(u16 move, u8 battlerAtk, u8 battlerDef)
         basePower = gBattleStruct->presentBasePower;
         break;
     case EFFECT_TRIPLE_KICK:
+    case EFFECT_SPINNING_PUNCH:
         basePower += gBattleScripting.tripleKickPower;
         break;
     case EFFECT_SPIT_UP:
