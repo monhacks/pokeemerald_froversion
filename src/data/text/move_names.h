@@ -759,4 +759,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_LANDMINE] = _("Landmine"),
     [MOVE_SPINNING_PUNCH] = _("SpinningPnch"),
     [MOVE_ELEMENTAL_BREATH] = _("ElementalBth"),
+    [MOVE_MAGIC_MIRROR] = _("Magic Mirror"),
 };

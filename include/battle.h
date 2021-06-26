@@ -111,6 +111,7 @@ struct DisableStruct
     u8 wrapTurns;
     bool8 hasType1;
     u8 type1;
+    u8 magicMirrorTimer;
 };
 
 struct ProtectStruct

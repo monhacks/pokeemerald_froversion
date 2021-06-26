@@ -381,5 +381,7 @@ extern const u8 BattleScript_BerryBoostActivates[];
 extern const u8 BattleScript_BerryBoostDeactivates[];
 extern const u8 BattleScript_AutosubActivates[];
 extern const u8 BattleScript_CounterActivates[];
+extern const u8 BattleScript_MagicMirrorFaded[];
+extern const u8 BattleScript_MagicMirrorBounce[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

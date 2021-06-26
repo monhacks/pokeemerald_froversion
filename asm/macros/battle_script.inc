@@ -1798,6 +1798,11 @@
 	.byte \type
 	.endm
 
+	.macro trysetmagicmirror onfail:req
+	various BS_ATTACKER, VARIOUS_MAGIC_MIRROR
+	.4byte \onfail
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER \stat | \stages << 3 | \down << 7

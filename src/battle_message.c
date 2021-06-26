@@ -714,6 +714,9 @@ static const u8 sText_Autosub[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_AC
 static const u8 sText_Countered[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nlet it endure the hit!");
 static const u8 sText_LandmineDmg[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nstepped on the landmine!");
 static const u8 sText_LandminePlanted[] = _("A landmine was planted at\n{B_DEF_NAME_WITH_PREFIX}'s feet!");
+static const u8 sText_MagicMirrorUsed[] = _("{B_ATK_NAME_WITH_PREFIX} created\na Magic Mirror!");
+static const u8 sText_MagicMirrorFaded[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s\nMagic Mirror faded!");
+static const u8 sText_MagicMirrorBounced[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE}\nwas bounced back by Magic Mirror!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1291,6 +1294,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_COUNTERED - 12] = sText_Countered,
     [STRINGID_LANDMINEDMG - 12] = sText_LandmineDmg,
     [STRINGID_LANDMINEPLANTED - 12] = sText_LandminePlanted,
+    [STRINGID_MAGICMIRRORUSED - 12] = sText_MagicMirrorUsed,
+    [STRINGID_MAGICMIRRORFADED - 12] = sText_MagicMirrorFaded,
+    [STRINGID_MAGICMIRRORBOUNCED - 12] = sText_MagicMirrorBounced,
 };
 
 const u16 gTerrainStringIds[] =

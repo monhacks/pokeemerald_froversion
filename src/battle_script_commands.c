@@ -1352,6 +1352,16 @@ static void Cmd_attackcanceler(void)
         gBattlescriptCurrInstr = BattleScript_MagicCoatBounce;
         return;
     }
+    else if (gDisableStructs[gBattlerTarget].magicMirrorTimer > 0
+             && gBattleMoves[gCurrentMove].split == SPLIT_SPECIAL
+            && !gProtectStructs[gBattlerAttacker].usesBouncedMove)
+    {
+        PressurePPLose(gBattlerAttacker, gBattlerTarget, MOVE_MAGIC_MIRROR);
+        gProtectStructs[gBattlerTarget].usesBouncedMove = 1;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_MagicMirrorBounce;
+        return;
+    }
 
     for (i = 0; i < gBattlersCount; i++)
     {
@@ -8541,6 +8551,17 @@ static void Cmd_various(void)
     case VARIOUS_SETMOVETYPE:
         gBattleStruct->dynamicMoveType = gBattlescriptCurrInstr[3] | 0x80;
         gBattlescriptCurrInstr += 4;
+        return;
+    case VARIOUS_MAGIC_MIRROR:
+        if (gDisableStructs[gActiveBattler].magicMirrorTimer == 0)
+        {
+            gDisableStructs[gActiveBattler].magicMirrorTimer = 3 + Random() % 3;
+            gBattlescriptCurrInstr += 7;
+        }
+        else
+        {
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+        }
         return;
     }
 

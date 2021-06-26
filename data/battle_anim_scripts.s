@@ -779,6 +779,7 @@ gBattleAnims_Moves::
 	.4byte Move_LANDMINE
 	.4byte Move_SPINNING_PUNCH
 	.4byte Move_ELEMENTAL_BREATH
+	.4byte Move_MAGIC_MIRROR
 	.4byte Move_COUNT @ cannot be reached, because last move is Eerie Spell
 
 	.align 2
@@ -23639,6 +23640,9 @@ ElementalBreathIce:
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 2, 16, 0, RGB_BLACK
 	waitforvisualfinish
 	end
+
+Move_MAGIC_MIRROR:
+	goto Move_MAGIC_COAT
 
 Move_COUNT:
 	loadspritegfx ANIM_TAG_IMPACT

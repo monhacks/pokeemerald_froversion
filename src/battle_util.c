@@ -2231,6 +2231,7 @@ u8 DoFieldEndTurnEffects(void)
 
 enum
 {
+    ENDTURN_MAGIC_MIRROR,
     ENDTURN_INGRAIN,
     ENDTURN_AQUA_RING,
     ENDTURN_ABILITIES,
@@ -2308,6 +2309,18 @@ u8 DoBattlerEndTurnEffects(void)
         ability = GetBattlerAbility(gActiveBattler);
         switch (gBattleStruct->turnEffectsTracker)
         {
+        case ENDTURN_MAGIC_MIRROR:
+            if (gDisableStructs[gActiveBattler].magicMirrorTimer > 0)
+            {
+                gDisableStructs[gActiveBattler].magicMirrorTimer--;
+                if (gDisableStructs[gActiveBattler].magicMirrorTimer == 0)
+                {
+                    BattleScriptExecute(BattleScript_MagicMirrorFaded);
+                    effect++;
+                }
+            }
+            gBattleStruct->turnEffectsTracker++;
+            break;
         case ENDTURN_INGRAIN:  // ingrain
             if ((gStatuses3[gActiveBattler] & STATUS3_ROOTED)
              && !BATTLER_MAX_HP(gActiveBattler)

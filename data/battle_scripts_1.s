@@ -369,6 +369,33 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectLandmine
 	.4byte BattleScript_EffectSpinningPunch
 	.4byte BattleScript_EffectElementalBreath
+	.4byte BattleScript_EffectMagicMirror
+
+BattleScript_EffectMagicMirror::
+	attackcanceler
+	trysetmagicmirror BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	printstring STRINGID_MAGICMIRRORUSED
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_MagicMirrorFaded::
+	printstring STRINGID_MAGICMIRRORFADED
+	waitmessage 0x40
+	end
+
+BattleScript_MagicMirrorBounce::
+	attackstring
+	ppreduce
+	pause 0x20
+	printstring STRINGID_MAGICMIRRORBOUNCED
+	waitmessage 0x40
+	orword gHitMarker, HITMARKER_ATTACKSTRING_PRINTED | HITMARKER_NO_PPDEDUCT | HITMARKER_x800000
+	setmagiccoattarget BS_ATTACKER
+	return
 
 BattleScript_EffectElementalBreath::
 	attackcanceler

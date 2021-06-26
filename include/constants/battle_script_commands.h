@@ -175,6 +175,7 @@
 #define VARIOUS_STEEL_GYM_RECHARGE              108
 #define VARIOUS_LANDMINE                        109
 #define VARIOUS_SETMOVETYPE                     110
+#define VARIOUS_MAGIC_MIRROR                    111
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0
