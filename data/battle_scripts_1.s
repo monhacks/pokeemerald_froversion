@@ -368,6 +368,83 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectFlash
 	.4byte BattleScript_EffectLandmine
 	.4byte BattleScript_EffectSpinningPunch
+	.4byte BattleScript_EffectElementalBreath
+
+BattleScript_EffectElementalBreath::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	setmultihitcounter 0x3
+BattleScript_EffectElementalBreathFire:
+	movevaluescleanup
+	critcalc
+	setmovetype TYPE_FIRE
+	setmoveeffect MOVE_EFFECT_BURN
+	damagecalc
+	adjustdamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	seteffectwithchance
+	tryfaintmon BS_TARGET, FALSE, NULL
+	getbattlerfainted BS_TARGET
+	jumpifbyte CMP_EQUAL, gBattleCommunication, 0x1, BattleScript_EffectElemmentalBreathEnd
+	decrementmultihit BattleScript_EffectElementalBreathElectric
+BattleScript_EffectElementalBreathElectric:
+	movevaluescleanup
+	critcalc
+	setmovetype TYPE_ELECTRIC
+	setmoveeffect MOVE_EFFECT_PARALYSIS
+	damagecalc
+	adjustdamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	seteffectwithchance
+	tryfaintmon BS_TARGET, FALSE, NULL
+	getbattlerfainted BS_TARGET
+	jumpifbyte CMP_EQUAL, gBattleCommunication, 0x1, BattleScript_EffectElemmentalBreathEnd
+	decrementmultihit BattleScript_EffectElementalBreathIce
+BattleScript_EffectElementalBreathIce:
+	movevaluescleanup
+	critcalc
+	setmovetype TYPE_ICE
+	setmoveeffect MOVE_EFFECT_FREEZE
+	damagecalc
+	adjustdamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	seteffectwithchance
+	tryfaintmon BS_TARGET, FALSE, NULL
+BattleScript_EffectElemmentalBreathEnd:
+	trysteelgymrecharge
+	goto BattleScript_MoveEnd
 
 BattleScript_EffectSpinningPunch::
 	attackcanceler

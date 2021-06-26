@@ -8538,6 +8538,10 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
         }
         return;
+    case VARIOUS_SETMOVETYPE:
+        gBattleStruct->dynamicMoveType = gBattlescriptCurrInstr[3] | 0x80;
+        gBattlescriptCurrInstr += 4;
+        return;
     }
 
     gBattlescriptCurrInstr += 3;

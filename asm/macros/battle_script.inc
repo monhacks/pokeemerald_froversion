@@ -1793,6 +1793,11 @@
 	.4byte \onfail
 	.endm
 
+	.macro setmovetype type:req
+	various BS_ATTACKER, VARIOUS_SETMOVETYPE
+	.byte \type
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER \stat | \stages << 3 | \down << 7

@@ -778,6 +778,7 @@ gBattleAnims_Moves::
 	.4byte Move_EERIE_SPELL
 	.4byte Move_LANDMINE
 	.4byte Move_SPINNING_PUNCH
+	.4byte Move_ELEMENTAL_BREATH
 	.4byte Move_COUNT @ cannot be reached, because last move is Eerie Spell
 
 	.align 2
@@ -23591,6 +23592,53 @@ SpinningPunchRight:
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 8, -8, ANIM_TARGET, 2
 	createsprite gFistFootSpriteTemplate, ANIM_ATTACKER, 3, 8, 0, 8, 1, 0
 	goto SpinningPunchContinue
+
+Move_ELEMENTAL_BREATH:
+	jumpifmoveturn 0, ElementalBreathFire
+	jumpifmoveturn 1, ElementalBreathElectric
+	goto ElementalBreathIce
+ElementalBreathFire:
+	loadspritegfx ANIM_TAG_FIRE
+	createsprite gLargeFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, -1, 0
+	playsewithpan SE_M_FLAME_WHEEL2, SOUND_PAN_TARGET
+	createsprite gLargeFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, 0, 1
+	delay 1
+	createsprite gLargeFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, -1, -1
+	delay 1
+	createsprite gLargeFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, 2, 1
+	delay 1
+	createsprite gLargeFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, 1, -1
+	delay 1
+	createsprite gLargeFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, -1, 1
+	delay 1
+	createsprite gLargeFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, 1, -2
+	delay 1
+	createsprite gLargeFlameScatterSpriteTemplate, ANIM_TARGET, 2, 0, 0, 30, 30, 3, 1
+	delay 2
+	createvisualtask AnimTask_ShakeTargetInPattern, 2, 20, 3, TRUE, 1
+	waitforvisualfinish
+	end
+ElementalBreathElectric:
+	loadspritegfx ANIM_TAG_LIGHTNING
+	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
+	playsewithpan SE_M_TRI_ATTACK2, SOUND_PAN_TARGET
+	createsprite gLightningSpriteTemplate, ANIM_TARGET, 2, 0, -48
+	delay 1
+	createsprite gLightningSpriteTemplate, ANIM_TARGET, 2, 0, -16
+	delay 1
+	createsprite gLightningSpriteTemplate, ANIM_TARGET, 2, 0, 16
+	delay 20
+	createvisualtask AnimTask_ShakeTargetInPattern, 2, 20, 3, TRUE, 0
+	delay 2
+	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
+	waitforvisualfinish
+	end
+ElementalBreathIce:
+	loadspritegfx ANIM_TAG_ICE_CRYSTALS
+	call IceCrystalEffectShort
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 2, 16, 0, RGB_BLACK
+	waitforvisualfinish
+	end
 
 Move_COUNT:
 	loadspritegfx ANIM_TAG_IMPACT
