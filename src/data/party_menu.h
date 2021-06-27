@@ -700,6 +700,7 @@ enum
     MENU_TRADE2,
     MENU_TOSS,
     MENU_ABILITY,
+    MENU_REVIVE,
     MENU_FIELD_MOVES,
 };
 
@@ -751,6 +752,7 @@ struct
     [MENU_TRADE2] = {gText_Trade4, CursorCb_Trade2},
     [MENU_TOSS] = {gMenuText_Toss, CursorCb_Toss},
     [MENU_ABILITY] = {gMenuText_Ability, CursorCb_AbilitySetter},
+    [MENU_REVIVE] = {gMenuText_Revive, CursorCb_Revive},
     [MENU_FIELD_MOVES + FIELD_MOVE_CUT] = {gMoveNames[MOVE_CUT], CursorCb_FieldMove},
     [MENU_FIELD_MOVES + FIELD_MOVE_FLASH] = {gMoveNames[MOVE_FLASH], CursorCb_FieldMove},
     [MENU_FIELD_MOVES + FIELD_MOVE_ROCK_SMASH] = {gMoveNames[MOVE_ROCK_SMASH], CursorCb_FieldMove},
@@ -781,6 +783,7 @@ static const u8 sPartyMenuAction_RegisterSummaryCancel[] = {MENU_REGISTER, MENU_
 static const u8 sPartyMenuAction_TradeSummaryCancel1[] = {MENU_TRADE1, MENU_SUMMARY, MENU_CANCEL1};
 static const u8 sPartyMenuAction_TradeSummaryCancel2[] = {MENU_TRADE2, MENU_SUMMARY, MENU_CANCEL1};
 static const u8 sPartyMenuAction_TakeItemTossCancel[] = {MENU_TAKE_ITEM, MENU_TOSS, MENU_CANCEL1};
+static const u8 sPartyMenuAction_SummaryReviveCancel[] = {MENU_REVIVE, MENU_SUMMARY, MENU_CANCEL1};
 
 // IDs for the action lists that appear when a party mon is selected
 enum
@@ -798,7 +801,8 @@ enum
     ACTIONS_REGISTER,
     ACTIONS_TRADE,
     ACTIONS_SPIN_TRADE,
-    ACTIONS_TAKEITEM_TOSS
+    ACTIONS_TAKEITEM_TOSS,
+    ACTIONS_REVIVE,
 };
 
 static const u8 *const sPartyMenuActions[] =
@@ -817,6 +821,7 @@ static const u8 *const sPartyMenuActions[] =
     [ACTIONS_TRADE]         = sPartyMenuAction_TradeSummaryCancel1,
     [ACTIONS_SPIN_TRADE]    = sPartyMenuAction_TradeSummaryCancel2,
     [ACTIONS_TAKEITEM_TOSS] = sPartyMenuAction_TakeItemTossCancel,
+    [ACTIONS_REVIVE]        = sPartyMenuAction_SummaryReviveCancel,
 };
 
 static const u8 sPartyMenuActionCounts[] =
@@ -834,7 +839,8 @@ static const u8 sPartyMenuActionCounts[] =
     [ACTIONS_REGISTER]      = ARRAY_COUNT(sPartyMenuAction_RegisterSummaryCancel),
     [ACTIONS_TRADE]         = ARRAY_COUNT(sPartyMenuAction_TradeSummaryCancel1),
     [ACTIONS_SPIN_TRADE]    = ARRAY_COUNT(sPartyMenuAction_TradeSummaryCancel2),
-    [ACTIONS_TAKEITEM_TOSS] = ARRAY_COUNT(sPartyMenuAction_TakeItemTossCancel)
+    [ACTIONS_TAKEITEM_TOSS] = ARRAY_COUNT(sPartyMenuAction_TakeItemTossCancel),
+    [ACTIONS_REVIVE]        = ARRAY_COUNT(sPartyMenuAction_SummaryReviveCancel),
 };
 
 static const u16 sFieldMoves[] =

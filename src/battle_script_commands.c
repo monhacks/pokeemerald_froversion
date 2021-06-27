@@ -295,6 +295,7 @@ static bool8 sub_804F344(void);
 static void PutMonIconOnLvlUpBox(void);
 static void PutLevelAndGenderOnLvlUpBox(void);
 static bool32 CriticalCapture(u32 odds);
+static bool32 AnyOtherFainted(u32 battlerId);
 
 static void SpriteCB_MonIconOnLvlUpBox(struct Sprite* sprite);
 
@@ -5714,6 +5715,20 @@ static void Cmd_openpartyscreen(void)
         if (gBattlerFainted == gBattlersCount)
             gBattlescriptCurrInstr = jumpPtr;
     }
+    else if (gBattlescriptCurrInstr[1] == 7)
+    {
+        gActiveBattler = gBattlerAttacker;
+        BtlController_EmitChoosePokemon(0, PARTY_ACTION_REVIVE_MON, 0, ABILITY_NONE, gBattleStruct->field_60[gActiveBattler]);
+        MarkBattlerForControllerExec(gActiveBattler);
+        gBattlescriptCurrInstr += 6;
+    }
+    else if (gBattlescriptCurrInstr[1] == 8)
+    {
+        gActiveBattler = gBattlerTarget;
+        BtlController_EmitChoosePokemon(0, PARTY_ACTION_REVIVE_MON, 0, ABILITY_NONE, gBattleStruct->field_60[gActiveBattler]);
+        MarkBattlerForControllerExec(gActiveBattler);
+        gBattlescriptCurrInstr += 6;
+    }
     else
     {
         if (gBattlescriptCurrInstr[1] & 0x80)
@@ -7243,6 +7258,65 @@ static u32 GetHighestStatId(u32 battlerId)
     return highestId;
 }
 
+struct Party
+{
+    struct Pokemon *mons;
+    u8 maxSize;
+};
+
+static struct Party GetBattlerParty(u32 battlerId, bool32 checkDoubles)
+{
+    struct Party party;
+    if (GetBattlerSide(battlerId) == B_SIDE_PLAYER)
+    {
+        party.mons = gPlayerParty;
+        if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && checkDoubles)
+        {
+            party.maxSize = 3;
+            if (GetBattlerPosition(battlerId) == B_POSITION_PLAYER_RIGHT)
+                party.mons += 3;
+        }
+        else
+        {
+            party.maxSize = 6;
+        }
+    }
+    else
+    {
+        party.mons = gEnemyParty;
+        if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS && checkDoubles)
+        {
+            party.maxSize = 3;
+            if (GetBattlerPosition(battlerId) == B_POSITION_OPPONENT_RIGHT)
+                party.mons += 3;
+        }
+        else
+        {
+            party.maxSize = 6;
+        }
+    }
+    return party;
+}
+
+static bool32 AnyOtherFainted(u32 battlerId)
+{
+    int i;
+    u32 species;
+    struct Party party = GetBattlerParty(gActiveBattler, TRUE);
+    for (i = 0; i < party.maxSize; ++i)
+    {
+        if (i == gBattlerPartyIndexes[battlerId])
+            continue;
+        species = GetMonData(&party.mons[i], MON_DATA_SPECIES2);
+        if (species != SPECIES_NONE && species != SPECIES_EGG
+         && GetMonData(&party.mons[i], MON_DATA_HP) == 0)
+        {
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
 static void Cmd_various(void)
 {
     struct Pokemon *mon;
@@ -8563,6 +8637,42 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
         }
         return;
+    case VARIOUS_REVIVE:
+        {
+        struct Party party = GetBattlerParty(gActiveBattler, FALSE);
+        struct Pokemon *mon = &party.mons[*(gBattleStruct->monToSwitchIntoId + gActiveBattler)];
+        u32 data = GetMonData(mon, MON_DATA_MAX_HP);
+        SetMonData(mon, MON_DATA_HP, &data);
+        GetMonData(mon, MON_DATA_NICKNAME, gBattleTextBuff1);
+        StringGetEnd10(gBattleTextBuff1);
+        if (GetBattlerSide(gActiveBattler) == B_SIDE_PLAYER)
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+        else
+            gBattlescriptCurrInstr += 7;
+        return;
+        }
+    case VARIOUS_JUMPIFNOOTHERFAINTED:
+        {
+        if (AnyOtherFainted(gActiveBattler))
+            gBattlescriptCurrInstr += 7;
+        else
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+        return;
+        }
+    case VARIOUS_RESURRECTION:
+         if (GetBattlerAbility(gActiveBattler) == ABILITY_RESURRECTION
+         && !(gWishFutureKnock.resurrectionMons[GetBattlerSide(gActiveBattler)] & gBitTable[gBattlerPartyIndexes[gActiveBattler]])
+         && AnyOtherFainted(gActiveBattler))
+        {
+            gWishFutureKnock.resurrectionMons[GetBattlerSide(gActiveBattler)] |= gBitTable[gBattlerPartyIndexes[gActiveBattler]];
+            gBattlerAbility = gActiveBattler;
+            BattleScriptPush(gBattlescriptCurrInstr + 3);
+            if (gBattlescriptCurrInstr[2] == BS_ATTACKER)
+                gBattlescriptCurrInstr = BattleScript_ResurrectionActivatesAttacker;
+            else
+                gBattlescriptCurrInstr = BattleScript_ResurrectionActivatesTarget;
+            return;
+        }
     }
 
     gBattlescriptCurrInstr += 3;

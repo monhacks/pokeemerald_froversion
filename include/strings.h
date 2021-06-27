@@ -216,6 +216,7 @@ extern const u8 gMenuText_Confirm[];
 extern const u8 gMenuText_Show[];
 extern const u8 gMenuText_Give2[];
 extern const u8 gMenuText_Ability[];
+extern const u8 gMenuText_Revive[];
 
 extern const u8 gText_WithdrawPokemon[];
 extern const u8 gText_WithdrawMonDescription[];
@@ -445,6 +446,7 @@ extern const u8 gText_ThreeDashes[];
 
 // party menu text
 extern const u8 gText_PkmnHPRestoredByVar2[];
+extern const u8 gText_PkmnWasRevived[];
 extern const u8 gText_CantBeUsedOnPkmn[];
 extern const u8 gText_CancelParticipation[];
 extern const u8 gText_PkmnWasGivenItem[];
@@ -505,7 +507,9 @@ extern const u8 gText_CancelBattle[];
 extern const u8 gText_ReturnToWaitingRoom[];
 extern const u8 gText_CancelChallenge[];
 extern const u8 gText_CantSwitchWithAlly[];
+extern const u8 gText_CantReviveAlly[];
 extern const u8 gText_PkmnHasNoEnergy[];
+extern const u8 gText_PkmnNotFainted[];
 extern const u8 gText_EggCantBattle[];
 extern const u8 gText_PkmnAlreadySelected[];
 extern const u8 gText_PkmnAlreadyInBattle[];

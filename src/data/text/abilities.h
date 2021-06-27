@@ -259,6 +259,7 @@ static const u8 sBerryBoostDescription[] = _("Powered up by berries.");
 static const u8 sAutosubDescription[] = _("One-time duplicate.");
 static const u8 sCounterDescription[] = _("Retaliates to KO attacks.");
 static const u8 sNegateDescription[] = _("Negates items and abilities.");
+static const u8 sResurrectionDescription[] = _("Revives ally on KO.");
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 {
@@ -536,6 +537,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_AUTOSUB] = _("Autosub"),
     [ABILITY_COUNTER] = _("Counter"),
     [ABILITY_NEGATE] = _("Negate"),
+    [ABILITY_RESURRECTION] = _("Resurrection"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -813,4 +815,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_AUTOSUB] = sAutosubDescription,
     [ABILITY_COUNTER] = sCounterDescription,
     [ABILITY_NEGATE] = sNegateDescription,
+    [ABILITY_RESURRECTION] = sResurrectionDescription,
 };

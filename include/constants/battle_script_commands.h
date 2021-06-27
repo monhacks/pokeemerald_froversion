@@ -176,6 +176,9 @@
 #define VARIOUS_LANDMINE                        109
 #define VARIOUS_SETMOVETYPE                     110
 #define VARIOUS_MAGIC_MIRROR                    111
+#define VARIOUS_REVIVE                          112
+#define VARIOUS_JUMPIFNOOTHERFAINTED            113
+#define VARIOUS_RESURRECTION                    114
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0

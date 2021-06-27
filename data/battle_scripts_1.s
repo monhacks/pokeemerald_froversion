@@ -371,6 +371,22 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectElementalBreath
 	.4byte BattleScript_EffectMagicMirror
 	.4byte BattleScript_EffectWarriorsSacrifice
+	.4byte BattleScript_EffectRevive
+
+BattleScript_EffectRevive::
+	attackcanceler
+	jumpifnootherfainted BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	openpartyscreen 7, NULL
+	revive BS_ATTACKER, BattleScript_EffectReviveEnd
+	printstring STRINGID_BUFF1WASREVIVED
+	waitmessage 0x40
+BattleScript_EffectReviveEnd:
+	moveendall
+	end
 
 BattleScript_EffectWarriorsSacrifice::
 	attackcanceler
@@ -5189,6 +5205,7 @@ BattleScript_FaintAttacker::
 	cleareffectsonfaint BS_ATTACKER
 	tryactivatesoulheart
 	tryactivatereceiver BS_ATTACKER
+	tryactivateresurrection BS_ATTACKER
 	trytrainerslidefirstdownmsg BS_ATTACKER
 	return
 
@@ -5204,6 +5221,7 @@ BattleScript_FaintTarget::
 	tryactivatereceiver BS_TARGET
 	tryactivatemoxie BS_ATTACKER
 	tryactivatebeastboost BS_ATTACKER
+	tryactivateresurrection BS_TARGET
 	trytrainerslidefirstdownmsg BS_TARGET
 	return
 
@@ -8272,3 +8290,22 @@ BattleScript_NegateActivates::
 	printstring STRINGID_NEGATE
 	waitmessage 0x40
 	end3
+
+BattleScript_ResurrectionActivatesAttacker::
+	call BattleScript_AbilityPopUp
+	pause 40
+	openpartyscreen 7, NULL
+	revive BS_ATTACKER, BattleScript_ResurrectionEnd
+	printstring STRINGID_BUFF1WASREVIVED
+	waitmessage 0x40
+BattleScript_ResurrectionEnd:
+	return
+
+BattleScript_ResurrectionActivatesTarget::
+	call BattleScript_AbilityPopUp
+	pause 40
+	openpartyscreen 8, NULL
+	revive BS_TARGET, BattleScript_ResurrectionEnd
+	printstring STRINGID_BUFF1WASREVIVED
+	waitmessage 0x40
+	return

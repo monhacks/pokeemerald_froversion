@@ -384,5 +384,7 @@ extern const u8 BattleScript_CounterActivates[];
 extern const u8 BattleScript_MagicMirrorFaded[];
 extern const u8 BattleScript_MagicMirrorBounce[];
 extern const u8 BattleScript_NegateActivates[];
+extern const u8 BattleScript_ResurrectionActivatesAttacker[];
+extern const u8 BattleScript_ResurrectionActivatesTarget[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H
