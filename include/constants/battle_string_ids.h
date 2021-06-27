@@ -590,8 +590,9 @@
 #define STRINGID_MAGICMIRRORUSED 586
 #define STRINGID_MAGICMIRRORFADED 587
 #define STRINGID_MAGICMIRRORBOUNCED 588
+#define STRINGID_NEGATE 589
 
-#define BATTLESTRINGS_COUNT     589
+#define BATTLESTRINGS_COUNT     590
 
 //// multichoice message IDs
 // switch in ability message

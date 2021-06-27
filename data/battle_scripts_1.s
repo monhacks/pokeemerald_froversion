@@ -8266,3 +8266,9 @@ BattleScript_CounterLowerSpeedEnd:
 	copybyte gBattlerTarget, gBattlerAttacker
 	copybyte gBattlerAttacker, sBATTLER
 	return
+
+BattleScript_NegateActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_NEGATE
+	waitmessage 0x40
+	end3

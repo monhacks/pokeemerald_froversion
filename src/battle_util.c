@@ -4272,6 +4272,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 effect++;
                 break;
             }
+        case ABILITY_NEGATE:
+            BattleScriptPushCursorAndCallback(BattleScript_NegateActivates);
+            effect++;
+            break;
         }
         break;
     case ABILITYEFFECT_ENDTURN: // 1
@@ -5291,8 +5295,22 @@ u32 GetBattlerAbility(u8 battlerId)
             && gActionsByTurnOrder[gBattlerByTurnOrder[gBattlerAttacker]] == B_ACTION_USE_MOVE
             && gCurrentTurnActionNumber < gBattlersCount)
         return ABILITY_NONE;
+    else if (gBattleMons[battlerId].ability == ABILITY_NEGATE)
+        return ABILITY_NEGATE;
     else
+    {
+        int i;
+        for (i = 0; i < gBattlersCount; i++)
+        {
+            if (IsBattlerAlive(i)
+             && gBattleMons[i].ability == ABILITY_NEGATE
+             && !(gStatuses3[i] & STATUS3_GASTRO_ACID))
+            {
+                return ABILITY_NONE;
+            }
+        }
         return gBattleMons[battlerId].ability;
+    }
 }
 
 u32 IsAbilityOnSide(u32 battlerId, u32 ability)
@@ -6593,6 +6611,8 @@ u32 GetBattlerHoldEffect(u8 battlerId, bool32 checkNegating)
         if (gFieldStatuses & STATUS_FIELD_MAGIC_ROOM)
             return HOLD_EFFECT_NONE;
         if (gBattleMons[battlerId].ability == ABILITY_KLUTZ && !(gStatuses3[battlerId] & STATUS3_GASTRO_ACID))
+            return HOLD_EFFECT_NONE;
+        if (IsAbilityOnField(ABILITY_NEGATE))
             return HOLD_EFFECT_NONE;
     }
 
