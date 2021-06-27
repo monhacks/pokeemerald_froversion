@@ -111,7 +111,6 @@ struct DisableStruct
     u8 wrapTurns;
     bool8 hasType1;
     u8 type1;
-    u8 magicMirrorTimer;
 };
 
 struct ProtectStruct
@@ -204,6 +203,7 @@ struct SideTimer
     u8 luckyChantTimer;
     u8 luckyChantBattlerId;
     u16 landmineBaseDamage;
+    u8 magicMirrorTimer;
 };
 
 struct FieldTimer

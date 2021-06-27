@@ -1671,6 +1671,7 @@ enum
     ENDTURN_LUCKY_CHANT,
     ENDTURN_SAFEGUARD,
     ENDTURN_TAILWIND,
+    ENDTURN_MAGIC_MIRROR,
     ENDTURN_WISH,
     ENDTURN_RAIN,
     ENDTURN_SANDSTORM,
@@ -1892,6 +1893,29 @@ u8 DoFieldEndTurnEffects(void)
                     {
                         gSideStatuses[side] &= ~SIDE_STATUS_TAILWIND;
                         BattleScriptExecute(BattleScript_TailwindEnds);
+                        effect++;
+                    }
+                }
+                gBattleStruct->turnSideTracker++;
+                if (effect)
+                    break;
+            }
+            if (!effect)
+            {
+                gBattleStruct->turnCountersTracker++;
+                gBattleStruct->turnSideTracker = 0;
+            }
+            break;
+        case ENDTURN_MAGIC_MIRROR:
+            while (gBattleStruct->turnSideTracker < 2)
+            {
+                side = gBattleStruct->turnSideTracker;
+                if (gSideTimers[side].magicMirrorTimer > 0)
+                {
+                    gSideTimers[side].magicMirrorTimer--;
+                    if (gSideTimers[side].magicMirrorTimer == 0)
+                    {
+                        BattleScriptExecute(BattleScript_MagicMirrorFaded);
                         effect++;
                     }
                 }
@@ -2231,7 +2255,6 @@ u8 DoFieldEndTurnEffects(void)
 
 enum
 {
-    ENDTURN_MAGIC_MIRROR,
     ENDTURN_INGRAIN,
     ENDTURN_AQUA_RING,
     ENDTURN_ABILITIES,
@@ -2309,18 +2332,6 @@ u8 DoBattlerEndTurnEffects(void)
         ability = GetBattlerAbility(gActiveBattler);
         switch (gBattleStruct->turnEffectsTracker)
         {
-        case ENDTURN_MAGIC_MIRROR:
-            if (gDisableStructs[gActiveBattler].magicMirrorTimer > 0)
-            {
-                gDisableStructs[gActiveBattler].magicMirrorTimer--;
-                if (gDisableStructs[gActiveBattler].magicMirrorTimer == 0)
-                {
-                    BattleScriptExecute(BattleScript_MagicMirrorFaded);
-                    effect++;
-                }
-            }
-            gBattleStruct->turnEffectsTracker++;
-            break;
         case ENDTURN_INGRAIN:  // ingrain
             if ((gStatuses3[gActiveBattler] & STATUS3_ROOTED)
              && !BATTLER_MAX_HP(gActiveBattler)
