@@ -3264,9 +3264,10 @@ static const struct TrainerMonItemCustomMoves sParty_Phoebe[] = {
     .moves = {MOVE_SHADOW_PUNCH, MOVE_CONFUSE_RAY, MOVE_CURSE, MOVE_PROTECT}
     },
     {
+    .abilityNum = 0,
     .iv = 250,
     .lvl = 49,
-    .species = SPECIES_BANETTE,
+    .species = SPECIES_PHOTOGEIST,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SHADOW_BALL, MOVE_GRUDGE, MOVE_WILL_O_WISP, MOVE_FEINT_ATTACK}
     },
@@ -6873,7 +6874,7 @@ static const struct TrainerMonItemCustomMoves sParty_WasulaSummitCaveEmboryps[] 
     //.abilityNum = 0
     .iv = 150,
     .lvl = 14,
-    .species = SPECIES_Text_SummitION,
+    .species = SPECIES_DUMBELLION,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_TACKLE, MOVE_BULK_UP, MOVE_METAL_CLAW, MOVE_ASSURANCE}
     }

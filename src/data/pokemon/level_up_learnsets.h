@@ -8182,7 +8182,8 @@ static const struct LevelUpMove sPhotasmLevelUpLearnset[] = {
 	LEVEL_UP_END
 };
 static const struct LevelUpMove sPhotogeistLevelUpLearnset[] = {
-	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+	LEVEL_UP_MOVE( 1, MOVE_REVIVE),
+    LEVEL_UP_MOVE( 1, MOVE_MEMENTO),
 	LEVEL_UP_END
 };
 static const struct LevelUpMove sTogekissLevelUpLearnset[] = {

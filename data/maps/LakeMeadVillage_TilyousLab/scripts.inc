@@ -166,11 +166,11 @@ TilyousLab_BobbyAndJohnPick:
 	waitmovement 3
 	msgbox T_TilyousLab_JohnSoundsGood, MSGBOX_DEFAULT
 	closemessage
-	compare VAR_STARTER_MON, 1
+	compare VAR_STARTER_MON, 0
 	goto_if_eq Script_TilyousLab_FroTookRascaloot
-	compare VAR_STARTER_MON, 2
+	compare VAR_STARTER_MON, 1
 	goto_if_eq Script_TilyousLab_FroTookFlobra
-	compare VAR_STARTER_MON, 3
+	compare VAR_STARTER_MON, 2
 	goto_if_eq Script_TilyousLab_FroTookEmboryps
 	release
 	end

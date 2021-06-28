@@ -888,9 +888,9 @@ RustboroCity_EventScript_BattleMay:: @ 81E1092
 	setflag FLAG_FORCE_BATTLE_STYLE_SET
 	setvar VAR_MUGSHOT_ID, MUGSHOT_JOHNM
 	switch VAR_STARTER_MON
-	case 1, RustboroCity_EventScript_BattleMayTreecko
-	case 2, RustboroCity_EventScript_BattleMayMudkip
-	case 3, RustboroCity_EventScript_BattleMayTorchic
+	case 0, RustboroCity_EventScript_BattleMayTreecko
+	case 1, RustboroCity_EventScript_BattleMayMudkip
+	case 2, RustboroCity_EventScript_BattleMayTorchic
 	end
 
 RustboroCity_EventScript_MayBrineyHint:: @ 81E10C1

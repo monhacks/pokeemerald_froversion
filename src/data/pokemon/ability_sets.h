@@ -918,6 +918,12 @@ static const struct AbilitySetter sLutradorAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sPhotogeistAbilitySet[] =
+{
+    {ABILITY_RESURRECTION, 1},
+    ABILITY_SET_END
+};
+
 
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
@@ -1087,6 +1093,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_CRACKTUSS] = sCactarAbilitySet,
     [SPECIES_OTDORBLE] = sLutradorAbilitySet,
     [SPECIES_LUTRADOR] = sLutradorAbilitySet,
+    [SPECIES_PHOTOGEIST] = sPhotogeistAbilitySet,
 
 
 
