@@ -5717,6 +5717,7 @@ static void Cmd_openpartyscreen(void)
     }
     else if (gBattlescriptCurrInstr[1] == 7)
     {
+        gBattleStruct->chooseReviveMon = TRUE;
         gActiveBattler = gBattlerAttacker;
         BtlController_EmitChoosePokemon(0, PARTY_ACTION_REVIVE_MON, 0, ABILITY_NONE, gBattleStruct->field_60[gActiveBattler]);
         MarkBattlerForControllerExec(gActiveBattler);
@@ -5724,6 +5725,7 @@ static void Cmd_openpartyscreen(void)
     }
     else if (gBattlescriptCurrInstr[1] == 8)
     {
+        gBattleStruct->chooseReviveMon = TRUE;
         gActiveBattler = gBattlerTarget;
         BtlController_EmitChoosePokemon(0, PARTY_ACTION_REVIVE_MON, 0, ABILITY_NONE, gBattleStruct->field_60[gActiveBattler]);
         MarkBattlerForControllerExec(gActiveBattler);
@@ -8649,18 +8651,17 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
         else
             gBattlescriptCurrInstr += 7;
+        gBattleStruct->chooseReviveMon = FALSE;
         return;
         }
     case VARIOUS_JUMPIFNOOTHERFAINTED:
-        {
         if (AnyOtherFainted(gActiveBattler))
             gBattlescriptCurrInstr += 7;
         else
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
         return;
-        }
     case VARIOUS_RESURRECTION:
-         if (GetBattlerAbility(gActiveBattler) == ABILITY_RESURRECTION
+        if (GetBattlerAbility(gActiveBattler) == ABILITY_RESURRECTION
          && !(gWishFutureKnock.resurrectionMons[GetBattlerSide(gActiveBattler)] & gBitTable[gBattlerPartyIndexes[gActiveBattler]])
          && AnyOtherFainted(gActiveBattler))
         {
@@ -8673,6 +8674,7 @@ static void Cmd_various(void)
                 gBattlescriptCurrInstr = BattleScript_ResurrectionActivatesTarget;
             return;
         }
+        break;
     }
 
     gBattlescriptCurrInstr += 3;

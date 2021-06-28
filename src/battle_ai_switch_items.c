@@ -738,28 +738,22 @@ u8 GetMostSuitableMonToSwitchInto(void)
     // Get invalid slots ids.
     for (i = firstId; i < lastId; i++)
     {
+        bool32 invalidHP;
+        if (gBattleStruct->chooseReviveMon)
+            invalidHP = GetMonData(&party[i], MON_DATA_HP) != 0;
+        else
+            invalidHP = GetMonData(&party[i], MON_DATA_HP) == 0;
+
         if (GetMonData(&party[i], MON_DATA_SPECIES) == SPECIES_NONE
+            || invalidHP
             || gBattlerPartyIndexes[battlerIn1] == i
             || gBattlerPartyIndexes[battlerIn2] == i
             || i == *(gBattleStruct->monToSwitchIntoId + battlerIn1)
             || i == *(gBattleStruct->monToSwitchIntoId + battlerIn2)
             || (GetMonAbility(&party[i]) == ABILITY_TRUANT && IsTruantMonVulnerable(gActiveBattler, opposingBattler))) // While not really invalid per say, not really wise to switch into this mon.
-        {
-            if (gCurrentMove != MOVE_REVIVE)
-            {
-                if (GetMonData(&party[i], MON_DATA_HP) == 0)
-                    invalidMons |= gBitTable[i];
-            }
-            else
-            {
-                if (GetMonData(&party[i], MON_DATA_HP) != 0)
-                    invalidMons |= gBitTable[i];
-            }
-        }
+            invalidMons |= gBitTable[i];
         else
-        {
             aliveCount++;
-        }
     }
 
     bestMonId = GetBestMonBatonPass(party, firstId, lastId, invalidMons, aliveCount);
