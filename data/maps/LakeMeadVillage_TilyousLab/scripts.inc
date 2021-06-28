@@ -138,7 +138,7 @@ Script_TilyousLab_RascalootPokeball::
 	
 Script_TilyousLab_RascalootYes:
 	setflag FLAG_SYS_POKEMON_GET
-	setvar VAR_STARTER_MON 1
+	setvar VAR_STARTER_MON 0
 	givemon SPECIES_RASCALOOT, 5, ITEM_NONE
 	playfanfare MUS_OBTAIN_ITEM
 	removeobject 4
@@ -221,7 +221,7 @@ Script_TilyousLab_FlobraPokeball::
 	
 Script_TilyousLab_FlobraYes:
 	setflag FLAG_SYS_POKEMON_GET
-	setvar VAR_STARTER_MON 2
+	setvar VAR_STARTER_MON 1
 	givemon SPECIES_FLOBRA, 5, ITEM_NONE
 	playfanfare MUS_OBTAIN_ITEM
 	removeobject 5
@@ -281,7 +281,7 @@ Script_TilyousLab_EmborypsPokeball::
 	
 Script_TilyousLab_EmborypsYes:
 	setflag FLAG_SYS_POKEMON_GET
-	setvar VAR_STARTER_MON 3
+	setvar VAR_STARTER_MON 2
 	givemon SPECIES_EMBORYPS, 5, ITEM_NONE
 	playfanfare MUS_OBTAIN_ITEM
 	removeobject 6

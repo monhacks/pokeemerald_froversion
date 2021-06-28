@@ -39,9 +39,9 @@ Script_JagowWay_StarterBattle::
 	msgbox T_JagowWay_JohnBattleDialouge2, MSGBOX_DEFAULT
 	setflag FLAG_CAN_LOSE_NEXT_BATTLE
 	switch VAR_STARTER_MON
-	case 1, Script_JagowWay_StarterBattleRascaloot
-	case 2, Script_JagowWay_StarterBattleFlobra
-	case 3, Script_JagowWay_StarterBattleEmboryps
+	case 0, Script_JagowWay_StarterBattleRascaloot
+	case 1, Script_JagowWay_StarterBattleFlobra
+	case 2, Script_JagowWay_StarterBattleEmboryps
 	end
 	
 Script_JagowWay_StarterBattleRascaloot:
@@ -83,9 +83,9 @@ Script_JagowWay_StarterBattle2::
 	msgbox T_JagowWay_JohnBattleDialouge2, MSGBOX_DEFAULT
 	setflag FLAG_CAN_LOSE_NEXT_BATTLE
 	switch VAR_STARTER_MON
-	case 1, Script_JagowWay_StarterBattleRascaloot
-	case 2, Script_JagowWay_StarterBattleFlobra
-	case 3, Script_JagowWay_StarterBattleEmboryps
+	case 0, Script_JagowWay_StarterBattleRascaloot
+	case 1, Script_JagowWay_StarterBattleFlobra
+	case 2, Script_JagowWay_StarterBattleEmboryps
 	end
 	
 Script_JagowWay_AfterJohnBattle:

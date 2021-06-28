@@ -7283,18 +7283,20 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemCustomMoves = sParty_WallyVR1},
     },
 
-    [TRAINER_BRENDAN_ROUTE_103_MUDKIP] =
+    [TRAINER_WASULA_SUMMIT_CAVE_FLOBRA] =
     {
-        .partyFlags = 0,
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BRENDAN,
-        .trainerName = _("BRENDAN"),
+        .trainerPic = TRAINER_PIC_WASULA,
+        .trainerName = _("Bobby"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_BrendanRoute103Mudkip),
-        .party = {.NoItemDefaultMoves = sParty_BrendanRoute103Mudkip},
+        .partySize = ARRAY_COUNT(sParty_WasulaSummitCaveFlobra),
+        .party = {.ItemCustomMoves = sParty_WasulaSummitCaveFlobra},
     },
 
     [TRAINER_BRENDAN_ROUTE_110_MUDKIP] =
@@ -7325,18 +7327,20 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_BrendanRoute119Mudkip},
     },
 
-    [TRAINER_BRENDAN_ROUTE_103_TREECKO] =
+    [TRAINER_WASULA_SUMMIT_CAVE_EMBORYPS] =
     {
-        .partyFlags = 0,
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BRENDAN,
-        .trainerName = _("BRENDAN"),
+        .trainerPic = TRAINER_PIC_WASULA,
+        .trainerName = _("Bobby"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_SETUP_FIRST_TURN,
-        .partySize = ARRAY_COUNT(sParty_BrendanRoute103Treecko),
-        .party = {.NoItemDefaultMoves = sParty_BrendanRoute103Treecko},
+        .partySize = ARRAY_COUNT(sParty_WasulaSummitCaveEmboryps),
+        .party = {.ItemCustomMoves = sParty_WasulaSummitCaveEmboryps},
     },
 
     [TRAINER_BRENDAN_ROUTE_110_TREECKO] =
@@ -7367,18 +7371,20 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_BrendanRoute119Treecko},
     },
 
-    [TRAINER_BRENDAN_ROUTE_103_TORCHIC] =
+    [TRAINER_WASULA_SUMMIT_CAVE_RASCALOOT] =
     {
-        .partyFlags = 0,
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BRENDAN,
-        .trainerName = _("BRENDAN"),
+        .trainerPic = TRAINER_PIC_WASULA,
+        .trainerName = _("Bobby"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_BrendanRoute103Torchic),
-        .party = {.NoItemDefaultMoves = sParty_BrendanRoute103Torchic},
+        .partySize = ARRAY_COUNT(sParty_WasulaSummitCaveRascaloot),
+        .party = {.ItemCustomMoves = sParty_WasulaSummitCaveRascaloot},
     },
 
     [TRAINER_BRENDAN_ROUTE_110_TORCHIC] =

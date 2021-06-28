@@ -6804,12 +6804,24 @@ static const struct TrainerMonNoItemCustomMoves sParty_WallyVR1[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute103Mudkip[] = {
+static const struct TrainerMonItemCustomMoves sParty_WasulaSummitCaveFlobra[] = {
     {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_TREECKO,
+    .abilityNum = 0,
+    .iv = 150,
+    .lvl = 15,
+    .species = SPECIES_FLOBRA,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_COIL, MOVE_WATER_GUN, MOVE_QUICK_ATTACK, MOVE_NONE}
+    },
+    {
+    //.abilityNum = 0
+    .iv = 150,
+    .lvl = 14,
+    .species = SPECIES_MAREEP,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_TACKLE, MOVE_BULK_UP, MOVE_METAL_CLAW, MOVE_ASSURANCE}
     }
+    
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute110Mudkip[] = {
@@ -6848,11 +6860,22 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute119Mudkip[] 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute103Treecko[] = {
+static const struct TrainerMonItemCustomMoves sParty_WasulaSummitCaveEmboryps[] = {
+   {
+    .abilityNum = 0,
+    .iv = 150,
+    .lvl = 15,
+    .species = SPECIES_EMBORYPS,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_SCARY_FACE, MOVE_EMBER, MOVE_GUST, MOVE_BITE}
+    },
     {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_TORCHIC,
+    //.abilityNum = 0
+    .iv = 150,
+    .lvl = 14,
+    .species = SPECIES_Text_SummitION,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_TACKLE, MOVE_BULK_UP, MOVE_METAL_CLAW, MOVE_ASSURANCE}
     }
 };
 
@@ -6892,11 +6915,20 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute119Treecko[]
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute103Torchic[] = {
+static const struct TrainerMonItemCustomMoves sParty_WasulaSummitCaveRascaloot[] = {
     {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_MUDKIP,
+    .iv = 250,
+    .lvl = 15,
+    .species = SPECIES_FLOBRA,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ROAR, MOVE_DOUBLE_EDGE, MOVE_SAND_ATTACK, MOVE_CRUNCH}
+    },
+    {
+    .iv = 250,
+    .lvl = 14,
+    .species = SPECIES_DUMBELLION,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_TORMENT, MOVE_DOUBLE_TEAM, MOVE_SWAGGER, MOVE_EXTRASENSORY}
     }
 };
 
@@ -7025,6 +7057,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Treecko[] = {
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute103Torchic[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_FLOBRA,
+    },
     {
     .iv = 0,
     .lvl = 5,
