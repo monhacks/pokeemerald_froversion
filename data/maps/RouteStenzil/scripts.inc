@@ -13,9 +13,9 @@ SummitCave_EventScript_BobbyRivalBattleTrigger1::
 	msgbox Text_SummitCave_HaventMadeItToSummitCityYet, MSGBOX_DEFAULT
 	setflag FLAG_CAN_LOSE_NEXT_BATTLE
 	switch VAR_STARTER_MON
-	case 0, Script_SummitCave_WasulaBattleFlobra
-	case 1, Script_SummitCave_WasulaBattleEmboryps
-	case 2, Script_SummitCave_WasulaBattleRascaloot
+	case 0, Script_SummitCave_WasulaBattleFlobra //fros starter is rascaloot
+	case 1, Script_SummitCave_WasulaBattleEmboryps //fros starter is flobra
+	case 2, Script_SummitCave_WasulaBattleRascaloot //fros starter is emboryps
 	release
 	end
 
