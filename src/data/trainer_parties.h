@@ -6918,17 +6918,18 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute119Treecko[]
 
 static const struct TrainerMonItemCustomMoves sParty_WasulaSummitCaveRascaloot[] = {
     {
+    .abilityNum = 1,
     .iv = 250,
     .lvl = 15,
-    .species = SPECIES_FLOBRA,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_ROAR, MOVE_DOUBLE_EDGE, MOVE_SAND_ATTACK, MOVE_CRUNCH}
+    .species = SPECIES_RASCALOOT,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_FURY_SWIPES, MOVE_BULLET_SEED, MOVE_MACH_PUNCH, MOVE_NONE}
     },
     {
     .iv = 250,
     .lvl = 14,
     .species = SPECIES_DUMBELLION,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_TORMENT, MOVE_DOUBLE_TEAM, MOVE_SWAGGER, MOVE_EXTRASENSORY}
     }
 };
@@ -12508,7 +12509,7 @@ static const struct TrainerMonItemDefaultMoves sParty_WasulaLakeMeadVillage_Embo
     {
     .iv = 100,
     .lvl = 8,
-    .species = SPECIES_TORCHIC,
+    .species = SPECIES_EMBORYPS,
     .heldItem = ITEM_LEFTOVERS
     }
 };

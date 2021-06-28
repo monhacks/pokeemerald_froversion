@@ -6,6 +6,7 @@ RouteStenzil_MapScripts::
 
 SummitCave_EventScript_BobbyRivalBattleTrigger1::
 	lock
+	addobject LOCALID_BOBBY
 	setvar VAR_MUGSHOT_ID, MUGSHOT_WASULA
 	applymovement LOCALID_BOBBY, Movement_SummitCave_BobbyApproachesFroTrigger1
 	waitmovement LOCALID_BOBBY
@@ -20,6 +21,7 @@ SummitCave_EventScript_BobbyRivalBattleTrigger1::
 
 SummitCave_EventScript_BobbyRivalBattleTrigger2::
 	lock
+	addobject LOCALID_BOBBY
 	setvar VAR_MUGSHOT_ID, MUGSHOT_WASULA
 	applymovement LOCALID_BOBBY, Movement_SummitCave_BobbyApproachesFroTrigger2
 	waitmovement LOCALID_BOBBY
@@ -37,7 +39,7 @@ EventScript_SummitCave_GiveItemDependingOnStarterBattleLost:
 	msgbox Text_SummitCave_BobbyPostBattleLost, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, SummitCave_EventScript_GiveItemRascaloot //fros starter is rascaloot
-	case 1, SummitCave_EventScript_GiveItemFlobra //fros starter is rascaloot
+	case 1, SummitCave_EventScript_GiveItemFlobra //fros starter is Flobra
 	case 2, SummitCave_EventScript_GiveItemEmboryps //fros starter is emboryps
 	release
 	end
@@ -47,7 +49,7 @@ EventScript_SummitCave_GiveItemDependingOnStarterBattleWon:
 	msgbox Text_SummitCave_BobbyPostBattleWon, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, SummitCave_EventScript_GiveItemRascaloot //fros starter is rascaloot
-	case 1, SummitCave_EventScript_GiveItemFlobra //fros starter is rascaloot
+	case 1, SummitCave_EventScript_GiveItemFlobra //fros starter is flobra
 	case 2, SummitCave_EventScript_GiveItemEmboryps //fros starter is emboryps
 	release
 	end
@@ -174,7 +176,7 @@ Text_SummitCave_HaventMadeItToSummitCityYet:
 	.string "got a badge from them. You should\l"
 	.string "head north through this cave, find\l"
 	.string "Summit City and challenge them aswell\p"
-	.string "But before that, how about a quick\l"
+	.string "But before that, how about a quick\n"
 	.string "battle with me?$"
 
 Text_SummitCave_BobbyGivesMint:
