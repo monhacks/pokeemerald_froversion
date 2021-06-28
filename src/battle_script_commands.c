@@ -8668,7 +8668,7 @@ static void Cmd_various(void)
             gWishFutureKnock.resurrectionMons[GetBattlerSide(gActiveBattler)] |= gBitTable[gBattlerPartyIndexes[gActiveBattler]];
             gBattlerAbility = gActiveBattler;
             BattleScriptPush(gBattlescriptCurrInstr + 3);
-            if (gBattlescriptCurrInstr[2] == BS_ATTACKER)
+            if (gBattlescriptCurrInstr[1] == BS_ATTACKER)
                 gBattlescriptCurrInstr = BattleScript_ResurrectionActivatesAttacker;
             else
                 gBattlescriptCurrInstr = BattleScript_ResurrectionActivatesTarget;
