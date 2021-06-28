@@ -1803,6 +1803,20 @@
 	.4byte \onfail
 	.endm
 
+	.macro revive battler:req, onplayer:req
+	various \battler, VARIOUS_REVIVE
+	.4byte \onplayer
+	.endm
+
+	.macro jumpifnootherfainted dest:req
+	various BS_ATTACKER, VARIOUS_JUMPIFNOOTHERFAINTED
+	.4byte \dest
+	.endm
+
+	.macro tryactivateresurrection battler:req
+	various \battler, VARIOUS_RESURRECTION
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER \stat | \stages << 3 | \down << 7

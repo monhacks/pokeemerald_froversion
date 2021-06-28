@@ -403,6 +403,7 @@ static void CursorCb_Trade1(u8);
 static void CursorCb_Trade2(u8);
 static void CursorCb_Toss(u8);
 static void CursorCb_AbilitySetter(u8 taskId);
+static void CursorCb_Revive(u8 taskId);
 static void CursorCb_FieldMove(u8);
 static bool8 SetUpFieldMove_Surf(void);
 static bool8 SetUpFieldMove_Fly(void);
@@ -1309,6 +1310,7 @@ static void HandleChooseMonCancel(u8 taskId, s8 *slotPtr)
     switch (gPartyMenu.action)
     {
     case PARTY_ACTION_SEND_OUT:
+    case PARTY_ACTION_REVIVE_MON:
         PlaySE(SE_FAILURE);
         break;
     case PARTY_ACTION_SWITCH:
@@ -5884,6 +5886,8 @@ static u8 GetPartyMenuActionsTypeInBattle(struct Pokemon *mon)
     {
         if (gPartyMenu.action == PARTY_ACTION_SEND_OUT)
             return ACTIONS_SEND_OUT;
+        if (gPartyMenu.action == PARTY_ACTION_REVIVE_MON)
+            return ACTIONS_REVIVE;
         if (!(gBattleTypeFlags & BATTLE_TYPE_ARENA))
             return ACTIONS_SHIFT;
     }
@@ -6624,6 +6628,74 @@ static void CursorCb_AbilitySetter(u8 taskId)
     DisplayPartyMenuStdMessage(PARTY_MSG_WHICH_ABILITY);
     gTasks[taskId].data[0] = 0xFF;
     gTasks[taskId].func = Task_HandleAbilitySetter;
+}
+
+static bool8 TryRevivePokemon(void)
+{
+    u8 slot = GetCursorSelectionMonId();
+    u8 newSlot;
+    u8 i;
+
+    // In a multi battle, slots 1, 4, and 5 are the partner's pokemon
+    if (IsMultiBattle() == TRUE && (slot == 1 || slot == 4 || slot == 5))
+    {
+        StringCopy(gStringVar1, GetTrainerPartnerName());
+        StringExpandPlaceholders(gStringVar4, gText_CantReviveAlly);
+        return FALSE;
+    }
+    for (i = 0; i < gBattlersCount; i++)
+    {
+        if (GetBattlerSide(i) == B_SIDE_PLAYER && GetPartyIdFromBattleSlot(slot) == gBattlerPartyIndexes[i])
+        {
+            GetMonNickname(&gPlayerParty[slot], gStringVar1);
+            StringExpandPlaceholders(gStringVar4, gText_PkmnAlreadyInBattle);
+            return FALSE;
+        }
+    }
+    if (GetMonData(&gPlayerParty[slot], MON_DATA_IS_EGG))
+    {
+        StringExpandPlaceholders(gStringVar4, gText_EggCantBattle);
+        return FALSE;
+    }
+    if (GetMonData(&gPlayerParty[slot], MON_DATA_HP) != 0)
+    {
+        GetMonNickname(&gPlayerParty[slot], gStringVar1);
+        StringExpandPlaceholders(gStringVar4, gText_PkmnNotFainted);
+        return FALSE;
+    }
+    // TODO: Animate the HP.
+    gPartyMenuUseExitCallback = TRUE;
+    *(gBattleStruct->monToSwitchIntoId + gBattlerInMenuId) = slot;
+    return TRUE;
+}
+
+static void Task_DisplayRevivedMessage(u8 taskId)
+{
+    GetMonNickname(&gPlayerParty[gPartyMenu.slotId], gStringVar1);
+    StringExpandPlaceholders(gStringVar4, gText_PkmnWasRevived);
+    DisplayPartyMenuMessage(gStringVar4, FALSE);
+    ScheduleBgCopyTilemapToVram(2);
+    HandleBattleLowHpMusicChange();
+    gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+}
+
+static void CursorCb_Revive(u8 taskId)
+{
+    int i;
+
+    PlaySE(SE_SELECT);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
+
+    if (TryRevivePokemon())
+    {
+        PartyMenuModifyHP(taskId, gPartyMenu.slotId, 1, GetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_MAX_HP), Task_DisplayRevivedMessage);
+    }
+    else
+    {
+        PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
+        DisplayPartyMenuMessage(gStringVar4, TRUE);
+        gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
+    }
 }
 
 // mints

@@ -781,6 +781,7 @@ gBattleAnims_Moves::
 	.4byte Move_ELEMENTAL_BREATH
 	.4byte Move_MAGIC_MIRROR
 	.4byte Move_WARRIORS_SACRIFICE
+	.4byte Move_REVIVE
 	.4byte Move_COUNT @ cannot be reached, because last move is Eerie Spell
 
 	.align 2
@@ -23656,6 +23657,9 @@ Move_WARRIORS_SACRIFICE:
 	playsewithpan SE_M_PSYBEAM2, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	end
+
+Move_REVIVE:
+	goto Move_HEALING_WISH
 
 Move_COUNT:
 	loadspritegfx ANIM_TAG_IMPACT
