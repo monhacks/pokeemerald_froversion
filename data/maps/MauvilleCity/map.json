@@ -127,7 +127,7 @@
       "flag": "FLAG_HIDE_MAUVILLE_CITY_WALLYS_UNCLE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WATTSON",
+      "graphics_id": "OBJ_EVENT_GFX_DAWSON",
       "x": 29,
       "y": 9,
       "elevation": 3,
@@ -230,7 +230,9 @@
       "dest_warp_id": 0
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",

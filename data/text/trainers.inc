@@ -1187,15 +1187,22 @@ Route110_Text_IsabelRematchPostBattle: @ 82984C8
 	.string "But I like to battle, too!$"
 
 Route110_Text_TimmyIntro: @ 8298525
-	.string "I found some cool POKéMON in the grass\n"
-	.string "around here!$"
+	.string "Our Armor tight to the skin,\n"
+	.string "this sheild it bears his name.\p"
+	.string "We are strapped to the teeth...$"
 
 Route110_Text_TimmyDefeated: @ 8298559
-	.string "Being cool isn't enough to win…$"
+	.string "But our swords are lodged tightly\n"
+	.string "in our throats.\p"
+	.string "We are going under.$"
 
 Route110_Text_TimmyPostBattle: @ 8298579
-	.string "It's hard to battle with POKéMON you\n"
-	.string "just caught.$"
+	.string "Our Armor tight to the skin,\n"
+	.string "this sheild it bears his name.\l"
+	.string "We are strapped to the teeth.\p"
+	.string "But our swords are lodged tightly\n"
+	.string "in our throats.\p"
+	.string "We are going under.$"
 
 Route110_Text_AlyssaIntro: @ 82985AB
 	.string "I fell off CYCLING ROAD…\p"
@@ -2195,16 +2202,20 @@ Route116_Text_JoeyPostBattle: @ 829BBC6
 	.string "I've got another one!$"
 
 Route116_Text_JoseIntro: @ 829BBFD
-	.string "My BUG POKéMON are tough!\n"
-	.string "Let's battle!$"
+	.string "I won't hesitate to put you in your\n"
+	.string "place.\p"
+	.string "You are the straw that's crushing\n"
+	.string "my back.$"
 
 Route116_Text_JoseDefeat: @ 829BC25
-	.string "I lost!\n"
-	.string "I thought I had you!$"
+	.string "You ask me to be blameless.\p"
+	.string "But who are you to decide what's\n"
+	.string "right?$"
 
 Route116_Text_JosePostBattle: @ 829BC42
-	.string "BUG POKéMON evolve quickly.\n"
-	.string "So they get strong quickly, too.$"
+	.string "You ask me to be blameless.\p"
+	.string "But who are you to decide what's\n"
+	.string "right?$"
 
 Route116_Text_JaniceIntro: @ 829BC7F
 	.string "Let me teach you how strong my\n"

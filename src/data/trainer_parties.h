@@ -4424,12 +4424,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Timmy[] = {
     {
     .iv = 0,
     .lvl = 20,
-    .species = SPECIES_ARON,
+    .species = SPECIES_SABLEYE,
     },
     {
     .iv = 0,
     .lvl = 21,
-    .species = SPECIES_MAREEP,
+    .species = SPECIES_HOUNDOUR,
     }
 };
 
@@ -8251,12 +8251,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jose[] = {
     {
     .iv = 50,
     .lvl = 14,
-    .species = SPECIES_CATERPIE,
+    .species = SPECIES_TOGEPI,
     },
     {
     .iv = 50,
     .lvl = 15,
-    .species = SPECIES_SPINARAK,
+    .species = SPECIES_DUSKULL,
     }
 };
 
