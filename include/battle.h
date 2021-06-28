@@ -558,6 +558,7 @@ struct BattleStruct
     u8 poisonFieldIntensity;
     u8 poisonFieldSwitchInCounter;
     u16 counterDamage;
+    bool8 chooseReviveMon;
 };
 
 #define GET_MOVE_TYPE(move, typeArg)                        \
