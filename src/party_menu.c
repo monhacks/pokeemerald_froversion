@@ -6665,7 +6665,7 @@ static bool8 TryRevivePokemon(void)
     }
     // TODO: Animate the HP.
     gPartyMenuUseExitCallback = TRUE;
-    *(gBattleStruct->monToSwitchIntoId + gBattlerInMenuId) = slot;
+    *(gBattleStruct->monToSwitchIntoId + gBattlerInMenuId) = GetPartyIdFromBattleSlot(slot);
     return TRUE;
 }
 
