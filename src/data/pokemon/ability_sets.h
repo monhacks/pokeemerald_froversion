@@ -639,8 +639,7 @@ static const struct AbilitySetter sAlakazamAbilitySet[] =
     {ABILITY_SYNCHRONIZE, 1},
     {ABILITY_INNER_FOCUS, 1},
     {ABILITY_MAGIC_GUARD, 32},
-    {ABILITY_TRACE, 47},
-    //{ABILITY_NEUTRALIZING_GAS, 47}, //if this gets coded it will be his ability with a new name as a regional variant
+    {ABILITY_NEGATE, 47},
     ABILITY_SET_END
 };
 
