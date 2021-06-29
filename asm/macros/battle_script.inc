@@ -1803,9 +1803,8 @@
 	.4byte \onfail
 	.endm
 
-	.macro revive battler:req, onplayer:req
+	.macro revive battler:req
 	various \battler, VARIOUS_REVIVE
-	.4byte \onplayer
 	.endm
 
 	.macro jumpifnootherfainted dest:req
@@ -1815,6 +1814,11 @@
 
 	.macro tryactivateresurrection battler:req
 	various \battler, VARIOUS_RESURRECTION
+	.endm
+
+	.macro jumpifplayer battler:req, dest:req
+	various \battler, VARIOUS_JUMPIFPLAYER
+	.4byte \dest
 	.endm
 
 @ helpful macros

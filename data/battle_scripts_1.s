@@ -381,10 +381,13 @@ BattleScript_EffectRevive::
 	attackanimation
 	waitanimation
 	openpartyscreen 7, NULL
-	revive BS_ATTACKER, BattleScript_EffectReviveEnd
+	revive BS_ATTACKER
+	waitstate
+	jumpifplayer BS_ATTACKER, BattleScript_EffectReviveEnd
 	printstring STRINGID_BUFF1WASREVIVED
 	waitmessage 0x40
 BattleScript_EffectReviveEnd:
+	waitstate
 	moveendall
 	end
 
@@ -8295,17 +8298,22 @@ BattleScript_ResurrectionActivatesAttacker::
 	call BattleScript_AbilityPopUp
 	pause 40
 	openpartyscreen 7, NULL
-	revive BS_ATTACKER, BattleScript_ResurrectionEnd
+	revive BS_ATTACKER
+	waitstate
+	jumpifplayer BS_ATTACKER, BattleScript_ResurrectionAttackerEnd
 	printstring STRINGID_BUFF1WASREVIVED
 	waitmessage 0x40
-BattleScript_ResurrectionEnd:
+BattleScript_ResurrectionAttackerEnd:
 	return
 
 BattleScript_ResurrectionActivatesTarget::
 	call BattleScript_AbilityPopUp
 	pause 40
 	openpartyscreen 8, NULL
-	revive BS_TARGET, BattleScript_ResurrectionEnd
+	revive BS_TARGET
+	waitstate
+	jumpifplayer BS_TARGET, BattleScript_ResurrectionTargetEnd
 	printstring STRINGID_BUFF1WASREVIVED
 	waitmessage 0x40
+BattleScript_ResurrectionTargetEnd:
 	return

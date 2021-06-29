@@ -179,6 +179,7 @@
 #define VARIOUS_REVIVE                          112
 #define VARIOUS_JUMPIFNOOTHERFAINTED            113
 #define VARIOUS_RESURRECTION                    114
+#define VARIOUS_JUMPIFPLAYER                    115
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0
