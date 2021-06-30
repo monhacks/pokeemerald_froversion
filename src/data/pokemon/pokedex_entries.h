@@ -4902,7 +4902,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_DUMBELLION] =
     {
-        .categoryName = _("NEW SPECIES"),
+        .categoryName = _("Lion Cub"),
         .height = 15,
         .weight = 330,
         .description = gDumbellionPokedexText,

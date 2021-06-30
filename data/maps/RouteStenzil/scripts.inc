@@ -71,7 +71,7 @@ EventScript_SummitCave_GiveItemDependingOnStarterBattleWon:
 	end
 
 	Script_SummitCave_WasulaBattleEmboryps:
-	trainerbattle_no_intro TRAINER_WASULA_SUMMIT_CAVE_FLOBRA, Text_SummitCave_BobbyDefeated
+	trainerbattle_no_intro TRAINER_WASULA_SUMMIT_CAVE_EMBORYPS, Text_SummitCave_BobbyDefeated
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq EventScript_SummitCave_GiveItemDependingOnStarterBattleLost

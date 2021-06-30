@@ -673,3 +673,30 @@ MauvilleCity_Text_ExplainTV: @ 81E056A
 
 MauvilleCity_Text_BeenCheckingOutTV: @ 81E0699
 	.string "Hi, have you been checking out TVs?$"
+
+//////////////////////////////////
+/////////FROVERSION///////////////
+////////////////////////////////
+
+MauvilleCity_EventScript_Amneet::
+	lock
+	faceplayer
+	message SummitCity_Text_AmneetSummitCityMerchant
+	waitmessage
+	pokemart MauvilleCity_Pokemart_Amneet
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+MauvilleCity_Pokemart_Amneet:
+	.2byte ITEM_LEFTOVERS
+	.2byte ITEM_ASSAULT_VEST
+	.2byte ITEM_AIR_BALLOON
+	.2byte ITEM_EVIOLITE
+	.2byte ITEM_POWER_BRACER
+	.2byte ITEM_PROTEIN
+	.2byte ITEM_NONE
+	release
+	end
+

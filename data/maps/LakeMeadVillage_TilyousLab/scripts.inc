@@ -222,7 +222,7 @@ Script_TilyousLab_FlobraPokeball::
 Script_TilyousLab_FlobraYes:
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 1
-	givemon SPECIES_FLOBRA, 5, ITEM_NONE
+	givecustommon SPECIES_FLOBRA, 5, ITEM_POWER_WEIGHT, ITEM_LURE_BALL, 0, 0, 40, 40, 40, 0, 0, 0, 31, 20, 31, 10, 5, 20, 0, 0, 0, 0, 0
 	playfanfare MUS_OBTAIN_ITEM
 	removeobject 5
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_FLOBRA
