@@ -1889,3 +1889,23 @@ gTilesetPalettes_GratwickGraveyard::
 	.align 2
 gTilesetTiles_GratwickGraveyard::
 	.incbin "data/tilesets/secondary/gratwickgraveyard/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_Raintree::
+	.incbin "data/tilesets/secondary/raintree/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/raintree/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/raintree/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/raintree/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/raintree/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/raintree/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/raintree/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/raintree/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/raintree/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/raintree/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/raintree/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/raintree/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/raintree/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_Raintree::
+	.incbin "data/tilesets/secondary/raintree/tiles.4bpp.lz"

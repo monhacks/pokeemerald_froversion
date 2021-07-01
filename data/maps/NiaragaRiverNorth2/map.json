@@ -17,11 +17,6 @@
       "direction": "up",
       "offset": -5,
       "map": "MAP_NIAGARA_RIVER_NORTH1"
-    },
-    {
-      "direction": "down",
-      "offset": -7,
-      "map": "MAP_RAINTREE_ISLAND"
     }
   ],
   "object_events": [

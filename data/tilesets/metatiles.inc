@@ -614,3 +614,10 @@ gMetatiles_GratwickGraveyard::
 	.align 1
 gMetatileAttributes_GratwickGraveyard::
 	.incbin "data/tilesets/secondary/gratwickgraveyard/metatile_attributes.bin"
+	.align 1
+gMetatiles_Raintree::
+	.incbin "data/tilesets/secondary/raintree/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Raintree::
+	.incbin "data/tilesets/secondary/raintree/metatile_attributes.bin"

@@ -22,6 +22,11 @@
       "direction": "down",
       "offset": 60,
       "map": "MAP_DEWFORD_TOWN"
+    },
+    {
+      "direction": "down",
+      "offset": 53,
+      "map": "MAP_RAINTREE_ISLAND"
     }
   ],
   "object_events": [
@@ -106,7 +111,7 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 41,
+      "x": 44,
       "y": 11,
       "elevation": 3,
       "item": "ITEM_POKE_BALL",

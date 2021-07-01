@@ -918,3 +918,14 @@ gTileset_GratwickGraveyard::
 	.4byte gMetatiles_GratwickGraveyard
 	.4byte gMetatileAttributes_GratwickGraveyard
 	.4byte NULL
+
+	.align 2
+gTileset_Raintree::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Raintree
+	.4byte gTilesetPalettes_Raintree
+	.4byte gMetatiles_Raintree
+	.4byte gMetatileAttributes_Raintree
+	.4byte NULL

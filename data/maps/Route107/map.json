@@ -16,7 +16,7 @@
     {
       "direction": "left",
       "offset": 0,
-      "map": "MAP_DEWFORD_TOWN"
+      "map": "MAP_RAINTREE_ISLAND"
     },
     {
       "direction": "right",
@@ -117,7 +117,13 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
-  "coord_events": [],
-  "bg_events": []
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }

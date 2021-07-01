@@ -3372,7 +3372,7 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
 
 static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     {
-    .iv = 125,
+    .iv = 165,
     .lvl = 16,
     .species = SPECIES_ODDISH,
     .heldItem = ITEM_OCCA_BERRY,
@@ -3380,7 +3380,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     .abilityNum = 1
     },
     {
-    .iv = 125,
+    .iv = 165,
     .lvl = 16,
     .species = SPECIES_BEEDRILL,
     .heldItem = ITEM_SITRUS_BERRY,
@@ -3455,7 +3455,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     .lvl = 30,
     .species = SPECIES_SANDSLASH,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_DIG, MOVE_FURY_SWIPES, MOVE_ROCK_TOMB, MOVE_DEFENSE_CURL},
+    .moves = {MOVE_DIG, MOVE_FURY_SWIPES, MOVE_ROCK_TOMB, MOVE_NONE},
     .abilityNum = 1
     },
     {
