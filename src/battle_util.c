@@ -4271,9 +4271,11 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             }
             break;
         case ABILITY_AUTOSUB:
-            if (!(gBattleMons[battler].status2 & STATUS2_SUBSTITUTE)
+            if (!gSpecialStatuses[battler].switchInAbilityDone
+             && !(gBattleMons[battler].status2 & STATUS2_SUBSTITUTE)
              && !(gWishFutureKnock.autosubMons[GetBattlerSide(battler)] & gBitTable[gBattlerPartyIndexes[battler]]))
             {
+                gSpecialStatuses[battler].switchInAbilityDone = 1;
                 gBattleScripting.battler = gBattlerAbility = battler;
                 gWishFutureKnock.autosubMons[GetBattlerSide(battler)] |= gBitTable[gBattlerPartyIndexes[battler]];
                 gBattleMons[battler].status2 |= STATUS2_SUBSTITUTE;
@@ -4284,8 +4286,12 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 break;
             }
         case ABILITY_NEGATE:
-            BattleScriptPushCursorAndCallback(BattleScript_NegateActivates);
-            effect++;
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+                gSpecialStatuses[battler].switchInAbilityDone = 1;
+                BattleScriptPushCursorAndCallback(BattleScript_NegateActivates);
+                effect++;
+            }
             break;
         }
         break;
