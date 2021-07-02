@@ -1162,3 +1162,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/WalmoreTown_PokemonSchool/scripts.inc"
 
 	.include "data/maps/WalmoreTown_BobbyHouse/scripts.inc"
+
+	.include "data/maps/RaintreeIsland_BerryStand/scripts.inc"

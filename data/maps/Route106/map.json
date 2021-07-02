@@ -20,11 +20,6 @@
     },
     {
       "direction": "down",
-      "offset": 60,
-      "map": "MAP_DEWFORD_TOWN"
-    },
-    {
-      "direction": "down",
       "offset": 53,
       "map": "MAP_RAINTREE_ISLAND"
     }

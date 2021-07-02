@@ -4900,6 +4900,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/WalmoreTown_BobbyHouse/border.bin",
       "blockdata_filepath": "data/layouts/WalmoreTown_BobbyHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_RAINTREE_ISLAND_BERRY_STAND",
+      "name": "RaintreeIsland_BerryStand_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/RaintreeIsland_BerryStand/border.bin",
+      "blockdata_filepath": "data/layouts/RaintreeIsland_BerryStand/map.bin"
     }
   ]
 }

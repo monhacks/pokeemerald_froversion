@@ -6,7 +6,7 @@ DewfordTown_PokemonCenter_1F_MapScripts:: @ 81FC523
 	.byte 0
 
 DewfordTown_PokemonCenter_1F_OnTransition: @ 81FC52E
-	setrespawn HEAL_LOCATION_DEWFORD_TOWN
+	setrespawn HEAL_LOCATION_RAINTREE_ISLAND
 	call Common_EventScript_UpdateBrineyLocation
 	end
 

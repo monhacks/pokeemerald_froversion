@@ -49,7 +49,14 @@ LavaridgeTown_Gym_1F_EventScript_EndCheckHideTrainers:: @ 81FE78B
 	return
 
 LavaridgeTown_Gym_1F_EventScript_Flannery:: @ 81FE78C
+	setflag FLAG_BATTLE_RAIN
+	setflag FLAG_SYS_NO_BAG_USE
+	setflag FLAG_FORCE_BATTLE_STYLE_SET
+	setvar VAR_MUGSHOT_ID, MUGSHOT_MARRIOTT
 	trainerbattle_single TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryIntro, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
+	clearflag FLAG_BATTLE_RAIN
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq LavaridgeTown_Gym_1F_EventScript_FlanneryRematch
@@ -59,6 +66,9 @@ LavaridgeTown_Gym_1F_EventScript_Flannery:: @ 81FE78C
 	end
 
 LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated:: @ 81FE7C1
+	clearflag FLAG_BATTLE_RAIN
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	message LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -86,6 +96,9 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated:: @ 81FE7C1
 	end
 
 LavaridgeTown_Gym_1F_EventScript_GiveOverheat2:: @ 81FE81D
+	clearflag FLAG_BATTLE_RAIN
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	giveitem ITEM_TM50
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull
@@ -95,6 +108,9 @@ LavaridgeTown_Gym_1F_EventScript_GiveOverheat2:: @ 81FE81D
 	end
 
 LavaridgeTown_Gym_1F_EventScript_GiveOverheat:: @ 81FE841
+	clearflag FLAG_BATTLE_RAIN
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	giveitem ITEM_TM50
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_BagIsFull

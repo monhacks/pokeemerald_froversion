@@ -912,8 +912,8 @@ static const struct AbilitySetter sCactarAbilitySet[] =
 static const struct AbilitySetter sLutradorAbilitySet[] = 
 {
     {ABILITY_IRON_FIST, 1},
-    {ABILITY_SCRAPPY, 30},
-    {ABILITY_SWIFT_SWIM, 60},
+    {ABILITY_SCRAPPY, 22},
+    {ABILITY_SWIFT_SWIM, 40},
     ABILITY_SET_END
 };
 

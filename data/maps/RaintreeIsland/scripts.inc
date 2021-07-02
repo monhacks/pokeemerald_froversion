@@ -1,2 +1,30 @@
 RaintreeIsland_MapScripts::
 	.byte 0
+
+
+RaintreeIsland_EventScript_AmneetTravelingMerchant::
+	lock
+	faceplayer
+	message RaintreeIsland_Text_AmneetRaintreeIslandMerchant
+	waitmessage
+	pokemart RaintreeIsland_Pokemart_Amneet
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+RaintreeIsland_Pokemart_Amneet:
+	.2byte ITEM_SEA_INCENSE
+	.2byte ITEM_CHARCOAL
+	.2byte ITEM_MIRACLE_SEED
+	.2byte ITEM_ROCKY_HELMET
+	.2byte ITEM_WHITE_HERB
+	.2byte ITEM_SHELL_BELL
+	.2byte ITEM_NONE
+	release
+	end
+
+RaintreeIsland_Text_AmneetRaintreeIslandMerchant:
+	.string "Aloha {PLAYER}. Good to see you.\n"
+	.string "I've got some stuff that might\l"
+	.string "help you out.$"
