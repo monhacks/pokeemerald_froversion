@@ -50,12 +50,15 @@ Script_WalmoreTown_AmneetIntroductionTrigger1::
 	goto_if_set FLAG_HIDE_WMT_AMNEET, Script_WalmoreTown_AmneetIntroductionDone
 	applymovement OBJ_EVENT_ID_PLAYER, M_WMT_MoveForAmneetIntro1
 	waitmovement OBJ_EVENT_ID_PLAYER
+	setvar VAR_0x8000, MUGSHOT_AMNEET
+	callnative DrawMugshot
 	msgbox T_WMT_AmneetIntro, MSGBOX_DEFAULT
 	applymovement LOCALID_FREEWOMAN, M_WMT_FreeWomanLeaves
 	waitmovement LOCALID_FREEWOMAN
 	applymovement LOCALID_AMNEET, Common_Movement_FacePlayer
 	waitmovement LOCALID_AMNEET
 	msgbox T_WMT_AmneetText2, MSGBOX_DEFAULT
+	callnative ClearMugshot
 	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
 	waitmovement LOCALID_AMNEET
 	setflag FLAG_HIDE_WMT_AMNEET
@@ -67,12 +70,15 @@ Script_WalmoreTown_AmneetIntroductionTrigger2::
 	goto_if_set FLAG_HIDE_WMT_AMNEET, Script_WalmoreTown_AmneetIntroductionDone
 	applymovement OBJ_EVENT_ID_PLAYER, M_WMT_MoveForAmneetIntro2
 	waitmovement OBJ_EVENT_ID_PLAYER
+	setvar VAR_0x8000, MUGSHOT_AMNEET
+	callnative DrawMugshot
 	msgbox T_WMT_AmneetIntro, MSGBOX_DEFAULT
 	applymovement LOCALID_FREEWOMAN, M_WMT_FreeWomanLeaves
 	waitmovement LOCALID_FREEWOMAN
 	applymovement LOCALID_AMNEET, Common_Movement_FacePlayer
 	waitmovement LOCALID_AMNEET
 	msgbox T_WMT_AmneetText2, MSGBOX_DEFAULT
+	callnative ClearMugshot
 	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
 	waitmovement LOCALID_AMNEET
 	setflag FLAG_HIDE_WMT_AMNEET
@@ -84,12 +90,15 @@ Script_WalmoreTown_AmneetIntroductionTrigger3::
 	goto_if_set FLAG_HIDE_WMT_AMNEET, Script_WalmoreTown_AmneetIntroductionDone
 	applymovement OBJ_EVENT_ID_PLAYER, M_WMT_MoveForAmneetIntro3
 	waitmovement OBJ_EVENT_ID_PLAYER
+	setvar VAR_0x8000, MUGSHOT_AMNEET
+	callnative DrawMugshot
 	msgbox T_WMT_AmneetIntro, MSGBOX_DEFAULT
 	applymovement LOCALID_FREEWOMAN, M_WMT_FreeWomanLeaves
 	waitmovement LOCALID_FREEWOMAN
 	applymovement LOCALID_AMNEET, Common_Movement_FacePlayer
 	waitmovement LOCALID_AMNEET
 	msgbox T_WMT_AmneetText2, MSGBOX_DEFAULT
+	callnative ClearMugshot
 	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
 	waitmovement LOCALID_AMNEET
 	setflag FLAG_HIDE_WMT_AMNEET

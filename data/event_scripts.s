@@ -39,6 +39,7 @@
 #include "constants/mauville_old_man.h"
 #include "constants/metatile_labels.h"
 #include "constants/moves.h"
+#include "constants/mugshots.h"
 #include "constants/party_menu.h"
 #include "constants/pokemon.h"
 #include "constants/roulette.h"
