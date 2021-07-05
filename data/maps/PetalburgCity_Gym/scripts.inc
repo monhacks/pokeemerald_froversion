@@ -99,6 +99,15 @@ PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial:: @ 82049A4
 	waitmovement 0
 	msgbox PetalburgCity_Gym_Text_DadGoCollectBadges, MSGBOX_DEFAULT
 	setvar VAR_PETALBURG_GYM_STATE, 2
+	goto_if_unset FLAG_RECEIVED_RUNNING_SHOES, PetalburgCity_Gym_EventScript_GrantGivesRunningShoes
+	releaseall
+	end
+
+PetalburgCity_Gym_EventScript_GrantGivesRunningShoes:
+	msgbox PetalburgCity_Gym_Text_GrantGivesRunningShoes, MSGBOX_DEFAULT
+	setflag FLAG_SYS_B_DASH
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	msgbox PetalburgCity_Gym_Text_GrantGaveShoes, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -1686,3 +1695,16 @@ PetalburgCity_Gym_Text_NormanRematchNeedTwoMons: @ 820764A
 	.string "Sorry, but you'll have to come back\n"
 	.string "with at least two Pokémon.$"
 
+PetalburgCity_Gym_Text_GrantGivesRunningShoes:
+	.string "...\p"
+	.string "One more thing steak.\p"
+	.string "You move like a snail. Take these\n"
+	.string "running shoes.$"
+
+PetalburgCity_Gym_Text_GrantGaveShoes:
+	.string "I have no use for them anymore since\n"
+	.string "I don't get around so well anymore.\p"
+	.string "They should work better for you. Well,\n"
+	.string "at least marginally better.\p"
+	.string "Just hold the B button and you'll\n"
+	.string "move faster than walking.$"

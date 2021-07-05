@@ -99,8 +99,11 @@ Script_WalmoreTown_AmneetIntroductionTrigger3::
 	waitmovement LOCALID_AMNEET
 	msgbox T_WMT_AmneetText2, MSGBOX_DEFAULT
 	callnative ClearMugshot
+	closemessage
 	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
 	waitmovement LOCALID_AMNEET
+	removeobject LOCALID_FREEWOMAN
+	removeobject LOCALID_AMNEET
 	setflag FLAG_HIDE_WMT_AMNEET
 	release
 	end
