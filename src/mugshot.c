@@ -27,11 +27,17 @@ static const u32 sMugshotImg_Angelina[] = INCBIN_U32("graphics/mugshots/angelina
 static const u16 sMugshotPal_Angelina[] = INCBIN_U16("graphics/mugshots/angelina.gbapal");
 static const u32 sMugshotImg_Bobby[] = INCBIN_U32("graphics/mugshots/bobby.4bpp.lz");
 static const u16 sMugshotPal_Bobby[] = INCBIN_U16("graphics/mugshots/bobby.gbapal");
+static const u32 sMugshotImg_John[] = INCBIN_U32("graphics/mugshots/john.4bpp.lz");
+static const u16 sMugshotPal_John[] = INCBIN_U16("graphics/mugshots/john.gbapal");
+static const u32 sMugshotImg_Tilyou[] = INCBIN_U32("graphics/mugshots/tilyou.4bpp.lz");
+static const u16 sMugshotPal_Tilyou[] = INCBIN_U16("graphics/mugshots/tilyou.gbapal");
 
 static const struct Mugshot sMugshots[] = {
     [MUGSHOT_ANGELINA] = {.x = 16, .y = 5, .width = 24, .height = 24, .image = sMugshotImg_Angelina, .palette = sMugshotPal_Angelina},
     [MUGSHOT_AMNEET] = {.x = 3, .y = 4, .width = 64, .height = 80, .image = sMugshotImg_Amneet, .palette = sMugshotPal_Amneet},
     [MUGSHOT_BOBBY] = {.x = 0, .y = 4, .width = 88, .height = 80, .image = sMugshotImg_Bobby, .palette = sMugshotPal_Bobby},
+    [MUGSHOT_JOHN] = {.x = 3, .y = 3, .width = 80, .height = 88, .image = sMugshotImg_John, .palette = sMugshotPal_John},
+    [MUGSHOT_TILYOU] = {.x = 3, .y = 3, .width = 72, .height = 88, .image = sMugshotImg_Tilyou, .palette = sMugshotPal_Tilyou},
 };
 
 

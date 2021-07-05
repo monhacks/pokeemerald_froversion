@@ -88,7 +88,10 @@ Script_LakeMeadVillage_TilyouStopsYouFromLeaving1::
 	addobject 2
 	applymovement 2, M_TilyouStopsPlayer1
 	waitmovement 2
+	setvar VAR_0x8000, MUGSHOT_TILYOU
+	callnative DrawMugshot
 	msgbox T_TilyouTakesYouToLab, MSGBOX_DEFAULT
+	callnative ClearMugshot
 	closemessage
 	applymovement 2, M_TilyouWalksToLab1
 	applymovement OBJ_EVENT_ID_PLAYER, M_PlayerWalksToLab1
@@ -119,7 +122,10 @@ Script_LakeMeadVillage_TilyouStopsYouFromLeaving2::
 	addobject 2
 	applymovement 2, M_TilyouStopsPlayer2
 	waitmovement 2
+	setvar VAR_0x8000, MUGSHOT_TILYOU
+	callnative DrawMugshot
 	msgbox T_TilyouTakesYouToLab, MSGBOX_DEFAULT
+	callnative ClearMugshot
 	closemessage
 	applymovement 2, M_TilyouWalksToLab2
 	applymovement OBJ_EVENT_ID_PLAYER, M_PlayerWalksToLab2
@@ -209,7 +215,10 @@ clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 addobject LOCALID_WASULA, MAP_LAKE_MEAD_VILLAGE
 applymovement LOCALID_WASULA, M_LMV_WasulaHelpsFro1
 waitmovement LOCALID_WASULA
-msgbox T_LMV_WasulaHelpsFro, MSGBOX_NPC
+setvar VAR_0x8000, MUGSHOT_BOBBY
+callnative DrawMugshot
+msgbox T_LMV_WasulaHelpsFro, 
+callnative ClearMugshot
 multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_STEVEN, TRAINER_BACK_PIC_STEVEN
 setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 specialvar VAR_RESULT, GetBattleOutcome
@@ -240,7 +249,10 @@ clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 addobject LOCALID_WASULA
 applymovement LOCALID_WASULA, M_LMV_WasulaHelpsFro2
 waitmovement LOCALID_WASULA
+setvar VAR_0x8000, MUGSHOT_BOBBY
+callnative DrawMugshot
 msgbox T_LMV_WasulaHelpsFro, MSGBOX_NPC
+callnative ClearMugshot
 multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_STEVEN, TRAINER_BACK_PIC_STEVEN
 setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 specialvar VAR_RESULT, GetBattleOutcome

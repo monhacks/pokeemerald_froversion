@@ -4,5 +4,7 @@
 #define MUGSHOT_AMNEET 0
 #define MUGSHOT_ANGELINA 1
 #define MUGSHOT_BOBBY 2
+#define MUGSHOT_JOHN 3
+#define MUGSHOT_TILYOU 4
 
 #endif
