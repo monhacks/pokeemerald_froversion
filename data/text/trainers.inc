@@ -1631,17 +1631,23 @@ Route113_Text_JaylenPostBattle: @ 8299D7D
 	.string "That's good for me--I can't stand heat!$"
 
 Route113_Text_DillonIntro: @ 8299DE3
-	.string "The volcano's eruption is proof that\n"
-	.string "the earth is alive.$"
+	.string "We'll feed our flame before wasting\n"
+	.string "time on everyone else's.\p"
+	.string "The gallows were not supposed to look\n"
+	.string "this!$"
 
 Route113_Text_DillonDefeat: @ 8299E1C
-	.string "You're some kind of strong!$"
+	.string "Oh God, we live in misery, lying here\n"
+	.string "in desperation...\p"
+	.string "We need you here more than anything,"
+	.string "right now.$"
+
 
 Route113_Text_DillonPostBattle: @ 8299E38
-	.string "Ouch! Owww! I can't see!\n"
-	.string "I got ashes in my eyelashes!\p"
-	.string "Get it? Ashes and eyelashes?\p"
-	.string "Okay, that was bad, sorry…$"
+	.string "Oh God, we live in misery, lying here\n"
+	.string "in desperation...\p"
+	.string "We need you here more than anything,"
+	.string "right now.$"
 
 Route113_Text_MadelineIntro: @ 8299EA6
 	.string "I use this parasol to ward off this\n"
