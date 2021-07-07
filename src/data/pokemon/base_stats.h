@@ -13746,12 +13746,12 @@ const struct BaseStats gBaseStats[] =
     },
 [SPECIES_FILLER_1] =
     {
-        .baseHP        = 48,
+        .baseHP        = 260,
         .baseAttack    = 51,
-        .baseDefense   = 53,
+        .baseDefense   = 260,
         .baseSpeed     = 76,
         .baseSpAttack  = 41,
-        .baseSpDefense = 41,
+        .baseSpDefense = 260,
         .type1 = TYPE_GRASS,
         .type2 = TYPE_GRASS,
         .catchRate = 45,
