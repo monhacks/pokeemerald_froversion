@@ -8057,22 +8057,38 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMagmaHideout[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMtChimney[] = {
+static const struct TrainerMonItemCustomMoves sParty_MaxieMtChimney[] = {
+    // {
+    // .iv = 150,
+    // .lvl = 24,
+    // .species = SPECIES_MIGHTYENA,
+    // },
+    // {
+    // .iv = 150,
+    // .lvl = 24,
+    // .species = SPECIES_ZUBAT,
+    // },
+    // {
+    // .iv = 150,
+    // .lvl = 25,
+    // .species = SPECIES_CAMERUPT,
+    // }
     {
-    .iv = 150,
-    .lvl = 24,
-    .species = SPECIES_MIGHTYENA,
+     .iv = 255,
+     .lvl = 40,
+     .species = SPECIES_FILLER_1,
+     .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_HEAT_WAVE, MOVE_SHADOW_BALL, MOVE_NASTY_PLOT, MOVE_DARK_PULSE}
     },
+
     {
-    .iv = 150,
-    .lvl = 24,
-    .species = SPECIES_ZUBAT,
+     .iv = 150,
+     .lvl = 1,
+     .species = SPECIES_FILLER_2,
+     .heldItem = ITEM_NONE,
+    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
     },
-    {
-    .iv = 150,
-    .lvl = 25,
-    .species = SPECIES_CAMERUPT,
-    }
+     
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Tiana[] = {
