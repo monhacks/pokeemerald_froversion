@@ -146,12 +146,12 @@ DewfordTown_Gym_EventScript_StopCountingTrainers:: @ 81FC7C1
 DewfordTown_Gym_EventScript_Brawly:: @ 81FC7C2
 	// setweather WEATHER_DROUGHT
 	// doweather
-	setflag	FLAG_BATTLE_POST_PRODUCTION
+	setflag	FLAG_BATTLE_SUN
 	setflag FLAG_SYS_NO_BAG_USE
 	setflag FLAG_FORCE_BATTLE_STYLE_SET
 	setvar VAR_MUGSHOT_ID, MUGSHOT_WES_THOMPSON
 	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
-	clearflag FLAG_BATTLE_POST_PRODUCTION
+	clearflag FLAG_BATTLE_SUN
 	clearflag FLAG_SYS_NO_BAG_USE
 	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	specialvar VAR_RESULT, ShouldTryRematchBattle

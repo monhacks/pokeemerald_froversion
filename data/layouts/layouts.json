@@ -4587,7 +4587,7 @@
       "width": 60,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_GrandIslandBridge",
       "border_filepath": "data/layouts/NiagaraRiverSouth/border.bin",
       "blockdata_filepath": "data/layouts/NiagaraRiverSouth/map.bin"
     },

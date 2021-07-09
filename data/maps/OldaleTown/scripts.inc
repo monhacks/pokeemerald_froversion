@@ -1,6 +1,6 @@
-.set LOCALID_MART_EMPLOYEE, 2
+.set LOCALID_MART_EMPLOYEE, 1
 .set LOCALID_FOOTPRINTS_MAN, 3
-.set LOCALID_RIVAL, 4
+.set LOCALID_RIVAL, 2
 
 OldaleTown_MapScripts:: @ 81E8EA2
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_OnTransition

@@ -931,6 +931,15 @@ static const struct AbilitySetter sDumbellionAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sLotadAbilitySet[] = 
+{
+    {ABILITY_OWN_TEMPO, 1},
+    {ABILITY_HYDRATION, 13},
+    {ABILITY_RAIN_DISH, 27},
+    {ABILITY_SWIFT_SWIM, 41},
+    ABILITY_SET_END
+};
+
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
@@ -1099,8 +1108,9 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_CRACKTUSS] = sCactarAbilitySet,
     [SPECIES_OTDORBLE] = sLutradorAbilitySet,
     [SPECIES_LUTRADOR] = sLutradorAbilitySet,
-
-
+    [SPECIES_LOTAD] = sLotadAbilitySet,
+    [SPECIES_LOMBRE] = sLotadAbilitySet,
+    [SPECIES_LUDICOLO] = sLotadAbilitySet,
     [SPECIES_PHOTOGEIST] = sPhotogeistAbilitySet,
     [SPECIES_DUMBELLION] = sDumbellionAbilitySet,
     [SPECIES_BARBELLION] = sDumbellionAbilitySet,

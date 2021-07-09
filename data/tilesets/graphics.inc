@@ -1909,3 +1909,23 @@ gTilesetPalettes_Raintree::
 	.align 2
 gTilesetTiles_Raintree::
 	.incbin "data/tilesets/secondary/raintree/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_GrandIslandBridge::
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/grandislandbridge/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_GrandIslandBridge::
+	.incbin "data/tilesets/secondary/grandislandbridge/tiles.4bpp.lz"

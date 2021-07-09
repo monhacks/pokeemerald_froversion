@@ -621,3 +621,10 @@ gMetatiles_Raintree::
 	.align 1
 gMetatileAttributes_Raintree::
 	.incbin "data/tilesets/secondary/raintree/metatile_attributes.bin"
+	.align 1
+gMetatiles_GrandIslandBridge::
+	.incbin "data/tilesets/secondary/grandislandbridge/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_GrandIslandBridge::
+	.incbin "data/tilesets/secondary/grandislandbridge/metatile_attributes.bin"

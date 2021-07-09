@@ -929,3 +929,14 @@ gTileset_Raintree::
 	.4byte gMetatiles_Raintree
 	.4byte gMetatileAttributes_Raintree
 	.4byte NULL
+
+	.align 2
+gTileset_GrandIslandBridge::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_GrandIslandBridge
+	.4byte gTilesetPalettes_GrandIslandBridge
+	.4byte gMetatiles_GrandIslandBridge
+	.4byte gMetatileAttributes_GrandIslandBridge
+	.4byte NULL
