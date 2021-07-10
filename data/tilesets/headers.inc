@@ -940,3 +940,14 @@ gTileset_GrandIslandBridge::
 	.4byte gMetatiles_GrandIslandBridge
 	.4byte gMetatileAttributes_GrandIslandBridge
 	.4byte NULL
+
+	.align 2
+gTileset_SummitCityGym::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_SummitCityGym
+	.4byte gTilesetPalettes_SummitCityGym
+	.4byte gMetatiles_SummitCityGym
+	.4byte gMetatileAttributes_SummitCityGym
+	.4byte NULL

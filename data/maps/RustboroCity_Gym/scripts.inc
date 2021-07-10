@@ -2,6 +2,7 @@ RustboroCity_Gym_MapScripts:: @ 8212F30
 	.byte 0
 
 RustboroCity_Gym_EventScript_Roxanne:: @ 8212F31
+	goto_if_unset FLAG_FOUND_CHADS_NAME_BADGE, SummitCity_Gym_EventScript_CantBattleYetLostNameBadge
 	setvar VAR_MUGSHOT_ID, MUGSHOT_CHADANDMARK
 	setflag FLAG_BATTLE_POISON_FIELD
 	setflag FLAG_SYS_NO_BAG_USE
@@ -13,6 +14,12 @@ RustboroCity_Gym_EventScript_Roxanne:: @ 8212F31
 	goto_if_eq RustboroCity_Gym_EventScript_RoxanneRematch
 	goto_if_unset FLAG_RECEIVED_TM39, RustboroCity_Gym_EventScript_GiveRockTomb
 	msgbox RustboroCity_Gym_Text_RoxannePostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+SummitCity_Gym_EventScript_CantBattleYetLostNameBadge:
+	setflag FLAG_TEMP_1
+	msgbox SummitCity_Gym_Text_ChadLostNameBadge, MSGBOX_AUTOCLOSE
 	release
 	end
 
@@ -50,7 +57,13 @@ RustboroCity_Gym_EventScript_RoxanneRematch:: @ 8212FC8
 
 RustboroCity_Gym_EventScript_Josh:: @ 8212FE3
 	trainerbattle_single TRAINER_JOSH, RustboroCity_Gym_Text_JoshIntro, RustboroCity_Gym_Text_JoshDefeat
+	goto_if_set FLAG_TEMP_1, RustboroCity_Gym_EventScript_JoshSearching
 	msgbox RustboroCity_Gym_Text_JoshPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RustboroCity_Gym_EventScript_JoshSearching:
+	trainerbattle_single TRAINER_JOSH, RustboroCity_Gym_Text_JoshIntro, RustboroCity_Gym_Text_JoshDefeat
+	msgbox RustboroCity_Gym_Text_JoshPostBattleSearching, MSGBOX_AUTOCLOSE
 	end
 
 RustboroCity_Gym_EventScript_Tommy:: @ 8212FFA
@@ -60,7 +73,13 @@ RustboroCity_Gym_EventScript_Tommy:: @ 8212FFA
 
 RustboroCity_Gym_EventScript_Marc:: @ 8213011
 	trainerbattle_single TRAINER_MARC, RustboroCity_Gym_Text_MarcIntro, RustboroCity_Gym_Text_MarcDefeat
+	goto_if_set FLAG_TEMP_1, RustboroCity_Gym_EventScript_MarcSearching
 	msgbox RustboroCity_Gym_Text_MarcPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+RustboroCity_Gym_EventScript_MarcSearching:: @ 8213011
+	trainerbattle_single TRAINER_MARC, RustboroCity_Gym_Text_MarcIntro, RustboroCity_Gym_Text_MarcDefeat
+	msgbox RustboroCity_Gym_Text_MarcSearchingPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 RustboroCity_Gym_EventScript_GymGuide:: @ 8213028
@@ -294,3 +313,23 @@ RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons: @ 8213D93
 
 RustboroCity_Gym_MarkAndChadNeedTwoMons:
 	.string "Mark and Chad: Yo fro, you need to \nPokémon since we will be having a \ldouble battle!$"
+
+SummitCity_Gym_Text_ChadLostNameBadge:
+	.string "Mark and Chad: {PLAYER}!\p"
+	.string "It is great to see you.\p"
+	.string "We would love to battle you, but Chad\n"
+	.string "lost his name Badge. Now challengers\l"
+	.string "won't know who is who!\p"
+	.string "Please help us find his name badge.\n"
+	.string "I wonder if Patches over in Electronics\l"
+	.string "knows where it is...\p"
+	.string "After we find it, we will battle you.$"
+
+RustboroCity_Gym_Text_JoshPostBattleSearching:
+	.string "Chad's name badge? Haven't seen it.\n"
+	.string "Why don't you ask the fella in\l"
+	.string "the matress department.$"
+
+RustboroCity_Gym_Text_MarcSearchingPostBattle:
+	.string "Oh yea, Chad's name badge. I think\n"
+	.string "I saw it in one of the refridgerators!$"

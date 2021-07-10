@@ -1929,3 +1929,23 @@ gTilesetPalettes_GrandIslandBridge::
 	.align 2
 gTilesetTiles_GrandIslandBridge::
 	.incbin "data/tilesets/secondary/grandislandbridge/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SummitCityGym::
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/summitcitygym/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SummitCityGym::
+	.incbin "data/tilesets/secondary/summitcitygym/tiles.4bpp.lz"

@@ -628,3 +628,10 @@ gMetatiles_GrandIslandBridge::
 	.align 1
 gMetatileAttributes_GrandIslandBridge::
 	.incbin "data/tilesets/secondary/grandislandbridge/metatile_attributes.bin"
+	.align 1
+gMetatiles_SummitCityGym::
+	.incbin "data/tilesets/secondary/summitcitygym/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SummitCityGym::
+	.incbin "data/tilesets/secondary/summitcitygym/metatile_attributes.bin"
