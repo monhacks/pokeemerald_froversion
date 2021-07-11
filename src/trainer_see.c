@@ -183,7 +183,7 @@ bool8 CheckForTrainersWantingBattle(void)
     u8 i;
     u8 numTrainers;
 
-#if DEBUG //DEBUG
+#if DEBUGGING //DEBUG
     if (FlagGet(FLAG_SYS_NO_TRAINER_SEE))
         return FALSE;
 #endif //
