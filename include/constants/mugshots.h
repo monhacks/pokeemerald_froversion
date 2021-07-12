@@ -6,5 +6,8 @@
 #define MUGSHOT_BOBBY 2
 #define MUGSHOT_JOHN 3
 #define MUGSHOT_TILYOU 4
+#define MUGSHOT_SEARS_PA 5
+#define MUGSHOT_SEARS_TREASURE_MAP 6
+
 
 #endif

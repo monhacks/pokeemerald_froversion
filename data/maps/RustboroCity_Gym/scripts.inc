@@ -79,14 +79,29 @@ RustboroCity_Gym_EventScript_Marc:: @ 8213011
 
 RustboroCity_Gym_EventScript_MarcSearching:: @ 8213011
 	trainerbattle_single TRAINER_MARC, RustboroCity_Gym_Text_MarcIntro, RustboroCity_Gym_Text_MarcDefeat
+	setvar VAR_0x8000, MUGSHOT_SEARS_PA
 	msgbox RustboroCity_Gym_Text_MarcSearchingPostBattle, MSGBOX_AUTOCLOSE
+	callnative DrawMugshot
+	msgbox SummitCity_Gym_Text_CheckOutThisMap, MSGBOX_DEFAULT
+	release
 	end
 
 RustboroCity_Gym_EventScript_GymGuide:: @ 8213028
 	lock
 	faceplayer
+	goto_if_set FLAG_TEMP_1, SummitCity_Gym_EventScript_CheckOutThisMap
 	goto_if_set FLAG_DEFEATED_RUSTBORO_GYM, RustboroCity_Gym_EventScript_GymGuidePostVictory
 	msgbox RustboroCity_Gym_Text_GymGuideAdvice, MSGBOX_DEFAULT
+	release
+	end
+
+SummitCity_Gym_EventScript_CheckOutThisMap:
+	msgbox SummitCity_Gym_Text_CheckOutThisMap, MSGBOX_DEFAULT
+	setvar VAR_0x8000, MUGSHOT_SEARS_TREASURE_MAP
+	callnative DrawMugshot
+	msgbox SummitCity_Gym_Text_TakeYourTime, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq SummitCityGym_EventScript_TakeYourTime
 	release
 	end
 
@@ -333,3 +348,10 @@ RustboroCity_Gym_Text_JoshPostBattleSearching:
 RustboroCity_Gym_Text_MarcSearchingPostBattle:
 	.string "Oh yea, Chad's name badge. I think\n"
 	.string "I saw it in one of the refridgerators!$"
+
+SummitCity_Gym_Text_CheckOutThisMap:
+	.string "Ah, so Chad and Mark are pulling this\n"
+	.string "trick again, huh?\p"
+	.string "Very well, take a look at this map of\n"
+	.string "the gym and try to look for anything\l"
+	.string "that doesn't look right.$"

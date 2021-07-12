@@ -31,6 +31,10 @@ static const u32 sMugshotImg_John[] = INCBIN_U32("graphics/mugshots/john.4bpp.lz
 static const u16 sMugshotPal_John[] = INCBIN_U16("graphics/mugshots/john.gbapal");
 static const u32 sMugshotImg_Tilyou[] = INCBIN_U32("graphics/mugshots/tilyou.4bpp.lz");
 static const u16 sMugshotPal_Tilyou[] = INCBIN_U16("graphics/mugshots/tilyou.gbapal");
+static const u32 sMugshotImg_SearsPA[] = INCBIN_U32("graphics/mugshots/sears_pa.4bpp.lz");
+static const u16 sMugshotPal_SearsPA[] = INCBIN_U16("graphics/mugshots/sears_pa.gbapal");
+static const u32 sMugshotImg_SearsTreasureMap[] = INCBIN_U32("graphics/mugshots/sears_treasure_map.4bpp.lz");
+static const u16 sMugshotPal_SearsTreasureMap[] = INCBIN_U16("graphics/mugshots/sears_treasure_map.gbapal");
 
 static const struct Mugshot sMugshots[] = {
     [MUGSHOT_ANGELINA] = {.x = 16, .y = 5, .width = 24, .height = 24, .image = sMugshotImg_Angelina, .palette = sMugshotPal_Angelina},
@@ -38,6 +42,8 @@ static const struct Mugshot sMugshots[] = {
     [MUGSHOT_BOBBY] = {.x = 0, .y = 4, .width = 88, .height = 80, .image = sMugshotImg_Bobby, .palette = sMugshotPal_Bobby},
     [MUGSHOT_JOHN] = {.x = 3, .y = 3, .width = 80, .height = 88, .image = sMugshotImg_John, .palette = sMugshotPal_John},
     [MUGSHOT_TILYOU] = {.x = 3, .y = 3, .width = 72, .height = 88, .image = sMugshotImg_Tilyou, .palette = sMugshotPal_Tilyou},
+    [MUGSHOT_SEARS_PA] = {.x = 8, .y = 1, .width = 104, .height = 104, .image = sMugshotImg_SearsPA, .palette = sMugshotPal_SearsPA},
+    [MUGSHOT_SEARS_TREASURE_MAP] = {.x = 1, .y = 0, .width = 144, .height = 96, .image = sMugshotImg_SearsTreasureMap, .palette = sMugshotPal_SearsTreasureMap},
 };
 
 
