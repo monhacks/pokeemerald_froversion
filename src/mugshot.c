@@ -35,6 +35,10 @@ static const u32 sMugshotImg_SearsPA[] = INCBIN_U32("graphics/mugshots/sears_pa.
 static const u16 sMugshotPal_SearsPA[] = INCBIN_U16("graphics/mugshots/sears_pa.gbapal");
 static const u32 sMugshotImg_SearsTreasureMap[] = INCBIN_U32("graphics/mugshots/sears_treasure_map.4bpp.lz");
 static const u16 sMugshotPal_SearsTreasureMap[] = INCBIN_U16("graphics/mugshots/sears_treasure_map.gbapal");
+static const u32 sMugshotImg_SearsCreditCard[] = INCBIN_U32("graphics/mugshots/sears_credit_card.4bpp.lz");
+static const u16 sMugshotPal_SearsCreditCard[] = INCBIN_U16("graphics/mugshots/sears_credit_card.gbapal");
+static const u32 sMugshotImg_SearsAttachment[] = INCBIN_U32("graphics/mugshots/sears_attachment.4bpp.lz");
+static const u16 sMugshotPal_SearsAttachment[] = INCBIN_U16("graphics/mugshots/sears_attachment.gbapal");
 
 static const struct Mugshot sMugshots[] = {
     [MUGSHOT_ANGELINA] = {.x = 16, .y = 5, .width = 24, .height = 24, .image = sMugshotImg_Angelina, .palette = sMugshotPal_Angelina},
@@ -43,7 +47,9 @@ static const struct Mugshot sMugshots[] = {
     [MUGSHOT_JOHN] = {.x = 3, .y = 3, .width = 80, .height = 88, .image = sMugshotImg_John, .palette = sMugshotPal_John},
     [MUGSHOT_TILYOU] = {.x = 3, .y = 3, .width = 72, .height = 88, .image = sMugshotImg_Tilyou, .palette = sMugshotPal_Tilyou},
     [MUGSHOT_SEARS_PA] = {.x = 8, .y = 1, .width = 104, .height = 104, .image = sMugshotImg_SearsPA, .palette = sMugshotPal_SearsPA},
-    [MUGSHOT_SEARS_TREASURE_MAP] = {.x = 1, .y = 0, .width = 144, .height = 96, .image = sMugshotImg_SearsTreasureMap, .palette = sMugshotPal_SearsTreasureMap},
+    [MUGSHOT_SEARS_TREASURE_MAP] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_SearsTreasureMap, .palette = sMugshotPal_SearsTreasureMap},
+    [MUGSHOT_SEARS_CREDIT_CARD] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_SearsCreditCard, .palette = sMugshotPal_SearsCreditCard},
+    [MUGSHOT_SEARS_ATTACHMENT] = {.x = 7, .y = 1, .width = 128, .height = 96, .image = sMugshotImg_SearsAttachment, .palette = sMugshotPal_SearsAttachment},
 };
 
 

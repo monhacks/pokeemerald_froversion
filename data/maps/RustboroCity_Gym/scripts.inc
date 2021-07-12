@@ -102,6 +102,7 @@ SummitCity_Gym_EventScript_CheckOutThisMap:
 	msgbox SummitCity_Gym_Text_TakeYourTime, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq SummitCityGym_EventScript_TakeYourTime
+	callnative ClearMugshot
 	release
 	end
 
