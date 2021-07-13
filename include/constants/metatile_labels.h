@@ -730,6 +730,16 @@
 #define METATILE_Sootopolis_GymDoor_Closed   0x250
 #define METATILE_Sootopolis_RoughWater       0x290
 
+// gTileset_SummitCityGym
+#define METATILE_SummitCityGym_SummitCity_Gym_HiddenDoorBottomLeft   0x278
+#define METATILE_SummitCityGym_SummitCity_Gym_HiddenDoorBottomRight  0x27A
+#define METATILE_SummitCityGym_SummitCity_Gym_HiddenDoorMiddle       0x271
+#define METATILE_SummitCityGym_SummitCity_Gym_HiddenDoorMiddleLeft   0x270
+#define METATILE_SummitCityGym_SummitCity_Gym_HiddenDoorMiddleRight  0x272
+#define METATILE_SummitCityGym_SummitCity_Gym_HiddenDoorTopLeft      0x268
+#define METATILE_SummitCityGym_SummitCity_Gym_HiddenDoorTopMiddle    0x269
+#define METATILE_SummitCityGym_SummitCity_Gym_HiddenDoorTopRight     0x26A
+
 // gTileset_TrainerHill
 #define METATILE_TrainerHill_CounterDoor          0x334
 #define METATILE_TrainerHill_Door_Elevator_Lobby  0x32C

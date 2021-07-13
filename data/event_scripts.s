@@ -1167,3 +1167,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/RaintreeIsland_BerryStand/scripts.inc"
 
 	.include "data/maps/SummitCityGym/scripts.inc"
+
+	.include "data/maps/SummitCityGymBasement/scripts.inc"

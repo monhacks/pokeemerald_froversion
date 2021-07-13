@@ -825,6 +825,48 @@ static const u8 sText_Fire[] =_("Fire");
 static const u8 sText_Gun[] =_("Gun");
 static const u8 sText_Knife[] =_("Knife");
 static const u8 sText_OldAge[] =_("Old Age");
+static const u8 sText_AlphabetA[] =_("A");
+static const u8 sText_AlphabetB[] =_("B");
+static const u8 sText_AlphabetC[] =_("C");
+static const u8 sText_AlphabetD[] =_("D");
+static const u8 sText_AlphabetE[] =_("E");
+static const u8 sText_AlphabetF[] =_("F");
+static const u8 sText_AlphabetG[] =_("G");
+static const u8 sText_AlphabetH[] =_("H");
+static const u8 sText_AlphabetI[] =_("I");
+static const u8 sText_AlphabetJ[] =_("J");
+static const u8 sText_AlphabetK[] =_("K");
+static const u8 sText_AlphabetL[] =_("L");
+static const u8 sText_AlphabetM[] =_("M");
+static const u8 sText_AlphabetN[] =_("N");
+static const u8 sText_AlphabetO[] =_("O");
+static const u8 sText_AlphabetP[] =_("P");
+static const u8 sText_AlphabetQ[] =_("Q");
+static const u8 sText_AlphabetR[] =_("R");
+static const u8 sText_AlphabetS[] =_("S");
+static const u8 sText_AlphabetT[] =_("T");
+static const u8 sText_AlphabetU[] =_("U");
+static const u8 sText_AlphabetV[] =_("V");
+static const u8 sText_AlphabetW[] =_("W");
+static const u8 sText_AlphabetX[] =_("X");
+static const u8 sText_AlphabetY[] =_("Y");
+static const u8 sText_AlphabetZ[] =_("Z");
+static const u8 sText_Number0[] =_("0");
+static const u8 sText_Number1[] =_("1");
+static const u8 sText_Number2[] =_("2");
+static const u8 sText_Number3[] =_("3");
+static const u8 sText_Number4[] =_("4");
+static const u8 sText_Number5[] =_("5");
+static const u8 sText_Number6[] =_("6");
+static const u8 sText_Number7[] =_("7");
+static const u8 sText_Number8[] =_("8");
+static const u8 sText_Number9[] =_("9");
+static const u8 sText_PA[] =_("5YR PA");
+static const u8 sText_CreditCard[] =_("Credit Card");
+static const u8 sText_Attachment[] =_("Attachment");
+
+
+
 
 // Sets of multichoices.
 static const struct ListMenuItem sSet1[] =
@@ -866,6 +908,57 @@ static const struct ListMenuItem sNicCageMovies[] =
     {sText_TheRock, 8},
 };
 
+static const struct ListMenuItem sAlphabet[] =
+{
+    {sText_AlphabetA, 0},
+    {sText_AlphabetB, 1},
+    {sText_AlphabetC, 2},
+    {sText_AlphabetD, 3},
+    {sText_AlphabetE, 4},
+    {sText_AlphabetF, 5},
+    {sText_AlphabetG, 6},
+    {sText_AlphabetH, 7},
+    {sText_AlphabetI, 8},
+    {sText_AlphabetJ, 9},
+    {sText_AlphabetK, 10},
+    {sText_AlphabetL, 11},
+    {sText_AlphabetM, 12},
+    {sText_AlphabetN, 13},
+    {sText_AlphabetO, 14},
+    {sText_AlphabetP, 15},
+    {sText_AlphabetQ, 16},
+    {sText_AlphabetR, 17},
+    {sText_AlphabetS, 18},
+    {sText_AlphabetT, 19},
+    {sText_AlphabetU, 20},
+    {sText_AlphabetV, 21},
+    {sText_AlphabetW, 22},
+    {sText_AlphabetX, 23},
+    {sText_AlphabetY, 24},
+    {sText_AlphabetZ, 25},
+};
+
+static const struct ListMenuItem sNumbers[] =
+{
+    {sText_Number0, 0},
+    {sText_Number1, 1},
+    {sText_Number2, 2},
+    {sText_Number3, 3},
+    {sText_Number4, 4},
+    {sText_Number5, 5},
+    {sText_Number6, 6},
+    {sText_Number7, 7},
+    {sText_Number8, 8},
+    {sText_Number9, 9},
+};
+
+static const struct ListMenuItem sSummitCityEscapePuzzles[] =
+{
+    {sText_PA, 0},
+    {sText_CreditCard, 1},
+    {sText_Attachment, 2}, 
+};
+
 static const struct ListMenuItem sKickAssQuestion1[] =
 {
     {sText_DaveLizewski, 0},
@@ -900,12 +993,17 @@ struct
     int count;
 } static const sScrollingSets[] =
 {
-    {sSet1, ARRAY_COUNT(sSet1)},
-    {sSet2, ARRAY_COUNT(sSet2)},
-    {sNicCageMovies, ARRAY_COUNT(sNicCageMovies)},
-    {sKickAssQuestion1, ARRAY_COUNT(sKickAssQuestion1)},
-    {sKickAssQuestion2, ARRAY_COUNT(sKickAssQuestion2)},
-    {sKickAssQuestion3, ARRAY_COUNT(sKickAssQuestion3)},
+    {sSet1, ARRAY_COUNT(sSet1)}, //0
+    {sSet2, ARRAY_COUNT(sSet2)}, //1
+    {sNicCageMovies, ARRAY_COUNT(sNicCageMovies)}, //2
+    {sKickAssQuestion1, ARRAY_COUNT(sKickAssQuestion1)}, //3
+    {sKickAssQuestion2, ARRAY_COUNT(sKickAssQuestion2)}, //4
+    {sKickAssQuestion3, ARRAY_COUNT(sKickAssQuestion3)}, //5
+    {sAlphabet, ARRAY_COUNT(sAlphabet)}, //6
+    {sNumbers, ARRAY_COUNT(sNumbers)}, //7
+    {sSummitCityEscapePuzzles, ARRAY_COUNT(sSummitCityEscapePuzzles)}, //7
+    
+    
 };
 
 static void Task_ScrollingMultichoiceInput(u8 taskId);

@@ -4920,6 +4920,16 @@
       "secondary_tileset": "gTileset_SummitCityGym",
       "border_filepath": "data/layouts/SummitCityGym/border.bin",
       "blockdata_filepath": "data/layouts/SummitCityGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUMMIT_CITY_GYM_BASEMENT",
+      "name": "SummitCityGymBasement_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/SummitCityGymBasement/border.bin",
+      "blockdata_filepath": "data/layouts/SummitCityGymBasement/map.bin"
     }
   ]
 }

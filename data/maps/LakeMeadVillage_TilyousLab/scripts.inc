@@ -342,6 +342,7 @@ Script_TilyousLab_ProfTilyousPokeball:
 
 Script_TilyousLab_IsiahTellsProfessorAboutTeamMAGA::
 lockall
+special HealPlayerParty
 msgbox T_TilyousLab_IsiahExplainsWhatHeSaw, MSGBOX_NPC
 applymovement 9, M_TilyousLab_IsiahLeavesAfterSavingIsiah
 waitmovement 9

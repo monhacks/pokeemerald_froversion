@@ -49,7 +49,7 @@ static const struct Mugshot sMugshots[] = {
     [MUGSHOT_SEARS_PA] = {.x = 8, .y = 1, .width = 104, .height = 104, .image = sMugshotImg_SearsPA, .palette = sMugshotPal_SearsPA},
     [MUGSHOT_SEARS_TREASURE_MAP] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_SearsTreasureMap, .palette = sMugshotPal_SearsTreasureMap},
     [MUGSHOT_SEARS_CREDIT_CARD] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_SearsCreditCard, .palette = sMugshotPal_SearsCreditCard},
-    [MUGSHOT_SEARS_ATTACHMENT] = {.x = 7, .y = 1, .width = 128, .height = 96, .image = sMugshotImg_SearsAttachment, .palette = sMugshotPal_SearsAttachment},
+    [MUGSHOT_SEARS_ATTACHMENT] = {.x = 12, .y = 1, .width = 40, .height = 96, .image = sMugshotImg_SearsAttachment, .palette = sMugshotPal_SearsAttachment},
 };
 
 

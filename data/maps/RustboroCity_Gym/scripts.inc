@@ -2,7 +2,6 @@ RustboroCity_Gym_MapScripts:: @ 8212F30
 	.byte 0
 
 RustboroCity_Gym_EventScript_Roxanne:: @ 8212F31
-	goto_if_unset FLAG_FOUND_CHADS_NAME_BADGE, SummitCity_Gym_EventScript_CantBattleYetLostNameBadge
 	setvar VAR_MUGSHOT_ID, MUGSHOT_CHADANDMARK
 	setflag FLAG_BATTLE_POISON_FIELD
 	setflag FLAG_SYS_NO_BAG_USE
@@ -89,8 +88,8 @@ RustboroCity_Gym_EventScript_MarcSearching:: @ 8213011
 RustboroCity_Gym_EventScript_GymGuide:: @ 8213028
 	lock
 	faceplayer
-	goto_if_set FLAG_TEMP_1, SummitCity_Gym_EventScript_CheckOutThisMap
 	goto_if_set FLAG_DEFEATED_RUSTBORO_GYM, RustboroCity_Gym_EventScript_GymGuidePostVictory
+	goto_if_set FLAG_TEMP_4, SummitCity_Gym_EventScript_CheckOutThisMap
 	msgbox RustboroCity_Gym_Text_GymGuideAdvice, MSGBOX_DEFAULT
 	release
 	end

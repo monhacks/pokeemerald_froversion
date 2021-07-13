@@ -228,6 +228,7 @@
 #define MAP_RUSTBORO_CITY_FLAT2_3F              (15 | (11 << 8))
 #define MAP_RUSTBORO_CITY_HOUSE3                (16 | (11 << 8))
 #define MAP_SUMMIT_CITY_GYM                     (17 | (11 << 8))
+#define MAP_SUMMIT_CITY_GYM_BASEMENT            (18 | (11 << 8))
 
 // Map Group 12
 #define MAP_FORTREE_CITY_HOUSE1            (0 | (12 << 8))
@@ -644,6 +645,6 @@
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {96, 10, 9, 7, 7, 8, 9, 7, 7, 14, 8, 18, 10, 23, 13, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 2, 0};
+// static const u8 MAP_GROUP_COUNT[] = {96, 10, 9, 7, 7, 8, 9, 7, 7, 14, 8, 19, 10, 23, 13, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 2, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H
