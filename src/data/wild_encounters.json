@@ -11942,7 +11942,7 @@
           "map": "MAP_ROUTE1022",
           "base_label": "gRoute10220",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 5,

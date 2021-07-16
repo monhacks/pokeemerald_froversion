@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
-      "offset": 35,
-      "map": "MAP_RAINTREE_ISLAND"
+      "direction": "right",
+      "offset": -40,
+      "map": "MAP_ROUTE112"
     },
     {
       "direction": "left",
       "offset": 0,
-      "map": "MAP_GRAND_ISLAND"
+      "map": "MAP_LAVARIDGE_TOWN"
     }
   ],
   "object_events": [

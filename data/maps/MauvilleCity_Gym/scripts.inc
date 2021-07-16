@@ -101,6 +101,9 @@ MauvilleCity_Gym_EventScript_WattsonDefeated:: @ 820DF2B
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
 	setflag FLAG_DEFEATED_MAUVILLE_GYM
 	setflag FLAG_BADGE03_GET
+	clearflag FLAG_BATTLE_SANDSTORM
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	compare VAR_PETALBURG_GYM_STATE, 6
 	call_if_eq Common_EventScript_ReadyPetalburgGymForBattle
