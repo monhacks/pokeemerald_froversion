@@ -7026,7 +7026,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Mudkip[] = {
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute103Treecko[] = {
-    {
+     {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_RASCALOOT,
@@ -7971,28 +7971,28 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst5[] = {
 static const struct TrainerMonNoItemCustomMoves sParty_TabithaMtChimney[] = {
     {
     .abilityNum = 1,
-    .iv = 50,
+    .iv = 150,
     .lvl = 31,
     .species = SPECIES_BILLFALO,
     .moves = {MOVE_HORN_LEECH, MOVE_MUD_SLAP, MOVE_FACADE, MOVE_WORK_UP},
     },
     {
     .abilityNum = 1,
-    .iv = 50,
+    .iv = 150,
     .lvl = 34,
     .species = SPECIES_NOCTOWL,
     .moves = {MOVE_HYPNOSIS, MOVE_EXTRASENSORY, MOVE_REFLECT, MOVE_DREAM_EATER},
     },
     {
     .abilityNum = 0,
-    .iv = 50,
+    .iv = 150,
     .lvl = 32,
     .species = SPECIES_MUK,
     .moves = {MOVE_TOXIC, MOVE_DISABLE, MOVE_SLUDGE_WAVE, MOVE_NONE},
     },
     {
     .abilityNum = 2,
-    .iv = 50,
+    .iv = 150,
     .lvl = 32,
     .species = SPECIES_RATICATE,
     .moves = {MOVE_SUPER_FANG, MOVE_ASSURANCE, MOVE_QUICK_ATTACK, MOVE_SWORDS_DANCE},
