@@ -2343,7 +2343,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_HAAGLET] =
     {
         .size = 0x88,
-        .y_offset = 9,
+        .y_offset = -1,
     },
     [SPECIES_WARTHAAG] =
     {

@@ -6993,7 +6993,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Treecko[] = {
     {
     .iv = 50,
     .lvl = 23,
-    .species = SPECIES_INVERTEBRAKE,
+    .species = SPECIES_OCTIRE,
     },
     {
     .iv = 50,
@@ -7037,7 +7037,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Mudkip[] = {
     {
     .iv = 50,
     .lvl = 23,
-    .species = SPECIES_INVERTEBRAKE,
+    .species = SPECIES_OCTIRE,
     },
     {
     .iv = 50,
