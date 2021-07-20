@@ -940,6 +940,15 @@ static const struct AbilitySetter sLotadAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sBillfaloAbilitySet[] = 
+{
+    {ABILITY_ANGER_POINT, 1},
+    {ABILITY_INTIMIDATE, 15},
+    {ABILITY_SAP_SIPPER, 32},
+    {ABILITY_BEAST_BOOST, 50},
+    ABILITY_SET_END
+};
+
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
@@ -1114,7 +1123,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_PHOTOGEIST] = sPhotogeistAbilitySet,
     [SPECIES_DUMBELLION] = sDumbellionAbilitySet,
     [SPECIES_BARBELLION] = sDumbellionAbilitySet,
-    
+    [SPECIES_BILLFALO] = sBillfaloAbilitySet,
 
 
 

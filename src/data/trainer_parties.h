@@ -1811,8 +1811,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Mark[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntMtChimney1[] = {
     {
     .iv = 0,
-    .lvl = 20,
-    .species = SPECIES_NUMEL,
+    .lvl = 34,
+    .species = SPECIES_GRIMER,
     }
 };
 
@@ -7802,7 +7802,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Harrison[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntMtChimney2[] = {
     {
     .iv = 0,
-    .lvl = 20,
+    .lvl = 32,
     .species = SPECIES_ZUBAT,
     }
 };
@@ -7968,26 +7968,34 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst5[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TabithaMtChimney[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_TabithaMtChimney[] = {
     {
+    .abilityNum = 1,
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_NUMEL,
+    .lvl = 31,
+    .species = SPECIES_BILLFALO,
+    .moves = {MOVE_HORN_LEECH, MOVE_MUD_SLAP, MOVE_FACADE, MOVE_WORK_UP},
     },
     {
+    .abilityNum = 1,
     .iv = 50,
-    .lvl = 20,
-    .species = SPECIES_HOOTHOOT,
+    .lvl = 34,
+    .species = SPECIES_NOCTOWL,
+    .moves = {MOVE_HYPNOSIS, MOVE_EXTRASENSORY, MOVE_REFLECT, MOVE_DREAM_EATER},
     },
     {
+    .abilityNum = 0,
     .iv = 50,
-    .lvl = 22,
-    .species = SPECIES_NUMEL,
+    .lvl = 32,
+    .species = SPECIES_MUK,
+    .moves = {MOVE_TOXIC, MOVE_DISABLE, MOVE_SLUDGE_WAVE, MOVE_NONE},
     },
     {
+    .abilityNum = 2,
     .iv = 50,
-    .lvl = 22,
-    .species = SPECIES_ZUBAT,
+    .lvl = 32,
+    .species = SPECIES_RATICATE,
+    .moves = {MOVE_SUPER_FANG, MOVE_ASSURANCE, MOVE_QUICK_ATTACK, MOVE_SWORDS_DANCE},
     }
 };
 
@@ -8049,37 +8057,21 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMagmaHideout[] = {
 };
 
 static const struct TrainerMonItemCustomMoves sParty_MaxieMtChimney[] = {
-    // {
-    // .iv = 150,
-    // .lvl = 24,
-    // .species = SPECIES_MIGHTYENA,
-    // },
-    // {
-    // .iv = 150,
-    // .lvl = 24,
-    // .species = SPECIES_ZUBAT,
-    // },
-    // {
-    // .iv = 150,
-    // .lvl = 25,
-    // .species = SPECIES_CAMERUPT,
-    // }
     {
-     .iv = 255,
-     .lvl = 40,
-     .species = SPECIES_FILLER_1,
-     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_HEAT_WAVE, MOVE_SHADOW_BALL, MOVE_NASTY_PLOT, MOVE_DARK_PULSE}
+    .iv = 150,
+    .lvl = 34,
+    .species = SPECIES_HOUNDOOM,
     },
-
     {
-     .iv = 150,
-     .lvl = 1,
-     .species = SPECIES_FILLER_2,
-     .heldItem = ITEM_NONE,
-    .moves = {MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .iv = 150,
+    .lvl = 33,
+    .species = SPECIES_GOLBAT,
     },
-     
+    {
+    .iv = 150,
+    .lvl = 32,
+    .species = SPECIES_VAYPING,
+    }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Tiana[] = {
