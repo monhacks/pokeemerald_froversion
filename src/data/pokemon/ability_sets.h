@@ -291,7 +291,9 @@ static const struct AbilitySetter sDusclopsAbilitySet[] =
 static const struct AbilitySetter sSlakothAbilitySet[] =
 {
     {ABILITY_TRUANT, 1},
-    {ABILITY_SLOW_START, 46},
+    {ABILITY_SLOW_START, 25},
+    {ABILITY_DEFEATIST, 35},
+    {ABILITY_OWN_TEMPO, 45},
     ABILITY_SET_END
 };
 

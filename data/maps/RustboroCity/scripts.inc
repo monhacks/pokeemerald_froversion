@@ -1339,6 +1339,16 @@ SummitCity_EventScript_Hiker::
 	release
 	end
 
+SummitCity_EventScript_Hiker2::
+	lock
+	faceplayer
+	goto_if_set FLAG_BADGE04_GET, SummitCity_EventScript_HikerPathClear
+	msgbox SummitCity_Text_CaveNotSafe, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, LP_M_PlayerStepBack
+	waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
+
 SummitCity_EventScript_HikerPathClear:
 	msgbox SummitCity_Text_CaveIsSafe
 	release
@@ -1349,6 +1359,7 @@ SummitCity_EventScript_HikerBlockPathTrigger::
 	faceplayer
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_SummitCity_PlayerFaceHiker
 	applymovement 17, Movement_SummitCity_HikerFacePlayer
+	applymovement 19, Movement_SummitCity_HikerFacePlayer
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox SummitCity_Text_CaveNotSafe, MSGBOX_DEFAULT
 	applymovement OBJ_EVENT_ID_PLAYER, LP_M_PlayerStepBack
@@ -1375,6 +1386,24 @@ SummitCity_Pokemart_Amneet:
 	.2byte ITEM_POISON_CAMOUFLAGE
 	.2byte ITEM_SASSY_MINT
 	.2byte ITEM_NONE
+	release
+	end
+
+SummitCity_EventScript_CaveOpenOrClosed::
+	lock
+	faceplayer
+	goto_if_set FLAG_BADGE04_GET, SummitCity_EventScript_Path2Cleared
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_SummitCity_PlayerFaceHiker
+	applymovement 17, Movement_SummitCity_HikerFacePlayer
+	applymovement 19, Movement_SummitCity_HikerFacePlayer
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox SummitCity_Text_CaveNotSafe, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, LP_M_PlayerStepBack
+	waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
+
+SummitCity_EventScript_Path2Cleared:
 	release
 	end
 

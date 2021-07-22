@@ -105,6 +105,7 @@ FallarborTown_BattleTentLobby_EventScript_ResumeChallenge:: @ 81FFFCD
 FallarborTown_BattleTentLobby_EventScript_Attendant:: @ 8200001
 	lock
 	faceplayer
+	goto_if_unset FLAG_TEMP_1, FallarborTown_BattleTentLobby_EventScript_TentClosedTemporarily
 	fallarbortent_getprize
 	compare VAR_RESULT, ITEM_NONE
 	goto_if_ne FallarborTown_BattleTentLobby_EventScript_PrizeWaiting
@@ -119,6 +120,11 @@ FallarborTown_BattleTentLobby_EventScript_AskEnterChallenge:: @ 8200021
 	case 1, FallarborTown_BattleTentLobby_EventScript_ExplainChallenge
 	case 2, FallarborTown_BattleTentLobby_EventScript_CancelChallenge
 	case MULTI_B_PRESSED, FallarborTown_BattleTentLobby_EventScript_CancelChallenge
+
+FallarborTown_BattleTentLobby_EventScript_TentClosedTemporarily:
+	msgbox BattleTentLobby_Text_WorkingOnFix, MSGBOX_DEFAULT
+	release
+	end
 
 FallarborTown_BattleTentLobby_EventScript_TryEnterChallenge:: @ 820005D
 	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_ARENA
@@ -350,3 +356,6 @@ FallarborTown_BattleTentLobby_Text_ScottMakeChallenge: @ 8200653
 	.string "time with the likes of me, why not\l"
 	.string "make a challenge?$"
 
+BattleTentLobby_Text_WorkingOnFix:
+	.string "Hi. Due to some bugs, this battle tent\n"
+	.string "is under repair!$"

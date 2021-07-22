@@ -14,11 +14,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
-      "offset": 0,
-      "map": "MAP_ROUTE115"
-    },
-    {
       "direction": "down",
       "offset": 0,
       "map": "MAP_ROUTE104"
@@ -258,6 +253,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SummitCity_EventScript_AmneetTravelingMerchant",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 22,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SummitCity_EventScript_Hiker2",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -365,6 +373,13 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE116",
       "dest_warp_id": 5
+    },
+    {
+      "x": 21,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE115",
+      "dest_warp_id": 3
     }
   ],
   "coord_events": [
@@ -565,6 +580,15 @@
       "var": "VAR_PETALBURG_GYM_STATE",
       "var_value": "2",
       "script": "SummitCity_EventScript_HikerBlockPathTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "SummitCity_EventScript_CaveOpenOrClosed"
     }
   ],
   "bg_events": [

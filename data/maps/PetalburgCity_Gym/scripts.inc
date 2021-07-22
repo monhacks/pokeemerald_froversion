@@ -369,6 +369,9 @@ PetalburgCity_Gym_EventScript_NormanFaceDoorEast:: @ 8204D7F
 	return
 
 PetalburgCity_Gym_EventScript_NormanPostBattle:: @ 8204D80
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_BATTLE_ROULETTE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	call PetalburgCity_Gym_EventScript_ShouldGiveEnigmaBerry
 	compare VAR_RESULT, TRUE
 	goto_if_eq PetalburgCity_Gym_EventScript_GiveEnigmaBerry
@@ -418,7 +421,13 @@ PetalburgCity_Gym_EventScript_GiveEnigmaBerry:: @ 8204E1D
 
 PetalburgCity_Gym_EventScript_NormanBattle:: @ 8204E3B
 	msgbox PetalburgCity_Gym_Text_NormanIntro, MSGBOX_DEFAULT
+	setflag FLAG_BATTLE_ROULETTE
+	setflag FLAG_SYS_NO_BAG_USE
+	setflag FLAG_FORCE_BATTLE_STYLE_SET
 	trainerbattle_no_intro TRAINER_NORMAN_1, PetalburgCity_Gym_Text_NormanDefeat
+	clearflag FLAG_BATTLE_ROULETTE
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	message PetalburgCity_Gym_Text_ReceivedBalanceBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
