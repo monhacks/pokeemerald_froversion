@@ -74,7 +74,7 @@ Debug_Script_1::
 	end
 
 Debug_Script_2::
-	setvar VAR_PETALBURG_GYM_STATE, 6
+	setflag FLAG_SYS_B_DASH
 	end
 
 Debug_Script_3::
