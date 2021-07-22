@@ -1371,7 +1371,7 @@ static void Cmd_attackcanceler(void)
         gBattlescriptCurrInstr = BattleScript_MagicCoatBounce;
         return;
     }
-    else if (gSideTimers[gBattlerTarget].magicMirrorTimer > 0
+    else if (gSideTimers[GetBattlerSide(gBattlerTarget)].magicMirrorTimer > 0
              && gBattleMoves[gCurrentMove].split == SPLIT_SPECIAL
             && !gProtectStructs[gBattlerAttacker].usesBouncedMove)
     {
@@ -8715,9 +8715,9 @@ static void Cmd_various(void)
         gBattlescriptCurrInstr += 4;
         return;
     case VARIOUS_MAGIC_MIRROR:
-        if (gSideTimers[gActiveBattler].magicMirrorTimer == 0)
+        if (gSideTimers[GetBattlerSide(gActiveBattler)].magicMirrorTimer == 0)
         {
-            gSideTimers[gActiveBattler].magicMirrorTimer = 3 + Random() % 3;
+            gSideTimers[GetBattlerSide(gActiveBattler)].magicMirrorTimer = 3 + Random() % 3;
             gBattlescriptCurrInstr += 7;
         }
         else
