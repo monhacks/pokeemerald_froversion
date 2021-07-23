@@ -786,6 +786,8 @@ u8 GetRandomActiveShowIdx(void)
         if (gSaveBlock1Ptr->tvShows[i].common.kind == TVSHOW_OFF_AIR)
             break;
     }
+    if (i >= ARRAY_COUNT(gSaveBlock1Ptr->tvShows) - 1)
+        i = ARRAY_COUNT(gSaveBlock1Ptr->tvShows) - 1;
     j = Random() % i;
     selIdx = j;
     do
