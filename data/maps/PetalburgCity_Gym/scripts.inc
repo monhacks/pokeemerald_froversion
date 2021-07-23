@@ -1716,4 +1716,7 @@ PetalburgCity_Gym_Text_GrantGaveShoes:
 	.string "They should work better for you. Well,\n"
 	.string "at least marginally better.\p"
 	.string "Just hold the B button and you'll\n"
-	.string "move faster than walking.$"
+	.string "move faster than walking.\p"
+	.string "You can toggle auto-run by\n"
+	.string "Pressing the R Button.\p"
+	.string "But no running in doors!$"

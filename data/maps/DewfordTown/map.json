@@ -98,7 +98,7 @@
       "x": 3,
       "y": 3,
       "elevation": 0,
-      "dest_map": "MAP_DEWFORD_TOWN_HALL",
+      "dest_map": "MAP_MAUVILLE_CITY_GAME_CORNER",
       "dest_warp_id": 0
     },
     {
@@ -126,7 +126,7 @@
       "x": 8,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_DEWFORD_TOWN_HOUSE2",
+      "dest_map": "MAP_TRAINER_HILL_ENTRANCE",
       "dest_warp_id": 0
     }
   ],

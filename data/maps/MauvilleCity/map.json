@@ -216,18 +216,18 @@
       "dest_warp_id": 0
     },
     {
-      "x": 8,
-      "y": 13,
-      "elevation": 0,
-      "dest_map": "MAP_MAUVILLE_CITY_GAME_CORNER",
-      "dest_warp_id": 0
-    },
-    {
       "x": 19,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_MAUVILLE_CITY_HOUSE2",
       "dest_warp_id": 0
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_MAUVILLE_CITY_GAME_CORNER",
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [
