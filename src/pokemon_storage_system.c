@@ -423,9 +423,9 @@ enum
 
 #define TAG_PAL_WAVEFORM    0xDACA
 #define TAG_PAL_DAC8        0xDAC8
-#define TAG_PAL_DAC6        0xDAC6
+#define TAG_PAL_DACC        0xDACC
 #define TAG_PAL_DACE        0xDACE
-#define TAG_PAL_DAC7        0xDAC7
+#define TAG_PAL_DACD        0xDACD
 #define TAG_PAL_DAC9        0xDAC9
 #define TAG_PAL_DAC0        0xDAC0
 #define TAG_PAL_DACB        0xDACB
@@ -906,7 +906,7 @@ static const struct OamData sOamData_857286C;
 static const struct SpriteTemplate sSpriteTemplate_CursorMon =
 {
     .tileTag = TAG_TILE_2,
-    .paletteTag = TAG_PAL_DAC6,
+    .paletteTag = TAG_PAL_DACC,
     .oam = &sOamData_857286C,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
@@ -2984,7 +2984,7 @@ static void Cb_DepositMenu(u8 taskId)
     {
     case 0:
         PrintStorageActionText(PC_TEXT_DEPOSIT_IN_WHICH_BOX);
-        sub_80C77E8(&sPSSData->field_1E5C, TAG_TILE_A, TAG_PAL_DAC7, 3, FALSE);
+        sub_80C77E8(&sPSSData->field_1E5C, TAG_TILE_A, TAG_PAL_DACD, 3, FALSE);
         sub_80C78D4(gUnknown_02039D0E);
         sPSSData->state++;
         break;
@@ -3635,7 +3635,7 @@ static void Cb_JumpBox(u8 taskId)
     {
     case 0:
         PrintStorageActionText(PC_TEXT_JUMP_TO_WHICH_BOX);
-        sub_80C77E8(&sPSSData->field_1E5C, TAG_TILE_A, TAG_PAL_DAC7, 3, FALSE);
+        sub_80C77E8(&sPSSData->field_1E5C, TAG_TILE_A, TAG_PAL_DACD, 3, FALSE);
         sub_80C78D4(StorageGetCurrentBox());
         sPSSData->state++;
         break;
@@ -4050,7 +4050,7 @@ static void LoadCursorMonSprite(void)
     u8 palSlot;
     u8 spriteId;
     struct SpriteSheet sheet = {sPSSData->field_22C4, 0x800, TAG_TILE_2};
-    struct SpritePalette palette = {sPSSData->field_2244, TAG_PAL_DAC6};
+    struct SpritePalette palette = {sPSSData->field_2244, TAG_PAL_DACC};
     struct SpriteTemplate template = sSpriteTemplate_CursorMon;
 
     for (i = 0; i < 0x800; i++)
@@ -4082,7 +4082,7 @@ static void LoadCursorMonSprite(void)
     if (sPSSData->cursorMonSprite == NULL)
     {
         FreeSpriteTilesByTag(TAG_TILE_2);
-        FreeSpritePaletteByTag(TAG_PAL_DAC6);
+        FreeSpritePaletteByTag(TAG_PAL_DACC);
     }
 }
 
@@ -5196,7 +5196,7 @@ static struct Sprite *CreateMonIconSprite(u16 species, u32 personality, s16 x, s
     struct SpriteTemplate tempalte = gUnknown_085728D4;
 
     species = GetIconSpecies(species, personality);
-    tempalte.paletteTag = 0xDAC0 + gMonIconPaletteIndices[species];
+    tempalte.paletteTag = TAG_PAL_DAC0 + gMonIconPaletteIndices[species];
     tileNum = sub_80CC124(species);
     if (tileNum == 0xFFFF)
         return NULL;
@@ -7650,7 +7650,7 @@ static void sub_80CFC14(void)
 
     struct SpritePalette spritePalettes[] =
     {
-        {gHandCursorPalette, TAG_PAL_DAC7},
+        {gHandCursorPalette, TAG_PAL_DACD},
         {}
     };
 
@@ -7722,7 +7722,7 @@ static void sub_80CFC14(void)
     LoadSpriteSheets(spriteSheets);
     LoadSpritePalettes(spritePalettes);
     sPSSData->field_CD8[0] = IndexOfSpritePaletteTag(TAG_PAL_WAVEFORM);
-    sPSSData->field_CD8[1] = IndexOfSpritePaletteTag(TAG_PAL_DAC7);
+    sPSSData->field_CD8[1] = IndexOfSpritePaletteTag(TAG_PAL_DACD);
 
     sub_80CD444(sBoxCursorArea, sBoxCursorPosition, &x, &y);
     spriteId = CreateSprite(&gSpriteTemplate_857BA50, x, y, 6);
