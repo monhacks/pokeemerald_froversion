@@ -24,18 +24,18 @@ static const struct AbilitySetter sMudkipAbilitySet[] =
 
 static const struct AbilitySetter sPidgeyAbilitySet[] = 
 {
-    {ABILITY_KEEN_EYE, 1},
-    {ABILITY_TANGLED_FEET, 18},
-    {ABILITY_BIG_PECKS, 37},
+    {ABILITY_BIG_PECKS, 1},
+    {ABILITY_GALE_WINGS, 16},
+    {ABILITY_NO_GUARD, 37},
     ABILITY_SET_END
 };
 
 static const struct AbilitySetter sSentretAbilitySet[] = 
 {
     {ABILITY_KEEN_EYE, 1},
-    {ABILITY_CUTE_CHARM, 14},
-    {ABILITY_FRISK, 31},
-    {ABILITY_OBLIVIOUS, 46},
+    {ABILITY_SIMPLE, 14},
+    {ABILITY_FUR_COAT, 31},
+    {ABILITY_TECHNICIAN, 50},
     ABILITY_SET_END
 };
 
@@ -216,9 +216,17 @@ static const struct AbilitySetter sChinchouAbilitySet[] =
 static const struct AbilitySetter sHoothootAbilitySet[] = 
 {
     {ABILITY_KEEN_EYE, 1},
-    {ABILITY_SNIPER, 14},
-    {ABILITY_INSOMNIA, 28},
-    {ABILITY_TINTED_LENS, 41},
+    {ABILITY_INSOMNIA, 14},
+    {ABILITY_TINTED_LENS, 28},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sNoctowlAbilitySet[] = 
+{
+    {ABILITY_KEEN_EYE, 1},
+    {ABILITY_INSOMNIA, 14},
+    {ABILITY_TINTED_LENS, 28},
+    {ABILITY_TECHNICIAN, 40},
     ABILITY_SET_END
 };
 
@@ -993,7 +1001,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_CHINCHOU] = sChinchouAbilitySet,
     [SPECIES_LANTURN] = sChinchouAbilitySet,
     [SPECIES_HOOTHOOT] = sHoothootAbilitySet,
-    [SPECIES_NOCTOWL] = sHoothootAbilitySet,
+    [SPECIES_NOCTOWL] = sNoctowlAbilitySet,
     [SPECIES_SPINARAK] = sSpinarakAbilitySet,
     [SPECIES_ARIADOS] = sSpinarakAbilitySet,
     [SPECIES_MURKROW] = sMurkrowAbilitySet,
