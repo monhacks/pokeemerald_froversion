@@ -13530,10 +13530,10 @@ const struct BaseStats gBaseStats[] =
 [SPECIES_SABLIZZARD] =
     {
         .baseHP        = 78,
-        .baseAttack    = 76,
+        .baseAttack    = 102,
         .baseDefense   = 40,
         .baseSpeed     = 104,
-        .baseSpAttack  = 102,
+        .baseSpAttack  = 76,
         .baseSpDefense = 60,
         .type1 = TYPE_ICE,
         .type2 = TYPE_ICE,
