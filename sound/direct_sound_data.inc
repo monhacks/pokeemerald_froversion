@@ -2302,7 +2302,7 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
 	.incbin "sound/direct_sound_samples/cries/blue_eyes.bin"
 .align 2
     Cry_Filler_1::
-	.incbin "sound/direct_sound_samples/cries/filler_1.bin"
+	.incbin "sound/direct_sound_samples/cries/redeyes.bin"
 .align 2
     Cry_Filler_2::
 	.incbin "sound/direct_sound_samples/cries/filler_2.bin"

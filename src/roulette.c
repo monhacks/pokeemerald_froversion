@@ -349,7 +349,7 @@ static EWRAM_DATA struct Roulette
     float varA0;
     u8 playTaskId;
     u8 spinTaskId;
-    u8 filler_1[2];
+    u8 redeyes[2];
     u16 taskWaitDelay;
     u16 taskWaitKey;
     TaskFunc nextTask;

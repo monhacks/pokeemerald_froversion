@@ -7630,7 +7630,7 @@ static const union AnimCmd *const sAnims_BLUE_EYES[] ={
     sAnim_GeneralFrame0,
     sAnim_BLUE_EYES_1,
 };
-static const union AnimCmd *const sAnims_FILLER_1[] ={
+static const union AnimCmd *const sAnims_REDEYES[] ={
     sAnim_GeneralFrame0,
     sAnim_FILLER_1_1,
 };
@@ -8294,7 +8294,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(CRACKTUSS),
     ANIM_CMD(DRACASTER),
     ANIM_CMD(BLUE_EYES),
-    ANIM_CMD(FILLER_1),
+    ANIM_CMD(REDEYES),
     ANIM_CMD(FILLER_2),
     ANIM_CMD(FILLER_3),
     ANIM_CMD(FILLER_4),

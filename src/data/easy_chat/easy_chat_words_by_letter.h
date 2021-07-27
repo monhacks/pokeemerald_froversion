@@ -495,7 +495,7 @@ const u16 gEasyChatWordsByLetter_E[] = {
 };
 
 const u16 gEasyChatWordsByLetter_F[] = {
-    EC_POKEMON2(FILLER_1),
+    EC_POKEMON2(REDEYES),
     EC_POKEMON2(FILLER_10),
     EC_POKEMON2(FILLER_11),
     EC_POKEMON2(FILLER_12),
