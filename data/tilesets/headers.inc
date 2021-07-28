@@ -951,3 +951,14 @@ gTileset_SummitCityGym::
 	.4byte gMetatiles_SummitCityGym
 	.4byte gMetatileAttributes_SummitCityGym
 	.4byte NULL
+
+	.align 2
+gTileset_Cave2::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Cave2
+	.4byte gTilesetPalettes_Cave2
+	.4byte gMetatiles_Cave2
+	.4byte gMetatileAttributes_Cave2
+	.4byte NULL

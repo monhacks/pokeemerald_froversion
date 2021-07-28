@@ -635,3 +635,10 @@ gMetatiles_SummitCityGym::
 	.align 1
 gMetatileAttributes_SummitCityGym::
 	.incbin "data/tilesets/secondary/summitcitygym/metatile_attributes.bin"
+	.align 1
+gMetatiles_Cave2::
+	.incbin "data/tilesets/secondary/cave2/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Cave2::
+	.incbin "data/tilesets/secondary/cave2/metatile_attributes.bin"

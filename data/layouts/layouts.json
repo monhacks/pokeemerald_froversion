@@ -4784,10 +4784,10 @@
     {
       "id": "LAYOUT_LOCKPORT_TRAIL",
       "name": "LockportTrail_Layout",
-      "width": 12,
-      "height": 20,
+      "width": 48,
+      "height": 40,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Cave2",
       "border_filepath": "data/layouts/LockportTrail/border.bin",
       "blockdata_filepath": "data/layouts/LockportTrail/map.bin"
     },

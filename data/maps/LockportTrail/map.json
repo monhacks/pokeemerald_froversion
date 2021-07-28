@@ -28,7 +28,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 18,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_LAKE_MEAD_VILLAGE",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 

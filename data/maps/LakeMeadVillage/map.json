@@ -147,8 +147,8 @@
       "x": 22,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_LAKE_MEAD_VILLAGE_NALLS_RESIDENCE_1F",
-      "dest_warp_id": 1
+      "dest_map": "MAP_LOCKPORT_TRAIL",
+      "dest_warp_id": 0
     },
     {
       "x": 22,
