@@ -515,7 +515,7 @@ PetalburgCity_Gym_EventScript_WallysDadArrives:: @ 8204F13
 	removeobject LOCALID_WALLYS_DAD
 	setvar VAR_PETALBURG_CITY_STATE, 4
 	clearflag FLAG_HIDE_PETALBURG_CITY_WALLYS_DAD
-	warp MAP_PETALBURG_CITY, 255, 15, 8
+	warp MAP_PETALBURG_CITY, 255, 19, 8
 	waitstate
 	release
 	end

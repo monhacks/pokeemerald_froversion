@@ -37,6 +37,7 @@ PetalburgCity_EventScript_SetGymDoorsUnlocked:: @ 81DC316
 PetalburgCity_OnFrame: @ 81DC31C
 	map_script_2 VAR_PETALBURG_CITY_STATE, 2, PetalburgCity_EventScript_WallyTutorial
 	map_script_2 VAR_PETALBURG_CITY_STATE, 4, PetalburgCity_EventScript_WalkToWallyHouse
+	map_script_2 VAR_PETALBURG_CITY_STATE, 5, PetalburgCity_EventScript_WarpToMagaCutscene
 	.2byte 0
 
 PetalburgCity_EventScript_WallyTutorial:: @ 81DC32E
@@ -117,6 +118,7 @@ PetalburgCity_Movement_WalkToWallyHousePlayer: @ 81DC406
 	walk_left
 	walk_left
 	walk_left
+	walk_left
 	walk_up
 	walk_up
 	walk_up
@@ -133,6 +135,7 @@ PetalburgCity_Movement_WalkToWallyHouseWallysDad: @ 81DC41B
 	delay_8
 	walk_down
 	walk_down
+	walk_left
 	walk_left
 	walk_left
 	walk_left
@@ -781,3 +784,15 @@ PetalburgCity_Text_ImLookingForTalentedTrainers: @ 81DCC09
 	.string "I'm roaming the land in search of\n"
 	.string "talented TRAINERS.\p"
 	.string "I'm sorry to have taken your time.$"
+
+//////////////////
+//Froversion/////
+////////////////
+
+PetalburgCity_EventScript_WarpToMagaCutscene::
+lockall
+setvar VAR_PETALBURG_CITY_STATE, 6
+warpsilent MAP_ROUTE101, 255, 9, 11
+releaseall
+end
+

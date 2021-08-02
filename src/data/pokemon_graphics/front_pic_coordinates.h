@@ -2415,7 +2415,7 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = -3,
     },
-    [SPECIES_FILLER_1] =
+    [SPECIES_REDEYES] =
     {
         .size = 0x88,
         .y_offset = 0x00,

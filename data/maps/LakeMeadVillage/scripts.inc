@@ -32,7 +32,7 @@ LakeMeadVillage_MapScripts::
 //Mapscripts
 
 LakeMeadVillage_OnFrame:
-map_script_2 VAR_OLDALE_TOWN_STATE, 2, Script_LMV_MoveIsiah
+map_script_2 VAR_OLDALE_TOWN_STATE, 2, Script_LMV_SilentWarpToCutscene
 map_script_2 VAR_OLDALE_TOWN_STATE, 3, Script_LMV_IsiahCaught
 .2byte 0
 
@@ -43,7 +43,7 @@ LakeMeadVillage_OnLoad:
 	compare VAR_LITTLEROOT_TOWN_STATE, 0
 	goto_if_eq Script_LakeMeadVillage_MoveLittleBoyRemoveIsiah
 	compare VAR_OLDALE_TOWN_STATE, 3
-	goto_if_eq Script_LMV_MoveIsiah2
+	goto_if_eq Script_LMV_MoveIsiah
 	compare VAR_OLDALE_TOWN_STATE, 4
 	goto_if_eq Script_LMV_IsiahAndCaptainPosition
 	compare VAR_OLDALE_TOWN_STATE, 5
@@ -51,7 +51,7 @@ LakeMeadVillage_OnLoad:
 	end
 
 LakeMeadVillage_OnWarp:
-	map_script_2 VAR_OLDALE_TOWN_STATE, 3, Script_LMV_WarpToCutscene
+	map_script_2 VAR_OLDALE_TOWN_STATE, 3, Script_LMV_HidePlayersForIsiahCaughtCutscene
 	.2byte 0
 	
 
@@ -146,21 +146,21 @@ Script_LakeMeadVillage_TilyouStopsYouFromLeaving2::
 	release
 	end
 
-Script_LMV_WarpToCutscene::
+Script_LMV_HidePlayersForIsiahCaughtCutscene::
 hideobjectat OBJ_EVENT_ID_PLAYER, MAP_LAKE_MEAD_VILLAGE
 hideobjectat  4, MAP_LAKE_MEAD_VILLAGE
 hideobjectat  7, MAP_LAKE_MEAD_VILLAGE
 release
 end 
 
-Script_LMV_MoveIsiah::
+Script_LMV_SilentWarpToCutscene::
 lockall
 setvar VAR_OLDALE_TOWN_STATE, 3
 warpsilent MAP_LAKE_MEAD_VILLAGE, 255, 9, 5
 releaseall
 end
 
-Script_LMV_MoveIsiah2::
+Script_LMV_MoveIsiah::
 setobjectxyperm 4, 9, 0
 setobjectmovementtype 4, MOVEMENT_TYPE_NONE
 setobjectxyperm 7, 8, 0

@@ -12,6 +12,7 @@ Route101_OnTransition: @ 81EBCC5
 
 Route101_OnFrame: @ 81EBCCB
 	map_script_2 VAR_ROUTE101_STATE, 0, Route101_EventScript_HideMapNamePopup
+	map_script_2 VAR_PETALBURG_CITY_STATE, 6, Script_Route101_MagaCaveCutscene //Froversion Script
 	.2byte 0
 
 Route101_EventScript_HideMapNamePopup:: @ 81EBCD5
@@ -302,3 +303,24 @@ Route101_Text_RouteSign: @ 81EC0C8
 	.string "Lake Mead\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
 
+/////////////////////////////////////////////////
+/////////////////Froversion//////////////////////
+////////////////////////////////////////////////
+
+Script_Route101_MagaCaveCutscene:
+lockall
+delay 30
+msgbox T_Route101_PrototypeActingUp, MSGBOX_DEFAULT
+delay 30
+setvar VAR_PETALBURG_CITY_STATE, 7
+warpsilent MAP_PETALBURG_CITY, 255, 10, 6
+end
+
+T_Route101_PrototypeActingUp:
+.string "There seems to be an issue with the\n"
+.string "test subject. Jerett wants us to get\l"
+.string "it under control.\p"
+.string "Grunt 2: The subject is deep underground.\n"
+.string "We better get going, it's going to be a\l"
+.string "long time before we can reach him to see\l"
+.string "what the issue is!$"

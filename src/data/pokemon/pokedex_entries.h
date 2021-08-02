@@ -5109,7 +5109,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_1] =
+[NATIONAL_DEX_REDEYES] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,

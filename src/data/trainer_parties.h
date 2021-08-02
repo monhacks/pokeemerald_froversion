@@ -12544,3 +12544,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MagaGruntBudAndStone[] =
     .species = SPECIES_GRIMER,
     }
 };
+
+static const struct TrainerMonNoItemDefaultMoves sParty_MagaGruntALakeMead[] = {
+    {
+    .iv = 0,
+    .lvl = 40,
+    .species = SPECIES_MUK,
+    }
+};
