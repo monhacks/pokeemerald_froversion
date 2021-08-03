@@ -4937,9 +4937,19 @@
       "width": 24,
       "height": 36,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_RaintreeIsland_Gym_Fire",
+      "secondary_tileset": "gTileset_RaintreeIsland_Gym_Ice",
       "border_filepath": "data/layouts/RaintreeIsland_Gym/border.bin",
       "blockdata_filepath": "data/layouts/RaintreeIsland_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_RAINTREE_ISLAND_GYM_FIRE_ROOM",
+      "name": "RaintreeIsland_Gym_FireRoom_Layout",
+      "width": 24,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RaintreeIsland_Gym_Fire",
+      "border_filepath": "data/layouts/RaintreeIsland_Gym_FireRoom/border.bin",
+      "blockdata_filepath": "data/layouts/RaintreeIsland_Gym_FireRoom/map.bin"
     }
   ]
 }

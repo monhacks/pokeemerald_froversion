@@ -130,10 +130,16 @@ const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame3[] = INCBIN_U16("dat
 
 const u16 *const gTilesetAnims_RaintreeIsland_Gym_Fire_Puddle[] = {
     gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame0,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame0,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame1,
     gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame1,
     gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame2,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame2,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame3,
     gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame3,
     gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame2,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame2,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame1,
     gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame1
 };
 
@@ -1261,7 +1267,7 @@ static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Rock(u16 timer)
 
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Puddle(u16 timer)
 {
-    u16 i = timer % 6;
+    u16 i = timer % 12;
     AppendTilesetAnimToBuffer(gTilesetAnims_RaintreeIsland_Gym_Fire_Puddle[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 154)), 0x80);
 }
 
