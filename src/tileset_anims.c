@@ -43,6 +43,7 @@ static void TilesetAnim_MauvilleGym(u16);
 static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
+static void TilesetAnim_RaintreeIsland_Gym_Fire(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
@@ -73,6 +74,69 @@ static void QueueAnimTiles_MauvilleGym_ElectricGates(u16);
 static void QueueAnimTiles_SootopolisGym_Waterfalls(u16);
 static void QueueAnimTiles_EliteFour_GroundLights(u16);
 static void QueueAnimTiles_EliteFour_WallLights(u16);
+static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Lava(u16);
+static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Rock(u16);
+static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Puddle(u16);
+
+//////////////////////////////////////////////////////////
+/////////////////FROVERSION ANIMATION////////////////////
+/////////////////////////////////////////////////////////
+
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame0[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/animated_lava0000.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame1[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/animated_lava0001.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame2[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/animated_lava0002.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame3[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/animated_lava0003.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame4[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/animated_lava0004.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame5[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/animated_lava0005.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame6[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/animated_lava0006.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame7[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/animated_lava0007.4bpp");
+
+const u16 *const gTilesetAnims_RaintreeIsland_Gym_Fire_Lava[] = {
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame0,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame1,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame2,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame3,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame4,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame5,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame6,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame7
+};
+
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame0[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/lava_rock0000.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame1[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/lava_rock0001.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame2[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/lava_rock0002.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame3[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/lava_rock0003.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame4[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/lava_rock0004.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame5[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/lava_rock0005.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame6[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/lava_rock0006.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame7[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/lava_rock0007.4bpp");
+
+const u16 *const gTilesetAnims_RaintreeIsland_Gym_Fire_Rock[] = {
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame0,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame1,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame2,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame3,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame4,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame5,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame6,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_Rock_Frame7
+};
+
+
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame0[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/puddle_anim0000.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame1[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/puddle_anim0001.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame2[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/puddle_anim0002.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame3[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/puddle_anim0003.4bpp");
+
+const u16 *const gTilesetAnims_RaintreeIsland_Gym_Fire_Puddle[] = {
+    gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame0,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame1,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame2,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame3,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame2,
+    gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame1
+};
+
 
 const u16 gTilesetAnims_General_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/flower/1.4bpp");
 const u16 gTilesetAnims_General_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/flower/0.4bpp");
@@ -834,6 +898,14 @@ void InitTilesetAnim_BattleDome(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_BattleDome;
 }
 
+void InitTilesetAnim_RaintreeIsland_Gym_Fire(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_RaintreeIsland_Gym_Fire;
+}
+
+
 static void TilesetAnim_Rustboro(u16 timer)
 {
     if (timer % 8 == 0)
@@ -953,6 +1025,16 @@ static void TilesetAnim_BattleFrontierOutsideEast(u16 timer)
 {
     if (timer % 8 == 0)
         QueueAnimTiles_BattleFrontierOutsideEast_Flag(timer >> 3);
+}
+
+static void TilesetAnim_RaintreeIsland_Gym_Fire(u16 timer)
+{
+    if (timer % 8 == 0)
+        QueueAnimTiles_RaintreeIsland_Gym_Fire_Lava(timer >> 3);
+    if (timer % 8 == 1)
+        QueueAnimTiles_RaintreeIsland_Gym_Fire_Rock(timer >> 3);
+        if (timer % 8 == 1)
+        QueueAnimTiles_RaintreeIsland_Gym_Fire_Puddle(timer >> 3);
 }
 
 static void QueueAnimTiles_General_LandWaterEdge(u16 timer)
@@ -1163,6 +1245,24 @@ static void QueueAnimTiles_BattlePyramid_StatueShadow(u16 timer)
 {
     u16 i = timer % 3;
     AppendTilesetAnimToBuffer(gTilesetAnims_BattlePyramid_StatueShadow[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 135)), 0x100);
+}
+
+static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Lava(u16 timer)
+{
+    u16 i = timer % 8;
+    AppendTilesetAnimToBuffer(gTilesetAnims_RaintreeIsland_Gym_Fire_Lava[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 122)), 0x80);
+}
+
+static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Rock(u16 timer)
+{
+    u16 i = timer % 8;
+    AppendTilesetAnimToBuffer(gTilesetAnims_RaintreeIsland_Gym_Fire_Rock[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 138)), 0x80);
+}
+
+static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Puddle(u16 timer)
+{
+    u16 i = timer % 6;
+    AppendTilesetAnimToBuffer(gTilesetAnims_RaintreeIsland_Gym_Fire_Puddle[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 154)), 0x80);
 }
 
 static void BlendAnimPalette_BattleDome_FloorLights(u16 timer)

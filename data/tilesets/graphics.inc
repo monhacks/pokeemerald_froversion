@@ -1969,3 +1969,43 @@ gTilesetPalettes_Cave2::
 	.align 2
 gTilesetTiles_Cave2::
 	.incbin "data/tilesets/secondary/cave2/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_RaintreeIsland_Gym_Fire::
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_RaintreeIsland_Gym_Fire::
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_RaintreeIsland_Gym_Ice::
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_RaintreeIsland_Gym_Ice::
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/tiles.4bpp.lz"

@@ -962,3 +962,25 @@ gTileset_Cave2::
 	.4byte gMetatiles_Cave2
 	.4byte gMetatileAttributes_Cave2
 	.4byte NULL
+
+	.align 2
+gTileset_RaintreeIsland_Gym_Fire::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_RaintreeIsland_Gym_Fire
+	.4byte gTilesetPalettes_RaintreeIsland_Gym_Fire
+	.4byte gMetatiles_RaintreeIsland_Gym_Fire
+	.4byte gMetatileAttributes_RaintreeIsland_Gym_Fire
+	.4byte InitTilesetAnim_RaintreeIsland_Gym_Fire
+
+	.align 2
+gTileset_RaintreeIsland_Gym_Ice::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_RaintreeIsland_Gym_Ice
+	.4byte gTilesetPalettes_RaintreeIsland_Gym_Ice
+	.4byte gMetatiles_RaintreeIsland_Gym_Ice
+	.4byte gMetatileAttributes_RaintreeIsland_Gym_Ice
+	.4byte NULL

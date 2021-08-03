@@ -4930,6 +4930,16 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/SummitCityGymBasement/border.bin",
       "blockdata_filepath": "data/layouts/SummitCityGymBasement/map.bin"
+    },
+    {
+      "id": "LAYOUT_RAINTREE_ISLAND_GYM",
+      "name": "RaintreeIsland_Gym_Layout",
+      "width": 24,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RaintreeIsland_Gym_Fire",
+      "border_filepath": "data/layouts/RaintreeIsland_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/RaintreeIsland_Gym/map.bin"
     }
   ]
 }

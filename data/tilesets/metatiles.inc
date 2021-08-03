@@ -642,3 +642,17 @@ gMetatiles_Cave2::
 	.align 1
 gMetatileAttributes_Cave2::
 	.incbin "data/tilesets/secondary/cave2/metatile_attributes.bin"
+	.align 1
+gMetatiles_RaintreeIsland_Gym_Fire::
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_RaintreeIsland_Gym_Fire::
+	.incbin "data/tilesets/secondary/raintreeisland_gym_fire/metatile_attributes.bin"
+	.align 1
+gMetatiles_RaintreeIsland_Gym_Ice::
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_RaintreeIsland_Gym_Ice::
+	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/metatile_attributes.bin"
