@@ -1173,3 +1173,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/RaintreeIsland_Gym/scripts.inc"
 
 	.include "data/maps/RaintreeIsland_Gym_FireRoom/scripts.inc"
+
+	.include "data/maps/RaintreeIsland_Gym_Entrance/scripts.inc"

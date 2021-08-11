@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE_STENZIL",
   "name": "RouteStenzil",
   "layout": "LAYOUT_ROUTE_STENZIL",
-  "music": "MUS_MT_CHIMNEY",
+  "music": "MUS_FV_MAGNA_CENTIPEDE",
   "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

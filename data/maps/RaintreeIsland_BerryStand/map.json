@@ -2,7 +2,7 @@
   "id": "MAP_RAINTREE_ISLAND_BERRY_STAND",
   "name": "RaintreeIsland_BerryStand",
   "layout": "LAYOUT_RAINTREE_ISLAND_BERRY_STAND",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_FV_MAGNA_CENTIPEDE",
   "region_map_section": "MAPSEC_DEWFORD_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

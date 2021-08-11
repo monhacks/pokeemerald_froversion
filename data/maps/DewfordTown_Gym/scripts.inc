@@ -163,7 +163,7 @@ DewfordTown_Gym_EventScript_Brawly:: @ 81FC7C2
 	end
 
 DewfordTown_Gym_EventScript_BrawlyDefeated:: @ 81FC7F7
-	call DewfordTown_Gym_EventScript_AnimateFlashFullBrightness
+	//call DewfordTown_Gym_EventScript_AnimateFlashFullBrightness
 	message DewfordTown_Gym_Text_ReceivedKnuckleBadge
 	waitmessage
 	clearflag FLAG_BATTLE_SUN

@@ -2009,3 +2009,23 @@ gTilesetPalettes_RaintreeIsland_Gym_Ice::
 	.align 2
 gTilesetTiles_RaintreeIsland_Gym_Ice::
 	.incbin "data/tilesets/secondary/raintreeisland_gym_ice/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_RaintreeIsland_Pokecenter_Interior::
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_RaintreeIsland_Pokecenter_Interior::
+	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/tiles.4bpp.lz"

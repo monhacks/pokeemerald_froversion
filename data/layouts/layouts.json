@@ -4950,6 +4950,16 @@
       "secondary_tileset": "gTileset_RaintreeIsland_Gym_Fire",
       "border_filepath": "data/layouts/RaintreeIsland_Gym_FireRoom/border.bin",
       "blockdata_filepath": "data/layouts/RaintreeIsland_Gym_FireRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_RAINTREE_ISLAND_GYM_ENTRANCE",
+      "name": "RaintreeIsland_Gym_Entrance_Layout",
+      "width": 20,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_RaintreeIsland_Pokecenter_Interior",
+      "border_filepath": "data/layouts/RaintreeIsland_Gym_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/RaintreeIsland_Gym_Entrance/map.bin"
     }
   ]
 }

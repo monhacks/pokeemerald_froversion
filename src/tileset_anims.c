@@ -44,6 +44,7 @@ static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
 static void TilesetAnim_RaintreeIsland_Gym_Fire(u16);
+static void TilesetAnim_RaintreeIsland_Gym_Ice(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
@@ -77,6 +78,7 @@ static void QueueAnimTiles_EliteFour_WallLights(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Lava(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Rock(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Puddle(u16);
+static void QueueAnimTiles_RaintreeIsland_Gym_Ice_Sparkle(u16);
 
 //////////////////////////////////////////////////////////
 /////////////////FROVERSION ANIMATION////////////////////
@@ -141,6 +143,40 @@ const u16 *const gTilesetAnims_RaintreeIsland_Gym_Fire_Puddle[] = {
     gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame2,
     gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame1,
     gTilesetAnims_RaintreeIsland_Gym_Fire_PuddleFrame1
+};
+
+const u16 gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame0[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_ice/anim/sparkle/sparkle0000.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame1[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_ice/anim/sparkle/sparkle0001.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame2[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_ice/anim/sparkle/sparkle0002.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame3[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_ice/anim/sparkle/sparkle0003.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame4[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_ice/anim/sparkle/sparkle0004.4bpp");
+const u16 gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame5[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_ice/anim/sparkle/sparkle0005.4bpp");
+
+const u16 *const gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle[] = {
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame0,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame0,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame0,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame0,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame1,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame1,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame1,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame1,
+    gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame2,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame2,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame2,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame2,
+    gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame3,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame3,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame3,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame3,
+    gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame4,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame4,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame4,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame4,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame5,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame5,
+    // gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame5,
+    gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame5
 };
 
 
@@ -911,6 +947,13 @@ void InitTilesetAnim_RaintreeIsland_Gym_Fire(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_RaintreeIsland_Gym_Fire;
 }
 
+void InitTilesetAnim_RaintreeIsland_Gym_Ice(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+    sSecondaryTilesetAnimCallback = TilesetAnim_RaintreeIsland_Gym_Ice;
+}
+
 
 static void TilesetAnim_Rustboro(u16 timer)
 {
@@ -1039,8 +1082,14 @@ static void TilesetAnim_RaintreeIsland_Gym_Fire(u16 timer)
         QueueAnimTiles_RaintreeIsland_Gym_Fire_Lava(timer >> 3);
     if (timer % 8 == 1)
         QueueAnimTiles_RaintreeIsland_Gym_Fire_Rock(timer >> 3);
-        if (timer % 8 == 1)
+    if (timer % 8 == 1)
         QueueAnimTiles_RaintreeIsland_Gym_Fire_Puddle(timer >> 3);
+}
+
+static void TilesetAnim_RaintreeIsland_Gym_Ice(u16 timer)
+{
+    if (timer % 8 == 0)
+        QueueAnimTiles_RaintreeIsland_Gym_Ice_Sparkle(timer >> 3);
 }
 
 static void QueueAnimTiles_General_LandWaterEdge(u16 timer)
@@ -1269,6 +1318,12 @@ static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Puddle(u16 timer)
 {
     u16 i = timer % 12;
     AppendTilesetAnimToBuffer(gTilesetAnims_RaintreeIsland_Gym_Fire_Puddle[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 154)), 0x80);
+}
+
+static void QueueAnimTiles_RaintreeIsland_Gym_Ice_Sparkle(u16 timer)
+{
+    u16 i = timer % 4;
+    AppendTilesetAnimToBuffer(gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 34)), 0x80);
 }
 
 static void BlendAnimPalette_BattleDome_FloorLights(u16 timer)

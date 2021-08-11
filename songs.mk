@@ -1262,3 +1262,18 @@ $(MID_SUBDIR)/se_m_leer.s: %.s: %.mid
 
 $(MID_SUBDIR)/se_dex_search.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G127 -v100 -P5
+
+$(MID_SUBDIR)/mus_fv_bobby.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G158 -V090 
+
+$(MID_SUBDIR)/mus_fv_magna_centipede.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G155 -V090
+
+$(MID_SUBDIR)/mus_fv_raintree_island_gym_fire.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G052 -V078
+
+$(MID_SUBDIR)/mus_fv_chill_penguin.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G118 -V80 -P1
+
+$(MID_SUBDIR)/mus_fv_raintree_island_gym_ice.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G044 -V80

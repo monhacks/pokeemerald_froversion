@@ -543,6 +543,11 @@
 #define PH_NURSE_BLEND              607
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
+#define MUS_FV_BOBBY                610
+#define MUS_FV_MAGNA_CENTIPEDE      611
+#define MUS_FV_RAINTREE_ISLAND_GYM_FIRE        612
+#define MUS_FV_CHILL_PENGUIN                   613
+#define MUS_FV_RAINTREE_ISLAND_GYM_ICE         614
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
