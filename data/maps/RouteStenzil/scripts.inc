@@ -6,6 +6,7 @@ RouteStenzil_MapScripts::
 
 SummitCave_EventScript_BobbyRivalBattleTrigger1::
 	lock
+	playbgm MUS_ENCOUNTER_MALE, 0
 	addobject LOCALID_BOBBY
 	setvar VAR_MUGSHOT_ID, MUGSHOT_WASULA
 	applymovement LOCALID_BOBBY, Movement_SummitCave_BobbyApproachesFroTrigger1
@@ -21,6 +22,7 @@ SummitCave_EventScript_BobbyRivalBattleTrigger1::
 
 SummitCave_EventScript_BobbyRivalBattleTrigger2::
 	lock
+	playbgm MUS_ENCOUNTER_MALE, 0
 	addobject LOCALID_BOBBY
 	setvar VAR_MUGSHOT_ID, MUGSHOT_WASULA
 	applymovement LOCALID_BOBBY, Movement_SummitCave_BobbyApproachesFroTrigger2
