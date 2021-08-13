@@ -2508,10 +2508,10 @@ const struct Trainer gTrainers[] = {
     [TRAINER_TAKAO] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_BLACK_BELT,
+        .trainerClass = TRAINER_CLASS_MESSENGER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_BLACK_BELT,
-        .trainerName = _("TAKAO"),
+        .trainerPic = TRAINER_PIC_MESSENGER,
+        .trainerName = _("August"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,

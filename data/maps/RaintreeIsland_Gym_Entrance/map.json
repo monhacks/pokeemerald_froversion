@@ -2,7 +2,7 @@
   "id": "MAP_RAINTREE_ISLAND_GYM_ENTRANCE",
   "name": "RaintreeIsland_Gym_Entrance",
   "layout": "LAYOUT_RAINTREE_ISLAND_GYM_ENTRANCE",
-  "music": "MUS_FV_BOBBY",
+  "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

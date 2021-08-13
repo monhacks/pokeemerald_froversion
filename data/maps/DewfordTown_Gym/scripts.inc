@@ -215,7 +215,7 @@ DewfordTown_Gym_EventScript_BrawlyRematch:: @ 81FC89C
 	end
 
 DewfordTown_Gym_EventScript_Takao:: @ 81FC8B7
-	trainerbattle_single TRAINER_TAKAO, DewfordTown_Gym_Text_TakaoIntro, DewfordTown_Gym_Text_TakaoDefeat, DewfordTown_Gym_EventScript_TakaoBrightenRoom
+	trainerbattle_single TRAINER_TAKAO, DewfordTown_Gym_Text_TakaoIntro, DewfordTown_Gym_Text_TakaoDefeat//, DewfordTown_Gym_EventScript_TakaoBrightenRoom
 	msgbox DewfordTown_Gym_Text_TakaoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -330,15 +330,16 @@ DewfordTown_Gym_Text_GymGuidePostVictory: @ 81FCB5C
 	.string "Your future is bright, too!$"
 
 DewfordTown_Gym_Text_TakaoIntro: @ 81FCB9F
-	.string "Might is right!\n"
-	.string "Come on!$"
+	.string "You are infatuated...\p"
+	.string "With what consumes you$"
 
 DewfordTown_Gym_Text_TakaoDefeat: @ 81FCBB8
-	.string "Not enough power…$"
+	.string "You've reach the summit.\p$"
+	.string "Now transcend the skies.$"
 
 DewfordTown_Gym_Text_TakaoPostBattle: @ 81FCBCA
-	.string "Your skill overcame my strength!\n"
-	.string "Your technique is commendable!$"
+	.string "You've reach the summit.\p$"
+	.string "Now transcend the skies.$"
 
 DewfordTown_Gym_Text_JocelynIntro: @ 81FCC0A
 	.string "There's no need for BRAWLY to be\n"
