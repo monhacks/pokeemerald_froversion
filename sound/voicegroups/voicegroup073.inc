@@ -1,6 +1,6 @@
 	.align 2
 voicegroup073:: @ 868AC74
-	voice_keysplit_all voicegroup001  @ 868AC74
+	voice_keysplit_all voicegroup002  @ 868AC74
 	voice_keysplit voicegroup005, KeySplitTable1  @ 868AC80
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 868AC8C
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 868AC98

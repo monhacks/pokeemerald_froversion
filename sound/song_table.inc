@@ -616,6 +616,7 @@ gSongTable:: @ 86B49F0
 	song mus_fv_raintree_island_gym_fire 0, 0
 	song mus_fv_chill_penguin 0, 0
 	song mus_fv_raintree_island_gym_ice 0, 0
+	song mus_fv_raintree_island 0, 0
 
 	.align 2
 dummy_song_header: @ 86B5D00

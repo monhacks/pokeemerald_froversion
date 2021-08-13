@@ -548,6 +548,7 @@
 #define MUS_FV_RAINTREE_ISLAND_GYM_FIRE        612
 #define MUS_FV_CHILL_PENGUIN                   613
 #define MUS_FV_RAINTREE_ISLAND_GYM_ICE         614
+#define MUS_FV_RAINTREE_ISLAND                 615
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
