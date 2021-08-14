@@ -6835,21 +6835,30 @@ static const struct TrainerMonItemCustomMoves sParty_WasulaSummitCaveFlobra[] = 
     
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute110Mudkip[] = {
+static const struct TrainerMonItemCustomMoves sParty_BrendanRoute110Mudkip[] = {
     {
-    .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_SLUGMA,
+    .abilityNum = 0,
+    .iv = 150,
+    .lvl = 29,
+    .species = SPECIES_SABLEYE,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_COIL, MOVE_WATER_GUN, MOVE_QUICK_ATTACK, MOVE_NONE}
     },
     {
-    .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_WINGULL,
+    .abilityNum = 0,
+    .iv = 150,
+    .lvl = 32,
+    .species = SPECIES_MORPHLO,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_COIL, MOVE_WATER_GUN, MOVE_QUICK_ATTACK, MOVE_NONE}
     },
     {
-    .iv = 100,
-    .lvl = 20,
-    .species = SPECIES_GROVYLE,
+    //.abilityNum = 0
+    .iv = 150,
+    .lvl = 30,
+    .species = SPECIES_DUMBELLION,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_TACKLE, MOVE_BULK_UP, MOVE_METAL_CLAW, MOVE_ASSURANCE}
     }
 };
 
@@ -6890,21 +6899,29 @@ static const struct TrainerMonItemCustomMoves sParty_WasulaSummitCaveEmboryps[] 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute110Treecko[] = {
+static const struct TrainerMonItemCustomMoves sParty_BrendanRoute110Treecko[] = {
     {
-    .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_WINGULL,
+    .abilityNum = 0,
+    .iv = 150,
+    .lvl = 29,
+    .species = SPECIES_SABLEYE,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_SCARY_FACE, MOVE_EMBER, MOVE_GUST, MOVE_BITE}
     },
     {
-    .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_LOMBRE,
+    .abilityNum = 1,
+    .iv = 250,
+    .lvl = 32,
+    .species = SPECIES_BANDITHUG,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_FURY_SWIPES, MOVE_BULLET_SEED, MOVE_MACH_PUNCH, MOVE_RAPID_SPIN}
     },
     {
-    .iv = 100,
-    .lvl = 20,
-    .species = SPECIES_COMBUSKEN,
+    .iv = 150,
+    .lvl = 30,
+    .species = SPECIES_DUMBELLION,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_TACKLE, MOVE_BULK_UP, MOVE_METAL_CLAW, MOVE_ASSURANCE}
     }
 };
 
@@ -6944,21 +6961,30 @@ static const struct TrainerMonItemCustomMoves sParty_WasulaSummitCaveRascaloot[]
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute110Torchic[] = {
+static const struct TrainerMonItemCustomMoves sParty_BrendanRoute110Torchic[] = {
     {
-    .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_LOMBRE,
+    .abilityNum = 0,
+    .iv = 150,
+    .lvl = 29,
+    .species = SPECIES_SABLEYE,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_SCARY_FACE, MOVE_EMBER, MOVE_GUST, MOVE_BITE}
     },
     {
-    .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_SLUGMA,
+    .abilityNum = 0,
+    .iv = 150,
+    .lvl = 32,
+    .species = SPECIES_HUNTORYPS,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_SCARY_FACE, MOVE_EMBER, MOVE_GUST, MOVE_BITE}
     },
     {
-    .iv = 100,
-    .lvl = 20,
-    .species = SPECIES_MARSHTOMP,
+    //.abilityNum = 0
+    .iv = 150,
+    .lvl = 30,
+    .species = SPECIES_DUMBELLION,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_TACKLE, MOVE_BULK_UP, MOVE_METAL_CLAW, MOVE_ASSURANCE}
     }
 };
 

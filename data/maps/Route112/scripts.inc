@@ -1,5 +1,6 @@
 .set LOCALID_GRUNT_1, 1
 .set LOCALID_GRUNT_2, 6
+.set LOCALID_BOBBY, 15
 
 Route112_MapScripts:: @ 81F1DA8
 	map_script MAP_SCRIPT_ON_TRANSITION, Route112_OnTransition
@@ -143,4 +144,97 @@ Route112_Text_MtChimneySign: @ 81F20ED
 Route112_Text_RouteSignLavaridge: @ 81F2138
 	.string "ROUTE 112\n"
 	.string "{LEFT_ARROW} LAVARIDGE TOWN$"
+
+//////////////////////////////
+/////Froversion Scripts//////
+////////////////////////////
+
+Route112_EventScript_BobbyTrigger1::
+	lock
+	playbgm MUS_ENCOUNTER_MALE, 0
+	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	addobject LOCALID_BOBBY
+	setvar VAR_MUGSHOT_ID, MUGSHOT_WASULA
+	applymovement LOCALID_BOBBY, Movement_Route112_BobbyApproachesFroTrigger1
+	waitmovement LOCALID_BOBBY
+	msgbox Text_Route112_DoingGoodSoFarFro, MSGBOX_DEFAULT
+	setflag FLAG_CAN_LOSE_NEXT_BATTLE
+	switch VAR_STARTER_MON
+	case 0, Script_Route112_WasulaBattleFlobra //fros starter is rascaloot
+	case 1, Script_Route112_WasulaBattleEmboryps //fros starter is flobra
+	case 2, Script_Route112_WasulaBattleRascaloot //fros starter is emboryps
+	release
+	end
+
+Route112_EventScript_BobbyTrigger2::
+	lock
+	playbgm MUS_ENCOUNTER_MALE, 0
+	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	addobject LOCALID_BOBBY
+	setvar VAR_MUGSHOT_ID, MUGSHOT_WASULA
+	applymovement LOCALID_BOBBY, Movement_Route112_BobbyApproachesFroTrigger2
+	waitmovement LOCALID_BOBBY
+	msgbox Text_Route112_DoingGoodSoFarFro, MSGBOX_DEFAULT
+	setflag FLAG_CAN_LOSE_NEXT_BATTLE
+	switch VAR_STARTER_MON
+	case 0, Script_Route112_WasulaBattleFlobra //fros starter is rascaloot
+	case 1, Script_Route112_WasulaBattleEmboryps //fros starter is flobra
+	case 2, Script_Route112_WasulaBattleRascaloot //fros starter is emboryps
+	release
+	end
+
+Movement_Route112_BobbyApproachesFroTrigger1:
+	walk_fastest_right
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	step_end
+
+Movement_Route112_BobbyApproachesFroTrigger2:
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	walk_fastest_down
+	step_end
+
+Text_Route112_DoingGoodSoFarFro:
+	.string "Wow three badges? You've really come\n"
+	.string "a long way.\p"
+	.string "I was trying to take the cable car up\n"
+	.string "the mountain so I could get to Grand\l"
+	.string "Island to battle for my fourth badge,\l"
+	.string "but there is a couple of clowns\l"
+	.string "blocking the way.\p"
+	.string "Anyway, why don't we have a friendly\n"
+	.string "battle to see how strong you really are?$"
+
+Script_Route112_WasulaBattleFlobra:
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_MUDKIP, Text_SummitCave_BobbyDefeated
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq EventScript_SummitCave_GiveItemDependingOnStarterBattleLost
+	goto EventScript_SummitCave_GiveItemDependingOnStarterBattleWon
+	end
+
+Script_Route112_WasulaBattleRascaloot:
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_TREECKO, Text_SummitCave_BobbyDefeated
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq EventScript_SummitCave_GiveItemDependingOnStarterBattleLost
+	goto EventScript_SummitCave_GiveItemDependingOnStarterBattleWon
+	end
+
+Script_Route112_WasulaBattleEmboryps:
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_MUDKIP, Text_SummitCave_BobbyDefeated
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq EventScript_SummitCave_GiveItemDependingOnStarterBattleLost
+	goto EventScript_SummitCave_GiveItemDependingOnStarterBattleWon
+	end
+
 

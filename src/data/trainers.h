@@ -7305,16 +7305,18 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_BRENDAN_ROUTE_110_MUDKIP] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_BOBBY,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BRENDAN,
-        .trainerName = _("BRENDAN"),
+        .trainerPic = TRAINER_PIC_WASULA,
+        .trainerName = _("Bobby"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_BrendanRoute110Mudkip),
-        .party = {.NoItemDefaultMoves = sParty_BrendanRoute110Mudkip},
+        .party = {.ItemCustomMoves = sParty_BrendanRoute110Mudkip},
     },
 
     [TRAINER_BRENDAN_ROUTE_119_MUDKIP] =
@@ -7349,16 +7351,18 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_BRENDAN_ROUTE_110_TREECKO] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_BOBBY,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BRENDAN,
-        .trainerName = _("BRENDAN"),
+        .trainerPic = TRAINER_PIC_WASULA,
+        .trainerName = _("Bobby"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_BrendanRoute110Treecko),
-        .party = {.NoItemDefaultMoves = sParty_BrendanRoute110Treecko},
+        .party = {.ItemCustomMoves = sParty_BrendanRoute110Treecko},
     },
 
     [TRAINER_BRENDAN_ROUTE_119_TREECKO] =
@@ -7393,16 +7397,18 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_BRENDAN_ROUTE_110_TORCHIC] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_BOBBY,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BRENDAN,
-        .trainerName = _("BRENDAN"),
+        .trainerPic = TRAINER_PIC_WASULA,
+        .trainerName = _("Bobby"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_BrendanRoute110Torchic),
-        .party = {.NoItemDefaultMoves = sParty_BrendanRoute110Torchic},
+        .party = {.ItemCustomMoves = sParty_BrendanRoute110Torchic},
     },
 
     [TRAINER_BRENDAN_ROUTE_119_TORCHIC] =
