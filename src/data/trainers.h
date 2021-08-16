@@ -2970,10 +2970,10 @@ const struct Trainer gTrainers[] = {
     [TRAINER_BEAU] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_CAMPER,
+        .trainerClass = TRAINER_CLASS_MESSENGER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CAMPER,
-        .trainerName = _("BEAU"),
+        .trainerPic = TRAINER_PIC_MESSENGER,
+        .trainerName = _("John"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,

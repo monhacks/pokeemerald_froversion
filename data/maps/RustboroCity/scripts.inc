@@ -1051,7 +1051,7 @@ RustboroCity_EventScript_Boy1:: @ 81E1236
 
 RustboroCity_Text_WeShortenItToDevon: @ 81E123F
 	.string "The Colangelo Graphics…\n"
-	.string "We all just shorten it to DEVON.\p"
+	.string "We all just shorten it to C. G..\p"
 	.string "That company makes all sorts of\n"
 	.string "convenient products.$"
 
@@ -1095,9 +1095,9 @@ RustboroCity_Text_MrBrineyLovesPeeko: @ 81E1589
 	.string "The old sailor Mr. Briney lives in\n"
 	.string "a cottage by the sea.\p"
 	.string "He said he was going shopping in\n"
-	.string "SLATEPORT for his pet, PEEKO.\p"
+	.string "Slateport for his pet, Peeko.\p"
 	.string "That old sea dog, he must really love\n"
-	.string "that PEEKO.$"
+	.string "that Peeko.$"
 
 RustboroCity_Text_WowYouHavePokemon: @ 81E1633
 	.string "Wow, you have Pokémon with you, too.\p"
@@ -1136,7 +1136,7 @@ RustboroCity_Text_HelpMeIWasRobbed: @ 81E183E
 	.string "Oh, it's you!\p"
 	.string "You're that fantastic trainer who\n"
 	.string "helped me in Jagow Woods!\p"
-	.string "Help me! I was robbed by TEAM AQUA!\n"
+	.string "Help me! I was robbed by Team MAGA!\n"
 	.string "I have to get the Colangelo Gears \lback!\p"
 	.string "If I don't…\n"
 	.string "I'm going to be in serious trouble.$"
@@ -1176,7 +1176,7 @@ RustboroCity_Text_RegisteredMay: @ 81E1ADB
 
 RustboroCity_Text_MayPassedBrineyWantToBattle: @ 81E1AFA
 	.string "John: Oh, by the way, I passed\n"
-	.string "Mr. Briney in PETALBURG WOODS.\p"
+	.string "Mr. Briney in Jagow Woods.\p"
 	.string "I guess he's on his way home to his\n"
 	.string "cottage by the sea.\p"
 	.string "How's your POKéDEX coming along,\n"
@@ -1223,10 +1223,10 @@ RustboroCity_Text_RegisteredBrendan: @ 81E1E11
 
 RustboroCity_Text_BrendanPassedBrineyWantToBattle: @ 81E1E34
 	.string "BRENDAN: By the way, {PLAYER}, I walked\n"
-	.string "by Mr. Briney in PETALBURG WOODS.\p"
+	.string "by Mr. Briney in Jagow Woods.\p"
 	.string "I bet he was on his way home to his\n"
 	.string "cottage by the sea.\p"
-	.string "{PLAYER}, how's your POKéDEX?\n"
+	.string "{PLAYER}, how's your Pokédex?\n"
 	.string "Have you filled in any pages yet?\p"
 	.string "Mine rules.\p"
 	.string "Want to have a battle to test how\n"
@@ -1307,7 +1307,7 @@ RustboroCity_Text_AddedMatchCallPleaseCallMrStone: @ 81E2331
 	.string "{PLAYER}, our President Dom should\n"
 	.string "be registered in your PokéNav.\p"
 	.string "Test it out.\n"
-	.string "Please give our PRESIDENT a call.$"
+	.string "Please give our President a call.$"
 
 RustboroCity_Text_PleaseSelectPokenav: @ 81E2449
 	.string "Please select the PokéNav.$"

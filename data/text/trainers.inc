@@ -1269,12 +1269,15 @@ Route111_Text_HeidiPostBattle: @ 829891B
 	.string "an eye on it!$"
 
 Route111_Text_BeauIntro: @ 829898E
-	.string "Wearing these GO-GOGGLES makes me\n"
-	.string "feel like a superhero.\l"
-	.string "Right now, nobody can beat me!$"
+	.string "Swallow your pride and surrender,\n"
+	.string "because silence is golden. And I\l"
+	.string "wouldn't pay a penny to hear your\l
+	.string "thoughts$"
 
 Route111_Text_BeauDefeat: @ 82989E6
-	.string "I can't win on spirit alone…$"
+	.string "Lie down your guard and surrender.\n"
+	.string "All that you're proving is your\l"
+	.string "ignorance.$"
 
 Route111_Text_BeauPostBattle: @ 8298A03
 	.string "I'm going to be a real hero one day.\n"

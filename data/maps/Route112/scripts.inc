@@ -112,38 +112,39 @@ Route112_EventScript_Shayla:: @ 81F1F28
 	end
 
 Route112_Text_LeaderGoingToAwakenThing: @ 81F1F3F
-	.string "Hey, man, is our leader really going\n"
-	.string "to awaken that thing?$"
+	.string "Hey, man, is our leader really able\n"
+	.string "to harness all that energy?$"
 
 Route112_Text_YeahWeNeedMeteorite: @ 81F1F7A
 	.string "Sounds like it, yeah. But I heard\n"
-	.string "we need a METEORITE to do it.$"
+	.string "we need a Meteorite to do it.$"
 
 Route112_Text_OhThatsWhyCrewWentToFallarbor: @ 81F1FBA
 	.string "Oh, I get it now. That's why the rest\n"
-	.string "of the crew went out to FALLARBOR.$"
+	.string "of the crew went out to Fallarbor.$"
 
 Route112_Text_CantLetAnyonePassUntilTheyreBack: @ 81F2003
 	.string "You got it. And until they come back,\n"
 	.string "we're not to let anyone pass, right.$"
 
 Route112_Text_NotEasyToGetBackToLavaridge: @ 81F204E
-	.string "Eh, I'd like to get to MAUVILLE, but if\n"
+	.string "Eh, I'd like to get to Mauville, but if\n"
 	.string "I went down these ledges, it'd be no\l"
-	.string "easy matter to get back to LAVARIDGE.$"
+	.string "easy matter to get back to Grand\l"
+	.string "Island.$"
 
 Route112_Text_MtChimneyCableCarSign: @ 81F20C1
-	.string "MT. CHIMNEY CABLE CAR\n"
+	.string "Mt. Lancelot Cable Car\n"
 	.string "“A short walk {UP_ARROW} way!”$"
 
 Route112_Text_MtChimneySign: @ 81F20ED
-	.string "MT. CHIMNEY\p"
-	.string "“For LAVARIDGE TOWN or the summit,\n"
-	.string "please take the CABLE CAR.”$"
+	.string "MT. Lancelot\p"
+	.string "“For Grand Island or the summit,\n"
+	.string "please take the Cable Car.”$"
 
 Route112_Text_RouteSignLavaridge: @ 81F2138
 	.string "ROUTE 112\n"
-	.string "{LEFT_ARROW} LAVARIDGE TOWN$"
+	.string "{LEFT_ARROW} Grand Island$"
 
 //////////////////////////////
 /////Froversion Scripts//////

@@ -228,6 +228,7 @@
 #define MAP_RUSTBORO_CITY_HOUSE3                (16 | (11 << 8))
 #define MAP_SUMMIT_CITY_GYM                     (17 | (11 << 8))
 #define MAP_SUMMIT_CITY_GYM_BASEMENT            (18 | (11 << 8))
+#define MAP_SUMMIT_CAVERNS1                     (19 | (11 << 8))
 
 // Map Group 12
 #define MAP_FORTREE_CITY_HOUSE1            (0 | (12 << 8))

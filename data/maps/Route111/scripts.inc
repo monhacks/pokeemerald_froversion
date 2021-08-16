@@ -466,7 +466,7 @@ Route111_EventScript_Heidi:: @ 81F121B
 
 Route111_EventScript_Beau:: @ 81F1232
 	trainerbattle_single TRAINER_BEAU, Route111_Text_BeauIntro, Route111_Text_BeauDefeat
-	msgbox Route111_Text_BeauPostBattle, MSGBOX_AUTOCLOSE
+	msgbox Route111_Text_BeauDefeat, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Becky:: @ 81F1249

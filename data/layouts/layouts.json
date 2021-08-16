@@ -4960,6 +4960,16 @@
       "secondary_tileset": "gTileset_RaintreeIsland_Pokecenter_Interior",
       "border_filepath": "data/layouts/RaintreeIsland_Gym_Entrance/border.bin",
       "blockdata_filepath": "data/layouts/RaintreeIsland_Gym_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUMMIT_CAVERNS1",
+      "name": "SummitCaverns1_Layout",
+      "width": 20,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave2",
+      "border_filepath": "data/layouts/SummitCaverns1/border.bin",
+      "blockdata_filepath": "data/layouts/SummitCaverns1/map.bin"
     }
   ]
 }

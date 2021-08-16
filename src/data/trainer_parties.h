@@ -2575,7 +2575,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Beau[] = {
     .iv = 0,
     .lvl = 35,
     .species = SPECIES_CRACTHORN,
-    .moves = {MOVE_RAPID_SPIN, MOVE_MUD_SLAP, MOVE_PSYBEAM, MOVE_ROCK_TOMB}
+    .moves = {MOVE_RAPID_SPIN, MOVE_MUD_SLAP, MOVE_INGRAIN, MOVE_ROCK_TOMB}
     },
     {
     .iv = 0,
@@ -2587,7 +2587,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_Beau[] = {
     .iv = 0,
     .lvl = 35,
     .species = SPECIES_CRACTHORN,
-    .moves = {MOVE_RAPID_SPIN, MOVE_MUD_SLAP, MOVE_PSYBEAM, MOVE_ROCK_TOMB}
+    .moves = {MOVE_RAPID_SPIN, MOVE_MUD_SLAP, MOVE_NEEDLE_ARM, MOVE_ROCK_TOMB}
     }
 };
 
