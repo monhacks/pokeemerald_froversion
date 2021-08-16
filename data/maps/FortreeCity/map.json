@@ -2,7 +2,7 @@
   "id": "MAP_FORTREE_CITY",
   "name": "FortreeCity",
   "layout": "LAYOUT_FORTREE_CITY",
-  "music": "MUS_FORTREE",
+  "music": "MUS_FV_BOBBY",
   "region_map_section": "MAPSEC_FORTREE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -182,7 +182,9 @@
       "dest_warp_id": 0
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",

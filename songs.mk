@@ -1280,3 +1280,9 @@ $(MID_SUBDIR)/mus_fv_raintree_island_gym_ice.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_fv_raintree_island.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G073 -V078
+
+$(MID_SUBDIR)/mus_fv_pimp.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G060 -V090
+
+$(MID_SUBDIR)/mus_fv_team_maga.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G044 -V80

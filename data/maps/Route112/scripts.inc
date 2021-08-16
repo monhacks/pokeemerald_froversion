@@ -191,9 +191,11 @@ Movement_Route112_BobbyApproachesFroTrigger1:
 	walk_fastest_down
 	walk_fastest_down
 	walk_fastest_down
+	walk_fastest_down
 	step_end
 
 Movement_Route112_BobbyApproachesFroTrigger2:
+	walk_fastest_down
 	walk_fastest_down
 	walk_fastest_down
 	walk_fastest_down
@@ -217,24 +219,76 @@ Script_Route112_WasulaBattleFlobra:
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_MUDKIP, Text_SummitCave_BobbyDefeated
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST
-	goto_if_eq EventScript_SummitCave_GiveItemDependingOnStarterBattleLost
-	goto EventScript_SummitCave_GiveItemDependingOnStarterBattleWon
+	goto_if_eq EventScript_Route112_BobbyBattleLost
+	goto EventScript_Route112_BobbyBattleWon
 	end
 
 Script_Route112_WasulaBattleRascaloot:
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_TREECKO, Text_SummitCave_BobbyDefeated
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST
-	goto_if_eq EventScript_SummitCave_GiveItemDependingOnStarterBattleLost
-	goto EventScript_SummitCave_GiveItemDependingOnStarterBattleWon
+	goto_if_eq EventScript_Route112_BobbyBattleLost
+	goto EventScript_Route112_BobbyBattleWon
 	end
 
 Script_Route112_WasulaBattleEmboryps:
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_MUDKIP, Text_SummitCave_BobbyDefeated
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST
-	goto_if_eq EventScript_SummitCave_GiveItemDependingOnStarterBattleLost
-	goto EventScript_SummitCave_GiveItemDependingOnStarterBattleWon
+	goto_if_eq EventScript_Route112_BobbyBattleLost
+	goto EventScript_Route112_BobbyBattleWon
 	end
 
+EventScript_Route112_BobbyBattleLost:
+	special HealPlayerParty
+	msgbox Text_Route112_FroLostToBobby, MSGBOX_DEFAULT
+	applymovement LOCALID_BOBBY, Movement_Route112_BobbyLeaves
+	waitmovement LOCALID_BOBBY
+	removeobject LOCALID_BOBBY
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY 
+	setvar VAR_OLDALE_TOWN_STATE, 9
+	release
+	end
 
+EventScript_Route112_BobbyBattleWon:
+	msgbox Text_Route112_FroBeatBobby, MSGBOX_DEFAULT
+	applymovement LOCALID_BOBBY, Movement_Route112_BobbyLeaves
+	waitmovement LOCALID_BOBBY
+	removeobject LOCALID_BOBBY
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY 
+	setvar VAR_OLDALE_TOWN_STATE, 9
+	release
+	end 
+
+Text_Route112_FroLostToBobby:
+	.string "Good try Fro, but you're no match for\n"
+	.string "me. Keep practicing. Anyway...\p"
+	.string "Looks like we need to find a way to get\n"
+	.string "access to the cable car.\p"
+	.string "I'm going to head through UNNAMED CAVE\n"
+	.string "and head into Fallarbor Town.\p"
+	.string "I'll see if I can figure out why Team\n"
+	.string "MAGA is blocking the way to the top of\l"
+	.string "Mount Lancelot. See if you can keep up!$"
+
+Text_Route112_FroBeatBobby:
+	.string "No way, I can't believe it. I'll get\n"
+	.string "you next time. Anyway...\p"
+	.string "Looks like we need to find a way to get\n"
+	.string "access to the cable car.\p"
+	.string "I'm going to head through UNNAMED CAVE and\n"
+	.string "head into Fallarbor Town.\p"
+	.string "I'll see if I can figure out why Team MAGA\n"
+	.string "is blocking the way to the top of\l"
+	.string "Mount Lancelot. See if you can keep up!$"
+
+Movement_Route112_BobbyLeaves:
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	step_end

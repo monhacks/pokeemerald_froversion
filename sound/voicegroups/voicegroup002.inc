@@ -1,6 +1,6 @@
 	.align 2
 voicegroup002:: @ 8676148
-	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 165, 154, 127  @ 8676148
+	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 165, 154, 127  @ 8676148 //30
 	voice_directsound 60, 0, DirectSoundWaveData_unused_sd90_oboe, 255, 165, 154, 127  @ 8676154
 	voice_directsound 60, 0, DirectSoundWaveData_unused_guitar_separates_power_chord, 255, 165, 206, 127  @ 8676160
 	voice_directsound 60, 0, DirectSoundWaveData_unused_sc88pro_unison_slap, 255, 165, 206, 127  @ 867616C
@@ -13,7 +13,7 @@ voicegroup002:: @ 8676148
 	voice_directsound_no_resample 60, 64, DirectSoundWaveData_sc88pro_tr909_hand_clap, 255, 255, 255, 127  @ 86761C0
 	voice_directsound_no_resample 60, 64, DirectSoundWaveData_sc88pro_orchestra_snare, 255, 0, 255, 242  @ 86761CC
 	voice_directsound 48, 44, DirectSoundWaveData_unused_sc55_tom, 255, 210, 77, 204  @ 86761D8
-	voice_directsound_no_resample 60, 79, DirectSoundWaveData_unknown_close_hihat, 255, 127, 0, 188  @ 86761E4
+	voice_directsound_no_resample 60, 79, DirectSoundWaveData_unknown_close_hihat, 255, 127, 0, 188  @ 86761E4 //43
 	voice_directsound 51, 54, DirectSoundWaveData_unused_sc55_tom, 255, 216, 77, 204  @ 86761F0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86761FC
 	voice_directsound 54, 64, DirectSoundWaveData_unused_sc55_tom, 255, 216, 77, 204  @ 8676208

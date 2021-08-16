@@ -52,6 +52,7 @@ Script_WalmoreTown_AmneetIntroductionTrigger1::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	setvar VAR_0x8000, MUGSHOT_AMNEET
 	callnative DrawMugshot
+	playbgm MUS_FV_PIMP, 0
 	msgbox T_WMT_AmneetIntro, MSGBOX_DEFAULT
 	applymovement LOCALID_FREEWOMAN, M_WMT_FreeWomanLeaves
 	waitmovement LOCALID_FREEWOMAN
@@ -62,6 +63,7 @@ Script_WalmoreTown_AmneetIntroductionTrigger1::
 	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
 	waitmovement LOCALID_AMNEET
 	setflag FLAG_HIDE_WMT_AMNEET
+	fadedefaultbgm
 	release
 	end
 
@@ -72,6 +74,7 @@ Script_WalmoreTown_AmneetIntroductionTrigger2::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	setvar VAR_0x8000, MUGSHOT_AMNEET
 	callnative DrawMugshot
+	playbgm MUS_FV_PIMP, 0
 	msgbox T_WMT_AmneetIntro, MSGBOX_DEFAULT
 	applymovement LOCALID_FREEWOMAN, M_WMT_FreeWomanLeaves
 	waitmovement LOCALID_FREEWOMAN
@@ -82,6 +85,7 @@ Script_WalmoreTown_AmneetIntroductionTrigger2::
 	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
 	waitmovement LOCALID_AMNEET
 	setflag FLAG_HIDE_WMT_AMNEET
+	fadedefaultbgm
 	release
 	end
 
@@ -92,6 +96,7 @@ Script_WalmoreTown_AmneetIntroductionTrigger3::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	setvar VAR_0x8000, MUGSHOT_AMNEET
 	callnative DrawMugshot
+	playbgm MUS_FV_PIMP, 0
 	msgbox T_WMT_AmneetIntro, MSGBOX_DEFAULT
 	applymovement LOCALID_FREEWOMAN, M_WMT_FreeWomanLeaves
 	waitmovement LOCALID_FREEWOMAN
@@ -105,6 +110,7 @@ Script_WalmoreTown_AmneetIntroductionTrigger3::
 	removeobject LOCALID_FREEWOMAN
 	removeobject LOCALID_AMNEET
 	setflag FLAG_HIDE_WMT_AMNEET
+	fadedefaultbgm
 	release
 	end
 

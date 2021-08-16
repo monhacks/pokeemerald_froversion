@@ -189,6 +189,7 @@ end
 Script_LMV_IsiahCaught:
 lockall
 delay 30
+playbgm MUS_FV_TEAM_MAGA, 0
 msgbox T_LMV_TwoSoldiersTalking, MSGBOX_DEFAULT
 applymovement 5, M_LookUp
 applymovement 6, M_LookUp
