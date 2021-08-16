@@ -5,10 +5,12 @@ RaintreeIsland_MapScripts::
 RaintreeIsland_EventScript_AmneetTravelingMerchant::
 	lock
 	faceplayer
+	playbgm MUS_FV_PIMP, 0
 	message RaintreeIsland_Text_AmneetRaintreeIslandMerchant
 	waitmessage
 	pokemart RaintreeIsland_Pokemart_Amneet
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	fadedefaultbgm
 	release
 	end
 

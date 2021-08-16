@@ -681,10 +681,12 @@ MauvilleCity_Text_BeenCheckingOutTV: @ 81E0699
 MauvilleCity_EventScript_Amneet::
 	lock
 	faceplayer
+	playbgm MUS_FV_PIMP, 0
 	message SummitCity_Text_AmneetSummitCityMerchant
 	waitmessage
 	pokemart MauvilleCity_Pokemart_Amneet
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	fadedefaultbgm
 	release
 	end
 

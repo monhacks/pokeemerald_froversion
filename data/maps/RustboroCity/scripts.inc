@@ -1370,10 +1370,12 @@ SummitCity_EventScript_HikerBlockPathTrigger::
 SummitCity_EventScript_AmneetTravelingMerchant::
 	lock
 	faceplayer
+	playbgm MUS_FV_PIMP, 0
 	message SummitCity_Text_AmneetSummitCityMerchant
 	waitmessage
 	pokemart SummitCity_Pokemart_Amneet
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	fadedefaultbgm
 	release
 	end
 
