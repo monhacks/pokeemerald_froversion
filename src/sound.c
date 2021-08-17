@@ -59,6 +59,7 @@ static const struct Fanfare sFanfares[] = {
     { MUS_OBTAIN_B_POINTS,     313 },
     { MUS_OBTAIN_SYMBOL,       318 },
     { MUS_REGISTER_MATCH_CALL, 135 },
+    { MUS_FV_GOODNIGHT,        300 },
 };
 
 #define CRY_VOLUME  120 // was 125 in R/S
@@ -220,7 +221,7 @@ void StopFanfareByFanfareNum(u8 fanfareNum)
 void PlayFanfare(u16 songNum)
 {
     s32 i;
-    for (i = 0; (u32)i < 18; i++)
+    for (i = 0; (u32)i < 19; i++)
     {
         if (sFanfares[i].songNum == songNum)
         {

@@ -32,9 +32,9 @@ LakeMeadVillage_FrosHouse_Basement_WouldYouLikeToSleep::
 	goto_if_eq LakeMeadVillage_FrosHouse_Basement_NoToSleep
 	applymovement OBJ_EVENT_ID_PLAYER, MovementLakeMeadVillageFrosHouseBasementFroSleeps
 	fadescreen 1
-	msgbox Text_LakeMeadVillageFrosHouseBasement_YesToSleep, MSGBOX_DEFAULT
-	playfanfare MUS_RG_GAME_FREAK
+	playfanfare MUS_FV_GOODNIGHT
 	waitfanfare
+	msgbox Text_LakeMeadVillageFrosHouseBasement_YesToSleep, MSGBOX_DEFAULT
 	fadescreen 0
 	msgbox Text_LakeMeadVillageFrosHouseBasement_OneYearLater, MSGBOX_DEFAULT
 	setvar VAR_LITTLEROOT_INTRO_STATE, 3

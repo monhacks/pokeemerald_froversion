@@ -10,15 +10,17 @@ PetalburgCity_House2_EventScript_SchoolKid:: @ 82078FC
 	end
 
 PetalburgCity_House2_Text_NormanBecameGymLeader: @ 8207905
-	.string "NORMAN became our town's new\n"
-	.string "GYM LEADER.\p"
-	.string "I think he called his family over from\n"
-	.string "somewhere far away.$"
+	.string "Grant became our town's new\n"
+	.string "Gym Leader.\p"
+	.string "He moved back here after losing\n"
+	.string "all his money gambling. Now he\l"
+	.string "can only afford to live in this\l"
+	.string "run down trailer park.$"
 
 PetalburgCity_House2_Text_BattledNormanOnce: @ 8207969
-	.string "I battled NORMAN once, but, whew,\n"
+	.string "I battled Grant once, but, whew,\n"
 	.string "he was way too strong.\p"
 	.string "How would I put it?\p"
 	.string "I just got the feeling that he\n"
-	.string "lives for POKéMON.$"
+	.string "lives for Pokémon.$"
 

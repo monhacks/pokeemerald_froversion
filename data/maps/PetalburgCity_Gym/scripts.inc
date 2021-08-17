@@ -1375,9 +1375,6 @@ PetalburgCity_Gym_Text_NormanIntro: @ 8205FE5
 	.string "Fine, as I promised, we will have\n"
 	.string "a Pokémon battle.\p"
 	.string "Steak…\p"
-	.string "I'm so happy that I can have\n"
-	.string "a real battle with my own child.\p"
-	.string "But, a battle is a battle!\p"
 	.string "I will do everything in my power as\n"
 	.string "a Gym Leader to win.\p"
 	.string "Steak, you'd better give it your\n"
@@ -1412,7 +1409,7 @@ PetalburgCity_Gym_Text_ExplainFacade: @ 8206254
 PetalburgCity_Gym_Text_DadHappyAndSad: @ 82062FB
 	.string "Grant: As the Gym Leader, I can't\n"
 	.string "express how upset I am…\p"
-	.string "But as a father, it makes me both\n"
+	.string "But as a friend, it makes me both\n"
 	.string "happy and a little sad. It's odd…$"
 
 PetalburgCity_Gym_Text_PleaseComeWithMe: @ 8206377
@@ -1458,8 +1455,7 @@ PetalburgCity_Gym_Text_GymGuideAdvice: @ 8206542
 	.string "Well, hey, go for it!$"
 
 PetalburgCity_Gym_Text_GymGuidePostVictory: @ 82066F3
-	.string "{PLAYER}! Whoa! You've overcome even\n"
-	.string "your own father!\p"
+	.string "{PLAYER}! Whoa! You've overcome Grant!\p"
 	.string "Like, whoa!\n"
 	.string "What a stunning turn of events!$"
 
@@ -1542,9 +1538,9 @@ PetalburgCity_Gym_Text_BerkePostBattle: @ 8206C9F
 	.string "Grant really is strong.\n"
 	.string "He's a Trainer worth my respect.\p"
 	.string "And, I sense the same glow coming\n"
-	.string "from you as your father.\p"
+	.string "from you as your friend.\p"
 	.string "I hope that you'll stage a terrific\n"
-	.string "battle with your father!$"
+	.string "battle with your friend!$"
 
 PetalburgCity_Gym_Text_BerkePostBadge: @ 8206D56
 	.string "Since your dad became the Leader,\n"
@@ -1605,7 +1601,7 @@ PetalburgCity_Gym_Text_JodyDefeat: @ 82070E6
 
 PetalburgCity_Gym_Text_JodyPostBattle: @ 82070FB
 	.string "The way you use your Pokémon…\n"
-	.string "It's like your father's style.\p"
+	.string "It's like your friend's style.\p"
 	.string "Go on through! The Gym Leader, Grant\n"
 	.string "is waiting!$"
 
@@ -1672,12 +1668,6 @@ PetalburgCity_Gym_Text_NormanPreRematch: @ 82074A2
 	.string "I had a feeling that you would come.\p"
 	.string "I would never refuse to accept\n"
 	.string "a challenge from you.\p"
-	.string "You do understand, don't you?\p"
-	.string "Inside a Gym, it doesn't matter that\n"
-	.string "we are a parent and child.\p"
-	.string "…No, because we are parent and child,\n"
-	.string "we owe it to each other to do the best\l"
-	.string "we can. Isn't that right, Steak?$"
 
 PetalburgCity_Gym_Text_NormanRematchDefeat: @ 82075CE
 	.string "Uh… Haha…\n"
@@ -1695,9 +1685,6 @@ PetalburgCity_Gym_Text_NormanRematchNeedTwoMons: @ 820764A
 	.string "I had a feeling that you would come.\p"
 	.string "I would never refuse to accept\n"
 	.string "a challenge from you.\p"
-	.string "You do understand, don't you?\p"
-	.string "Inside a Gym, it doesn't matter that\n"
-	.string "we are a parent and child.\p"
 	.string "Hm? Wait a second, {PLAYER}.\p"
 	.string "Do you only have one Pokémon that is\n"	
 	.string "capable of battle?\p"

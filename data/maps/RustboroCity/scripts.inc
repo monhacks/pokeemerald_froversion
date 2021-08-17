@@ -1179,7 +1179,7 @@ RustboroCity_Text_MayPassedBrineyWantToBattle: @ 81E1AFA
 	.string "Mr. Briney in Jagow Woods.\p"
 	.string "I guess he's on his way home to his\n"
 	.string "cottage by the sea.\p"
-	.string "How's your POKéDEX coming along,\n"
+	.string "How's your Pokédex coming along,\n"
 	.string "{PLAYER}{KUN}? Mine's looking pretty decent!\p"
 	.string "So…\n"
 	.string "How about a little battle?$"

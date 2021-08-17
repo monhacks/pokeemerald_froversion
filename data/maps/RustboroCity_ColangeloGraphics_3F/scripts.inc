@@ -253,13 +253,13 @@ RustboroCity_ColangeloGraphics_3F_Text_ThankYouForDeliveringLetter: @ 8212A29
 	.string "It should help you, a Trainer.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_ExplainExpShare: @ 8212A9E
-	.string "Dom: A POKéMON holding that\n"
+	.string "Dom: A Pokémon holding that\n"
 	.string "EXP. SHARE will be given some of the\l"
 	.string "EXP Points from battle.\p"
 	.string "It will get EXP Points even if it didn't\n"
 	.string "actually battle.\p"
 	.string "I would say EXP. SHARE is quite useful\n"
-	.string "for raising weak POKéMON.$"
+	.string "for raising weak Pokémon.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_NotFamiliarWithTrends: @ 8212B78
 	.string "Dom: Since my youth, I've immersed\n"
@@ -267,7 +267,7 @@ RustboroCity_ColangeloGraphics_3F_Text_NotFamiliarWithTrends: @ 8212B78
 	.string "Consequently, I'm not familiar with\n"
 	.string "trends and that sort of thing.\p"
 	.string "But do young people all want to be\n"
-	.string "TrainerS in the POKéMON LEAGUE?$"
+	.string "TrainerS in the Pokémon LEAGUE?$"
 
 RustboroCity_ColangeloGraphics_3F_Text_ThisIs3rdFloorWaitHere: @ 8212C37
 	.string "This is the Colangelo Graphics's\n"
@@ -297,7 +297,7 @@ RustboroCity_ColangeloGraphics_3F_Text_PleaseGoAhead: @ 8212E2F
 
 RustboroCity_ColangeloGraphics_3F_Text_VisitCaptSternShipyard: @ 8212E41
 	.string "If you visit the Shipyard in SLATEPORT,\n"
-	.string "you should go see CAPT. STERN.$"
+	.string "you should go see Capt. Stern.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_RepeatAndTimerHugelyPopular: @ 8212E88
 	.string "DEVON's new products, the REPEAT BALL\n"

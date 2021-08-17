@@ -328,7 +328,7 @@ PetalburgWoods_Text_NotAOneToBeFound: @ 822E332
 
 PetalburgWoods_Text_HaveYouSeenSeedot: @ 822E34F
 	.string "Hello, have you seen any Pokémon\n"
-	.string "called Seedot around here?\p"
+	.string "called Slakoth around here?\p"
 	.string "I really love that Pokémon.$"
 
 PetalburgWoods_Text_IWasGoingToAmbushYou: @ 822E3AA
@@ -371,7 +371,7 @@ PetalburgWoods_Text_ThatWasAwfullyClose: @ 822E63D
 	.string "That was awfully close!\p"
 	.string "Thanks to you, he didn't rob me of\n"
 	.string "these important papers.\p"
-	.string "I know, I'll give you a GREAT BALL as\n"
+	.string "I know, I'll give you a Great Ball as\n"
 	.string "my thanks!$"
 
 PetalburgWoods_Text_TeamAquaAfterSomethingInSummit: @ 822E6C7
@@ -385,12 +385,12 @@ PetalburgWoods_Text_ICantBeWastingTime: @ 822E712
 
 PetalburgWoods_Text_YoureLoadedWithItems: @ 822E741
 	.string "You're loaded with items.\n"
-	.string "I can't give you this GREAT BALL.$"
+	.string "I can't give you this Great Ball.$"
 
 PetalburgWoods_Text_GoBugPokemonTeam: @ 822E77D
 	.string "I caught a whole bunch of Pokémon!\p"
 	.string "Go, go, go!\n"
-	.string "My BUG Pokémon team!$"
+	.string "My Bug Pokémon team!$"
 
 PetalburgWoods_Text_ICouldntWin: @ 822E7C1
 	.string "I have all these Pokémon,\n"
@@ -398,31 +398,31 @@ PetalburgWoods_Text_ICouldntWin: @ 822E7C1
 
 PetalburgWoods_Text_ImOutOfPokeBalls: @ 822E7EF
 	.string "I caught a bunch of Pokémon.\n"
-	.string "Now I'm out of POKé BALLS.$"
+	.string "Now I'm out of Poké Balls.$"
 
 PetalburgWoods_Text_InstantlyPopularWithBugPokemon: @ 822E827
-	.string "If you take BUG Pokémon to school,\n"
+	.string "If you take Bug Pokémon to school,\n"
 	.string "you get to be instantly popular!$"
 
 PetalburgWoods_Text_CantBePopularIfILose: @ 822E86B
 	.string "I can't be popular if I lose.$"
 
 PetalburgWoods_Text_PeopleRespectYou: @ 822E889
-	.string "If you have a big BUG Pokémon,\n"
+	.string "If you have a big Bug Pokémon,\n"
 	.string "people respect you for it.$"
 
 PetalburgWoods_Text_IWantRematch1: @ 822E8C3
-	.string "I want a rematch when my BUG\n"
+	.string "I want a rematch when my Bug\n"
 	.string "Pokémon grow up!\p"
-	.string "I'm registering you in my POKéNAV!$"
+	.string "I'm registering you in my Pokénav!$"
 
 PetalburgWoods_Text_IWantRematch2: @ 822E914
-	.string "I want a rematch when my BUG \n"
+	.string "I want a rematch when my Bug \n"
 	.string "Pokémon grow up!\p"
-	.string "I'm registering you in my POKéNAV!$"
+	.string "I'm registering you in my Pokénav!$"
 
 PetalburgWoods_Text_MyPokemonHaveGrown: @ 822E966
-	.string "My BUG Pokémon have grown.\n"
+	.string "My Bug Pokémon have grown.\n"
 	.string "I'll be popular again.$"
 
 PetalburgWoods_Text_CantBePopularIfLose: @ 822E998
@@ -476,5 +476,5 @@ PetalburgWoods_Text_TrainerTipsPP: @ 822ED07
 	.string "have Power Points (PP) that are used to\l"
 	.string "make moves during battle.\p"
 	.string "If a Pokémon runs out of PP, it must be\n"
-	.string "taken to a Pokémon CENTER.$"
+	.string "taken to a Pokémon Center.$"
 

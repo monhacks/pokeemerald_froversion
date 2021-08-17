@@ -32,7 +32,7 @@ EventTicket_Text_OddTicketGetOnBoard: @ 82C6A71
     .string "Get on board, youngster!$"
 
 FarawayIsland_Entrance_Text_SailorReturn: @ 82C6B42
-    .string "CAPT. BRINEY can be so maddeningly\n"
+    .string "Capt. BRINEY can be so maddeningly\n"
     .string "fickle…\p"
     .string "Do you want to return to LILYCOVE?$"
 

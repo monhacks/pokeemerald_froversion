@@ -342,13 +342,13 @@ MossdeepCity_Text_WailmerWatching: @ 81E4E22
 	.string "WAILMER watching!$"
 
 MossdeepCity_Text_SpaceCenterReceivedLetter: @ 81E4E90
-	.string "The island's SPACE CENTER has been\n"
+	.string "The island's SPACE Center has been\n"
 	.string "launching huge rockets.\p"
 	.string "There's been some kind of an uproar\n"
 	.string "over a letter they received recently.$"
 
 MossdeepCity_Text_SpaceCenterLaunchingRockets: @ 81E4F15
-	.string "The island's SPACE CENTER has been\n"
+	.string "The island's SPACE Center has been\n"
 	.string "launching huge rockets.$"
 
 MossdeepCity_Text_MossdeepTargetedByMagma: @ 81E4F50
@@ -359,7 +359,7 @@ MossdeepCity_Text_MossdeepTargetedByMagma: @ 81E4F50
 	.string "But MOSSDEEP here's been targeted\n"
 	.string "by that TEAM MAGMA.\p"
 	.string "If you want to know what they're up to,\n"
-	.string "go visit the SPACE CENTER.$"
+	.string "go visit the SPACE Center.$"
 
 MossdeepCity_Text_FeelReliefOnLand: @ 81E5051
 	.string "I'm a SAILOR, so the sea's obviously\n"
@@ -383,14 +383,14 @@ MossdeepCity_Text_LifeNeedsSeaToLive: @ 81E5135
 
 MossdeepCity_Text_SurfExhilarating: @ 81E5213
 	.string "A voyage on a ship is fine.\p"
-	.string "But crossing the sea with POKéMON\n"
+	.string "But crossing the sea with Pokémon\n"
 	.string "using SURF…\p"
 	.string "Now that's an exhilarating trip!\n"
 	.string "Wouldn't you agree, youngster?$"
 
 MossdeepCity_Text_SpecialSpaceCenterRock: @ 81E529D
 	.string "This rock has a special meaning to\n"
-	.string "the people at the SPACE CENTER.\p"
+	.string "the people at the SPACE Center.\p"
 	.string "They put it here as their wish for\n"
 	.string "their rockets to fly safely.\p"
 	.string "When you make a wish, what do you use?\n"
@@ -402,28 +402,28 @@ MossdeepCity_Text_ItsAWhiteRock: @ 81E5396
 	.string "It's a white rock.$"
 
 MossdeepCity_Text_GymSign: @ 81E53A9
-	.string "MOSSDEEP CITY POKéMON GYM\n"
+	.string "MOSSDEEP CITY Pokémon GYM\n"
 	.string "LEADERS: LIZA & TATE\p"
 	.string "“The mystic combination!”$"
 
 MossdeepCity_Text_CitySign: @ 81E53F2
 	.string "MOSSDEEP CITY\n"
-	.string "“Our slogan: Cherish POKéMON!”$"
+	.string "“Our slogan: Cherish Pokémon!”$"
 
 MossdeepCity_Text_SpaceCenterSign: @ 81E541F
-	.string "MOSSDEEP SPACE CENTER\n"
+	.string "MOSSDEEP SPACE Center\n"
 	.string "“The closest place to space.”$"
 
 MossdeepCity_Text_ScottSomethingWrongWithTown: @ 81E5453
 	.string "SCOTT: {PLAYER}{KUN}, feeling good?\n"
 	.string "I'm doing great!\p"
-	.string "I'd heard MOSSDEEP's GYM LEADER is\n"
+	.string "I'd heard MOSSDEEP's Gym Leader is\n"
 	.string "pretty strong, so I decided to come\l"
 	.string "take a look-see for myself.\p"
 	.string "But there's something wrong about\n"
 	.string "this town.\p"
 	.string "People are going on about a warning\n"
-	.string "letter and the SPACE CENTER…\p"
+	.string "letter and the SPACE Center…\p"
 	.string "I don't think it concerns me in any\n"
 	.string "way, though.$"
 

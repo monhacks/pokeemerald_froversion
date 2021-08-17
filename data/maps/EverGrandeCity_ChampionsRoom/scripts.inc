@@ -238,18 +238,18 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech: @ 8228C4C
 	.string "It wouldn't be fair to say that you\n"
 	.string "alone ended the crisis.\p"
 	.string "You overcame that difficult situation\n"
-	.string "by working as one with your POKéMON.\p"
-	.string "We TRAINERS raise POKéMON by giving\n"
+	.string "by working as one with your Pokémon.\p"
+	.string "We Trainers raise Pokémon by giving\n"
 	.string "them items and by teaching them new\l"
 	.string "techniques for battle.\p"
 	.string "But we ourselves also learn many\n"
-	.string "things from POKéMON.\p"
+	.string "things from Pokémon.\p"
 	.string "And this is where your achievements\n"
 	.string "are put to the test against what\l"
 	.string "others like you have achieved.\p"
 	.string "Now!\p"
 	.string "Who can most elegantly dance with\n"
-	.string "their POKéMON in HOENN?\p"
+	.string "their Pokémon in HOENN?\p"
 	.string "Show me right here and now!$"
 
 EverGrandeCity_ChampionsRoom_Text_Defeat: @ 8228EAC
@@ -258,21 +258,21 @@ EverGrandeCity_ChampionsRoom_Text_Defeat: @ 8228EAC
 	.string "You were elegant, infuriatingly so.\l"
 	.string "And yet it was utterly glorious!\p"
 	.string "Kudos to you, {PLAYER}{KUN}!\p"
-	.string "You are a truly noble POKéMON\n"
+	.string "You are a truly noble Pokémon\n"
 	.string "TRAINER!$"
 
 EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech: @ 8228F66
-	.string "WALLACE: The POKéMON you sent into\n"
+	.string "WALLACE: The Pokémon you sent into\n"
 	.string "battle…\p"
 	.string "At times they danced like a spring\n"
 	.string "breeze, and at times they struck\l"
 	.string "like lightning.\p"
 	.string "It was with light, yet surefooted,\n"
-	.string "elegance that you led your POKéMON.\p"
+	.string "elegance that you led your Pokémon.\p"
 	.string "Even I felt bedazzled by your\n"
 	.string "masterful performance!\p"
 	.string "You now stand at the glorious peak\n"
-	.string "of the POKéMON LEAGUE.\p"
+	.string "of the Pokémon LEAGUE.\p"
 	.string "I now proclaim you to be the new\n"
 	.string "HOENN region…$"
 
@@ -311,7 +311,7 @@ EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex: @ 82291E6
 	.string "But to think you've actually become\n"
 	.string "the CHAMPION!\p"
 	.string "Ah, yes!\p"
-	.string "What became of your POKéDEX?\n"
+	.string "What became of your Pokédex?\n"
 	.string "Here, let me see.$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchCongratulations: @ 822934D
@@ -327,7 +327,7 @@ EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe: @ 8229399
 
 EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside: @ 82293EB
 	.string "WALLACE: I'm sorry, but…\p"
-	.string "From here on, only those TRAINERS who\n"
+	.string "From here on, only those Trainers who\n"
 	.string "have become CHAMPIONS may enter.\p"
 	.string "You'll have to wait outside with\n"
 	.string "PROF. BIRCH.$"

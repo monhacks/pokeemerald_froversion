@@ -612,13 +612,14 @@ gSongTable:: @ 86B49F0
 	song ph_nurse_held, 2, 2
 	song ph_nurse_solo, 2, 2
 	song mus_fv_bobby 0, 0
-	song mus_fv_magna_centipede 0, 0
-	song mus_fv_raintree_island_gym_fire 0, 0
-	song mus_fv_chill_penguin 0, 0
-	song mus_fv_raintree_island_gym_ice 0, 0
-	song mus_fv_raintree_island 0, 0
-	song mus_fv_pimp 0, 0
-	song mus_fv_team_maga 0, 0
+	song mus_fv_magna_centipede, 0, 0
+	song mus_fv_raintree_island_gym_fire, 0, 0
+	song mus_fv_chill_penguin, 0, 0
+	song mus_fv_raintree_island_gym_ice, 0, 0
+	song mus_fv_raintree_island, 0, 0
+	song mus_fv_pimp, 0, 0
+	song mus_fv_team_maga, 0, 0
+	song mus_fv_goodnight, 2, 2
 
 	.align 2
 dummy_song_header: @ 86B5D00

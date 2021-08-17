@@ -598,7 +598,7 @@ Route111_Text_BattleOurFamily: @ 81F1475
 	.string "Hello! I take it you're a traveler.\p"
 	.string "How's this? What do you say to taking\n"
 	.string "on our family of four in a series of\l"
-	.string "POKéMON battles?$"
+	.string "Pokémon battles?$"
 
 Route111_Text_IsThatSo: @ 81F14F5
 	.string "Is that so?\n"
@@ -656,12 +656,12 @@ Route111_Text_VickyPostBattle: @ 81F1788
 	.string "visit with us awhile.$"
 
 Route111_Text_ToughToKeepWinningUpTheRanks: @ 81F17BA
-	.string "If you don't raise your POKéMON some\n"
+	.string "If you don't raise your Pokémon some\n"
 	.string "more, it could be tough to keep winning\l"
 	.string "up through the ranks.\p"
-	.string "I've heard the POKéMON LEAGUE's\n"
+	.string "I've heard the Pokémon LEAGUE's\n"
 	.string "ELITE FOUR are far stronger than\l"
-	.string "any GYM LEADER.$"
+	.string "any Gym Leader.$"
 
 Route111_Text_WinstrateFamilyDestroyedMe: @ 81F186E
 	.string "I challenged the WINSTRATE family,\n"
@@ -690,7 +690,7 @@ Route111_Text_OldLadysRestStopSign: @ 81F194D
 
 Route111_Text_TrainerTipsSpAtkSpDef: @ 81F1987
 	.string "TRAINER TIPS\p"
-	.string "One of the indicators of a POKéMON's\n"
+	.string "One of the indicators of a Pokémon's\n"
 	.string "powerfulness is SP. ATK. It stands for\l"
 	.string "“SPECIAL ATTACK.”\p"
 	.string "Likewise, SP. DEF stands for “SPECIAL\n"
@@ -746,5 +746,5 @@ Route111_Text_MauvilleUncleToldMeToTakeRockSmash: @ 81F1CCA
 Route111_Text_TrainerHillSign: @ 81F1D61
 	.string "{RIGHT_ARROW} TRAINER HILL ENTRANCE\p"
 	.string "“Scale the heights, you hot-blooded\n"
-	.string "TRAINERS!”$"
+	.string "Trainers!”$"
 

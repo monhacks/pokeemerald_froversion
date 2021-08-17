@@ -294,7 +294,7 @@ RustboroCity_Gym_Text_RoxanneRegisterCall: @ 8213A76
 
 RustboroCity_Gym_Text_RegisteredRoxanne: @ 8213C01
 	.string "Registered Gym Leader Chad And Mark\n"
-	.string "in the POKéNAV.$"
+	.string "in the Pokénav.$"
 
 RustboroCity_Gym_Text_RoxannePreRematch: @ 8213C2F
 	.string "Chad And Mark: I'm so glad to see you again.\n"

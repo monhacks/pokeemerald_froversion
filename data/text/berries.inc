@@ -13,7 +13,7 @@ Route104_Text_PlantBerriesInSoilTakeThis: @ 82A6D86
 Route104_Text_TrainersOftenMakeMonHoldBerries: @ 82A6E32
 	.string "The way you look, you must be a\n"
 	.string "TRAINER, no?\p"
-	.string "TRAINERS often make POKéMON hold\n"
+	.string "Trainers often make Pokémon hold\n"
 	.string "BERRIES.\p"
 	.string "It's up to you whether to grow BERRIES\n"
 	.string "or use them.$"
@@ -86,7 +86,7 @@ LilycoveCity_Text_BecauseYoureTrainer: @ 82A72E3
 LilycoveCity_Text_PokeblocksSuitPokemon: @ 82A7321
 	.string "When it gets right down to it…\p"
 	.string "The way dignified simplicity suits me,\n"
-	.string "{POKEBLOCK}S perfectly suit POKéMON.$"
+	.string "{POKEBLOCK}S perfectly suit Pokémon.$"
 
 Route123_BerryMastersHouse_Text_YoureDeservingOfBerry: @ 82A7386
 	.string "You may call me the BERRY MASTER.\p"
@@ -100,7 +100,7 @@ Route123_BerryMastersHouse_Text_WhyBeStingyTakeAnother: @ 82A7428
 	.string "Take another!$"
 
 Route123_BerryMastersHouse_Text_VisitPrettyPetalFlowerShop: @ 82A7445
-	.string "Be sure to visit the PRETTY PETAL\n"
+	.string "Be sure to visit the Pretty Petal\n"
 	.string "flower shop near RUSTBORO.\p"
 	.string "Let flowers fill the world!$"
 
@@ -136,7 +136,7 @@ Route123_BerryMastersHouse_Text_Ah: @ 82A7682
 
 Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop: @ 82A7686
 	.string "Hello!\p"
-	.string "This is the PRETTY PETAL flower shop.\n"
+	.string "This is the Pretty Petal flower shop.\n"
 	.string "Spreading flowers all over the world!$"
 
 Route104_PrettyPetalFlowerShop_Text_LearnAboutBerries: @ 82A76D9
@@ -193,10 +193,10 @@ Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers: @ 82A7A98
 
 Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries: @ 82A7AF3
 	.string "You can plant a BERRY and grow it big,\n"
-	.string "or you can make a POKéMON hold it.\p"
+	.string "or you can make a Pokémon hold it.\p"
 	.string "But now they have a machine that mixes\n"
 	.string "up different BERRIES and makes candies\l"
-	.string "for POKéMON.\p"
+	.string "for Pokémon.\p"
 	.string "I want some candy, too.$"
 
 SootopolisCity_Text_NameIsKiriHaveOneOfThese: @ 82A7BB0

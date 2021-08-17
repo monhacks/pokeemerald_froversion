@@ -281,17 +281,17 @@ SlateportCity_OceanicMuseum_1F_Text_LearnAboutSeaForBattling: @ 820B25F
 SlateportCity_OceanicMuseum_1F_Text_SternIsRoleModel: @ 820B2A2
 	.string "I get all giddy and gooey when\n"
 	.string "I see the sea!\p"
-	.string "For me, CAPT. STERN is the number\n"
+	.string "For me, Capt. Stern is the number\n"
 	.string "one role model!$"
 
 SlateportCity_OceanicMuseum_1F_Text_MustBePokemonWeDontKnow: @ 820B302
 	.string "The sea is vast without end, and\n"
 	.string "infinitely deep…\p"
-	.string "There must be many POKéMON that\n"
+	.string "There must be many Pokémon that\n"
 	.string "we don't know about.$"
 
 SlateportCity_OceanicMuseum_1F_Text_WantSeaPokemon: @ 820B369
-	.string "I want a sea POKéMON.\p"
+	.string "I want a sea Pokémon.\p"
 	.string "I think it would feel cool and nice\n"
 	.string "to hug.$"
 

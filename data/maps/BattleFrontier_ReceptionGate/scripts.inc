@@ -303,7 +303,7 @@ BattleFrontier_ReceptionGate_Text_FirstTimeHereThisWay: @ 8266580
 	.string "Please step this way!$"
 
 BattleFrontier_ReceptionGate_Text_WelcomeToBattleFrontier: @ 82665B2
-	.string "The front lines of POKéMON battling!\n"
+	.string "The front lines of Pokémon battling!\n"
 	.string "Welcome to the BATTLE FRONTIER!$"
 
 BattleFrontier_ReceptionGate_Text_IssueFrontierPass: @ 82665F7
@@ -390,7 +390,7 @@ BattleFrontier_ReceptionGate_Text_BattleFactoryInfo: @ 8266B5D
 
 BattleFrontier_ReceptionGate_Text_BattlePikeInfo: @ 8266C24
 	.string "The BATTLE PIKE is the building shaped\n"
-	.string "like a POKéMON at the center-left of\l"
+	.string "like a Pokémon at the center-left of\l"
 	.string "the BATTLE FRONTIER.\p"
 	.string "An event called the Battle Choice\n"
 	.string "is conducted there.$"
@@ -405,7 +405,7 @@ BattleFrontier_ReceptionGate_Text_RankingHallInfo: @ 8266D1C
 	.string "The RANKING HALL is located near\n"
 	.string "the BATTLE TOWER.\p"
 	.string "There, you may see the most fantastic\n"
-	.string "records left by the TRAINERS that\l"
+	.string "records left by the Trainers that\l"
 	.string "took on the many challenges of\l"
 	.string "the BATTLE FRONTIER.$"
 
@@ -431,11 +431,11 @@ BattleFrontier_ReceptionGate_Text_LevelModeInfo: @ 8266F04
 	.string "two courses--Level 50 and Open Level.$"
 
 BattleFrontier_ReceptionGate_Text_Level50Info: @ 8266F69
-	.string "The Level 50 course is open to POKéMON\n"
+	.string "The Level 50 course is open to Pokémon\n"
 	.string "up to and including Level 50.\p"
 	.string "Please keep in mind, however, that\n"
 	.string "no TRAINER you face will have any\l"
-	.string "POKéMON below Level 50.\p"
+	.string "Pokémon below Level 50.\p"
 	.string "This course is the entry level for\n"
 	.string "battles at the BATTLE FRONTIER.\p"
 	.string "To begin, we hope you will challenge\n"
@@ -443,30 +443,30 @@ BattleFrontier_ReceptionGate_Text_Level50Info: @ 8266F69
 
 BattleFrontier_ReceptionGate_Text_OpenLevelInfo: @ 8267080
 	.string "The Open Level course places no limit\n"
-	.string "on the levels of POKéMON entering\l"
+	.string "on the levels of Pokémon entering\l"
 	.string "challenges.\p"
 	.string "The levels of your opponents will\n"
 	.string "be adjusted to match the levels of\l"
-	.string "your POKéMON.\p"
+	.string "your Pokémon.\p"
 	.string "However, no TRAINER you face will\n"
-	.string "have any POKéMON below Level 60.$"
+	.string "have any Pokémon below Level 60.$"
 
 BattleFrontier_ReceptionGate_Text_MonEntryInfo: @ 826716A
-	.string "Virtually any kind of POKéMON may take\n"
+	.string "Virtually any kind of Pokémon may take\n"
 	.string "on the challenges at all facilities.\p"
-	.string "EGGS and certain kinds of POKéMON,\n"
+	.string "EGGS and certain kinds of Pokémon,\n"
 	.string "however, are not permitted.\p"
-	.string "The numbers of POKéMON required for\n"
+	.string "The numbers of Pokémon required for\n"
 	.string "challenges will depend on the facility.\p"
 	.string "At all facilities, however, two or more\n"
-	.string "of the same kind of POKéMON are not\l"
+	.string "of the same kind of Pokémon are not\l"
 	.string "permitted.$"
 
 BattleFrontier_ReceptionGate_Text_HoldItemsInfo: @ 8267298
 	.string "When entering a challenge at a BATTLE\n"
-	.string "FRONTIER facility, POKéMON may not\l"
+	.string "FRONTIER facility, Pokémon may not\l"
 	.string "be holding the same kind of item.\p"
-	.string "Please make sure that all POKéMON\n"
+	.string "Please make sure that all Pokémon\n"
 	.string "entering a challenge are holding\l"
 	.string "different items.$"
 
@@ -479,11 +479,11 @@ BattleFrontier_ReceptionGate_Text_LearnAboutWhich1: @ 826737C
 BattleFrontier_ReceptionGate_Text_SymbolsInfo: @ 82673A1
 	.string "There are seven facilities at\n"
 	.string "the BATTLE FRONTIER.\p"
-	.string "TRAINERS who gain recognition for\n"
+	.string "Trainers who gain recognition for\n"
 	.string "their abilities may be rewarded with\l"
 	.string "symbols from each of the facilities.\p"
-	.string "To earn a symbol, TRAINERS may need\n"
-	.string "to defeat other TRAINERS in a row,\l"
+	.string "To earn a symbol, Trainers may need\n"
+	.string "to defeat other Trainers in a row,\l"
 	.string "and may need to win events repeatedly.\p"
 	.string "It's certainly not easy to win symbols.\n"
 	.string "I wish you the best of luck!$"
@@ -502,7 +502,7 @@ BattleFrontier_ReceptionGate_Text_RecordedBattleInfo: @ 82674F3
 
 BattleFrontier_ReceptionGate_Text_BattlePointsInfo: @ 826761C
 	.string "Battle Points are rewards given to\n"
-	.string "TRAINERS who battled outstandingly\l"
+	.string "Trainers who battled outstandingly\l"
 	.string "at the BATTLE FRONTIER.\p"
 	.string "You may trade in your Battle Points\n"
 	.string "for prizes at the EXCHANGE SERVICE\l"

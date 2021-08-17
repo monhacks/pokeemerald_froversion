@@ -1286,3 +1286,6 @@ $(MID_SUBDIR)/mus_fv_pimp.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_fv_team_maga.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G044 -V80
+
+$(MID_SUBDIR)/mus_fv_goodnight.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G060 -V090 -P5

@@ -310,7 +310,7 @@ SSTidalCorridor_Text_WeveArrived: @ 823C64F
 
 SSTidalCorridor_Text_VisitOtherCabins: @ 823C65E
 	.string "Go visit other cabins.\n"
-	.string "TRAINERS bored of the boat trip will\l"
+	.string "Trainers bored of the boat trip will\l"
 	.string "be itching to battle.$"
 
 SSTidalCorridor_Text_EnjoyYourCruise: @ 823C6B0
@@ -321,7 +321,7 @@ SSTidalCorridor_Text_HorizonSpreadsBeyondPorthole: @ 823C6C3
 	.string "the porthole.$"
 
 SSTidalCorridor_Text_BrineyWelcomeAboard: @ 823C6EC
-	.string "MR. BRINEY: Welcome aboard, {PLAYER}{KUN}!\p"
+	.string "Mr. Briney: Welcome aboard, {PLAYER}{KUN}!\p"
 	.string "They made me honorary captain of\n"
 	.string "the S.S. TIDAL!\p"
 	.string "You can call me CAPTAIN BRINEY now!\p"

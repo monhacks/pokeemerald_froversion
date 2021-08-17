@@ -244,7 +244,7 @@ BattleFrontier_OutsideEast_Text_BattleTowerSign: @ 8242E11
 
 BattleFrontier_OutsideEast_Text_BattlePalaceSign: @ 8242E58
 	.string "This is the BATTLE PALACE!\n"
-	.string "Keep your eyes on POKéMON battles!$"
+	.string "Keep your eyes on Pokémon battles!$"
 
 BattleFrontier_OutsideEast_Text_BattleArenaSign: @ 8242E96
 	.string "This is the BATTLE ARENA!\n"
@@ -270,7 +270,7 @@ BattleFrontier_OutsideEast_Text_BattleTowerFeelsSpecial: @ 8242F8C
 
 BattleFrontier_OutsideEast_Text_ConquerLeagueAndFrontier: @ 8242FDC
 	.string "My grand ambition is to conquer both\n"
-	.string "the BATTLE FRONTIER and the POKéMON\l"
+	.string "the BATTLE FRONTIER and the Pokémon\l"
 	.string "LEAGUE.\p"
 	.string "And if my dream comes true…\p"
 	.string "I… I'm going to ask MIMI next door\n"
@@ -299,7 +299,7 @@ BattleFrontier_OutsideEast_Text_DidScottBringYouHere: @ 8243230
 	.string "Did SCOTT bring you here, too?\n"
 	.string "What is it with that guy?\p"
 	.string "It sounds like he really does know\n"
-	.string "how to spot talented TRAINERS, but…\p"
+	.string "how to spot talented Trainers, but…\p"
 	.string "I've never seen him battling in person\n"
 	.string "ever.$"
 
@@ -323,7 +323,7 @@ BattleFrontier_OutsideEast_Text_PeopleCallMeBusybody: @ 8243363
 
 BattleFrontier_OutsideEast_Text_OnceBeatGymLeader: @ 8243425
 	.string "I may not look that impressive now,\n"
-	.string "but I once beat a GYM LEADER.\p"
+	.string "but I once beat a Gym Leader.\p"
 	.string "Who knows, maybe I should give it\n"
 	.string "another shot at glory.$"
 
@@ -335,7 +335,7 @@ BattleFrontier_OutsideEast_Text_FastOnBikeAndBattles: @ 82434A0
 
 BattleFrontier_OutsideEast_Text_BetterThanDaddyAtPokemon: @ 8243504
 	.string "I'm better than my daddy\n"
-	.string "at POKéMON.$"
+	.string "at Pokémon.$"
 
 BattleFrontier_OutsideEast_Text_GoRackUpSomeWinsForDaddy: @ 8243529
 	.string "Go on, my baby sweetie!\n"
@@ -355,7 +355,7 @@ BattleFrontier_OutsideEast_Text_HeardPrettyGirlAtBattleArena: @ 8243598
 BattleFrontier_OutsideEast_Text_SometimesImportantOldManInThere: @ 8243668
 	.string "I sometimes see this really important-\n"
 	.string "looking old man going in there.\p"
-	.string "He has these really awesome POKéMON.\n"
+	.string "He has these really awesome Pokémon.\n"
 	.string "He seems really nice, though.$"
 
 BattleFrontier_OutsideEast_Text_LegendOfBattlePyramid: @ 82436F2
@@ -415,7 +415,7 @@ BattleFrontier_OutsideEast_Text_PowerOfOurLoveWillOvercome: @ 8243A53
 
 BattleFrontier_OutsideEast_Text_FrontierNotExclusivelyForToughTrainers: @ 8243B68
 	.string "The BATTLE FRONTIER isn't exclusively\n"
-	.string "for tough TRAINERS.\p"
+	.string "for tough Trainers.\p"
 	.string "Many people with special abilities\n"
 	.string "have been invited, it seems.\p"
 	.string "That man SCOTT…\p"
@@ -437,7 +437,7 @@ BattleFrontier_OutsideEast_Text_OnceAnOddTreePastHere: @ 8243CA3
 BattleFrontier_OutsideEast_Text_StickyMonWithLongTail: @ 8243D0B
 	.string "I…\n"
 	.string "I saw it!\p"
-	.string "There was a sticky sort of a POKéMON\n"
+	.string "There was a sticky sort of a Pokémon\n"
 	.string "with a long tail up ahead!\p"
 	.string "It was hiding under a boulder, and\n"
 	.string "it kept staring at me!$"

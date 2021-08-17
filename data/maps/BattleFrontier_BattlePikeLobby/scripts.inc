@@ -272,7 +272,7 @@ BattleFrontier_BattlePike_EventScript_CloseCurtain:: @ 825BB49
 	return
 
 BattleFrontier_BattlePikeLobby_Text_WelcomeToBattlePike: @ 825BB52
-	.string "Where the luck of TRAINERS\n"
+	.string "Where the luck of Trainers\n"
 	.string "is put to the test…\p"
 	.string "Welcome to the BATTLE PIKE…\p"
 	.string "I am your guide to the BATTLE PIKE…$"
@@ -312,8 +312,8 @@ BattleFrontier_BattlePikeLobby_Text_WhichChallengeMode: @ 825BE35
 BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLv50: @ 825BE8C
 	.string "I beg your pardon, but…\p"
 	.string "You do not have three eligible\n"
-	.string "POKéMON for the Battle Choice event.\p"
-	.string "You must have three different POKéMON\n"
+	.string "Pokémon for the Battle Choice event.\p"
+	.string "You must have three different Pokémon\n"
 	.string "of Level 50 or less to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
@@ -324,9 +324,9 @@ BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLv50: @ 825BE8C
 BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLvOpen: @ 825BF9A
 	.string "I beg your pardon, but…\p"
 	.string "You do not have three eligible\n"
-	.string "POKéMON for the Battle Choice event.\p"
+	.string "Pokémon for the Battle Choice event.\p"
 	.string "You must have three different\n"
-	.string "POKéMON to enter.\p"
+	.string "Pokémon to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
 	.string "EGGS{STR_VAR_1} ineligible.\p"
@@ -334,7 +334,7 @@ BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLvOpen: @ 825BF9A
 	.string "you are ready…$"
 
 BattleFrontier_BattlePikeLobby_Text_PleaseChooseThreeMons: @ 825C094
-	.string "Please choose the three POKéMON\n"
+	.string "Please choose the three Pokémon\n"
 	.string "you wish to enter in the challenge…$"
 
 BattleFrontier_BattlePikeLobby_Text_SaveBeforeChallenge: @ 825C0D8
@@ -401,7 +401,7 @@ BattleFrontier_BattlePikeLobby_Text_NeverHadToBattleTrainer: @ 825C4A5
 BattleFrontier_BattlePikeLobby_Text_ThinkAbilitiesUsefulHere: @ 825C4FD
 	.string "Listen! Listen!\p"
 	.string "Don't you think that the special\n"
-	.string "abilities of POKéMON will be useful\l"
+	.string "abilities of Pokémon will be useful\l"
 	.string "here?$"
 
 @ Unused
@@ -410,7 +410,7 @@ BattleFrontier_BattlePikeLobby_Text_TrainersWhicheverPathIChoose: @ 825C558
 	.string "I can't figure it out at all!\p"
 	.string "I've taken the challenge a bunch\n"
 	.string "of times, but all I ever do is run into\l"
-	.string "TRAINERS whichever path I choose.$"
+	.string "Trainers whichever path I choose.$"
 
 BattleFrontier_BattlePikeLobby_Text_RulesAreListed: @ 825C5FB
 	.string "The Battle Choice's rules are listed.$"
@@ -419,17 +419,17 @@ BattleFrontier_BattlePikeLobby_Text_ReadWhichHeading: @ 825C621
 	.string "Which heading do you want to read?$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainPokenavBagRules: @ 825C644
-	.string "The BAG and POKéNAV may not be used\n"
+	.string "The BAG and Pokénav may not be used\n"
 	.string "during a Battle Choice challenge.$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainHeldItemRules: @ 825C68A
 	.string "During a Battle Choice challenge,\n"
-	.string "any BERRY or HERB held by POKéMON\l"
+	.string "any BERRY or HERB held by Pokémon\l"
 	.string "will be effective only once.$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainMonOrderRules: @ 825C6EB
 	.string "During a Battle Choice challenge,\n"
-	.string "the sequence of POKéMON cannot be\l"
+	.string "the sequence of Pokémon cannot be\l"
 	.string "changed.\p"
 	.string "The sequence must be set before\n"
 	.string "starting your challenge.$"

@@ -180,24 +180,24 @@ MossdeepCity_StevensHouse_Text_UnderwateCavernBetweenMossdeepSootopolis: @ 8222B
 	.string "STEVEN: Apparently, there's an\n"
 	.string "underwater cavern between\l"
 	.string "MOSSDEEP and SOOTOPOLIS.\p"
-	.string "You know, the one that CAPT. STERN\n"
+	.string "You know, the one that Capt. Stern\n"
 	.string "found in his submarine.$"
 
 MossdeepCity_StevensHouse_Text_TakeBallContainingBeldum: @ 8222B9E
-	.string "{PLAYER} checked the POKé BALL.\p"
-	.string "It contained the POKéMON\n"
+	.string "{PLAYER} checked the Poké Ball.\p"
+	.string "It contained the Pokémon\n"
 	.string "BELDUM.\p"
-	.string "Take the POKé BALL?$"
+	.string "Take the Poké Ball?$"
 
 MossdeepCity_StevensHouse_Text_ObtainedBeldum: @ 8222BED
 	.string "{PLAYER} obtained a BELDUM.$"
 
 @ Unused
 MossdeepCity_StevensHouse_Text_NoSpaceForAnotherMon: @ 8222C03
-	.string "There is no space for another POKéMON.$"
+	.string "There is no space for another Pokémon.$"
 
 MossdeepCity_StevensHouse_Text_LeftPokeBallWhereItWas: @ 8222C2A
-	.string "{PLAYER} left the POKé BALL where\n"
+	.string "{PLAYER} left the Poké Ball where\n"
 	.string "it was.$"
 
 MossdeepCity_StevensHouse_Text_LetterFromSteven: @ 8222C4E
@@ -209,10 +209,10 @@ MossdeepCity_StevensHouse_Text_LetterFromSteven: @ 8222C4E
 	.string "I don't plan to return home for some\n"
 	.string "time.\p"
 	.string "I have a favor to ask of you.\p"
-	.string "I want you to take the POKé BALL on\n"
+	.string "I want you to take the Poké Ball on\n"
 	.string "the desk.\p"
 	.string "Inside it is a BELDUM, my favorite\n"
-	.string "POKéMON.\p"
+	.string "Pokémon.\p"
 	.string "I'm counting on you.\p"
 	.string "May our paths cross someday.\p"
 	.string "STEVEN STONE$"

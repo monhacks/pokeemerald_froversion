@@ -75,21 +75,21 @@ SlateportCity_SternsShipyard_1F_Text_CantMakeHeadsOrTails: @ 8208008
 SlateportCity_SternsShipyard_1F_Text_MeetDockDeliverToStern: @ 82080A5
 	.string "Hm?\n"
 	.string "Hi, I'm DOCK.\p"
-	.string "CAPT. STERN commissioned me to\n"
+	.string "Capt. Stern commissioned me to\n"
 	.string "design a ferry.\p"
 	.string "Oh! That there…\n"
 	.string "Are they Colangelo Gears?\p"
 	.string "But, hmm…\n"
 	.string "This won't do…\p"
-	.string "CAPT. STERN went off somewhere.\n"
+	.string "Capt. Stern went off somewhere.\n"
 	.string "He said he had some work to do.\p"
-	.string "Could I get you to go find CAPT.\n"
-	.string "STERN and deliver that to him?$"
+	.string "Could I get you to go find Capt.\n"
+	.string "Stern and deliver that to him?$"
 
 SlateportCity_SternsShipyard_1F_Text_CouldYouFindStern: @ 82081A5
-	.string "DOCK: Where could CAPT. STERN have\n"
+	.string "DOCK: Where could Capt. Stern have\n"
 	.string "gone off to?\p"
-	.string "Could you go find CAPT. STERN and\n"
+	.string "Could you go find Capt. Stern and\n"
 	.string "deliver that parcel to him?$"
 
 SlateportCity_SternsShipyard_1F_Text_CouldUseAdviceFromVeteran: @ 8208213
@@ -100,7 +100,7 @@ SlateportCity_SternsShipyard_1F_Text_CouldUseAdviceFromVeteran: @ 8208213
 	.string "who knows the seas…$"
 
 SlateportCity_SternsShipyard_1F_Text_BrineyJoinedUs: @ 82082A8
-	.string "DOCK: Hi! MR. BRINEY's joined us to\n"
+	.string "DOCK: Hi! Mr. Briney's joined us to\n"
 	.string "lend us his help.\p"
 	.string "Thanks to the veteran sailor, the\n"
 	.string "ferry is steadily coming together.$"
@@ -115,7 +115,7 @@ SlateportCity_SternsShipyard_1F_Text_FerryIsReady: @ 8208323
 	.string "technology's march.$"
 
 SlateportCity_SternsShipyard_1F_Text_DecidedToHelpDock: @ 82083EE
-	.string "MR. BRINEY: Ah, {PLAYER}{KUN}!\n"
+	.string "Mr. Briney: Ah, {PLAYER}{KUN}!\n"
 	.string "It's been too long!\p"
 	.string "Aye, since I met you, this old sea dog's\n"
 	.string "been feeling frisky!\p"
