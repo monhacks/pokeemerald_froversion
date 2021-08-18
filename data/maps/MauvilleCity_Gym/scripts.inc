@@ -276,27 +276,27 @@ MauvilleCity_Gym_EventScript_GymStatue:: @ 820E175
 	end
 
 MauvilleCity_Gym_Text_GymGuideAdvice: @ 820E17F
-	.string "Hey, how's it going, CHAMPION-\n"
+	.string "Hey, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
-	.string "Jordan, the LEADER of MAUVILLE\n"
-	.string "GYM, uses ELECTRIC-type Pokémon.\p"
-	.string "If you challenge him with WATER-type\n"
-	.string "Pokémon, he'll zap them! Bzzt!\p"
-	.string "And, he's put in switch-controlled\n"
-	.string "doors all over his GYM! Eccentric!\p"
-	.string "Hey, go for it!$"
+	.string "Jordan, the Leader of Wheatfield\n"
+	.string "Gym, uses Rock-type Pokémon.\p"
+	.string "If you challenge him with Fire-type\n"
+	.string "Pokémon, he'll pound them!!\p"
+	//.string "And, he's put in switch-controlled\n"
+	//.string "doors all over his Gym! Eccentric!\p"
+	//.string "Hey, go for it!$"
 
 MauvilleCity_Gym_Text_GymGuidePostVictory: @ 820E283
 	.string "Whoa, you're electrifying!\n"
-	.string "You've powered the door open!$"
+	.string "You've climbed all over Jordan!$"
 
 MauvilleCity_Gym_Text_KirkIntro: @ 820E2BC
-	.string "My electric soul, it'll shatter your\n"
+	.string "My grounded soul, it'll shatter your\n"
 	.string "dreams whole, whoa-yeahah!$"
 
 MauvilleCity_Gym_Text_KirkDefeat: @ 820E2FC
-	.string "That was plugged in, amped up,\n"
-	.string "over-driven electric, man!$"
+	.string "That was far out, wild,\n"
+	.string "rocky rumbltastic, man!$"
 
 MauvilleCity_Gym_Text_KirkPostBattle: @ 820E336
 	.string "Pokémon and rock, it's all about heart,\n"
@@ -307,7 +307,7 @@ MauvilleCity_Gym_Text_ShawnIntro: @ 820E369
 	.string "There ain't no way I'll lose easily!$"
 
 MauvilleCity_Gym_Text_ShawnDefeat: @ 820E3A7
-	.string "Unplugged and turned off…$"
+	.string "Buried with my own pride…$"
 
 MauvilleCity_Gym_Text_ShawnPostBattle: @ 820E3C1
 	.string "Jordan, our Gym Leader, has been\n"
@@ -316,7 +316,7 @@ MauvilleCity_Gym_Text_ShawnPostBattle: @ 820E3C1
 	.string "daddy was born, that tough coot.$"
 
 MauvilleCity_Gym_Text_BenIntro: @ 820E443
-	.string "This GYM's got puzzles!\n"
+	.string "This Gym's got problems!\n"
 	.string "Isn't it fun?$"
 
 MauvilleCity_Gym_Text_BenDefeat: @ 820E469
@@ -324,19 +324,19 @@ MauvilleCity_Gym_Text_BenDefeat: @ 820E469
 
 MauvilleCity_Gym_Text_BenPostBattle: @ 820E47E
 	.string "Jordan says he likes setting up\n"
-	.string "little traps with switches.$"
+	.string "a new wall to climb.$"
 
 MauvilleCity_Gym_Text_VivianIntro: @ 820E4BB
 	.string "With my charm and my Pokémon's moves,\n"
-	.string "you'll be shocked!$"
+	.string "you'll be bulldozed!$"
 
 MauvilleCity_Gym_Text_VivianDefeat: @ 820E4F4
-	.string "I'm shocked by your power!$"
+	.string "I'm floored by your power!$"
 
 MauvilleCity_Gym_Text_VivianPostBattle: @ 820E50F
-	.string "I've heard that MAUVILLE was founded\n"
+	.string "I've heard that Wheatfield was founded\n"
 	.string "by Jordan.\p"
-	.string "He was a TRAINER long before we\n"
+	.string "He was a Trainer long before we\n"
 	.string "became Trainers.\l"
 	.string "He must know all sorts of things!$"
 
@@ -348,21 +348,21 @@ MauvilleCity_Gym_Text_AngeloDefeat: @ 820E5A8
 	.string "My eyes are frazzled…$"
 
 MauvilleCity_Gym_Text_AngeloPostBattle: @ 820E5C2
-	.string "MAUVILLE GYM's Jordan has a shiny\n"
+	.string "Wheatfield Gym's Jordan has a shiny\n"
 	.string "forehead. It makes me happy!$"
 
 MauvilleCity_Gym_Text_WattsonIntro: @ 820E602
 	.string "I've given up on my plans to convert\n"
 	.string "the city, I have.\p"
 	.string "And so, I put my time into making\n"
-	.string "door traps in my GYM.\p"
+	.string "door traps in my Gym.\p"
 	.string "Oh? Now, what are you doing here?\p"
 	.string "What's that? You say you've gotten\n"
 	.string "past all my rigged doors?\p"
 	.string "Wahahahah!\n"
 	.string "Now, that is amusing!\p"
-	.string "Then, I, Jordan, the LEADER of\n"
-	.string "MAUVILLE GYM, shall electrify you!$"
+	.string "Then, I, Jordan, the Leader of\n"
+	.string "Wheatfield Gym, shall electrify you!$"
 
 MauvilleCity_Gym_Text_WattsonDefeat: @ 820E734
 	.string "Wahahahah!\n"
@@ -394,18 +394,18 @@ MauvilleCity_Gym_Text_RegisteredWattson: @ 820E8B5
 
 MauvilleCity_Gym_Text_WattsonPostBattle: @ 820E8E3
 	.string "I swell with optimism, seeing a promising\n"
-	.string "young TRAINER like you!$"
+	.string "young Trainer like you!$"
 
 MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor: @ 820E925
 	.string "Wahahahah!\n"
 	.string "Go forth and endeavor, youngster!$"
 
 MauvilleCity_Gym_Text_GymStatue: @ 820E952
-	.string "Wheafield Quarry Pokémon GYM$"
+	.string "Wheafield Quarry Pokémon Gym$"
 
 MauvilleCity_Gym_Text_GymStatueCertified: @ 820E96C
-	.string "Wheafield Quarry Pokémon GYM\p"
-	.string "Jordan'S CERTIFIED Trainers:\n"
+	.string "Wheafield Quarry Pokémon Gym\p"
+	.string "Jordan'S Certified Trainers:\n"
 	.string "{PLAYER}$"
 
 MauvilleCity_Gym_Text_WattsonPreRematch: @ 820E9A7
@@ -413,17 +413,17 @@ MauvilleCity_Gym_Text_WattsonPreRematch: @ 820E9A7
 	.string "I know what you want.\l"
 	.string "You want to battle my Pokémon!\p"
 	.string "Wahahahaha!\p"
-	.string "I'll make sparks fly from you!\n"
+	.string "I'll make rocks fly at you!\n"
 	.string "Don't say I didn't warn you!$"
 
 MauvilleCity_Gym_Text_WattsonRematchDefeat: @ 820EA42
 	.string "Oof…\n"
-	.string "Our batteries ran dry…$"
+	.string "Lost my grip…$"
 
 MauvilleCity_Gym_Text_WattsonPostRematch: @ 820EA5E
-	.string "Jordan: We'll have to recharge our\n"
-	.string "batteries again.\p"
-	.string "When we're fully charged up, we'll\n"
+	.string "Jordan: We'll have to reset our\n"
+	.string "witts again.\p"
+	.string "When we're fully prepared, we'll\n"
 	.string "gladly accept your challenge.\p"
 	.string "So, come back again sometime,\n"
 	.string "won't you?$"
