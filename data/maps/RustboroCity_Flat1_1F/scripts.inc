@@ -11,7 +11,8 @@ RustboroCity_Flat1_1F_EventScript_Woman:: @ 82150D7
 
 RustboroCity_Flat1_1F_Text_EveryPokemonHasAbility: @ 82150E0
 	.string "Every Pokémon has a special ability\n"
-	.string "that it can use.$"
+	.string "that it can use. Most Pokémon learn\l"
+	.string "more as they level up$"
 
 RustboroCity_Flat1_1F_Text_PokemonStrange: @ 8215115
 	.string "Pokémon are such strange creatures.$"

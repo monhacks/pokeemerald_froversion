@@ -481,39 +481,39 @@ Route109_EventScript_Elijah:: @ 81EEC06
 	end
 
 DewfordTown_Text_BrineyLandedInSlateportDeliverGoods: @ 81EEC1D
-	.string "Mr. Briney: Ahoy!\n"
+	.string "K. Trippy: Ahoy!\n"
 	.string "We've made land in Slateport!\p"
 	.string "I suppose you're going to visit Capt.\n"
 	.string "Stern and deliver the Colangelo Gears?$"
 
 Route109_Text_BrineySailToDewfordQuestion: @ 81EEC96
-	.string "Mr. Briney: I thought you're supposed\n"
+	.string "K. Trippy: I thought you're supposed\n"
 	.string "to deliver the Colangelo Gears.\p"
 	.string "Would you like to sail back to\n"
 	.string "Raintree, then?$"
 
 Route109_Text_BrineyDewfordItIs: @ 81EED06
-	.string "Mr. Briney: Raintree it is, then!\p"
+	.string "K. Trippy: Raintree it is, then!\p"
 	.string "Anchors aweigh!\n"
 	.string "Peeko, we're setting sail, my darling!$"
 
 Route109_Text_BrineyDeliverColangeloGears: @ 81EED5E
-	.string "Mr. Briney: Then you go on and deliver\n"
+	.string "K. Trippy: Then you go on and deliver\n"
 	.string "the Colangelo Gears. I'll be waiting.$"
 
 DewfordTown_Text_BrineyLandedInSlateport: @ 81EEDA7
-	.string "Mr. Briney: Ahoy! We've made land in\n"
+	.string "K. Trippy: Ahoy! We've made land in\n"
 	.string "Slateport!\p"
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail again!$"
 
 Route109_Text_BrineyWhereAreWeBound: @ 81EEE17
-	.string "Mr. Briney: Ahoy!\n"
+	.string "K. Trippy: Ahoy!\n"
 	.string "For you, I'll go out to sea anytime!\p"
 	.string "Now, my friend, where are we bound?$"
 
 Route109_Text_BrineyTellMeWhenYouNeedToSail: @ 81EEE72
-	.string "Mr. Briney: You just tell me whenever\n"
+	.string "K. Trippy: You just tell me whenever\n"
 	.string "you need to set sail again!$"
 
 Route109_Text_ChillAtMyPapasSpot: @ 81EEEB4

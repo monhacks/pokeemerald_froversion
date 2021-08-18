@@ -189,7 +189,7 @@ MauvilleCity_BikeShop_Text_RydelGreeting: @ 820EE22
 	.string "I'm the owner of this cycle shop.$"
 
 MauvilleCity_BikeShop_Text_DidYouComeFromFarAway: @ 820EE99
-	.string "RYDEL: Your RUNNING SHOES…\n"
+	.string "RYDEL: Your Running Shoes…\n"
 	.string "They're awfully filthy.\p"
 	.string "Did you come from far away?$"
 

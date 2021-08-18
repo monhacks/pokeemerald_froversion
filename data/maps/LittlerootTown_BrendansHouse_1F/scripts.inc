@@ -395,10 +395,10 @@ PlayersHouse_1F_Text_TheresAMovieOnTV: @ 81F7F0F
 
 PlayersHouse_1F_Text_RunningShoesManual: @ 81F7F66
 	.string "It's the instruction booklet for the\n"
-	.string "RUNNING SHOES.\p"
+	.string "Running Shoes.\p"
 	.string "“Press the B Button to run while\n"
-	.string "wearing your RUNNING SHOES.\p"
-	.string "“Lace up your RUNNING SHOES and hit\n"
+	.string "wearing your Running Shoes.\p"
+	.string "“Lace up your Running Shoes and hit\n"
 	.string "the road running!”$"
 
 PlayersHouse_1F_Text_TicketFromBrineyCameForYou: @ 81F800E
@@ -410,7 +410,7 @@ PlayersHouse_1F_Text_TicketFromBrineyCameForYou: @ 81F800E
 	.string "But your old man hasn't given up yet!\p"
 	.string "Oh, yes, I have something for you.\n"
 	.string "This came to you from someone named\l"
-	.string "Mr. Briney.$"
+	.string "K. Trippy.$"
 
 PlayersHouse_1F_Text_PortsInSlateportLilycove: @ 81F80FE
 	.string "DAD: Hm, a TICKET for a ferry?\p"

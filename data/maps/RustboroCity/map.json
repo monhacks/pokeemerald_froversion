@@ -365,8 +365,8 @@
       "x": 34,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE116",
-      "dest_warp_id": 5
+      "dest_map": "MAP_SUMMIT_CAVERNS1",
+      "dest_warp_id": 0
     },
     {
       "x": 21,

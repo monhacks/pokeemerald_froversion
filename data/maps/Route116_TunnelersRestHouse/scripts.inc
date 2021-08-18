@@ -28,7 +28,7 @@ Route116_TunnelersRestHouse_EventScript_TunnelOpened:: @ 822B881
 	end
 
 Route116_TunnelersRestHouse_Text_WeHadToStopBoring: @ 822B88B
-	.string "That RUSTURF TUNNEL there…\p"
+	.string "That Diglett Tunnel there…\p"
 	.string "At first, we had a huge work crew boring\n"
 	.string "through rock with the latest machinery.\l"
 	.string "But, we had to stop.\p"
@@ -50,12 +50,12 @@ Route116_TunnelersRestHouse_Text_ManDiggingHisWayToVerdanturf: @ 822B99F
 
 Route116_TunnelersRestHouse_Text_GetToVerdanturfWithoutTunnel: @ 822BAAF
 	.string "To get to VERDANTURF without using\n"
-	.string "this TUNNEL, you'd have to cross the\l"
-	.string "sea to DEWFORD, sail on to SLATEPORT,\l"
-	.string "then travel through MAUVILLE.$"
+	.string "this Tunnel, you'd have to cross the\l"
+	.string "sea to Raintree, sail on to SLATEPORT,\l"
+	.string "then travel through Wheafield.$"
 
 Route116_TunnelersRestHouse_Text_TunnelHasGoneThrough: @ 822BB3B
-	.string "Did you hear? The TUNNEL to VERDANTURF\n"
+	.string "Did you hear? The Tunnel to VERDANTURF\n"
 	.string "has gone through!\p"
 	.string "Sometimes, if you hope strongly enough,\n"
 	.string "dreams do come true.$"

@@ -440,7 +440,7 @@ RusturfTunnel_Text_ComeAndGetSome: @ 822D1C8
 	.string "Come and get some, then!$"
 
 RusturfTunnel_Text_Peeko: @ 822D1F7
-	.string "PEEKO: Pii pihyoh!$"
+	.string "Peeko: Pii pihyoh!$"
 
 RusturfTunnel_Text_GruntIntro: @ 822D20A
 	.string "Grah, keelhaul it all!\p"
@@ -457,32 +457,37 @@ RusturfTunnel_Text_GruntDefeat: @ 822D2B0
 
 RusturfTunnel_Text_GruntTakePackage: @ 822D2E1
 	.string "This is plain not right…\p"
-	.string "The BOSS told me this would be a\n"
+	.string "The Boss told me this would be a\n"
 	.string "slick-and-easy job to pull.\p"
 	.string "All I had to do was steal some package\n"
-	.string "from DEVON.\p"
+	.string "from C. G.\p"
 	.string "Tch!\n"
 	.string "You want it back that badly, take it!$"
 
 RusturfTunnel_Text_PeekoGladToSeeYouSafe: @ 822D395
-	.string "PEEKO!\n"
-	.string "Am I glad to see you're safe!$"
+	.string "Peeko!\n"
+	.string "You be okay!\p"
+	.string "How you be lettin some bum\n"
+	.string "nap you like dat?$"
 
 RusturfTunnel_Text_ThankYouLetsGoHomePeeko: @ 822D3BA
-	.string "PEEKO owes her life to you!\p"
-	.string "They call me Mr. Briney.\n"
+	.string "Peeko owes her life to you!\p"
+	.string "They call me K. Trippy.\n"
 	.string "And, you are?\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
-	.string "Ah, so you are {PLAYER}{KUN}!\n"
+	.string "{PLAYER}{KUN}!\n"
+	.string "No way!\p"
+	.string "I hardly recognized you after you\n"
+	.string "lost all dat wait!\p"
 	.string "I sincerely thank you!\p"
-	.string "Now, if there's anything that troubles\n"
-	.string "you, don't hesitate to tell me!\p"
-	.string "You can usually find me in my cottage\n"
-	.string "by the sea near PETALBURG WOODS.\p"
-	.string "Come, PEEKO, we should make our way\n"
+	.string "I owe you one home boy.\n"
+	.string "I usually be chillin in my cottage\n"
+	.string "by the sea near Jagow Woods.\p"
+	.string "If you need anything hit me up.\p"
+	.string "Come Peeko, we should make our way\n"
 	.string "home.\p"
-	.string "PEEKO: Pihyoh!$"
+	.string "Peeko: Pihyoh!$"
 
 RusturfTunnel_Text_WhyCantTheyKeepDigging: @ 822D510
 	.string "… …\p"
@@ -490,15 +495,15 @@ RusturfTunnel_Text_WhyCantTheyKeepDigging: @ 822D510
 	.string "Is the bedrock too hard?\p"
 	.string "My beloved awaits me in VERDANTURF\n"
 	.string "TOWN just beyond here…\p"
-	.string "If RUSTBORO and VERDANTURF were\n"
+	.string "If Summit and VERDANTURF were\n"
 	.string "joined by this tunnel, I could visit\l"
 	.string "her every day…\p"
 	.string "But this…\n"
 	.string "What am I to do?$"
 
 RusturfTunnel_Text_ToGetToVerdanturf: @ 822D5F3
-	.string "To get from RUSTBORO to VERDANTURF,\n"
-	.string "you need to go to DEWFORD, then pass\l"
+	.string "To get from Summit to VERDANTURF,\n"
+	.string "you need to go to Raintree, then pass\l"
 	.string "through SLATEPORT and MAUVILLE…$"
 
 RusturfTunnel_Text_YouShatteredBoulderTakeHM: @ 822D65C
@@ -508,15 +513,15 @@ RusturfTunnel_Text_YouShatteredBoulderTakeHM: @ 822D65C
 	.string "I'd like you to have this HM.$"
 
 RusturfTunnel_Text_ExplainStrength: @ 822D6D2
-	.string "That HM contains STRENGTH.\p"
+	.string "That HM contains Strength.\p"
 	.string "If a muscular Pokémon were to learn\n"
 	.string "that, it would be able to move even\l"
 	.string "large boulders.$"
 
 RusturfTunnel_Text_WandaReunion: @ 822D745
-	.string "WANDA!\n"
+	.string "Wanda!\n"
 	.string "Now I can see you anytime!\p"
-	.string "WANDA: That's…wonderful.\p"
+	.string "Wanda: That's…wonderful.\p"
 	.string "Please, take some rest at my home.$"
 
 RusturfTunnel_Text_BoyfriendOnOtherSideOfRock: @ 822D7A3

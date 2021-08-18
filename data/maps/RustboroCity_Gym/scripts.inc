@@ -180,7 +180,7 @@ RustboroCity_Gym_Text_GymGuidePostVictory: @ 82132E2
 	.string "My cheering must've worked!\p"
 	.string "Great!\n"
 	.string "Check your Trainer Card.\p"
-	.string "The STONE BADGE you got should be\n"
+	.string "The Cat Badge you got should be\n"
 	.string "properly recorded on it.\p"
 	.string "In other words…\p"
 	.string "You've climbed the first step on\n"
@@ -240,14 +240,14 @@ RustboroCity_Gym_Text_RoxanneDefeat: @ 821370B
 	.string "that Trainers are to be given this\l"
 	.string "if they defeat a Gym Leader.\p"
 	.string "Mark: Please accept the official Pokémon\n"
-	.string "League STONE BADGE.$"
+	.string "League Cat Badge.$"
 
 RustboroCity_Gym_Text_ReceivedStoneBadge: @ 82137EC
-	.string "{PLAYER} received the STONE BADGE\n"
+	.string "{PLAYER} received the Cat Badge\n"
 	.string "from Chad And Mark.$"
 
 RustboroCity_Gym_Text_StoneBadgeInfoTakeThis: @ 8213816
-	.string "The STONE BADGE heightens the ATTACK\n"
+	.string "The Cat Badge heightens the ATTACK\n"
 	.string "power of your Pokémon.\p"
 	.string "It also enables them to use the HM move\n"
 	.string "CUT outside of battle.\p"

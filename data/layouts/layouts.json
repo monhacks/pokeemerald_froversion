@@ -4967,7 +4967,7 @@
       "width": 20,
       "height": 10,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave2",
+      "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/SummitCaverns1/border.bin",
       "blockdata_filepath": "data/layouts/SummitCaverns1/map.bin"
     }

@@ -1076,7 +1076,7 @@ RustboroCity_Text_YoureNewAroundHere: @ 81E1407
 	.string "Oh? Who might you be?\n"
 	.string "You're a new face around these parts.\p"
 	.string "Have you just transferred into the\n"
-	.string "Pokémon Trainer'S School?$"
+	.string "Pokémon Trainer's School?$"
 
 RustboroCity_Text_GymLeaderIsntEasyWithFire: @ 81E1480
 	.string "I challenged the Gym Leaders, but…\p"
@@ -1086,13 +1086,13 @@ RustboroCity_Text_GymLeaderIsntEasyWithFire: @ 81E1480
 	.string "well against Poison-type Pokémon…$"
 
 RustboroCity_Text_MrBrineyWalksInTheTunnel: @ 81E1520
-	.string "The old sailor Mr. Briney lives in\n"
+	.string "The old sailor K. Trippy lives in\n"
 	.string "a cottage by the sea.\p"
 	.string "He goes for walks in the tunnel every\n"
 	.string "so often.$"
 
 RustboroCity_Text_MrBrineyLovesPeeko: @ 81E1589
-	.string "The old sailor Mr. Briney lives in\n"
+	.string "The old sailor K. Trippy lives in\n"
 	.string "a cottage by the sea.\p"
 	.string "He said he was going shopping in\n"
 	.string "Slateport for his pet, Peeko.\p"
@@ -1105,7 +1105,7 @@ RustboroCity_Text_WowYouHavePokemon: @ 81E1633
 	.string "places with Pokémon, too.$"
 
 RustboroCity_Text_CatchRarePokemonIfIGoToSchool: @ 81E1695
-	.string "Pokémon Trainer'S School!\p"
+	.string "Pokémon Trainer's School!\p"
 	.string "If I go to this school, will I be able\n"
 	.string "to catch rare Pokémon easily?$"
 
@@ -1176,7 +1176,7 @@ RustboroCity_Text_RegisteredMay: @ 81E1ADB
 
 RustboroCity_Text_MayPassedBrineyWantToBattle: @ 81E1AFA
 	.string "John: Oh, by the way, I passed\n"
-	.string "Mr. Briney in Jagow Woods.\p"
+	.string "K. Trippy in Jagow Woods.\p"
 	.string "I guess he's on his way home to his\n"
 	.string "cottage by the sea.\p"
 	.string "How's your Pokédex coming along,\n"
@@ -1203,10 +1203,10 @@ RustboroCity_Text_MayDefeat: @ 81E1CC1
 	.string "You're better than I expected!$"
 
 RustboroCity_Text_MayMrBrineyHint: @ 81E1CE7
-	.string "John: Oh, by the way, Mr. Briney, who\n"
+	.string "John: Oh, by the way, K. Trippy, who\n"
 	.string "I just passed…\p"
 	.string "{PLAYER}{KUN}, you just moved here so you\n"
-	.string "might not know this, but Mr. Briney\l"
+	.string "might not know this, but K. Trippy\l"
 	.string "was once a revered seafarer.$"
 
 RustboroCity_Text_BrendanHiLetsRegister: @ 81E1D7D
@@ -1223,7 +1223,7 @@ RustboroCity_Text_RegisteredBrendan: @ 81E1E11
 
 RustboroCity_Text_BrendanPassedBrineyWantToBattle: @ 81E1E34
 	.string "BRENDAN: By the way, {PLAYER}, I walked\n"
-	.string "by Mr. Briney in Jagow Woods.\p"
+	.string "by K. Trippy in Jagow Woods.\p"
 	.string "I bet he was on his way home to his\n"
 	.string "cottage by the sea.\p"
 	.string "{PLAYER}, how's your Pokédex?\n"
@@ -1250,10 +1250,10 @@ RustboroCity_Text_BrendanDefeat: @ 81E1FE9
 
 RustboroCity_Text_BrendanMrBrineyHint: @ 81E2002
 	.string "BRENDAN: By the way, you know\n"
-	.string "Mr. Briney? The guy I just passed?\p"
+	.string "K. Trippy? The guy I just passed?\p"
 	.string "I bet you didn't know this, since you\n"
 	.string "just moved here, {PLAYER}, but\l"
-	.string "Mr. Briney was once a great sailor.$"
+	.string "K. Trippy was once a great sailor.$"
 
 RustboroCity_Text_TunnelNearingCompletion: @ 81E20A6
 	.string "“Timesaving tunnel nearing\n"

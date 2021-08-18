@@ -102,37 +102,37 @@ Route104_MrBrineysHouse_EventScript_Peeko:: @ 8229E5D
 	end
 
 Route104_MrBrineysHouse_Text_WaitUpPeeko: @ 8229E70
-	.string "Mr. Briney: Hold on, lass!\n"
-	.string "Wait up, PEEKO!$"
+	.string "K. Trippy: Hold on, lass!\n"
+	.string "Wait up, Peeko!$"
 
 Route104_MrBrineysHouse_Text_ItsYouLetsSailToDewford: @ 8229E9B
-	.string "Hm? You're {PLAYER}{KUN}!\n"
-	.string "You saved my darling Peeko!\l"
-	.string "We owe so much to you!\p"
+	.string "{PLAYER}{KUN}!\n"
+	.string "You saved my boy Peeko!\l"
+	.string "I owe you big time!\p"
 	.string "What's that?\n"
 	.string "You want to sail with me?\p"
 	.string "Hmhm…\p"
 	.string "You have a Letter bound for Raintree\n"
 	.string "and a package for Slateport, then?\p"
-	.string "Quite the busy life you must lead!\p"
-	.string "But, certainly, what you're asking is\n"
-	.string "no problem at all.\p"
-	.string "You've come to the right man!\n"
+	.string "You keepin' busy huh Frody?\p"
+	.string "But, yea, what you're asking ain't\n"
+	.string "no thing.\p"
+	.string "You come to the right guy!\n"
 	.string "We'll set sail for Raintree.$"
 
 Route104_MrBrineysHouse_Text_SetSailForDewford: @ 8229FE9
-	.string "Mr. Briney: Raintree it is, then!\p"
+	.string "K. Trippy: Raintree it is, then!\p"
 	.string "Anchors aweigh!\n"
-	.string "Peeko, we're setting sail, my darling!$"
+	.string "Peeko, we're setting sail, homie!$"
 
 Route104_MrBrineysHouse_Text_DeclineDeliverySail: @ 822A041
-	.string "Mr. Briney: Is that so?\n"
+	.string "K. Trippy: Is that so?\n"
 	.string "Your deliveries can wait?\p"
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail!$"
 
 Route104_MrBrineysHouse_Text_NeedToMakeDeliveriesSailToDewford: @ 822A0AD
-	.string "Mr. Briney: Ahoy!\n"
+	.string "K. Trippy: Ahoy!\n"
 	.string "I know exactly what you want to say!\p"
 	.string "You're to deliver a Letter to Raintree\n"
 	.string "and a package to Slateport.\p"
@@ -141,7 +141,7 @@ Route104_MrBrineysHouse_Text_NeedToMakeDeliveriesSailToDewford: @ 822A0AD
 	.string "First, we'll set sail for Raintree.$"
 
 Route104_MrBrineysHouse_Text_NeedToDeliverPackageSailToDewford: @ 822A18F
-	.string "Mr. Briney: Ahoy!\n"
+	.string "K. Trippy: Ahoy!\n"
 	.string "I know exactly what you want to say!\p"
 	.string "You're to deliver a package to\n"
 	.string "Capt. Stern in Slateport.\p"
@@ -150,12 +150,12 @@ Route104_MrBrineysHouse_Text_NeedToDeliverPackageSailToDewford: @ 822A18F
 	.string "First, we'll set sail for Raintree.$"
 
 Route104_MrBrineysHouse_Text_WhereAreWeBound: @ 822A268
-	.string "Mr. Briney: Ahoy!\n"
+	.string "K. Trippy: Ahoy!\n"
 	.string "For you, I'll go out to sea anytime!\p"
 	.string "Now, my friend, where are we bound?$"
 
 Route104_MrBrineysHouse_Text_TellMeWheneverYouWantToSail: @ 822A2C3
-	.string "Mr. Briney: Is that so?\n"
+	.string "K. Trippy: Is that so?\n"
 	.string "Well, Peeko owes her life to you.\p"
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail!$"

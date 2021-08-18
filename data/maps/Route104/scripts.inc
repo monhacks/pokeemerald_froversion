@@ -1020,7 +1020,7 @@ Route104_EventScript_Darian:: @ 81ED5D5
 
 Route104_Text_BrineyLivesInSeasideCottage: @ 81ED5EC
 	.string "That seaside cottage is where\n"
-	.string "Mr. Briney lives.\p"
+	.string "K. Trippy lives.\p"
 	.string "He was once a mighty sailor who never\n"
 	.string "feared the sea, however stormy.$"
 
@@ -1077,7 +1077,7 @@ Route104_Text_FlowerShopSellingSaplings: @ 81EDA0F
 	.string "shopping. Where should I put them?$"
 
 Route104_Text_MrBrineysCottage: @ 81EDA8C
-	.string "Mr. Briney'S Cottage$"
+	.string "K. Trippy'S Cottage$"
 
 Route104_Text_RouteSignPetalburg: @ 81EDAA1
 	.string "Route 1O4\n"
@@ -1143,7 +1143,7 @@ Route104_Text_MayPostBattle: @ 81EDE3E
 	.string "John: I can tell you've gotten pretty\n"
 	.string "good with the way you handle Pokémon.\p"
 	.string "But instead of only making them\n"
-	.string "battle, you should be like Mr. Briney.\p"
+	.string "battle, you should be like K. Trippy.\p"
 	.string "It's important to become friends with\n"
 	.string "Pokémon, too.$"
 
@@ -1188,5 +1188,5 @@ Route104_Text_BrendanPostBattle: @ 81EE120
 	.string "at handling Pokémon.\p"
 	.string "But, you know, you shouldn't just be\n"
 	.string "making Pokémon battle.\p"
-	.string "Like Mr. Briney, it's important to\n"
+	.string "Like K. Trippy, it's important to\n"
 	.string "become friends with your Pokémon.$"

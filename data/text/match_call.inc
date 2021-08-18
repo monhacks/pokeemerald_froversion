@@ -2035,7 +2035,7 @@ MatchCall_Text_Mom2:: @ 82B2310
 MatchCall_Text_Mom3:: @ 82B23F3
 	.string "MOM: {PLAYER}…\n"
 	.string "Don't worry about me or the house.\p"
-	.string "Wear those RUNNING SHOES until\n"
+	.string "Wear those Running Shoes until\n"
 	.string "they fall apart, honey!$"
 
 MatchCall_Text_Roxanne1:: @ 82B2456
@@ -2875,7 +2875,7 @@ MatchCall_Text_MrStone2:: @ 82B61E6
 	.string "After that, deliver our parcel to\n"
 	.string "Capt. Stern in SLATEPORT.\p"
 	.string "You remember, don't you?\p"
-	.string "Now, since I am a busy PRESIDENT,\n"
+	.string "Now, since I am a busy President,\n"
 	.string "I have to go! Bye-bye!$"
 
 MatchCall_Text_MrStone3:: @ 82B6302
@@ -2916,9 +2916,9 @@ MatchCall_Text_MrStone7:: @ 82B65BB
 	.string "Hello!\n"
 	.string "This is DEVON CORPORATI…\l"
 	.string "Oh, hello, {PLAYER}!\p"
-	.string "Our PRESIDENT was here a little\n"
+	.string "Our President was here a little\n"
 	.string "while ago, but he's gone out.\p"
-	.string "Our PRESIDENT is busy, but you\n"
+	.string "Our President is busy, but you\n"
 	.string "seem to be just as busy, {PLAYER}.$"
 
 MatchCall_Text_MrStone8:: @ 82B6664

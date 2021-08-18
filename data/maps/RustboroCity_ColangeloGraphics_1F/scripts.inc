@@ -81,8 +81,8 @@ RustboroCity_ColangeloGraphics_1F_EventScript_ProductsDisplay:: @ 8211312
 	end
 
 RustboroCity_ColangeloGraphics_1F_Text_WelcomeToColangeloGraphics: @ 821131B
-	.string "Hello and welcome to the DEVON\n"
-	.string "CORPORATION.\p"
+	.string "Hello and welcome to Colangelo\n"
+	.string "Graphics.\p"
 	.string "We're proud producers of items and\n"
 	.string "medicine that enhance your life.$"
 
@@ -91,7 +91,7 @@ RustboroCity_ColangeloGraphics_1F_Text_StaffGotRobbed: @ 821138B
 	.string "got robbed of an important parcel.$"
 
 RustboroCity_ColangeloGraphics_1F_Text_ThoseShoesAreOurProduct: @ 82113D1
-	.string "Hey, those RUNNING SHOES!\n"
+	.string "Hey, those Running Shoes!\n"
 	.string "They're one of our products!\p"
 	.string "It makes me happy when I see someone\n"
 	.string "using something we made.$"
@@ -108,7 +108,7 @@ RustboroCity_ColangeloGraphics_1F_Text_SoundsLikeStolenGoodsRecovered: @ 82114DE
 	.string "the ripped-off Colangelo Gears.$"
 
 RustboroCity_ColangeloGraphics_1F_Text_OnlyAuthorizedPeopleEnter: @ 821151B
-	.string "I'm sorry, only authorized people\n"
+	.string "I'm sorry, only authorized personel\n"
 	.string "are allowed to enter here.$"
 
 RustboroCity_ColangeloGraphics_1F_Text_HowCouldWeGetRobbed: @ 8211558
@@ -124,13 +124,12 @@ RustboroCity_ColangeloGraphics_1F_Text_RocksMetalDisplay: @ 82115AC
 	.string "displayed in the glass case.\p"
 	.string "There's a panel with some writing\n"
 	.string "on it…\p"
-	.string "“DEVON CORPORATION got its start as\n"
-	.string "a producer of stones from quarries.\p"
-	.string "“The company also produced iron from\n"
-	.string "filings in the sand.\p"
-	.string "“From that humble start as a producer\n"
-	.string "of raw materials, DEVON developed.\p"
-	.string "“DEVON is now a manufacturer of a wide\n"
+	.string "“Colangelo Graphics got its start as\n"
+	.string "a freelance group working out of the.\l"
+	.string "“presidents basement.\p"
+	.string "“From that humble start as a graphics\n"
+	.string "design firm, Colangelo branched out.\p"
+	.string "“Colangelo is now a producer of a wide\n"
 	.string "range of industrial products.”$"
 
 RustboroCity_ColangeloGraphics_1F_Text_ProductDisplay: @ 8211722
@@ -138,9 +137,9 @@ RustboroCity_ColangeloGraphics_1F_Text_ProductDisplay: @ 8211722
 	.string "the glass display case.\p"
 	.string "There's a panel with a description…\p"
 	.string "“In addition to industrial products,\n"
-	.string "DEVON now markets sundries and\l"
+	.string "Colangelo now markets sundries and\l"
 	.string "pharmaceuticals for better lifestyles.\p"
-	.string "“Recently, DEVON has begun marketing\n"
+	.string "“Recently, Colangelo has begun marketing\n"
 	.string "tools for Pokémon Trainers, including\l"
 	.string "Poké Balls and Pokénav systems.”$"
 

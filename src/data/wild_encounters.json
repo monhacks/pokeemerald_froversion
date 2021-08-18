@@ -12344,6 +12344,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_SUMMIT_CAVERNS1",
+          "base_label": "gSummitCaverns10",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 13,
+                "max_level": 13,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 13,
+                "max_level": 13,
+                "species": "SPECIES_DIGLETT"
+              },
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 13,
+                "max_level": 13,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_PHANPY"
+              },
+              {
+                "min_level": 12,
+                "max_level": 12,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_RHYHORN"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_RHYHORN"
+              }
+            ]
+          }
         }
       ]
     },
