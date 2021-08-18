@@ -1055,7 +1055,7 @@ MatchCall_PersonalizedText35:: @ 82AE0D9
 	.string "It exhilarates me as if I were\n"
 	.string "flying!\p"
 	.string "Okay! Today, I'm going to set a new\n"
-	.string "CYCLING ROAD record!\p"
+	.string "Lasalle Expr record!\p"
 	.string "You should make the challenge, too!\n"
 	.string "See you!$"
 
@@ -2101,7 +2101,7 @@ MatchCall_Text_Brawly4:: @ 82B28D1
 	.string "I'll ever get bored of battling you!$"
 
 MatchCall_Text_Wattson1:: @ 82B2912
-	.string "WATTSON: Oh, it's you!\p"
+	.string "Jordan: Oh, it's you!\p"
 	.string "After you left, I've been redoing\n"
 	.string "my training from scratch.\p"
 	.string "I'd say I could use a wee bit more\n"
@@ -2110,7 +2110,7 @@ MatchCall_Text_Wattson1:: @ 82B2912
 	.string "Wahahahaha!$"
 
 MatchCall_Text_Wattson2:: @ 82B29CA
-	.string "WATTSON: Wahahahaha!\p"
+	.string "Jordan: Wahahahaha!\p"
 	.string "You've really done it, haven't you?\n"
 	.string "I've been getting word about you!\p"
 	.string "It seems I need to retrain some\n"
@@ -2121,13 +2121,13 @@ MatchCall_Text_Wattson2:: @ 82B29CA
 	.string "Wahahahaha!$"
 
 MatchCall_Text_Wattson3:: @ 82B2AB6
-	.string "WATTSON: Oh, it's you!\n"
+	.string "Jordan: Oh, it's you!\n"
 	.string "My GYM's ready!\p"
 	.string "Visit MAUVILLE anytime!\n"
 	.string "Wahahahaha!$"
 
 MatchCall_Text_Wattson4:: @ 82B2B01
-	.string "WATTSON: Wahahaha!\p"
+	.string "Jordan: Wahahaha!\p"
 	.string "A battle with you is always charged\n"
 	.string "with shocking power!$"
 
@@ -2361,7 +2361,7 @@ MatchCall_Text_May3:: @ 2B3C13
 	.string "Can you guess his name?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "The ROCK SMASH GUY!$"
+	.string "The Rock Smash GUY!$"
 
 MatchCall_Text_May4:: @ 2B3CF3
 	.string "MAY: {PLAYER}{KUN}?\p"
@@ -2487,7 +2487,7 @@ MatchCall_Text_Brendan3:: @ 2B4560
 	.string "Can you guess his name?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "The ROCK SMASH GUY!$"
+	.string "The Rock Smash GUY!$"
 
 MatchCall_Text_Brendan4:: @ 2B463F
 	.string "BRENDAN: This voice… {PLAYER}?\p"

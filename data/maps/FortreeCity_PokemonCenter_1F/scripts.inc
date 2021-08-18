@@ -37,7 +37,7 @@ FortreeCity_PokemonCenter_1F_Text_GoToSafariZone: @ 8217410
 
 FortreeCity_PokemonCenter_1F_Text_RecordCornerIsNeat: @ 821746D
 	.string "Have you done anything at\n"
-	.string "the RECORD CORNER?\p"
+	.string "the Record Corner?\p"
 	.string "It's pretty neat. It mixes and matches\n"
 	.string "the records of Trainers.\p"
 	.string "I don't know quite how it works,\n"

@@ -809,7 +809,7 @@ Route110_TrickHouseEntrance_Text_TheyCallMeTrickMaster: @ 826A709
 
 Route110_TrickHouseEntrance_Text_ComeToChallengeTrickHouse: @ 826A78C
 	.string "You, you've come to challenge\n"
-	.string "my TRICK HOUSE, haven't you?\p"
+	.string "my Trick House, haven't you?\p"
 	.string "That's why you're here, isn't it?\n"
 	.string "Yes, it is!\p"
 	.string "Consider your challenge accepted!\p"

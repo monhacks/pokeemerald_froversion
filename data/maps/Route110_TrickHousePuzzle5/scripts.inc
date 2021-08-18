@@ -1047,7 +1047,7 @@ Route110_TrickHousePuzzle5_Text_Mechadoll3Intro: @ 826DA1E
 Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz1: @ 826DA64
 	.string "MECHADOLL 3 QUIZ.\p"
 	.string "Which costs more?\n"
-	.string "Three HARBOR MAILS or one Burn Heal?$"
+	.string "Three Harbor MailS or one Burn Heal?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz2: @ 826DAAD
 	.string "MECHADOLL 3 QUIZ.\p"
@@ -1097,5 +1097,5 @@ Route110_TrickHousePuzzle5_Text_Mechadoll5Quiz2: @ 826DD1B
 
 Route110_TrickHousePuzzle5_Text_Mechadoll5Quiz3: @ 826DD5F
 	.string "MECHADOLL 5 QUIZ.\p"
-	.string "On the CYCLING ROAD, how many\n"
+	.string "On the Lasalle Expr, how many\n"
 	.string "TRIATHLETES were there?$"

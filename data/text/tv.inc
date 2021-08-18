@@ -1334,7 +1334,7 @@ gTVFindThatGamerText00:: @ 08285240
 	.string "How's your {STR_VAR_2} spinning?\p"
 	.string "Like always, we'll cast our spotlight\n"
 	.string "on a rare TRAINER who's visited the\l"
-	.string "GAME CORNER!\p"
+	.string "Game Corner!\p"
 	.string "Today, our no. 1 gamer is…\n"
 	.string "{STR_VAR_1}!$"
 
@@ -1343,12 +1343,12 @@ gTVFindThatGamerText01:: @ 082852F4
 	.string "and won a rare {STR_VAR_3} COINS.\p"
 	.string "“When {STR_VAR_1} comes, we need to\n"
 	.string "make sure we have enough COINS.”\p"
-	.string "That's what the GAME CORNER clerks\n"
+	.string "That's what the Game Corner clerks\n"
 	.string "mutter when our gamer is in play!\p"
 	.string "Viewers, it's best to watch your COINS\n"
 	.string "like {STR_VAR_1} if you visit the GAME\l"
 	.string "CORNER and play the {STR_VAR_2} game.\p"
-	.string "This is live from the GAME CORNER--\n"
+	.string "This is live from the Game Corner--\n"
 	.string "where you can feel the excitement!\p"
 	.string "That's all for today!$"
 
@@ -1357,14 +1357,14 @@ gTVFindThatGamerText02:: @ 08285463
 	.string "and lost {STR_VAR_3} COINS.\p"
 	.string "“When {STR_VAR_1} comes, our COIN\n"
 	.string "sales seem to increase.”\p"
-	.string "That's what the GAME CORNER clerks\n"
+	.string "That's what the Game Corner clerks\n"
 	.string "say when our gamer is in play!$"
 
 gTVFindThatGamerText03:: @ 08285500
 	.string "Viewers, it's best to watch your COINS\n"
 	.string "like {STR_VAR_1} if you visit the GAME\l"
 	.string "CORNER and play the {STR_VAR_2} game.\p"
-	.string "This is live from the GAME CORNER--\n"
+	.string "This is live from the Game Corner--\n"
 	.string "where you can feel the excitement!\p"
 	.string "That's all for today!$"
 
@@ -2014,7 +2014,7 @@ gTVWhatsNo1InHoennTodayText00:: @ 08287FE0
 
 gTVWhatsNo1InHoennTodayText01:: @ 082880C0
 	.string "In one day, {STR_VAR_1} spun the SLOTS\n"
-	.string "at the GAME CORNER {STR_VAR_2} times.\p"
+	.string "at the Game Corner {STR_VAR_2} times.\p"
 	.string "While playing, {STR_VAR_1} was heard\n"
 	.string "murmuring, “For me, the reels don't\l"
 	.string "even move…”\l"

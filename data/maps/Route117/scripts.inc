@@ -206,7 +206,7 @@ Route117_Text_RouteSignVerdanturf: @ 81F3D58
 
 Route117_Text_RouteSignMauville: @ 81F3D74
 	.string "ROUTE 117\n"
-	.string "{RIGHT_ARROW} MAUVILLE CITY$"
+	.string "{RIGHT_ARROW} Wheafield Quarry$"
 
 Route117_Text_DayCareSign: @ 81F3D8E
 	.string "Pokémon DAY CARE\n"

@@ -670,7 +670,7 @@ Route111_Text_WinstrateFamilyDestroyedMe: @ 81F186E
 
 Route111_Text_RouteSignMauville: @ 81F18CE
 	.string "ROUTE 111\n"
-	.string "{DOWN_ARROW} MAUVILLE CITY$"
+	.string "{DOWN_ARROW} Wheafield Quarry$"
 
 Route111_Text_WinstrateHouseSign: @ 81F18E8
 	.string "“Our family's hearts beat as one!”\n"
@@ -738,7 +738,7 @@ Route111_Text_RootFossilDisappeared: @ 81F1C9F
 Route111_Text_MauvilleUncleToldMeToTakeRockSmash: @ 81F1CCA
 	.string "Oh, no!\p"
 	.string "My uncle in MAUVILLE told me to take\n"
-	.string "ROCK SMASH with me if I was going to\l"
+	.string "Rock Smash with me if I was going to\l"
 	.string "ROUTE 111!\p"
 	.string "My uncle? He lives across from\n"
 	.string "the bike shop in MAUVILLE.$"

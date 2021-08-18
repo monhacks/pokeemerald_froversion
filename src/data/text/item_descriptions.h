@@ -1448,7 +1448,7 @@ static const u8 sSootSackDesc[] = _(
 static const u8 sBasementKeyDesc[] = _(
     "The key for NEW\n"
     "MAUVILLE beneath\n"
-    "MAUVILLE CITY.");
+    "Wheafield Quarry.");
 
 static const u8 sAcroBikeDesc[] = _(
     "A folding bicycle\n"

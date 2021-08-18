@@ -937,7 +937,7 @@ gText_SorryTradeCenterInspections:: @ 82730E5
 
 @ Unused
 gText_SorryRecordCornerPreparation:: @ 8273125
-	.string "I'm terribly sorry. The RECORD CORNER\n"
+	.string "I'm terribly sorry. The Record Corner\n"
 	.string "is under preparation.$"
 
 gText_PlayerHandedOverTheItem:: @ 8273161

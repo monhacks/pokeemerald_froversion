@@ -1067,7 +1067,7 @@ Route110_Text_AbigailPostBattle: @ 8297E88
 
 Route110_Text_AbigailRegister: @ 8297ECD
 	.string "You know, I like you!\n"
-	.string "Let's have a rematch on CYCLING ROAD.$"
+	.string "Let's have a rematch on Lasalle Expr.$"
 
 Route110_Text_AbigailRematchIntro: @ 8297F09
 	.string "Isn't it neat to hold a battle while\n"
@@ -1205,7 +1205,7 @@ Route110_Text_TimmyPostBattle: @ 8298579
 	.string "We are going under.$"
 
 Route110_Text_AlyssaIntro: @ 82985AB
-	.string "I fell off CYCLING ROAD…\p"
+	.string "I fell off Lasalle Expr…\p"
 	.string "I'll get over my embarrassment by\n"
 	.string "battling with you!$"
 
@@ -3665,7 +3665,7 @@ Route124_Text_JennyRematchDefeat: @ 82A0CA0
 
 Route124_Text_JennyPostRematch: @ 82A0CBE
 	.string "This has nothing to do with anything,\n"
-	.string "but maybe I'll visit the TRICK HOUSE.$"
+	.string "but maybe I'll visit the Trick House.$"
 
 Route124_Text_GraceIntro: @ 82A0D0A
 	.string "I'm growing bored of swimming…\n"

@@ -305,7 +305,7 @@ Route118_Text_CanCrossRiversWithSurf: @ 81F4367
 
 Route118_Text_RouteSignMauville: @ 81F43F4
 	.string "ROUTE 118\n"
-	.string "{LEFT_ARROW} MAUVILLE CITY$"
+	.string "{LEFT_ARROW} Wheafield Quarry$"
 
 Route118_Text_RouteSign119: @ 81F440E
 	.string "ROUTE 118\n"

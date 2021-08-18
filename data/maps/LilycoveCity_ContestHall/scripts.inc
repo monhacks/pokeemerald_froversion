@@ -378,7 +378,7 @@ LilycoveCity_ContestHall_Text_EnteredWrongContest: @ 821BA44
 	.string "I entered this tough Pokémon in\n"
 	.string "the SMARTNESS CONTEST…\p"
 	.string "Come on, wow them with a smart-looking\n"
-	.string "ROCK SMASH.$"
+	.string "Rock Smash.$"
 
 LilycoveCity_ContestHall_Text_RaisedMonToBeSmart: @ 821BAD5
 	.string "I've spent many a year, and all my\n"

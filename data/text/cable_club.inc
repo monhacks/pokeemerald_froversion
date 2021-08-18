@@ -17,7 +17,7 @@ CableClub_Text_BattleUsingLinkCable:: @ 8277F5A
 	.string "using a GBA Game Link cable.$"
 
 CableClub_Text_RecordCornerUsingLinkCable:: @ 8277F96
-	.string "You can use the RECORD CORNER with\n"
+	.string "You can use the Record Corner with\n"
 	.string "others using a GBA Game Link cable.$"
 
 @ Unused
@@ -348,7 +348,7 @@ CableClub_Text_PlayWhichBattleMode: @ 82790BE
 
 CableClub_Text_AccessRecordCorner: @ 82790E8
 	.string "Would you like to access\n"
-	.string "the RECORD CORNER?$"
+	.string "the Record Corner?$"
 
 CableClub_Text_UseBerryCrush: @ 8279114
 	.string "Would you like to use the\n"

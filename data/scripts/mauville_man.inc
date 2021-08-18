@@ -509,7 +509,7 @@ MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashAction:: @ 828F269
 MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashStory:: @ 828F277
 	.string "This is a tale of a TRAINER\n"
 	.string "named {STR_VAR_3}.\p"
-	.string "This TRAINER used ROCK SMASH\n"
+	.string "This TRAINER used Rock Smash\n"
 	.string "{STR_VAR_1} times!\p"
 	.string "{STR_VAR_3} must be a TRAINER who\n"
 	.string "can't leave a stone unsmashed!$"

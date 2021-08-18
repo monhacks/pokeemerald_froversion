@@ -358,7 +358,7 @@ Route110_TrickHousePuzzle7_Text_AlexisDefeat: @ 826E604
 
 Route110_TrickHousePuzzle7_Text_AlexisPostBattle: @ 826E61E
 	.string "You're solving all the puzzles in the\n"
-	.string "TRICK HOUSE. That's the feeling I get.$"
+	.string "Trick House. That's the feeling I get.$"
 
 Route110_TrickHousePuzzle7_Text_MarielaIntro: @ 826E66B
 	.string "Nufufufu, here at last!\n"

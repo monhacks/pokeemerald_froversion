@@ -226,7 +226,7 @@ JaggedPass_Text_EthanRematchDefeat: @ 8230C60
 
 JaggedPass_Text_EthanPostRematch: @ 8230C94
 	.string "I should get an ACRO BIKE from RYDEL\n"
-	.string "in MAUVILLE CITY…$"
+	.string "in Wheafield Quarry…$"
 
 JaggedPass_Text_GruntIntro: @ 8230CCB
 	.string "Wah!\n"
