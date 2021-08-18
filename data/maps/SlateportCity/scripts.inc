@@ -1020,7 +1020,7 @@ SlateportCity_Text_SlateportWonderfulPlace: @ 81DD93D
 SlateportCity_Text_BuyBricksSoDecorWontGetDirty: @ 81DD999
 	.string "If you put Dolls or Cushions on\n"
 	.string "the floor, they'll get dirty.\p"
-	.string "I'm going to buy some BRICKS so my\n"
+	.string "I'm going to buy some Bricks so my\n"
 	.string "Dolls and Cushions won't get dirty\l"
 	.string "when I leave them out.$"
 
@@ -1145,7 +1145,7 @@ SlateportCity_Text_CantChangeTradeMonName: @ 81DE16C
 SlateportCity_Text_BattleTentBuiltRecently: @ 81DE1EC
 	.string "Recently, a Battle Tent was built\n"
 	.string "in Slateport.\p"
-	.string "GYMS are fun, but the Battle Tent's\n"
+	.string "Gyms are fun, but the Battle Tent's\n"
 	.string "awesome in its own way.\p"
 	.string "You should go find tough Pokémon\n"
 	.string "for the Battle Tent!$"
@@ -1170,7 +1170,7 @@ SlateportCity_Text_SternSaysDiscoveredSomething: @ 81DE376
 
 SlateportCity_Text_CaptainComeBackWithBigFish: @ 81DE3E2
 	.string "What's going on here?\p"
-	.string "Did the good CaptAIN come back with\n"
+	.string "Did the good Captain come back with\n"
 	.string "a big fish from the ocean floor?$"
 
 SlateportCity_Text_AmIOnTV: @ 81DE43D
@@ -1179,7 +1179,7 @@ SlateportCity_Text_AmIOnTV: @ 81DE43D
 
 SlateportCity_Text_CaptainsACelebrity: @ 81DE460
 	.string "A TV interview! Here!\n"
-	.string "The CaptAIN's a celebrity!$"
+	.string "The Captain's a celebrity!$"
 
 SlateportCity_Text_BigSmileForCamera: @ 81DE491
 	.string "Ty: Okay, Capt. Stern, a big smile\n"
@@ -1211,7 +1211,7 @@ SlateportCity_Text_OhPlayerWeMadeDiscovery: @ 81DE64F
 	.string "We made a huge discovery on our last\n"
 	.string "seafloor exploration.\p"
 	.string "We found an underwater cavern on\n"
-	.string "ROUTE 128.\p"
+	.string "Route 128.\p"
 	.string "We think it's the habitat of a Pokémon\n"
 	.string "that's said to have been long extinct.$"
 
@@ -1252,14 +1252,14 @@ SlateportCity_Text_SternsShipyardWantedSign: @ 81DE8F8
 
 SlateportCity_Text_SternsShipyardNearsCompletion: @ 81DE940
 	.string "Stern'S Shipyard\p"
-	.string "“The ferry S.S. Tidal nears\n"
+	.string "“The ferry S. S. Tidal nears\n"
 	.string "completion for serving the ports of\l"
 	.string "Slateport and Lilycove.”$"
 
 SlateportCity_Text_SternsShipyardFerryComplete: @ 81DE9AA
 	.string "Stern'S Shipyard\p"
 	.string "“Boarding of the Slateport-Lilycove\n"
-	.string "ferry S.S. Tidal is handled at the\l"
+	.string "ferry S. S. Tidal is handled at the\l"
 	.string "Harbor.”$"
 
 SlateportCity_Text_PokemonFanClubSign: @ 81DEA0B
@@ -1282,7 +1282,7 @@ SlateportCity_Text_MarketSign: @ 81DEAAF
 
 SlateportCity_Text_HarborFerryUnderConstruction: @ 81DEAE3
 	.string "Slateport Harbor\p"
-	.string "“The ferry S.S. Tidal is under\n"
+	.string "“The ferry S. S. Tidal is under\n"
 	.string "construction in the Shipyard.\p"
 	.string "“Service is scheduled to begin\n"
 	.string "shortly.”$"
@@ -1290,10 +1290,10 @@ SlateportCity_Text_HarborFerryUnderConstruction: @ 81DEAE3
 SlateportCity_Text_HarborSign: @ 81DEB5A
 	.string "Slateport Harbor\p"
 	.string "“Enjoy a delightful cruise on\n"
-	.string "the ferry S.S. Tidal.”$"
+	.string "the ferry S. S. Tidal.”$"
 
 SlateportCity_Text_NameRatersHouseSign: @ 81DEBA0
-	.string "Name Rater'S HOUSE\n"
+	.string "Name Rater'S House\n"
 	.string "“Pokémon nicknames rated.”$"
 
 SlateportCity_Text_ExplainBerries: @ 81DEBCE

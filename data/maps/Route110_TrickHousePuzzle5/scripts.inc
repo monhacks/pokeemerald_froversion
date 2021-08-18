@@ -1066,7 +1066,7 @@ Route110_TrickHousePuzzle5_Text_Mechadoll4Intro: @ 826DB4C
 
 Route110_TrickHousePuzzle5_Text_Mechadoll4Quiz1: @ 826DB94
 	.string "MECHADOLL 4 QUIZ.\p"
-	.string "In SEASHORE HOUSE, were there more men\n"
+	.string "In Seashore House, were there more men\n"
 	.string "or women?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll4Quiz2: @ 826DBD7

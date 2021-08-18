@@ -323,7 +323,7 @@ SSTidalCorridor_Text_HorizonSpreadsBeyondPorthole: @ 823C6C3
 SSTidalCorridor_Text_BrineyWelcomeAboard: @ 823C6EC
 	.string "K. Trippy: Welcome aboard, {PLAYER}{KUN}!\p"
 	.string "They made me honorary captain of\n"
-	.string "the S.S. TIDAL!\p"
+	.string "the S. S. Tidal!\p"
 	.string "You can call me CAPTAIN BRINEY now!\p"
 	.string "You know, I retired once before,\n"
 	.string "but when I saw this majestic ship…\p"

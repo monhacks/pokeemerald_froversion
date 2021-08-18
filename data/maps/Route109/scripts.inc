@@ -545,7 +545,7 @@ Route109_Text_WereGoingToMakeBigCastle: @ 81EEFF1
 
 Route109_Text_ZigzagoonPicksUpLitter: @ 81EF080
 	.string "The water around these parts is clean.\p"
-	.string "But, I get my ZIGZAGOON to pick up\n"
+	.string "But, I get my Zigzagoon to pick up\n"
 	.string "litter from the shoreline at times.\p"
 	.string "Dirty water becomes rain and joins our\n"
 	.string "rivers, which we drink from…\p"
@@ -553,15 +553,15 @@ Route109_Text_ZigzagoonPicksUpLitter: @ 81EF080
 	.string "back to haunt us eventually.$"
 
 Route109_Text_ZigzagoonCry: @ 81EF173
-	.string "ZIGZAGOON: Guguu?$"
+	.string "Zigzagoon: Guguu?$"
 
 Route109_Text_SeashoreHouseSign: @ 81EF185
-	.string "SEASHORE HOUSE\p"
+	.string "Seashore House\p"
 	.string "“May hot battles rage on hot sands!\n"
 	.string "The place for hot Trainers!”$"
 
 Route109_Text_TrainerTipsSign: @ 81EF1D5
-	.string "TRAINER TIPS\p"
+	.string "Trainer Tips\p"
 	.string "Pokémon at the same level may not\n"
 	.string "always have identical stats.\p"
 	.string "Pokémon raised by Trainers are said\n"

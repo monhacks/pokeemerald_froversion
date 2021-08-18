@@ -101,7 +101,7 @@ Route109_SeashoreHouse_EventScript_TrainersNotCompleted:: @ 8269553
 	end
 
 Route109_SeashoreHouse_Text_SeashoreHouseIntro: @ 8269555
-	.string "I'm the owner of the SEASHORE HOUSE.\n"
+	.string "I'm the owner of the Seashore House.\n"
 	.string "But you can call me MR. SEA!\p"
 	.string "What I love above all is to see hot\n"
 	.string "Pokémon battles.\p"
@@ -111,7 +111,7 @@ Route109_SeashoreHouse_Text_SeashoreHouseIntro: @ 8269555
 
 Route109_SeashoreHouse_Text_ShowMeSomeHotMatches: @ 8269635
 	.string "Show me some hot matches!\p"
-	.string "I run this SEASHORE HOUSE just for\n"
+	.string "I run this Seashore House just for\n"
 	.string "that reason alone!$"
 
 Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles: @ 8269685
@@ -144,7 +144,7 @@ Route109_SeashoreHouse_Text_ThatsTooBad: @ 82697EF
 
 Route109_SeashoreHouse_Text_DwayneIntro: @ 8269803
 	.string "If you're looking for a battle in the\n"
-	.string "SEASHORE HOUSE, you'll find no\l"
+	.string "Seashore House, you'll find no\l"
 	.string "hotter TRAINER than me, matey!$"
 
 Route109_SeashoreHouse_Text_DwayneDefeated: @ 8269867

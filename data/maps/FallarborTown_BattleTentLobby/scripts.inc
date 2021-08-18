@@ -320,7 +320,7 @@ FallarborTown_BattleTentLobby_Text_MakeThinkImJustKid: @ 8200304
 	.string "the title!$"
 
 FallarborTown_BattleTentLobby_Text_FallarborTentMyFavorite: @ 8200382
-	.string "You know how BATTLE TENTS offer\n"
+	.string "You know how Battle TentS offer\n"
 	.string "different events in different towns?\p"
 	.string "My favorite is definitely the BATTLE\n"
 	.string "TENT in FALLARBOR TOWN.\p"
@@ -338,7 +338,7 @@ FallarborTown_BattleTentLobby_Text_CameToCampOut: @ 820045A
 
 FallarborTown_BattleTentLobby_Text_ScottLookingForSomeone: @ 8200501
 	.string "SCOTT: Hi, {PLAYER}{KUN}!\n"
-	.string "So you came out to this BATTLE TENT!\p"
+	.string "So you came out to this Battle Tent!\p"
 	.string "The people in these parts tend to be\n"
 	.string "easygoing and laid-back.\p"
 	.string "But, you see, what I'm looking for are\n"
@@ -357,5 +357,5 @@ FallarborTown_BattleTentLobby_Text_ScottMakeChallenge: @ 8200653
 	.string "make a challenge?$"
 
 BattleTentLobby_Text_WorkingOnFix:
-	.string "Hi. Due to some bugs, this battle tent\n"
+	.string "Hi. Due to some bugs, this Battle Tent\n"
 	.string "is under repair!$"

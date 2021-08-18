@@ -703,7 +703,7 @@ LilycoveCity_Text_MuseumSignPlayersExhibit: @ 81E4571
 
 LilycoveCity_Text_HarborSignUnderConstruction: @ 81E45A7
 	.string "LILYCOVE CITY HARBOR\p"
-	.string "“The ferry S.S. TIDAL is under\n"
+	.string "“The ferry S. S. Tidal is under\n"
 	.string "construction in SLATEPORT CITY.\p"
 	.string "“Service is scheduled to begin\n"
 	.string "shortly.”$"
@@ -711,7 +711,7 @@ LilycoveCity_Text_HarborSignUnderConstruction: @ 81E45A7
 LilycoveCity_Text_HarborSign: @ 81E4624
 	.string "LILYCOVE CITY HARBOR\p"
 	.string "“Enjoy a delightful cruise on\n"
-	.string "the ferry S.S. TIDAL.”$"
+	.string "the ferry S. S. Tidal.”$"
 
 LilycoveCity_Text_TrainerFanClubSign: @ 81E466E
 	.string "Pokémon TRAINER FAN CLUB\p"

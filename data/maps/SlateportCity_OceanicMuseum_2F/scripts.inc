@@ -282,7 +282,7 @@ SlateportCity_OceanicMuseum_2F_Text_ThankYouForTheParts: @ 820BD8D
 	.string "Yes? If you're looking for Stern,\n"
 	.string "that would be me.\p"
 	.string "Ah! Those must be the parts I ordered\n"
-	.string "from Mr. Stone Of Devon.\p"
+	.string "from Mr. Stone Of C. G.\p"
 	.string "Thank you! That's great!\n"
 	.string "We can prepare for our expedition now.$"
 
@@ -328,12 +328,12 @@ SlateportCity_OceanicMuseum_2F_Text_CameToSeeWhatsTakingSoLong: @ 820BFF2
 
 SlateportCity_OceanicMuseum_2F_Text_ArchieWarning: @ 820C059
 	.string "We are Team MAGA,\n"
-	.string "and we love the sea!\p"
+	.string "and we love our country!\p"
 	.string "And I am a Team MAGA leader,\n"
 	.string "Shawn Haseley!\p"
 	.string "What makes you interfere with us?\p"
 	.string "…No! You can't be!\n"
-	.string "You're not one of Team Bernie?\p"
+	.string "You're not… A Protestor?\p"
 	.string "Wait, that can't be right.\n"
 	.string "You're not dressed for the part.\p"
 	.string "… … … … … …\n"
@@ -365,7 +365,7 @@ SlateportCity_OceanicMuseum_2F_Text_SternThankYouForSavingUs: @ 820C2BE
 	.string "Anyway, that was a tense situation!\n"
 	.string "Thank you for saving us!\p"
 	.string "Oh, yes, I almost forgot that you\n"
-	.string "even brought the parts from Devon!$"
+	.string "even brought the parts from C. G!$"
 
 SlateportCity_OceanicMuseum_2F_Text_SternIveGotToGo: @ 820C36C
 	.string "Capt. Stern: Whoops!\n"
@@ -431,7 +431,7 @@ SlateportCity_OceanicMuseum_2F_Text_SurfaceSeawaterDisplay: @ 820C7C1
 	.string "as currents driven by the winds.”$"
 
 SlateportCity_OceanicMuseum_2F_Text_SSTidalReplica: @ 820C82F
-	.string "“The Ferry S.S. Tidal\p"
+	.string "“The Ferry S. S. Tidal\p"
 	.string "“A scale replica of the ship under\n"
 	.string "construction at Stern's Shipyard.”$"
 
