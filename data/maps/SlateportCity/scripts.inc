@@ -1272,7 +1272,7 @@ SlateportCity_Text_OceanicMuseumSign: @ 81DEA3B
 	.string "Oceanic Museum$"
 
 SlateportCity_Text_CitySign: @ 81DEA6F
-	.string "Slateport CITy\p"
+	.string "Riverside City\p"
 	.string "“The port where people and Pokémon\n"
 	.string "cross paths.”$"
 

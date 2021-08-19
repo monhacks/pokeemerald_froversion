@@ -295,7 +295,7 @@ LavaridgeTown_EventScript_HerbShopSign:: @ 81EA7B7
 LavaridgeTown_Text_MayNiceBadgesTakeThis: @ 81EA7C0
 	.string "MAY: {PLAYER}{KUN}! Long time no see!\p"
 	.string "Oh? While I visited the hot springs,\n"
-	.string "you got the LAVARIDGE GYM BADGE.\p"
+	.string "you got the Grand Island GYM BADGE.\p"
 	.string "You must have collected\n"
 	.string "good Pokémon…\l"
 	.string "No, I believe you raised some.\p"
@@ -367,7 +367,7 @@ LavaridgeTown_Text_AsYouWishThen: @ 81EAD44
 
 LavaridgeTown_Text_EverySoOftenEggFoundAtDayCare: @ 81EAD9E
 	.string "Every so often, an EGG will be found at\n"
-	.string "the Pokémon DAY CARE.\p"
+	.string "the Pokémon Day Care.\p"
 	.string "Or at least that's how the rumor goes.$"
 
 LavaridgeTown_Text_HotSpringsNeverRunDry: @ 81EAE03
@@ -410,12 +410,12 @@ LavaridgeTown_Text_HotSpringsClaims: @ 81EB092
 	.string "money…$"
 
 LavaridgeTown_Text_TownSign: @ 81EB12B
-	.string "LAVARIDGE TOWN\p"
+	.string "Grand Island\p"
 	.string "“Pokémon Center HOT SPRINGS\n"
 	.string "An excellent place for relaxing!”$"
 
 LavaridgeTown_Text_GymSign: @ 81EB178
-	.string "LAVARIDGE TOWN Pokémon GYM\n"
+	.string "Grand Island Pokémon GYM\n"
 	.string "LEADER: FLANNERY\l"
 	.string "“One with a fiery passion that burns!”$"
 

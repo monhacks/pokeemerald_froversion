@@ -209,7 +209,7 @@ LavaridgeTown_Gym_1F_EventScript_GymStatue:: @ 81FE9B5
 LavaridgeTown_Gym_1F_Text_GymGuideAdvice: @ 81FE9BF
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
-	.string "LAVARIDGE's Gym Leader FLANNERY\n"
+	.string "Grand Island's Gym Leader FLANNERY\n"
 	.string "uses FIRE-type Pokémon.\p"
 	.string "Her passion for Pokémon burns stronger\n"
 	.string "and hotter than a volcano.\p"
@@ -383,10 +383,10 @@ LavaridgeTown_Gym_1F_Text_FlanneryPostBattle: @ 81FF546
 	.string "the Gym Leader of PETALBURG.$"
 
 LavaridgeTown_Gym_1F_Text_GymStatue: @ 81FF5A9
-	.string "LAVARIDGE TOWN Pokémon GYM$"
+	.string "Grand Island Pokémon GYM$"
 
 LavaridgeTown_Gym_1F_Text_GymStatueCertified: @ 81FF5C4
-	.string "LAVARIDGE TOWN Pokémon GYM\p"
+	.string "Grand Island Pokémon GYM\p"
 	.string "FLANNERY'S CERTIFIED Trainers:\n"
 	.string "{PLAYER}$"
 

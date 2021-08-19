@@ -1476,13 +1476,13 @@ SootopolisCity_Movement_DestroyTask:: @ 81E656D
 	step_end
 
 SootopolisCity_Text_GymSign: @ 81E656F
-	.string "SOOTOPOLIS CITY Pokémon GYM\n"
+	.string "Homestead Town Pokémon GYM\n"
 	.string "LEADER: JUAN\p"
 	.string "“The Gym Leader with the beauty\n"
 	.string "of pure water!”$"
 
 SootopolisCity_Text_CitySign: @ 81E65C8
-	.string "SOOTOPOLIS CITY\p"
+	.string "Homestead Town\p"
 	.string "“The mystical city where history\n"
 	.string "slumbers.”$"
 
@@ -1582,14 +1582,14 @@ SootopolisCity_Text_PrettyMonCameFromSky: @ 81E6C53
 
 SootopolisCity_Text_SootopolisWillBeWrecked: @ 81E6C7C
 	.string "Oh, no!\n"
-	.string "SOOTOPOLIS CITY will get wrecked!$"
+	.string "Homestead Town will get wrecked!$"
 
 SootopolisCity_Text_SootopolisDidntGetWrecked: @ 81E6CA6
-	.string "SOOTOPOLIS CITY didn't get wrecked!$"
+	.string "Homestead Town didn't get wrecked!$"
 
 SootopolisCity_Text_NoOrdinaryTourist: @ 81E6CCA
 	.string "Hm!\n"
-	.string "You've come all the way to SOOTOPOLIS?\l"
+	.string "You've come all the way to Homestead?\l"
 	.string "You're no ordinary tourist.\p"
 	.string "But I suppose that doesn't make you\n"
 	.string "an extraordinary tourist, either.$"
@@ -1625,13 +1625,13 @@ SootopolisCity_Text_CaveOfOriginSleepsToo: @ 81E6F38
 	.string "the cave, too, shall sleep…$"
 
 SootopolisCity_Text_SootopolisSkyBeautiful: @ 81E6F90
-	.string "SOOTOPOLIS sprang up as a town in\n"
+	.string "Homestead sprang up as a town in\n"
 	.string "the crater of a volcano.\p"
 	.string "If you look up at the sky, the lip of\n"
 	.string "the crater is also visible.\l"
 	.string "So, all you see is the sky in a circle.\p"
 	.string "But that's what makes the sky above\n"
-	.string "SOOTOPOLIS the most beautiful.$"
+	.string "Homestead the most beautiful.$"
 
 SootopolisCity_Text_GiganticPokemonFight: @ 81E7078
 	.string "When two Pokémon that gigantic\n"
@@ -1671,7 +1671,7 @@ SootopolisCity_Text_GroudonPleaseStop: @ 81E72DB
 	.string "Please! Stop what you're doing!\p"
 	.string "I know the extent of your power now!\p"
 	.string "If you keep going, all HOENN, not just\n"
-	.string "SOOTOPOLIS, will be utterly ruined!$"
+	.string "Homestead, will be utterly ruined!$"
 
 SootopolisCity_Text_AfterAllOurScheming: @ 81E737E
 	.string "MAXIE: So the super-ancient Pokémon\n"
@@ -1772,7 +1772,7 @@ SootopolisCity_Text_AquaMagmaDidntMeanHarm: @ 81E7A3E
 SootopolisCity_Text_ThankYouForHelpAcceptThis: @ 81E7ACF
 	.string "WALLACE: {PLAYER}{KUN}…\n"
 	.string "My eyes didn't deceive me.\p"
-	.string "Thanks to your help, SOOTOPOLIS…\n"
+	.string "Thanks to your help, Homestead…\n"
 	.string "No, all of HOENN was saved.\p"
 	.string "On behalf of the people, I thank you.\p"
 	.string "This is a gift from me.\n"
@@ -1787,7 +1787,7 @@ SootopolisCity_Text_ExplainWaterfallGoToGym: @ 81E7B86
 	.string "And where does one get the RAIN BADGE?\n"
 	.string "You know, don't you?\p"
 	.string "That's right! You have to beat\n"
-	.string "the SOOTOPOLIS Gym Leader.\p"
+	.string "the Homestead Gym Leader.\p"
 	.string "When you're all set to go, step through\n"
 	.string "that door.$"
 

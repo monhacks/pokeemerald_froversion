@@ -768,7 +768,7 @@ MtChimney_Text_MachineMakesNoResponse: @ 822FFC0
 
 MtChimney_Text_RouteSign: @ 822FFFA
 	.string "{DOWN_ARROW} JAGGED PATH\n"
-	.string "LAVARIDGE TOWN AHEAD$"
+	.string "Grand Island AHEAD$"
 
 MtChimney_Text_ShelbyIntro: @ 823001D
 	.string "I've been to the hot springs and\n"
@@ -850,7 +850,7 @@ MtChimney_Text_SawyerDefeat: @ 82304F7
 	.string "Oh, you're a real firebrand, too!$"
 
 MtChimney_Text_SawyerPostBattle: @ 8230519
-	.string "I think I need a dip in LAVARIDGE\n"
+	.string "I think I need a dip in Grand Island\n"
 	.string "HOT SPRING with the locals!$"
 
 MtChimney_Text_SawyerRegister: @ 8230557

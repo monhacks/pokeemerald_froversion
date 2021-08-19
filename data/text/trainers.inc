@@ -2381,7 +2381,7 @@ Route117_Text_IsaacRematchIntro: @ 829C549
 
 Route117_Text_IsaacRematchDefeat: @ 829C58B
 	.string "You know how to raise them properly.\n"
-	.string "You might have DAY CARE skills…$"
+	.string "You might have Day Care skills…$"
 
 Route117_Text_IsaacPostRematch: @ 829C5D0
 	.string "Your Pokémon are growing good!\n"

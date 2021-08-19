@@ -231,7 +231,7 @@ EverGrandeCity_ChampionsRoom_Movement_BirchArrives: @ 8228C43
 
 EverGrandeCity_ChampionsRoom_Text_IntroSpeech: @ 8228C4C
 	.string "WALLACE: Welcome, {PLAYER}{KUN}.\p"
-	.string "That incident in SOOTOPOLIS CITY…\n"
+	.string "That incident in Homestead Town…\n"
 	.string "That was superb work, putting an end\l"
 	.string "to that crisis all by yourself.\p"
 	.string "Oops!\p"

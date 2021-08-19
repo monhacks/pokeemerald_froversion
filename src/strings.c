@@ -550,7 +550,7 @@ const u8 gText_XNatureHatchedSomewhereAt[] = _(
     "{DYNAMIC 0x00}{DYNAMIC 0x02}{DYNAMIC 0x01}{DYNAMIC 0x05}{DYNAMIC 0x06}{DYNAMIC 0x07} nature,\n"
     "hatched somewhere at {LV_2}{DYNAMIC 0x00}{DYNAMIC 0x03}{DYNAMIC 0x01}.");
 
-const u8 gText_OddEggFoundByCouple[] = _("An odd Pokémon EGG found\nby the DAY CARE couple.");
+const u8 gText_OddEggFoundByCouple[] = _("An odd Pokémon EGG found\nby the Day Care couple.");
 const u8 gText_PeculiarEggNicePlace[] = _("A peculiar Pokémon EGG\nobtained at the nice place.");
 const u8 gText_PeculiarEggTrade[] = _("A peculiar Pokémon EGG\nobtained in a trade.");
 const u8 gText_EggFromHotSprings[] = _("A Pokémon EGG obtained\nat the hot springs.");

@@ -678,7 +678,7 @@ LilycoveCity_Text_TeamAquaLotGoneForGood: @ 81E43FF
 	.string "have gone away for good.$"
 
 LilycoveCity_Text_CitySign: @ 81E448B
-	.string "LILYCOVE CITY\p"
+	.string "Fashion Outlets\p"
 	.string "“Where the land ends and the\n"
 	.string "sea begins.”$"
 
@@ -689,27 +689,27 @@ LilycoveCity_Text_ContestHallSign: @ 81E44C3
 LilycoveCity_Text_MotelSign: @ 81E44FC
 	.string "COVE LILY MOTEL\p"
 	.string "“Remember us as COVE LILY of\n"
-	.string "LILYCOVE.”$"
+	.string "The Outlets.”$"
 
 LilycoveCity_Text_MuseumSign: @ 81E4534
-	.string "LILYCOVE MUSEUM\p"
+	.string "Fashion Outlets MUSEUM\p"
 	.string "“Pokémon Masterpiece Collection\n"
 	.string "on exhibit!”$"
 
 LilycoveCity_Text_MuseumSignPlayersExhibit: @ 81E4571
-	.string "LILYCOVE MUSEUM\p"
+	.string "Fashion Outlets MUSEUM\p"
 	.string "“{PLAYER}'s Pokémon Collection\n"
 	.string "on exhibit!”$"
 
 LilycoveCity_Text_HarborSignUnderConstruction: @ 81E45A7
-	.string "LILYCOVE CITY HARBOR\p"
+	.string "Fashion Outlets HARBOR\p"
 	.string "“The ferry S. S. Tidal is under\n"
-	.string "construction in SLATEPORT CITY.\p"
+	.string "construction in Riverside City.\p"
 	.string "“Service is scheduled to begin\n"
 	.string "shortly.”$"
 
 LilycoveCity_Text_HarborSign: @ 81E4624
-	.string "LILYCOVE CITY HARBOR\p"
+	.string "Fashion Outlets HARBOR\p"
 	.string "“Enjoy a delightful cruise on\n"
 	.string "the ferry S. S. Tidal.”$"
 
@@ -719,7 +719,7 @@ LilycoveCity_Text_TrainerFanClubSign: @ 81E466E
 	.string "all over the sign…$"
 
 LilycoveCity_Text_DepartmentStoreSign: @ 81E46BE
-	.string "LILYCOVE DEPARTMENT STORE\p"
+	.string "Outlets DEPARTMENT STORE\p"
 	.string "“Overflowing with great merchandise\n"
 	.string "and excitement!\p"
 	.string "“A great place to find that something\n"

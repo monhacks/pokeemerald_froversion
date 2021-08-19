@@ -284,10 +284,10 @@ FortreeCity_Gym_Text_WinonaPostBattle: @ 8217071
 	.string "devoted to BIRD Pokémon.$"
 
 FortreeCity_Gym_Text_GymStatue: @ 82170AE
-	.string "FORTREE CITY Pokémon GYM$"
+	.string "Dawn Town Pokémon GYM$"
 
 FortreeCity_Gym_Text_GymStatueCertified: @ 82170C7
-	.string "FORTREE CITY Pokémon GYM\p"
+	.string "Dawn Town Pokémon GYM\p"
 	.string "WINONA'S CERTIFIED Trainers:\n"
 	.string "{PLAYER}$"
 

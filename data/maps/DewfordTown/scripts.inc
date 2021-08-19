@@ -704,7 +704,7 @@ DewfordTown_Text_PetalburgWereSettingSail: @ 81E9CE5
 	.string "Peeko, we're setting sail, boy!$"
 
 DewfordTown_Text_SlateportWereSettingSail: @ 81E9D3A
-	.string "K. Trippy: SLATEPORT, is it?\p"
+	.string "K. Trippy: Riverside, is it?\p"
 	.string "Anchors aweigh!\n"
 	.string "Peeko, we're setting sail, boy!$"
 

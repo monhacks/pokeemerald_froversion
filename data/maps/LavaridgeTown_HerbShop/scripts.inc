@@ -48,7 +48,7 @@ LavaridgeTown_HerbShop_Text_WelcomeToHerbShop: @ 81FE53E
 
 LavaridgeTown_HerbShop_Text_YouveComeToLookAtHerbalMedicine: @ 81FE584
 	.string "You've come to look at herbal medicine\n"
-	.string "in LAVARIDGE?\p"
+	.string "in Grand Island?\p"
 	.string "That's rather commendable.\p"
 	.string "I like you! Take this!$"
 

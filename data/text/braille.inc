@@ -196,7 +196,7 @@ DesertRuins_Braille_UseRockSmash: @ 82A6CA0
 	.braille "LEFT, LEFT,\n"
 	.braille "DOWN, DOWN.\n"
 	.braille "THEN, USE\n"
-	.braille "Rock Smash.$"
+	.braille "ROCK SMASH.$"
 
 IslandCave_Braille_RunLapAroundWall: @ 82A6CD4
 	.byte 5

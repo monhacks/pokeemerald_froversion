@@ -529,7 +529,7 @@ MauvilleCity_Text_WallyDefeat: @ 81DFB96
 
 MauvilleCity_Text_WallyIllGoBackToVerdanturf: @ 81DFBC3
 	.string "Wally: Uncle…\n"
-	.string "I'll go back to VERDANTURF…$"
+	.string "I'll go back to Saunders Settlement…$"
 
 MauvilleCity_Text_ThankYouNotEnoughToBattle: @ 81DFBED
 	.string "Steak-y, thank you.\n"
@@ -551,7 +551,7 @@ MauvilleCity_Text_UncleVisitUsSometime: @ 81DFD34
 	.string "that you must be the Trainer who kept\l"
 	.string "an eye out for Wally when he caught\l"
 	.string "his Pokémon.\p"
-	.string "Why don't you visit us in VERDANTURF\n"
+	.string "Why don't you visit us in Saunders Settlement\n"
 	.string "sometime?\l"
 	.string "I'm sure Wally would enjoy it.$"
 

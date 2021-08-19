@@ -290,7 +290,7 @@ Route101_Text_YouSavedMe: @ 81EBF12
 Route101_Text_TakeTiredPokemonToPokeCenter: @ 81EBFDD
 	.string "If Pokémon get tired, take them to\n"
 	.string "a Pokémon Center.\p"
-	.string "There's a Pokémon Center in OLDALE\n"
+	.string "There's a Pokémon Center in Six Corners\n"
 	.string "TOWN right close by.$"
 
 Route101_Text_WildPokemonInTallGrass: @ 81EC04A
@@ -301,7 +301,7 @@ Route101_Text_WildPokemonInTallGrass: @ 81EC04A
 
 Route101_Text_RouteSign: @ 81EC0C8
 	.string "Lake Mead\n"
-	.string "{UP_ARROW} OLDALE TOWN$"
+	.string "{UP_ARROW} Six Corners$"
 
 /////////////////////////////////////////////////
 /////////////////Froversion//////////////////////

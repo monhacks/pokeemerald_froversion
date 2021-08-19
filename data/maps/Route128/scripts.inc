@@ -294,15 +294,15 @@ Route128_Text_StevenWholeWorldWillDrown: @ 81F70EA
 	.string "If this doesn't stop, all of HOENN…\n"
 	.string "No, the whole world will drown.\p"
 	.string "This huge rain cloud is spreading\n"
-	.string "from above SOOTOPOLIS…\p"
+	.string "from above Homestead…\p"
 	.string "What in the world is taking place there?\p"
 	.string "There's no point arguing here…\n"
-	.string "SOOTOPOLIS might provide answers…$"
+	.string "Homestead might provide answers…$"
 
 Route128_Text_StevenImGoingToSootopolis: @ 81F721B
 	.string "{PLAYER}{KUN}…\n"
 	.string "I don't know what you intend to do,\l"
 	.string "but don't do anything reckless.\p"
 	.string "Okay.\n"
-	.string "I'm going to SOOTOPOLIS.$"
+	.string "I'm going to Homestead.$"
 

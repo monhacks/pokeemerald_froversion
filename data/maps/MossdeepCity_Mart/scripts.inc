@@ -52,7 +52,7 @@ MossdeepCity_Mart_Text_MaxRepelLastsLongest: @ 82224A0
 
 MossdeepCity_Mart_Text_NetAndDiveBallsRare: @ 82224FA
 	.string "The NET and DIVE BALLS are rare POKé\n"
-	.string "BALLS that are only made in MOSSDEEP.\p"
+	.string "BALLS that are only made in Ward.\p"
 	.string "A NET BALL is effective against\n"
 	.string "Bug-type and WATER-type Pokémon.\p"
 	.string "A DIVE BALL works best on Pokémon\n"

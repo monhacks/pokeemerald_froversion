@@ -409,7 +409,7 @@ Route116_Text_ThankYouTokenOfAppreciation: @ 81F3317
 	.string "You're that person who not only helped\n"
 	.string "me in Jagow Woods, but also got\l"
 	.string "back my stolen package and then even\l"
-	.string "graciously delivered it to SLATEPORT!\p"
+	.string "graciously delivered it to Riverside!\p"
 	.string "Capt. Stern informed us that the\n"
 	.string "package arrived, too!\p"
 	.string "I thank you very, very much!\p"
@@ -470,7 +470,7 @@ Route116_Text_RouteSignRustboro: @ 81F379D
 
 Route116_Text_RusturfTunnelSign: @ 81F37B7
 	.string "Diglett Tunnel\n"
-	.string "“Linking Summit and VERDANTURF\p"
+	.string "“Linking Summit and Saunders Settlement\p"
 	.string "“The tunnel project has been\n"
 	.string "canceled.”$"
 

@@ -179,7 +179,7 @@ MossdeepCity_StevensHouse_Text_ExplainDive: @ 8222A0E
 MossdeepCity_StevensHouse_Text_UnderwateCavernBetweenMossdeepSootopolis: @ 8222B11
 	.string "STEVEN: Apparently, there's an\n"
 	.string "underwater cavern between\l"
-	.string "MOSSDEEP and SOOTOPOLIS.\p"
+	.string "Ward and Homestead.\p"
 	.string "You know, the one that Capt. Stern\n"
 	.string "found in his submarine.$"
 

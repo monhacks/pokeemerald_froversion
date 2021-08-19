@@ -415,7 +415,7 @@ PlayersHouse_1F_Text_TicketFromBrineyCameForYou: @ 81F800E
 PlayersHouse_1F_Text_PortsInSlateportLilycove: @ 81F80FE
 	.string "DAD: Hm, a TICKET for a ferry?\p"
 	.string "If I recall, there are ferry ports in\n"
-	.string "SLATEPORT and LILYCOVE.$"
+	.string "Riverside and The Outlets.$"
 
 PlayersHouse_1F_Text_BetterGetBackToGym: @ 81F815B
 	.string "I'd better get back to PETALBURG GYM.\p"

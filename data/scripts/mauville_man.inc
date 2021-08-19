@@ -766,16 +766,16 @@ MauvilleCity_PokemonCenter_1F_Text_WonLotteryStory:: @ 828FE88
 	.string "to trade Pokémon with!$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedDaycareTitle:: @ 828FF0C
-	.string "The DAY CARE-Using Trainer$"
+	.string "The Day Care-Using Trainer$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedDaycareAction:: @ 828FF27
-	.string "Left Pokémon at the DAY CARE$"
+	.string "Left Pokémon at the Day Care$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedDaycareStory:: @ 828FF44
 	.string "This is a tale of a TRAINER\n"
 	.string "named {STR_VAR_3}.\p"
 	.string "This TRAINER left Pokémon with the\n"
-	.string "DAY CARE {STR_VAR_1} times!\p"
+	.string "Day Care {STR_VAR_1} times!\p"
 	.string "{STR_VAR_3} must be a real go-getter\n"
 	.string "who raises Pokémon aggressively!$"
 

@@ -524,7 +524,7 @@ Route119_Text_MayExplainFly: @ 81F4B56
 	.string "instantly carry you to any town you've\l"
 	.string "already visited.\p"
 	.string "But, to use FLY, you have to get\n"
-	.string "the GYM BADGE from FORTREE CITY.\l"
+	.string "the GYM BADGE from Dawn Town.\l"
 	.string "That's important, so don't forget.\p"
 	.string "You should FLY home and visit\n"
 	.string "LITTLEROOT for a change.\p"
@@ -554,7 +554,7 @@ Route119_Text_BrendanExplainFly: @ 81F4DB5
 	.string "BRENDAN: Use FLY, and your Pokémon\n"
 	.string "instantly carries you to any town\l"
 	.string "you've already visited.\p"
-	.string "But you need the FORTREE GYM BADGE \n"
+	.string "But you need the Dawn Town GYM BADGE \n"
 	.string "to do that.\p"
 	.string "Anyway, I have to move along.$"
 
@@ -568,7 +568,7 @@ Route119_Text_ScottWayToGoBeSeeingYou: @ 81F4E60
 	.string "The kid looked really upset with\n"
 	.string "a face all red from anger.\p"
 	.string "I sure seem to run into you often.\n"
-	.string "Are you off to FORTREE GYM next?\p"
+	.string "Are you off to Dawn Town GYM next?\p"
 	.string "I expect that you'll do well at the GYM.\n"
 	.string "Well, I'll be seeing you!$"
 
@@ -578,7 +578,7 @@ Route119_Text_ScottYouWonAtFortreeGym: @ 81F4FBA
 	.string "… … … … … Beep!\p"
 	.string "SCOTT: Hiya, {PLAYER}{KUN}, it's me!\p"
 	.string "Just as I thought, you won at\n"
-	.string "the FORTREE GYM.\p"
+	.string "the Dawn Town GYM.\p"
 	.string "Your strength…\n"
 	.string "Perhaps you really are the TRAINER\l"
 	.string "that I've been searching for.\p"
@@ -620,7 +620,7 @@ Route119_Text_CanYourMonMakeSecretBase: @ 81F52B9
 
 Route119_Text_RouteSignFortree: @ 81F530E
 	.string "ROUTE 119\n"
-	.string "{RIGHT_ARROW} FORTREE CITY$"
+	.string "{RIGHT_ARROW} Dawn Town$"
 
 Route119_Text_WeatherInstitute: @ 81F5327
 	.string "WEATHER INSTITUTE$"

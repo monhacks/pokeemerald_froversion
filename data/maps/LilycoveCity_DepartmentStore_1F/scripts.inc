@@ -152,7 +152,7 @@ LilycoveCity_DepartmentStore_1F_EventScript_FloorNamesSign:: @ 821F85D
 	end
 
 LilycoveCity_DepartmentStore_1F_Text_WelcomeToDeptStore: @ 821F866
-	.string "Welcome to LILYCOVE DEPARTMENT STORE.$"
+	.string "Welcome to The Outlets DEPARTMENT STORE.$"
 
 LilycoveCity_DepartmentStore_1F_Text_IBuyAllSortsOfThings: @ 821F88C
 	.string "Whenever I come to the DEPARTMENT\n"

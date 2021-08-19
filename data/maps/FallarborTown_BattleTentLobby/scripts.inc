@@ -323,7 +323,7 @@ FallarborTown_BattleTentLobby_Text_FallarborTentMyFavorite: @ 8200382
 	.string "You know how Battle TentS offer\n"
 	.string "different events in different towns?\p"
 	.string "My favorite is definitely the BATTLE\n"
-	.string "TENT in FALLARBOR TOWN.\p"
+	.string "TENT in Cayuga Town.\p"
 	.string "I think it's fantastic how Trainers\n"
 	.string "try to win with all their faith in\l"
 	.string "their Pokémon.$"

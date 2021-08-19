@@ -428,7 +428,7 @@ SlateportCity_Harbor_Text_SailAnotherTime: @ 820CF71
 	.string "Please sail with us another time!$"
 
 SlateportCity_Harbor_Text_LilycoveItIs: @ 820CF93
-	.string "LILYCOVE CITY it is, then!$"
+	.string "Fashion Outlets it is, then!$"
 
 SlateportCity_Harbor_Text_BattleFrontierItIs: @ 820CFAE
 	.string "BATTLE FRONTIER it is, then!$"
@@ -476,7 +476,7 @@ SlateportCity_Harbor_Text_ArchieYouAgainHideoutInLilycove: @ 820D291
 	.string "But now…\n"
 	.string "No one can stop us! No one!\p"
 	.string "Or, will you follow us back to our\n"
-	.string "Hideout in LILYCOVE CITY?\p"
+	.string "Hideout in Fashion Outlets?\p"
 	.string "Fwahahahaha…$"
 
 SlateportCity_Harbor_Text_CaptSternWhyStealMySubmarine: @ 820D35A
@@ -499,7 +499,7 @@ SlateportCity_Harbor_Text_TeamAquaLeftNeedDive: @ 820D42B
 	.string "You would need a Pokémon that knows\n"
 	.string "how to Dive…\p"
 	.string "Perhaps if you went out to\n"
-	.string "MOSSDEEP CITY…\p"
+	.string "Ward City…\p"
 	.string "A lot of divers live out there, so\n"
 	.string "someone might teach you…$"
 
@@ -509,7 +509,7 @@ SlateportCity_Harbor_Text_NeedDiveToCatchSub: @ 820D58A
 	.string "You would need a Pokémon that knows\n"
 	.string "how to Dive…\p"
 	.string "Perhaps if you went out to\n"
-	.string "MOSSDEEP CITY…\p"
+	.string "Ward City…\p"
 	.string "A lot of divers live out there, so\n"
 	.string "someone might teach you…$"
 

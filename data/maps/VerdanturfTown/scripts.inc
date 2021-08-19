@@ -108,7 +108,7 @@ VerdanturfTown_Text_EasyToGetToRustboroNow: @ 81EB935
 	.string "new DEVON products in RUSTBORO now.$"
 
 VerdanturfTown_Text_TownSign: @ 81EB9C4
-	.string "VERDANTURF TOWN\p"
+	.string "Saunders Settlement\p"
 	.string "“The windswept highlands with the\n"
 	.string "sweet fragrance of grass.”$"
 
@@ -116,12 +116,12 @@ VerdanturfTown_Text_WandasHouse: @ 81EBA11
 	.string "WANDA'S HOUSE$"
 
 VerdanturfTown_Text_BattleTentSign: @ 81EBA1F
-	.string "Battle Tent VERDANTURF SITE\n"
+	.string "Battle Tent Saunders Settlement SITE\n"
 	.string "“Feast Your Eyes on Battles!”$"
 
 VerdanturfTown_Text_RusturfTunnelSign: @ 81EBA59
 	.string "Diglett Tunnel\n"
-	.string "“Linking RUSTBORO and VERDANTURF\p"
+	.string "“Linking RUSTBORO and Saunders Settlement\p"
 	.string "“The tunnel project has been\n"
 	.string "canceled.”$"
 

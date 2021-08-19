@@ -73,7 +73,7 @@ FallarborTown_Text_Azurill: @ 81EB3B5
 
 FallarborTown_Text_HaveYouChallengedFlannery: @ 81EB3CA
 	.string "Have you already challenged FLANNERY,\n"
-	.string "the LEADER of LAVARIDGE GYM?\p"
+	.string "the LEADER of Grand Island GYM?\p"
 	.string "The girl's grandfather was famous.\n"
 	.string "He was one of the ELITE FOUR in the\l"
 	.string "Pokémon LEAGUE at one point.\p"
@@ -82,11 +82,11 @@ FallarborTown_Text_HaveYouChallengedFlannery: @ 81EB3CA
 	.string "right.$"
 
 FallarborTown_Text_BattleTentSign: @ 81EB4C2
-	.string "Battle Tent FALLARBOR SITE\n"
+	.string "Battle Tent Cayuga SITE\n"
 	.string "“May the Greatest Teams Gather!”$"
 
 FallarborTown_Text_TownSign: @ 81EB4FE
-	.string "FALLARBOR TOWN\n"
+	.string "Cayuga Town\n"
 	.string "“A farm community with small gardens.”$"
 
 FallarborTown_Text_MoveTutorSign: @ 81EB534

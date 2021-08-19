@@ -450,7 +450,7 @@ Kecleon_Text_UseDevonScopeMonAttacked: @ 81F5D63
 
 Route120_Text_RouteSignFortree: @ 81F5DCB
 	.string "ROUTE 120\n"
-	.string "{LEFT_ARROW} FORTREE CITY$"
+	.string "{LEFT_ARROW} Dawn Town$"
 
 Route120_Text_RouteSign121: @ 81F5DE4
 	.string "{RIGHT_ARROW} ROUTE 121\n"

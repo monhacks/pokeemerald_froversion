@@ -149,5 +149,5 @@ Route115_Text_RouteSignRustboro: @ 81F2BC9
 
 Route115_Text_MeteorFallsSign: @ 81F2BE3
 	.string "METEOR FALLS\n"
-	.string "FALLARBOR TOWN THROUGH HERE$"
+	.string "Cayuga Town THROUGH HERE$"
 

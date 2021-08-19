@@ -493,18 +493,18 @@ RusturfTunnel_Text_WhyCantTheyKeepDigging: @ 822D510
 	.string "… …\p"
 	.string "Why can't they keep digging?\n"
 	.string "Is the bedrock too hard?\p"
-	.string "My beloved awaits me in VERDANTURF\n"
+	.string "My beloved awaits me in Saunders Settlement\n"
 	.string "TOWN just beyond here…\p"
-	.string "If Summit and VERDANTURF were\n"
+	.string "If Summit and Saunders Settlement were\n"
 	.string "joined by this tunnel, I could visit\l"
 	.string "her every day…\p"
 	.string "But this…\n"
 	.string "What am I to do?$"
 
 RusturfTunnel_Text_ToGetToVerdanturf: @ 822D5F3
-	.string "To get from Summit to VERDANTURF,\n"
+	.string "To get from Summit to Saunders Settlement,\n"
 	.string "you need to go to Raintree, then pass\l"
-	.string "through SLATEPORT and MAUVILLE…$"
+	.string "through Riverside and MAUVILLE…$"
 
 RusturfTunnel_Text_YouShatteredBoulderTakeHM: @ 822D65C
 	.string "Wow! You shattered that boulder\n"

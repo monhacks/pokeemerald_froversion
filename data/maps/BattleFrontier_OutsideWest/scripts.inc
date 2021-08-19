@@ -352,10 +352,10 @@ BattleFrontier_OutsideWest_Text_WhereWouldYouLikeToGo: @ 823D89D
 	.string "And where would you like to go?$"
 
 BattleFrontier_OutsideWest_Text_SlateportItIs: @ 823D8F2
-	.string "SLATEPORT CITY it is, then!$"
+	.string "Riverside City it is, then!$"
 
 BattleFrontier_OutsideWest_Text_LilycoveItIs: @ 823D90E
-	.string "LILYCOVE CITY it is, then!$"
+	.string "Fashion Outlets it is, then!$"
 
 BattleFrontier_OutsideWest_Text_SailWithUsAnotherTime: @ 823D929
 	.string "Please sail with us another time!$"

@@ -166,7 +166,7 @@ LilycoveCity_LilycoveMuseum_1F_EventScript_FatMan:: @ 8218E42
 	end
 
 LilycoveCity_LilycoveMuseum_1F_Text_WelcomeToLilycoveMuseum: @ 8218E4B
-	.string "Welcome to LILYCOVE MUSEUM.\p"
+	.string "Welcome to The Outlets MUSEUM.\p"
 	.string "Please take the time to enjoy our\n"
 	.string "collection of fantastic artwork\l"
 	.string "featuring Pokémon.$"
