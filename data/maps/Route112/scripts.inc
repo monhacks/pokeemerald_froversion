@@ -121,14 +121,14 @@ Route112_Text_YeahWeNeedMeteorite: @ 81F1F7A
 
 Route112_Text_OhThatsWhyCrewWentToFallarbor: @ 81F1FBA
 	.string "Oh, I get it now. That's why the rest\n"
-	.string "of the crew went out to Fallarbor.$"
+	.string "of the crew went out to Cayuga.$"
 
 Route112_Text_CantLetAnyonePassUntilTheyreBack: @ 81F2003
 	.string "You got it. And until they come back,\n"
 	.string "we're not to let anyone pass, right.$"
 
 Route112_Text_NotEasyToGetBackToLavaridge: @ 81F204E
-	.string "Eh, I'd like to get to Mauville, but if\n"
+	.string "Eh, I'd like to get to Wheatfield, but if\n"
 	.string "I went down these ledges, it'd be no\l"
 	.string "easy matter to get back to Grand\l"
 	.string "Island.$"
@@ -138,12 +138,12 @@ Route112_Text_MtChimneyCableCarSign: @ 81F20C1
 	.string "“A short walk {UP_ARROW} way!”$"
 
 Route112_Text_MtChimneySign: @ 81F20ED
-	.string "MT. Lancelot\p"
+	.string "Mt. Lancelot\p"
 	.string "“For Grand Island or the summit,\n"
 	.string "please take the Cable Car.”$"
 
 Route112_Text_RouteSignLavaridge: @ 81F2138
-	.string "ROUTE 112\n"
+	.string "Route 112\n"
 	.string "{LEFT_ARROW} Grand Island$"
 
 //////////////////////////////
@@ -266,8 +266,8 @@ Text_Route112_FroLostToBobby:
 	.string "me. Keep practicing. Anyway...\p"
 	.string "Looks like we need to find a way to get\n"
 	.string "access to the cable car.\p"
-	.string "I'm going to head through UNNAMED CAVE\n"
-	.string "and head into Fallarbor Town.\p"
+	.string "I'm going to head through Lancelot\n"
+	.string "Cave and head into Fallarbor Town.\p"
 	.string "I'll see if I can figure out why Team\n"
 	.string "MAGA is blocking the way to the top of\l"
 	.string "Mount Lancelot. See if you can keep up!$"
@@ -277,8 +277,8 @@ Text_Route112_FroBeatBobby:
 	.string "you next time. Anyway...\p"
 	.string "Looks like we need to find a way to get\n"
 	.string "access to the cable car.\p"
-	.string "I'm going to head through UNNAMED CAVE and\n"
-	.string "head into Fallarbor Town.\p"
+	.string "I'm going to head through Lancelot\n"
+	.string "Cave and head into Fallarbor Town.\p"
 	.string "I'll see if I can figure out why Team MAGA\n"
 	.string "is blocking the way to the top of\l"
 	.string "Mount Lancelot. See if you can keep up!$"

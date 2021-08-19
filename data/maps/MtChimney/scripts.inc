@@ -603,7 +603,7 @@ MtChimney_Text_TabithaIntro: @ 822F6AA
 	.string "So you've come all the way here!\p"
 	.string "But you're too late!\n"
 	.string "We've already delivered the Meteorite\l"
-	.string "from Meteor Falls to the BOSS!$"
+	.string "from Meteor Falls to the Boss!$"
 
 MtChimney_Text_TabithaDefeat: @ 822F72C
 	.string "Hehehe…\p"
@@ -649,7 +649,7 @@ MtChimney_Text_Grunt1PostBattle: @ 822F93A
 
 MtChimney_Text_TeamAquaAlwaysMessingWithPlans: @ 822F978
 	//.string "That annoying TEAM AQUA…\n"
-	.string "Those annoying protestors...\n"
+	.string "Those annoying Antifas...\n"
 	.string "They always mess with our plans!$"
 
 MtChimney_Text_MeteoritesPackAmazingPower: @ 822F9B2
@@ -680,24 +680,24 @@ MtChimney_Text_Bufoh: @ 822FACB
 	.string "Bufoh!$"
 
 MtChimney_Text_ArchieGoStopTeamMagma: @ 822FAD2
-	.string "Protestor: Grr...\n"
+	.string "Antfia Leader: Grr...\n"
 	//.string "I should've guessed you'd show up!\p"
 	.string "See for yourself what the fanatics\l"
 	.string "of Team MAGA are up to!\p"
 	.string "They're trying to inject the stolen\n"
-	.string "Team Meteroite's power into a Pokémon!\p"
+	.string "Meteroite's power into a Pokémon!\p"
 	.string "Doing something like that will cause\n"
 	.string "the pain and suffering to the Pokémon!$"
 
 MtChimney_Text_ArchieIHaveMyHandsFull: @ 822FBC7
-	.string "Protestor: Grrr…\p"
+	.string "Antfia Leader: Grrr…\p"
 	.string "I want to stop that MAGA Leader,\n"
 	.string "Jerett, but I can't!\p"
 	.string "Not when I have my hands full battling\n"
 	.string "three opponents at once!$"
 
 MtChimney_Text_ArchieThankYou: @ 822FC3D
-	.string "Protestor: {PLAYER}!\n"
+	.string "Antfia Leader: {PLAYER}!\n"
 	.string "Thank you!\p"
 	.string "With your help, we thwarted Team\n"
 	.string "MAGA's destructive plan!\p"
@@ -767,8 +767,8 @@ MtChimney_Text_MachineMakesNoResponse: @ 822FFC0
 	.string "It makes no response whatsoever.$"
 
 MtChimney_Text_RouteSign: @ 822FFFA
-	.string "{DOWN_ARROW} JAGGED PATH\n"
-	.string "Grand Island AHEAD$"
+	.string "{DOWN_ARROW} Deborah Path\n"
+	.string "Grand Island Ahead$"
 
 MtChimney_Text_ShelbyIntro: @ 823001D
 	.string "I've been to the hot springs and\n"
@@ -781,7 +781,7 @@ MtChimney_Text_ShelbyDefeat: @ 8230076
 
 MtChimney_Text_ShelbyPostBattle: @ 82300A2
 	.string "Well, well, I've lost. I can't call\n"
-	.string "myself an EXPERT now, can I?$"
+	.string "myself an Expert now, can I?$"
 
 MtChimney_Text_ShelbyRegister: @ 82300E3
 	.string "Thank you, child. It was fun, as if\n"
@@ -826,7 +826,7 @@ MtChimney_Text_SheilaPostBattle: @ 823033A
 	.string "Mt. Wheatfield. It would be a shame if\l"
 	.string "I only do a little sightseeing…\p"
 	.string "I want to get in some battles and buy\n"
-	.string "COOKIES as souvenirs.$"
+	.string "Cookies as souvenirs.$"
 
 MtChimney_Text_ShirleyIntro: @ 82303DF
 	.string "Since I bathed in the hot springs,\n"

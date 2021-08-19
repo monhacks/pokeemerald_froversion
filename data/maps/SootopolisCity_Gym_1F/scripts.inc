@@ -198,7 +198,7 @@ SootopolisCity_Gym_1F_Text_GymGuidePostVictory: @ 82251AF
 	.string "was supposedly the best in all HOENN!\p"
 	.string "Okay! Check out your TRAINER CARD.\p"
 	.string "If you've gotten all the BADGES, you're\n"
-	.string "set for the Pokémon LEAGUE challenge!$"
+	.string "set for the Pokémon League challenge!$"
 
 SootopolisCity_Gym_1F_Text_JuanIntro: @ 8225268
 	.string "Let me ask you.\n"
@@ -267,17 +267,17 @@ SootopolisCity_Gym_1F_Text_JuanPostBattle: @ 8225778
 	.string "The Trainers who have gathered all\n"
 	.string "the GYM BADGES of HOENN should make\l"
 	.string "way to the ultimate destination.\p"
-	.string "The Pokémon LEAGUE.\p"
+	.string "The Pokémon League.\p"
 	.string "Travel to the easternmost reaches\n"
 	.string "of HOENN, to the island Scranton.\p"
 	.string "There, you shall find the Pokémon\n"
-	.string "LEAGUE.$"
+	.string "League.$"
 
 SootopolisCity_Gym_1F_Text_GoGetFortreeBadge: @ 8225865
 	.string "There remains but one BADGE to\n"
 	.string "obtain in HOENN.\p"
 	.string "If you wish to challenge the Pokémon\n"
-	.string "LEAGUE, you must obtain the last\l"
+	.string "League, you must obtain the last\l"
 	.string "BADGE from the GYM in Dawn Town.$"
 
 SootopolisCity_Gym_1F_Text_GymStatue: @ 82258FA

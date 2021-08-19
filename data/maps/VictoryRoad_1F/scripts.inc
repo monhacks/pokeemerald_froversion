@@ -158,7 +158,7 @@ VictoryRoad_1F_Text_WallyPostBattle: @ 82360FE
 	.string "WALLY: I couldn't beat you this time,\n"
 	.string "too… But one of these days, {PLAYER},\l"
 	.string "I'm going to catch up to you…\p"
-	.string "And challenge the Pokémon LEAGUE!$"
+	.string "And challenge the Pokémon League!$"
 
 VictoryRoad_1F_Text_EdgarIntro: @ 8236184
 	.string "I've made it this far a couple times,\n"

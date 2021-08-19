@@ -240,7 +240,7 @@ MeteorFalls_1F_1R_EventScript_MetCozmo:: @ 822BF3D
 MeteorFalls_1F_1R_Text_WithThisMeteorite: @ 822BF47
 	.string "Hehehe!\p"
 	.string "With this Meteorite, that thing in\n"
-	.string "Mt. Wheatfield will…$"
+	.string "Mt. Lancelot will…$"
 
 MeteorFalls_1F_1R_Text_DontExpectMercyFromMagma: @ 822BF84
 	.string "Heh?\p"
@@ -251,14 +251,14 @@ MeteorFalls_1F_1R_Text_DontExpectMercyFromMagma: @ 822BF84
 MeteorFalls_1F_1R_Text_HoldItRightThereMagma: @ 822BFE4
 	.string "Hold it right there, Kiddo!\p"
 	.string "I'll keep him occupied, you guys\n"
-	.string "head to Mt. Wheatfield!$"
+	.string "head to Mt. Lancelot!$"
 
 MeteorFalls_1F_1R_Text_BeSeeingYouTeamAqua: @ 822C04E
 	.string "Hehehe!\n"
 	.string "Sounds good Leader Hasley\p"
 	.string "This kid is too much trouble to deal\n"
 	.string "with anyway...\p"
-	.string "Mt. Wheatfield we go!\p"
+	.string "Mt. Lancelot we go!\p"
 	.string "Hehehe! Be seeing you, you Team\n"
 	.string "{PLAYER}!$"
 
@@ -284,13 +284,13 @@ MeteorFalls_1F_1R_Text_ArchieSeenYouBefore: @ 822C11C
 
 MeteorFalls_1F_1R_Text_BossWeShouldChaseMagma: @ 822C268
 	.string "Shawn, we should leave this sheep\n"
-	.string "and head to Mt. Wheatfield...$"
+	.string "and head to Mt. Lancelot...$"
 
 MeteorFalls_1F_1R_Text_ArchieYesNoTellingWhatMagmaWillDo: @ 822C292
 	.string "Shawn: Yes, yes, we must!\n"
 	.string "We've got to hurry.\p"
 	.string "We must see if everything is going according\n"
-	.string "to plan at Mt. Wheatfield!$"
+	.string "to plan at Mt. Lancelot!$"
 
 MeteorFalls_1F_1R_Text_ArchieFarewell: @ 822C2FC
 	.string "Shawn: {PLAYER}, you would be\n"
@@ -310,9 +310,9 @@ MeteorFalls_1F_1R_Text_MeetProfCozmo: @ 822C342
 	//.string "I don't understand any of it.\p"
 	//.string "But that Team MAGA…\p"
 	.string "What are they going to do with that\n"
-	.string "Meteorite at Mt. Wheatfield?$"
+	.string "Meteorite at Mt. Lancelot?$"
 
 MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney: @ 822C47D
 	.string "Prof. Cozmo: But that Team MAGA…\p"
 	.string "What are they going to do with that\n"
-	.string "Meteorite at Mt. Wheatfield?$"
+	.string "Meteorite at Mt. Lancelot?$"

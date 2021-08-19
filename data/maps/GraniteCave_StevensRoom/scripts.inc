@@ -107,7 +107,7 @@ GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister: @ 822DE6B
 	.string "capable.\p"
 	.string "If you keep training, you could even\n"
 	.string "become the CHAMPION of the Pokémon\l"
-	.string "LEAGUE one day. That's what I think.\p"
+	.string "League one day. That's what I think.\p"
 	.string "I know, since we've gotten to know each\n"
 	.string "other, let's register one another in\l"
 	.string "our PokénavS.\p"

@@ -401,6 +401,6 @@ OldaleTown_Text_BrendanLetsGoBack: @ 81E948A
 	.string "{PLAYER}, you should hustle back, too.$"
 
 OldaleTown_Text_CitySign: @ 81E94DA
-	.string "OLDALE TOWN\n"
+	.string "Six Corners\n"
 	.string "“Where things start off scarce.”$"
 

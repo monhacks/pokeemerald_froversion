@@ -724,7 +724,7 @@ Common_EventScript_PlayGymBadgeFanfare:: @ 827207E
 
 Common_EventScript_OutOfCenterPartyHeal:: @ 8272083
 	fadescreen FADE_TO_BLACK
-	playfanfare MUS_HEAL
+	playfanfare MUS_FV_GOODNIGHT
 	waitfanfare
 	special HealPlayerParty
 	fadescreen FADE_FROM_BLACK

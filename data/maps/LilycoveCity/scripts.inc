@@ -467,7 +467,7 @@ LilycoveCity_Text_MayGoingBackToLittleroot: @ 81E32FB
 LilycoveCity_Text_MayYouGoingToCollectBadges: @ 81E3398
 	.string "{PLAYER}{KUN}, what are you going to do?\p"
 	.string "Collect all the GYM BADGES and take\n"
-	.string "the Pokémon LEAGUE challenge?\p"
+	.string "the Pokémon League challenge?\p"
 	.string "Well, while you're collecting BADGES,\n"
 	.string "{PLAYER}{KUN}, I'm going to work on my\l"
 	.string "Pokédex. I'll complete it before you!\p"
@@ -475,7 +475,7 @@ LilycoveCity_Text_MayYouGoingToCollectBadges: @ 81E3398
 
 LilycoveCity_Text_MayYouGoingToPokemonLeague: @ 81E346D
 	.string "{PLAYER}{KUN}, what are you going to do?\p"
-	.string "Are you taking the Pokémon LEAGUE\n"
+	.string "Are you taking the Pokémon League\n"
 	.string "challenge?\p"
 	.string "Or, are you going to complete your\n"
 	.string "Pokédex?\p"
@@ -529,14 +529,14 @@ LilycoveCity_Text_BrendanGoingBackToLittleroot: @ 81E37D7
 LilycoveCity_Text_BrendanYouGoingToCollectBadges: @ 81E3876
 	.string "{PLAYER}, what are you going to do?\p"
 	.string "Collect all the GYM BADGES and take\n"
-	.string "the Pokémon LEAGUE challenge?\p"
+	.string "the Pokémon League challenge?\p"
 	.string "Maybe I'll do that, too…\p"
 	.string "Well, anyway, hang in there!$"
 
 LilycoveCity_Text_BrendanYouGoingToPokemonLeague: @ 81E390C
 	.string "{PLAYER}, what are you going to do?\p"
 	.string "Since you're that strong, are you\n"
-	.string "taking the Pokémon LEAGUE challenge?\p"
+	.string "taking the Pokémon League challenge?\p"
 	.string "Heh, even me--if I trained my Pokémon\n"
 	.string "a bit more, I should be stronger than\l"
 	.string "you, {PLAYER}.\p"

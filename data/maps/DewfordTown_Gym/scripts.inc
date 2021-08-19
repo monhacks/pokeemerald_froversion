@@ -354,7 +354,7 @@ DewfordTown_Gym_Text_JocelynPostBattle: @ 81FCC6B
 	.string "I'm not going to waste this loss.\n"
 	.string "I'll use it to motivate me to train!\p"
 	.string "One day I'll become a Gym Leader…\p"
-	.string "No, I'll become the Pokémon LEAGUE\n"
+	.string "No, I'll become the Pokémon League\n"
 	.string "CHAMPION!$"
 
 DewfordTown_Gym_Text_LauraIntro: @ 81FCD01

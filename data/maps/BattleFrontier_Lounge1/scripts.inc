@@ -214,7 +214,7 @@ BattleFrontier_Lounge1_Text_BestAspectDef: @ 825EC39
 
 BattleFrontier_Lounge1_Text_BestAspectSpAtk: @ 825EC7B
 	.string "Incidentally, the best aspect of it,\n"
-	.string "I would say, is its SPECIAL ATTACK…$"
+	.string "I would say, is its Special Attack…$"
 
 BattleFrontier_Lounge1_Text_BestAspectSpDef: @ 825ECC4
 	.string "Incidentally, the best aspect of it,\n"
