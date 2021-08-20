@@ -368,7 +368,7 @@ MossdeepCity_Gym_EventScript_RedFloorSwitch:: @ 8220CBF
 	end
 
 MossdeepCity_Gym_Text_GymGuideAdvice: @ 8220CD5
-	.string "Yo, how's it going, CHAMPION-bound\n"
+	.string "Yo, how's it going, Champion-bound\n"
 	.string "{PLAYER}?\p"
 	.string "The Gym LeaderS here use\n"
 	.string "PSYCHIC-type Pokémon.\p"

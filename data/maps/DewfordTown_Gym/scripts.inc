@@ -310,7 +310,7 @@ DewfordTown_Gym_EventScript_GymStatue:: @ 81FC9CC
 	end
 
 DewfordTown_Gym_Text_GymGuideAdvice: @ 81FC9D6
-	.string "Hey, how's it going, CHAMPION-\n"
+	.string "Hey, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
 	.string "DEWFORD's Gym Leader BRAWLY commands\n"
 	.string "FIGHTING-type Pokémon.\p"

@@ -93,20 +93,20 @@ FortreeCity_Text_SawGiganticPokemonInSky: @ 81E2676
 	.string "No one believes me, but I saw this\n"
 	.string "gigantic Pokémon in the sky.\p"
 	.string "It seemed to squirm as it flew toward\n"
-	.string "ROUTE 131.\p"
+	.string "Route 131.\p"
 	.string "By the way… Sniff…\n"
 	.string "Um… You, uh…smell singed.\p"
 	.string "Were you at a volcano or something?$"
 
 FortreeCity_Text_SomethingBlockingGym: @ 81E2738
-	.string "I want to go to the Pokémon GYM,\n"
+	.string "I want to go to the Pokémon Gym,\n"
 	.string "but something's blocking the way.\p"
 	.string "After all the bother I went through\n"
-	.string "training on ROUTE 120…$"
+	.string "training on Route 120…$"
 
 FortreeCity_Text_ThisTimeIllBeatWinona: @ 81E27B6
 	.string "I've got my pride-and-joy Pokémon\n"
-	.string "with me. This time, I'll beat WINONA.$"
+	.string "with me. This time, I'll beat Kostiw.$"
 
 FortreeCity_Text_TreesGrowByDrinkingRainwater: @ 81E27FE
 	.string "The ground absorbs rainwater, and\n"
@@ -115,7 +115,7 @@ FortreeCity_Text_TreesGrowByDrinkingRainwater: @ 81E27FE
 	.string "there's both water and soil.$"
 
 FortreeCity_Text_EveryoneHealthyAndLively: @ 81E2880
-	.string "The CITY consists of homes built on\n"
+	.string "The Town consists of homes built on\n"
 	.string "trees.\p"
 	.string "Perhaps because of that lifestyle,\n"
 	.string "everyone is healthy and lively.\p"
@@ -137,10 +137,10 @@ FortreeCity_Text_SomethingUnseeable: @ 81E29E5
 
 FortreeCity_Text_UnseeableUseDevonScope: @ 81E2A08
 	.string "Something unseeable is in the way.\p"
-	.string "Want to use the DEVON SCOPE?$"
+	.string "Want to use the C. G. Scope?$"
 
 FortreeCity_Text_UsedDevonScopePokemonFled: @ 81E2A48
-	.string "{PLAYER} used the DEVON SCOPE.\p"
+	.string "{PLAYER} used the C. G. Scope.\p"
 	.string "An invisible Pokémon became completely\n"
 	.string "visible!\p"
 	.string "The startled Pokémon fled!$"
@@ -151,8 +151,8 @@ FortreeCity_Text_CitySign: @ 81E2AAC
 	.string "nature.”$"
 
 FortreeCity_Text_GymSign: @ 81E2AE6
-	.string "Dawn Town Pokémon GYM\n"
-	.string "LEADER: WINONA\p"
+	.string "Dawn Town Pokémon Gym\n"
+	.string "Leader: Kostiw\p"
 	.string "“The bird user taking flight into\n"
 	.string "the world.”$"
 

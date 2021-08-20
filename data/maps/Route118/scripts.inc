@@ -257,9 +257,9 @@ Route118_EventScript_Deandre:: @ 81F40A7
 	end
 
 Route118_Text_StevenQuestions: @ 81F40BE
-	.string "STEVEN: Hi, {PLAYER}{KUN}!\p"
-	.string "It's me, STEVEN!\n"
-	.string "We met in the cave near DEWFORD.\p"
+	.string "Steven: Hi, {PLAYER}{KUN}!\p"
+	.string "It's me, Steven!\n"
+	.string "We met in the cave near Raintree.\p"
 	.string "Have you met many kinds of Pokémon\n"
 	.string "since I last saw you?\p"
 	.string "There are many, many kinds of Pokémon\n"
@@ -268,7 +268,7 @@ Route118_Text_StevenQuestions: @ 81F40BE
 	.string "favorites, that's fine.\p"
 	.string "Perhaps you find it more fun to raise\n"
 	.string "all sorts of Pokémon.\p"
-	.string "As a TRAINER of Pokémon,\n"
+	.string "As a Trainer of Pokémon,\n"
 	.string "what do you think?\p"
 	.string "Of course, it's not any of my business.\p"
 	.string "It would be nice if we were to meet\n"
@@ -276,14 +276,14 @@ Route118_Text_StevenQuestions: @ 81F40BE
 
 Route118_Text_YouAgreeGoodRodIsGood: @ 81F427B
 	.string "Hmm!\n"
-	.string "A GOOD ROD is really good!\p"
+	.string "A Good Rod is really good!\p"
 	.string "Wouldn't you agree?$"
 
 Route118_Text_IdenticalMindsTakeThis: @ 81F42AF
 	.string "Hmm!\n"
 	.string "We're of identical minds!\p"
 	.string "Hmm!\n"
-	.string "Take this GOOD ROD!$"
+	.string "Take this Good Rod!$"
 
 Route118_Text_TryYourLuckFishing: @ 81F42E7
 	.string "Wherever there's water, try your luck\n"
@@ -294,20 +294,20 @@ Route118_Text_DontYouLikeToFish: @ 81F4319
 
 Route118_Text_TryCatchingMonWithGoodRod: @ 81F4331
 	.string "Try catching all sorts of Pokémon\n"
-	.string "with your GOOD ROD.$"
+	.string "with your Good Rod.$"
 
 Route118_Text_CanCrossRiversWithSurf: @ 81F4367
 	.string "Even if there isn't a boat, you can\n"
 	.string "cross rivers and the sea if you have\l"
-	.string "a Pokémon that knows SURF.\p"
+	.string "a Pokémon that knows Surf.\p"
 	.string "Pokémon can be counted on to do so\n"
 	.string "much!$"
 
 Route118_Text_RouteSignMauville: @ 81F43F4
-	.string "ROUTE 118\n"
+	.string "Route 118\n"
 	.string "{LEFT_ARROW} Wheafield Quarry$"
 
 Route118_Text_RouteSign119: @ 81F440E
-	.string "ROUTE 118\n"
-	.string "{UP_ARROW} ROUTE 119$"
+	.string "Route 118\n"
+	.string "{UP_ARROW} Route 119$"
 

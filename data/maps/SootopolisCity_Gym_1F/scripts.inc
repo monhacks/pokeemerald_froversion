@@ -182,7 +182,7 @@ SootopolisCity_Gym_1F_EventScript_GymStatue:: @ 8225089
 	end
 
 SootopolisCity_Gym_1F_Text_GymGuideAdvice: @ 8225093
-	.string "Yo! How's it going, CHAMPION-\n"
+	.string "Yo! How's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
 	.string "Homestead's Gym Leader JUAN is\n"
 	.string "a master of WATER-type Pokémon.\p"
