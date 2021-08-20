@@ -663,3 +663,10 @@ gMetatiles_RaintreeIsland_Pokecenter_Interior::
 	.align 1
 gMetatileAttributes_RaintreeIsland_Pokecenter_Interior::
 	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/metatile_attributes.bin"
+	.align 1
+gMetatiles_GrandIslandGym::
+	.incbin "data/tilesets/secondary/grandislandgym/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_GrandIslandGym::
+	.incbin "data/tilesets/secondary/grandislandgym/metatile_attributes.bin"

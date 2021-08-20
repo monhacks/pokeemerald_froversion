@@ -207,28 +207,28 @@ LavaridgeTown_Gym_1F_EventScript_GymStatue:: @ 81FE9B5
 	end
 
 LavaridgeTown_Gym_1F_Text_GymGuideAdvice: @ 81FE9BF
-	.string "Hey, how's it going, CHAMPION-\n"
+	.string "Hey, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
-	.string "Grand Island's Gym Leader FLANNERY\n"
-	.string "uses FIRE-type Pokémon.\p"
-	.string "Her passion for Pokémon burns stronger\n"
-	.string "and hotter than a volcano.\p"
-	.string "Don't get too close to her--you'll burn!\n"
-	.string "Hose her down with water and then\l"
+	.string "Grand Island's Gym Leader Marriott\n"
+	.string "uses Water-type Pokémon.\p"
+	.string "His passion for Pokémon wades stronger\n"
+	.string "than any tides or waves.\p"
+	.string "Don't get too close to him--you'll drown!\n"
+	.string "Light him up with electricity and then\l"
 	.string "go for it!$"
 
 LavaridgeTown_Gym_1F_Text_GymGuidePostVictory: @ 81FEAB8
-	.string "Yow! That was a scorching-hot battle!$"
+	.string "Yow! That was a twisted battle!$"
 
 LavaridgeTown_Gym_1F_Text_ColeIntro: @ 81FEADE
 	.string "Owowowowow!\n"
-	.string "Yikes, it's hot!$"
+	.string "Yikes, it's cool!$"
 
 LavaridgeTown_Gym_1F_Text_ColeDefeat: @ 81FEAFB
 	.string "I'm blinded by sweat in my eyes…$"
 
 LavaridgeTown_Gym_1F_Text_ColePostBattle: @ 81FEB1C
-	.string "Being buried in hot sand promotes\n"
+	.string "Swimming in the cool pool promotes\n"
 	.string "circulation.\p"
 	.string "It's effective for healing pain in\n"
 	.string "your joints.$"
@@ -238,42 +238,42 @@ LavaridgeTown_Gym_1F_Text_AxleIntro: @ 81FEB7B
 	.string "Don't come along and stress me out!$"
 
 LavaridgeTown_Gym_1F_Text_AxleDefeat: @ 81FEBC0
-	.string "I hope FLANNERY flames you good!$"
+	.string "I hope Marriott floods you good!$"
 
 LavaridgeTown_Gym_1F_Text_AxlePostBattle: @ 81FEBE1
 	.string "Haaah… Whew…\p"
-	.string "If you spend too much time buried in\n"
-	.string "hot sand, it tuckers you out…$"
+	.string "If you spend too much time swimming in\n"
+	.string "the pool, it tuckers you out…$"
 
 LavaridgeTown_Gym_B1F_Text_KeeganIntro: @ 81FEC31
 	.string "You must be getting tired by now.\n"
-	.string "You'd like to rest in the hot sand,\l"
+	.string "You'd like to rest in the pool,\l"
 	.string "wouldn't you?\p"
 	.string "But you should know that maintaining\n"
 	.string "your willpower is an important ability\l"
 	.string "for all Trainers.$"
 
 LavaridgeTown_Gym_B1F_Text_KeeganDefeat: @ 81FECE3
-	.string "Play with fire, and be burned…$"
+	.string "Play with water, and get drenched…$"
 
 LavaridgeTown_Gym_B1F_Text_KeeganPostBattle: @ 81FED02
 	.string "Your skill is real…\n"
-	.string "But our LEADER FLANNERY is strong.\p"
+	.string "But our Leader Marriott is strong.\p"
 	.string "If you don't watch yourself, you'll be\n"
-	.string "burned seriously.$"
+	.string "drizzled seriously.$"
 
 LavaridgeTown_Gym_1F_Text_GeraldIntro: @ 81FED72
 	.string "Can your Pokémon withstand\n"
-	.string "392-degree heat?$"
+	.string "the rain?$"
 
 LavaridgeTown_Gym_1F_Text_GeraldDefeat: @ 81FED9E
-	.string "It didn't burn hotly enough…$"
+	.string "It didn't get wet enough…$"
 
 LavaridgeTown_Gym_1F_Text_GeraldPostBattle: @ 81FEDBB
-	.string "The temperature of magma is\n"
-	.string "392 degrees.\p"
+	.string "The temperature of water is\n"
+	.string "75 degrees.\p"
 	.string "Your Pokémon beat me, so they should\n"
-	.string "easily survive in magma.$"
+	.string "easily survive in the pool.$"
 
 LavaridgeTown_Gym_1F_Text_DanielleIntro: @ 81FEE22
 	.string "Um…\n"
@@ -284,7 +284,7 @@ LavaridgeTown_Gym_1F_Text_DanielleDefeat: @ 81FEE42
 
 LavaridgeTown_Gym_1F_Text_DaniellePostBattle: @ 81FEE5D
 	.string "I'm going to be a pretty and strong\n"
-	.string "TRAINER just like FLANNERY.$"
+	.string "Trainer just like Marriott.$"
 
 LavaridgeTown_Gym_B1F_Text_JaceIntro: @ 81FEE9D
 	.string "Come on, get with it!\n"
@@ -297,7 +297,7 @@ LavaridgeTown_Gym_B1F_Text_JaceDefeat: @ 81FEED5
 LavaridgeTown_Gym_B1F_Text_JacePostBattle: @ 81FEF07
 	.string "The way the battling spirit burns\n"
 	.string "within you, you may stand a chance\l"
-	.string "against our LEADER.$"
+	.string "against our Leader.$"
 
 LavaridgeTown_Gym_B1F_Text_JeffIntro: @ 81FEF60
 	.string "See how the flames blaze wildly?\n"
@@ -321,47 +321,42 @@ LavaridgeTown_Gym_B1F_Text_EliDefeat: @ 81FF05F
 
 LavaridgeTown_Gym_B1F_Text_EliPostBattle: @ 81FF09A
 	.string "I stay here because I became a fan\n"
-	.string "of FLANNERY's power.\p"
+	.string "of Marriott's power.\p"
 	.string "Hehehehe.$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryIntro: @ 81FF0DC
 	.string "Welcome… No, wait.\p"
-	.string "Puny TRAINER, how good to see you've\n"
+	.string "{PLAYER}, how good to see you've\n"
 	.string "made it here!\p"
-	.string "I have been entrusted with the…\n"
-	.string "No, wait.\p"
-	.string "I am FLANNERY, and I'm the GYM\n"
-	.string "LEADER here!\p"
-	.string "Uh…\n"
-	.string "Dare not underestimate me, though\l"
-	.string "I have been LEADER only a short time!\p"
-	.string "With skills inherited from my grand-\n"
-	.string "father, I shall, uh…demonstrate the\l"
-	.string "hot moves we have honed on this land!$"
+	.string "It's me, Marriott, and I'm the Gym\n"
+	.string "Leader here!\p"
+	.string "When I'm not putting away criminals I\n"
+	.string "defend the honor of the WATER BADGE\p"
+	.string "With skills inherited from my law\n"
+	.string "degree, I shall, demonstrate the tidal\l"
+	.string "power of Water!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryDefeat: @ 81FF233
 	.string "Oh…\n"
 	.string "I guess I was trying too hard…\p"
-	.string "I… I've only recently become\n"
-	.string "a Gym Leader.\p"
-	.string "I tried too hard to be someone\n"
-	.string "I'm not.\p"
+	.string "I… I need to put more time into\n"
+	.string "training and less time into Law.\p"
 	.string "I have to do things my natural way. If\n"
 	.string "I don't, my Pokémon will be confused.\p"
 	.string "Thanks for teaching me that.\n"
 	.string "For that, you deserve this.$"
 
 LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge: @ 81FF32F
-	.string "{PLAYER} received the HEAT BADGE\n"
-	.string "from FLANNERY.$"
+	.string "{PLAYER} received the WATER BADGE\n"
+	.string "from Marriott.$"
 
 LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis: @ 81FF359
-	.string "If you have a HEAT BADGE, all Pokémon\n"
+	.string "If you have a WATER BADGE, all Pokémon\n"
 	.string "up to Level 50, even those you get in\l"
 	.string "trades from other people, will obey\l"
 	.string "you completely.\p"
 	.string "And, it lets Pokémon use the HM move\n"
-	.string "STRENGTH outside of battle.\p"
+	.string "Strength outside of battle.\p"
 	.string "This is a token of my appreciation.\n"
 	.string "Don't be shy about taking it!$"
 
@@ -369,42 +364,42 @@ LavaridgeTown_Gym_1F_Text_ExplainOverheat: @ 81FF45C
 	.string "That TM50 contains OVERHEAT.\p"
 	.string "That move inflicts serious damage on\n"
 	.string "the opponent.\p"
-	.string "But it also sharply cuts the SP. ATK\n"
+	.string "But it also sharply cuts the Sp. Atk\n"
 	.string "of the Pokémon using it. It might not\l"
 	.string "be suitable for longer battles.$"
 
 LavaridgeTown_Gym_1F_Text_RegisteredFlannery: @ 81FF517
-	.string "Registered Gym Leader FLANNERY\n"
+	.string "Registered Gym Leader Marriott\n"
 	.string "in the Pokénav.$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryPostBattle: @ 81FF546
 	.string "Your power reminds me of someone…\p"
-	.string "Oh! I know! You battle like NORMAN,\n"
-	.string "the Gym Leader of PETALBURG.$"
+	.string "Oh! I know! You battle like Grant,\n"
+	.string "the Gym Leader of Lynch Park.$"
 
 LavaridgeTown_Gym_1F_Text_GymStatue: @ 81FF5A9
-	.string "Grand Island Pokémon GYM$"
+	.string "Grand Island Pokémon Gym$"
 
 LavaridgeTown_Gym_1F_Text_GymStatueCertified: @ 81FF5C4
-	.string "Grand Island Pokémon GYM\p"
-	.string "FLANNERY'S CERTIFIED Trainers:\n"
+	.string "Grand Island Pokémon Gym\p"
+	.string "Marriott'S Certified Trainers:\n"
 	.string "{PLAYER}$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryPreRematch: @ 81FF601
-	.string "FLANNERY: Losing a battle isn't going\n"
+	.string "Marriott: Losing a battle isn't going\n"
 	.string "to deflate me.\p"
 	.string "I love Pokémon.\n"
 	.string "I love to battle.\l"
-	.string "And… I love this GYM!\p"
-	.string "Let's exchange superhot moves\n"
+	.string "And… I love this Gym!\p"
+	.string "Let's exchange drippin' moves\n"
 	.string "in another battle!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat: @ 81FF69F
 	.string "Whew!\n"
-	.string "On the verge of eruption!$"
+	.string "On the verge of deduction!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryPostRematch: @ 81FF6BF
-	.string "FLANNERY: I lost the match,\n"
+	.string "Marriott: I lost the match,\n"
 	.string "but I'm completely satisfied.\p"
 	.string "It's not often I get to enjoy a battle\n"
 	.string "this heated.\p"
@@ -412,11 +407,11 @@ LavaridgeTown_Gym_1F_Text_FlanneryPostRematch: @ 81FF6BF
 	.string "again sometime!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons: @ 81FF75E
-	.string "FLANNERY: Losing a battle isn't going\n"
+	.string "Marriott: Losing a battle isn't going\n"
 	.string "to deflate me.\p"
 	.string "I love Pokémon.\n"
 	.string "I love to battle.\l"
-	.string "And… I love this GYM!\p"
+	.string "And… I love this Gym!\p"
 	.string "Let's exchange superhot moves\n"
 	.string "in another battle!\p"
 	.string "Oh, wait. Do you only have one Pokémon\n"

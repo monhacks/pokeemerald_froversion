@@ -995,3 +995,14 @@ gTileset_RaintreeIsland_Pokecenter_Interior::
 	.4byte gMetatiles_RaintreeIsland_Pokecenter_Interior
 	.4byte gMetatileAttributes_RaintreeIsland_Pokecenter_Interior
 	.4byte NULL
+
+	.align 2
+gTileset_GrandIslandGym::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_GrandIslandGym
+	.4byte gTilesetPalettes_GrandIslandGym
+	.4byte gMetatiles_GrandIslandGym
+	.4byte gMetatileAttributes_GrandIslandGym
+	.4byte NULL

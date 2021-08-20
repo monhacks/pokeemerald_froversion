@@ -2029,3 +2029,23 @@ gTilesetPalettes_RaintreeIsland_Pokecenter_Interior::
 	.align 2
 gTilesetTiles_RaintreeIsland_Pokecenter_Interior::
 	.incbin "data/tilesets/secondary/raintreeisland_pokecenter_interior/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_GrandIslandGym::
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/grandislandgym/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_GrandIslandGym::
+	.incbin "data/tilesets/secondary/grandislandgym/tiles.4bpp.lz"

@@ -2816,10 +2816,10 @@ const struct Trainer gTrainers[] = {
     [TRAINER_COLE] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_KINDLER,
+        .trainerClass = TRAINER_CLASS_SWIMMER_F,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_KINDLER,
-        .trainerName = _("COLE"),
+        .trainerPic = TRAINER_PIC_SWIMMER_F,
+        .trainerName = _("Cole"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,

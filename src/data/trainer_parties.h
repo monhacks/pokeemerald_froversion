@@ -2454,8 +2454,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Dalton5[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Cole[] = {
     {
     .iv = 100,
-    .lvl = 23,
-    .species = SPECIES_NUMEL,
+    .lvl = 33,
+    .species = SPECIES_STARMIE,
     }
 };
 
@@ -2475,8 +2475,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jeff[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Axle[] = {
     {
     .iv = 100,
-    .lvl = 23,
-    .species = SPECIES_NUMEL,
+    .lvl = 34,
+    .species = SPECIES_SEADRA,
     }
 };
 
@@ -8741,9 +8741,9 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Johanna[] = {
 static const struct TrainerMonNoItemCustomMoves sParty_Gerald[] = {
     {
     .iv = 100,
-    .lvl = 23,
-    .species = SPECIES_KECLEON,
-    .moves = {MOVE_FLAMETHROWER, MOVE_FURY_SWIPES, MOVE_FEINT_ATTACK, MOVE_BIND}
+    .lvl = 33,
+    .species = SPECIES_TENTACRUEL,
+    .moves = {MOVE_SLUDGE_WAVE, MOVE_WRAP, MOVE_TOXIC, MOVE_WHIRLPOOL}
     }
 };
 
@@ -8766,8 +8766,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_Danielle[] = {
     {
     .iv = 100,
     .lvl = 23,
-    .species = SPECIES_MEDITITE,
-    .moves = {MOVE_BIDE, MOVE_DETECT, MOVE_CONFUSION, MOVE_FIRE_PUNCH}
+    .species = SPECIES_POLIWRATH,
+    .moves = {MOVE_BIDE, MOVE_SCALD, MOVE_CONFUSION, MOVE_FIRE_PUNCH}
     }
 };
 

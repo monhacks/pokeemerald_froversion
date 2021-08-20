@@ -4970,6 +4970,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/SummitCaverns1/border.bin",
       "blockdata_filepath": "data/layouts/SummitCaverns1/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRAND_ISLAND_GYM",
+      "name": "GrandIslandGym_Layout",
+      "width": 17,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GrandIslandGym",
+      "border_filepath": "data/layouts/GrandIslandGym/border.bin",
+      "blockdata_filepath": "data/layouts/GrandIslandGym/map.bin"
     }
   ]
 }
