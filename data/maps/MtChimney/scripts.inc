@@ -554,11 +554,11 @@ MtChimney_Text_MeteoriteWillActivateVolcano: @ 822F26A
 	.string "Fufufu…$"
 
 MtChimney_Text_MaxieIntro: @ 822F32E
-	.string "Jerett: Hm?\n"
+	.string "Zendano: Hm?\n"
 	.string "Who are you?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "I'd heard Shawn bemoaning a child\n"
+	.string "I'd heard Paul bemoaning a child\n"
 	.string "who's been meddling in our\l"
 	.string "affairs.\p"
 	.string "It must be you he meant.\p"
@@ -587,19 +587,19 @@ MtChimney_Text_MaxieIntro: @ 822F32E
 
 MtChimney_Text_MaxieDefeat: @ 822F5CF
 	.string "What?!\p"
-	.string "I, Jerett, was caught off guard?!$"
+	.string "I, Zendano, was caught off guard?!$"
 
 MtChimney_Text_MaxieYouHaventSeenLastOfMagma: @ 822F5F7
-	.string "Jerett: But, enough.\n"
+	.string "Zendano: But, enough.\n"
 	.string "I will back off this time.\p"
 	.string "But don't think that this is the last\n"
 	.string "you've seen of Team MAGA.\p"
 	.string "Fufufu…\p"
 	.string "Even without the Team MAGA, if we\n"
-	.string "obtain that ORB… Fufufu…$"
+	.string "obtain that Orb… Fufufu…$"
 
 MtChimney_Text_TabithaIntro: @ 822F6AA
-	.string "Shawn: Hehehe!\p"
+	.string "Paul: Hehehe!\p"
 	.string "So you've come all the way here!\p"
 	.string "But you're too late!\n"
 	.string "We've already delivered the Meteorite\l"
@@ -611,7 +611,7 @@ MtChimney_Text_TabithaDefeat: @ 822F72C
 	.string "succeeds…$"
 
 MtChimney_Text_TabithaPostBattle: @ 822F76D
-	.string "Jerett, hurry!\n"
+	.string "Big Z, hurry!\n"
 	.string "Give it the Meteorite's energy!\p"
 	.string "Hehehe…$"
 
@@ -630,7 +630,7 @@ MtChimney_Text_Grunt2Defeat: @ 822F83A
 	.string "What do you mean I lost?$"
 
 MtChimney_Text_Grunt2PostBattle: @ 822F859
-	.string "Jerett says, “It will make everyone\n"
+	.string "Zendano says, “It will make everyone\n"
 	.string "happy.”\p"
 	.string "But why does everyone keep getting\n"
 	.string "in our way?$"
@@ -692,7 +692,7 @@ MtChimney_Text_ArchieGoStopTeamMagma: @ 822FAD2
 MtChimney_Text_ArchieIHaveMyHandsFull: @ 822FBC7
 	.string "Antfia Leader: Grrr…\p"
 	.string "I want to stop that MAGA Leader,\n"
-	.string "Jerett, but I can't!\p"
+	.string "Zendano, but I can't!\p"
 	.string "Not when I have my hands full battling\n"
 	.string "three opponents at once!$"
 
@@ -706,6 +706,8 @@ MtChimney_Text_ArchieThankYou: @ 822FC3D
 	.string "Ah, it doesn't matter.\p"
 	.string "We will remain vigilant and keep up\n"
 	.string "our pursuit of Team MAGA.\p"
+	.string "I'm Shawn Haseley, by they way.\n"
+	.string "A Leader of Antifa.\p"
 	.string "{PLAYER}, we shall meet again!$"
 
 MtChimney_Text_MagmaOutnumbersUs: @ 822FD1F

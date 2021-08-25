@@ -3014,16 +3014,18 @@ Route120_Text_LorenzoPostBattle: @ 829E8C5
 	.string "That's the joy of being a TRAINER.$"
 
 Route120_Text_JennaIntro: @ 829E91C
-	.string "How's your physical fitness?\n"
-	.string "If you're not fit, you could have a\l"
-	.string "rough time in critical situations.$"
+	.string "Open your closed mind.\n"
+	.string "And close your open mouth.$"
 
 Route120_Text_JennaDefeat: @ 829E980
-	.string "I'm totally fit, but…$"
+	.string "Don't judge until you've taken it\n"
+	.string "in. 'Cause in the end you'll pray to\l"
+	.string "stay above the flames.$"
 
 Route120_Text_JennaPostBattle: @ 829E996
-	.string "Fitness training is in my routine.\n"
-	.string "I always run with my Pokémon.$"
+	.string "Don't judge until you've taken it\n"
+	.string "in. 'Cause in the end you'll pray to\l"
+	.string "stay above the flames.$"
 
 Route120_Text_JeffreyIntro: @ 829E9D7
 	.string "… … … … … …\n"

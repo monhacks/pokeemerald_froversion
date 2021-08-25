@@ -736,8 +736,9 @@ T_LMV_Soldier3CaughtIsiah:
 	.string "Soldier 1: Sir, I... We...\p"
 	.string "Captian: I don't want to hear any \nexcuses. It doesn't matter now, we \lwill just have to detain him \lindefinitely.\p"
 	.string "Isiah: You can't do that! You have \nto let me go!\p"
-	.string "Captain: Quiet vermin!\pStone, Granger, you're relieved of \nyour lookout duties as we are \ldone in this area anyway. \pI want you to take this child back \nto headquarters and have him locked \laway, he can't tell anyone about \lwhat he has seen. \pI'm going to go grab the rest of the \ngear and I'll meet you back at \lheadquarters.\pOh, and don't mess up this time!\p"
-	.string "Stone, Granger: Sir, yes sir!$"
+	.string "Captain: Quiet vermin!\pStone, Bud, you're relieved of \nyour lookout duties as we are \ldone in this area anyway. \pI want you to take this child back \nto headquarters and have him locked \laway, he can't tell anyone about \lwhat he has seen. \pI'm going to go grab the rest of the \ngear and I'll meet you back at \lheadquarters.\pOh, and don't mess up this time!\p"
+	.string "Stone, Granger: Yes sir, Captain\n"
+	.string "Zendano!$"
 
 T_LMV_StartBattleSequence:
 	.string "Granger: Hey kid get out of the way!\nWe are in the middle of something very\limportant!\p...$"

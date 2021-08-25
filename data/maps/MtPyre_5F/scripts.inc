@@ -9,17 +9,14 @@ MtPyre_4F_EventScript_Tasha:: @ 8231C6E
 	end
 
 MtPyre_4F_Text_TashaIntro: @ 8231C85
-	.string "I love all things horrifying…\n"
-	.string "It's like a disease…\p"
-	.string "When I'm here…\n"
-	.string "I shiver with fear…$"
+	.string "The walls of church don't make it\n"
+	.string "holy…$"
 
 MtPyre_4F_Text_TashaDefeat: @ 8231CDB
-	.string "Losing, I dislike…$"
+	.string "Security isn't glitzy or glamorous,\n"
+	.string "concrete or cohesive.$"
 
 MtPyre_4F_Text_TashaPostBattle: @ 8231CEE
-	.string "I want to see dreadful things…\n"
-	.string "I can't leave…\p"
-	.string "Stay…\n"
-	.string "Won't you stay with me?$"
+	.string "Therein lies the truth.\n"
+	.string "Lift your head up high.$"
 

@@ -15,7 +15,7 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "graphics_id": "OBJ_EVENT_GFX_SHAWN_HASELEY",
       "x": 24,
       "y": 19,
       "elevation": 3,
@@ -28,7 +28,7 @@
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_AQUA"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_JERETT",
+      "graphics_id": "OBJ_EVENT_GFX_ZENDANO",
       "x": 13,
       "y": 6,
       "elevation": 3,
@@ -41,7 +41,7 @@
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SHAWN_HASELEY",
+      "graphics_id": "OBJ_EVENT_GFX_HAIGH",
       "x": 12,
       "y": 11,
       "elevation": 3,
@@ -54,7 +54,7 @@
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_2",
       "x": 32,
       "y": 5,
       "elevation": 3,
@@ -67,7 +67,7 @@
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_1",
       "x": 28,
       "y": 12,
       "elevation": 3,
