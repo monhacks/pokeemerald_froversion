@@ -5115,6 +5115,7 @@ static void Task_PartyMenuTryUnlockAbility(u8 taskId)
         do {
             if (GetAbilityLearnsetAbilityLevel(species, num) == level)
             {
+                GetMonNickname(&gPlayerParty[gPartyMenu.slotId], gStringVar1);
                 StringCopy(gStringVar2, gAbilityNames[GetAbilityLearnsetAbility(species, num)]);
                 PlayFanfare(MUS_LEVEL_UP);
                 StringExpandPlaceholders(gStringVar4, gText_UnlockedAbility);
