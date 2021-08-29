@@ -22,6 +22,9 @@ FortreeCity_Gym_EventScript_Winona:: @ 82165C8
 	trainerbattle_single TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaIntro, FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
+	clearflag FLAG_BATTLE_HAUNTING
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	goto_if_eq FortreeCity_Gym_EventScript_WinonaRematch
 	goto_if_unset FLAG_RECEIVED_TM40, FortreeCity_Gym_EventScript_GiveAerialAce2
 	msgbox FortreeCity_Gym_Text_WinonaPostBattle, MSGBOX_DEFAULT
@@ -55,6 +58,9 @@ FortreeCity_Gym_EventScript_WinonaDefeated:: @ 82165FD
 	end
 
 FortreeCity_Gym_EventScript_GiveAerialAce2:: @ 8216646
+	clearflag FLAG_BATTLE_HAUNTING
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	giveitem ITEM_TM40
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull
@@ -64,6 +70,9 @@ FortreeCity_Gym_EventScript_GiveAerialAce2:: @ 8216646
 	end
 
 FortreeCity_Gym_EventScript_GiveAerialAce:: @ 821666A
+	clearflag FLAG_BATTLE_HAUNTING
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	giveitem ITEM_TM40
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_BagIsFull
@@ -73,6 +82,9 @@ FortreeCity_Gym_EventScript_GiveAerialAce:: @ 821666A
 
 FortreeCity_Gym_EventScript_WinonaRematch:: @ 821668D
 	trainerbattle_rematch_double TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
+	clearflag FLAG_BATTLE_HAUNTING
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	msgbox FortreeCity_Gym_Text_WinonaPostRematch, MSGBOX_AUTOCLOSE
 	end
 

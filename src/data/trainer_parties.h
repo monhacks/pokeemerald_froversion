@@ -116,12 +116,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_HaighPetalburgWoods[] = 
 static const struct TrainerMonNoItemDefaultMoves sParty_Marcel[] = {
     {
     .iv = 100,
-    .lvl = 29,
+    .lvl = 51,
     .species = SPECIES_MAGNETON,
     },
     {
     .iv = 100,
-    .lvl = 29,
+    .lvl = 51,
     .species = SPECIES_LUDICOLO,
     }
 };
@@ -4020,7 +4020,7 @@ static const struct TrainerMonItemDefaultMoves sParty_Victoria[] = {
 static const struct TrainerMonItemDefaultMoves sParty_Vanessa[] = {
     {
     .iv = 0,
-    .lvl = 30,
+    .lvl = 51,
     .species = SPECIES_PIKACHU,
     .heldItem = ITEM_ORAN_BERRY
     }

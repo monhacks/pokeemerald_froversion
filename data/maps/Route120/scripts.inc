@@ -321,8 +321,8 @@ Route120_EventScript_Lorenzo:: @ 81F5850
 	end
 
 Route120_EventScript_Jenna:: @ 81F5867
-	trainerbattle_single TRAINER_JENNA, Route120_Text_JennaIntro, Route120_Text_JennaDefeat
-	msgbox Route120_Text_JennaPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_JENNA, Route120_Text_JenniferIntro, Route120_Text_JenniferDefeat
+	msgbox Route120_Text_JenniferPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route120_EventScript_Jeffrey:: @ 81F587E
@@ -348,8 +348,8 @@ Route120_EventScript_RematchJeffrey:: @ 81F58C9
 	end
 
 Route120_EventScript_Jennifer:: @ 81F58E0
-	trainerbattle_single TRAINER_JENNIFER, Route120_Text_JenniferIntro, Route120_Text_JenniferDefeat
-	msgbox Route120_Text_JenniferPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_JENNIFER, Route120_Text_JennaIntro, Route120_Text_JennaDefeat
+	msgbox Route120_Text_JennaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route120_EventScript_Chip:: @ 81F58F7
