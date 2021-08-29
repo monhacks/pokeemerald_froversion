@@ -4276,7 +4276,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && !(gWishFutureKnock.autosubMons[GetBattlerSide(battler)] & gBitTable[gBattlerPartyIndexes[battler]]))
             {
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
-                gBattleScripting.battler = gBattlerAbility = battler;
+                gBattleScripting.battler = gBattlerAttacker = gBattlerAbility = battler;
                 gWishFutureKnock.autosubMons[GetBattlerSide(battler)] |= gBitTable[gBattlerPartyIndexes[battler]];
                 gBattleMons[battler].status2 |= STATUS2_SUBSTITUTE;
                 gBattleMons[battler].status2 &= ~(STATUS2_WRAPPED);

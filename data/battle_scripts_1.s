@@ -8238,7 +8238,7 @@ BattleScript_BerryBoostDeactivatesEnd:
 
 BattleScript_AutosubActivates::
 	call BattleScript_AbilityPopUp
-	playmoveanimation BS_ABILITY_BATTLER, MOVE_SUBSTITUTE
+	playmoveanimation BS_ATTACKER, MOVE_SUBSTITUTE
 	waitanimation
 	printstring STRINGID_AUTOSUB
 	waitmessage 0x40

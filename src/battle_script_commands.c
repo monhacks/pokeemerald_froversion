@@ -8626,7 +8626,8 @@ static void Cmd_various(void)
                     break;
                 if (abilityLevel == level)
                 {
-                    PREPARE_ABILITY_BUFFER(gBattleTextBuff3, GetAbilityLearnsetAbility(species, num));
+                    PREPARE_MON_NICK_BUFFER(gBattleTextBuff1, gActiveBattler, gBattleStruct->expGetterMonId);
+                    PREPARE_ABILITY_BUFFER(gBattleTextBuff2, GetAbilityLearnsetAbility(species, num));
                     PlayFanfare(MUS_LEVEL_UP);
                     gBattlescriptCurrInstr += 7;
                     return;
