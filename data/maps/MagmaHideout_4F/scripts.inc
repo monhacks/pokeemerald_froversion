@@ -62,6 +62,7 @@ MagmaHideout_4F_EventScript_Maxie:: @ 823A560
 	waitmovement 0
 	msgbox MagmaHideout_4F_Text_MaxieOhItWasYou, MSGBOX_DEFAULT
 	closemessage
+	setvar VAR_MUGSHOT_ID, MUGSHOT_ZENDANO
 	trainerbattle_no_intro TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieDefeat
 	msgbox MagmaHideout_4F_Text_MaxieImGoingAfterGroudon, MSGBOX_DEFAULT
 	closemessage
@@ -129,6 +130,7 @@ MagmaHideout_4F_EventScript_Grunt13:: @ 823A6BA
 	end
 
 MagmaHideout_4F_EventScript_Tabitha:: @ 823A6D1
+	setvar VAR_MUGSHOT_ID, MUGSHOT_HAIGH
 	trainerbattle_single TRAINER_TABITHA_MAGMA_HIDEOUT, MagmaHideout_4F_Text_TabithaIntro, MagmaHideout_4F_Text_TabithaDefeat
 	msgbox MagmaHideout_4F_Text_TabithaPostBattle, MSGBOX_AUTOCLOSE
 	end

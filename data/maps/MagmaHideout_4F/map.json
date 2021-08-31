@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_GROUDON_1",
@@ -28,7 +28,7 @@
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_4F_GROUDON_1"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_1",
       "x": 31,
       "y": 22,
       "elevation": 0,
@@ -41,7 +41,7 @@
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_1",
       "x": 30,
       "y": 13,
       "elevation": 0,
@@ -54,7 +54,7 @@
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_2",
       "x": 26,
       "y": 13,
       "elevation": 0,
@@ -67,7 +67,7 @@
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_HAIGH",
       "x": 22,
       "y": 4,
       "elevation": 0,
@@ -80,7 +80,7 @@
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAXIE",
+      "graphics_id": "OBJ_EVENT_GFX_ZENDANO",
       "x": 16,
       "y": 21,
       "elevation": 0,
@@ -135,6 +135,10 @@
       "dest_warp_id": 1
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }
