@@ -127,16 +127,16 @@ Route104_MrBrineysHouse_Text_SetSailForDewford: @ 8229FE9
 
 Route104_MrBrineysHouse_Text_DeclineDeliverySail: @ 822A041
 	.string "K. Trippy: Is that so?\n"
-	.string "Your deliveries can wait?\p"
+	.string "Yo deliveries can wait?\p"
 	.string "You just go on and tell me whenever\n"
-	.string "you want to set sail!$"
+	.string "you want to bounce!$"
 
 Route104_MrBrineysHouse_Text_NeedToMakeDeliveriesSailToDewford: @ 822A0AD
 	.string "K. Trippy: Ahoy!\n"
 	.string "I know exactly what you want to say!\p"
 	.string "You're to deliver a Letter to Raintree\n"
 	.string "and a package to Slateport.\p"
-	.string "What you need me to do is no problem\n"
+	.string "What you need me to do ain't no thang\n"
 	.string "at all--I'm the man for the job!\p"
 	.string "First, we'll set sail for Raintree.$"
 
@@ -145,7 +145,7 @@ Route104_MrBrineysHouse_Text_NeedToDeliverPackageSailToDewford: @ 822A18F
 	.string "I know exactly what you want to say!\p"
 	.string "You're to deliver a package to\n"
 	.string "Capt. Stern in Slateport.\p"
-	.string "What you need me to do is no problem\n"
+	.string "What you need me to do ain't no thang\n"
 	.string "at all--I'm the man for the job!\p"
 	.string "First, we'll set sail for Raintree.$"
 

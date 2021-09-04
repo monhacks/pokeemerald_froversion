@@ -779,6 +779,9 @@ $(OBJEVENTGFXDIR)/people/froversion_trainers/zendano.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/froversion_trainers/lattka.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/froversion_trainers/ktrippy.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 
 
 
