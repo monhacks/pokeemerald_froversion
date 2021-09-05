@@ -262,9 +262,10 @@
 #define OBJ_EVENT_GFX_WASULA                     258
 #define OBJ_EVENT_GFX_WES_THOMPSON               259
 #define OBJ_EVENT_GFX_ZENDANO                    260
+#define OBJ_EVENT_GFX_KTRIPPY                    261
 
 
-#define NUM_OBJ_EVENT_GFX                        261
+#define NUM_OBJ_EVENT_GFX                        262
 
 
 // These are dynamic object gfx ids.

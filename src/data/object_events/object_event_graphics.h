@@ -418,4 +418,5 @@ const u32 gObjectEventPic_WesThompson[] = INCBIN_U32("graphics/object_events/pic
 const u16 gObjectEventPal_WesThompson[] = INCBIN_U16("graphics/object_events/palettes/wes_thompson.gbapal");
 const u32 gObjectEventPic_Zendano[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/zendano.4bpp");
 const u16 gObjectEventPal_Zendano[] = INCBIN_U16("graphics/object_events/palettes/zendano.gbapal");
-
+const u32 gObjectEventPic_Ktrippy[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/ktrippy.4bpp");
+const u16 gObjectEventPal_Ktrippy[] = INCBIN_U16("graphics/object_events/palettes/ktrippy.gbapal");
