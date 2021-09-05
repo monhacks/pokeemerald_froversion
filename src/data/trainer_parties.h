@@ -163,7 +163,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern4[] =
 static const struct TrainerMonNoItemDefaultMoves sParty_Declan[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 61,
     .species = SPECIES_GYARADOS,
     }
 };
@@ -1959,21 +1959,21 @@ static const struct TrainerMonNoItemDefaultMoves sParty_David[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Spencer[] = {
     {
     .iv = 0,
-    .lvl = 33,
+    .lvl = 58,
     .species = SPECIES_TENTACOOL,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_WINGULL,
+    .lvl = 58,
+    .species = SPECIES_OTDORBLE,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Roland[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_CARVANHA,
+    .lvl = 58,
+    .species = SPECIES_OCTIRE,
     }
 };
 
@@ -2114,13 +2114,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Dudley[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Chad[] = {
     {
     .iv = 0,
-    .lvl = 33,
+    .lvl = 58,
     .species = SPECIES_TENTACOOL,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_WAILMER,
+    .lvl = 58,
+    .species = SPECIES_LUDICOLO,
     }
 };
 
@@ -5902,16 +5902,16 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Alice[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Jenny1[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_WAILMER,
+    .lvl = 59,
+    .species = SPECIES_STARMIE,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Grace[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_MARILL,
+    .lvl = 60,
+    .species = SPECIES_AZUMARILL,
     }
 };
 
@@ -7982,7 +7982,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Paxton[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Isabella[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 60,
     .species = SPECIES_STARYU,
     }
 };
@@ -9423,13 +9423,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_ReliAndIan[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_LilaAndRoy1[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 57,
     .species = SPECIES_CHINCHOU,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_CARVANHA,
+    .lvl = 57,
+    .species = SPECIES_SEEL,
     }
 };
 
