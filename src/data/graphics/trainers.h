@@ -315,6 +315,7 @@ const u32 gTrainerFrontPic_ChadAndMark[] = INCBIN_U32("graphics/trainers/front_p
 const u32 gTrainerFrontPic_MagaGruntA[] = INCBIN_U32("graphics/trainers/front_pics/magagrunta_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_MagaGruntB[] = INCBIN_U32("graphics/trainers/front_pics/magagruntb_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_MagaGrunts[] = INCBIN_U32("graphics/trainers/front_pics/magagrunts_front_pic.4bpp.lz");
+const u32 gTrainerFrontPic_Nike[] = INCBIN_U32("graphics/trainers/front_pics/nike_front_pic.4bpp.lz");
 
 const u32 gTrainerPalette_JohnM[] = INCBIN_U32("graphics/trainers/palettes/johnm.gbapal.lz");
 const u32 gTrainerPalette_Wasula[] = INCBIN_U32("graphics/trainers/palettes/wasula.gbapal.lz");
@@ -338,3 +339,4 @@ const u32 gTrainerPalette_ChadAndMark[] = INCBIN_U32("graphics/trainers/palettes
 const u32 gTrainerPalette_MagaGruntA[] = INCBIN_U32("graphics/trainers/palettes/magagrunta.gbapal.lz");
 const u32 gTrainerPalette_MagaGruntB[] = INCBIN_U32("graphics/trainers/palettes/magagruntb.gbapal.lz");
 const u32 gTrainerPalette_MagaGrunts[] = INCBIN_U32("graphics/trainers/palettes/magagrunts.gbapal.lz");
+const u32 gTrainerPalette_Nike[] = INCBIN_U32("graphics/trainers/palettes/nike.gbapal.lz");
