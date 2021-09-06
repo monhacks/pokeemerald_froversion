@@ -5755,7 +5755,14 @@ static const u32 sTutorLearnsets[] =
 [SPECIES_EMBORYPS]           = (0),
 [SPECIES_HUNTORYPS]           = (0),
 [SPECIES_RIPTORYPS]           = (0),
-[SPECIES_SPIRITOMB]           = (0),
+[SPECIES_SPIRITOMB]     =                    (TUTOR(MOVE_DREAM_EATER)
+                                            | TUTOR(MOVE_ENDURE)
+                                            | TUTOR(MOVE_ICY_WIND)
+                                            | TUTOR(MOVE_PSYCH_UP)
+                                            | TUTOR(MOVE_SLEEP_TALK)
+                                            | TUTOR(MOVE_SNORE)
+                                            | TUTOR(MOVE_SUBSTITUTE)
+                                            | TUTOR(MOVE_SWAGGER)),
 [SPECIES_SNOUMESE]           = (0),
 [SPECIES_SNOUBAUL]           = (0),
 [SPECIES_NEVAWOK]           = (0),

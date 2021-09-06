@@ -959,6 +959,30 @@ static const struct AbilitySetter sBillfaloAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sTogekissAbilitySet[] = 
+{
+    {ABILITY_HUSTLE, 1},
+    {ABILITY_SUPER_LUCK, 10},
+    {ABILITY_INFILTRATOR, 35},
+    {ABILITY_SERENE_GRACE, 55},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSpiritombAbilitySet[] = 
+{
+    {ABILITY_PRESSURE, 1},
+    {ABILITY_ARENA_TRAP, 60},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sNevawokAbilitySet[] = 
+{
+    {ABILITY_LIMBER, 1},
+    {ABILITY_QUICK_FEET, 22},
+    {ABILITY_STEADFAST, 46},
+    ABILITY_SET_END
+};
+
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
@@ -1134,7 +1158,9 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_DUMBELLION] = sDumbellionAbilitySet,
     [SPECIES_BARBELLION] = sDumbellionAbilitySet,
     [SPECIES_BILLFALO] = sBillfaloAbilitySet,
-
+    [SPECIES_TOGEKISS] = sTogekissAbilitySet,
+    [SPECIES_SPIRITOMB] = sSpiritombAbilitySet,
+    [SPECIES_NEVAWOK] = sNevawokAbilitySet,
 
 
 
