@@ -2322,14 +2322,14 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
             .accuracy = 0,
         #endif
         .effect = EFFECT_FLASH,
-        .power = 0,
-        .type = TYPE_NORMAL,
+        .power = 40,
+        .type = TYPE_FAIRY,
         .pp = 20,
-        .secondaryEffectChance = 0,
+        .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGIC_COAT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-        .split = SPLIT_STATUS,
+        .split = SPLIT_SPECIAL,
     },
 
     [MOVE_PSYWAVE] =
