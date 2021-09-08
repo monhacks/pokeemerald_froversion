@@ -8182,7 +8182,7 @@ BattleScript_Haunting::
 	waitmessage 0x40
 	handleformchange BS_SCRIPTING, 0
 	handleformchange BS_SCRIPTING, 1
-	playanimation BS_SCRIPTING, B_ANIM_FORM_CHANGE, NULL
+	playanimation BS_OPPONENT1, B_ANIM_FORM_CHANGE, NULL
 	waitanimation
 	handleformchange BS_SCRIPTING, 2
 	healthbarupdate BS_SCRIPTING

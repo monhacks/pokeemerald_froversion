@@ -1126,7 +1126,7 @@ static void Task_IntroFadeIn(u8 taskId)
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG_ALL_ON | DISPCNT_OBJ_ON);
     gTasks[taskId].func = Task_IntroWaterDrops;
     gIntroFrameCounter = 0;
-    m4aSongNumStart(MUS_INTRO);
+    m4aSongNumStart(MUS_FV_INTRO);
     ResetSerial();
 }
 
@@ -1559,6 +1559,7 @@ static void Task_IntroLoadPart3Graphics(u8 taskId)
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG2_ON | DISPCNT_OBJ_ON);
     gTasks[taskId].func = Task_IntroSpinAndZoomPokeball;
     gIntroFrameCounter = 0;
+    //m4aSongNumStart(MUS_INTRO_BATTLE);
     m4aSongNumStart(MUS_INTRO_BATTLE);
 }
 

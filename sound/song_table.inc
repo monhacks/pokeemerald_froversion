@@ -620,6 +620,7 @@ gSongTable:: @ 86B49F0
 	song mus_fv_pimp, 0, 0
 	song mus_fv_team_maga, 0, 0
 	song mus_fv_goodnight, 2, 2
+	song mus_fv_intro, 0, 0
 
 	.align 2
 dummy_song_header: @ 86B5D00

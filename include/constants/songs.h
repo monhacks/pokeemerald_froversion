@@ -552,6 +552,7 @@
 #define MUS_FV_PIMP                            616
 #define MUS_FV_TEAM_MAGA                       617
 #define MUS_FV_GOODNIGHT                       618
+#define MUS_FV_INTRO                           619
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

@@ -3349,6 +3349,14 @@ static void Cmd_clearstatusfromeffect(void)
     gBattleScripting.multihitMoveEffect = 0;
 }
 
+static const struct {
+    u16 species;
+    u16 moves[MAX_MON_MOVES];
+} sFormMoves[] = {
+    { SPECIES_GENGAR, { MOVE_HYPNOSIS, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_CURSE } },
+    { SPECIES_PHOTASM, { MOVE_HYPNOSIS, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_CURSE } },
+};
+
 static void Cmd_tryfaintmon(void)
 {
     const u8 *BS_ptr;
@@ -3396,7 +3404,13 @@ static void Cmd_tryfaintmon(void)
              && evolution->method != EVO_MEGA_EVOLUTION
              && evolution->method != EVO_MOVE_MEGA_EVOLUTION)
             {
+                int i;
                 gBattleMons[gActiveBattler].species = evolution->targetSpecies;
+                for (i = 0; i < ARRAY_COUNT(sFormMoves); i++)
+                {
+                    if (sFormMoves[i].species == evolution->targetSpecies)
+                        memcpy(gBattleMons[gActiveBattler].moves, sFormMoves[i].moves, sizeof(gBattleMons[gActiveBattler].moves));
+                }
                 gBattleMoveDamage = -1000;
                 gBattleScripting.battler = gActiveBattler;
                 BattleScriptPushCursor();
