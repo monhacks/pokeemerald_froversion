@@ -372,6 +372,7 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectMagicMirror
 	.4byte BattleScript_EffectWarriorsSacrifice
 	.4byte BattleScript_EffectRevive
+	.4byte Battlescript_FlashDamage
 
 BattleScript_EffectRevive::
 	attackcanceler
@@ -598,28 +599,8 @@ BattleScript_EffectLandmine:
 
 @ Copied from AccuracyDown.
 BattleScript_EffectFlash:
-	setstatchanger STAT_ACC, 1, TRUE
-	attackcanceler
-	jumpifsubstituteblocks BattleScript_ButItFailedAtkStringPpReduce
-	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
-	attackstring
-	ppreduce
-	statbuffchange STAT_BUFF_ALLOW_PTR, BattleScript_EffectFlashEnd
-	jumpifbyte CMP_LESS_THAN, cMULTISTRING_CHOOSER, 0x2, BattleScript_EffectFlashDoAnim
-	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x3, BattleScript_EffectFlashEnd
-	pause 0x20
-	goto BattleScript_EffectFlashPrintString
-BattleScript_EffectFlashDoAnim:
-	attackanimation
-	waitanimation
-	setgraphicalstatchangevalues
-	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
-BattleScript_EffectFlashPrintString:
-	printfromtable gStatDownStringIds
-	waitmessage 0x40
-BattleScript_EffectFlashEnd:
-	flashdarkness
-	goto BattleScript_MoveEnd
+    setmoveeffect MOVE_EFFECT_ACC_MINUS_1
+    goto Battlescript_FlashDamage
 
 BattleScript_EffectSleepHit:
 	setmoveeffect MOVE_EFFECT_SLEEP
@@ -5702,6 +5683,41 @@ BattleScript_FlashDarkness::
 	printstring STRINGID_FLASHLITUPDARKNESS
 	waitmessage 0x40
 	return
+
+Battlescript_FlashDamage::
+
+BattleScript_FlashHitFromAtkCanceler::
+	attackcanceler
+BattleScript_FlashHitFromAccCheck::
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+BattleScript_FlashHitFromAtkString::
+	attackstring
+	ppreduce
+BattleScript_FlashHitFromCritCalc::
+	critcalc
+	damagecalc
+	adjustdamage
+BattleScript_FlashHitFromAtkAnimation::
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage 0x40
+	resultmessage
+	waitmessage 0x40
+	seteffectwithchance
+	tryfaintmon BS_TARGET, FALSE, NULL
+	trysteelgymrecharge
+BattleScript_FlashMoveReturn::
+	flashdarkness
+	moveendall
+	end
+
+
 
 BattleScript_OverworldWeatherStarts::
 	printfromtable gWeatherStartsStringIds
