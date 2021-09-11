@@ -2419,6 +2419,7 @@ u8 DoBattlerEndTurnEffects(void)
                         gBattleMoveDamage = 1;
                     if (IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_POISON))
                     {
+                        gBattleMoveDamage = min(gBattleMoveDamage, gBattleMons[gActiveBattler].maxHP / 4);
                         gBattleMoveDamage *= -1;
                         if (gBattleMons[gActiveBattler].hp != gBattleMons[gActiveBattler].maxHP)
                         {
