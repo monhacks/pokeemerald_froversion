@@ -459,6 +459,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_WES_THOMPSON            0x1138
 #define OBJ_EVENT_PAL_TAG_ZENDANO                 0x1139
 #define OBJ_EVENT_PAL_TAG_KTRIPPY                 0x113A
+#define OBJ_EVENT_PAL_TAG_FRO                     0x113B
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -528,6 +529,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_WesThompson,           OBJ_EVENT_PAL_TAG_WES_THOMPSON},
     {gObjectEventPal_Zendano,               OBJ_EVENT_PAL_TAG_ZENDANO},
     {gObjectEventPal_Ktrippy,               OBJ_EVENT_PAL_TAG_KTRIPPY},
+    {gObjectEventPal_Fro,                   OBJ_EVENT_PAL_TAG_FRO},
 
     
     {NULL,                                  0x0000},
