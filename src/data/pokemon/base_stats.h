@@ -12817,10 +12817,10 @@ const struct BaseStats gBaseStats[] =
 [SPECIES_NEVAWOK] =
     {
         .baseHP        = 55,
-        .baseAttack    = 61,
+        .baseAttack    = 68,
         .baseDefense   = 58,
         .baseSpeed     = 48,
-        .baseSpAttack  = 68,
+        .baseSpAttack  = 61,
         .baseSpDefense = 51,
         .type1 = TYPE_DARK,
         .type2 = TYPE_GROUND,
@@ -12848,10 +12848,10 @@ const struct BaseStats gBaseStats[] =
 [SPECIES_WOKAGIN] =
     {
         .baseHP        = 89,
-        .baseAttack    = 100,
+        .baseAttack    = 111,
         .baseDefense   = 94,
         .baseSpeed     = 78,
-        .baseSpAttack  = 111,
+        .baseSpAttack  = 100,
         .baseSpDefense = 83,
         .type1 = TYPE_DARK,
         .type2 = TYPE_GROUND,

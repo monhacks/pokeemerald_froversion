@@ -3604,11 +3604,12 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza1[] = {
     .moves = {MOVE_TOXIC, MOVE_CURSE, MOVE_HEAL_BELL, MOVE_MOONLIGHT}
     },
     {
+    .abilityNum = 2,
     .iv = 250,
     .lvl = 65,
     .species = SPECIES_NEVAWOK,
     .heldItem = ITEM_EVIOLITE,
-    .moves = {MOVE_PSYCHIC, MOVE_SUNNY_DAY, MOVE_CONFUSE_RAY, MOVE_CALM_MIND}
+    .moves = {MOVE_DARK_PULSE, MOVE_SUBSTITUTE, MOVE_BLAZE_KICK, MOVE_EARTHQUAKE}
     },
     {
     .abilityNum = 1,
