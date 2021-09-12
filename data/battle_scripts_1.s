@@ -2311,9 +2311,26 @@ BattleScript_HitFromAtkAnimation::
 	seteffectwithchance
 	tryfaintmon BS_TARGET, FALSE, NULL
 	trysteelgymrecharge
+	jumpifmove MOVE_FLY, BattleScript_EffectTailwindFly
 BattleScript_MoveEnd::
 	moveendall
 	end
+
+BattleScript_EffectTailwindFly:
+	setstatchanger STAT_SPEED, 1, FALSE
+	attackcanceler
+	attackstring
+	ppreduce
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_StatUpEndFly
+	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_StatUpPrintString
+	pause 0x20
+	goto BattleScript_StatUpEndFly
+BattleScript_StatUpPrintStringFly::
+	printfromtable gStatUpStringIds
+	waitmessage 0x40
+BattleScript_StatUpEndFly::
+	goto BattleScript_MoveEnd
+
 
 BattleScript_EffectNaturalGift:
 	attackcanceler
