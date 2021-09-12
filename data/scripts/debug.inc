@@ -81,6 +81,7 @@ Debug_Script_2::
 	end
 
 Debug_Script_3::
+	giveitem ITEM_HM08_DIVE, 1
 	end
 
 Debug_Script_4::

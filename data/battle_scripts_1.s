@@ -2312,9 +2312,11 @@ BattleScript_HitFromAtkAnimation::
 	tryfaintmon BS_TARGET, FALSE, NULL
 	trysteelgymrecharge
 	jumpifmove MOVE_FLY, BattleScript_EffectTailwindFly
+	jumpifmove MOVE_DIVE, BattleScript_EffectBatonPassDive
 BattleScript_MoveEnd::
 	moveendall
 	end
+
 
 BattleScript_EffectTailwindFly:
 	setstatchanger STAT_SPEED, 1, FALSE
@@ -4090,6 +4092,38 @@ BattleScript_EffectBatonPass::
 	switchinanim BS_ATTACKER, TRUE
 	waitstate
 	switchineffects BS_ATTACKER
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectBatonPassDive::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifbattletype BATTLE_TYPE_ARENA, BattleScript_ButItFailed
+	jumpifcantswitch SWITCH_IGNORE_ESCAPE_PREVENTION | BS_ATTACKER, BattleScript_ButItFailed
+	openpartyscreen BS_ATTACKER, BattleScript_ButItFailed
+	switchoutabilities BS_ATTACKER
+	waitstate
+	switchhandleorder BS_ATTACKER, 0x2
+	returntoball BS_ATTACKER
+	getswitchedmondata BS_ATTACKER
+	switchindataupdate BS_ATTACKER
+	hpthresholds BS_ATTACKER
+	printstring STRINGID_SWITCHINMON
+	switchinanim BS_ATTACKER, TRUE
+	waitstate
+	switchineffects BS_ATTACKER
+	setstatchanger STAT_DEF, 1, FALSE
+	attackcanceler
+	attackstring
+	ppreduce
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_StatUpEndDive
+	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_StatUpPrintStringDive
+	pause 0x20
+	goto BattleScript_StatUpEndDive
+BattleScript_StatUpPrintStringDive::
+	printfromtable gStatUpStringIds
+	waitmessage 0x40
+BattleScript_StatUpEndDive::
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectRapidSpin::
