@@ -76,9 +76,12 @@ Debug_Script_1::
 	end
 
 Debug_Script_2::
+	givecustommon SPECIES_NOCTOWL,42, ITEM_SITRUS_BERRY, ITEM_POKE_BALL, NATURE_NAIVE,1,61,54,50,52,51,56,16,16,16,16,16,16, MOVE_FLY, MOVE_TAILWIND, MOVE_CUT, MOVE_STRENGTH, 
+	warpsilent MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F, 0, 6, 9
 	end
 
 Debug_Script_3::
+	giveitem ITEM_HM08_DIVE, 1
 	end
 
 Debug_Script_4::

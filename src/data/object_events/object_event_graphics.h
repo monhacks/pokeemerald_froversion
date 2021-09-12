@@ -420,3 +420,4 @@ const u32 gObjectEventPic_Zendano[] = INCBIN_U32("graphics/object_events/pics/pe
 const u16 gObjectEventPal_Zendano[] = INCBIN_U16("graphics/object_events/palettes/zendano.gbapal");
 const u32 gObjectEventPic_Ktrippy[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/ktrippy.4bpp");
 const u16 gObjectEventPal_Ktrippy[] = INCBIN_U16("graphics/object_events/palettes/ktrippy.gbapal");
+const u16 gObjectEventPal_Fro[] = INCBIN_U16("graphics/object_events/palettes/fro.gbapal");
