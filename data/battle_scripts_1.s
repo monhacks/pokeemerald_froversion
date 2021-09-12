@@ -2319,18 +2319,13 @@ BattleScript_MoveEnd::
 
 
 BattleScript_EffectTailwindFly:
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_ATK | BIT_DEF, 0x0
 	setstatchanger STAT_SPEED, 1, FALSE
-	attackcanceler
-	attackstring
-	ppreduce
-	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_StatUpEndFly
-	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_StatUpPrintString
-	pause 0x20
-	goto BattleScript_StatUpEndFly
-BattleScript_StatUpPrintStringFly::
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, NULL
 	printfromtable gStatUpStringIds
 	waitmessage 0x40
-BattleScript_StatUpEndFly::
+	switchineffects BS_ATTACKER
 	goto BattleScript_MoveEnd
 
 
@@ -4112,13 +4107,13 @@ BattleScript_EffectBatonPassDive::
 	switchinanim BS_ATTACKER, TRUE
 	waitstate
 	switchineffects BS_ATTACKER
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_ATTACKER, BIT_ATK | BIT_DEF, 0x0
 	setstatchanger STAT_DEF, 1, FALSE
-	attackcanceler
-	attackstring
-	ppreduce
-	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_StatUpEndDive
-	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_StatUpPrintStringDive
-	pause 0x20
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, NULL
+	printfromtable gStatUpStringIds
+	waitmessage 0x40
+	switchineffects BS_ATTACKER
 	goto BattleScript_StatUpEndDive
 BattleScript_StatUpPrintStringDive::
 	printfromtable gStatUpStringIds
@@ -8231,11 +8226,12 @@ BattleScript_AnnounceRoulette::
 BattleScript_Haunting::
 	printstring STRINGID_ACTIVEFAINTED
 	waitmessage 0x40
-	handleformchange BS_SCRIPTING, 0
-	handleformchange BS_SCRIPTING, 1
-	playanimation BS_OPPONENT1, B_ANIM_FORM_CHANGE, NULL
+	handleformchange BS_TARGET, 0
+	handleformchange BS_TARGET, 1
+	spriteignore0hp TRUE
+	playanimation BS_TARGET, B_ANIM_ILLUSION_OFF, NULL
 	waitanimation
-	handleformchange BS_SCRIPTING, 2
+	handleformchange BS_TARGET, 2
 	healthbarupdate BS_SCRIPTING
 	datahpupdate BS_SCRIPTING
 	printstring STRINGID_HAUNTING

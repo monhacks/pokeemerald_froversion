@@ -85,6 +85,7 @@ Debug_Script_3::
 	end
 
 Debug_Script_4::
+	setflag FLAG_BATTLE_HAUNTING
 	end
 
 Debug_Script_5::
