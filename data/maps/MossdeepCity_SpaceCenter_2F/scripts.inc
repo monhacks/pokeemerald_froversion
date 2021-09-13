@@ -384,7 +384,7 @@ MossdeepCity_SpaceCenter_2F_Text_MossdeepIdealForRockets: @ 82241A1
 	.string "rockets.$"
 
 MossdeepCity_SpaceCenter_2F_Text_WhyWouldMagmaStealRocketFuel: @ 822420C
-	.string "Why would TEAM MAGMA want to steal\n"
+	.string "Why would Team MAGA want to steal\n"
 	.string "our rocket fuel in the first place?$"
 
 MossdeepCity_SpaceCenter_2F_Text_WouldveLikedToBeAstronaut: @ 8224253
@@ -394,7 +394,7 @@ MossdeepCity_SpaceCenter_2F_Text_WouldveLikedToBeAstronaut: @ 8224253
 	.string "I can and will try!$"
 
 MossdeepCity_SpaceCenter_2F_Text_MagmaCantGetAwayWithThis: @ 82242C5
-	.string "If TEAM MAGMA takes the rocket fuel,\n"
+	.string "If Team MAGA takes the rocket fuel,\n"
 	.string "I won't be able to go to space!\p"
 	.string "They can't be allowed to get away\n"
 	.string "with such an outrage!$"
@@ -404,7 +404,7 @@ MossdeepCity_SpaceCenter_2F_Text_WishOrdinaryPeopleCouldGoIntoSpace: @ 8224342
 	.string "space one day…$"
 
 MossdeepCity_SpaceCenter_2F_Text_DoesMagmaWantToGoToSpace: @ 8224376
-	.string "TEAM MAGMA…\n"
+	.string "Team MAGA…\n"
 	.string "Do they want to go to space, too?$"
 
 MossdeepCity_SpaceCenter_2F_Text_YoureOutnumberedTakeUsOn: @ 82243A4
@@ -460,33 +460,33 @@ MossdeepCity_SpaceCenter_2F_Text_WellTakeCareOfYou: @ 82245D9
 	.string "we'll take care of you at the same time!$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieDontInterfere: @ 822467B
-	.string "MAXIE: Clear out of the way!\n"
+	.string "Zendano: Clear out of the way!\n"
 	.string "Don't you dare interfere!$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenWhyStealRocketFuel: @ 82246B2
-	.string "STEVEN: TEAM MAGMA…\p"
+	.string "Steven: Team MAGA…\p"
 	.string "What's the point of stealing rocket\n"
 	.string "fuel?$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieUseFuelToEruptVolcano: @ 82246F0
-	.string "MAXIE: Fufufu… Since you're so\n"
+	.string "Zendano: Fufufu… Since you're so\n"
 	.string "curious, you deserve an explanation.\p"
 	.string "We're going to jettison the entire\n"
-	.string "load into MT. CHIMNEY!\p"
-	.string "With GROUDON gone, we have no need\n"
+	.string "load into Mt. Lancelot!\p"
+	.string "With RED EYES gone, we have no need\n"
 	.string "for that slag heap of a mountain!\p"
 	.string "So we'll use the fuel's power to make\n"
 	.string "the volcano erupt!\p"
 	.string "It will be savage!$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle: @ 82247FF
-	.string "STEVEN: {PLAYER}{KUN}!\n"
+	.string "Steven: {PLAYER}{KUN}!\n"
 	.string "You're going to help me?\p"
 	.string "Let's go into battle together!\n"
 	.string "Are you ready?$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly: @ 8224854
-	.string "STEVEN: Then, hurry!\n"
+	.string "Steven: Then, hurry!\n"
 	.string "Get ready quickly!$"
 
 MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand: @ 822487C
@@ -497,28 +497,28 @@ MossdeepCity_SpaceCenter_Text_TabithaDefeat: @ 82248AD
 	.string "I'm with our leader…$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided: @ 82248C2
-	.string "MAXIE: We failed to make the volcano\n"
+	.string "Zendano: We failed to make the volcano\n"
 	.string "erupt…\p"
-	.string "We failed to control GROUDON after\n"
+	.string "We failed to control RED EYES after\n"
 	.string "we had awoken it…\p"
-	.string "Is our goal to expand the land\n"
+	.string "Is our goal to expand America\n"
 	.string "misguided?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "If…\n"
-	.string "If we, TEAM MAGMA, are wrong…\l"
+	.string "If we, Team MAGA, are wrong…\l"
 	.string "… … … … … …\p"
-	.string "Then might TEAM AQUA's goal to expand\n"
-	.string "the sea also be equally misguided?$"
+	.string "Then might Antifa's objectives\n"
+	.string "also be equally misguided?$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp: @ 82249DC
-	.string "MAXIE: All right…\n"
+	.string "Zendano: All right…\n"
 	.string "We will give up on the fuel…\p"
 	.string "There appear to be more important\n"
 	.string "matters that I must examine…$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenThankYouComeSeeMeAtHome: @ 8224A4A
-	.string "STEVEN: Whew, that was too tense.\n"
+	.string "Steven: Whew, that was too tense.\n"
 	.string "{PLAYER}{KUN}, thank you.\p"
 	.string "I have something to give you as\n"
 	.string "thanks for your support.\p"
