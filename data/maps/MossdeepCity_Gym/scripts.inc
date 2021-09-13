@@ -49,6 +49,10 @@ MossdeepCity_Gym_EventScript_SetSwitch4Metatiles:: @ 8220885
 	end
 
 MossdeepCity_Gym_EventScript_TateAndLiza:: @ 8220898
+	setflag	FLAG_BATTLE_DARKNESS
+	setflag FLAG_SYS_NO_BAG_USE
+	setflag FLAG_FORCE_BATTLE_STYLE_SET
+	setvar VAR_MUGSHOT_ID, MUGSHOT_WES_THOMPSON
 	trainerbattle_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaIntro, MossdeepCity_Gym_Text_TateAndLizaDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, MossdeepCity_Gym_EventScript_TateAndLizaDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
@@ -59,6 +63,7 @@ MossdeepCity_Gym_EventScript_TateAndLiza:: @ 8220898
 	end
 
 MossdeepCity_Gym_EventScript_TateAndLizaDefeated:: @ 82208D1
+	call DewfordTown_Gym_EventScript_AnimateFlashFullBrightness
 	message MossdeepCity_Gym_Text_ReceivedMindBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -370,7 +375,7 @@ MossdeepCity_Gym_EventScript_RedFloorSwitch:: @ 8220CBF
 MossdeepCity_Gym_Text_GymGuideAdvice: @ 8220CD5
 	.string "Yo, how's it going, Champion-bound\n"
 	.string "{PLAYER}?\p"
-	.string "The Gym LeaderS here use\n"
+	.string "The Gym Leaders here use\n"
 	.string "PSYCHIC-type Pokémon.\p"
 	.string "If you go up against them with\n"
 	.string "FIGHTING- or POISON-type Pokémon,\l"
