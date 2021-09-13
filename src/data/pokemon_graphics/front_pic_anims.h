@@ -5067,13 +5067,13 @@ static const union AnimCmd sAnim_FILLER_1_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_2_1[] = 
+static const union AnimCmd sAnim_MAROWAK_ALOLAN_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_3_1[] = 
+static const union AnimCmd sAnim_CONTRARAM_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
@@ -7634,13 +7634,13 @@ static const union AnimCmd *const sAnims_REDEYES[] ={
     sAnim_GeneralFrame0,
     sAnim_FILLER_1_1,
 };
-static const union AnimCmd *const sAnims_FILLER_2[] ={
+static const union AnimCmd *const sAnims_MAROWAK_ALOLAN[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_2_1,
+    sAnim_MAROWAK_ALOLAN_1,
 };
-static const union AnimCmd *const sAnims_FILLER_3[] ={
+static const union AnimCmd *const sAnims_CONTRARAM[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_3_1,
+    sAnim_CONTRARAM_1,
 };
 static const union AnimCmd *const sAnims_FILLER_4[] ={
     sAnim_GeneralFrame0,
@@ -8295,8 +8295,8 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(DRACASTER),
     ANIM_CMD(BLUE_EYES),
     ANIM_CMD(REDEYES),
-    ANIM_CMD(FILLER_2),
-    ANIM_CMD(FILLER_3),
+    ANIM_CMD(MAROWAK_ALOLAN),
+    ANIM_CMD(CONTRARAM),
     ANIM_CMD(FILLER_4),
     ANIM_CMD(FILLER_5),
     ANIM_CMD(FILLER_6),

@@ -3417,19 +3417,19 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     .abilityNum = 1
     },
     {
-    .iv = 100,
-    .lvl = 20,
-    .species = SPECIES_NUMEL,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_EARTH_POWER, MOVE_FLAME_BURST, MOVE_GROWTH, MOVE_AMNESIA},
-    .abilityNum = 1
-    },
-    {
     .iv = 125,
-    .lvl = 22,
+    .lvl = 21,
     .species = SPECIES_BOWLAST,
     .heldItem = ITEM_LIECHI_BERRY,
     .moves = {MOVE_AIR_CUTTER, MOVE_LAVA_PLUME, MOVE_ROOST, MOVE_SELF_DESTRUCT},
+    .abilityNum = 1
+    },
+    {
+    .iv = 100,
+    .lvl = 20,
+    .species = SPECIES_CONTRARAM,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_FLAME_CHARGE, MOVE_HORN_ATTACK, MOVE_AURORA_VEIL, MOVE_GROWL},
     .abilityNum = 1
     }
 };

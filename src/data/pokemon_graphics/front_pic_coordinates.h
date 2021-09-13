@@ -2420,12 +2420,12 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_2] =
+    [SPECIES_MAROWAK_ALOLAN] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_3] =
+    [SPECIES_CONTRARAM] =
     {
         .size = 0x88,
         .y_offset = 0x00,

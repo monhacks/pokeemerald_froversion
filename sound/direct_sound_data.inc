@@ -2304,11 +2304,11 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
     Cry_Filler_1::
 	.incbin "sound/direct_sound_samples/cries/redeyes.bin"
 .align 2
-    Cry_Filler_2::
-	.incbin "sound/direct_sound_samples/cries/filler_2.bin"
+    Cry_Marowak_Alolan::
+	.incbin "sound/direct_sound_samples/cries/marowak_alolan.bin"
 .align 2
-    Cry_Filler_3::
-	.incbin "sound/direct_sound_samples/cries/filler_3.bin"
+    Cry_Contraram::
+	.incbin "sound/direct_sound_samples/cries/contraram.bin"
 .align 2
     Cry_Filler_4::
 	.incbin "sound/direct_sound_samples/cries/filler_4.bin"
