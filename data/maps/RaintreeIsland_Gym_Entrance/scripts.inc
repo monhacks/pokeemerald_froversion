@@ -8,7 +8,14 @@
 
 
 RaintreeIsland_Gym_Entrance_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, RaintreeIsland_PokemonCenter_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
+
+RaintreeIsland_PokemonCenter_1F_OnTransition: @ 81FC52E
+	setrespawn HEAL_LOCATION_RAINTREE_ISLAND
+	call Common_EventScript_UpdateBrineyLocation
+	end
 
 
 ////////////////////////////////////
