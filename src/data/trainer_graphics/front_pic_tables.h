@@ -116,6 +116,7 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_MAGA_GRUNTS] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_MARRIOTT] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_NIKE] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_ANTIFA_GRUNT] = {.size = 8, .y_offset = 1},
 
 
 
@@ -244,6 +245,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(MAGA_GRUNT_B, gTrainerFrontPic_MagaGruntB, 0x800),
     TRAINER_SPRITE(MAGA_GRUNTS, gTrainerFrontPic_MagaGrunts, 0x800),
     TRAINER_SPRITE(NIKE, gTrainerFrontPic_Nike, 0x800),
+    TRAINER_SPRITE(ANTIFA_GRUNT, gTrainerFrontPic_AntifaGrunt, 0x800),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -366,4 +368,5 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(MAGA_GRUNT_B, gTrainerPalette_MagaGruntB),
     TRAINER_PAL(MAGA_GRUNTS, gTrainerPalette_MagaGrunts),
     TRAINER_PAL(NIKE, gTrainerPalette_Nike),
+    TRAINER_PAL(ANTIFA_GRUNT, gTrainerPalette_AntifaGrunt),
 };

@@ -3619,6 +3619,7 @@ extern const u32 gTrainerFrontPic_MagaGruntA[];
 extern const u32 gTrainerFrontPic_MagaGruntB[];
 extern const u32 gTrainerFrontPic_MagaGrunts[];
 extern const u32 gTrainerFrontPic_Nike[];
+extern const u32 gTrainerFrontPic_AntifaGrunt[];
 
 extern const u32 gTrainerPalette_JohnM[];
 extern const u32 gTrainerPalette_Wasula[];
@@ -3643,6 +3644,7 @@ extern const u32 gTrainerPalette_MagaGruntA[];
 extern const u32 gTrainerPalette_MagaGruntB[];
 extern const u32 gTrainerPalette_MagaGrunts[];
 extern const u32 gTrainerPalette_Nike[];
+extern const u32 gTrainerPalette_AntifaGrunt[];
 
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];

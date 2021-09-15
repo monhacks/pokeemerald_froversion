@@ -138,6 +138,7 @@
 #define TRAINER_PIC_MAGA_GRUNT_B          115
 #define TRAINER_PIC_MAGA_GRUNTS           116
 #define TRAINER_PIC_NIKE                  117
+#define TRAINER_PIC_ANTIFA_GRUNT          118
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1
