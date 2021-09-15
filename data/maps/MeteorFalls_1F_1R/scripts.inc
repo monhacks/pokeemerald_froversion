@@ -263,7 +263,7 @@ MeteorFalls_1F_1R_Text_BeSeeingYouTeamAqua: @ 822C04E
 	.string "{PLAYER}!$"
 
 MeteorFalls_1F_1R_Text_ArchieSeenYouBefore: @ 822C11C
-	.string "Shawn: Didn't I see you before?\n"
+	.string "Zendano: Didn't I see you before?\n"
 	.string "At Slateport's Museum?\p"
 	.string "Ah, so your name is {PLAYER}.\p"
 	//.string "At the time, I thought you were one\n"
@@ -283,17 +283,17 @@ MeteorFalls_1F_1R_Text_ArchieSeenYouBefore: @ 822C11C
 	//.string "the sea-loving Team MAGA!$"
 
 MeteorFalls_1F_1R_Text_BossWeShouldChaseMagma: @ 822C268
-	.string "Shawn, we should leave this sheep\n"
+	.string "Zendano, we should leave this sheep\n"
 	.string "and head to Mt. Lancelot...$"
 
 MeteorFalls_1F_1R_Text_ArchieYesNoTellingWhatMagmaWillDo: @ 822C292
-	.string "Shawn: Yes, yes, we must!\n"
+	.string "Zendano: Yes, yes, we must!\n"
 	.string "We've got to hurry.\p"
 	.string "We must see if everything is going according\n"
 	.string "to plan at Mt. Lancelot!$"
 
 MeteorFalls_1F_1R_Text_ArchieFarewell: @ 822C2FC
-	.string "Shawn: {PLAYER}, you would be\n"
+	.string "Zendano: {PLAYER}, you would be\n"
 	.string "wise to not follow us.\p"
 	.string "Farewell!$"
 
