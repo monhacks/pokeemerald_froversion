@@ -950,6 +950,8 @@ static void UpdateAshFieldEffect_Step2(struct Sprite *sprite)
         FieldEffectStop(sprite, FLDEFF_ASH);
 }
 
+#define OBJ_EVENT_PAL_TAG_BRENDAN                 0x1100
+
 u32 FldEff_SurfBlob(void)
 {
     u8 spriteId;
@@ -961,6 +963,8 @@ u32 FldEff_SurfBlob(void)
     {
         sprite = &gSprites[spriteId];
         sprite->coordOffsetEnabled = TRUE;
+        LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN);
+        sprite->oam.paletteNum = IndexOfSpritePaletteTag(OBJ_EVENT_PAL_TAG_BRENDAN);
         sprite->data[2] = gFieldEffectArguments[2];
         sprite->data[3] = -1;
         sprite->data[6] = -1;
