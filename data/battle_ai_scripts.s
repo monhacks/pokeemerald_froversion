@@ -132,7 +132,7 @@ AI_CheckBadMove_CheckEffect: @ 82DC045
 	if_effect EFFECT_FOCUS_ENERGY, AI_CBM_FocusEnergy
 	if_effect EFFECT_CONFUSE, AI_CBM_Confuse
 	if_effect EFFECT_ATTACK_UP_2, AI_CBM_AttackUp
-	if_effect EFFECT_DEFENSE_UP_2, AI_CBM_DefenseUp
+	//if_effect EFFECT_DEFENSE_UP_2, AI_CBM_DefenseUp
 	if_effect EFFECT_SPEED_UP_2, AI_CBM_SpeedUp
 	if_effect EFFECT_SPECIAL_ATTACK_UP_2, AI_CBM_SpAtkUp
 	if_effect EFFECT_SPECIAL_DEFENSE_UP_2, AI_CBM_SpDefUp
@@ -270,8 +270,19 @@ AI_CheckBadMove_CheckEffect: @ 82DC045
 	if_effect EFFECT_MAGIC_ROOM, AI_CBM_MagicRoom
 	if_effect EFFECT_SOAK, AI_CBM_Soak
 	if_effect EFFECT_LOCK_ON, AI_CBM_LockOn
+	if_effect EFFECT_DEFENSE_UP_2, AI_CBM_Defense_Up_2
 	end
 	
+AI_CBM_Defense_Up_2:
+	if_stat_level_equal AI_USER, STAT_DEF, 7, Score_Minus3
+	if_stat_level_equal AI_USER, STAT_DEF, 8, Score_Minus5
+	if_stat_level_equal AI_USER, STAT_DEF, 9, Score_Minus5
+	if_stat_level_equal AI_USER, STAT_DEF, 10, Score_Minus8
+	if_stat_level_equal AI_USER, STAT_DEF, 11, Score_Minus10
+	if_stat_level_equal AI_USER, STAT_DEF, 12, Score_Minus30
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus15
+	end
+
 AI_CBM_LockOn:
 	if_status3 AI_TARGET, STATUS3_ALWAYS_HITS, Score_Minus10
 	if_ability AI_TARGET, ABILITY_NO_GUARD, Score_Minus10
@@ -571,14 +582,17 @@ AI_CBM_AttackUp: @ 82DC348
 	end
 
 AI_CBM_DefenseUp: @ 82DC351
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_USER, STAT_DEF, MAX_STAT_STAGE, Score_Minus10
 	end
 
 AI_CBM_SpeedUp: @ 82DC35A
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_USER, STAT_SPEED, MAX_STAT_STAGE, Score_Minus10
 	end
 
 AI_CBM_SpAtkUp: @ 82DC363
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_USER, STAT_SPATK, 12, Score_Minus10
 	@ Do not raise sp. attack if has no special moves
 	if_has_move_with_effect AI_USER, EFFECT_BATON_PASS, AI_Ret
@@ -586,49 +600,59 @@ AI_CBM_SpAtkUp: @ 82DC363
 	end
 
 AI_CBM_SpDefUp: @ 82DC36C
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_USER, STAT_SPDEF, MAX_STAT_STAGE, Score_Minus10
 	end
 
 AI_CBM_AccUp: @ 82DC375
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_USER, STAT_ACC, MAX_STAT_STAGE, Score_Minus10
 	end
 
-AI_CBM_EvasionUp: @ 82DC37E
+AI_CBM_EvasionUp: @ 82DC37E	
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_USER, STAT_EVASION, MAX_STAT_STAGE, Score_Minus10
 	end
 
 AI_CBM_AttackDown: @ 82DC387
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_TARGET, STAT_ATK, MIN_STAT_STAGE, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_HYPER_CUTTER, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_DefenseDown: @ 82DC39C
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_TARGET, STAT_DEF, 0, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_BIG_PECKS, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_SpeedDown: @ 82DC3A9
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_TARGET, STAT_SPEED, MIN_STAT_STAGE, Score_Minus10
 	if_ability AI_TARGET, ABILITY_SPEED_BOOST, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_SpAtkDown: @ 82DC3BF
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_TARGET, STAT_SPATK, MIN_STAT_STAGE, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_SpDefDown: @ 82DC3CC
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_TARGET, STAT_SPDEF, MIN_STAT_STAGE, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_AccDown: @ 82DC3D9
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_TARGET, STAT_ACC, MIN_STAT_STAGE, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_KEEN_EYE, Score_Minus10
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_EvasionDown: @ 82DC3EE
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus10
 	if_stat_level_equal AI_TARGET, STAT_EVASION, MIN_STAT_STAGE, Score_Minus10
 
 CheckIfAbilityBlocksStatChange: @ 82DC3F6
@@ -731,6 +755,8 @@ AI_CBM_Paralyze: @ 82DC545
 	end
 
 AI_CBM_Substitute: @ 82DC568
+	is_first_turn_for AI_USER
+	if_equal 1, Score_Plus15
 	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Minus8
 	if_hp_less_than AI_USER, 26, Score_Minus10
 	end
@@ -987,6 +1013,14 @@ Score_Plus5:
 
 Score_Plus10:
 	score +10
+	end
+
+Score_Plus15:
+	score +15
+	end
+
+Score_Plus8:
+	score +8
 	end
 	
 @ omae wa mou shindeiru
@@ -2190,12 +2224,12 @@ AI_CV_Substitute1:
 	score -1
 AI_CV_Substitute2:
 	if_random_less_than 100, AI_CV_Substitute3
-	score -1
+	score -3
 AI_CV_Substitute3:
 	if_random_less_than 100, AI_CV_Substitute4
 	score -1
 AI_CV_Substitute4:
-	if_target_faster AI_CV_Substitute_End
+	if_target_faster AI_CV_Substitute_Target_Faster
 	get_last_used_bank_move AI_TARGET
 	get_move_effect_from_result
 	if_equal EFFECT_SLEEP, AI_CV_Substitute5
@@ -2205,6 +2239,7 @@ AI_CV_Substitute4:
 	if_equal EFFECT_WILL_O_WISP, AI_CV_Substitute5
 	if_equal EFFECT_CONFUSE, AI_CV_Substitute6
 	if_equal EFFECT_LEECH_SEED, AI_CV_Substitute7
+	score +13
 	goto AI_CV_Substitute_End
 AI_CV_Substitute5:
 	if_not_status AI_TARGET, STATUS1_ANY, AI_CV_Substitute8
@@ -2219,6 +2254,10 @@ AI_CV_Substitute8:
 	score +1
 AI_CV_Substitute_End:
 	end
+AI_CV_Substitute_Target_Faster:
+	score -6
+	end
+
 
 AI_CV_Recharge:
 	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_Recharge_ScoreDown1
@@ -2679,6 +2718,8 @@ AI_CV_BatonPass11:
 	if_hp_less_than AI_USER, 70, AI_CV_BatonPass_Last
 	goto AI_CV_BatonPass_ScoreDown2
 AI_CV_BatonPass_ScoreDown2:
+	get_last_used_bank_move AI_USER
+	if_equal_u32 MOVE_ACID_ARMOR, Score_Plus8
 	score -2
 	end
 AI_CV_BatonPass_Last:
@@ -3634,12 +3675,14 @@ AI_PreferBatonPass:
 AI_PreferBatonPass2:
 	get_turn_count
 	if_equal 0, Score_Plus5
-	if_hp_less_than AI_USER, 60, Score_Minus10
+	if_hp_less_than AI_USER, 75, Score_Minus10
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus5
 	goto Score_Plus1
 AI_PreferBatonPass3:
 	get_last_used_bank_move AI_USER
 	if_in_hwords sMovesTable_ProtectMoves, Score_Minus2
 	score +2
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus5
 	end
 AI_PreferBatonPass_EncourageIfHighStats:
 	get_turn_count
@@ -3650,6 +3693,7 @@ AI_PreferBatonPass_EncourageIfHighStats:
 	if_stat_level_more_than AI_USER, STAT_SPATK, DEFAULT_STAT_STAGE + 2, Score_Plus3
 	if_stat_level_more_than AI_USER, STAT_SPATK, DEFAULT_STAT_STAGE + 1, Score_Plus2
 	if_stat_level_more_than AI_USER, STAT_SPATK, DEFAULT_STAT_STAGE, Score_Plus1
+	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus5
 	end
 AI_PreferBatonPassEnd:
 	end

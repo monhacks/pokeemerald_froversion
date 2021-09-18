@@ -3476,7 +3476,8 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     .lvl = 34,
     .species = SPECIES_VAPOREON,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_SUBSTITUTE, MOVE_WISH, MOVE_BATON_PASS, MOVE_WATER_PULSE}
+    .moves = {MOVE_SUBSTITUTE, MOVE_ACID_ARMOR, MOVE_BATON_PASS, MOVE_WATER_PULSE},
+    .evs = {252, 0, 252, 0, 0, 4}
     },
     {
     .abilityNum = 1,    

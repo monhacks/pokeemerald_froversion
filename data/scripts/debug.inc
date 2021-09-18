@@ -94,6 +94,7 @@ Debug_Script_5::
 	end
 
 Debug_Script_6::
+	cleartrainerflag TRAINER_FLANNERY_1
 	end
 
 Debug_Script_7::
