@@ -17,7 +17,7 @@ static const u8 sMapName_LilycoveCity[] = _("Fashion Outlets");
 static const u8 sMapName_MossdeepCity[] = _("Ward City");
 static const u8 sMapName_SootopolisCity[] = _("Homestead Town");
 static const u8 sMapName_EverGrandeCity[] = _("Scranton");
-static const u8 sMapName_Route101[] = _("Route 101");
+static const u8 sMapName_Route101[] = _("Lake Mead");
 static const u8 sMapName_Route102[] = _("Route 102");
 static const u8 sMapName_Route103[] = _("Route 103");
 static const u8 sMapName_Route104[] = _("Route 104");
@@ -200,7 +200,7 @@ static const u8 sMapName_DesertUnderpass[] = _("DESERT UNDERPASS");
 static const u8 sMapName_TrainerHill[] = _("TRAINER HILL");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
-    [MAPSEC_LAKE_MEAD_VILLAGE]            = { 4, 11, 1, 1, sMapName_LakeMeadVillage},
+    [MAPSEC_LAKE_MEAD_VILLAGE]          = { 4, 11, 1, 1, sMapName_LakeMeadVillage},
     [MAPSEC_OLDALE_TOWN]                = { 4,  9, 1, 1, sMapName_OldaleTown},
     [MAPSEC_DEWFORD_TOWN]               = { 2, 14, 1, 1, sMapName_DewfordTown},
     [MAPSEC_LAVARIDGE_TOWN]             = { 5,  3, 1, 1, sMapName_LavaridgeTown},

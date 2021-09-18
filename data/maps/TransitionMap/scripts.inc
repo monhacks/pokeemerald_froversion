@@ -17,7 +17,8 @@ Script_TransitionMap_HidePlayerForMagaCutscene:
 
 Script_TransitionMap_MagaCaveCutscene:
 	lockall
-	delay 30
+	special ShowMapNamePopup
+	delay 210
 	applymovement 3, M_Grunt1FacesGrunt2
 	applymovement 4, M_Grunt2FacesGrunt1
 	waitmovement 4

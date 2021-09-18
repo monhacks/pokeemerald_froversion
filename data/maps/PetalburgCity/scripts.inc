@@ -790,9 +790,12 @@ PetalburgCity_Text_ImLookingForTalentedTrainers: @ 81DCC09
 ////////////////
 
 PetalburgCity_EventScript_WarpToMagaCutscene::
-lock
+lockall
 setvar VAR_PETALBURG_CITY_STATE, 6
 warpsilent MAP_TRANSITION_MAP, 255, 9, 11
+applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+waitmovement OBJ_EVENT_ID_PLAYER
+releaseall
 end
 
 PetalburgCity_EventScript_Fisherman::
