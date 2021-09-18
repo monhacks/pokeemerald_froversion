@@ -4,7 +4,12 @@
 Route101_MapScripts:: @ 81EBCBA
 	map_script MAP_SCRIPT_ON_TRANSITION, Route101_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route101_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, Route101_OnWarp
 	.byte 0
+
+Route101_OnWarp:
+	map_script_2 VAR_PETALBURG_CITY_STATE, 6, Script_Route101_HidePlayerForMagaCutscene
+	.2byte 0
 
 Route101_OnTransition: @ 81EBCC5
 	call ProfBirch_EventScript_UpdateLocation
@@ -307,14 +312,45 @@ Route101_Text_RouteSign: @ 81EC0C8
 /////////////////Froversion//////////////////////
 ////////////////////////////////////////////////
 
+Script_Route101_HidePlayerForMagaCutscene:
+	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_ROUTE101
+	end
+
 Script_Route101_MagaCaveCutscene:
 lockall
 delay 30
 msgbox T_Route101_PrototypeActingUp, MSGBOX_DEFAULT
 delay 30
+applymovement 3, M_Grunt1FacesGrunt2
+applymovement 4, M_Grunt2FacesGrunt1
+waitmovement 4
+applymovement 3, M_Grunt1EnterCave
+waitmovement 3
+removeobject 3
+applymovement 4, M_Grunt2EnterCave
+waitmovement 4
+removeobject 4
 setvar VAR_PETALBURG_CITY_STATE, 7
 warpsilent MAP_PETALBURG_CITY, 255, 10, 6
 end
+
+M_Grunt1FacesGrunt2:
+face_right
+step_end
+
+M_Grunt2FacesGrunt1:
+face_left
+step_end
+
+M_Grunt1EnterCave:
+walk_right
+walk_up
+step_end
+
+M_Grunt2EnterCave:
+walk_left
+walk_up
+step_end
 
 T_Route101_PrototypeActingUp:
 .string "There seems to be an issue with the\n"

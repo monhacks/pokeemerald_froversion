@@ -4980,6 +4980,16 @@
       "secondary_tileset": "gTileset_GrandIslandGym",
       "border_filepath": "data/layouts/GrandIslandGym/border.bin",
       "blockdata_filepath": "data/layouts/GrandIslandGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_TRANSITION_MAP",
+      "name": "TransitionMap_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/TransitionMap/border.bin",
+      "blockdata_filepath": "data/layouts/TransitionMap/map.bin"
     }
   ]
 }

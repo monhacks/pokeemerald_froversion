@@ -1179,3 +1179,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/SummitCaverns1/scripts.inc"
 
 	.include "data/maps/GrandIslandGym/scripts.inc"
+
+	.include "data/maps/TransitionMap/scripts.inc"
