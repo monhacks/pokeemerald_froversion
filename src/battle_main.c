@@ -1905,6 +1905,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                     SetMonData(&party[i], MON_DATA_HP_EV + j, &partyData[i].evs[j]);
                 }
                 CalculateMonStats(&party[i]);
+                if (partyData[i].statDef > 0)
+                   SetMonData(&party[i], MON_DATA_DEF, &partyData[i].statDef); 
                 break;
             }
             }

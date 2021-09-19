@@ -49,6 +49,7 @@ struct TrainerMonItemCustomMoves
     u16 heldItem;
     u16 moves[MAX_MON_MOVES];
     u16 abilityNum;
+    u16 statDef;
 };
 
 union TrainerMonPtr
