@@ -3028,5 +3028,7 @@ extern const u8 gText_Cancel3[];
 /////////////////////NickNames/////////////////////////
 
 extern const u8 gText_MarriottVaporeonNickname[];
+extern const u8 gText_WesRamNickname[];
+extern const u8 gText_JordanCactusNickname[];
 
 #endif // GUARD_STRINGS_H

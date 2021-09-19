@@ -3430,7 +3430,8 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     .species = SPECIES_CONTRARAM,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_FLAME_CHARGE, MOVE_HORN_ATTACK, MOVE_AURORA_VEIL, MOVE_GROWL},
-    .abilityNum = 1
+    .abilityNum = 1,
+    .nickname = gText_WesRamNickname
     }
 };
 
@@ -3465,7 +3466,8 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     .species = SPECIES_CRACKTUSS,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_INGRAIN, MOVE_ABSORB, MOVE_LEECH_SEED, MOVE_PIN_MISSILE},
-    .abilityNum = 0
+    .abilityNum = 0,
+    .nickname = gText_JordanCactusNickname
     }
 };
 
@@ -3478,7 +3480,6 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_SUBSTITUTE, MOVE_ACID_ARMOR, MOVE_BATON_PASS, MOVE_WATER_PULSE},
     .evs = {252, 0, 252, 0, 0, 4},
-    .statDef = 400,
     .nickname = gText_MarriottVaporeonNickname
     },
     {
@@ -3511,7 +3512,8 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     .lvl = 36,
     .species = SPECIES_LUTRADOR,
     .heldItem = ITEM_PAYAPA_BERRY,
-    .moves = {MOVE_ROCK_SMASH, MOVE_COVET, MOVE_AQUA_JET, MOVE_PROTECT}
+    .moves = {MOVE_ROCK_SMASH, MOVE_COVET, MOVE_AQUA_JET, MOVE_PROTECT},
+    .evs = {252, 0, 4, 0, 0, 252}
     }
 };
 
