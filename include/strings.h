@@ -3025,4 +3025,8 @@ extern const u8 gText_PkmnForSwap[];
 extern const u8 gText_SamePkmnInPartyAlready[];
 extern const u8 gText_Cancel3[];
 
+/////////////////////NickNames/////////////////////////
+
+extern const u8 gText_MarriottVaporeonNickname[];
+
 #endif // GUARD_STRINGS_H

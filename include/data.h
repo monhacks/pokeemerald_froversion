@@ -50,6 +50,7 @@ struct TrainerMonItemCustomMoves
     u16 moves[MAX_MON_MOVES];
     u16 abilityNum;
     u16 statDef;
+    const u8 *nickname;
 };
 
 union TrainerMonPtr

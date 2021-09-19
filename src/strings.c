@@ -1851,4 +1851,8 @@ const u8 gText_Berries[] = _("BERRIES");
 const u8 gText_AbilityLearnsets[] = _("Abilities");
 const u8 gText_TypeEffectiveness[] = _("Types");
 
+////////////////////////////
+////////NICKNAMES///////////
+////////////////////////////
 
+const u8 gText_MarriottVaporeonNickname[] = _("Newton");

@@ -3478,7 +3478,8 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_SUBSTITUTE, MOVE_ACID_ARMOR, MOVE_BATON_PASS, MOVE_WATER_PULSE},
     .evs = {252, 0, 252, 0, 0, 4},
-    .statDef = 400
+    .statDef = 400,
+    .nickname = gText_MarriottVaporeonNickname
     },
     {
     .abilityNum = 1,    
