@@ -4352,6 +4352,42 @@ s8 GetChosenMovePriority(u32 battlerId)
     return GetMovePriority(battlerId, move);
 }
 
+bool32 IsMoveOneOf(u16 move, const u16 *moves)
+{
+    for (; *moves !=0xFFFF; moves ++)
+        {
+        if (*moves == move)
+            return TRUE;
+        }
+        return FALSE;
+}
+
+static const u16 sSlashingMoves[] =
+    {
+        MOVE_AIR_CUTTER,
+        MOVE_AIR_SLASH,
+        MOVE_CROSS_POISON,
+        MOVE_CRUSH_CLAW,
+        MOVE_CUT,
+        MOVE_DRAGON_CLAW,
+        MOVE_FALSE_SWIPE,
+        MOVE_FURY_CUTTER,
+        MOVE_FURY_SWIPES,
+        MOVE_LEAF_BLADE,
+        MOVE_METAL_CLAW,
+        MOVE_NIGHT_SLASH,
+        MOVE_PLASMA_BLADE,
+        MOVE_PSYCHO_CUT,
+        MOVE_RAZOR_LEAF,
+        MOVE_RAZOR_WIND,
+        MOVE_SCRATCH,
+        MOVE_SECRET_SWORD,
+        MOVE_SHADOW_CLAW,
+        MOVE_SLASH,
+        MOVE_X_SCISSOR,
+        0xFFFF
+    };
+
 s8 GetMovePriority(u32 battlerId, u16 move)
 {
     s8 priority;
@@ -4364,6 +4400,10 @@ s8 GetMovePriority(u32 battlerId, u16 move)
         priority++;
     }
     else if (GetBattlerAbility(battlerId) == ABILITY_PRANKSTER && IS_MOVE_STATUS(move))
+    {
+        priority++;
+    }
+    else if (GetBattlerAbility(battlerId) == ABILITY_SWORD_LUNGE && IsMoveOneOf (move, sSlashingMoves))
     {
         priority++;
     }
