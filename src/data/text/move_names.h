@@ -762,4 +762,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_MAGIC_MIRROR] = _("Magic Mirror"),
     [MOVE_WARRIORS_SACRIFICE] = _("WarriorsSac"),
     [MOVE_REVIVE] = _("Revive"),
+    [MOVE_PLASMA_BLADE] = _("PlasmaBlade"),
 };

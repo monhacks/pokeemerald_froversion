@@ -372,7 +372,7 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectMagicMirror
 	.4byte BattleScript_EffectWarriorsSacrifice
 	.4byte BattleScript_EffectRevive
-	.4byte Battlescript_FlashDamage
+	.4byte BattleScript_EffectPlasmaBlade
 
 BattleScript_EffectRevive::
 	attackcanceler
@@ -2506,6 +2506,7 @@ BattleScript_AbsorbTryFainting::
 
 BattleScript_EffectBurnHit::
 BattleScript_EffectBlazeKick::
+BattleScript_EffectPlasmaBlade:
 BattleScript_EffectScald:
 	setmoveeffect MOVE_EFFECT_BURN
 	goto BattleScript_EffectHit
