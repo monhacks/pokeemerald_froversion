@@ -65,6 +65,7 @@ struct ResourceFlags
 #define RESOURCE_FLAG_INTIMIDATED    0x8
 #define RESOURCE_FLAG_TRACED         0x10
 #define RESOURCE_FLAG_EMERGENCY_EXIT 0x20
+#define RESOURCE_FLAG_CHARISMAD     0x40
 
 struct DisableStruct
 {
@@ -178,6 +179,7 @@ struct SpecialStatus
     u8 physicalBattlerId;
     u8 specialBattlerId;
     u8 changedStatsBattlerId; // Battler that was responsible for the latest stat change. Can be self.
+    u8 charismadMon;
 };
 
 struct SideTimer
