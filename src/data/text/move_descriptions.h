@@ -3712,4 +3712,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MAGIC_MIRROR - 1] = sNotDoneYetDescription,
     [MOVE_WARRIORS_SACRIFICE - 1] = sNotDoneYetDescription,
     [MOVE_REVIVE - 1] = sNotDoneYetDescription,
+    [MOVE_PLASMA_BLADE - 1] = sNotDoneYetDescription,
 };
