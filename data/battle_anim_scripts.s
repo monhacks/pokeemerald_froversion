@@ -23678,15 +23678,17 @@ Move_PLASMA_BLADE:
 	delay 30
 	playsewithpan SE_M_CHARGE, SOUND_PAN_ATTACKER
 	createsprite gGrowingChargeOrbSpriteTemplate, ANIM_ATTACKER, 2, 0
-	createsprite gSwordsDanceBladeSpriteTemplate, ANIM_ATTACKER, 2, 0, 0
 	delay 22
-	createvisualtask AnimTask_FlashAnimTagWithColor, 2, ANIM_TAG_SWORD, 2, 2, RGB(18, 31, 31), 16, 0, 0
 	delay 25
 	playsewithpan SE_M_CHARGE, SOUND_PAN_ATTACKER
+	playsewithpan SE_M_SWORDS_DANCE, SOUND_PAN_ATTACKER
+	launchtask AnimTask_BlendBattleAnimPal 0xa 0x5 ANIM_PAL_BG 0x0 0x0 0x10 0x0
+	launchtemplate gSwordsDanceBladeSpriteTemplate 0x2 0x2 0x0 0x0
 	delay 20
 	playsewithpan SE_M_CHARGE, SOUND_PAN_ATTACKER
 	delay 15
 	playsewithpan SE_M_CHARGE, SOUND_PAN_ATTACKER
+	createsprite gSwordsDanceBladeSpriteTemplate, ANIM_ATTACKER, 2, 0, 0
 	delay 10
 	delay 6
 	loopsewithpan SE_M_CHARGE, SOUND_PAN_ATTACKER, 6, 5
