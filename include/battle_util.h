@@ -23,6 +23,8 @@
 #define ABILITYEFFECT_TRACE1                     0xC
 #define ABILITYEFFECT_TRACE2                     0xD
 #define ABILITYEFFECT_MOVE_END_OTHER             0xE
+#define ABILITYEFFECT_CHARISMA1                  0xF
+#define ABILITYEFFECT_CHARISMA2                  0x10
 #define ABILITYEFFECT_SWITCH_IN_WEATHER          0xFF
 
 #define ITEMEFFECT_ON_SWITCH_IN                 0x0

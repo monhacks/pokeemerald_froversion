@@ -25,8 +25,9 @@ static const struct AbilitySetter sMudkipAbilitySet[] =
 static const struct AbilitySetter sPidgeyAbilitySet[] = 
 {
     {ABILITY_BIG_PECKS, 1},
-    {ABILITY_GALE_WINGS, 16},
-    {ABILITY_NO_GUARD, 37},
+    {ABILITY_CHARISMA, 14},
+    {ABILITY_GALE_WINGS, 29},
+    {ABILITY_NO_GUARD, 47},
     ABILITY_SET_END
 };
 

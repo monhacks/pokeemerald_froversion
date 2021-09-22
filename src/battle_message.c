@@ -719,6 +719,7 @@ static const u8 sText_MagicMirrorFaded[] = _("The Magic Mirror faded!");
 static const u8 sText_MagicMirrorBounced[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_CURRENT_MOVE}\nwas bounced back by Magic Mirror!");
 static const u8 sText_Negate[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nsuppresses items and abilities!");
 static const u8 sText_Buff1WasRevived[] = _("{B_BUFF1} was revived!");
+static const u8 sText_PkmnCutsSpaAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncuts {B_DEF_NAME_WITH_PREFIX}'s Sp. Atk!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1301,6 +1302,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_MAGICMIRRORBOUNCED - 12] = sText_MagicMirrorBounced,
     [STRINGID_NEGATE - 12] = sText_Negate,
     [STRINGID_BUFF1WASREVIVED - 12] = sText_Buff1WasRevived,
+    [STRINGID_PKMNCUTSSPAATTACKWITH - 12] = sText_PkmnCutsSpaAttackWith,
 };
 
 const u16 gTerrainStringIds[] =

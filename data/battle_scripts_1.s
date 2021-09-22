@@ -7283,6 +7283,50 @@ BattleScript_IntimidatePrevented:
 	call BattleScript_TryAdrenalineOrb
 	goto BattleScript_IntimidateActivatesLoopIncrement
 
+BattleScript_CharismaActivatesEnd3::
+	call BattleScript_PauseCharismaActivates
+	end3
+
+BattleScript_PauseCharismaActivates:
+	pause 0x20
+BattleScript_CharismaActivates::
+	setbyte gBattlerTarget, 0x0
+	call BattleScript_AbilityPopUp
+BattleScript_CharismaActivatesLoop:
+	setstatchanger STAT_SPATK, 1, TRUE
+	trygetintimidatetarget BattleScript_CharismaActivatesReturn
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_CharismaActivatesLoopIncrement
+	jumpifability BS_TARGET, ABILITY_CLEAR_BODY, BattleScript_CharismaPrevented
+	jumpifability BS_TARGET, ABILITY_HYPER_CUTTER, BattleScript_CharismaPrevented
+	jumpifability BS_TARGET, ABILITY_WHITE_SMOKE, BattleScript_CharismaPrevented
+.if B_UPDATED_INTIMIDATE >= GEN_8
+	jumpifability BS_TARGET, ABILITY_INNER_FOCUS, BattleScript_CharismaPrevented
+	jumpifability BS_TARGET, ABILITY_SCRAPPY, BattleScript_CharismaPrevented
+	jumpifability BS_TARGET, ABILITY_OWN_TEMPO, BattleScript_CharismaPrevented
+	jumpifability BS_TARGET, ABILITY_OBLIVIOUS, BattleScript_CharismaPrevented
+.endif
+	statbuffchange STAT_BUFF_NOT_PROTECT_AFFECTED | STAT_BUFF_ALLOW_PTR, BattleScript_CharismaActivatesLoopIncrement
+	jumpifbyte CMP_GREATER_THAN, cMULTISTRING_CHOOSER, 0x1, BattleScript_CharismaActivatesLoopIncrement
+	setgraphicalstatchangevalues
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_PKMNCUTSSPAATTACKWITH
+	waitmessage 0x40
+	call BattleScript_TryAdrenalineOrb
+BattleScript_CharismaActivatesLoopIncrement:
+	addbyte gBattlerTarget, 0x1
+	goto BattleScript_CharismaActivatesLoop
+BattleScript_CharismaActivatesReturn:
+	return
+BattleScript_CharismaPrevented:
+	pause 0x20
+	call BattleScript_AbilityPopUp
+	setbyte gBattleCommunication STAT_SPATK
+	stattextbuffer BS_ATTACKER
+	printstring STRINGID_STATWASNOTLOWERED
+	waitmessage 0x40
+	call BattleScript_TryAdrenalineOrb
+	goto BattleScript_CharismaActivatesLoopIncrement
+
 BattleScript_DroughtActivates::
 	pause 0x20
 	call BattleScript_AbilityPopUp

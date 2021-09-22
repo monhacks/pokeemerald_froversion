@@ -4196,6 +4196,13 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 gSpecialStatuses[battler].intimidatedMon = 1;
             }
             break;
+        case ABILITY_CHARISMA:
+            if (!(gSpecialStatuses[battler].charismadMon))
+            {
+                gBattleResources->flags->flags[battler] |= RESOURCE_FLAG_CHARISMAD;
+                gSpecialStatuses[battler].charismadMon = 1;
+            }
+            break;
         case ABILITY_FORECAST:
         case ABILITY_FLOWER_GIFT:
             effect = TryWeatherFormChange(battler);
@@ -5234,6 +5241,29 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 {
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_IntimidateActivates;
+                }
+                battler = gBattlerAbility = gBattleStruct->intimidateBattler = i;
+                effect++;
+                break;
+            }
+        }
+        break;
+    case ABILITYEFFECT_CHARISMA1:
+    case ABILITYEFFECT_CHARISMA2:
+        for (i = 0; i < gBattlersCount; i++)
+        {
+            if (gBattleMons[i].ability == ABILITY_CHARISMA && gBattleResources->flags->flags[i] & RESOURCE_FLAG_CHARISMAD)
+            {
+                gLastUsedAbility = ABILITY_CHARISMA;
+                gBattleResources->flags->flags[i] &= ~(RESOURCE_FLAG_CHARISMAD);
+                if (caseID == ABILITYEFFECT_CHARISMA1)
+                {
+                    BattleScriptPushCursorAndCallback(BattleScript_CharismaActivatesEnd3);
+                }
+                else
+                {
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_CharismaActivates;
                 }
                 battler = gBattlerAbility = gBattleStruct->intimidateBattler = i;
                 effect++;
