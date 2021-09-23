@@ -17,6 +17,63 @@ static bool8 HasSuperEffectiveMoveAgainstOpponents(bool8 noRng);
 static bool8 FindMonWithFlagsAndSuperEffective(u16 flags, u8 moduloPercent);
 static bool8 ShouldUseItem(void);
 
+struct Counter
+{
+    u16 counter;
+    u16 countered;
+};
+
+static const u16 *const sCounters[NUM_SPECIES] =
+{
+    [SPECIES_MAGNETON] = (u16 [])
+    {
+        SPECIES_SKARMORY,
+        SPECIES_NONE,
+    },
+    [SPECIES_MAGNEZONE] = (u16 [])
+    {
+        SPECIES_SKARMORY,
+        SPECIES_AGGRON,
+        SPECIES_NONE,
+    },
+};
+
+s32 ScoreMatchup(u32 playerSpecies, u32 opponentSpecies)
+{
+    int i;
+    if (sCounters[playerSpecies])
+    {
+        for (i = 0; sCounters[playerSpecies][i] != SPECIES_NONE; i++)
+        {
+            if (sCounters[playerSpecies][i] == opponentSpecies)
+                return -1;
+        }
+    }
+    if (sCounters[opponentSpecies])
+    {
+        for (i = 0; sCounters[opponentSpecies][i] != SPECIES_NONE; i++)
+        {
+            if (sCounters[opponentSpecies][i] == playerSpecies)
+                return 1;
+        }
+    }
+    return 0;
+}
+
+// Returns 1 if opponent counters, -1 if player counters, and 0 otherwise.
+s32 ScoreMatchup(u32 playerSpecies, u32 opponentSpecies)
+{
+    int i;
+    for (i = 0; i < ARRAY_COUNT(sCounters); i++)
+    {
+        if (playerSpecies == sCounters[i].counter && opponentSpecies == sCounters[i].countered)
+            return -1;
+        else if (opponentSpecies == sCounters[i].counter && playerSpecies == sCounters[i].countered)
+            return 1;
+    }
+    return 0;
+}
+
 void GetAIPartyIndexes(u32 battlerId, s32 *firstId, s32 *lastId)
 {
     if (BATTLE_TWO_VS_ONE_OPPONENT && (battlerId & BIT_SIDE) == B_SIDE_OPPONENT)
