@@ -853,6 +853,36 @@
         {
           "map": "MAP_ROUTE111",
           "base_label": "gRoute111",
+          "rock_smash_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              }
+            ]
+          },
           "fishing_mons": {
             "encounter_rate": 30,
             "mons": [
@@ -905,36 +935,6 @@
                 "min_level": 40,
                 "max_level": 45,
                 "species": "SPECIES_BARBOACH"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 20,
-            "mons": [
-              {
-                "min_level": 10,
-                "max_level": 15,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_GEODUDE"
               }
             ]
           },
@@ -1175,6 +1175,36 @@
         {
           "map": "MAP_ROUTE114",
           "base_label": "gRoute114",
+          "rock_smash_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 15,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GEODUDE"
+              }
+            ]
+          },
           "fishing_mons": {
             "encounter_rate": 30,
             "mons": [
@@ -1227,36 +1257,6 @@
                 "min_level": 40,
                 "max_level": 45,
                 "species": "SPECIES_BARBOACH"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 20,
-            "mons": [
-              {
-                "min_level": 10,
-                "max_level": 15,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
-                "max_level": 20,
-                "species": "SPECIES_GEODUDE"
               }
             ]
           },
@@ -12164,6 +12164,36 @@
         {
           "map": "MAP_LOCKPORT_TRAIL",
           "base_label": "gLockportTrail0",
+          "rock_smash_mons": {
+            "encounter_rate": 100,
+            "mons": [
+              {
+                "min_level": 31,
+                "max_level": 31,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 33,
+                "max_level": 33,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 33,
+                "max_level": 33,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 34,
+                "max_level": 34,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 36,
+                "max_level": 36,
+                "species": "SPECIES_GOLEM"
+              }
+            ]
+          },
           "fishing_mons": {
             "encounter_rate": 25,
             "mons": [
@@ -12216,36 +12246,6 @@
                 "min_level": 35,
                 "max_level": 40,
                 "species": "SPECIES_MILOTIC"
-              }
-            ]
-          },
-          "rock_smash_mons": {
-            "encounter_rate": 100,
-            "mons": [
-              {
-                "min_level": 31,
-                "max_level": 31,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 33,
-                "max_level": 33,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 33,
-                "max_level": 33,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 34,
-                "max_level": 34,
-                "species": "SPECIES_GRAVELER"
-              },
-              {
-                "min_level": 36,
-                "max_level": 36,
-                "species": "SPECIES_GOLEM"
               }
             ]
           },
@@ -12410,6 +12410,75 @@
                 "min_level": 9,
                 "max_level": 9,
                 "species": "SPECIES_RHYHORN"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_LOCKPORT_TRAIL_BF1",
+          "base_label": "gLockportTrail_BF10",
+          "land_mons": {
+            "encounter_rate": 17,
+            "mons": [
+              {
+                "min_level": 28,
+                "max_level": 35,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 28,
+                "max_level": 33,
+                "species": "SPECIES_TAQUITTLE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 33,
+                "species": "SPECIES_DUMBELLION"
+              },
+              {
+                "min_level": 28,
+                "max_level": 33,
+                "species": "SPECIES_MEDITITE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 33,
+                "species": "SPECIES_OTDORBLE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 33,
+                "species": "SPECIES_TAQUITTLE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 33,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 28,
+                "max_level": 33,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 28,
+                "max_level": 33,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 28,
+                "max_level": 33,
+                "species": "SPECIES_DUMBELLION"
+              },
+              {
+                "min_level": 28,
+                "max_level": 33,
+                "species": "SPECIES_ESCARATACO"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_ABSOL"
               }
             ]
           }

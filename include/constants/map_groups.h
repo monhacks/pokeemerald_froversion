@@ -1,10 +1,6 @@
 #ifndef GUARD_CONSTANTS_MAP_GROUPS_H
 #define GUARD_CONSTANTS_MAP_GROUPS_H
 
-//
-// DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/map_groups.json
-//
-
 // Map Group 0
 #define MAP_PETALBURG_CITY              (0 | (0 << 8))
 #define MAP_SLATEPORT_CITY              (1 | (0 << 8))
@@ -103,6 +99,8 @@
 #define MAP_GRATWICK_GRAVEYARD          (94 | (0 << 8))
 #define MAP_ROUTE1022                   (95 | (0 << 8))
 #define MAP_TRANSITION_MAP              (96 | (0 << 8))
+#define MAP_LOCKPORT_TRAIL_BF1          (97 | (0 << 8))
+#define MAP_LOCKPORT_TRAIL_BF2          (98 | (0 << 8))
 
 // Map Group 1
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F     (0 | (1 << 8))
@@ -650,7 +648,5 @@
 #define MAP_JAGOW_SY_CONNECTION1                   (1 | (33 << 8))
 
 #define MAP_GROUPS_COUNT 34
-
-// static const u8 MAP_GROUP_COUNT[] = {97, 10, 9, 10, 8, 8, 9, 7, 7, 14, 8, 20, 10, 23, 13, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 2, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

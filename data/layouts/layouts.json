@@ -4990,6 +4990,26 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/TransitionMap/border.bin",
       "blockdata_filepath": "data/layouts/TransitionMap/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOCKPORT_TRAIL_BF1",
+      "name": "LockportTrail_BF1_Layout",
+      "width": 49,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave2",
+      "border_filepath": "data/layouts/LockportTrail_BF1/border.bin",
+      "blockdata_filepath": "data/layouts/LockportTrail_BF1/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOCKPORT_TRAIL_BF2",
+      "name": "LockportTrail_BF2_Layout",
+      "width": 52,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave2",
+      "border_filepath": "data/layouts/LockportTrail_BF2/border.bin",
+      "blockdata_filepath": "data/layouts/LockportTrail_BF2/map.bin"
     }
   ]
 }

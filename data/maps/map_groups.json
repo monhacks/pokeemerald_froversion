@@ -133,7 +133,9 @@
     "GratwickPeaks",
     "GratwickGraveyard",
     "Route1022",
-    "TransitionMap"
+    "TransitionMap",
+    "LockportTrail_BF1",
+    "LockportTrail_BF2"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",

@@ -260,11 +260,8 @@ static const u8 sAutosubDescription[] = _("One-time duplicate.");
 static const u8 sCounterDescription[] = _("Retaliates to KO attacks.");
 static const u8 sNegateDescription[] = _("Negates items and abilities.");
 static const u8 sResurrectionDescription[] = _("Revives ally on KO.");
-<<<<<<< HEAD
 static const u8 sSwordLungeDescription[] = _("Sword moves go first");
-=======
 static const u8 sCharismaDescription[] = _("Lowers the foe's Sp. Atk.");
->>>>>>> e3c4146dda17d3fd2d08701701aecae3a28d1a9c
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 {
@@ -823,9 +820,6 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_COUNTER] = sCounterDescription,
     [ABILITY_NEGATE] = sNegateDescription,
     [ABILITY_RESURRECTION] = sResurrectionDescription,
-<<<<<<< HEAD
     [ABILITY_SWORD_LUNGE] = sSwordLungeDescription,
-=======
     [ABILITY_CHARISMA] = sCharismaDescription,
->>>>>>> e3c4146dda17d3fd2d08701701aecae3a28d1a9c
 };

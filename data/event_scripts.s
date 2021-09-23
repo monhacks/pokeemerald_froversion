@@ -1181,3 +1181,7 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/GrandIslandGym/scripts.inc"
 
 	.include "data/maps/TransitionMap/scripts.inc"
+
+	.include "data/maps/LockportTrail_BF1/scripts.inc"
+
+	.include "data/maps/LockportTrail_BF2/scripts.inc"
