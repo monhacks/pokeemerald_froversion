@@ -30,7 +30,7 @@ static const u16 *const sCounters[NUM_SPECIES] =
         SPECIES_SKARMORY,
         SPECIES_NONE,
     },
-    [SPECIES_MAGNEZONE] = (u16 [])
+    [SPECIES_MAGNEMITE] = (u16 [])
     {
         SPECIES_SKARMORY,
         SPECIES_AGGRON,
@@ -38,6 +38,7 @@ static const u16 *const sCounters[NUM_SPECIES] =
     },
 };
 
+// Returns 1 if opponent counters, -1 if player counters, and 0 otherwise.
 s32 ScoreMatchup(u32 playerSpecies, u32 opponentSpecies)
 {
     int i;
@@ -60,18 +61,30 @@ s32 ScoreMatchup(u32 playerSpecies, u32 opponentSpecies)
     return 0;
 }
 
-// Returns 1 if opponent counters, -1 if player counters, and 0 otherwise.
-s32 ScoreMatchup(u32 playerSpecies, u32 opponentSpecies)
+bool8 ShouldSwitchIfCountered(void)
+int i;
+u32 playerSpecies, opponentSpecies;
+s32 score;
+u32 hp;
+
+playerSpecies =  gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species;
+hp = GetMonData(&gEnemyParty[i], MON_DATA_HP, NULL);
+for (i = 0; i < PARTY_SIZE; i++)
 {
-    int i;
-    for (i = 0; i < ARRAY_COUNT(sCounters); i++)
+    opponentSpecies = GetMonData(&gEnemyParty[i], MON_DATA_SPECIES2, NULL);
+    if (opponentSpecies != SPECIES_NONE && opponentSpecies != SPECIES_EGG && hp > 50)
     {
-        if (playerSpecies == sCounters[i].counter && opponentSpecies == sCounters[i].countered)
-            return -1;
-        else if (opponentSpecies == sCounters[i].counter && playerSpecies == sCounters[i].countered)
-            return 1;
+        score = ScoreMatchup(playerSpecies, opponentSpecies);
+        if (score == -1)
+        { BtlController_EmitTwoReturnValues(1, B_ACTION_SWITCH, 0);
+        return TRUE;
+        }
+    else
+    {
+        return FALSE;
     }
-    return 0;
+    }
+    
 }
 
 void GetAIPartyIndexes(u32 battlerId, s32 *firstId, s32 *lastId)
@@ -535,6 +548,8 @@ static bool8 ShouldSwitch(void)
 
     if (availableToSwitch == 0)
         return FALSE;
+    if (ShouldSwitchIfCountered())
+        return TRUE;
     if (ShouldSwitchIfAllBadMoves())
         return TRUE;
     if (ShouldSwitchIfPerishSong())
