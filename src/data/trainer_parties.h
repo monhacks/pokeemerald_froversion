@@ -3476,7 +3476,7 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     .abilityNum = 2,
     .iv = 250,
     .lvl = 34,
-    .species = SPECIES_REGISTEEL,
+    .species = SPECIES_VAPOREON,
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_SUBSTITUTE, MOVE_ACID_ARMOR, MOVE_BATON_PASS, MOVE_WATER_PULSE},
     .evs = {252, 0, 252, 0, 0, 4},
@@ -3486,7 +3486,7 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     .abilityNum = 1,    
     .iv = 200,
     .lvl = 33,
-    .species = SPECIES_LANTURN,
+    .species = SPECIES_MAGNETON,
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_SPARK, MOVE_BUBBLE_BEAM, MOVE_CONFUSE_RAY, MOVE_THUNDER_WAVE}
     },

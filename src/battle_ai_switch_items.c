@@ -62,29 +62,66 @@ s32 ScoreMatchup(u32 playerSpecies, u32 opponentSpecies)
 }
 
 bool8 ShouldSwitchIfCountered(void)
-int i;
-u32 playerSpecies, opponentSpecies;
-s32 score;
-u32 hp;
-
-playerSpecies =  gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species;
-hp = GetMonData(&gEnemyParty[i], MON_DATA_HP, NULL);
-for (i = 0; i < PARTY_SIZE; i++)
 {
-    opponentSpecies = GetMonData(&gEnemyParty[i], MON_DATA_SPECIES2, NULL);
-    if (opponentSpecies != SPECIES_NONE && opponentSpecies != SPECIES_EGG && hp > 50)
-    {
-        score = ScoreMatchup(playerSpecies, opponentSpecies);
-        if (score == -1)
-        { BtlController_EmitTwoReturnValues(1, B_ACTION_SWITCH, 0);
-        return TRUE;
-        }
-    else
+    int i;
+    u32 playerSpecies, opponentSpecies, hp, maxHP;
+    s32 scores[PARTY_SIZE];
+    s32 maxScore;
+    u32 maxCount;
+    u8 maxIndices[PARTY_SIZE];
+
+    if (gBattleMons[gActiveBattler].hp <= gBattleMons[gActiveBattler].maxHP / 2 
+    || (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE))
     {
         return FALSE;
     }
+    playerSpecies =  gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        opponentSpecies = GetMonData(&gEnemyParty[i], MON_DATA_SPECIES2, NULL);
+        hp = GetMonData(&gEnemyParty[i], MON_DATA_HP, NULL);
+        maxHP = GetMonData(&gEnemyParty[i], MON_DATA_MAX_HP, NULL);
+        if (opponentSpecies != SPECIES_NONE
+         && opponentSpecies != SPECIES_EGG
+         && hp > maxHP / 2)
+        {
+            scores[i] = ScoreMatchup(playerSpecies, opponentSpecies);
+        }
+        else
+        {
+            scores[i] = INT_MIN;
+        }
     }
-    
+
+    maxScore = INT_MIN;
+    maxCount = 0;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (scores[i] > maxScore)
+        {
+            maxScore = scores[i];
+            // New max, throw away old indices.
+            maxCount = 0;
+            maxIndices[maxCount++] = i;
+        }
+        else if (scores[i] == maxScore)
+        {
+            // Tied max, add to indices.
+            maxIndices[maxCount++] = i;
+        }
+    }
+
+    // Check that the active Pokémon isn't in maxIndices.
+    for (i = 0; i < maxCount; i++)
+    {
+        if (maxIndices[i] == gBattlerPartyIndexes[gActiveBattler])
+            return FALSE;
+    }
+
+    // Switch to a random index from maxIndices. I'm not sure if this works. Based on ShouldSwitchIfPerishSong.
+    *(gBattleStruct->AI_monToSwitchIntoId + gActiveBattler) = maxIndices[Random() % maxCount];
+    BtlController_EmitTwoReturnValues(1, B_ACTION_SWITCH, 0);
+    return TRUE;
 }
 
 void GetAIPartyIndexes(u32 battlerId, s32 *firstId, s32 *lastId)
