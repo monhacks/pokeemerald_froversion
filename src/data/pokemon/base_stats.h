@@ -12697,7 +12697,7 @@ const struct BaseStats gBaseStats[] =
         .baseDefense   = 80,
         .baseSpeed     = 95,
         .baseSpAttack  = 106,
-        .baseSpDefense = 85,
+        .baseSpDefense = 75,
         .type1 = TYPE_FIRE,
         .type2 = TYPE_DRAGON,
         .catchRate = 45,
@@ -13837,7 +13837,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_4] =
+[SPECIES_PLASMUNG] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -13868,7 +13868,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_5] =
+[SPECIES_GRUNTAZE] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -13899,7 +13899,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_6] =
+[SPECIES_ELITETRIC] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,

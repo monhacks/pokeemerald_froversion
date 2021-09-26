@@ -434,9 +434,9 @@ cry Cry_Blue_Eyes
 cry Cry_Filler_1
 cry Cry_Marowak_Alolan
 cry Cry_Contraram
-cry Cry_Filler_4
-cry Cry_Filler_5
-cry Cry_Filler_6
+cry Cry_Plasmung
+cry Cry_Gruntaze
+cry Cry_Elitetric
 cry Cry_Filler_7
 cry Cry_Filler_8
 cry Cry_Filler_9
@@ -910,9 +910,9 @@ cry2 Cry_Blue_Eyes
 cry2 Cry_Filler_1
 cry2 Cry_Marowak_Alolan
 cry2 Cry_Contraram
-cry2 Cry_Filler_4
-cry2 Cry_Filler_5
-cry2 Cry_Filler_6
+cry2 Cry_Plasmung
+cry2 Cry_Gruntaze
+cry2 Cry_Elitetric
 cry2 Cry_Filler_7
 cry2 Cry_Filler_8
 cry2 Cry_Filler_9

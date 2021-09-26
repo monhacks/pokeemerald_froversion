@@ -2310,14 +2310,14 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
     Cry_Contraram::
 	.incbin "sound/direct_sound_samples/cries/contraram.bin"
 .align 2
-    Cry_Filler_4::
-	.incbin "sound/direct_sound_samples/cries/filler_4.bin"
+    Cry_Plasmung::
+	.incbin "sound/direct_sound_samples/cries/plasmung.bin"
 .align 2
-    Cry_Filler_5::
-	.incbin "sound/direct_sound_samples/cries/filler_5.bin"
+    Cry_Gruntaze::
+	.incbin "sound/direct_sound_samples/cries/gruntaze.bin"
 .align 2
-    Cry_Filler_6::
-	.incbin "sound/direct_sound_samples/cries/filler_6.bin"
+    Cry_Elitetric::
+	.incbin "sound/direct_sound_samples/cries/elitetric.bin"
 .align 2
     Cry_Filler_7::
 	.incbin "sound/direct_sound_samples/cries/filler_7.bin"

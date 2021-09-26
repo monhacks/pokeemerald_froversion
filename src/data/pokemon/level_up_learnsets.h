@@ -8562,15 +8562,15 @@ static const struct LevelUpMove sContraramLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
-static const struct LevelUpMove sFiller_4LevelUpLearnset[] = {
+static const struct LevelUpMove sPlasmungLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };
-static const struct LevelUpMove sFiller_5LevelUpLearnset[] = {
+static const struct LevelUpMove sGruntazeLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };
-static const struct LevelUpMove sFiller_6LevelUpLearnset[] = {
+static const struct LevelUpMove sElitetricLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };

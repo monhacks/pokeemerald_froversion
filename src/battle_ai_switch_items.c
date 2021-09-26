@@ -11,6 +11,7 @@
 #include "constants/item_effects.h"
 #include "constants/items.h"
 #include "constants/moves.h"
+#include "constants/battle_ai.h"
 
 // this file's functions
 static bool8 HasSuperEffectiveMoveAgainstOpponents(bool8 noRng);
@@ -25,14 +26,870 @@ struct Counter
 
 static const u16 *const sCounters[NUM_SPECIES] =
 {
+    [SPECIES_RASCALOOT] = (u16 [])
+    {
+        SPECIES_FLOBRA,
+        SPECIES_CATERPIE,
+        SPECIES_METAPOD,
+        SPECIES_WEEDLE,
+        SPECIES_KAKUNA,
+        SPECIES_SENTRET,
+        SPECIES_FURRET,
+        SPECIES_SANDSHREW,
+        SPECIES_HAAGLET,
+        SPECIES_DIGLETT,
+        SPECIES_MARILL,
+        SPECIES_POLIWAG,
+        SPECIES_POLIWHIRL,
+        SPECIES_CHINCHOU,
+        SPECIES_GEODUDE,
+        SPECIES_SEEL,
+        SPECIES_OTDORBLE,
+        SPECIES_ONIX,
+        SPECIES_SLAKOTH,
+        SPECIES_VIGOROTH,
+        SPECIES_CUBONE,
+        SPECIES_RHYHORN,
+        SPECIES_FEEBAS,
+        SPECIES_CORSOLA,
+        SPECIES_MAGIKARP,
+        SPECIES_EEVEE,
+        SPECIES_CACTAR,
+        SPECIES_PHANPY,
+        SPECIES_NEVAWOK,
+        SPECIES_NONE,
+    },
+
+    [SPECIES_BANDITHUG] = (u16 [])
+    {
+        SPECIES_RASCALOOT,
+        SPECIES_FLOBRA,
+        SPECIES_MORPHLO,
+        SPECIES_CATERPIE,
+        SPECIES_METAPOD,
+        SPECIES_WEEDLE,
+        SPECIES_KAKUNA,
+        SPECIES_SENTRET,
+        SPECIES_FURRET,
+        SPECIES_SANDSHREW,
+        SPECIES_SANDSLASH,
+        SPECIES_HAAGLET,
+        SPECIES_WARTHAAG,
+        SPECIES_DIGLETT,
+        SPECIES_DUGTRIO,
+        SPECIES_POLIWAG,
+        SPECIES_POLIWHIRL,
+        SPECIES_POLIWRATH,
+        SPECIES_CHINCHOU,
+        SPECIES_GEODUDE,
+        SPECIES_GRAVELER,
+        SPECIES_PILOPOO,
+        SPECIES_SEEL,
+        SPECIES_OTDORBLE,
+        SPECIES_ONIX,
+        SPECIES_SLAKOTH,
+        SPECIES_VIGOROTH,
+        SPECIES_VOLTORB,
+        SPECIES_PIKACHU,
+        SPECIES_CUBONE,
+        SPECIES_MAROWAK,
+        SPECIES_SPIRITOMB,
+        SPECIES_ABSOL,
+        SPECIES_RHYHORN,
+        SPECIES_RHYDON,
+        SPECIES_CHANSEY,
+        SPECIES_BLISSEY,
+        SPECIES_OCTIRE,
+        SPECIES_FEEBAS,
+        SPECIES_TEDDIURSA,
+        SPECIES_CORSOLA,
+        SPECIES_MAGIKARP,
+        SPECIES_EEVEE,
+        SPECIES_VAPOREON,
+        SPECIES_UMBREON,
+        SPECIES_CACTAR,
+        SPECIES_CRACTHORN,
+        SPECIES_SNORLAX,
+        SPECIES_ARON,
+        SPECIES_LAIRON,
+        SPECIES_LILEEP,
+        SPECIES_SNORUNT,
+        SPECIES_LUNATONE,
+        SPECIES_SOLROCK,
+        SPECIES_PHANPY,
+        SPECIES_NINJASK,
+        SPECIES_SHEDINJA,
+        SPECIES_TOGEPI,
+        SPECIES_NEVAWOK,
+        SPECIES_DUSKULL,
+        SPECIES_DUSCLOPS,
+        SPECIES_DUMBELLION,
+        SPECIES_SWINUB,
+        SPECIES_SABLEYE,
+        SPECIES_PLASMUNG,
+        SPECIES_NONE,
+    },
+
+    [SPECIES_RUTHLASH] =(u16 [])
+    {
+        SPECIES_RASCALOOT,
+        SPECIES_BANDITHUG,
+        SPECIES_EMBORYPS,
+        SPECIES_FLOBRA,
+        SPECIES_MORPHLO,
+        SPECIES_MECHOBRA,
+        SPECIES_CATERPIE,
+        SPECIES_METAPOD,
+        SPECIES_BUTTERFREE,
+        SPECIES_WEEDLE,
+        SPECIES_KAKUNA,
+        SPECIES_BEEDRILL,
+        SPECIES_PIDGEY,
+        SPECIES_PIDGEOTTO,
+        SPECIES_SENTRET,
+        SPECIES_FURRET,
+        SPECIES_KABOWL,
+        SPECIES_BOWLAST,
+        SPECIES_CHAD_BUG_1,
+        SPECIES_CHAD_BUG_2,
+        SPECIES_SANDSHREW,
+        SPECIES_SANDSLASH,
+        SPECIES_HOPPIP,
+        SPECIES_SKIPLOOM,
+        SPECIES_CLEFAIRY,
+        SPECIES_CLEFABLE,
+        SPECIES_HOUNDOUR,
+        SPECIES_CONTRARAM,
+        SPECIES_ZUBAT,
+        SPECIES_MAREEP,
+        SPECIES_FLAAFFY,
+        SPECIES_HAAGLET,
+        SPECIES_WARTHAAG,
+        SPECIES_ODDISH,
+        SPECIES_GLOOM,
+        SPECIES_TAQUITTLE,
+        SPECIES_ESCARATACO,
+        SPECIES_SPINARAK,
+        SPECIES_ARIADOS,
+        SPECIES_DIGLETT,
+        SPECIES_DUGTRIO,
+        SPECIES_SNOUMESE,
+        SPECIES_MARILL,
+        SPECIES_MANKEY,
+        SPECIES_PRIMEAPE,
+        SPECIES_GROWLITHE,
+        SPECIES_POLIWAG,
+        SPECIES_POLIWHIRL,
+        SPECIES_POLIWRATH,
+        SPECIES_ABRA,
+        SPECIES_KADABRA,
+        SPECIES_MACHOP,
+        SPECIES_MACHOKE,
+        SPECIES_PHOKAI,
+        SPECIES_PHOTASM,
+        SPECIES_CHINCHOU,
+        SPECIES_LANTURN,
+        SPECIES_GEODUDE,
+        SPECIES_GRAVELER,
+        SPECIES_GOLEM,
+        SPECIES_SLUGMA,
+        SPECIES_MAKUHITA,
+        SPECIES_MAGNEMITE,
+        SPECIES_PILOPOO,
+        SPECIES_HOOTHOOT,
+        SPECIES_SEEL,
+        SPECIES_GRIMER,
+        SPECIES_OTDORBLE,
+        SPECIES_LUTRADOR,
+        SPECIES_GASTLY,
+        SPECIES_HAUNTER,
+        SPECIES_ONIX,
+        SPECIES_STEELIX,
+        SPECIES_SLAKOTH,
+        SPECIES_VIGOROTH,
+        SPECIES_VOLTORB,
+        SPECIES_ELECTRODE,
+        SPECIES_PIKACHU,
+        SPECIES_RAICHU,
+        SPECIES_CUBONE,
+        SPECIES_MAROWAK,
+        SPECIES_PASSIMIAN,
+        SPECIES_ABSOL,
+        SPECIES_KOFFING,
+        SPECIES_RHYHORN,
+        SPECIES_RHYDON,
+        SPECIES_CHANSEY,
+        SPECIES_BLISSEY,
+        SPECIES_TANGELA,
+        SPECIES_OCTIRE,
+        SPECIES_INVERTEBRAKE,
+        SPECIES_FEEBAS,
+        SPECIES_MILOTIC,
+        SPECIES_TEDDIURSA,
+        SPECIES_URSARING,
+        SPECIES_CORSOLA,
+        SPECIES_MAGIKARP,
+        SPECIES_EEVEE,
+        SPECIES_VAPOREON,
+        SPECIES_UMBREON,
+        SPECIES_CACTAR,
+        SPECIES_CRACTHORN,
+        SPECIES_CRACKTUSS,
+        SPECIES_SNEASEL,
+        SPECIES_SNORLAX,
+        SPECIES_ARON,
+        SPECIES_LAIRON,
+        SPECIES_AGGRON,
+        SPECIES_NUMEL,
+        SPECIES_LILEEP,
+        SPECIES_CRADILY,
+        SPECIES_SNORUNT,
+        SPECIES_GLALIE,
+        SPECIES_LUNATONE,
+        SPECIES_SOLROCK,
+        SPECIES_PHANPY,
+        SPECIES_DONPHAN,
+        SPECIES_TOGEPI,
+        SPECIES_NEVAWOK,
+        SPECIES_WOKAGIN,
+        SPECIES_DUSKULL,
+        SPECIES_DUSCLOPS,
+        SPECIES_DUMBELLION,
+        SPECIES_BARBELLION,
+        SPECIES_SWINUB,
+        SPECIES_PILOSWINE,
+        SPECIES_MEDITITE,
+        SPECIES_SABLEYE,
+        SPECIES_PLASMUNG,
+        SPECIES_GRUNTAZE,
+        SPECIES_NONE
+    },
+    
+    [SPECIES_EMBORYPS] = (u16 [])
+    {
+        SPECIES_RASCALOOT,
+        SPECIES_CATERPIE,
+        SPECIES_METAPOD,
+        SPECIES_WEEDLE,
+        SPECIES_KAKUNA,
+        SPECIES_PIDGEY,
+        SPECIES_SENTRET,
+        SPECIES_HOPPIP,
+        SPECIES_SKIPLOOM,
+        SPECIES_ZUBAT,
+        SPECIES_ODDISH,
+        SPECIES_GLOOM,
+        SPECIES_TAQUITTLE,
+        SPECIES_ESCARATACO,
+        SPECIES_SPINARAK,
+        SPECIES_ARIADOS,
+        SPECIES_MARILL,
+        SPECIES_SLUGMA,
+        SPECIES_MAKUHITA,
+        SPECIES_HOOTHOOT,
+        SPECIES_SLAKOTH,
+        SPECIES_PIKACHU,
+        SPECIES_MAGIKARP,
+        SPECIES_EEVEE,
+        SPECIES_ARON,
+        SPECIES_SNORUNT,
+        SPECIES_SHEDINJA,
+        SPECIES_TOGEPI,
+        SPECIES_NEVAWOK,
+        SPECIES_DUSKULL,
+        SPECIES_SWINUB,
+        SPECIES_NONE,
+    },
+
+    [SPECIES_HUNTORYPS] = (u16 [])
+    {
+        SPECIES_RASCALOOT,
+        SPECIES_BANDITHUG,
+        SPECIES_CATERPIE,
+        SPECIES_METAPOD,
+        SPECIES_BUTTERFREE,
+        SPECIES_WEEDLE,
+        SPECIES_KAKUNA,
+        SPECIES_BEEDRILL,
+        SPECIES_PIDGEY,
+        SPECIES_PIDGEOTTO,
+        SPECIES_SENTRET,
+        SPECIES_FURRET,
+        SPECIES_KABOWL,
+        SPECIES_BOWLAST,
+        SPECIES_CHAD_BUG_1,
+        SPECIES_CHAD_BUG_2,
+        SPECIES_SANDSHREW,
+        SPECIES_HOPPIP,
+        SPECIES_SKIPLOOM,
+        SPECIES_JUMPLUFF,
+        SPECIES_CLEFAIRY,
+        SPECIES_HOUNDOUR,
+        SPECIES_ZUBAT,
+        SPECIES_GOLBAT,
+        SPECIES_MAREEP,
+        SPECIES_FLAAFFY,
+        SPECIES_HAAGLET,
+        SPECIES_ODDISH,
+        SPECIES_GLOOM,
+        SPECIES_TAQUITTLE,
+        SPECIES_ESCARATACO,
+        SPECIES_SPINARAK,
+        SPECIES_ARIADOS,
+        SPECIES_DIGLETT,
+        SPECIES_SNOUMESE,
+        SPECIES_MARILL,
+        SPECIES_MANKEY,
+        SPECIES_GROWLITHE,
+        SPECIES_POLIWAG,
+        SPECIES_ABRA,
+        SPECIES_MACHOP,
+        SPECIES_MACHOKE,
+        SPECIES_PHOKAI,
+        SPECIES_CHINCHOU,
+        SPECIES_GEODUDE,
+        SPECIES_SLUGMA,
+        SPECIES_MAGCARGO,
+        SPECIES_MAKUHITA,
+        SPECIES_MAGNEMITE,
+        SPECIES_PILOPOO,
+        SPECIES_HOOTHOOT,
+        SPECIES_SEEL,
+        SPECIES_GRIMER,
+        SPECIES_OTDORBLE,
+        SPECIES_ONIX,
+        SPECIES_SLAKOTH,
+        SPECIES_VIGOROTH,
+        SPECIES_ELECTRODE,
+        SPECIES_PIKACHU,
+        SPECIES_CUBONE,
+        SPECIES_KOFFING,
+        SPECIES_TANGELA,
+        SPECIES_SABLIZZARD,
+        SPECIES_OCTIRE,
+        SPECIES_FEEBAS,
+        SPECIES_TEDDIURSA,
+        SPECIES_SCIZOR,
+        SPECIES_CORSOLA,
+        SPECIES_MAGIKARP,
+        SPECIES_EEVEE,
+        SPECIES_CACTAR,
+        SPECIES_ARON,
+        SPECIES_NUMEL,
+        SPECIES_LILEEP,
+        SPECIES_SNORUNT,
+        SPECIES_GLALIE,
+        SPECIES_PHANPY,
+        SPECIES_NINJASK,
+        SPECIES_SHEDINJA,
+        SPECIES_TOGEPI,
+        SPECIES_NEVAWOK,
+        SPECIES_DUSKULL,
+        SPECIES_SWINUB,
+        SPECIES_MEDITITE,
+        SPECIES_SABLEYE,
+        SPECIES_PLASMUNG,
+        SPECIES_NONE,
+    },
+
+    [SPECIES_RIPTORYPS] = (u16 [])
+    {
+        SPECIES_RASCALOOT,
+        SPECIES_BANDITHUG,
+        SPECIES_RUTHLASH,
+        SPECIES_EMBORYPS,
+        SPECIES_HUNTORYPS,
+        SPECIES_FLOBRA,
+        SPECIES_MORPHLO,
+        SPECIES_CATERPIE,
+        SPECIES_METAPOD,
+        SPECIES_BUTTERFREE,
+        SPECIES_WEEDLE,
+        SPECIES_KAKUNA,
+        SPECIES_BEEDRILL,
+        SPECIES_PIDGEY,
+        SPECIES_PIDGEOTTO,
+        SPECIES_PIDGEOT,
+        SPECIES_SENTRET,
+        SPECIES_FURRET,
+        SPECIES_KABOWL,
+        SPECIES_BOWLAST,
+        SPECIES_CHAD_BUG_1,
+        SPECIES_CHAD_BUG_2,
+        SPECIES_SANDSHREW,
+        SPECIES_HOPPIP,
+        SPECIES_SKIPLOOM,
+        SPECIES_JUMPLUFF,
+        SPECIES_CLEFABLE,
+        SPECIES_HOUNDOOM,
+        SPECIES_CONTRARAM,
+        SPECIES_ZUBAT,
+        SPECIES_GOLBAT,
+        SPECIES_CROBAT,
+        SPECIES_AMPHAROS,
+        SPECIES_HAAGLET,
+        SPECIES_ODDISH,
+        SPECIES_GLOOM,
+        SPECIES_VILEPLUME,
+        SPECIES_TAQUITTLE,
+        SPECIES_ESCARATACO,
+        SPECIES_SPINARAK,
+        SPECIES_ARIADOS,
+        SPECIES_DIGLETT,
+        SPECIES_SNOUMESE,
+        SPECIES_SNOUBAUL,
+        SPECIES_MARILL,
+        SPECIES_MANKEY,
+        SPECIES_PRIMEAPE,
+        SPECIES_GROWLITHE,
+        SPECIES_POLIWRATH,
+        SPECIES_ABRA,
+        SPECIES_MACHOP,
+        SPECIES_MACHOKE,
+        SPECIES_PHOKAI,
+        SPECIES_CHINCHOU,
+        SPECIES_LANTURN,
+        SPECIES_GEODUDE,
+        SPECIES_SLUGMA,
+        SPECIES_MAGCARGO,
+        SPECIES_MAKUHITA,
+        SPECIES_MAGNEMITE,
+        SPECIES_MAGNETON,
+        SPECIES_PILOPOO,
+        SPECIES_HOOTHOOT,
+        SPECIES_NOCTOWL,
+        SPECIES_SEEL,
+        SPECIES_GRIMER,
+        SPECIES_OTDORBLE,
+        SPECIES_GASTLY,
+        SPECIES_STEELIX,
+        SPECIES_VOLTORB,
+        SPECIES_ELECTRODE,
+        SPECIES_PIKACHU,
+        SPECIES_RAICHU,
+        SPECIES_CUBONE,
+        SPECIES_ABSOL,
+        SPECIES_KOFFING,
+        SPECIES_WEEZING,
+        SPECIES_TANGELA,
+        SPECIES_SABLIZZARD,
+        SPECIES_OCTIRE,
+        SPECIES_FEEBAS,
+        SPECIES_SCYTHER,
+        SPECIES_SCIZOR,
+        SPECIES_JYNX,
+        SPECIES_ELECTABUZZ,
+        SPECIES_MAGMAR,
+        SPECIES_CORSOLA,
+        SPECIES_BILLFALO,
+        SPECIES_MAGIKARP,
+        SPECIES_MISDREAVUS,
+        SPECIES_EEVEE,
+        SPECIES_JOLTEON,
+        SPECIES_FLAREON,
+        SPECIES_ESPEON,
+        SPECIES_SNEASEL,
+        SPECIES_SNORUNT,
+        SPECIES_GLALIE,
+        SPECIES_MURKROW,
+        SPECIES_NINJASK,
+        SPECIES_SHEDINJA,
+        SPECIES_TOGEPI,
+        SPECIES_TOGEKISS,
+        SPECIES_SKARMORY,
+        SPECIES_MEDICHAM,
+        SPECIES_MEDITITE,
+        SPECIES_SABLEYE,
+        SPECIES_PLASMUNG,
+        SPECIES_GRUNTAZE,
+        SPECIES_NONE,
+    },
+
+    [SPECIES_FLOBRA] = (u16 [])
+    {
+        SPECIES_EMBORYPS,
+        SPECIES_HUNTORYPS,
+        SPECIES_CATERPIE,
+        SPECIES_METAPOD,
+        SPECIES_WEEDLE,
+        SPECIES_KAKUNA,
+        SPECIES_PIDGEY,
+        SPECIES_SENTRET,
+        SPECIES_KABOWL,
+        SPECIES_SANDSHREW,
+        SPECIES_HOUNDOUR,
+        SPECIES_ZUBAT,
+        SPECIES_HAAGLET,
+        SPECIES_TAQUITTLE,
+        SPECIES_SPINARAK,
+        SPECIES_DIGLETT,
+        SPECIES_MARILL,
+        SPECIES_GROWLITHE,
+        SPECIES_POLIWAG,
+        SPECIES_GEODUDE,
+        SPECIES_SLUGMA,
+        SPECIES_HOOTHOOT,
+        SPECIES_ONIX,
+        SPECIES_SLAKOTH,
+        SPECIES_CUBONE,
+        SPECIES_RHYHORN,
+        SPECIES_FEEBAS,
+        SPECIES_MAGIKARP,
+        SPECIES_CACTAR,
+        SPECIES_ARON,
+        SPECIES_NUMEL,
+        SPECIES_SNORUNT,
+        SPECIES_PHANPY,
+        SPECIES_TOGEPI,
+        SPECIES_DUSKULL,
+        SPECIES_DUMBELLION,
+        SPECIES_SWINUB,
+        SPECIES_NONE,
+    },
+
+    [SPECIES_MORPHLO] = (u16 [])
+    {
+        SPECIES_EMBORYPS,
+        SPECIES_HUNTORYPS,
+        SPECIES_FLOBRA,
+        SPECIES_CATERPIE,
+        SPECIES_METAPOD,
+        SPECIES_BUTTERFREE,
+        SPECIES_WEEDLE,
+        SPECIES_KAKUNA,
+        SPECIES_BEEDRILL,
+        SPECIES_PIDGEY,
+        SPECIES_PIDGEOTTO,
+        SPECIES_SENTRET,
+        SPECIES_FURRET,
+        SPECIES_KABOWL,
+        SPECIES_CHAD_BUG_1,
+        SPECIES_SANDSHREW,
+        SPECIES_HOPPIP,
+        SPECIES_SKIPLOOM,
+        SPECIES_JUMPLUFF,
+        SPECIES_CLEFAIRY,
+        SPECIES_CLEFABLE,
+        SPECIES_HOUNDOUR,
+        SPECIES_CONTRARAM,
+        SPECIES_ZUBAT,
+        SPECIES_GOLBAT,
+        SPECIES_CROBAT,
+        SPECIES_HAAGLET,
+        SPECIES_ODDISH,
+        SPECIES_GLOOM,
+        SPECIES_TAQUITTLE,
+        SPECIES_ESCARATACO,
+        SPECIES_SPINARAK,
+        SPECIES_ARIADOS,
+        SPECIES_DIGLETT,
+        SPECIES_SNOUMESE,
+        SPECIES_SNOUBAUL,
+        SPECIES_MARILL,
+        SPECIES_AZUMARILL,
+        SPECIES_GROWLITHE,
+        SPECIES_ARCANINE,
+        SPECIES_POLIWAG,
+        SPECIES_ABRA,
+        SPECIES_KADABRA,
+        SPECIES_PHOKAI,
+        SPECIES_CHINCHOU,
+        SPECIES_SLUGMA,
+        SPECIES_MAGCARGO,
+        SPECIES_HOOTHOOT,
+        SPECIES_GRIMER,
+        SPECIES_MUK,
+        SPECIES_ONIX,
+        SPECIES_SLAKOTH,
+        SPECIES_VIGOROTH,
+        SPECIES_CUBONE,
+        SPECIES_KOFFING,
+        SPECIES_WEEZING,
+        SPECIES_SABLIZZARD,
+        SPECIES_FEEBAS,
+        SPECIES_JYNX,
+        SPECIES_MAGIKARP,
+        SPECIES_EEVEE,
+        SPECIES_SNEASEL,
+        SPECIES_ARON,
+        SPECIES_LAIRON,
+        SPECIES_LILEEP,
+        SPECIES_SNORUNT,
+        SPECIES_GLALIE,
+        SPECIES_MURKROW,
+        SPECIES_SOLROCK,
+        SPECIES_NINJASK,
+        SPECIES_TOGEPI,
+        SPECIES_DUSKULL,
+        SPECIES_DUMBELLION,
+        SPECIES_SWINUB,
+        SPECIES_SABLEYE,
+        SPECIES_NONE,
+    },
+
+    [SPECIES_MECHOBRA] = (u16 [])
+    {
+        SPECIES_EMBORYPS,
+        SPECIES_HUNTORYPS,
+        SPECIES_RIPTORYPS,
+        SPECIES_FLOBRA,
+        SPECIES_MORPHLO,
+        SPECIES_CATERPIE,
+        SPECIES_METAPOD,
+        SPECIES_BUTTERFREE,
+        SPECIES_WEEDLE,
+        SPECIES_KAKUNA,
+        SPECIES_BEEDRILL,
+        SPECIES_PIDGEY,
+        SPECIES_PIDGEOTTO,
+        SPECIES_PIDGEOT,
+        SPECIES_SENTRET,
+        SPECIES_FURRET,
+        SPECIES_KABOWL,
+        SPECIES_BOWLAST,
+        SPECIES_CHAD_BUG_1,
+        SPECIES_CHAD_BUG_2,
+        SPECIES_SANDSHREW,
+        SPECIES_HOPPIP,
+        SPECIES_SKIPLOOM,
+        SPECIES_JUMPLUFF,
+        SPECIES_CLEFAIRY,
+        SPECIES_CLEFABLE,
+        SPECIES_HOUNDOUR,
+        SPECIES_CONTRARAM,
+        SPECIES_ZUBAT,
+        SPECIES_GOLBAT,
+        SPECIES_CROBAT,
+        SPECIES_HAAGLET,
+        SPECIES_WARTHAAG,
+        SPECIES_ODDISH,
+        SPECIES_GLOOM,
+        SPECIES_TAQUITTLE,
+        SPECIES_ESCARATACO,
+        SPECIES_SPINARAK,
+        SPECIES_ARIADOS,
+        SPECIES_DIGLETT,
+        SPECIES_SNOUMESE,
+        SPECIES_SNOUBAUL,
+        SPECIES_MARILL,
+        SPECIES_AZUMARILL,
+        SPECIES_GROWLITHE,
+        SPECIES_ARCANINE,
+        SPECIES_POLIWAG,
+        SPECIES_ABRA,
+        SPECIES_KADABRA,
+        SPECIES_ALAKAZAM,
+        SPECIES_MACHOP,
+        SPECIES_PHOKAI,
+        SPECIES_PHOTASM,
+        SPECIES_PHOTOGEIST,
+        SPECIES_CHINCHOU,
+        SPECIES_SLUGMA,
+        SPECIES_MAGCARGO,
+        SPECIES_PILOPOO,
+        SPECIES_HOOTHOOT,
+        SPECIES_NOCTOWL,
+        SPECIES_GRIMER,
+        SPECIES_MUK,
+        SPECIES_GASTLY,
+        SPECIES_ONIX,
+        SPECIES_STEELIX,
+        SPECIES_SLAKOTH,
+        SPECIES_VIGOROTH,
+        SPECIES_CUBONE,
+        SPECIES_KOFFING,
+        SPECIES_WEEZING,
+        SPECIES_RHYHORN,
+        SPECIES_SABLIZZARD,
+        SPECIES_FEEBAS,
+        SPECIES_SCYTHER,
+        SPECIES_SCIZOR,
+        SPECIES_JYNX,
+        SPECIES_CORSOLA,
+        SPECIES_MAGIKARP,
+        SPECIES_MISDREAVUS,
+        SPECIES_EEVEE,
+        SPECIES_FLAREON,
+        SPECIES_SNEASEL,
+        SPECIES_ARON,
+        SPECIES_LAIRON,
+        SPECIES_NUMEL,
+        SPECIES_CAMERUPT,
+        SPECIES_LILEEP,
+        SPECIES_CRADILY,
+        SPECIES_SNORUNT,
+        SPECIES_GLALIE,
+        SPECIES_MURKROW,
+        SPECIES_SOLROCK,
+        SPECIES_PHANPY,
+        SPECIES_NINJASK,
+        SPECIES_TOGEPI,
+        SPECIES_DUSKULL,
+        SPECIES_DUMBELLION,
+        SPECIES_SWINUB,
+        SPECIES_SABLEYE,
+        SPECIES_NONE,
+    },
+
+    [SPECIES_MAREEP] = (u16 [])
+    {
+        SPECIES_PIDGEY,
+        SPECIES_PIDGEOTTO,
+        SPECIES_PIDGEOT,
+        SPECIES_POLIWAG,
+        SPECIES_POLIWHIRL,
+        SPECIES_POLIWRATH,
+        SPECIES_LOTAD,
+        SPECIES_LOMBRE,
+        SPECIES_MARILL,
+        SPECIES_AZUMARILL,
+        SPECIES_HOOTHOOT,
+        SPECIES_NOCTOWL,
+        SPECIES_ZUBAT,
+        SPECIES_GOLBAT,
+        SPECIES_CROBAT,
+        SPECIES_NONE,
+    },
+    
+    [SPECIES_DUMBELLION] = (u16 [])
+    {
+        SPECIES_PIDGEY,
+        SPECIES_PIDGEOTTO,
+        SPECIES_PIDGEOT,
+        SPECIES_CATERPIE,
+        SPECIES_METAPOD,
+        SPECIES_BUTTERFREE,
+        SPECIES_WEEDLE,
+        SPECIES_KAKUNA,
+        SPECIES_BEEDRILL,
+        SPECIES_ABRA,
+        SPECIES_KADABRA,
+        SPECIES_ALAKAZAM,
+        SPECIES_HOOTHOOT,
+        SPECIES_NOCTOWL,
+        SPECIES_SLAKOTH,
+        SPECIES_VIGOROTH,
+        SPECIES_SLAKING,
+        SPECIES_NONE,
+    },
+
+    [SPECIES_HOPPIP] = (u16 [])
+    {
+        SPECIES_CUBONE,
+        SPECIES_MAROWAK,
+        SPECIES_DIGLETT,
+        SPECIES_DUGTRIO,
+        SPECIES_HAAGLET,
+        SPECIES_WARTHAAG,
+        SPECIES_POLIWAG,
+        SPECIES_POLIWHIRL,
+        SPECIES_POLIWRATH,
+        SPECIES_PHANPY,
+        SPECIES_DONPHAN,
+        SPECIES_SANDSHREW,
+        SPECIES_SANDSLASH,
+        SPECIES_MARILL,
+        SPECIES_AZUMARILL,
+        SPECIES_GEODUDE,
+        SPECIES_GRAVELER,
+        SPECIES_GOLEM,
+        SPECIES_MACHOP,
+        SPECIES_MACHOKE,
+        SPECIES_MACHAMP,
+        SPECIES_NONE,
+    },
+
+    [SPECIES_GROWLITHE] = (u16[])
+    {
+        SPECIES_RASCALOOT,
+        SPECIES_BANDITHUG,
+        SPECIES_EMBORYPS,
+        SPECIES_HUNTORYPS,
+        SPECIES_CHAD_BUG_1,
+        SPECIES_CHAD_BUG_2,
+        SPECIES_ODDISH,
+        SPECIES_GLOOM,
+        SPECIES_VILEPLUME,
+        SPECIES_CATERPIE,
+        SPECIES_METAPOD,
+        SPECIES_BUTTERFREE,
+        SPECIES_WEEDLE,
+        SPECIES_KAKUNA,
+        SPECIES_BEEDRILL,
+        SPECIES_ARON,
+        SPECIES_LAIRON,
+        SPECIES_AGGRON,
+        SPECIES_NONE,
+    },
+
+    [SPECIES_GLALIE] = (u16[])
+    {
+        SPECIES_CUBONE,
+        SPECIES_MAROWAK,
+        SPECIES_HAAGLET,
+        SPECIES_WARTHAAG,
+        SPECIES_NIDORAN_M,
+        SPECIES_NIDORINO,
+        SPECIES_NIDOKING,
+        SPECIES_NIDORAN_F,
+        SPECIES_NIDORINA,
+        SPECIES_NIDOQUEEN,
+        SPECIES_CHAD_BUG_1,
+        SPECIES_CHAD_BUG_2,
+        SPECIES_PIDGEY,
+        SPECIES_PIDGEOTTO,
+        SPECIES_PHANPY,
+        SPECIES_DONPHAN,
+        SPECIES_ODDISH,
+        SPECIES_GLOOM,
+        SPECIES_VILEPLUME,
+        SPECIES_SANDSHREW,
+        SPECIES_SANDSLASH,
+        SPECIES_HOOTHOOT,
+        SPECIES_NOCTOWL,
+        SPECIES_ZUBAT,
+        SPECIES_GOLBAT,
+        SPECIES_CROBAT,
+        SPECIES_NONE
+    },
+
+    [SPECIES_CONTRARAM] = (u16[])
+    {
+        SPECIES_CHAD_BUG_1,
+        SPECIES_CHAD_BUG_2,
+        SPECIES_PIDGEY,
+        SPECIES_PIDGEOTTO,
+        SPECIES_ODDISH,
+        SPECIES_GLOOM,
+        SPECIES_VILEPLUME,
+        SPECIES_CATERPIE,
+        SPECIES_METAPOD,
+        SPECIES_BUTTERFREE,
+        SPECIES_WEEDLE,
+        SPECIES_KAKUNA,
+        SPECIES_BEEDRILL,
+        SPECIES_HOOTHOOT,
+        SPECIES_NOCTOWL,
+        SPECIES_ZUBAT,
+        SPECIES_GOLBAT,
+        SPECIES_CROBAT,
+        SPECIES_ARON,
+        SPECIES_LAIRON,
+        SPECIES_AGGRON,
+        SPECIES_EMBORYPS,
+        SPECIES_HUNTORYPS,
+        SPECIES_RIPTORYPS,
+        SPECIES_NONE
+    },
+
     [SPECIES_MAGNETON] = (u16 [])
     {
         SPECIES_SKARMORY,
         SPECIES_NONE,
     },
-    [SPECIES_MAGNEMITE] = (u16 [])
+    [SPECIES_DONPHAN] = (u16 [])
     {
-        SPECIES_SKARMORY,
+        SPECIES_MAGNETON,
         SPECIES_AGGRON,
         SPECIES_NONE,
     },
@@ -61,67 +918,119 @@ s32 ScoreMatchup(u32 playerSpecies, u32 opponentSpecies)
     return 0;
 }
 
-bool8 ShouldSwitchIfCountered(void)
+static u8 BestCounterMons(struct Pokemon *party, u32 validMons, u32 foeSpecies)
 {
     int i;
-    u32 playerSpecies, opponentSpecies, hp, maxHP;
+    u32 ourSpecies, hp, maxHP;
     s32 scores[PARTY_SIZE];
     s32 maxScore;
-    u32 maxCount;
-    u8 maxIndices[PARTY_SIZE];
+    u32 maxMons;
 
-    if (gBattleMons[gActiveBattler].hp <= gBattleMons[gActiveBattler].maxHP / 2 
-    || (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE))
-    {
-        return FALSE;
-    }
-    playerSpecies =  gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species;
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        opponentSpecies = GetMonData(&gEnemyParty[i], MON_DATA_SPECIES2, NULL);
-        hp = GetMonData(&gEnemyParty[i], MON_DATA_HP, NULL);
-        maxHP = GetMonData(&gEnemyParty[i], MON_DATA_MAX_HP, NULL);
-        if (opponentSpecies != SPECIES_NONE
-         && opponentSpecies != SPECIES_EGG
-         && hp > maxHP / 2)
+        scores[i] = INT_MIN;
+        if (validMons & gBitTable[i])
         {
-            scores[i] = ScoreMatchup(playerSpecies, opponentSpecies);
-        }
-        else
-        {
-            scores[i] = INT_MIN;
+            hp = GetMonData(&party[i], MON_DATA_HP, NULL);
+            maxHP = GetMonData(&party[i], MON_DATA_MAX_HP, NULL);
+            ourSpecies = GetMonData(&party[i], MON_DATA_SPECIES2, NULL);
+            if (hp >= maxHP / 2)
+                scores[i] = ScoreMatchup(foeSpecies, ourSpecies);
         }
     }
 
     maxScore = INT_MIN;
-    maxCount = 0;
+    maxMons = 0;
     for (i = 0; i < PARTY_SIZE; i++)
     {
         if (scores[i] > maxScore)
         {
+            maxMons = gBitTable[i];
             maxScore = scores[i];
-            // New max, throw away old indices.
-            maxCount = 0;
-            maxIndices[maxCount++] = i;
         }
         else if (scores[i] == maxScore)
         {
-            // Tied max, add to indices.
-            maxIndices[maxCount++] = i;
+            maxMons |= gBitTable[i];
         }
     }
 
-    // Check that the active Pokémon isn't in maxIndices.
-    for (i = 0; i < maxCount; i++)
+    if (maxScore == INT_MIN)
+        return 0;
+
+    return maxMons;
+}
+
+bool8 ShouldSwitchIfCountered(void)
+{
+    int i;
+    u32 aliveMons, species, hp, counters;
+
+    if (!(gBattleResources->ai->aiFlags & AI_SCRIPT_COUNTER))
+
     {
-        if (maxIndices[i] == gBattlerPartyIndexes[gActiveBattler])
-            return FALSE;
+        return FALSE;
     }
 
-    // Switch to a random index from maxIndices. I'm not sure if this works. Based on ShouldSwitchIfPerishSong.
-    *(gBattleStruct->AI_monToSwitchIntoId + gActiveBattler) = maxIndices[Random() % maxCount];
-    BtlController_EmitTwoReturnValues(1, B_ACTION_SWITCH, 0);
-    return TRUE;
+    if (gBattleMons[gActiveBattler].hp <= gBattleMons[gActiveBattler].maxHP / 2 
+    || (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE))
+    
+    {
+        return FALSE;
+    }
+
+    aliveMons = 0;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        species = GetMonData(&gEnemyParty[i], MON_DATA_SPECIES2, NULL);
+        hp = GetMonData(&gEnemyParty[i], MON_DATA_HP, NULL);
+        if (species != SPECIES_NONE && species != SPECIES_EGG && hp > 0)
+            aliveMons |= gBitTable[i];
+    }
+
+    counters = BestCounterMons(gEnemyParty, aliveMons, gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
+
+    if (!counters)
+        return FALSE;
+
+    if (counters & gBitTable[gBattlerPartyIndexes[gActiveBattler]])
+        return FALSE;
+
+    while (TRUE)
+    {
+        i = Random() % PARTY_SIZE;
+        if (counters & gBitTable[i])
+        {
+            *(gBattleStruct->AI_monToSwitchIntoId + gActiveBattler) = i;
+            BtlController_EmitTwoReturnValues(1, B_ACTION_SWITCH, 0);
+            return TRUE;
+        }
+    }
+}
+
+static u32 GetBestMonCounter(struct Pokemon *party, int firstId, int lastId, u8 invalidMons, int aliveCount)
+{
+    int i;
+    u32 validMons, counters;
+
+    if (!(gBattleResources->ai->aiFlags & AI_SCRIPT_COUNTER))
+        return PARTY_SIZE;
+
+    validMons = 0;
+    for (i = firstId; i < lastId; i++)
+        validMons |= gBitTable[i];
+    validMons &= ~invalidMons;
+
+    counters = BestCounterMons(party, validMons,  gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
+
+    if (!counters)
+        return PARTY_SIZE;
+
+    while (TRUE)
+    {
+        i = Random() % PARTY_SIZE;
+        if (counters & gBitTable[i])
+            return i;
+    }
 }
 
 void GetAIPartyIndexes(u32 battlerId, s32 *firstId, s32 *lastId)
@@ -864,6 +1773,10 @@ u8 GetMostSuitableMonToSwitchInto(void)
         else
             aliveCount++;
     }
+
+    bestMonId = GetBestMonCounter(party, firstId, lastId, invalidMons, aliveCount);
+    if (bestMonId != PARTY_SIZE)
+        return bestMonId;
 
     bestMonId = GetBestMonBatonPass(party, firstId, lastId, invalidMons, aliveCount);
     if (bestMonId != PARTY_SIZE)

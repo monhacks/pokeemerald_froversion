@@ -5079,19 +5079,19 @@ static const union AnimCmd sAnim_CONTRARAM_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_4_1[] = 
+static const union AnimCmd sAnim_PLASMUNG_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_5_1[] = 
+static const union AnimCmd sAnim_GRUNTAZE_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_6_1[] = 
+static const union AnimCmd sAnim_ELITETRIC_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
@@ -7642,17 +7642,17 @@ static const union AnimCmd *const sAnims_CONTRARAM[] ={
     sAnim_GeneralFrame0,
     sAnim_CONTRARAM_1,
 };
-static const union AnimCmd *const sAnims_FILLER_4[] ={
+static const union AnimCmd *const sAnims_PLASMUNG[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_4_1,
+    sAnim_PLASMUNG_1,
 };
-static const union AnimCmd *const sAnims_FILLER_5[] ={
+static const union AnimCmd *const sAnims_GRUNTAZE[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_5_1,
+    sAnim_GRUNTAZE_1,
 };
-static const union AnimCmd *const sAnims_FILLER_6[] ={
+static const union AnimCmd *const sAnims_ELITETRIC[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_6_1,
+    sAnim_ELITETRIC_1,
 };
 static const union AnimCmd *const sAnims_FILLER_7[] ={
     sAnim_GeneralFrame0,
@@ -8297,9 +8297,9 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(REDEYES),
     ANIM_CMD(MAROWAK_ALOLAN),
     ANIM_CMD(CONTRARAM),
-    ANIM_CMD(FILLER_4),
-    ANIM_CMD(FILLER_5),
-    ANIM_CMD(FILLER_6),
+    ANIM_CMD(PLASMUNG),
+    ANIM_CMD(GRUNTAZE),
+    ANIM_CMD(ELITETRIC),
     ANIM_CMD(FILLER_7),
     ANIM_CMD(FILLER_8),
     ANIM_CMD(FILLER_9),

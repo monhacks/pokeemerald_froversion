@@ -2545,17 +2545,17 @@ const u8 gContraramPokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_4PokedexText[] = _(
+const u8 gPlasmungPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_5PokedexText[] = _(
+const u8 gGruntazePokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_6PokedexText[] = _(
+const u8 gElitetricPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"

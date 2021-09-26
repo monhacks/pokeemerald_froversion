@@ -2430,17 +2430,17 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_4] =
+    [SPECIES_PLASMUNG] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_5] =
+    [SPECIES_GRUNTAZE] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_6] =
+    [SPECIES_ELITETRIC] =
     {
         .size = 0x88,
         .y_offset = 0x00,
