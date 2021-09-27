@@ -1292,3 +1292,6 @@ $(MID_SUBDIR)/mus_fv_goodnight.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_fv_intro.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G060 -V090
+
+$(MID_SUBDIR)/mus_fv_vs_gmp.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G158 -V090 

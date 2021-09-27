@@ -77,6 +77,7 @@ const struct BerryBoost gBerryBoosts[] =
 {
     { ITEM_ORAN_BERRY, STAT_ATK, 1, STAT_DEF, 1 },
     { ITEM_CHERI_BERRY, STAT_SPEED, 1 },
+    { ITEM_SITRUS_BERRY, STAT_ATK, 2},
     { 0xFFFF },
 };
 
@@ -4257,6 +4258,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             }
             break;
         case ABILITY_BERRY_BOOST:
+            gBattleScripting.savedBattler = gBattlerAttacker;
+            gBattlerAttacker = battler;
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
@@ -4291,8 +4294,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 gDisableStructs[battler].substituteHP = gBattleMons[battler].maxHP / 4;
                 BattleScriptPushCursorAndCallback(BattleScript_AutosubActivates);
                 effect++;
-                break;
             }
+            break;
         case ABILITY_NEGATE:
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {

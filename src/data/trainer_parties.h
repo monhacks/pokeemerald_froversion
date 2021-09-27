@@ -3473,49 +3473,77 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
 
 static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     {
-    .abilityNum = 2,
+    .abilityNum = 3,
     .iv = 250,
-    .lvl = 34,
-    .species = SPECIES_VAPOREON,
+    .lvl = 100,
+    .species = SPECIES_MECHOBRA,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_SUBSTITUTE, MOVE_ACID_ARMOR, MOVE_BATON_PASS, MOVE_WATER_PULSE},
-    .evs = {252, 0, 252, 0, 0, 4},
-    .nickname = gText_MarriottVaporeonNickname
+    .moves = {MOVE_SURF, MOVE_IRON_TAIL, MOVE_LANDMINE, MOVE_ICE_BEAM},
     },
+
     {
-    .abilityNum = 1,    
-    .iv = 200,
-    .lvl = 33,
-    .species = SPECIES_LANTURN,
+    .abilityNum = 3,
+    .iv = 250,
+    .lvl = 100,
+    .species = SPECIES_RUTHLASH,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_CLOSE_COMBAT, MOVE_POWER_WHIP, MOVE_EARTHQUAKE, MOVE_BULK_UP},
+    },
+
+    {
+    .abilityNum = 3,
+    .iv = 250,
+    .lvl = 100,
+    .species = SPECIES_RIPTORYPS,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_SPARK, MOVE_BUBBLE_BEAM, MOVE_CONFUSE_RAY, MOVE_THUNDER_WAVE}
+    .moves = {MOVE_FLAMETHROWER, MOVE_ELEMENTAL_BREATH, MOVE_NONE, MOVE_DRAGON_DANCE},
     },
-    {
-    .abilityNum = 2,
-    .iv = 200,
-    .lvl = 34,
-    .species = SPECIES_AZUMARILL,
-    .heldItem = ITEM_CHOICE_BAND,
-    .moves = {MOVE_PLAY_ROUGH, MOVE_AQUA_TAIL, MOVE_NONE, MOVE_NONE}
-    },
+};
+    
     // {
     // .abilityNum = 2,
     // .iv = 250,
-    // .lvl = 35,
-    // .species = SPECIES_MILOTIC,
+    // .lvl = 34,
+    // .species = SPECIES_VAPOREON,
     // .heldItem = ITEM_LEFTOVERS,
-    // .moves = {MOVE_SURF, MOVE_RECOVER, MOVE_TOXIC, MOVE_ICE_BEAM}
+    // .moves = {MOVE_SUBSTITUTE, MOVE_ACID_ARMOR, MOVE_BATON_PASS, MOVE_WATER_PULSE},
+    // .evs = {252, 0, 252, 0, 0, 4},
+    // .nickname = gText_MarriottVaporeonNickname
     // },
-    {
-    .abilityNum = 2,
-    .iv = 250,
-    .lvl = 36,
-    .species = SPECIES_LUTRADOR,
-    .heldItem = ITEM_PAYAPA_BERRY,
-    .moves = {MOVE_ROCK_SMASH, MOVE_COVET, MOVE_AQUA_JET, MOVE_PROTECT},
-    .evs = {252, 0, 4, 0, 0, 252}
-    }
-};
+    // {
+    // .abilityNum = 1,    
+    // .iv = 200,
+    // .lvl = 33,
+    // .species = SPECIES_LANTURN,
+    // .heldItem = ITEM_LEFTOVERS,
+    // .moves = {MOVE_SPARK, MOVE_BUBBLE_BEAM, MOVE_CONFUSE_RAY, MOVE_THUNDER_WAVE}
+    // },
+    // {
+    // .abilityNum = 2,
+    // .iv = 200,
+    // .lvl = 34,
+    // .species = SPECIES_AZUMARILL,
+    // .heldItem = ITEM_CHOICE_BAND,
+    // .moves = {MOVE_PLAY_ROUGH, MOVE_AQUA_TAIL, MOVE_NONE, MOVE_NONE}
+    // },
+    // // {
+    // // .abilityNum = 2,
+    // // .iv = 250,
+    // // .lvl = 35,
+    // // .species = SPECIES_MILOTIC,
+    // // .heldItem = ITEM_LEFTOVERS,
+    // // .moves = {MOVE_SURF, MOVE_RECOVER, MOVE_TOXIC, MOVE_ICE_BEAM}
+    // // },
+    // {
+    // .abilityNum = 2,
+    // .iv = 250,
+    // .lvl = 36,
+    // .species = SPECIES_LUTRADOR,
+    // .heldItem = ITEM_PAYAPA_BERRY,
+    // .moves = {MOVE_ROCK_SMASH, MOVE_COVET, MOVE_AQUA_JET, MOVE_PROTECT},
+    // .evs = {252, 0, 4, 0, 0, 252}
+    // }
+// };
 
 static const struct TrainerMonItemCustomMoves sParty_Norman1[] = {
     {

@@ -8319,6 +8319,7 @@ BattleScript_BerryBoostActivates2:
 	printfromtable gStatUpStringIds
 	waitmessage 0x40
 BattleScript_BerryBoostActivatesEnd:
+	copybyte sSAVED_BATTLER, gBattlerAttacker
 	end3
 
 BattleScript_BerryBoostDeactivates::
