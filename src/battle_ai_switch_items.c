@@ -95,7 +95,7 @@ bool8 ShouldSwitchIfCountered(void)
 {
     int i;
     u32 aliveMons, species, hp, counters;
-    u8 opposingBattler;
+    u8 playerBattler = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
 
     if (!(gBattleResources->ai->aiFlags & AI_SCRIPT_COUNTER))
 
@@ -108,6 +108,15 @@ bool8 ShouldSwitchIfCountered(void)
     
     {
         return FALSE;
+    }
+
+    if (GetWhoStrikesFirst(gActiveBattler, GetBattlerAtPosition(B_POSITION_PLAYER_LEFT), TRUE) == 0)
+    {
+        for (i = 0; i < MAX_MON_MOVES; i++)
+        {
+            if (gBattleResources->ai->simulatedDmg[gActiveBattler][playerBattler][i] <= gBattleMons[playerBattler].hp)
+                return FALSE;
+        }
     }
 
     aliveMons = 0;
