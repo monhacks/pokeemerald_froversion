@@ -45,6 +45,7 @@
 #include "constants/species.h"
 #include "constants/trainers.h"
 #include "constants/weather.h"
+#include "mgba_printf.h"
 
 /*
 NOTE: The data and functions in this file up until (but not including) sSoundMovesTable
@@ -1695,6 +1696,7 @@ enum
     ENDTURN_ROULETTE,
     ENDTURN_POISON_FIELD,
     ENDTURN_POISON_FIELD_BATTLERS,
+    ENDTURN_RAIN_HEAL,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -2245,6 +2247,37 @@ u8 DoFieldEndTurnEffects(void)
                 gBattleStruct->turnEffectsBattlerId = 0;
             }
             break;
+        case ENDTURN_RAIN_HEAL:
+            if(FlagGet(FLAG_BATTLE_RAIN)
+            && gBattleStruct->turnEffectsBattlerId < gBattlersCount)
+            {
+                gActiveBattler = gBattlerByTurnOrder[gBattleStruct->turnEffectsBattlerId++];
+                if (IsBattlerAlive(gActiveBattler)
+                 && WEATHER_HAS_EFFECT
+                 && (gBattleWeather & WEATHER_RAIN_ANY)
+                 && !BATTLER_MAX_HP(gActiveBattler)
+                 && !(gStatuses3[gActiveBattler] & STATUS3_HEAL_BLOCK)
+                 && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_WATER))
+                {
+                    Printf("Executing RainHealScript");
+                    gBattleScripting.battler = gActiveBattler;
+                    gBattlescriptCurrInstr = BattleScript_RainHpHeal;
+                    BattleScriptExecute(gBattlescriptCurrInstr);
+                    effect++;
+                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    gBattleMoveDamage *= -1;
+                    effect++;
+                }
+            }
+                else
+            {
+                gBattleStruct->turnCountersTracker++;
+                gBattleStruct->turnEffectsBattlerId = 0;
+            }
+                break;
+
         case ENDTURN_FIELD_COUNT:
             effect++;
             break;
@@ -4336,6 +4369,20 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 {
                     BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
                     gBattleMoveDamage = gBattleMons[battler].maxHP / (gLastUsedAbility == ABILITY_RAIN_DISH ? 16 : 8);
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    gBattleMoveDamage *= -1;
+                    effect++;
+                }
+                break;
+            case ABILITY_VAPOREON_REGENERATOR_RAIN_DISH:
+                if (WEATHER_HAS_EFFECT
+                 && (gBattleWeather & WEATHER_RAIN_ANY)
+                 && !BATTLER_MAX_HP(battler)
+                 && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK))
+                {
+                    BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                    gBattleMoveDamage = gBattleMons[battler].maxHP / (gLastUsedAbility == ABILITY_VAPOREON_REGENERATOR_RAIN_DISH ? 16 : 8);
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     gBattleMoveDamage *= -1;

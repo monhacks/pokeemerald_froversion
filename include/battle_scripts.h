@@ -388,5 +388,6 @@ extern const u8 BattleScript_MagicMirrorBounce[];
 extern const u8 BattleScript_NegateActivates[];
 extern const u8 BattleScript_ResurrectionActivatesAttacker[];
 extern const u8 BattleScript_ResurrectionActivatesTarget[];
+extern const u8 BattleScript_RainHpHeal[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

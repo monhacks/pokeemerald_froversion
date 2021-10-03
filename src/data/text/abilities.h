@@ -542,6 +542,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_RESURRECTION] = _("Resurrection"),
     [ABILITY_SWORD_LUNGE] = _("Sword Lunge"),
     [ABILITY_CHARISMA] = _("Charisma"),
+    [ABILITY_VAPOREON_REGENERATOR_RAIN_DISH] = _("Rain Dish")
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -822,4 +823,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_RESURRECTION] = sResurrectionDescription,
     [ABILITY_SWORD_LUNGE] = sSwordLungeDescription,
     [ABILITY_CHARISMA] = sCharismaDescription,
+    [ABILITY_VAPOREON_REGENERATOR_RAIN_DISH] = sRainDishDescription,
 };

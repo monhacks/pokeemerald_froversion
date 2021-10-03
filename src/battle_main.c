@@ -4364,7 +4364,7 @@ bool32 IsMoveOneOf(u16 move, const u16 *moves)
         return FALSE;
 }
 
-static const u16 sSlashingMoves[] =
+const u16 gSlashingMoves[] =
     {
         MOVE_AIR_CUTTER,
         MOVE_AIR_SLASH,
@@ -4390,6 +4390,12 @@ static const u16 sSlashingMoves[] =
         0xFFFF
     };
 
+    const u16 gPhasingMoves[] =
+    {
+        MOVE_DRAGON_TAIL,
+        0xFFFF
+    };
+
 s8 GetMovePriority(u32 battlerId, u16 move)
 {
     s8 priority;
@@ -4405,7 +4411,7 @@ s8 GetMovePriority(u32 battlerId, u16 move)
     {
         priority++;
     }
-    else if (GetBattlerAbility(battlerId) == ABILITY_SWORD_LUNGE && IsMoveOneOf (move, sSlashingMoves))
+    else if (GetBattlerAbility(battlerId) == ABILITY_SWORD_LUNGE && IsMoveOneOf (move, gSlashingMoves))
     {
         priority++;
     }

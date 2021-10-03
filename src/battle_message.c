@@ -432,6 +432,7 @@ static const u8 sText_ExclamationMark4[] = _("!");
 static const u8 sText_ExclamationMark5[] = _("!");
 static const u8 sText_Accuracy[] = _("accuracy");
 static const u8 sText_Evasiveness[] = _("evasiveness");
+static const u8 sText_RainHealRestoredHPALittle2[] = _("The Rain restored {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s\nHP a little!");
 
 const u8 * const gStatNamesTable[NUM_BATTLE_STATS] =
 {
@@ -1303,6 +1304,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_NEGATE - 12] = sText_Negate,
     [STRINGID_BUFF1WASREVIVED - 12] = sText_Buff1WasRevived,
     [STRINGID_PKMNCUTSSPAATTACKWITH - 12] = sText_PkmnCutsSpaAttackWith,
+    [STRINGID_RAINHEALRESTOREDHPALITTLE2 - 12] = sText_RainHealRestoredHPALittle2,
 };
 
 const u16 gTerrainStringIds[] =

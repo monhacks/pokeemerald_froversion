@@ -132,6 +132,7 @@ static const struct AbilitySetter sVaporeonAbilitySet[] =
     {ABILITY_HYDRATION, 1},
     {ABILITY_REGENERATOR, 36},
     {ABILITY_DRIZZLE, 52},
+    {ABILITY_VAPOREON_REGENERATOR_RAIN_DISH, 200}, //only on marriotts vaporeon!!
     ABILITY_SET_END
 };
 

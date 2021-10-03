@@ -3472,6 +3472,25 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
 };
 
 static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
+    // {
+    // .abilityNum = 2,
+    // .iv = 250,
+    // .lvl = 100,
+    // .species = SPECIES_SANDSLASH,
+    // .heldItem = ITEM_LEFTOVERS,
+    // .moves = {MOVE_STEALTH_ROCK, MOVE_RAPID_SPIN, MOVE_EARTHQUAKE, MOVE_KNOCK_OFF},
+    // },
+     {
+    .abilityNum = 4,
+    .iv = 250,
+    //.lvl = 34,
+    .lvl = 100,
+    .species = SPECIES_VAPOREON,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_SUBSTITUTE, MOVE_ACID_ARMOR, MOVE_BATON_PASS, MOVE_WATER_PULSE},
+    .evs = {252, 0, 252, 0, 0, 4},
+    .nickname = gText_MarriottVaporeonNickname
+    },
     {
     .abilityNum = 3,
     .iv = 250,
@@ -3498,6 +3517,24 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_FLAMETHROWER, MOVE_ELEMENTAL_BREATH, MOVE_NONE, MOVE_DRAGON_DANCE},
     },
+
+    {
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 100,
+    .species = SPECIES_PIDGEOT,
+    .heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_AIR_SLASH, MOVE_ROOST, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT},
+    },
+
+    {
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 100,
+    .species = SPECIES_JUMPLUFF,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_STRENGTH_SAP, MOVE_ACROBATICS, MOVE_SWORDS_DANCE},
+    }
 };
     
     // {

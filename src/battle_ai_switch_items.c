@@ -12,11 +12,15 @@
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/battle_ai.h"
+#include "mgba_printf.h"
 
 // this file's functions
 static bool8 HasSuperEffectiveMoveAgainstOpponents(bool8 noRng);
 static bool8 FindMonWithFlagsAndSuperEffective(u16 flags, u8 moduloPercent);
 static bool8 ShouldUseItem(void);
+extern const u16 gPhasingMoves[];
+extern const u16 gSlashingMoves[];
+bool32 IsMoveOneOf(u16 move, const u16 *moves);
 
 struct Counter
 {
@@ -95,26 +99,34 @@ bool8 ShouldSwitchIfCountered(void)
 {
     int i;
     u32 aliveMons, species, hp, counters;
-    u8 playerBattler = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
+    u8 playerBattler = GetBattlerAtPosition(B_POSITION_PLAYER_LEFT);
+    
 
+
+    Printf ("start of function");
+    Printf ("playerBattler = %d", playerBattler);
+    Printf ("gActiveBattler = %d, %d", gActiveBattler, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
     if (!(gBattleResources->ai->aiFlags & AI_SCRIPT_COUNTER))
 
     {
         return FALSE;
     }
-
+ Printf ("checking for substitute and HP lower than 50 perecent and dragged out?");
     if (gBattleMons[gActiveBattler].hp <= gBattleMons[gActiveBattler].maxHP / 2 
-    || (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE))
+    || (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE)
+    || IsMoveOneOf (gBattleResults.lastUsedMovePlayer, gPhasingMoves))
     
     {
         return FALSE;
     }
-
+ Printf ("Checking if opponent is faster than player");
     if (GetWhoStrikesFirst(gActiveBattler, GetBattlerAtPosition(B_POSITION_PLAYER_LEFT), TRUE) == 0)
     {
         for (i = 0; i < MAX_MON_MOVES; i++)
         {
-            if (gBattleResources->ai->simulatedDmg[gActiveBattler][playerBattler][i] <= gBattleMons[playerBattler].hp)
+            s32 damageCalc = AI_CalcDamage(gBattleMons[gActiveBattler].moves[i], gActiveBattler, playerBattler);
+            Printf("move %d damage: %d PlayerHP: %d", i, (AI_CalcDamage(gBattleMons[gActiveBattler].moves[i], gActiveBattler, playerBattler)), gBattleMons[playerBattler].hp);
+            if (AI_CalcDamage(gBattleMons[gActiveBattler].moves[i], gActiveBattler, playerBattler) >= gBattleMons[playerBattler].hp)
                 return FALSE;
         }
     }
@@ -127,9 +139,14 @@ bool8 ShouldSwitchIfCountered(void)
         if (species != SPECIES_NONE && species != SPECIES_EGG && hp > 0)
             aliveMons |= gBitTable[i];
     }
-
-    counters = BestCounterMons(gEnemyParty, aliveMons, gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
-
+        Printf("Species = %d", gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
+        Printf ("playerBattler = %d, %d", playerBattler, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
+        Printf ("gActiveBattler = %d", gActiveBattler);
+    counters = BestCounterMons(gEnemyParty, aliveMons, gBattleMons[playerBattler = GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
+        Printf("Species = %d", gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
+        Printf ("playerBattler = %d, %d", playerBattler, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
+        Printf ("gActiveBattler = %d", gActiveBattler);
+    
     if (!counters)
         return FALSE;
 
@@ -162,6 +179,7 @@ static u32 GetBestMonCounter(struct Pokemon *party, int firstId, int lastId, u8 
     validMons &= ~invalidMons;
 
     counters = BestCounterMons(party, validMons,  gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
+        Printf("Species = %d", gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
 
     if (!counters)
         return PARTY_SIZE;

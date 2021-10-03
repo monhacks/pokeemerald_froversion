@@ -7141,6 +7141,14 @@ BattleScript_AbilityHpHeal:
 	datahpupdate BS_ATTACKER
 	return
 
+BattleScript_RainHpHeal::
+	printstring STRINGID_RAINHEALRESTOREDHPALITTLE2
+	waitmessage 0x40
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_SCRIPTING
+	datahpupdate BS_SCRIPTING
+	end
+
 BattleScript_RainDishActivates::
 	call BattleScript_AbilityHpHeal
 	end3
