@@ -826,7 +826,7 @@ static const u16 *const sCounters[NUM_SPECIES] =
         SPECIES_DUMBELLION,
         SPECIES_SABLEYE,
         SPECIES_NONE,
-    }
+    },
 
     [SPECIES_HOUNDOOM] = (u16 [])
     {
@@ -998,29 +998,6 @@ static const u16 *const sCounters[NUM_SPECIES] =
         SPECIES_ZUBAT,
         SPECIES_GOLBAT,
         SPECIES_CROBAT,
-        SPECIES_NONE
-    },
-
-    [SPECIES_CONTRARAM] = (u16[])
-    {
-        SPECIES_CHAD_BUG_1,
-        SPECIES_CHAD_BUG_2,
-        SPECIES_PIDGEY,
-        SPECIES_PIDGEOTTO,
-        SPECIES_ODDISH,
-        SPECIES_GLOOM,
-        SPECIES_VILEPLUME,
-        SPECIES_BUTTERFREE,
-        SPECIES_BEEDRILL,
-        SPECIES_NOCTOWL,
-        SPECIES_GOLBAT,
-        SPECIES_CROBAT,
-        SPECIES_ARON,
-        SPECIES_LAIRON,
-        SPECIES_AGGRON,
-        SPECIES_EMBORYPS,
-        SPECIES_HUNTORYPS,
-        SPECIES_RIPTORYPS,
         SPECIES_NONE
     },
 
