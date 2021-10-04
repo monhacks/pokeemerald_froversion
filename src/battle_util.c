@@ -7984,8 +7984,8 @@ static void MulByTypeEffectiveness(u16 *modifier, u16 move, u8 moveType, u8 batt
 
     if (moveType == TYPE_PSYCHIC && defType == TYPE_DARK && gStatuses3[battlerDef] & STATUS3_MIRACLE_EYED && mod == UQ_4_12(0.0))
         mod = UQ_4_12(1.0);
-    if (moveType == TYPE_FIRE && gBattleMons[battlerDef].species == SPECIES_MECHOBRA 
-        || moveType == TYPE_FIRE && gBattleMons[battlerDef].species == SPECIES_MORPHLO)
+    if ((moveType == TYPE_FIRE && gBattleMons[battlerDef].species == SPECIES_MECHOBRA)
+        ||(moveType == TYPE_FIRE && gBattleMons[battlerDef].species == SPECIES_MORPHLO))
         mod = UQ_4_12(0.5);
     if (gBattleMoves[move].effect == EFFECT_FREEZE_DRY && defType == TYPE_WATER)
         mod = UQ_4_12(2.0);
