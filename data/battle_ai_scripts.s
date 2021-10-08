@@ -2129,6 +2129,8 @@ EncourageLightClayEnd:
 	end
 	
 AI_CV_AuroraVeil:
+	get_weather
+	if_not_equal AI_WEATHER_HAIL, AI_CV_Counter_ScoreDown100
 	call EncourageLightClay
 	end
 
@@ -2340,6 +2342,10 @@ AI_CV_Counter_ScoreDown1:
 	score -1
 
 AI_CV_Counter_End:
+	end
+
+AI_CV_Counter_ScoreDown100:
+	score -100
 	end
 
 AI_CV_Encore:
