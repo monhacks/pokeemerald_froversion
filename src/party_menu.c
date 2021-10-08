@@ -2536,9 +2536,24 @@ static void SetPartyMonSelectionActions(struct Pokemon *mons, u8 slotId, u8 acti
     }
 }
 
+// Similar to IsMoveHm.
+static u16 GetHMItem(u32 move)
+{
+    int i;
+    for (i = 0; i < NUM_HIDDEN_MACHINES; i++)
+    {
+        if (sTMHMMoves[i + NUM_TECHNICAL_MACHINES] == move)
+            return ITEM_HM01 + i;
+    }
+    return ITEM_NONE;
+}
+
 static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 {
     u8 i, j;
+    u16 hmItem;
+    u32 fieldMoves = 0;
+    u8 fieldMoveCount = 0;
 
     sPartyMenuInternal->numActions = 0;
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SUMMARY);
@@ -2551,8 +2566,24 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
             if (GetMonData(&mons[slotId], i + MON_DATA_MOVE1) == sFieldMoves[j])
             {
                 AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
+                fieldMoves |= 1 << j;
+                fieldMoveCount++;
                 break;
             }
+        }
+    }
+
+    for (j = 0; sFieldMoves[j] != FIELD_MOVE_TERMINATOR && fieldMoveCount < 4; j++)
+    {
+        hmItem = GetHMItem(sFieldMoves[j]);
+        if (!(fieldMoves & (1 << j))
+         && hmItem != ITEM_NONE
+         && CheckBagHasItem(hmItem, 1)
+         && CanMonLearnTMHM(&mons[slotId], hmItem - ITEM_TM01_FOCUS_PUNCH))
+        {
+            AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
+            fieldMoves |= 1 << j;
+            fieldMoveCount++;
         }
     }
 
@@ -4769,6 +4800,28 @@ bool8 MonKnowsMove(struct Pokemon *mon, u16 move)
         if (GetMonData(mon, MON_DATA_MOVE1 + i) == move)
             return TRUE;
     }
+    return FALSE;
+}
+
+bool8 MonKnowsFieldMove(struct Pokemon *mon, u16 move)
+{
+    u8 i;
+    u16 hmItem;
+
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        if (GetMonData(mon, MON_DATA_MOVE1 + i) == move)
+            return TRUE;
+    }
+
+    hmItem = GetHMItem(move);
+    if (hmItem != ITEM_NONE
+     && CheckBagHasItem(hmItem, 1)
+     &&  CanMonLearnTMHM(mon, hmItem - ITEM_TM01_FOCUS_PUNCH))
+    {
+        return TRUE;
+    }
+
     return FALSE;
 }
 
