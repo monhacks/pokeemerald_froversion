@@ -289,6 +289,7 @@
 #define MAP_MOSSDEEP_CITY_SPACE_CENTER_2F   (10 | (14 << 8))
 #define MAP_MOSSDEEP_CITY_GAME_CORNER_1F    (11 | (14 << 8))
 #define MAP_MOSSDEEP_CITY_GAME_CORNER_B1F   (12 | (14 << 8))
+#define MAP_WARD_CITY_GYM                   (13 | (14 << 8))
 
 // Map Group 15
 #define MAP_SOOTOPOLIS_CITY_GYM_1F                   (0 | (15 << 8))
@@ -653,6 +654,6 @@
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {99, 10, 9, 10, 8, 8, 9, 7, 7, 14, 8, 20, 10, 23, 13, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 2, 0};
+// static const u8 MAP_GROUP_COUNT[] = {99, 10, 9, 10, 8, 8, 9, 7, 7, 14, 8, 20, 10, 23, 14, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 2, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

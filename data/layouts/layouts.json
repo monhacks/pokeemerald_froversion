@@ -5010,6 +5010,16 @@
       "secondary_tileset": "gTileset_Cave2",
       "border_filepath": "data/layouts/LockportTrail_BF2/border.bin",
       "blockdata_filepath": "data/layouts/LockportTrail_BF2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WARD_CITY_GYM",
+      "name": "WardCityGym_Layout",
+      "width": 34,
+      "height": 30,
+      "primary_tileset": "gTileset_SummitGeneral",
+      "secondary_tileset": "gTileset_PokemonSchool",
+      "border_filepath": "data/layouts/WardCityGym/border.bin",
+      "blockdata_filepath": "data/layouts/WardCityGym/map.bin"
     }
   ]
 }
