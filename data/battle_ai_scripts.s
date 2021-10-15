@@ -1899,6 +1899,7 @@ AI_CV_HealWeather_ScoreDown2:
 AI_CV_Heal:
 	if_hp_equal AI_USER, 100, AI_CV_Heal3
 	if_target_faster AI_CV_Heal4
+	if_ability AI_USER, ABILITY_PRANKSTER, AI_CV_Heal7
 	score -8
 	goto AI_CV_Heal_End
 
@@ -1912,18 +1913,25 @@ AI_CV_Heal3:
 	goto AI_CV_Heal_End
 
 AI_CV_Heal4:
+	if_ability AI_USER, ABILITY_PRANKSTER, AI_CV_Heal7
 	if_hp_less_than AI_USER, 70, AI_CV_Heal5
 	if_random_less_than 30, AI_CV_Heal5
 	score -3
 	goto AI_CV_Heal_End
 
 AI_CV_Heal5:
+	if_ability AI_USER, ABILITY_PRANKSTER, AI_CV_Heal7
 	if_doesnt_have_move_with_effect AI_TARGET, EFFECT_SNATCH, AI_CV_Heal6
 	if_random_less_than 100, AI_CV_Heal_End
 
 AI_CV_Heal6:
 	if_random_less_than 20, AI_CV_Heal_End
 	score +2
+
+AI_CV_Heal7:
+	if_hp_less_than AI_USER, 70, Score_Plus5
+	if_hp_less_than AI_USER, 50, Score_Plus10
+	score +3
 
 AI_CV_Heal_End:
 	end
