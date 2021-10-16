@@ -752,8 +752,15 @@ AI_CBM_Paralyze: @ 82DC545
 	if_equal ABILITY_LIMBER, Score_Minus10
 	if_status AI_TARGET, STATUS1_ANY, Score_Minus10
 	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10
+	get_weather
+	if_equal AI_WEATHER_RAIN, AI_CBM_ParalyzeHydrationCheck
 	end
 
+AI_CBM_ParalyzeHydrationCheck:
+	get_ability AI_TARGET
+	if_equal ABILITY_HYDRATION, Score_Minus10
+	end
+	
 AI_CBM_Substitute: @ 82DC568
 	is_first_turn_for AI_USER
 	if_equal 1, Score_Plus15
@@ -1929,9 +1936,9 @@ AI_CV_Heal6:
 	score +2
 
 AI_CV_Heal7:
+	if_random_less_than 20, AI_CV_Heal_End
 	if_hp_less_than AI_USER, 70, Score_Plus5
 	if_hp_less_than AI_USER, 50, Score_Plus10
-	score +3
 
 AI_CV_Heal_End:
 	end
@@ -3677,7 +3684,7 @@ sEffectsStatRaise:
 AI_PreferBatonPass:
 	if_target_is_ally AI_Ret
 	count_usable_party_mons AI_USER
-	if_equal 0, AI_PreferBatonPassEnd
+	if_equal 0, AI_PreferBatonPassMinus100
 	get_how_powerful_move_is
 	if_not_equal MOVE_POWER_DISCOURAGED, AI_PreferBatonPassEnd
 	if_doesnt_have_move_with_effect AI_USER, EFFECT_BATON_PASS, AI_PreferBatonPassEnd
@@ -3709,6 +3716,8 @@ AI_PreferBatonPass_EncourageIfHighStats:
 	if_stat_level_more_than AI_USER, STAT_SPATK, DEFAULT_STAT_STAGE, Score_Plus1
 	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Plus5
 	end
+AI_PreferBatonPassMinus100:
+	score -100
 AI_PreferBatonPassEnd:
 	end
 	

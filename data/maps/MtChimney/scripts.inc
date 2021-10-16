@@ -51,8 +51,11 @@ MtChimney_EventScript_Maxie:: @ 822EE0B
 	waitmovement 0
 	msgbox MtChimney_Text_MaxieIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_MAXIE_MT_CHIMNEY, MtChimney_Text_MaxieDefeat
-	msgbox MtChimney_Text_MaxieYouHaventSeenLastOfMagma, MSGBOX_DEFAULT
+	special HealPlayerParty
+	msgbox MtChimney_Text_MaxieJustWatchThePowerOfTheOrb, MSGBOX_DEFAULT
 	closemessage
+	trainerbattle_no_intro TRAINER_MEGA_HOUNDOOM_MT_CHIMNEY, MtChimney_Text_MaxieDefeat
+	msgbox MtChimney_Text_MaxieYouHaventSeenLastOfMagma, MSGBOX_DEFAULT
 	delay 30
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_MAXIE
@@ -555,13 +558,11 @@ MtChimney_Text_MeteoriteWillActivateVolcano: @ 822F26A
 
 MtChimney_Text_MaxieIntro: @ 822F32E
 	.string "Zendano: Hm?\n"
-	.string "Who are you?\p"
+	.string "You again?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "I'd heard Paul bemoaning a child\n"
-	.string "who's been meddling in our\l"
-	.string "affairs.\p"
-	.string "It must be you he meant.\p"
+	.string "Why does a child continue\n"
+	.string "meddling in our affairs?\p"
 	.string "Humph! So you're thinking of\n"
 	.string "interfering with us, Team MAGA?\p"
 	.string "Now you listen.\n"
@@ -592,10 +593,11 @@ MtChimney_Text_MaxieDefeat: @ 822F5CF
 MtChimney_Text_MaxieYouHaventSeenLastOfMagma: @ 822F5F7
 	.string "Zendano: But, enough.\n"
 	.string "I will back off this time.\p"
+	.string "Take the Metorite!\p"
 	.string "But don't think that this is the last\n"
 	.string "you've seen of Team MAGA.\p"
 	.string "Fufufu…\p"
-	.string "Even without the Team MAGA, if we\n"
+	.string "Even without the Metorite, if we\n"
 	.string "obtain that Orb… Fufufu…$"
 
 MtChimney_Text_TabithaIntro: @ 822F6AA
@@ -870,4 +872,11 @@ MtChimney_Text_SawyerRematchDefeat: @ 82305E3
 MtChimney_Text_SawyerPostRematch: @ 8230614
 	.string "Actually, it really is hot here.\n"
 	.string "I'm overdressed for these parts.$"
+
+MtChimney_Text_MaxieJustWatchThePowerOfTheOrb:
+	.string "So you think you've won?\p"
+	.string "Just watch what the power of this\n"
+	.string "Meteorite can do to a Pokémon's\l"
+	.string "strength!\p"
+	.string "Go, Houndoom!$"
 

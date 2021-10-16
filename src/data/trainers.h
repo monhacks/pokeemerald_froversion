@@ -12024,4 +12024,18 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_MagaGruntALakeMead),
         .party = {.NoItemDefaultMoves = sParty_MagaGruntALakeMead},
     },
+
+    [TRAINER_MEGA_HOUNDOOM_MT_CHIMNEY] =
+    {
+        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
+        .trainerClass = TRAINER_CLASS_MAGA_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_ZENDANO,
+        .trainerName = _("Zendano"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_MegaHoundoomMtChimney),
+        .party = {.ItemCustomMoves = sParty_MegaHoundoomMtChimney},
+    },
 };
