@@ -301,7 +301,7 @@ void AnimTask_DrawFallingWhiteLinesOnAttacker(u8 taskId)
         SetGpuReg(REG_OFFSET_BG1CNT, bg1Cnt);
     }
 
-    if (IsDoubleBattle() && !IsContest())
+    if (IsDoubleBattle(gBattleAnimAttacker) && !IsContest())
     {
         if (GetBattlerPosition(gBattleAnimAttacker) == B_POSITION_OPPONENT_RIGHT
          || GetBattlerPosition(gBattleAnimAttacker) == B_POSITION_PLAYER_LEFT)
@@ -424,7 +424,7 @@ static void sub_8116F04(u8 taskId)
     if (!IsContest())
         SetAnimBgAttribute(1, BG_ANIM_CHAR_BASE_BLOCK, 1);
 
-    if (IsDoubleBattle() && sAnimStatsChangeData->data[3] == 0)
+    if (IsDoubleBattle(sAnimStatsChangeData->battler1) && sAnimStatsChangeData->data[3] == 0)
     {
         if (GetBattlerPosition(sAnimStatsChangeData->battler1) == B_POSITION_OPPONENT_RIGHT
          || GetBattlerPosition(sAnimStatsChangeData->battler1) == B_POSITION_PLAYER_LEFT)
@@ -1067,7 +1067,7 @@ static void AnimTask_WaitAndRestoreVisibility(u8 taskId)
 
 void AnimTask_IsDoubleBattle(u8 taskId)
 {
-    gBattleAnimArgs[7] = (IsDoubleBattle() && !IsContest());
+    gBattleAnimArgs[7] = (IsDoubleBattle(gBattleAnimTarget) && !IsContest());
     DestroyAnimVisualTask(taskId);
 }
 
