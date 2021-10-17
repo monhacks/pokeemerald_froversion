@@ -5097,7 +5097,7 @@ static const union AnimCmd sAnim_ELITETRIC_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_7_1[] = 
+static const union AnimCmd sAnim_MEGA_DEWGONG_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
@@ -7654,9 +7654,9 @@ static const union AnimCmd *const sAnims_ELITETRIC[] ={
     sAnim_GeneralFrame0,
     sAnim_ELITETRIC_1,
 };
-static const union AnimCmd *const sAnims_FILLER_7[] ={
+static const union AnimCmd *const sAnims_MEGA_DEWGONG[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_7_1,
+    sAnim_MEGA_DEWGONG_1,
 };
 static const union AnimCmd *const sAnims_FILLER_8[] ={
     sAnim_GeneralFrame0,
@@ -8300,7 +8300,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(PLASMUNG),
     ANIM_CMD(GRUNTAZE),
     ANIM_CMD(ELITETRIC),
-    ANIM_CMD(FILLER_7),
+    ANIM_CMD(MEGA_DEWGONG),
     ANIM_CMD(FILLER_8),
     ANIM_CMD(FILLER_9),
     ANIM_CMD(FILLER_10),

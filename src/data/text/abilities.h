@@ -542,7 +542,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_RESURRECTION] = _("Resurrection"),
     [ABILITY_SWORD_LUNGE] = _("Sword Lunge"),
     [ABILITY_CHARISMA] = _("Charisma"),
-    [ABILITY_VAPOREON_REGENERATOR_RAIN_DISH] = _("Rain Dish")
+    [ABILITY_VAPOREON_REGENERATOR_RAIN_DISH] = _("Rain Dish"),
+    [ABILITY_MEGA_DEWGONG_ABILITY] = _("MysticFrost"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -824,4 +825,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_SWORD_LUNGE] = sSwordLungeDescription,
     [ABILITY_CHARISMA] = sCharismaDescription,
     [ABILITY_VAPOREON_REGENERATOR_RAIN_DISH] = sRainDishDescription,
+    [ABILITY_MEGA_DEWGONG_ABILITY] = sMercilessDescription,
 };

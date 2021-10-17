@@ -276,6 +276,7 @@
 #define ENUM_WEATHER_SUN            2
 #define ENUM_WEATHER_SANDSTORM      3
 #define ENUM_WEATHER_HAIL           4
+#define ENUM_WEATHER_HAIL_PERM      5
 
 // Move Effects
 #define MOVE_EFFECT_SLEEP               0x1

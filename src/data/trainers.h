@@ -12038,4 +12038,34 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_MegaHoundoomMtChimney),
         .party = {.ItemCustomMoves = sParty_MegaHoundoomMtChimney},
     },
+
+    [TRAINER_SUMMIT_CAVERNS_LATTKA_1] =
+    {
+        .hasCustomTransition = TRUE,
+        .transition = B_TRANSITION_MUGSHOT,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_MAGA_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_LATTKA,
+        .trainerName = _("Lattka"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_SummitCavernsLattka1),
+        .party = {.ItemCustomMoves = sParty_SummitCavernsLattka1},
+    },
+
+    [TRAINER_SUMMIT_CAVERNS_LATTKA_2] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_MAGA_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_LATTKA,
+        .trainerName = _("Lattka"),
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_SummitCavernsLattka2),
+        .party = {.ItemCustomMoves = sParty_SummitCavernsLattka2},
+    },
 };

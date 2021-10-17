@@ -2560,7 +2560,7 @@ const u8 gElitetricPokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_7PokedexText[] = _(
+const u8 gMega_DewgongPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"

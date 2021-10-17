@@ -301,9 +301,8 @@ static const struct AbilitySetter sDusclopsAbilitySet[] =
 static const struct AbilitySetter sSlakothAbilitySet[] =
 {
     {ABILITY_TRUANT, 1},
-    {ABILITY_SLOW_START, 25},
-    {ABILITY_DEFEATIST, 35},
-    {ABILITY_OWN_TEMPO, 45},
+    {ABILITY_SLOW_START, 40},
+    {ABILITY_DEFEATIST, 80},
     ABILITY_SET_END
 };
 
@@ -994,6 +993,12 @@ static const struct AbilitySetter sNevawokAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sMega_DewgongAbilitySet[] =
+{
+    {ABILITY_MEGA_DEWGONG_ABILITY, 1},
+    ABILITY_SET_END
+};
+
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
@@ -1173,7 +1178,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_TOGEKISS] = sTogekissAbilitySet,
     [SPECIES_SPIRITOMB] = sSpiritombAbilitySet,
     [SPECIES_NEVAWOK] = sNevawokAbilitySet,
-
+    [SPECIES_MEGA_DEWGONG] = sMega_DewgongAbilitySet,
 
 
 

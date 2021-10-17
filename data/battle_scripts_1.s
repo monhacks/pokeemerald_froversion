@@ -7358,7 +7358,7 @@ BattleScript_ElectricSurgeActivates::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_TERRAINBECOMESELECTRIC
 	waitstate
-	playanimation BS_SCRIPTING, B_ANIM_TERRAIN_ELECTRIC, NULL
+	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 	end3
 
 BattleScript_SpaceShiftActivates::
@@ -7374,7 +7374,7 @@ BattleScript_MistySurgeActivates::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_TERRAINBECOMESMISTY
 	waitstate
-	playanimation BS_SCRIPTING, B_ANIM_TERRAIN_MISTY, NULL
+	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 	end3
 
 BattleScript_GrassySurgeActivates::
@@ -7382,7 +7382,7 @@ BattleScript_GrassySurgeActivates::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_TERRAINBECOMESGRASSY
 	waitstate
-	playanimation BS_SCRIPTING, B_ANIM_TERRAIN_GRASSY, NULL
+	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 	end3
 
 BattleScript_PsychicSurgeActivates::
@@ -7390,7 +7390,7 @@ BattleScript_PsychicSurgeActivates::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_TERRAINBECOMESPSYCHIC
 	waitstate
-	playanimation BS_SCRIPTING, B_ANIM_TERRAIN_PSYCHIC, NULL
+	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 	end3
 
 BattleScript_BadDreamsActivates::

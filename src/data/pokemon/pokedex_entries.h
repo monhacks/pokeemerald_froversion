@@ -5175,12 +5175,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_7] =
+[NATIONAL_DEX_MEGA_DEWGONG] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_7PokedexText,
+        .description = gMega_DewgongPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,

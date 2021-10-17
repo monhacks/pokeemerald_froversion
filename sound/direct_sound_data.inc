@@ -2319,8 +2319,8 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
     Cry_Elitetric::
 	.incbin "sound/direct_sound_samples/cries/elitetric.bin"
 .align 2
-    Cry_Filler_7::
-	.incbin "sound/direct_sound_samples/cries/filler_7.bin"
+    Cry_Mega_Dewgong::
+	.incbin "sound/direct_sound_samples/cries/mega_dewgong.bin"
 .align 2
     Cry_Filler_8::
 	.incbin "sound/direct_sound_samples/cries/filler_8.bin"

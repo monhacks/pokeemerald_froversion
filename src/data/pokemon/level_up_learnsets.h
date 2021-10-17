@@ -8574,7 +8574,7 @@ static const struct LevelUpMove sElitetricLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };
-static const struct LevelUpMove sFiller_7LevelUpLearnset[] = {
+static const struct LevelUpMove sMega_DewgongLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };

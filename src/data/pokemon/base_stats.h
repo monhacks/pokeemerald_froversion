@@ -13930,16 +13930,16 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_7] =
+[SPECIES_MEGA_DEWGONG] =
     {
         .baseHP        = 48,
-        .baseAttack    = 51,
+        .baseAttack    = 77,
         .baseDefense   = 53,
-        .baseSpeed     = 76,
-        .baseSpAttack  = 41,
+        .baseSpeed     = 77,
+        .baseSpAttack  = 88,
         .baseSpDefense = 41,
-        .type1 = TYPE_GRASS,
-        .type2 = TYPE_GRASS,
+        .type1 = TYPE_ICE,
+        .type2 = TYPE_PSYCHIC,
         .catchRate = 45,
         .expYield = 63,
         .evYield_HP        = 0,

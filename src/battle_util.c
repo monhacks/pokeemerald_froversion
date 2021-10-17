@@ -2264,7 +2264,7 @@ u8 DoFieldEndTurnEffects(void)
                     gBattlescriptCurrInstr = BattleScript_RainHpHeal;
                     BattleScriptExecute(gBattlescriptCurrInstr);
                     effect++;
-                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
+                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 32;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     gBattleMoveDamage *= -1;
@@ -3689,6 +3689,7 @@ static const u16 sWeatherFlagsInfo[][3] =
     [ENUM_WEATHER_SUN] = {WEATHER_SUN_TEMPORARY, WEATHER_SUN_PERMANENT, HOLD_EFFECT_HEAT_ROCK},
     [ENUM_WEATHER_SANDSTORM] = {WEATHER_SANDSTORM_TEMPORARY, WEATHER_SANDSTORM_PERMANENT, HOLD_EFFECT_SMOOTH_ROCK},
     [ENUM_WEATHER_HAIL] = {WEATHER_HAIL_TEMPORARY, WEATHER_HAIL_PERMANENT, HOLD_EFFECT_ICY_ROCK},
+    [ENUM_WEATHER_HAIL_PERM] = {WEATHER_HAIL_PERMANENT, HOLD_EFFECT_ICY_ROCK},
 };
 
 bool32 TryChangeBattleWeather(u8 battler, u32 weatherEnumId, bool32 viaAbility)
@@ -4188,6 +4189,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 effect++;
             }
             break;
+        case ABILITY_MEGA_DEWGONG_ABILITY:
+            if (TryChangeBattleWeather(battler, ENUM_WEATHER_HAIL_PERM, TRUE))
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_SnowWarningActivates);
+                effect++;
+            }
+            if (TryChangeBattleTerrain(battler, STATUS_FIELD_PSYCHIC_TERRAIN, &gFieldTimers.psychicTerrainTimer))
+            {
+                gFieldTimers.psychicTerrainTimer = 255;
+                BattleScriptPushCursorAndCallback(BattleScript_PsychicSurgeActivates);
+                effect++;
+            }
+            break;
         case ABILITY_SPACE_SHIFT:
             if (TryChangeBattleTerrain(battler, STATUS_FIELD_TRICK_ROOM, &gFieldTimers.trickRoomTimer))
             {
@@ -4392,6 +4406,14 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             case ABILITY_HYDRATION:
                 if (WEATHER_HAS_EFFECT
                  && (gBattleWeather & WEATHER_RAIN_ANY)
+                 && gBattleMons[battler].status1 & STATUS1_ANY)
+                {
+                    goto ABILITY_HEAL_MON_STATUS;
+                }
+                break;
+            case ABILITY_MEGA_DEWGONG_ABILITY:
+                if (WEATHER_HAS_EFFECT
+                 && (gBattleWeather & WEATHER_HAIL_ANY)
                  && gBattleMons[battler].status1 & STATUS1_ANY)
                 {
                     goto ABILITY_HEAL_MON_STATUS;
