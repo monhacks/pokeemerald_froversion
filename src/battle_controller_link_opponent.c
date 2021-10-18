@@ -222,7 +222,7 @@ static void sub_8064520(void)
     bool32 r8 = FALSE;
     bool32 r4 = FALSE;
 
-    if (!IsDoubleBattle(gActiveBattler) || (IsDoubleBattle(gActiveBattler) && (gBattleTypeFlags & BATTLE_TYPE_MULTI)))
+    if (!IsDoubleBattle() || (IsDoubleBattle() && (gBattleTypeFlags & BATTLE_TYPE_MULTI)))
     {
         if (gSprites[gHealthboxSpriteIds[gActiveBattler]].callback == SpriteCallbackDummy)
             r8 = TRUE;
@@ -298,7 +298,7 @@ static void sub_8064734(void)
     {
         if (!gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].field_1_x80)
         {
-            if (IsDoubleBattle(gActiveBattler) && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
+            if (IsDoubleBattle() && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
             {
                 UpdateHealthboxAttribute(gHealthboxSpriteIds[BATTLE_PARTNER(gActiveBattler)], &gEnemyParty[gBattlerPartyIndexes[BATTLE_PARTNER(gActiveBattler)]], HEALTHBOX_ALL);
                 sub_8076918(BATTLE_PARTNER(gActiveBattler));
@@ -345,7 +345,7 @@ static void sub_8064734(void)
                 gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].field_9 = 0;
             }
 
-            if (IsDoubleBattle(gActiveBattler) && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
+            if (IsDoubleBattle() && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
             {
                 DestroySprite(&gSprites[gUnknown_03005D7C[BATTLE_PARTNER(gActiveBattler)]]);
                 SetBattlerShadowSpriteCallback(BATTLE_PARTNER(gActiveBattler), GetMonData(&gEnemyParty[gBattlerPartyIndexes[BATTLE_PARTNER(gActiveBattler)]], MON_DATA_SPECIES));
@@ -1720,7 +1720,7 @@ static void sub_8067618(u8 taskId)
     u8 savedActiveBank = gActiveBattler;
 
     gActiveBattler = gTasks[taskId].data[0];
-    if (!IsDoubleBattle(gActiveBattler) || (gBattleTypeFlags & BATTLE_TYPE_MULTI))
+    if (!IsDoubleBattle() || (gBattleTypeFlags & BATTLE_TYPE_MULTI))
     {
         gBattleResources->bufferA[gActiveBattler][1] = gBattlerPartyIndexes[gActiveBattler];
         sub_8066494(gActiveBattler, FALSE);

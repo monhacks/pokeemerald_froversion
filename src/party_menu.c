@@ -5913,7 +5913,7 @@ void ChooseMonForWirelessMinigame(void)
 
 static u8 GetPartyLayoutFromBattleType(void)
 {
-    if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
+    if (IsDoubleBattle() == FALSE)
         return PARTY_LAYOUT_SINGLE;
     if (IsMultiBattle() == TRUE)
         return PARTY_LAYOUT_MULTI;
@@ -6035,7 +6035,7 @@ static void BufferBattlePartyOrder(u8 *partyBattleOrder, u8 flankId)
         }
         return;
     }
-    else if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
+    else if (IsDoubleBattle() == FALSE)
     {
         j = 1;
         partyIds[0] = gBattlerPartyIndexes[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)];
@@ -6106,7 +6106,7 @@ static void BufferBattlePartyOrderBySide(u8 *partyBattleOrder, u8 flankId, u8 ba
         }
         return;
     }
-    else if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
+    else if (IsDoubleBattle() == FALSE)
     {
         j = 1;
         partyIndexes[0] = gBattlerPartyIndexes[leftBattler];

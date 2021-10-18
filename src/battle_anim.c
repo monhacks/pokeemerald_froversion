@@ -2186,7 +2186,7 @@ void DoMoveAnim(u16 move)
     gBattleAnimAttacker = gBattlerAttacker;
     gBattleAnimTarget = gBattlerTarget;
     // Make sure the anim target of moves hitting everyone is at the opposite side.
-    if (gBattleMoves[move].target & MOVE_TARGET_FOES_AND_ALLY && IsDoubleBattle(gBattleAnimTarget))
+    if (gBattleMoves[move].target & MOVE_TARGET_FOES_AND_ALLY && IsDoubleBattle())
     {
         while (GET_BATTLER_SIDE(gBattleAnimAttacker) == GET_BATTLER_SIDE(gBattleAnimTarget))
         {
@@ -3769,7 +3769,7 @@ static void ScriptCmd_doublebattle_2D(void)
 
     wantedBattler = sBattleAnimScriptPtr[1];
     sBattleAnimScriptPtr += 2;
-    if (!IsContest() && IsDoubleBattle(wantedBattler)
+    if (!IsContest() && IsDoubleBattle()
      && GetBattlerSide(gBattleAnimAttacker) == GetBattlerSide(gBattleAnimTarget))
     {
         if (wantedBattler == ANIM_ATTACKER)
@@ -3804,7 +3804,7 @@ static void ScriptCmd_doublebattle_2E(void)
 
     wantedBattler = sBattleAnimScriptPtr[1];
     sBattleAnimScriptPtr += 2;
-    if (!IsContest() && IsDoubleBattle(wantedBattler)
+    if (!IsContest() && IsDoubleBattle()
      && GetBattlerSide(gBattleAnimAttacker) == GetBattlerSide(gBattleAnimTarget))
     {
         if (wantedBattler == ANIM_ATTACKER)

@@ -1076,7 +1076,7 @@ static void sub_805896C(void)
 {
     bool8 var = FALSE;
 
-    if (!IsDoubleBattle(gActiveBattler) || (IsDoubleBattle(gActiveBattler) && (gBattleTypeFlags & BATTLE_TYPE_MULTI)))
+    if (!IsDoubleBattle() || (IsDoubleBattle() && (gBattleTypeFlags & BATTLE_TYPE_MULTI)))
     {
         if (gSprites[gHealthboxSpriteIds[gActiveBattler]].callback == SpriteCallbackDummy)
             var = TRUE;
@@ -1100,7 +1100,7 @@ static void sub_805896C(void)
 
         HandleLowHpMusicChange(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], gActiveBattler);
 
-        if (IsDoubleBattle(gActiveBattler))
+        if (IsDoubleBattle())
             HandleLowHpMusicChange(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler ^ BIT_FLANK]], gActiveBattler ^ BIT_FLANK);
 
         gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].field_9 = 3;
@@ -1125,7 +1125,7 @@ static void sub_8058B40(void)
     {
         if (!gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].field_1_x80)
         {
-            if (IsDoubleBattle(gActiveBattler) && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
+            if (IsDoubleBattle() && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
             {
                 UpdateHealthboxAttribute(gHealthboxSpriteIds[gActiveBattler ^ BIT_FLANK], &gPlayerParty[gBattlerPartyIndexes[gActiveBattler ^ BIT_FLANK]], HEALTHBOX_ALL);
                 sub_8076918(gActiveBattler ^ BIT_FLANK);
@@ -1154,7 +1154,7 @@ static void sub_8058B40(void)
         r9 = TRUE;
     }
 
-    if (!IsDoubleBattle(gActiveBattler) || (IsDoubleBattle(gActiveBattler) && (gBattleTypeFlags & BATTLE_TYPE_MULTI)))
+    if (!IsDoubleBattle() || (IsDoubleBattle() && (gBattleTypeFlags & BATTLE_TYPE_MULTI)))
     {
         if (gSprites[gUnknown_03005D7C[gActiveBattler]].callback == SpriteCallbackDummy
             && gSprites[gBattlerSpriteIds[gActiveBattler]].callback == SpriteCallbackDummy)
@@ -1175,7 +1175,7 @@ static void sub_8058B40(void)
 
     if (r9 && r8)
     {
-        if (IsDoubleBattle(gActiveBattler) && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
+        if (IsDoubleBattle() && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
             DestroySprite(&gSprites[gUnknown_03005D7C[gActiveBattler ^ BIT_FLANK]]);
         DestroySprite(&gSprites[gUnknown_03005D7C[gActiveBattler]]);
 
@@ -1277,7 +1277,7 @@ static void Task_GiveExpToMon(u8 taskId)
     u8 battlerId = gTasks[taskId].tExpTask_battler;
     s16 gainedExp = gTasks[taskId].tExpTask_gainedExp;
 
-    if (IsDoubleBattle(battlerId) || monId != gBattlerPartyIndexes[battlerId]) // Give exp without moving the expbar.
+    if (IsDoubleBattle() == TRUE || monId != gBattlerPartyIndexes[battlerId]) // Give exp without moving the expbar.
     {
         struct Pokemon *mon = &gPlayerParty[monId];
         u16 species = GetMonData(mon, MON_DATA_SPECIES);
@@ -1297,7 +1297,7 @@ static void Task_GiveExpToMon(u8 taskId)
             BtlController_EmitTwoReturnValues(1, RET_VALUE_LEVELED_UP, gainedExp);
             gActiveBattler = savedActiveBattler;
 
-            if (IsDoubleBattle(battlerId) == TRUE
+            if (IsDoubleBattle() == TRUE
              && ((u16)(monId) == gBattlerPartyIndexes[battlerId] || (u16)(monId) == gBattlerPartyIndexes[battlerId ^ BIT_FLANK]))
                 gTasks[taskId].func = Task_LaunchLvlUpAnim;
             else
@@ -1393,7 +1393,7 @@ static void Task_LaunchLvlUpAnim(u8 taskId)
     u8 battlerId = gTasks[taskId].tExpTask_battler;
     u8 monIndex = gTasks[taskId].tExpTask_monId;
 
-    if (IsDoubleBattle(battlerId) && monIndex == gBattlerPartyIndexes[battlerId ^ BIT_FLANK])
+    if (IsDoubleBattle() == TRUE && monIndex == gBattlerPartyIndexes[battlerId ^ BIT_FLANK])
         battlerId ^= BIT_FLANK;
 
     InitAndLaunchSpecialAnimation(battlerId, battlerId, battlerId, B_ANIM_LVL_UP);
@@ -1410,7 +1410,7 @@ static void Task_UpdateLvlInHealthbox(u8 taskId)
 
         GetMonData(&gPlayerParty[monIndex], MON_DATA_LEVEL);  // Unused return value.
 
-        if (IsDoubleBattle(battlerId) && monIndex == gBattlerPartyIndexes[battlerId ^ BIT_FLANK])
+        if (IsDoubleBattle() == TRUE && monIndex == gBattlerPartyIndexes[battlerId ^ BIT_FLANK])
             UpdateHealthboxAttribute(gHealthboxSpriteIds[battlerId ^ BIT_FLANK], &gPlayerParty[monIndex], HEALTHBOX_ALL);
         else
             UpdateHealthboxAttribute(gHealthboxSpriteIds[battlerId], &gPlayerParty[monIndex], HEALTHBOX_ALL);
@@ -3192,7 +3192,7 @@ static void task05_08033660(u8 taskId)
         u8 savedActiveBattler = gActiveBattler;
 
         gActiveBattler = gTasks[taskId].data[0];
-        if (!IsDoubleBattle(gActiveBattler) || (gBattleTypeFlags & BATTLE_TYPE_MULTI))
+        if (!IsDoubleBattle() || (gBattleTypeFlags & BATTLE_TYPE_MULTI))
         {
             gBattleResources->bufferA[gActiveBattler][1] = gBattlerPartyIndexes[gActiveBattler];
             sub_805B258(gActiveBattler, FALSE);

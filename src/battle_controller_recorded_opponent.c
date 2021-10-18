@@ -221,7 +221,7 @@ static void sub_8186678(void)
 {
     bool8 var = FALSE;
 
-    if (!IsDoubleBattle(gActiveBattler) || (IsDoubleBattle(gActiveBattler) && (gBattleTypeFlags & BATTLE_TYPE_MULTI)))
+    if (!IsDoubleBattle() || (IsDoubleBattle() && (gBattleTypeFlags & BATTLE_TYPE_MULTI)))
     {
         if (gSprites[gHealthboxSpriteIds[gActiveBattler]].callback == SpriteCallbackDummy
          && gSprites[gBattlerSpriteIds[gActiveBattler]].animEnded)
@@ -276,7 +276,7 @@ static void sub_818686C(void)
     {
         if (!gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].field_1_x80)
         {
-            if (IsDoubleBattle(gActiveBattler) && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
+            if (IsDoubleBattle() && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
             {
                 UpdateHealthboxAttribute(gHealthboxSpriteIds[gActiveBattler ^ BIT_FLANK], &gEnemyParty[gBattlerPartyIndexes[gActiveBattler ^ BIT_FLANK]], HEALTHBOX_ALL);
                 sub_8076918(gActiveBattler ^ BIT_FLANK);
@@ -310,7 +310,7 @@ static void sub_818686C(void)
         r9 = TRUE;
     }
 
-    if (!IsDoubleBattle(gActiveBattler))
+    if (!IsDoubleBattle())
     {
         if (gSprites[gUnknown_03005D7C[gActiveBattler]].callback == SpriteCallbackDummy
             && gSprites[gBattlerSpriteIds[gActiveBattler]].callback == SpriteCallbackDummy)
@@ -331,7 +331,7 @@ static void sub_818686C(void)
 
     if (r9 && r8)
     {
-        if (IsDoubleBattle(gActiveBattler) && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
+        if (IsDoubleBattle() && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
         {
             DestroySprite(&gSprites[gUnknown_03005D7C[gActiveBattler ^ BIT_FLANK]]);
             SetBattlerShadowSpriteCallback(gActiveBattler ^ BIT_FLANK, GetMonData(&gEnemyParty[gBattlerPartyIndexes[gActiveBattler ^ BIT_FLANK]], MON_DATA_SPECIES));
@@ -1660,7 +1660,7 @@ static void sub_8189548(u8 taskId)
     u8 savedActiveBank = gActiveBattler;
 
     gActiveBattler = gTasks[taskId].data[0];
-    if (!IsDoubleBattle(gActiveBattler) || (gBattleTypeFlags & BATTLE_TYPE_MULTI))
+    if (!IsDoubleBattle() || (gBattleTypeFlags & BATTLE_TYPE_MULTI))
     {
         gBattleResources->bufferA[gActiveBattler][1] = gBattlerPartyIndexes[gActiveBattler];
         sub_81885D8(gActiveBattler, FALSE);
