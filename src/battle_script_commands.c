@@ -4717,6 +4717,7 @@ static void Cmd_playstatchangeanimation(void)
                         && ability != ABILITY_CLEAR_BODY
                         && ability != ABILITY_FULL_METAL_BODY
                         && ability != ABILITY_WHITE_SMOKE
+                        && ability != ABILITY_MEGA_HOUNDOOM_ABILITY
                         && !(ability == ABILITY_KEEN_EYE && currStat == STAT_ACC)
                         && !(ability == ABILITY_HYPER_CUTTER && currStat == STAT_ATK)
                         && !(ability == ABILITY_BIG_PECKS && currStat == STAT_DEF))
@@ -9364,7 +9365,8 @@ static u32 ChangeStatBuffs(s8 statValue, u32 statId, u32 flags, const u8 *BS_ptr
         }
         else if ((GetBattlerAbility(gActiveBattler) == ABILITY_CLEAR_BODY
                   || GetBattlerAbility(gActiveBattler) == ABILITY_FULL_METAL_BODY
-                  || GetBattlerAbility(gActiveBattler) == ABILITY_WHITE_SMOKE)
+                  || GetBattlerAbility(gActiveBattler) == ABILITY_WHITE_SMOKE
+                  || GetBattlerAbility(gActiveBattler) == ABILITY_MEGA_HOUNDOOM_ABILITY)
                  && !certain && gCurrentMove != MOVE_CURSE)
         {
             if (flags == STAT_BUFF_ALLOW_PTR)

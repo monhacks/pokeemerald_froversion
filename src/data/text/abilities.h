@@ -544,6 +544,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_CHARISMA] = _("Charisma"),
     [ABILITY_VAPOREON_REGENERATOR_RAIN_DISH] = _("Rain Dish"),
     [ABILITY_MEGA_DEWGONG_ABILITY] = _("MysticFrost"),
+    [ABILITY_MEGA_HOUNDOOM_ABILITY] = _("Torrid"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -826,4 +827,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_CHARISMA] = sCharismaDescription,
     [ABILITY_VAPOREON_REGENERATOR_RAIN_DISH] = sRainDishDescription,
     [ABILITY_MEGA_DEWGONG_ABILITY] = sMercilessDescription,
+    [ABILITY_MEGA_HOUNDOOM_ABILITY] = sMercilessDescription,
 };

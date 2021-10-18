@@ -264,6 +264,12 @@ static const struct AbilitySetter sHoundourAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sMegaHoundoomAbilitySet[]=
+{
+    {ABILITY_MEGA_HOUNDOOM_ABILITY, 101},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter sScytherAbilitySet[] = 
 {
     {ABILITY_SWARM, 1},
@@ -1179,7 +1185,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_SPIRITOMB] = sSpiritombAbilitySet,
     [SPECIES_NEVAWOK] = sNevawokAbilitySet,
     [SPECIES_MEGA_DEWGONG] = sMega_DewgongAbilitySet,
-
+    [SPECIES_FILLER_8] = sMegaHoundoomAbilitySet,
 
 
 

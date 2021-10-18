@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ZENDANO",
@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_1",
@@ -51,7 +51,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_2",
@@ -64,7 +64,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_1",
@@ -77,7 +77,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_1",
@@ -90,7 +90,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA"
     }
   ],
   "warp_events": [
@@ -122,8 +122,8 @@
       "x": 9,
       "y": 15,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
+      "var": "VAR_PETALBURG_CITY_STATE",
+      "var_value": "7",
       "script": "SummitCaverns_EventScript_LattkaBattleTrigger"
     }
   ],

@@ -7,6 +7,7 @@ LockportTrail_BF2_MapScripts::
 
 SummitCaverns_EventScript_LattkaBattleTrigger::
 	lockall
+	playbgm MUS_FV_TEAM_MAGA, 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement LOCALID_LATTKA, Common_Movement_FaceRight
@@ -16,8 +17,8 @@ SummitCaverns_EventScript_LattkaBattleTrigger::
 	playse SE_PIN
 	applymovement LOCALID_ZENDANO, Common_Movement_QuestionMark
 	msgbox SummitCaverns_Text_WhatWasThat, MSGBOX_DEFAULT
-	applymovement LOCALID_ZENDANO, Common_Movement_FacePlayer
-	applymovement LOCALID_LATTKA, Common_Movement_FacePlayer
+	applymovement LOCALID_ZENDANO, Common_Movement_FaceDown
+	applymovement LOCALID_LATTKA, Common_Movement_FaceDown
 	waitmovement LOCALID_LATTKA
 	msgbox SummitCaverns_Text_YouAgain, MSGBOX_DEFAULT
 	applymovement LOCALID_ZENDANO, SummitCavenrs_Movement_ZendanoLeaves1
@@ -28,6 +29,8 @@ SummitCaverns_EventScript_LattkaBattleTrigger::
 	applymovement LOCALID_ZENDANO, SummitCavenrs_Movement_ZendanoLeaves2
 	waitmovement LOCALID_ZENDANO
 	removeobject LOCALID_ZENDANO
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox SummitCaverns_Text_LattkaBattle, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_SUMMIT_CAVERNS_LATTKA_1, SummitCaverns_Text_LattkaDefeat1
 	special HealPlayerParty
@@ -36,8 +39,14 @@ SummitCaverns_EventScript_LattkaBattleTrigger::
 	msgbox SummitCaverns_Text_PostLattkaBattle, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_LATTKA
+	removeobject 3
+	removeobject 4
+	removeobject 5
+	removeobject 6
 	fadescreen FADE_FROM_BLACK
-	//setflags
+	setflag FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA
+	setvar VAR_PETALBURG_CITY_STATE, 8
+	fadedefaultbgm
 	releaseall
 	end
 
@@ -63,7 +72,7 @@ SummitCaverns_Text_LattkaBattlePrototype:
 	.string "Pokémon fusion!$"
 
 SummitCaverns_Text_LattkaDefeat1:
-	.string "Time the moves we can make ends\p"
+	.string "Time the moves we can make ends\n"
 	.string "meet. Something about the ends$"
 
 SummitCaverns_Text_LattkaBattle:
@@ -118,8 +127,8 @@ SummitCaverns_Text_TestSubjectResults:
 	.string "secure the Meteroite, this may prove\l"
 	.string "to be an even larger development.\p"
 	.string "Who knew that the fusion of Pokémon DNA\n"
-	.string "into humans could produce such incredible\l"
-	.string "results.\p"
+	.string "into humans could produce such\l"
+	.string "incredible results.\p"
 	.string "Zendano: Is it ready for field testing\n"
 	.string "yet?\p"
 	.string "Lattka: Not quite. Our test subject is\n"

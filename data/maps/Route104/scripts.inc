@@ -28,6 +28,11 @@ Route104_EventScript_ShowOrHideWhiteHerbFlorist:: @ 81ECC5E
 	clearflag FLAG_HIDE_ROUTE_104_WHITE_HERB_FLORIST
 	return
 
+TestScriptHOunddom::
+cleartrainerflag TRAINER_MEGA_HOUNDOOM_MT_CHIMNEY
+trainerbattle_no_intro TRAINER_MEGA_HOUNDOOM_MT_CHIMNEY, Route104_Text_BillyDefeat
+end
+
 Route104_EventScript_HideWhiteHerbFlorist:: @ 81ECC74
 	setflag FLAG_HIDE_ROUTE_104_WHITE_HERB_FLORIST
 	return
