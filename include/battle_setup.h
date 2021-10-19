@@ -2,6 +2,8 @@
 #define GUARD_BATTLE_SETUP_H
 
 #include "gym_leader_rematch.h"
+#include "constants/map_types.h"
+#include "constants/maps.h"
 
 #define REMATCHES_COUNT 5
 

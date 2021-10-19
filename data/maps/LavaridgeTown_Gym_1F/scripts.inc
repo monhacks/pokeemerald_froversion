@@ -53,6 +53,7 @@ LavaridgeTown_Gym_1F_EventScript_Flannery:: @ 81FE78C
 	setflag FLAG_SYS_NO_BAG_USE
 	setflag FLAG_FORCE_BATTLE_STYLE_SET
 	setvar VAR_MUGSHOT_ID, MUGSHOT_MARRIOTT
+	cleartrainerflag TRAINER_FLANNERY_1
 	trainerbattle_single TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryIntro, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
 	clearflag FLAG_BATTLE_RAIN
 	clearflag FLAG_SYS_NO_BAG_USE

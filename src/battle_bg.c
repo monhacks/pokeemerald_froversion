@@ -718,6 +718,15 @@ static const struct BattleBackground gBattleTerrainTable[] =
         .entryTilemap = gBattleTerrainAnimTilemap_Building,
         .palette = gBattleTerrainPalette_Plain,
     },
+
+    [BATTLE_TERRAIN_WATER_GYM] =
+    {
+        .tileset = gBattleTerrainTiles_WaterGym,
+        .tilemap = gBattleTerrainTilemap_WaterGym,
+        .entryTileset = gBattleTerrainAnimTiles_Building,
+        .entryTilemap = gBattleTerrainAnimTilemap_Building,
+        .palette = gBattleTerrainPalette_WaterGym,
+    },
 };
 
 static void sub_8035648(void);
@@ -821,7 +830,14 @@ void DrawMainBattleBackground(void)
             {
                 LZDecompressVram(gBattleTerrainTiles_Building, (void*)(BG_CHAR_ADDR(2)));
                 LZDecompressVram(gBattleTerrainTilemap_Building, (void*)(BG_SCREEN_ADDR(26)));
-                LoadCompressedPalette(gBattleTerrainPalette_BuildingLeader, 0x20, 0x60);
+                LoadCompressedPalette(gBattleTerrainPalette_Building, 0x20, 0x60);
+                return;
+            }
+            else if (trainerClass == TRAINER_CLASS_MARRIOTT)
+            {
+                LZDecompressVram(gBattleTerrainTiles_WaterGym, (void*)(BG_CHAR_ADDR(2)));
+                LZDecompressVram(gBattleTerrainTilemap_WaterGym, (void*)(BG_SCREEN_ADDR(26)));
+                LoadCompressedPalette(gBattleTerrainPalette_WaterGym, 0x20, 0x60);
                 return;
             }
             else if (trainerClass == TRAINER_CLASS_CHAMPION)
@@ -880,6 +896,10 @@ void DrawMainBattleBackground(void)
             LZDecompressVram(gBattleTerrainTiles_Building, (void*)(BG_CHAR_ADDR(2)));
             LZDecompressVram(gBattleTerrainTilemap_Building, (void*)(BG_SCREEN_ADDR(26)));
             LoadCompressedPalette(gBattleTerrainPalette_Frontier, 0x20, 0x60);
+        case MAP_BATTLE_SCENE_WATER_GYM:
+            LZDecompressVram(gBattleTerrainTiles_WaterGym, (void*)(BG_CHAR_ADDR(2)));
+            LZDecompressVram(gBattleTerrainTilemap_WaterGym, (void*)(BG_SCREEN_ADDR(26)));
+            LoadCompressedPalette(gBattleTerrainPalette_WaterGym, 0x20, 0x60);
             break;
         }
     }
@@ -1309,6 +1329,9 @@ bool8 LoadChosenBattleElement(u8 caseId)
             case MAP_BATTLE_SCENE_FRONTIER:
                 LZDecompressVram(gBattleTerrainTiles_Building, (void*)(BG_CHAR_ADDR(2)));
                 break;
+            case MAP_BATTLE_SCENE_WATER_GYM:
+                LZDecompressVram(gBattleTerrainTiles_WaterGym, (void*)(BG_CHAR_ADDR(2)));
+                break;
             }
         }
         break;
@@ -1371,6 +1394,9 @@ bool8 LoadChosenBattleElement(u8 caseId)
             case MAP_BATTLE_SCENE_FRONTIER:
                 LZDecompressVram(gBattleTerrainTilemap_Building, (void*)(BG_SCREEN_ADDR(26)));
                 break;
+            case MAP_BATTLE_SCENE_WATER_GYM:
+                LZDecompressVram(gBattleTerrainTilemap_WaterGym, (void*)(BG_SCREEN_ADDR(26)));
+                break;
             }
         }
         break;
@@ -1432,6 +1458,9 @@ bool8 LoadChosenBattleElement(u8 caseId)
                 break;
             case MAP_BATTLE_SCENE_FRONTIER:
                 LoadCompressedPalette(gBattleTerrainPalette_Frontier, 0x20, 0x60);
+                break;
+            case MAP_BATTLE_SCENE_WATER_GYM:
+                LoadCompressedPalette(gBattleTerrainPalette_WaterGym, 0x20, 0x60);
                 break;
             }
         }

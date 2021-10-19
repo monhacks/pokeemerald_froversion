@@ -535,7 +535,7 @@ static void CB2_InitBattleInternal(void)
 
     gBattleTerrain = BattleSetup_GetTerrainId();
     if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
-        gBattleTerrain = BATTLE_TERRAIN_BUILDING;
+        gBattleTerrain = BATTLE_TERRAIN_WATER_GYM;
 
     InitBattleBgsVideo();
     LoadBattleTextboxAndBackground();
@@ -2974,6 +2974,10 @@ static void BattleStartClearSetData(void)
     gBattleStruct->arenaLostOpponentMons = 0;
 
     gBattleStruct->mega.triggerSpriteId = 0xFF;
+
+    CalculateEnemyPartyCount();
+    if (gEnemyPartyCount == 1 && gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+        gBattlersCount = 3;
 }
 
 void SwitchInClearSetData(void)
