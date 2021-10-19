@@ -179,12 +179,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntRusturfTunnel[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst1[] = {
     {
     .iv = 0,
-    .lvl = 47,
+    .lvl = 41,
     .species = SPECIES_GOLBAT,
     },
     {
     .iv = 0,
-    .lvl = 47,
+    .lvl = 41,
     .species = SPECIES_NOCTOWL,
     }
 };
@@ -192,31 +192,31 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst1[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst2[] = {
     {
     .iv = 0,
-    .lvl = 47,
+    .lvl = 41,
     .species = SPECIES_NOCTOWL,
     },
     {
     .iv = 0,
-    .lvl = 47,
-    .species = SPECIES_CRAWDAUNT,
+    .lvl = 41,
+    .species = SPECIES_LUTRADOR,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst3[] = {
     {
     .iv = 0,
-    .lvl = 46,
+    .lvl = 41,
     .species = SPECIES_NOCTOWL,
     },
     {
     .iv = 0,
-    .lvl = 46,
+    .lvl = 40,
     .species = SPECIES_GOLBAT,
     },
     {
     .iv = 0,
-    .lvl = 46,
-    .species = SPECIES_CRAWDAUNT,
+    .lvl = 39,
+    .species = SPECIES_POLIWRATH,
     }
 };
 
@@ -281,8 +281,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntMtPyre3[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst4[] = {
     {
     .iv = 0,
-    .lvl = 48,
-    .species = SPECIES_TENTACRUEL,
+    .lvl = 41,
+    .species = SPECIES_MILOTIC,
     }
 };
 
@@ -339,12 +339,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Zander[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_ShellyWeatherInstitute[] = {
     {
     .iv = 150,
-    .lvl = 48,
-    .species = SPECIES_CRAWDAUNT,
+    .lvl = 41,
+    .species = SPECIES_ABSOL,
     },
     {
     .iv = 150,
-    .lvl = 48,
+    .lvl = 43,
     .species = SPECIES_PASSIMIAN, //make this passimian
     }
 };
@@ -7160,21 +7160,27 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Torchic[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Torchic[] = {
+static const struct TrainerMonItemCustomMoves sParty_MayRoute119Torchic[] = {
     {
     .iv = 50,
-    .lvl = 46,
+    .lvl = 43,
+    .heldItem = ITEM_LEFTOVERS,
     .species = SPECIES_CRADILY,
+    .moves = {MOVE_AMNESIA, MOVE_BARRIER, MOVE_TOXIC, MOVE_REST},
     },
     {
     .iv = 50,
-    .lvl = 46,
+    .lvl = 43,
+    .heldItem = ITEM_LIFE_ORB,
     .species = SPECIES_ARCANINE,
+    .moves = {MOVE_EXTREME_SPEED, MOVE_FLAMETHROWER, MOVE_HOWL, MOVE_ROCK_SMASH},
     },
     {
     .iv = 100,
-    .lvl = 50,
+    .lvl = 45,
     .species = SPECIES_MECHOBRA,
+    .heldItem = ITEM_RED_CARD,
+    .moves = {MOVE_SUBSTITUTE, MOVE_LANDMINE, MOVE_SPIKES, MOVE_AQUA_TAIL},
     }
 };
 
@@ -8019,12 +8025,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Isabella[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst5[] = {
     {
     .iv = 0,
-    .lvl = 47,
+    .lvl = 40,
     .species = SPECIES_GOLBAT,
     },
     {
     .iv = 0,
-    .lvl = 47,
+    .lvl = 42,
     .species = SPECIES_NOCTOWL,
     }
 };
