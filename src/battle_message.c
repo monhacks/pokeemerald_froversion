@@ -3796,7 +3796,7 @@ static const struct TrainerSlide sTrainerSlides[] =
     {0x291, sText_AarghAlmostHadIt, sText_BoxIsFull, sText_123Poof},
 };
 
-static u32 GetEnemyMonCount(bool32 onlyAlive)
+u32 GetEnemyMonCount(bool32 onlyAlive)
 {
     u32 i, count = 0;
 

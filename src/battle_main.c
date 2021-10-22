@@ -2974,10 +2974,6 @@ static void BattleStartClearSetData(void)
     gBattleStruct->arenaLostOpponentMons = 0;
 
     gBattleStruct->mega.triggerSpriteId = 0xFF;
-
-    CalculateEnemyPartyCount();
-    if (gEnemyPartyCount == 1 && gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
-        gBattlersCount = 3;
 }
 
 void SwitchInClearSetData(void)

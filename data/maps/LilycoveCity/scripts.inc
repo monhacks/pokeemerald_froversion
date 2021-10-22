@@ -249,8 +249,8 @@ LilycoveCity_EventScript_May:: @ 81E2DF8
 	msgbox LilycoveCity_Text_MayWontBeBeaten, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, LilycoveCity_EventScript_BattleMayTreecko
-	case 1, LilycoveCity_EventScript_BattleMayTorchic
-	case 2, LilycoveCity_EventScript_BattleMayMudkip
+	case 1, LilycoveCity_EventScript_BattleMayMudkip
+	case 2, LilycoveCity_EventScript_BattleMayTorchic
 	end
 
 LilycoveCity_EventScript_MayAskToBattleAgain:: @ 81E2E48

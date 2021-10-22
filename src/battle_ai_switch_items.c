@@ -19,7 +19,7 @@ static bool8 HasSuperEffectiveMoveAgainstOpponents(bool8 noRng);
 static bool8 FindMonWithFlagsAndSuperEffective(u16 flags, u8 moduloPercent);
 static bool8 ShouldUseItem(void);
 extern const u16 gPhasingMoves[];
-extern const u16 gSlashingMoves[];
+extern const u32 GetEnemyMonCount(bool32 onlyAlive);
 bool32 IsMoveOneOf(u16 move, const u16 *moves);
 
 struct Counter
@@ -74,6 +74,16 @@ static u8 BestCounterMons(struct Pokemon *party, u32 validMons, u32 foeSpecies)
         }
     }
 
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        Printf("Alive Mons = %d Total Mons = %d", GetEnemyMonCount(TRUE), GetEnemyMonCount(FALSE));
+        if (GetMonAbility(&party[i]) == ABILITY_RESURRECTION && GetEnemyMonCount(TRUE) == GetEnemyMonCount(FALSE))
+        {
+            scores[i] = -1;
+        }
+
+    }
+
     maxScore = INT_MIN;
     maxMons = 0;
     for (i = 0; i < PARTY_SIZE; i++)
@@ -91,7 +101,7 @@ static u8 BestCounterMons(struct Pokemon *party, u32 validMons, u32 foeSpecies)
 
     if (maxScore == INT_MIN)
         return 0;
-
+    
     return maxMons;
 }
 

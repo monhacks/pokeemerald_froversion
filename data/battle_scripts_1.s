@@ -8279,12 +8279,12 @@ BattleScript_AnnounceRoulette::
 BattleScript_Haunting::
 	printstring STRINGID_ACTIVEFAINTED
 	waitmessage 0x40
-	handleformchange BS_TARGET, 0
-	handleformchange BS_TARGET, 1
+	handleformchange BS_SCRIPTING, 0
+	handleformchange BS_SCRIPTING, 1
 	spriteignore0hp TRUE
-	playanimation BS_TARGET, B_ANIM_ILLUSION_OFF, NULL
+	playanimation BS_SCRIPTING, B_ANIM_ILLUSION_OFF, NULL
 	waitanimation
-	handleformchange BS_TARGET, 2
+	handleformchange BS_SCRIPTING, 2
 	healthbarupdate BS_SCRIPTING
 	datahpupdate BS_SCRIPTING
 	printstring STRINGID_HAUNTING
