@@ -66,6 +66,8 @@ MagmaHideout_4F_EventScript_Maxie:: @ 823A560
 	trainerbattle_no_intro TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieDefeat
 	msgbox MagmaHideout_4F_Text_MaxieImGoingAfterGroudon, MSGBOX_DEFAULT
 	closemessage
+	special HealPlayerParty
+	trainerbattle_no_intro TRAINER_MAGMA_HIDEOUT_MEGA_GENGAR, SummitCaverns_Text_LattkaDefeat2
 	clearflag FLAG_HIDE_SLATEPORT_CITY_CAPTAIN_STERN
 	clearflag FLAG_HIDE_SLATEPORT_CITY_GABBY_AND_TY
 	setvar VAR_SLATEPORT_CITY_STATE, 1
@@ -130,7 +132,6 @@ MagmaHideout_4F_EventScript_Grunt13:: @ 823A6BA
 	end
 
 MagmaHideout_4F_EventScript_Tabitha:: @ 823A6D1
-	setvar VAR_MUGSHOT_ID, MUGSHOT_HAIGH
 	trainerbattle_single TRAINER_TABITHA_MAGMA_HIDEOUT, MagmaHideout_4F_Text_TabithaIntro, MagmaHideout_4F_Text_TabithaDefeat
 	msgbox MagmaHideout_4F_Text_TabithaPostBattle, MSGBOX_AUTOCLOSE
 	end

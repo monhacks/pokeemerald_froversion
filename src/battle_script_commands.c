@@ -7900,8 +7900,8 @@ static void Cmd_various(void)
         }
         break;
     case VARIOUS_TRY_ACTIVATE_BEAST_BOOST:
-        i = GetHighestStatId(gActiveBattler);
-        if (GetBattlerAbility(gActiveBattler) == ABILITY_BEAST_BOOST
+        i = GetHighestStatId(gBattlerAttacker);
+        if ((GetBattlerAbility(gBattlerAttacker) == ABILITY_BEAST_BOOST)
             && HasAttackerFaintedTarget()
             && !NoAliveMonsForEitherParty()
             && gBattleMons[gBattlerAttacker].statStages[i] != 12)
@@ -7911,6 +7911,29 @@ static void Cmd_various(void)
             PREPARE_STAT_BUFFER(gBattleTextBuff1, i);
             BattleScriptPush(gBattlescriptCurrInstr + 3);
             gBattlescriptCurrInstr = BattleScript_AttackerAbilityStatRaise;
+            return;
+        }
+        break;
+    case VARIOUS_TRY_ACTIVATE_MEGA_GENGAR_ABILITY:
+        i = GetHighestStatId(gBattlerAttacker);
+        if ((GetBattlerAbility(gBattlerAttacker) == ABILITY_MEGA_GENGAR_ABILITY)
+            && HasAttackerFaintedTarget()
+            && !NoAliveMonsForEitherParty()
+            && !BATTLER_MAX_HP(gBattlerAttacker)
+            && !(gStatuses3[gBattlerAttacker] & STATUS3_HEAL_BLOCK))
+        {
+            gBattlerAbility = gBattlerAttacker;
+            if (gBattleMons[gActiveBattler].hp <= gBattleMons[gBattlerAttacker].maxHP / 4)
+                gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 4;
+            else if (gBattleMons[gActiveBattler].hp <= gBattleMons[gBattlerAttacker].maxHP / 2)
+                gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 8;
+            else
+                gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 16;
+                if (gBattleMoveDamage == 0)
+                    gBattleMoveDamage = 1;
+                    gBattleMoveDamage *= -1;
+            BattleScriptPush(gBattlescriptCurrInstr + 3);
+            gBattlescriptCurrInstr = BattleScript_MalevolentActivates;
             return;
         }
         break;

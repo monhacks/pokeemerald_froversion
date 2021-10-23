@@ -1445,6 +1445,10 @@
 	various \battler, VARIOUS_TRY_ACTIVATE_BEAST_BOOST
 	.endm
 
+	.macro tryactivatemegagengarability battler:req
+	various \battler, VARIOUS_TRY_ACTIVATE_MEGA_GENGAR_ABILITY
+	.endm
+
 	.macro tryactivatereceiver battler:req
 	various \battler, VARIOUS_TRY_ACTIVATE_RECEIVER
 	.endm

@@ -2486,6 +2486,7 @@ BattleScript_EffectAbsorb::
 	setdrainedhp
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
 	jumpifability BS_TARGET, ABILITY_LIQUID_OOZE, BattleScript_AbsorbLiquidOoze
+	jumpifability BS_TARGET, ABILITY_MEGA_GENGAR_ABILITY, BattleScript_AbsorbLiquidOoze
 	setbyte cMULTISTRING_CHOOSER, 0x0
 	goto BattleScript_AbsorbUpdateHp
 BattleScript_AbsorbLiquidOoze::
@@ -5252,6 +5253,7 @@ BattleScript_FaintTarget::
 	tryactivatereceiver BS_TARGET
 	tryactivatemoxie BS_ATTACKER
 	tryactivatebeastboost BS_ATTACKER
+	tryactivatemegagengarability BS_ATTACKER
 	tryactivateresurrection BS_TARGET
 	trytrainerslidefirstdownmsg BS_TARGET
 	return
@@ -5877,6 +5879,7 @@ BattleScript_LeechSeedTurnDrain::
 	datahpupdate BS_ATTACKER
 	copyword gBattleMoveDamage, gHpDealt
 	jumpifability BS_ATTACKER, ABILITY_LIQUID_OOZE, BattleScript_LeechSeedTurnPrintLiquidOoze
+	jumpifability BS_ATTACKER, ABILITY_MEGA_GENGAR_ABILITY, BattleScript_LeechSeedTurnPrintLiquidOoze
 	setbyte cMULTISTRING_CHOOSER, 0x3
 	jumpifstatus3 BS_TARGET, STATUS3_HEAL_BLOCK, BattleScript_LeechSeedHealBlock
 	manipulatedamage DMG_BIG_ROOT
@@ -7152,6 +7155,10 @@ BattleScript_RainHpHeal::
 BattleScript_RainDishActivates::
 	call BattleScript_AbilityHpHeal
 	end3
+
+BattleScript_MalevolentActivates::
+	call BattleScript_AbilityHpHeal
+	return
 	
 BattleScript_CheekPouchActivates::
 	copybyte sSAVED_BATTLER, gBattlerAttacker

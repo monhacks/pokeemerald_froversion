@@ -891,6 +891,8 @@ static const struct AbilitySetter sRiptorypsAbilitySet[] =
     {ABILITY_MAGMA_ARMOR, 15},
     {ABILITY_FLASH_FIRE, 30},
     {ABILITY_AUTOSUB, 45},
+    {ABILITY_BEAST_BOOST, 50},
+
     ABILITY_SET_END
 };
 
@@ -1004,6 +1006,19 @@ static const struct AbilitySetter sMega_DewgongAbilitySet[] =
     {ABILITY_MEGA_DEWGONG_ABILITY, 1},
     ABILITY_SET_END
 };
+
+static const struct AbilitySetter sMega_GengarAbilitySet[] =
+{
+    {ABILITY_MEGA_GENGAR_ABILITY, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sEscaratacoAbilitySet[] =
+{
+    {ABILITY_BEAST_BOOST, 1},
+    ABILITY_SET_END
+};
+
 
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
@@ -1186,7 +1201,8 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_NEVAWOK] = sNevawokAbilitySet,
     [SPECIES_MEGA_DEWGONG] = sMega_DewgongAbilitySet,
     [SPECIES_FILLER_8] = sMegaHoundoomAbilitySet,
-
+    [SPECIES_FILLER_9] = sMega_GengarAbilitySet,
+    [SPECIES_ESCARATACO] = sEscaratacoAbilitySet
 
 
 
