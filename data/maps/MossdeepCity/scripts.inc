@@ -4,6 +4,7 @@
 .set LOCALID_GRUNT_4, 13
 .set LOCALID_MAXIE, 14
 .set LOCALID_SCOTT, 16
+.set LOCALID_RIVAL_JOHN, 18
 
 MossdeepCity_MapScripts:: @ 81E4A96
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_OnTransition
@@ -436,4 +437,113 @@ MossdeepCity_Text_SootopolisNewGymLeader: @ 81E5581
 	.string "LEADER come in.\p"
 	.string "People tell me the new LEADER once\n"
 	.string "mentored WALLACE.$"
+
+/////////////////////////
+////Froversion Scripts///
+/////////////////////////
+
+MossdeepCity_EventScript_JohnRivalBattle::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement OBJ_EVENT_ID_PLAYER
+	opendoor 38, 9
+	waitdooranim
+	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
+	addobject LOCALID_RIVAL_JOHN
+	applymovement LOCALID_RIVAL_JOHN, MossdeepCity_Movement_JohnExitsGym
+	applymovement OBJ_EVENT_ID_PLAYER, MossdeepCity_Movement_FroStepsBack
+	playse SE_WALL_HIT
+	waitmovement LOCALID_RIVAL_JOHN
+	msgbox MossdeepCity_Text_SoDarkInThere, MSGBOX_DEFAULT
+	switch VAR_STARTER_MON
+	case 0, Script_MossdeepCity_WasulaBattleFlobra //fros starter is rascaloot
+	case 1, Script_MossdeepCity_WasulaBattleEmboryps //fros starter is flobra
+	case 2, Script_MossdeepCity_WasulaBattleRascaloot //fros starter is emboryps
+	release
+	end
+
+Script_MossdeepCity_WasulaBattleFlobra: //case 0
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_MUDKIP, Text_SummitCave_BobbyDefeated
+	msgbox MossdeepCity_Text_ExplainDarkGym, MSGBOX_DEFAULT
+	applymovement LOCALID_RIVAL_JOHN, MossdeepCity_Movement_JohnLeaves
+	waitmovement LOCALID_RIVAL_JOHN
+	removeobject LOCALID_RIVAL_JOHN
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
+	setvar VAR_OLDALE_TOWN_STATE, 10
+	releaseall
+	end
+
+Script_MossdeepCity_WasulaBattleEmboryps: // case 1
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_TORCHIC, Text_SummitCave_BobbyDefeated
+	msgbox MossdeepCity_Text_ExplainDarkGym, MSGBOX_DEFAULT
+	applymovement LOCALID_RIVAL_JOHN, MossdeepCity_Movement_JohnLeaves
+	waitmovement LOCALID_RIVAL_JOHN
+	removeobject LOCALID_RIVAL_JOHN
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
+	setvar VAR_OLDALE_TOWN_STATE, 10
+	releaseall
+	end
+
+Script_MossdeepCity_WasulaBattleRascaloot: //case 2
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_TREECKO, Text_SummitCave_BobbyDefeated
+	msgbox MossdeepCity_Text_ExplainDarkGym, MSGBOX_DEFAULT
+	applymovement LOCALID_RIVAL_JOHN, MossdeepCity_Movement_JohnLeaves
+	waitmovement LOCALID_RIVAL_JOHN
+	removeobject LOCALID_RIVAL_JOHN
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
+	setvar VAR_OLDALE_TOWN_STATE, 10
+	releaseall
+	end
+
+//////////////
+//Movements//
+/////////////
+
+MossdeepCity_Movement_JohnExitsGym:
+	walk_in_place_down
+	walk_down
+	step_end
+
+MossdeepCity_Movement_FroStepsBack:
+	lock_facing_direction
+	walk_down
+	step_end
+
+MossdeepCity_Movement_JohnLeaves:
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+///////////
+///Texts///
+//////////
+
+MossdeepCity_Text_SoDarkInThere:
+	.string "John (mumbling): It's so dark in\n"
+	.string "there, it's bullshit...\p"
+	.string "Oh hay {PLAYER}! I didn't see you\n"
+	.string "there, my eyes are still adjusting\l"
+	.string "to the light.\p"
+	.string "Anyway, I just got done crushing this\n"
+	.string "gym. What do you say we have a quick\l"
+	.string "battle to see if you're ready for it?$"
+
+MossdeepCity_Text_ExplainDarkGym:
+	.string "Seems to me like you're ready to face\n"
+	.string "the leader. But first you should know\l"
+	.string "that the battlefield is very dark.\p"
+	.string "My Pokémon couldn't land any of their\n"
+	.string "attacks until I lit up the battlefield.\p"
+	.string "Gud luck bud.$"
+
 

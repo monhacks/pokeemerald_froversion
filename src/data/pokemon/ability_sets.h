@@ -1019,7 +1019,14 @@ static const struct AbilitySetter sEscaratacoAbilitySet[] =
     ABILITY_SET_END
 };
 
-
+static const struct AbilitySetter sPlasmungAbilitySet[] =
+{
+    {ABILITY_INTIMIDATE, 1},
+    {ABILITY_DEFIANT, 18},
+    {ABILITY_GALVANIZE, 34},
+    {ABILITY_SWORD_LUNGE, 50},
+    ABILITY_SET_END
+};
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
@@ -1202,8 +1209,10 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_MEGA_DEWGONG] = sMega_DewgongAbilitySet,
     [SPECIES_FILLER_8] = sMegaHoundoomAbilitySet,
     [SPECIES_FILLER_9] = sMega_GengarAbilitySet,
-    [SPECIES_ESCARATACO] = sEscaratacoAbilitySet
-
+    [SPECIES_ESCARATACO] = sEscaratacoAbilitySet,
+    [SPECIES_PLASMUNG] = sPlasmungAbilitySet,
+    [SPECIES_GRUNTAZE] = sPlasmungAbilitySet,
+    [SPECIES_ELITETRIC] = sPlasmungAbilitySet,
 
 
 

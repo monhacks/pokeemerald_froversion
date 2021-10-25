@@ -771,31 +771,33 @@ struct
     u8 nature;
     u8 evs[NUM_STATS];
     u16 moves[MAX_MON_MOVES];
+    u8 abilityNum;
 } const sStevenMons[MULTI_PARTY_SIZE] =
 {
     {
-        .species = SPECIES_METANG,
+        .species = SPECIES_SABLEYE,
         .fixedIV = MAX_PER_STAT_IVS,
-        .level = 42,
+        .level = 51,
         .nature = NATURE_BRAVE,
         .evs = {0, 252, 252, 0, 6, 0},
-        .moves = {MOVE_LIGHT_SCREEN, MOVE_PSYCHIC, MOVE_REFLECT, MOVE_METAL_CLAW}
+        .moves = {MOVE_FOUL_PLAY, MOVE_TAUNT, MOVE_WILL_O_WISP, MOVE_RECOVER},
+        .abilityNum = 1
     },
     {
         .species = SPECIES_SKARMORY,
         .fixedIV = MAX_PER_STAT_IVS,
-        .level = 43,
+        .level = 52,
         .nature = NATURE_IMPISH,
         .evs = {252, 0, 0, 0, 6, 252},
         .moves = {MOVE_TOXIC, MOVE_AERIAL_ACE, MOVE_PROTECT, MOVE_STEEL_WING}
     },
     {
-        .species = SPECIES_AGGRON,
+        .species = SPECIES_BARBELLION,
         .fixedIV = MAX_PER_STAT_IVS,
-        .level = 44,
+        .level = 52,
         .nature = NATURE_ADAMANT,
         .evs = {0, 252, 0, 0, 252, 6},
-        .moves = {MOVE_THUNDER, MOVE_PROTECT, MOVE_SOLAR_BEAM, MOVE_DRAGON_CLAW}
+        .moves = {MOVE_SKULL_BASH, MOVE_IRON_DEFENSE, MOVE_SHADOW_CLAW, MOVE_IRON_HEAD}
     }
 };
 

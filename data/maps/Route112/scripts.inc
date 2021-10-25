@@ -233,7 +233,7 @@ Script_Route112_WasulaBattleRascaloot:
 	end
 
 Script_Route112_WasulaBattleEmboryps:
-	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_MUDKIP, Text_SummitCave_BobbyDefeated
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_TORCHIC, Text_SummitCave_BobbyDefeated
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq EventScript_Route112_BobbyBattleLost

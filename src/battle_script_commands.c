@@ -8717,7 +8717,7 @@ static void Cmd_various(void)
     case VARIOUS_FLASH_DARKNESS:
         if (gBattleWeather & WEATHER_DARKNESS_ANY)
         {
-            gBattleStruct->darknessTimer = 3;
+            gBattleStruct->darknessTimer = 6;
             gBattleWeather &= ~WEATHER_DARKNESS_ANY;
             BattleScriptPush(gBattlescriptCurrInstr + 3);
             gBattlescriptCurrInstr = BattleScript_FlashDarkness;

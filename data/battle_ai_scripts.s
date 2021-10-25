@@ -1219,8 +1219,19 @@ AI_CheckViability:
 	if_effect EFFECT_STICKY_WEB, AI_CV_Hazards
 	if_effect EFFECT_TOXIC_SPIKES, AI_CV_Hazards
 	if_effect EFFECT_PERISH_SONG, AI_CV_PerishSong
+	if_effect EFFECT_PLASMA_BLADE, AI_CV_PlasmaBlade
 	end
 	
+AI_CV_PlasmaBlade:
+	if_type AI_TARGET, TYPE_STEEL, AI_CV_PlasmaBlade2
+	if_ability AI_USER, ABILITY_SWORD_LUNGE, Score_Plus2
+	end
+AI_CV_PlasmaBlade2:
+	score +2
+	if_ability AI_USER, ABILITY_SWORD_LUNGE, Score_Plus2
+	end
+
+
 AI_CV_PerishSong:
 	get_ability AI_USER
 	if_equal ABILITY_ARENA_TRAP, AI_CV_PerishSong_ArenaTrap
@@ -3241,6 +3252,7 @@ AI_CV_ChangeSelfAbility_AbilitiesToEncourage:
     .byte ABILITY_CHLOROPHYLL
     .byte ABILITY_SHIELD_DUST
     .byte -1
+
 
 AI_CV_Superpower:
 	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_Superpower_ScoreDown1
