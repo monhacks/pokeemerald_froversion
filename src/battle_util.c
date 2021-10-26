@@ -4756,7 +4756,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
              && gBattleStruct->hpBefore[battler] > gBattleMons[battler].maxHP / 2
              && gBattleMons[battler].hp < gBattleMons[battler].maxHP / 2
              && (gMultiHitCounter == 0 || gMultiHitCounter == 1)
-             && !(GetBattlerAbility(gBattlerAttacker) == ABILITY_SHEER_FORCE && gBattleMoves[gCurrentMove].flags & FLAG_SHEER_FORCE_BOOST)
+             && !((GetBattlerAbility(gBattlerAttacker) == ABILITY_SHEER_FORCE || GetBattlerAbility(gBattlerAttacker) == ABILITY_INVERTEBRAKE_HIDDEN_ABILITY) && gBattleMoves[gCurrentMove].flags & FLAG_SHEER_FORCE_BOOST)
              && gBattleMons[battler].statStages[STAT_SPATK] != 12)
             {
                 SET_STATCHANGER(STAT_SPATK, 1, FALSE);
@@ -4870,6 +4870,21 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             }
             break;
         case ABILITY_COLOR_CHANGE:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && move != MOVE_STRUGGLE
+             && gBattleMoves[move].power != 0
+             && TARGET_TURN_DAMAGED
+             && !IS_BATTLER_OF_TYPE(battler, moveType)
+             && gBattleMons[battler].hp != 0)
+            {
+                SET_BATTLER_TYPE(battler, moveType);
+                PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_ColorChangeActivates;
+                effect++;
+            }
+            break;
+        case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && move != MOVE_STRUGGLE
              && gBattleMoves[move].power != 0
@@ -5220,6 +5235,13 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 }
                 break;
             case ABILITY_LIMBER:
+                if (gBattleMons[battler].status1 & STATUS1_PARALYSIS)
+                {
+                    StringCopy(gBattleTextBuff1, gStatusConditionString_ParalysisJpn);
+                    effect = 1;
+                }
+                break;
+            case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
                 if (gBattleMons[battler].status1 & STATUS1_PARALYSIS)
                 {
                     StringCopy(gBattleTextBuff1, gStatusConditionString_ParalysisJpn);
@@ -7232,6 +7254,22 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
     case ABILITY_TECHNICIAN:
         if (basePower <= 60)
            MulModifier(&modifier, UQ_4_12(1.5));
+        break;
+    case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
+        if (basePower <= 60)
+           MulModifier(&modifier, UQ_4_12(1.5));
+        if (gBattleMoves[move].flags & FLAG_SHEER_FORCE_BOOST)
+           MulModifier(&modifier, UQ_4_12(1.3));
+        if (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
+            MulModifier(&modifier, UQ_4_12(1.5));
+        if (basePower <= 60 && gBattleMoves[move].flags & FLAG_SHEER_FORCE_BOOST)
+            MulModifier(&modifier, UQ_4_12(1.8));
+        if (basePower <= 60 && (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3)))
+            MulModifier(&modifier, UQ_4_12(2.0));
+        if (gBattleMoves[move].flags & FLAG_SHEER_FORCE_BOOST && (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3)))
+           MulModifier(&modifier, UQ_4_12(1.8));
+        if (basePower <= 60 && gBattleMoves[move].flags & FLAG_SHEER_FORCE_BOOST && (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3)))
+           MulModifier(&modifier, UQ_4_12(2.3));
         break;
     case ABILITY_FLARE_BOOST:
         if (gBattleMons[battlerAtk].status1 & STATUS1_BURN && IS_MOVE_SPECIAL(move))

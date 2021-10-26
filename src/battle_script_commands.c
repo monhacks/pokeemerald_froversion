@@ -2481,7 +2481,8 @@ void SetMoveEffect(bool32 primary, u32 certain)
         && !primary && gBattleScripting.moveEffect <= 7)
         INCREMENT_RESET_RETURN
 
-    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SHEER_FORCE
+    if ((GetBattlerAbility(gBattlerAttacker) == ABILITY_SHEER_FORCE 
+        || GetBattlerAbility(gBattlerAttacker) == ABILITY_INVERTEBRAKE_HIDDEN_ABILITY)
         && gBattleMoves[gCurrentMove].flags & FLAG_SHEER_FORCE_BOOST
         && affectsUser != MOVE_EFFECT_AFFECTS_USER)
         INCREMENT_RESET_RETURN
