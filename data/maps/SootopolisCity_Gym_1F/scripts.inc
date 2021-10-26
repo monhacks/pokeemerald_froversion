@@ -83,9 +83,15 @@ SootopolisCity_Gym_1F_Movement_FallThroughIce: @ 8224F42
 	step_end
 
 SootopolisCity_Gym_1F_EventScript_Juan:: @ 8224F44
+	setflag FLAG_BATTLE_DREAM_FOG
+	setflag FLAG_SYS_NO_BAG_USE
+	setflag FLAG_FORCE_BATTLE_STYLE_SET
 	trainerbattle_single TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanIntro, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
+	clearflag FLAG_BATTLE_DREAM_FOG
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	goto_if_eq SootopolisCity_Gym_1F_EventScript_JuanRematch
 	goto_if_unset FLAG_RECEIVED_TM03, SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2
 	goto_if_unset FLAG_BADGE06_GET, SootopolisCity_Gym_1F_EventScript_GoGetFortreeBadge
@@ -95,6 +101,9 @@ SootopolisCity_Gym_1F_EventScript_Juan:: @ 8224F44
 
 SootopolisCity_Gym_1F_EventScript_JuanDefeated:: @ 8224F82
 	message SootopolisCity_Gym_1F_Text_ReceivedRainBadge
+	clearflag FLAG_BATTLE_DREAM_FOG
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis, MSGBOX_DEFAULT
@@ -125,6 +134,9 @@ SootopolisCity_Gym_1F_EventScript_GiveWaterPulse:: @ 8224FD4
 	goto_if_eq Common_EventScript_BagIsFull
 	msgbox SootopolisCity_Gym_1F_Text_ExplainWaterPulse, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM03
+	clearflag FLAG_BATTLE_DREAM_FOG
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	return
 
 SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2:: @ 8224FF7
@@ -133,6 +145,9 @@ SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2:: @ 8224FF7
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	msgbox SootopolisCity_Gym_1F_Text_ExplainWaterPulse, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM03
+	clearflag FLAG_BATTLE_DREAM_FOG
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	release
 	end
 

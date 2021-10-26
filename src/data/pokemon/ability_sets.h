@@ -1028,6 +1028,15 @@ static const struct AbilitySetter sPlasmungAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sSnoumeseAbilitySet[] =
+{
+    {ABILITY_INFILTRATOR, 1},
+    {ABILITY_CHARISMA, 18},
+    {ABILITY_UNAWARE, 31},
+    {ABILITY_ICE_SCALES, 47},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
@@ -1213,6 +1222,8 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_PLASMUNG] = sPlasmungAbilitySet,
     [SPECIES_GRUNTAZE] = sPlasmungAbilitySet,
     [SPECIES_ELITETRIC] = sPlasmungAbilitySet,
+    [SPECIES_SNOUMESE] = sSnoumeseAbilitySet,
+    [SPECIES_SNOUBAUL] = sSnoumeseAbilitySet,
 
 
 
