@@ -26,6 +26,7 @@ RustboroCity_ColangeloGraphics_3F_EventScript_PlayerFaceEast:: @ 821245F
 
 RustboroCity_ColangeloGraphics_3F_OnFrame: @ 8212464
 	map_script_2 VAR_COLANGELO_GRAPHICS_3F_STATE, 0, RustboroCity_ColangeloGraphics_3F_EventScript_MeetPresident
+	map_script_2 VAR_OLDALE_TOWN_STATE, 14, RustboroCity_ColangeloGraphics_3F_EventScript_RevealMAGABoss
 	.2byte 0
 
 RustboroCity_ColangeloGraphics_3F_EventScript_MeetPresident:: @ 821246E
@@ -310,3 +311,100 @@ RustboroCity_ColangeloGraphics_3F_Text_RareRocksDisplay: @ 8212EE9
 	.string "It's a collection of rare rocks and\n"
 	.string "stones assembled by the President.$"
 
+RustboroCity_ColangeloGraphics_3F_EventScript_RevealMAGABoss::
+	lockall
+	clearflag FLAG_HIDE_MAGA_COLANGELO_GRAPHICS
+	msgbox ColangeloGraphics_Text_DomIsAngry, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, ColangeloGraphics_Movement_PlayerToBoss
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox ColangeloGraphics_Text_SoYouveRuinedOurPlans, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_COLANGELO_GRAPHICS_DOM, ColangeloGraphics_Text_DomDefeat
+	setvar VAR_OLDALE_TOWN_STATE, 15
+	msgbox ColangeloGraphics_Text_MaybePokemonArentMeantToBeUsedAsWeapons, MSGBOX_DEFAULT
+	fadescreen FADE_TO_BLACK
+	removeobject 5
+	removeobject 4
+	setflag FLAG_HIDE_MAGA_COLANGELO_GRAPHICS
+	fadescreen FADE_FROM_BLACK
+	delay 30
+	msgbox ColangeloGraphics_Text_ThankYouForStandingUpToMe, MSGBOX_DEFAULT
+	giveitem ITEM_HM07
+	setflag FLAG_RECEIVED_HM07
+	releaseall
+	end
+
+ColangeloGraphics_Text_MaybePokemonArentMeantToBeUsedAsWeapons:
+	.string "Even with all that power, I couldn't\n"
+	.string "Win.\p"
+	.string "Maybe Pokémon aren't meant to be\n"
+	.string "used as weapons.\p"
+	.string "\p"
+	.string "Lattka, Paul, we are halting all\n"
+	.string "Pokémon Enhancement related\l"
+	.string "activities.\p"
+	.string "Paul: But sir!\p"
+	.string "D. Colangelo: I've made up my\n"
+	.string "mind. You're dismissed.$"
+
+ColangeloGraphics_Text_ThankYouForStandingUpToMe:
+	.string "Thank you for showing me what\n"
+	.string "really matters, {PLAYER}.\p"
+	.string "What we were doing was wrong, and\n"
+	.string "hurt the Pokémon. I will have to\l"
+	.string "find other ways to help America!\p"
+	.string "I want you to take this as a token\n"
+	.string "of my gratitude!$"
+
+
+ColangeloGraphics_Text_DomDefeat:
+	.string "I can't believe it...\p"
+	.string "All odds were against you and\n"
+	.string "you still didn't back down.$"
+	
+ColangeloGraphics_Text_DomIsAngry:
+	.string "D. Colangelo: This is not good!!$"
+
+ColangeloGraphics_Text_SoYouveRuinedOurPlans:
+	.string "D. Colangelo: Fro...?\p"
+	.string "I'm sorry you had to find out like\n"
+	.string "this good buddy, but it looks like\l"
+	.string "I have no other choice...\p"
+	.string "You see... I've always wanted to help\n"
+	.string "people, it's why I joined the Military.\p"
+	.string "What you don't understand is that if we\n"
+	.string "stop now, our Country will fall.\p"
+	.string "I've seen how far other Countries will go\l"
+	.string "first hand, and it ain't pretty...\p"
+	.string "So I developed Technology to make Pokémon\n"
+	.string "better versions of themselves, keeping it\l"
+	.string "hidden behind Colangelo Graphics.\p"
+	.string "It works exceptionally well, and will be the\n"
+	.string "edge America needs to maintain it's control\l"
+	.string "of the World.\p"
+	.string "You have to see the logic, right?\p"
+	.string "No? Fine then, you're not going to stand\n"
+	.string "a chance against my Octire.\p"
+	.string "With the technology of Coloangelo Graphics,\n"
+	.string "I have enhanced his strength well beyond\l"
+	.string "anything you can handle. He is so strong\l"
+	.string "I once saw him rip a Semi-Truck in half.\p"
+	.string "You still want to try to stop me?\n"
+	.string "Alright then, give me your best shot!$"
+
+ColangeloGraphics_Movement_PlayerToBoss:
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_right
+	step_end

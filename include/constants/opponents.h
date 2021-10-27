@@ -861,12 +861,13 @@
 #define TRAINER_SUMMIT_CAVERNS_LATTKA_1     857
 #define TRAINER_SUMMIT_CAVERNS_LATTKA_2     858
 #define TRAINER_MAGMA_HIDEOUT_MEGA_GENGAR   859
+#define TRAINER_COLANGELO_GRAPHICS_DOM      860
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      860
+#define TRAINERS_COUNT                      861
 #define MAX_TRAINERS_COUNT                  864
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

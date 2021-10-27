@@ -212,6 +212,8 @@ SootopolisCity_OnResume: @ 81E590B
 SootopolisCity_OnFrame: @ 81E5914
 	map_script_2 VAR_SOOTOPOLIS_CITY_STATE, 1, SootopolisCity_EventScript_StartLegendariesScene
 	map_script_2 VAR_SKY_PILLAR_STATE, 1, SootopolisCity_EventScript_StartRayquazaScene
+	map_script_2 VAR_OLDALE_TOWN_STATE, 11, SootopolisCity_EventScript_WarpToMagaCutscene
+	map_script_2 VAR_OLDALE_TOWN_STATE, 13, SootopolisCity_EventScript_ZendanoCallsFro
 	.2byte 0
 
 @ If not at PokeCenter, assumed to have arrived via Dive
@@ -1795,3 +1797,35 @@ SootopolisCity_Text_DazzledByMentor: @ 81E7CBC
 	.string "WALLACE: I'm sure that you will be\n"
 	.string "dazzled by my mentor's breathtakingly\l"
 	.string "elegant battle style.$"
+
+//////////////////////////////
+///////froversion scripts/////
+////////////////////////////
+
+SootopolisCity_EventScript_WarpToMagaCutscene::
+	lockall
+	setvar VAR_OLDALE_TOWN_STATE, 12
+	warpsilent MAP_TRANSITION_MAP_POKECENTER, 255, 10, 5
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement OBJ_EVENT_ID_PLAYER
+	releaseall
+	end
+
+SootopolisCity_EventScript_ZendanoCallsFro:
+	lockall
+	setvar VAR_OLDALE_TOWN_STATE, 14
+	msgbox SootopolisCity_Text_ZendanoCallsFro, MSGBOX_DEFAULT
+	releaseall
+	end
+
+SootopolisCity_Text_ZendanoCallsFro:
+	.string "...\p"
+	.string "Fro! It's Zendano! You need to\n"
+	.string "head to Summit City right now!\p"
+	.string "I tried to stop them, but Team\n"
+	.string "MAGA didn't listen.\p"
+	.string "I'm afraid they are going to do\n"
+	.string "something really bad...\p"
+	.string "Click.$"
+
+

@@ -1187,3 +1187,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/LockportTrail_BF2/scripts.inc"
 
 	.include "data/maps/WardCityGym/scripts.inc"
+
+	.include "data/maps/TransitionMapPokecenter/scripts.inc"

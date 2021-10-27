@@ -6,7 +6,12 @@ RustboroCity_ColangeloGraphics_1F_MapScripts:: @ 8211245
 
 RustboroCity_ColangeloGraphics_1F_OnTransition: @ 821124B
 	call_if_unset FLAG_RETURNED_COLANGELO_GEARS, RustboroCity_ColangeloGraphics_1F_EventScript_BlockStairs
+	call_if_unset FLAG_HIDE_MAGA_COLANGELO_GRAPHICS, RustboroCity_ColangeloGraphics_1F_EventScript_SetFlagToHidePaulAndLattka
 	end
+
+RustboroCity_ColangeloGraphics_1F_EventScript_SetFlagToHidePaulAndLattka:
+	setflag FLAG_HIDE_MAGA_COLANGELO_GRAPHICS
+	return
 
 RustboroCity_ColangeloGraphics_1F_EventScript_BlockStairs:: @ 8211255
 	setobjectxyperm LOCALID_STAIR_GUARD, 14, 2

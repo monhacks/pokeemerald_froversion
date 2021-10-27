@@ -438,6 +438,15 @@ static const struct AbilitySetter sMakuhitaAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sInvertebrakeAbilitySet[] =
+{
+    {ABILITY_THICK_FAT, 1},
+    {ABILITY_GUTS, 17},
+    {ABILITY_SHEER_FORCE, 31},
+    {ABILITY_INVERTEBRAKE_HIDDEN_ABILITY, 155},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter sDiglettAbilitySet[] =
 {
     {ABILITY_RUN_AWAY, 1},
@@ -1224,7 +1233,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_ELITETRIC] = sPlasmungAbilitySet,
     [SPECIES_SNOUMESE] = sSnoumeseAbilitySet,
     [SPECIES_SNOUBAUL] = sSnoumeseAbilitySet,
-
+    [SPECIES_INVERTEBRAKE] = sInvertebrakeAbilitySet,
 
 
 

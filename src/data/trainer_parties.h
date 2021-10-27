@@ -12845,3 +12845,26 @@ static const struct TrainerMonItemCustomMoves sParty_MagmaHideoutMegaGengar[] = 
     .statHP = 0,
     }
 };
+
+static const struct TrainerMonItemCustomMoves sParty_ColangeloGraphicsDom[] = {
+    {
+    .abilityNum = 3,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_INVERTEBRAKE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SURF, MOVE_BLIZZARD, MOVE_SLUDGE_WAVE, MOVE_CONSTRICT},
+    .statDef = 350,
+    .statSpDef = 350,
+    .statHP = 1725,
+    .statMaxHP = 1725,
+    },
+    {
+    .iv = 150,
+    .lvl = 1,
+    .species = SPECIES_MAGIKARP,
+    .heldItem = ITEM_FLAME_ORB,
+    .moves = {MOVE_SPLASH, MOVE_SPLASH, MOVE_SPLASH, MOVE_SPLASH},
+    .statHP = 1,
+    }
+};
