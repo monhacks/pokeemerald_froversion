@@ -4413,24 +4413,33 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 break;
             case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
                 {
-                u32 i = Random() % 100;
-                Printf("Random (Status Check)= %d", i);
+                u32 AbilityActivationRoll = Random() % 100;
+                Printf("Random (Status Check)= %d", AbilityActivationRoll);
                 Printf("Current HP = %d Max HP/3 =%d", gBattleMons[battler].hp, (gBattleMons[battler].maxHP / 3));
                 if ((gBattleMons[battler].status1 & STATUS1_ANY)
-                    && (i <= 30))
+                    && (AbilityActivationRoll <= 30))
                 {
                     goto ABILITY_HEAL_MON_STATUS;
                 }
                 else if ((gBattleMons[battler].hp <= (gBattleMons[battler].maxHP / 3))
-                    && (i >= 70))
+                    && (AbilityActivationRoll >= 70))
                     {
-                    Printf("Random (HP check) = %d", i);
+                    Printf("Random (HP check) = %d", AbilityActivationRoll);
                     BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
                     gBattleMoveDamage = gBattleMons[battler].maxHP / 18;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     gBattleMoveDamage *= -1;
                     effect++;
+                    }
+                else if ((gBattleMons[battler].hp <= 1000)
+                    && ((AbilityActivationRoll >= 40) && (AbilityActivationRoll <= 60)))
+                    {
+                    Printf("Random (Stat Reset Check) = %d", AbilityActivationRoll);
+                    for (j = 0; j < NUM_BATTLE_STATS; j++)
+                        gBattleMons[battler].statStages[j] = DEFAULT_STAT_STAGE;
+                        BattleScriptPushCursorAndCallback(BattleScript_MotorCloakActivates);
+                        effect++;
                     }
                 break;
                 }

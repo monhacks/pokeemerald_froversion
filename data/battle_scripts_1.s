@@ -6552,6 +6552,12 @@ BattleScript_MoveEffectClearSmog::
 	waitmessage 0x40
 	return
 
+BattleScript_MotorCloakActivates::
+	printstring STRINGID_RESETSVERTEBRAKESSTATLEVELS
+	waitmessage 0x40
+	end3
+
+
 BattleScript_FocusPunchSetUp::
 	printstring STRINGID_EMPTYSTRING3
 	waitmessage 0x1

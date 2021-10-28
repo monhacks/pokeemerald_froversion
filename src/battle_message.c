@@ -555,6 +555,7 @@ static const u8 sText_TransformedIntoWaterType[] =_("{B_DEF_NAME_WITH_PREFIX} tr
 static const u8 sText_PkmnAcquiredSimple[] =_("{B_DEF_NAME_WITH_PREFIX} acquired\nSimple!");
 static const u8 sText_KindOffer[] =_("{B_DEF_NAME_WITH_PREFIX}\ntook the kind offer!");
 static const u8 sText_ResetsTargetsStatLevels[] =_("{B_DEF_NAME_WITH_PREFIX}'s stat changes\nwere removed!");
+static const u8 sText_ResetsVertebrakesStatLevels[] =_("{B_ATK_NAME_WITH_PREFIX}'s Motor Cloak\nremoved it's stat changes!");
 static const u8 sText_AllySwitchPosition[] =_("{B_ATK_NAME_WITH_PREFIX} and\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} switched places!");
 static const u8 sText_RestoreTargetsHealth[] =_("{B_DEF_NAME_WITH_PREFIX}'s HP was restored!");
 static const u8 sText_TookPkmnIntoTheSky[] =_("{B_ATK_NAME_WITH_PREFIX} took\n{B_DEF_NAME_WITH_PREFIX} into the sky!");
@@ -1305,6 +1306,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_BUFF1WASREVIVED - 12] = sText_Buff1WasRevived,
     [STRINGID_PKMNCUTSSPAATTACKWITH - 12] = sText_PkmnCutsSpaAttackWith,
     [STRINGID_RAINHEALRESTOREDHPALITTLE2 - 12] = sText_RainHealRestoredHPALittle2,
+    [STRINGID_RESETSVERTEBRAKESSTATLEVELS - 12] = sText_ResetsVertebrakesStatLevels,
 };
 
 const u16 gTerrainStringIds[] =
