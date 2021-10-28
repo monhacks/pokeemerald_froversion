@@ -4411,6 +4411,29 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     goto ABILITY_HEAL_MON_STATUS;
                 }
                 break;
+            case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
+                {
+                u32 i = Random() % 100;
+                Printf("Random (Status Check)= %d", i);
+                Printf("Current HP = %d Max HP/3 =%d", gBattleMons[battler].hp, (gBattleMons[battler].maxHP / 3));
+                if ((gBattleMons[battler].status1 & STATUS1_ANY)
+                    && (i <= 30))
+                {
+                    goto ABILITY_HEAL_MON_STATUS;
+                }
+                else if ((gBattleMons[battler].hp <= (gBattleMons[battler].maxHP / 3))
+                    && (i >= 70))
+                    {
+                    Printf("Random (HP check) = %d", i);
+                    BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                    gBattleMoveDamage = gBattleMons[battler].maxHP / 18;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    gBattleMoveDamage *= -1;
+                    effect++;
+                    }
+                break;
+                }
             case ABILITY_MEGA_DEWGONG_ABILITY:
                 if (WEATHER_HAS_EFFECT
                  && (gBattleWeather & WEATHER_HAIL_ANY)
@@ -7256,19 +7279,19 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
            MulModifier(&modifier, UQ_4_12(1.5));
         break;
     case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
-        if (basePower <= 60)
+        if (basePower <= 100)
            MulModifier(&modifier, UQ_4_12(1.5));
         if (gBattleMoves[move].flags & FLAG_SHEER_FORCE_BOOST)
            MulModifier(&modifier, UQ_4_12(1.3));
         if (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
             MulModifier(&modifier, UQ_4_12(1.5));
-        if (basePower <= 60 && gBattleMoves[move].flags & FLAG_SHEER_FORCE_BOOST)
+        if (basePower <= 100 && gBattleMoves[move].flags & FLAG_SHEER_FORCE_BOOST)
             MulModifier(&modifier, UQ_4_12(1.8));
-        if (basePower <= 60 && (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3)))
+        if (basePower <= 100 && (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3)))
             MulModifier(&modifier, UQ_4_12(2.0));
         if (gBattleMoves[move].flags & FLAG_SHEER_FORCE_BOOST && (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3)))
            MulModifier(&modifier, UQ_4_12(1.8));
-        if (basePower <= 60 && gBattleMoves[move].flags & FLAG_SHEER_FORCE_BOOST && (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3)))
+        if (basePower <= 100 && gBattleMoves[move].flags & FLAG_SHEER_FORCE_BOOST && (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3)))
            MulModifier(&modifier, UQ_4_12(2.3));
         break;
     case ABILITY_FLARE_BOOST:
