@@ -335,6 +335,22 @@ static const struct AbilitySetter sClefairyAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sChanseyAbilitySet[] =
+{
+    {ABILITY_SERENE_GRACE, 1},
+    {ABILITY_NATURAL_CURE, 20},
+    {ABILITY_REGENERATOR, 40},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sBlisseyAbilitySet[] =
+{
+    {ABILITY_SERENE_GRACE, 1},
+    {ABILITY_NATURAL_CURE, 25},
+    {ABILITY_REGENERATOR, 45},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter sMankeyAbilitySet[] =
 {
     {ABILITY_VITAL_SPIRIT, 1},

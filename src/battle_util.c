@@ -4413,7 +4413,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 break;
             case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
                 {
-                u32 AbilityActivationRoll = Random() % 100;
+                u32 AbilityActivationRoll = 45;//Random() % 100;
                 Printf("Random (Status Check)= %d", AbilityActivationRoll);
                 Printf("Current HP = %d Max HP/3 =%d", gBattleMons[battler].hp, (gBattleMons[battler].maxHP / 3));
                 if ((gBattleMons[battler].status1 & STATUS1_ANY)
@@ -4432,7 +4432,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     gBattleMoveDamage *= -1;
                     effect++;
                     }
-                else if ((gBattleMons[battler].hp <= 1000)
+                for (j = 0; j < NUM_BATTLE_STATS; j++)
+                if ((gBattleMons[battler].statStages[j] <= 3)
                     && ((AbilityActivationRoll >= 40) && (AbilityActivationRoll <= 60)))
                     {
                     Printf("Random (Stat Reset Check) = %d", AbilityActivationRoll);

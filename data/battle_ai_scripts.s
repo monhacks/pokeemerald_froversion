@@ -3184,6 +3184,7 @@ AI_CV_SmellingSalt_End:
 	end
 
 AI_CV_Trick:
+	if_status2 AI_TARGET, STATUS2_SUBSTITUTE, Score_Minus30
 	get_hold_effect AI_USER
 	if_in_bytes AI_CV_Trick_EffectsToEncourage2, AI_CV_Trick3
 	if_in_bytes AI_CV_Trick_EffectsToEncourage, AI_CV_Trick4

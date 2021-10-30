@@ -422,6 +422,9 @@ static void Overworld_ResetStateAfterWhiteOut(void)
     FlagClear(FLAG_BATTLE_SANDSTORM);
     FlagClear(FLAG_BATTLE_RAIN);
     FlagClear(FLAG_BATTLE_SUN);
+    FlagClear(FLAG_FORCE_BATTLE_STYLE_SET);
+    FlagClear(FLAG_SYS_NO_BAG_USE);
+
     FollowMe_TryRemoveFollowerOnWhiteOut();
 }
 

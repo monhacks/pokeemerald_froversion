@@ -3662,7 +3662,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("SIDNEY"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_SETUP_FIRST_TURN,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_COUNTER,
         .partySize = ARRAY_COUNT(sParty_Sidney),
         .party = {.ItemCustomMoves = sParty_Sidney},
     },
@@ -7284,7 +7284,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("WALLY"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
         .partySize = ARRAY_COUNT(sParty_WallyVR1),
         .party = {.NoItemCustomMoves = sParty_WallyVR1},
     },
@@ -12088,7 +12088,7 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_MagmaHideoutMegaGengar),
         .party = {.ItemCustomMoves = sParty_MagmaHideoutMegaGengar},
     },
-    
+
     [TRAINER_COLANGELO_GRAPHICS_DOM] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
