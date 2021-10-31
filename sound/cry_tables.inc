@@ -440,8 +440,8 @@ cry Cry_Elitetric
 cry Cry_Mega_Dewgong
 cry Cry_Filler_8
 cry Cry_Filler_9
-cry Cry_Filler_10
-cry Cry_Filler_11
+cry Cry_Frentoad
+cry Cry_Rabatoast
 cry Cry_Filler_12
 cry Cry_Filler_13
 cry Cry_Filler_14
@@ -916,8 +916,8 @@ cry2 Cry_Elitetric
 cry2 Cry_Mega_Dewgong
 cry2 Cry_Filler_8
 cry2 Cry_Filler_9
-cry2 Cry_Filler_10
-cry2 Cry_Filler_11
+cry2 Cry_Frentoad
+cry2 Cry_Rabatoast
 cry2 Cry_Filler_12
 cry2 Cry_Filler_13
 cry2 Cry_Filler_14

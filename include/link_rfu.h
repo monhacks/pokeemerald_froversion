@@ -146,7 +146,7 @@ struct GFRfuManager
     /* 0x0fe */ u16 resendExitStandbyTimer;
     /* 0x100 */ u16 unk_100;
     /* 0x102 */ u8 unk_102;
-    /* 0x103 */ u8 filler_103[0x10A - 0x103];
+    /* 0x103 */ u8 frentoad3[0x10A - 0x103];
     /* 0x10A */ struct GFtgtGname unk_10A;
     u8 filler_;
     u8 playerName[PLAYER_NAME_LENGTH + 1];

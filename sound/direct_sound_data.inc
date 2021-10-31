@@ -2328,11 +2328,11 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
     Cry_Filler_9::
 	.incbin "sound/direct_sound_samples/cries/filler_9.bin"
 .align 2
-    Cry_Filler_10::
-	.incbin "sound/direct_sound_samples/cries/filler_10.bin"
+    Cry_Frentoad::
+	.incbin "sound/direct_sound_samples/cries/frentoad.bin"
 .align 2
-    Cry_Filler_11::
-	.incbin "sound/direct_sound_samples/cries/filler_11.bin"
+    Cry_Rabatoast::
+	.incbin "sound/direct_sound_samples/cries/rabatoast.bin"
 .align 2
     Cry_Filler_12::
 	.incbin "sound/direct_sound_samples/cries/filler_12.bin"

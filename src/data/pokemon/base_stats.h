@@ -14023,7 +14023,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_10] =
+[SPECIES_FRENTOAD] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14054,7 +14054,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_11] =
+[SPECIES_RABATOAST] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,

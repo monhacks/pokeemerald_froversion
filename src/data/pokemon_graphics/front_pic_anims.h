@@ -5115,13 +5115,13 @@ static const union AnimCmd sAnim_FILLER_9_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_10_1[] = 
+static const union AnimCmd sAnim_FRENTOAD_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_11_1[] = 
+static const union AnimCmd sAnim_RABATOAST_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
@@ -7666,13 +7666,13 @@ static const union AnimCmd *const sAnims_FILLER_9[] ={
     sAnim_GeneralFrame0,
     sAnim_FILLER_9_1,
 };
-static const union AnimCmd *const sAnims_FILLER_10[] ={
+static const union AnimCmd *const sAnims_FRENTOAD[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_10_1,
+    sAnim_FRENTOAD_1,
 };
-static const union AnimCmd *const sAnims_FILLER_11[] ={
+static const union AnimCmd *const sAnims_RABATOAST[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_11_1,
+    sAnim_RABATOAST_1,
 };
 static const union AnimCmd *const sAnims_FILLER_12[] ={
     sAnim_GeneralFrame0,
@@ -8303,8 +8303,8 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(MEGA_DEWGONG),
     ANIM_CMD(FILLER_8),
     ANIM_CMD(FILLER_9),
-    ANIM_CMD(FILLER_10),
-    ANIM_CMD(FILLER_11),
+    ANIM_CMD(FRENTOAD),
+    ANIM_CMD(RABATOAST),
     ANIM_CMD(FILLER_12),
     ANIM_CMD(FILLER_13),
     ANIM_CMD(FILLER_14),
