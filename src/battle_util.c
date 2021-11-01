@@ -2384,9 +2384,20 @@ u8 DoBattlerEndTurnEffects(void)
              && !(gStatuses3[gActiveBattler] & STATUS3_HEAL_BLOCK)
              && gBattleMons[gActiveBattler].hp != 0)
             {
-                gBattleMoveDamage = GetDrainedBigRootHp(gActiveBattler, gBattleMons[gActiveBattler].maxHP / 16);
-                BattleScriptExecute(BattleScript_AquaRingHeal);
-                effect++;
+                if (gBattleMons[gActiveBattler].species == SPECIES_MECHOBRA
+                 || gBattleMons[gActiveBattler].species == SPECIES_MORPHLO
+                 || gBattleMons[gActiveBattler].species == SPECIES_FLOBRA)
+                {
+                    gBattleMoveDamage = GetDrainedBigRootHp(gActiveBattler, gBattleMons[gActiveBattler].maxHP / 8);
+                    BattleScriptExecute(BattleScript_AquaRingHeal);
+                    effect++;
+                }
+                else
+                {
+                    gBattleMoveDamage = GetDrainedBigRootHp(gActiveBattler, gBattleMons[gActiveBattler].maxHP / 16);                
+                    BattleScriptExecute(BattleScript_AquaRingHeal);
+                    effect++;
+                } 
             }
             gBattleStruct->turnEffectsTracker++;
             break;

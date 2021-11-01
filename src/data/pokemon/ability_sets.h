@@ -88,7 +88,7 @@ static const struct AbilitySetter sGrowlitheAbilitySet[] =
     {ABILITY_INTIMIDATE, 1},
     {ABILITY_FLASH_FIRE, 16},
     {ABILITY_JUSTIFIED, 38},
-    {ABILITY_SPEED_BOOST, 68},
+    {ABILITY_SPEED_BOOST, 60},
     ABILITY_SET_END
 };
 
@@ -173,6 +173,14 @@ static const struct AbilitySetter sWeedleAbilitySet[] =
 static const struct AbilitySetter sKakunaAbilitySet[] = 
 {
     {ABILITY_SHED_SKIN, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sSkarmoryAbilitySet[] = 
+{
+    {ABILITY_KEEN_EYE, 1},
+    {ABILITY_CLEAR_BODY, 25},
+    {ABILITY_STURDY, 40},
     ABILITY_SET_END
 };
 
@@ -1062,6 +1070,14 @@ static const struct AbilitySetter sSnoumeseAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sRabatoastAbilitySet[] = 
+{
+    {ABILITY_MAGMA_ARMOR, 1},
+    {ABILITY_FLAME_BODY, 10},
+    {ABILITY_PRANKSTER, 21},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
@@ -1250,7 +1266,9 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_SNOUMESE] = sSnoumeseAbilitySet,
     [SPECIES_SNOUBAUL] = sSnoumeseAbilitySet,
     [SPECIES_INVERTEBRAKE] = sInvertebrakeAbilitySet,
-
+    [SPECIES_SKARMORY] = sSkarmoryAbilitySet,
+    [SPECIES_RABATOAST] = sRabatoastAbilitySet,
+    
 
 
 

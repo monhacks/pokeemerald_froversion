@@ -1189,3 +1189,7 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/WardCityGym/scripts.inc"
 
 	.include "data/maps/TransitionMapPokecenter/scripts.inc"
+
+	.include "data/maps/JohnsRoom/scripts.inc"
+
+	.include "data/maps/EverGrandeCity_Hall6/scripts.inc"

@@ -1,30 +1,30 @@
 {
-  "id": "MAP_EVER_GRANDE_CITY_DRAKES_ROOM",
-  "name": "EverGrandeCity_DrakesRoom",
-  "layout": "LAYOUT_EVER_GRANDE_CITY_DRAKES_ROOM",
-  "music": "MUS_VICTORY_ROAD",
+  "id": "MAP_JOHNS_ROOM",
+  "name": "JohnsRoom",
+  "layout": "LAYOUT_JOHNS_ROOM",
+  "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_EVER_GRANDE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_INDOOR",
+  "map_type": "MAP_TYPE_NONE",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
-  "battle_scene": "MAP_BATTLE_SCENE_DRAKE",
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_DRAKE",
+      "graphics_id": "OBJ_EVENT_GFX_JOHNM",
       "x": 6,
       "y": 5,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EverGrandeCity_DrakesRoom_EventScript_Drake",
+      "script": "NULL",
       "flag": "0"
     }
   ],
@@ -32,9 +32,9 @@
     {
       "x": 6,
       "y": 13,
-      "elevation": 3,
-      "dest_map": "MAP_EVER_GRANDE_CITY_HALL3",
-      "dest_warp_id": 1
+      "elevation": 0,
+      "dest_map": "MAP_EVER_GRANDE_CITY_HALL6",
+      "dest_warp_id": 3
     },
     {
       "x": 6,

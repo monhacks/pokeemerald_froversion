@@ -46,7 +46,53 @@ EverGrandeCity_ChampionsRoom_EventScript_Wallace:: @ 8228A45
 	msgbox EverGrandeCity_ChampionsRoom_Text_IntroSpeech, MSGBOX_DEFAULT
 	setflag FLAG_SYS_NO_BAG_USE
 	setflag FLAG_FORCE_BATTLE_STYLE_SET
-	trainerbattle_no_intro TRAINER_WALLACE, EverGrandeCity_ChampionsRoom_Text_Defeat
+	switch VAR_STARTER_MON
+	case 0, ChampionsHall_EventScript_BattleJohnTreecko
+	case 1, ChampionsHall_EventScript_BattleJohnMudkip
+	case 2, ChampionsHall_EventScript_BattleJohnTorchic
+	end
+	
+ChampionsHall_EventScript_BattleJohnTreecko:
+	trainerbattle_no_intro TRAINER_JOHN_CHAMPIONS_HALL_TREECKO, Text_ChampionsHall_JohnDefeated
+	goto EverGrandeCity_ChampionsRoom_EventScript_NotRealChampion
+	end
+
+ChampionsHall_EventScript_BattleJohnMudkip:
+	trainerbattle_no_intro TRAINER_JOHN_CHAMPIONS_HALL_MUDKIP, Text_ChampionsHall_JohnDefeated
+	goto EverGrandeCity_ChampionsRoom_EventScript_NotRealChampion
+	end
+
+ChampionsHall_EventScript_BattleJohnTorchic:
+	trainerbattle_no_intro TRAINER_JOHN_CHAMPIONS_HALL_TORCHIC, Text_ChampionsHall_JohnDefeated
+	goto EverGrandeCity_ChampionsRoom_EventScript_NotRealChampion
+	end
+
+EverGrandeCity_ChampionsRoom_EventScript_NotRealChampion:
+	msgbox Text_ChampionsHall_NotRealChampion, MSGBOX_DEFAULT
+	addobject LOCALID_RIVAL
+	call EverGrandeCity_ChampionsRoom_EventScript_RivalApproachPlayer
+	msgbox Text_ChampionsHall_BobbyRevealChampion, MSGBOX_DEFAULT
+	special HealPlayerParty
+	switch VAR_STARTER_MON
+	case 0, Script_ChampionsHall_WasulaBattleFlobra //fros starter is rascaloot
+	case 1, Script_ChampionsHall_WasulaBattleEmboryps //fros starter is flobra
+	case 2, Script_ChampionsHall_WasulaBattleRascaloot //fros starter is emboryps
+	//trainerbattle_no_intro TRAINER_WALLACE, EverGrandeCity_ChampionsRoom_Text_Defeat
+	//goto EverGrandeCity_ChampionsRoom_EventScript_Defeated
+	end
+
+Script_ChampionsHall_WasulaBattleFlobra:
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_MUDKIP, Text_SummitCave_BobbyDefeated
+	goto EverGrandeCity_ChampionsRoom_EventScript_Defeated
+	end
+
+Script_ChampionsHall_WasulaBattleRascaloot:
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_TREECKO, Text_SummitCave_BobbyDefeated
+	goto EverGrandeCity_ChampionsRoom_EventScript_Defeated
+	end
+
+Script_ChampionsHall_WasulaBattleEmboryps:
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_TORCHIC, Text_SummitCave_BobbyDefeated
 	goto EverGrandeCity_ChampionsRoom_EventScript_Defeated
 	end
 
@@ -350,3 +396,20 @@ EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations: @ 82294F5
 	.string "{PLAYER}, way to go!\n"
 	.string "Congratulations!$"
 
+Text_ChampionsHall_JohnDefeated:
+	.string "Wtf!?$"
+
+Text_ChampionsHall_NotRealChampion:
+	.string "Woah, nice battle {PLAYER}!\p"
+	.string "I'd love to tell you that you\n"
+	.string "are now League Champion but...$"
+
+Text_ChampionsHall_BobbyRevealChampion:
+	.string "Bobby: Fro! Look at how far you\n"
+	.string "have come!\p"
+	.string "You beat the Champion. Or rather,\n"
+	.string "the previous Champion!\p"
+	.string "I beat John right before you got\n"
+	.string "here to claim the title for myself.\p"
+	.string "I know you haven't come this far to\n"
+	.string "turn back, may the best trainer win!$"

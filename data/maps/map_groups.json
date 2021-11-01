@@ -136,7 +136,9 @@
     "TransitionMap",
     "LockportTrail_BF1",
     "LockportTrail_BF2",
-    "TransitionMapPokecenter"
+    "TransitionMapPokecenter",
+    "JohnsRoom",
+    "EverGrandeCity_Hall6"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",
