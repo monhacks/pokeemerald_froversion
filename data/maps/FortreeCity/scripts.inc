@@ -156,3 +156,29 @@ FortreeCity_Text_GymSign: @ 81E2AE6
 	.string "“The bird user taking flight into\n"
 	.string "the world.”$"
 
+/////////////////FROVERSION///////////////////////
+
+Fortree_EventScript_Amneet::
+	lock
+	faceplayer
+	playbgm MUS_FV_PIMP, 0
+	message SummitCity_Text_AmneetSummitCityMerchant
+	waitmessage
+	pokemart FortreeCity_Pokemart_Amneet
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	fadedefaultbgm
+	release
+	end
+
+	.align 2
+FortreeCity_Pokemart_Amneet:
+	.2byte ITEM_LEFTOVERS
+	.2byte ITEM_GHOST_GEM
+	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_EXPERT_BELT
+	.2byte ITEM_SCOPE_LENS
+	.2byte ITEM_ZINC
+	.2byte ITEM_HEART_SCALE
+	.2byte ITEM_NONE
+	release
+	end

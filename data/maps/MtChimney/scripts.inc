@@ -3,7 +3,7 @@
 .set LOCALID_TABITHA, 3
 .set LOCALID_MAGMA_GRUNT_2, 22
 .set LOCALID_MAGMA_GRUNT_1, 29
-
+.set LOCALID_MOVE_RELEARNER, 31
 
 MtChimney_MapScripts:: @ 822EDC1
 	map_script MAP_SCRIPT_ON_RESUME, MtChimney_OnResume
@@ -16,6 +16,18 @@ MtChimney_OnTransition: @ 822EDCC
 
 MtChimney_OnResume: @ 822EDD2
 	setstepcallback STEP_CB_ASH
+	end
+
+BossBattleMoveRelearner::
+	lockall
+	applymovement LOCALID_MOVE_RELEARNER, Common_Movement_FacePlayer
+	waitmovement 0
+	goto_if_set FLAG_TEMP_1, FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
+	msgbox ExplainPurposeAndSuggestSave, MSGBOX_DEFAULT
+	closemessage
+	msgbox ImTheMoveTutor, MSGBOX_DEFAULT
+	setflag FLAG_TEMP_1
+	goto FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
 	end
 
 MtChimney_EventScript_Archie:: @ 822EDD5
@@ -880,3 +892,18 @@ MtChimney_Text_MaxieJustWatchThePowerOfTheOrb:
 	.string "strength!\p"
 	.string "Go, Houndoom!$"
 
+ExplainPurposeAndSuggestSave:
+	.string "It looks like things are getting\n"
+	.string "pretty difficult up ahead.\p"
+	.string "This might be a good spot to save.$"
+
+ImTheMoveTutor:
+	.string "I can also help you prepare for.\n"
+	.string "upcoming battles.\p"
+	.string "I know all the moves that Pokémon\n"
+	.string "learn--every one of them--and I can\l"
+	.string "teach Pokémon those moves.\p"
+	.string "I can teach a move to a Pokémon\n"
+	.string "of yours if you'd like.\p"
+	.string "I'll do it for a Heart Scale.\n"
+	.string "I'm collecting those now.$"

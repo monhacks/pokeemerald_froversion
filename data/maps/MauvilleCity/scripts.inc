@@ -698,6 +698,7 @@ MauvilleCity_Pokemart_Amneet:
 	.2byte ITEM_EVIOLITE
 	.2byte ITEM_POWER_BRACER
 	.2byte ITEM_PROTEIN
+	.2byte ITEM_HEART_SCALE
 	.2byte ITEM_NONE
 	release
 	end

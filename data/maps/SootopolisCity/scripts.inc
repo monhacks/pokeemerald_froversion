@@ -1828,4 +1828,28 @@ SootopolisCity_Text_ZendanoCallsFro:
 	.string "something really bad...\p"
 	.string "Click.$"
 
+Sootopolis_EventScript_Amneet::
+	lock
+	faceplayer
+	playbgm MUS_FV_PIMP, 0
+	message SummitCity_Text_AmneetSummitCityMerchant
+	waitmessage
+	pokemart SootopolisCity_Pokemart_Amneet
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	fadedefaultbgm
+	release
+	end
+
+	.align 2
+SootopolisCity_Pokemart_Amneet:
+	.2byte ITEM_CHOICE_BAND
+	.2byte ITEM_TERRAIN_EXTENDER
+	.2byte ITEM_LIGHT_CLAY
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_DARK_GEM
+	.2byte ITEM_LUM_BERRY
+	.2byte ITEM_HEART_SCALE
+	.2byte ITEM_NONE
+	release
+	end
 

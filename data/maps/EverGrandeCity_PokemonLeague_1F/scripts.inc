@@ -143,3 +143,28 @@ EverGrandeCity_PokemonLeague_1F_Text_GoForth: @ 82297EF
 	.string "TRAINER! Believe in yourself and your\n"
 	.string "Pokémon, and go forth!$"
 
+
+Evergrande_EventScript_Amneet::
+	lock
+	faceplayer
+	playbgm MUS_FV_PIMP, 0
+	message SummitCity_Text_AmneetSummitCityMerchant
+	waitmessage
+	pokemart SootopolisCity_Pokemart_Amneet
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	fadedefaultbgm
+	release
+	end
+
+	.align 2
+EVergrande_Pokemart_Amneet:
+	.2byte ITEM_CHOICE_SPECS
+	.2byte ITEM_FIGHTING_GEM
+	.2byte ITEM_DAMP_ROCK
+	.2byte ITEM_SAFETY_GOGGLES
+	.2byte ITEM_ROCKY_HELMET
+	.2byte ITEM_PSYCHIC_GEM
+	.2byte ITEM_HEART_SCALE
+	.2byte ITEM_NONE
+	release
+	end

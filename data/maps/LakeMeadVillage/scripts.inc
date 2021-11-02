@@ -220,27 +220,83 @@ setvar VAR_0x8000, MUGSHOT_BOBBY
 callnative DrawMugshot
 msgbox T_LMV_WasulaHelpsFro, 
 callnative ClearMugshot
-multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_STEVEN, TRAINER_BACK_PIC_STEVEN
-setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
-specialvar VAR_RESULT, GetBattleOutcome
-compare VAR_RESULT, B_OUTCOME_LOST
-goto_if_eq Script_LMV_PlayerLoseDoubleBattle
-msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
-applymovement 5, M_LMV_StoneRetreat
-applymovement 6, M_LMV_BudRetreat
-waitmovement 6
-setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
-setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
-setflag FLAG_HIDE_ROUTE_101_ZIGZAGOON
-setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS
-applymovement 4, M_LMV_IsiahToFro
-waitmovement 4
-msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
-setvar VAR_OLDALE_TOWN_STATE, 5
-delay 30
-warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
-releaseall
+switch VAR_STARTER_MON
+case 0, Script_LMV_InitiateBobbyBattleFlobra  //fro grass
+case 1, Script_LMV_InitiateBobbyBattleEmboryps //fro water
+case 2, Script_LMV_InitiateBobbyBattleRascaloot	//fro fire
+release
 end
+
+Script_LMV_InitiateBobbyBattleFlobra:
+	multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_BRENDAN_ROUTE_119_MUDKIP, TRAINER_BACK_PIC_STEVEN
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq Script_LMV_PlayerLoseDoubleBattle
+	msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
+	applymovement 5, M_LMV_StoneRetreat
+	applymovement 6, M_LMV_BudRetreat
+	waitmovement 6
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+	setflag FLAG_HIDE_ROUTE_101_ZIGZAGOON
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS
+	applymovement 4, M_LMV_IsiahToFro
+	waitmovement 4
+	msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
+	setvar VAR_OLDALE_TOWN_STATE, 5
+	delay 30
+	warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
+	releaseall
+	end
+
+Script_LMV_InitiateBobbyBattleEmboryps:
+	multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_BRENDAN_ROUTE_119_TORCHIC, TRAINER_BACK_PIC_STEVEN
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq Script_LMV_PlayerLoseDoubleBattle
+	msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
+	applymovement 5, M_LMV_StoneRetreat
+	applymovement 6, M_LMV_BudRetreat
+	waitmovement 6
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+	setflag FLAG_HIDE_ROUTE_101_ZIGZAGOON
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS
+	applymovement 4, M_LMV_IsiahToFro
+	waitmovement 4
+	msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
+	setvar VAR_OLDALE_TOWN_STATE, 5
+	delay 30
+	warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
+	releaseall
+	end
+
+Script_LMV_InitiateBobbyBattleRascaloot:
+	multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_BRENDAN_ROUTE_119_TREECKO, TRAINER_BACK_PIC_STEVEN
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq Script_LMV_PlayerLoseDoubleBattle
+	msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
+	applymovement 5, M_LMV_StoneRetreat
+	applymovement 6, M_LMV_BudRetreat
+	waitmovement 6
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+	setflag FLAG_HIDE_ROUTE_101_ZIGZAGOON
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS
+	applymovement 4, M_LMV_IsiahToFro
+	waitmovement 4
+	msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
+	setvar VAR_OLDALE_TOWN_STATE, 5
+	delay 30
+	warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
+	releaseall
+	end
+
+
 
 Script_LMV_SaveIsiahGrunt2::
 lockall
@@ -254,25 +310,11 @@ setvar VAR_0x8000, MUGSHOT_BOBBY
 callnative DrawMugshot
 msgbox T_LMV_WasulaHelpsFro, MSGBOX_NPC
 callnative ClearMugshot
-multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_STEVEN, TRAINER_BACK_PIC_STEVEN
-setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
-specialvar VAR_RESULT, GetBattleOutcome
-compare VAR_RESULT, B_OUTCOME_LOST
-goto_if_eq Script_LMV_PlayerLoseDoubleBattle
-msgbox T_LMV_IsiahSaved, MSGBOX_DEFAULT
-applymovement 5, M_LMV_StoneRetreat
-applymovement 6, M_LMV_BudRetreat
-waitmovement 6
-setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
-setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
-setflag FLAG_HIDE_ROUTE_101_ZIGZAGOON
-setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS
-applymovement 4, M_LMV_IsiahToFro
-waitmovement 4
-msgbox T_LMV_IsiahThanksFroAndBob, MSGBOX_DEFAULT
-setvar VAR_OLDALE_TOWN_STATE, 5
-delay 30
-warpsilent MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 255, 6, 6
+switch VAR_STARTER_MON
+case 0, Script_LMV_InitiateBobbyBattleFlobra  //fro grass
+case 1, Script_LMV_InitiateBobbyBattleEmboryps //fro water
+case 2, Script_LMV_InitiateBobbyBattleRascaloot	//fro fire
+release
 end
 
 Script_LMV_IsiahSaved:

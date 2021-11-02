@@ -423,3 +423,29 @@ LavaridgeTown_Text_HerbShopSign: @ 81EB1CB
 	.string "Pokémon Herb Shop\n"
 	.string "“Bitter taste--better cure!”$"
 
+/////////////////FROVERSION///////////////////////
+
+Lavaridge_EventScript_Amneet::
+	lock
+	faceplayer
+	playbgm MUS_FV_PIMP, 0
+	message SummitCity_Text_AmneetSummitCityMerchant
+	waitmessage
+	pokemart LavaridgeCity_Pokemart_Amneet
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	fadedefaultbgm
+	release
+	end
+
+	.align 2
+LavaridgeCity_Pokemart_Amneet:
+	.2byte ITEM_LEFTOVERS
+	.2byte ITEM_ASSAULT_VEST
+	.2byte ITEM_FOCUS_SASH
+	.2byte ITEM_QUICK_CLAW
+	.2byte ITEM_LIFE_ORB
+	.2byte ITEM_CARBOS
+	.2byte ITEM_HEART_SCALE
+	.2byte ITEM_NONE
+	release
+	end

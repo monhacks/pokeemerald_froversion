@@ -463,7 +463,7 @@ MossdeepCity_EventScript_JohnRivalBattle::
 	end
 
 Script_MossdeepCity_WasulaBattleFlobra: //case 0
-	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_MUDKIP, Text_SummitCave_BobbyDefeated
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_TREECKO, Text_SummitCave_BobbyDefeated
 	msgbox MossdeepCity_Text_ExplainDarkGym, MSGBOX_DEFAULT
 	applymovement LOCALID_RIVAL_JOHN, MossdeepCity_Movement_JohnLeaves
 	waitmovement LOCALID_RIVAL_JOHN
@@ -474,7 +474,7 @@ Script_MossdeepCity_WasulaBattleFlobra: //case 0
 	end
 
 Script_MossdeepCity_WasulaBattleEmboryps: // case 1
-	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_TORCHIC, Text_SummitCave_BobbyDefeated
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_MUDKIP, Text_SummitCave_BobbyDefeated
 	msgbox MossdeepCity_Text_ExplainDarkGym, MSGBOX_DEFAULT
 	applymovement LOCALID_RIVAL_JOHN, MossdeepCity_Movement_JohnLeaves
 	waitmovement LOCALID_RIVAL_JOHN
@@ -485,7 +485,7 @@ Script_MossdeepCity_WasulaBattleEmboryps: // case 1
 	end
 
 Script_MossdeepCity_WasulaBattleRascaloot: //case 2
-	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_TREECKO, Text_SummitCave_BobbyDefeated
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_TORCHIC, Text_SummitCave_BobbyDefeated
 	msgbox MossdeepCity_Text_ExplainDarkGym, MSGBOX_DEFAULT
 	applymovement LOCALID_RIVAL_JOHN, MossdeepCity_Movement_JohnLeaves
 	waitmovement LOCALID_RIVAL_JOHN
@@ -547,3 +547,27 @@ MossdeepCity_Text_ExplainDarkGym:
 	.string "Gud luck bud.$"
 
 
+Mossdeep_EventScript_Amneet::
+	lock
+	faceplayer
+	playbgm MUS_FV_PIMP, 0
+	message SummitCity_Text_AmneetSummitCityMerchant
+	waitmessage
+	pokemart MossdeepCity_Pokemart_Amneet
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	fadedefaultbgm
+	release
+	end
+
+	.align 2
+MossdeepCity_Pokemart_Amneet:
+	.2byte ITEM_LEFTOVERS
+	.2byte ITEM_CHOICE_SCARF
+	.2byte ITEM_WIDE_LENS
+	.2byte ITEM_QUICK_CLAW
+	.2byte ITEM_BRIGHT_POWDER
+	.2byte ITEM_CARBOS
+	.2byte ITEM_HEART_SCALE
+	.2byte ITEM_NONE
+	release
+	end

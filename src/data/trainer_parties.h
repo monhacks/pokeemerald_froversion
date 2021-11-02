@@ -6979,19 +6979,9 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanRoute110Mudkip[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute119Mudkip[] = {
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_SLUGMA,
-    },
-    {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_LOMBRE,
-    },
-    {
-    .iv = 150,
-    .lvl = 31,
-    .species = SPECIES_GROVYLE,
+    .iv = 200,
+    .lvl = 8,
+    .species = SPECIES_FLOBRA,
     }
 };
 
@@ -7042,19 +7032,9 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanRoute110Treecko[] = 
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute119Treecko[] = {
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_PELIPPER,
-    },
-    {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_LOMBRE,
-    },
-    {
     .iv = 150,
-    .lvl = 31,
-    .species = SPECIES_COMBUSKEN,
+    .lvl = 8,
+    .species = SPECIES_RASCALOOT,
     }
 };
 
@@ -7105,19 +7085,9 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanRoute110Torchic[] = 
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute119Torchic[] = {
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_LOMBRE,
-    },
-    {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_SLUGMA,
-    },
-    {
     .iv = 150,
-    .lvl = 31,
-    .species = SPECIES_MARSHTOMP,
+    .lvl = 8,
+    .species = SPECIES_EMBORYPS,
     }
 };
 

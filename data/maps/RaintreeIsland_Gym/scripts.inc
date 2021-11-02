@@ -1,6 +1,17 @@
 RaintreeIsland_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, RaintreeIsland_Gym_OnLoad
 	.byte 0
 
+RaintreeIsland_Gym_OnLoad:
+	call_if_set FLAG_BADGE02_GET , RaintreeIsland_Gym_EventScript_RemoveIceBlocks
+	end
+
+RaintreeIsland_Gym_EventScript_RemoveIceBlocks:
+	setmetatile 11, 30, 0x20B, 0
+	setmetatile 12, 30, 0x20C, 0
+	setmetatile 13, 30, 0x20D, 0
+	end
+	
 ///////////////////////////////////////
 ///////////////Scripts/////////////////
 //////////////////////////////////////
