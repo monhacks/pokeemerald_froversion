@@ -404,3 +404,15 @@ OldaleTown_Text_CitySign: @ 81E94DA
 	.string "Six Corners\n"
 	.string "“Where things start off scarce.”$"
 
+
+OldaleTown_EventScript_MagaPreventsLeaving::
+	lockall
+	applymovement 5, Common_Movement_FaceRight
+	applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 5
+	msgbox PetalburgCity_Text_MagaGrunt, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	applymovement 5, Common_Movement_FaceDown
+	waitmovement OBJ_EVENT_ID_PLAYER
+	releaseall
+	end

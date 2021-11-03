@@ -3,6 +3,7 @@
 .set LOCALID_WALLYS_DAD, 5
 .set LOCALID_GYM_BOY, 8
 .set LOCALID_SCOTT, 9
+.set LOCALID_MAGA_GRUNT, 11
 
 PetalburgCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_OnTransition
@@ -804,3 +805,24 @@ PetalburgCity_EventScript_Fisherman::
 
 PetalburgCity_Text_SureDoLoveFishing:
 	.string "I sure do love fishing!$"
+
+PetalburgCity_EventScript_MagaPreventsLeaving::
+	lockall
+	applymovement LOCALID_MAGA_GRUNT, Common_Movement_FaceDown
+	applymovement LOCALID_MAGA_GRUNT, Common_Movement_ExclamationMark
+	waitmovement LOCALID_MAGA_GRUNT
+	msgbox PetalburgCity_Text_MagaGrunt, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	applymovement LOCALID_MAGA_GRUNT, Common_Movement_FaceRight
+	waitmovement OBJ_EVENT_ID_PLAYER
+	releaseall
+	end
+
+PetalburgCity_EventScript_MagaGrunt::
+	msgbox PetalburgCity_Text_MagaGrunt, MSGBOX_NPC
+	end
+
+PetalburgCity_Text_MagaGrunt:
+	.string "We're under strict orders. No one\n"
+	.string "leaves until we finish our work\l"
+	.string "in Lake Mead.$"

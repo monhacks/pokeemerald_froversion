@@ -6470,11 +6470,11 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
         }
 
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-            moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * gTrainerMoneyTable[i].value;
+            moneyReward = 6 * lastMonLevel * gBattleStruct->moneyMultiplier * gTrainerMoneyTable[i].value;
         else if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
-            moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * gTrainerMoneyTable[i].value;
+            moneyReward = 6 * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * gTrainerMoneyTable[i].value;
         else
-            moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * gTrainerMoneyTable[i].value;
+            moneyReward = 6 * lastMonLevel * gBattleStruct->moneyMultiplier * gTrainerMoneyTable[i].value;
     }
 
     return moneyReward;
@@ -10063,7 +10063,7 @@ static void Cmd_weatherdamage(void)
         }
         if (gBattleWeather & WEATHER_HAIL_ANY)
         {
-            if ((ability == ABILITY_ICE_BODY || ability == ABILITY_MEGA_DEWGONG_ABILITY)
+            if ((ability == ABILITY_ICE_BODY)
                 && !(gStatuses3[gBattlerAttacker] & (STATUS3_UNDERGROUND | STATUS3_UNDERWATER))
                 && !BATTLER_MAX_HP(gBattlerAttacker)
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_HEAL_BLOCK))
@@ -10077,7 +10077,7 @@ static void Cmd_weatherdamage(void)
             else if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
                 && ability != ABILITY_SNOW_CLOAK
                 && ability != ABILITY_OVERCOAT
-                && (ability != ABILITY_ICE_BODY || ability != ABILITY_MEGA_DEWGONG_ABILITY)
+                && (ability != ABILITY_ICE_BODY)
                 && !(gStatuses3[gBattlerAttacker] & (STATUS3_UNDERGROUND | STATUS3_UNDERWATER))
                 && GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_SAFETY_GOOGLES)
             {

@@ -4459,9 +4459,26 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 if (WEATHER_HAS_EFFECT
                  && (gBattleWeather & WEATHER_HAIL_ANY)
                  && gBattleMons[battler].status1 & STATUS1_ANY)
-                {
-                    goto ABILITY_HEAL_MON_STATUS;
-                }
+                    {
+                        BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                        gBattleMoveDamage = 10;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        gBattleMoveDamage *= -1;
+                        goto ABILITY_HEAL_MON_STATUS;
+                    }
+                if (WEATHER_HAS_EFFECT
+                 && (gBattleWeather & WEATHER_HAIL_ANY)
+                 && !BATTLER_MAX_HP(battler)
+                 && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK))
+                    {
+                        BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                        gBattleMoveDamage = 15;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        gBattleMoveDamage *= -1;
+                        effect++;
+                    }  
                 break;
             case ABILITY_SHED_SKIN:
                 if ((gBattleMons[battler].status1 & STATUS1_ANY) && (Random() % 3) == 0)

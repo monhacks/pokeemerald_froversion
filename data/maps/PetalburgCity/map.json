@@ -154,6 +154,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PetalburgCity_EventScript_Fisherman",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAGA_GRUNT_2",
+      "x": 6,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PetalburgCity_EventScript_MagaGrunt",
+      "flag": "FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA"
     }
   ],
   "warp_events": [
@@ -272,6 +285,24 @@
       "var": "VAR_SCOTT_PETALBURG_ENCOUNTER",
       "var_value": "0",
       "script": "PetalburgCity_EventScript_Scott3"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_CITY_STATE",
+      "var_value": "7",
+      "script": "PetalburgCity_EventScript_MagaPreventsLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_PETALBURG_CITY_STATE",
+      "var_value": "7",
+      "script": "PetalburgCity_EventScript_MagaPreventsLeaving"
     }
   ],
   "bg_events": [

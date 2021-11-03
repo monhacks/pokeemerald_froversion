@@ -30,6 +30,7 @@ Script_TransitionMap_MagaCaveCutscene:
 	applymovement 4, M_Grunt2EnterCave
 	waitmovement 4
 	removeobject 4
+	clearflag FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA
 	setvar VAR_PETALBURG_CITY_STATE, 7
 	warpsilent MAP_PETALBURG_CITY, 255, 10, 6
 	end
