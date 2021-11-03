@@ -4660,7 +4660,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     effect = 2, statId = STAT_ATK;
                 break;
             case ABILITY_MEGA_HOUNDOOM_ABILITY:
-                if (moveType == TYPE_WATER)
+                if (moveType == TYPE_WATER && (gBattleMons[battler].hp < 115))
                     effect = 2, statId = STAT_DEF;
                 if (moveType == TYPE_FIRE)
                     effect = 1;
@@ -5111,6 +5111,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 BattleScriptPushCursor();
                 gBattlescriptCurrInstr = BattleScript_AbilityStatusEffect;
                 gHitMarker |= HITMARKER_IGNORE_SAFEGUARD;
+                effect++;
+            }
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && TARGET_TURN_DAMAGED
+             && IsBattlerAlive(battler)
+            // Had more than half of hp before, now has less
+             && gBattleStruct->hpBefore[battler] > 115
+             && gBattleMons[battler].hp < 115
+             && (gMultiHitCounter == 0 || gMultiHitCounter == 1)
+             && !((GetBattlerAbility(gBattlerAttacker) == ABILITY_SHEER_FORCE || GetBattlerAbility(gBattlerAttacker) == ABILITY_INVERTEBRAKE_HIDDEN_ABILITY) && gBattleMoves[gCurrentMove].flags & FLAG_SHEER_FORCE_BOOST))
+            {
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_TorridActivates;
                 effect++;
             }
             break;

@@ -722,6 +722,7 @@ static const u8 sText_MagicMirrorBounced[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_CU
 static const u8 sText_Negate[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nsuppresses items and abilities!");
 static const u8 sText_Buff1WasRevived[] = _("{B_BUFF1} was revived!");
 static const u8 sText_PkmnCutsSpaAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncuts {B_DEF_NAME_WITH_PREFIX}'s Sp. Atk!");
+static const u8 sText_TorridActivatesWaterPrevention[] =_("{B_ATK_NAME_WITH_PREFIX} coated itself in Magma\n Armor. Water is now useless!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1307,6 +1308,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNCUTSSPAATTACKWITH - 12] = sText_PkmnCutsSpaAttackWith,
     [STRINGID_RAINHEALRESTOREDHPALITTLE2 - 12] = sText_RainHealRestoredHPALittle2,
     [STRINGID_RESETSVERTEBRAKESSTATLEVELS - 12] = sText_ResetsVertebrakesStatLevels,
+    [STRINGID_TORRIDACTIVATESWATERPREVENTION - 12] = sText_TorridActivatesWaterPrevention,
 };
 
 const u16 gTerrainStringIds[] =

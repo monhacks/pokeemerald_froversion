@@ -907,3 +907,33 @@ ImTheMoveTutor:
 	.string "of yours if you'd like.\p"
 	.string "I'll do it for a Heart Scale.\n"
 	.string "I'm collecting those now.$"
+
+///////////FROVERSION//////////////
+
+MyChimney_EventScript_Amneet::
+	lock
+	faceplayer
+	playbgm MUS_FV_PIMP, 0
+	message SummitCity_Text_AmneetSummitCityMerchant
+	waitmessage
+	pokemart MyChimney_Pokemart_Amneet
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	fadedefaultbgm
+	release
+	end
+
+	.align 2
+MyChimney_Pokemart_Amneet:
+	.2byte ITEM_X_ATTACK
+	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_X_SPEED
+	.2byte ITEM_X_ACCURACY
+	.2byte ITEM_X_SP_ATK
+	.2byte ITEM_X_SP_DEF
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_REVIVE
+	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_DIRE_HIT
+	.2byte ITEM_NONE
+	release
+	end

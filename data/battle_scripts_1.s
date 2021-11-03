@@ -7499,6 +7499,13 @@ BattleScript_FlashFireBoost::
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 
+BattleScript_TorridActivates::
+	pause 0x20
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_TORRIDACTIVATESWATERPREVENTION
+	waitmessage 0x40
+	return
+
 BattleScript_AbilityPreventsPhasingOut::
 	pause 0x20
 	call BattleScript_AbilityPopUp
