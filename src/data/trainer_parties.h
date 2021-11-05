@@ -1902,7 +1902,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Luis[] = {
     {
     .iv = 0,
     .lvl = 35,
-    .species = SPECIES_CORPHISH,
+    .species = SPECIES_CORSOLA,
     }
 };
 
@@ -7120,17 +7120,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Treecko[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Mudkip[] = {
     {
     .iv = 50,
-    .lvl = 46,
+    .lvl = 43,
     .species = SPECIES_OCTIRE,
     },
     {
     .iv = 50,
-    .lvl = 46,
+    .lvl = 43,
     .species = SPECIES_FLAAFFY,
     },
     {
     .iv = 100,
-    .lvl = 50,
+    .lvl = 45,
     .species = SPECIES_RUTHLASH,
     }
     
@@ -7165,17 +7165,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Mudkip[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Treecko[] = {
     {
     .iv = 50,
-    .lvl = 19,
+    .lvl = 43,
     .species = SPECIES_OCTIRE,
     },
     {
     .iv = 50,
-    .lvl = 19,
+    .lvl = 43,
     .species = SPECIES_JUMPLUFF,
     },
     {
     .iv = 100,
-    .lvl = 21,
+    .lvl = 45,
     .species = SPECIES_RIPTORYPS,
     }
 };
@@ -9219,7 +9219,7 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanLilycoveMudkip[] = {
     {
     .abilityNum = 2,
     .iv = 255,
-    .lvl = 47,
+    .lvl = 44,
     .species = SPECIES_SABLEYE,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_RECOVER, MOVE_FOUL_PLAY, MOVE_WILL_O_WISP, MOVE_TAUNT},
@@ -9228,7 +9228,7 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanLilycoveMudkip[] = {
     {
     .abilityNum = 3,
     .iv = 255,
-    .lvl = 50,
+    .lvl = 45,
     .species = SPECIES_MECHOBRA,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_SPIKES, MOVE_SURF, MOVE_LANDMINE, MOVE_AQUA_RING},
@@ -9237,7 +9237,7 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanLilycoveMudkip[] = {
     {
     .abilityNum = 0,
     .iv = 255,
-    .lvl = 50,
+    .lvl = 45,
     .species = SPECIES_CHANSEY,
     .heldItem = ITEM_EVIOLITE,
     .moves = {MOVE_SEISMIC_TOSS, MOVE_SOFT_BOILED, MOVE_THUNDER_WAVE, MOVE_FLAMETHROWER},
@@ -9246,7 +9246,7 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanLilycoveMudkip[] = {
     {
     .abilityNum = 2,
     .iv = 255,
-    .lvl = 49,
+    .lvl = 44,
     .species = SPECIES_BARBELLION,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_SKULL_BASH, MOVE_SHADOW_CLAW, MOVE_IRON_HEAD, MOVE_SWORDS_DANCE},
@@ -9258,7 +9258,7 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanLilycoveTreecko[] = 
     {
     .abilityNum = 2,
     .iv = 250,
-    .lvl = 47,
+    .lvl = 44,
     .species = SPECIES_SABLEYE,
     .heldItem = ITEM_ORAN_BERRY,
     .evs = {126, 0, 126, 0, 0, 4},
@@ -9267,7 +9267,7 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanLilycoveTreecko[] = 
     {
     .abilityNum = 3,
     .iv = 250,
-    .lvl = 50,
+    .lvl = 45,
     .species = SPECIES_RUTHLASH,
     .heldItem = ITEM_ORAN_BERRY,
     .evs = {126, 0, 126, 0, 0, 4},
@@ -9275,7 +9275,7 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanLilycoveTreecko[] = 
     },
     {
     .iv = 250,
-    .lvl = 47,
+    .lvl = 45,
     .species = SPECIES_BARBELLION,
     .heldItem = ITEM_FLAME_ORB,
     .moves = {MOVE_SKULL_BASH, MOVE_SHADOW_CLAW, MOVE_IRON_HEAD, MOVE_SWORDS_DANCE},
@@ -9284,7 +9284,7 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanLilycoveTreecko[] = 
     {
     .abilityNum = 0,
     .iv = 255,
-    .lvl = 50,
+    .lvl = 44,
     .species = SPECIES_CHANSEY,
     .heldItem = ITEM_EVIOLITE,
     .moves = {MOVE_SEISMIC_TOSS, MOVE_SOFT_BOILED, MOVE_THUNDER_WAVE, MOVE_ICE_BEAM},
@@ -9296,16 +9296,16 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanLilycoveTorchic[] = 
     {
     .abilityNum = 2,
     .iv = 250,
-    .lvl = 47,
+    .lvl = 44,
     .species = SPECIES_SABLEYE,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_RECOVER, MOVE_FOUL_PLAY, MOVE_WILL_O_WISP, MOVE_TAUNT},
     .evs = {126, 0, 126, 0, 0, 4},
     },
     {
-    .abilityNum = 0,
+    .abilityNum = 3,
     .iv = 250,
-    .lvl = 50,
+    .lvl = 45,
     .species = SPECIES_RIPTORYPS,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_BODY_SLAM, MOVE_DRAGON_DANCE, MOVE_FLARE_BLITZ, MOVE_CRUNCH},
@@ -9314,7 +9314,7 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanLilycoveTorchic[] = 
     {
     .abilityNum = 1,
     .iv = 250,
-    .lvl = 47,
+    .lvl = 45,
     .species = SPECIES_BARBELLION,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_SKULL_BASH, MOVE_SHADOW_CLAW, MOVE_IRON_HEAD, MOVE_SWORDS_DANCE},
@@ -9323,7 +9323,7 @@ static const struct TrainerMonItemCustomMoves sParty_BrendanLilycoveTorchic[] = 
     {
     .abilityNum = 0,
     .iv = 255,
-    .lvl = 50,
+    .lvl = 44,
     .species = SPECIES_CHANSEY,
     .heldItem = ITEM_EVIOLITE,
     .moves = {MOVE_SEISMIC_TOSS, MOVE_SOFT_BOILED, MOVE_THUNDER_WAVE, MOVE_ICE_BEAM},

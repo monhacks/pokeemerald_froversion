@@ -93,7 +93,7 @@
       "flag": "FLAG_HIDE_SOOTOPOLIS_CITY_MAN_1"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_STEVEN",
+      "graphics_id": "OBJ_EVENT_GFX_WASULA",
       "x": 20,
       "y": 36,
       "elevation": 3,
@@ -210,7 +210,7 @@
       "flag": "FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAXIE",
+      "graphics_id": "OBJ_EVENT_GFX_ZENDANO",
       "x": 29,
       "y": 33,
       "elevation": 3,
@@ -223,7 +223,7 @@
       "flag": "FLAG_HIDE_SOOTOPOLIS_CITY_MAXIE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+      "graphics_id": "OBJ_EVENT_GFX_SHAWN_HASELEY",
       "x": 31,
       "y": 33,
       "elevation": 3,

@@ -424,10 +424,10 @@ LilycoveCity_EventScript_DontKnowAboutBerryBlender:: @ 81E3058
 	return
 
 LilycoveCity_Text_MayShoppingLetsBattle: @ 81E3061
-	.string "John: Oh, hey?\n"
+	.string "Bobby: Oh, hey?\n"
 	.string "{PLAYER}{KUN}, are you shopping, too?\p"
-	.string "I bought a whole bunch of Dolls and\n"
-	.string "Posters.\p"
+	.string "I bought a whole bunch of Protein and\n"
+	.string "Carbs.\p"
 	.string "Of course, I've also caught a lot of\n"
 	.string "Pokémon, and I'm raising them\l"
 	.string "properly, too.\p"
@@ -437,17 +437,17 @@ LilycoveCity_Text_MayShoppingLetsBattle: @ 81E3061
 	.string "me your Pokémon, {PLAYER}{KUN}.$"
 
 LilycoveCity_Text_MayNotRaisingPokemon: @ 81E318D
-	.string "John: Oh, why? {PLAYER}{KUN}, haven't you\n"
+	.string "Bobby: Oh, why? {PLAYER}{KUN}, haven't you\n"
 	.string "been raising your Pokémon?\p"
 	.string "That's not a very good showing as a\n"
 	.string "Trainer…$"
 
 LilycoveCity_Text_MayBattleMe: @ 81E31F5
-	.string "John: Come on, battle with me, so I can\n"
+	.string "Bobby: Come on, battle with me, so I can\n"
 	.string "check out your Pokémon!$"
 
 LilycoveCity_Text_MayWontBeBeaten: @ 81E3234
-	.string "John: The Pokémon I raised won't be\n"
+	.string "Bobby: The Pokémon I raised won't be\n"
 	.string "beaten by your Pokémon, {PLAYER}{KUN}!$"
 
 LilycoveCity_Text_MayDefeat: @ 81E3275
@@ -458,7 +458,7 @@ LilycoveCity_Text_MayDefeat: @ 81E3275
 	.string "strong, {PLAYER}{KUN}, didn't it?$"
 
 LilycoveCity_Text_MayGoingBackToLittleroot: @ 81E32FB
-	.string "John: I'm thinking of going back to\n"
+	.string "Bobby: I'm thinking of going back to\n"
 	.string "Walmore soon.\p"
 	.string "I've caught a decent group of Pokémon,\n"
 	.string "and my Pokédex is coming along, so\l"
@@ -468,20 +468,24 @@ LilycoveCity_Text_MayYouGoingToCollectBadges: @ 81E3398
 	.string "{PLAYER}{KUN}, what are you going to do?\p"
 	.string "Collect all the Gym Badges and take\n"
 	.string "the Pokémon League challenge?\p"
-	.string "Well, while you're collecting Badges,\n"
-	.string "{PLAYER}{KUN}, I'm going to work on my\l"
+	.string "Well, even though you won, I still\n"
+	.string "have more than you. You'll have to\l"
+	.string "catch up, Slowpoke.\p"
+	.string "Also, I'm going to till up my\n"
 	.string "Pokédex. I'll complete it before you!\p"
 	.string "See you!$"
 
 LilycoveCity_Text_MayYouGoingToPokemonLeague: @ 81E346D
 	.string "{PLAYER}{KUN}, what are you going to do?\p"
-	.string "Are you taking the Pokémon League\n"
-	.string "challenge?\p"
-	.string "Or, are you going to complete your\n"
-	.string "Pokédex?\p"
-	.string "I might've lost to you in battling,\n"
-	.string "but I'll finish my Pokédex before you!\p"
+	.string "Collect all the Gym Badges and take\n"
+	.string "the Pokémon League challenge?\p"
+	.string "Well, even though you won, I still\n"
+	.string "have more than you. You'll have to\l"
+	.string "catch up, Slowpoke.\p"
+	.string "Also, I'm going to till up my\n"
+	.string "Pokédex. I'll complete it before you!\p"
 	.string "See you!$"
+
 
 LilycoveCity_Text_MayYouGoingToBattleFrontier: @ 81E353A
 	.string "{PLAYER}{KUN}, what are you going to do?\p"
@@ -583,7 +587,7 @@ LilycoveCity_Text_IfWorldBecomesOurs: @ 81E3CBE
 	.string "place for Pokémon, too.$"
 
 LilycoveCity_Text_WailmerLeapOutOfWater: @ 81E3D1F
-	.string "There! Staryu!\n"
+	.string "There! Otdorble!\n"
 	.string "Leap out of the water now!$"
 
 LilycoveCity_Text_GetLostMessingUpTraining: @ 81E3D4A
@@ -648,10 +652,19 @@ LilycoveCity_Text_ImArtDealer: @ 81E417B
 	.string "magnificent works on exhibit…$"
 
 LilycoveCity_Text_SeaRemainsForeverYoung: @ 81E420B
-	.string "Even as we grow old and wrinkled,\n"
-	.string "the sea remains forever young with\l"
-	.string "the vivid brilliance of life…\p"
-	.string "Fwohoho fwohohohoho…$"
+	.string "Gym Leader Nike has set up a very\n"
+	.string "unique battlefield.\p"
+	.string "It is almost impossible to land\n"
+	.string "a hit unless your Pokémon know\l"
+	.string "any Moves or abilities that make\l"
+	.string "the battlefield brighter...\p"
+	.string "Why can't I remember what those Moves\n"
+	.string "and Abilities are?\p"
+	.string "Maybe they will come to me in a Flash.\p"
+	.string "Or perhaps a Sunny Day will help\n"
+	.string "Illuminate them in my memory.\p"
+	.string "Oh well! Sorry I couldn't be more\n"
+	.string "help!$"
 
 LilycoveCity_Text_SixtyYearsAgoHusbandProposed: @ 81E4283
 	.string "It was sixty years ago that my husband\n"

@@ -86,7 +86,7 @@ LilycoveCity_CoveLilyMotel_1F_Text_GuestsDoubledByMascot: @ 8218264
 LilycoveCity_CoveLilyMotel_1F_Text_NoGuestsWithTeamAqua: @ 821831E
 	.string "Oh, sorry, sorry!\n"
 	.string "I was too involved in watching TV!\p"
-	.string "Since that TEAM AQUA came to town,\n"
+	.string "Since that Antifa came to town,\n"
 	.string "the tourists have been staying away.$"
 
 LilycoveCity_CoveLilyMotel_1F_Text_CantSeeTheTV: @ 821839B
@@ -105,11 +105,11 @@ LilycoveCity_CoveLilyMotel_1F_Text_HeardAquaHideoutBusted: @ 8218470
 	.string "Oh, sorry, sorry!\n"
 	.string "I was too involved in watching TV!\p"
 	.string "I heard that someone busted\n"
-	.string "the TEAM AQUA HIDEOUT.\p"
+	.string "the Antifa Hideout.\p"
 	.string "Thanks to that, we just booked\n"
 	.string "a reservation from a big group.\p"
 	.string "It was a company called… Uh…\n"
-	.string "GAME something…$"
+	.string "Game something…$"
 
 LilycoveCity_CoveLilyMotel_1F_Text_HouseSittingMonCaughtBurglar: @ 8218544
 	.string "Amazing! A house-sitting Pokémon\n"
@@ -124,7 +124,7 @@ LilycoveCity_CoveLilyMotel_1F_Text_BetterGetWorkingOnGuestsDinner: @ 82185F4
 	.string "I was too involved in watching TV.\p"
 	.string "Oh, yes. A big group of guests arrived\n"
 	.string "a little while ago.\p"
-	.string "They booked in as GAME FREAK,\n"
+	.string "They booked in as Game Freak,\n"
 	.string "so I guess they must make games.\p"
 	.string "Uh-oh, I'd better get working on\n"
 	.string "their dinner!$"

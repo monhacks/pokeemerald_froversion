@@ -1596,8 +1596,8 @@ u32 GetTotalAccuracy(u32 battlerAtk, u32 battlerDef, u32 move)
     else if (atkHoldEffect == HOLD_EFFECT_ZOOM_LENS && GetBattlerTurnOrderNum(battlerAtk) > GetBattlerTurnOrderNum(battlerDef));
         calc = (calc * (100 + atkParam)) / 100;
 
-    if (gBattleWeather & WEATHER_DARKNESS_ANY && !IS_BATTLER_OF_TYPE(battlerAtk, TYPE_DARK))
-        calc = (calc * 25) / 100;
+    if (gBattleWeather & WEATHER_DARKNESS_ANY && !IS_BATTLER_OF_TYPE(battlerAtk, TYPE_DARK) && gBattleMons[battlerAtk].ability != ABILITY_ILLUMINATE)
+        calc = (calc * 35) / 100;
 
     return calc;
 }

@@ -270,7 +270,7 @@ LilycoveCity_LilycoveMuseum_2F_Text_PaintingsAttractedMoreGuests: @ 8219DE6
 	.string "Each one of them flawless!\n"
 	.string "None better than another!\p"
 	.string "These paintings have attracted\n"
-	.string "more guests to our ART MUSEUM.\p"
+	.string "more guests to our Art Museum.\p"
 	.string "Sincerely, I thank you, {PLAYER}.\n"
 	.string "This is my dream come true!$"
 
@@ -327,5 +327,5 @@ LilycoveCity_LilycoveMuseum_2F_Text_ThesePaintingsOfYourPokemon: @ 821A1A8
 	.string "Wow, is that right?\n"
 	.string "These paintings are of your Pokémon.\p"
 	.string "Isn't that just the ultimate joy for\n"
-	.string "a TRAINER?$"
+	.string "a Trainer?$"
 

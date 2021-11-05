@@ -62,7 +62,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_STEVEN",
+      "graphics_id": "OBJ_EVENT_GFX_WASULA",
       "x": 40,
       "y": 22,
       "elevation": 3,
@@ -75,7 +75,7 @@
       "flag": "FLAG_HIDE_ROUTE_128_STEVEN"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+      "graphics_id": "OBJ_EVENT_GFX_SHAWN_HASELEY",
       "x": 37,
       "y": 22,
       "elevation": 3,
@@ -88,7 +88,7 @@
       "flag": "FLAG_HIDE_ROUTE_128_ARCHIE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAXIE",
+      "graphics_id": "OBJ_EVENT_GFX_ZENDANO",
       "x": 38,
       "y": 21,
       "elevation": 3,
