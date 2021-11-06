@@ -178,6 +178,7 @@ const u32 gObjectEventPic_TuberMSwimming[] = INCBIN_U32("graphics/object_events/
 const u32 gObjectEventPic_Azurill[] = INCBIN_U32("graphics/object_events/pics/pokemon/azurill.4bpp");
 const u32 gObjectEventPic_Mom[] = INCBIN_U32("graphics/object_events/pics/people/mom.4bpp");
 const u16 gObjectEventPal_Kyogre[] = INCBIN_U16("graphics/object_events/palettes/kyogre.gbapal");
+const u16 gObjectEventPal_Dracaster[] = INCBIN_U16("graphics/object_events/palettes/dracaster.gbapal");
 const u16 gObjectEventPal_KyogreReflection[] = INCBIN_U16("graphics/object_events/palettes/kyogre_reflection.gbapal");
 const u16 gObjectEventPal_Groudon[] = INCBIN_U16("graphics/object_events/palettes/groudon.gbapal");
 const u16 gObjectEventPal_GroudonReflection[] = INCBIN_U16("graphics/object_events/palettes/groudon_reflection.gbapal");
