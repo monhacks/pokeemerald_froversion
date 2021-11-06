@@ -235,7 +235,7 @@ SeafloorCavern_Room9_Text_ArchieSoItWasYou: @ 823507C
 SeafloorCavern_Room9_Text_ArchieBeholdKyogre: @ 82350A6
 	.string "Shawn: Behold!\p"
 	.string "See how beautiful it is, the sleeping\n"
-	.string "form of the ancient Pokémon BLUE EYES!\p"
+	.string "form of the ancient Pokémon Wheyevrn!\p"
 	.string "I have waited so long for this day to\n"
 	.string "come…$"
 
@@ -256,7 +256,7 @@ SeafloorCavern_Room9_Text_ArchieWithThisRedOrb: @ 82351E5
 	.string "you are truly gifted.\p"
 	.string "But!\n"
 	.string "I have this in my possession!\p"
-	.string "With this Red Orb, I can make BLUE EYES…$"
+	.string "With this Red Orb, I can make Wheyevrn…$"
 
 SeafloorCavern_Room9_Text_RedOrbShinesByItself: @ 8235279
 	.string "The Red Orb suddenly began shining\n"
@@ -266,7 +266,7 @@ SeafloorCavern_Room9_Text_ArchieWhereDidKyogreGo: @ 82352A7
 	.string "Shawn: What?!\p"
 	.string "I didn't do anything.\n"
 	.string "Why did the Red Orb…\p"
-	.string "Where did BLUE EYES go?$"
+	.string "Where did Wheyevrn go?$"
 
 SeafloorCavern_Room9_Text_ArchieAMessageFromOutside: @ 82352F6
 	.string "Shawn: Hm? It's a message from our\n"
@@ -277,7 +277,7 @@ SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard: @ 823532B
 	.string "Hm…\n"
 	.string "It's raining heavily?\p"
 	.string "Good… That should have happened.\n"
-	.string "That is why we awakened BLUE EYES,\l"
+	.string "That is why we awakened Wheyevrn,\l"
 	.string "to realize Antifa's vision of\l"
 	.string "giving Pokémon equal rights.\p"
 	.string "What?!\p"
@@ -291,14 +291,14 @@ SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard: @ 823532B
 SeafloorCavern_Room9_Text_ArchieWhyDidKyogreDisappear: @ 823546F
 	.string "Shawn: There's something wrong…\p"
 	.string "The Red Orb is supposed to awaken\n"
-	.string "and control BLUE EYES…\p"
+	.string "and control Wheyevrn…\p"
 	.string "But… Why?\n"
-	.string "Why did BLUE EYES disappear?\p"
+	.string "Why did Wheyevrn disappear?\p"
 	.string "Why?!$"
 
 SeafloorCavern_Room9_Text_MaxieWhatHaveYouWrought: @ 82354F0
 	.string "Zendano: What have you wrought?\p"
-	.string "Shawn… You've finally awoken BLUE EYES,\n"
+	.string "Shawn… You've finally awoken Wheyevrn,\n"
 	.string "haven't you?\p"
 	.string "What will happen to the world if this\n"
 	.string "downpour continues for all eternity?\p"
@@ -309,9 +309,9 @@ SeafloorCavern_Room9_Text_ArchieDontGetAllHighAndMighty: @ 82355C2
 	.string "Shawn: W-what?!\n"
 	.string "Don't get all high and mighty with me!\p"
 	.string "Wasn't it you, Team MAGA, that\n"
-	.string "infuriated RED EYES?\p"
+	.string "infuriated Voeyedra?\p"
 	.string "So long as I have this Red Orb,\n"
-	.string "I should be able to control BLUE EYES…\p"
+	.string "I should be able to control Wheyevrn…\p"
 	.string "I should be able to control it…$"
 
 SeafloorCavern_Room9_Text_MaxieWeDontHaveTimeToArgue: @ 8235692

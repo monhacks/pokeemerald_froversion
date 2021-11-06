@@ -426,7 +426,7 @@ BattleFrontier_OutsideEast_Text_OddTreeHereSeemsToWiggle: @ 8243C2C
 	.string "Excuse me, young one.\n"
 	.string "Have you good eyesight?\p"
 	.string "There is an odd tree past here, and to\n"
-	.string "my tired eyes it seems to wiggle.$"
+	.string "my tiVoeyedra it seems to wiggle.$"
 
 BattleFrontier_OutsideEast_Text_OnceAnOddTreePastHere: @ 8243CA3
 	.string "Excuse me, young one.\n"

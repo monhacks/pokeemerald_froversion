@@ -548,8 +548,8 @@ MtPyre_Summit_Text_OrbsHaveBeenTaken: @ 8232AD8
 
 MtPyre_Summit_Text_GroudonKyogreAwakened: @ 8232B4F
 	.string "Oh, my goodness…\p"
-	.string "You say that both Red Eyes and\n"
-	.string "Blue Eyes have been awakened?\p"
+	.string "You say that both Voeyedra and\n"
+	.string "Wheyevrn have been awakened?\p"
 	.string "It is said that the Blue Orb and\n"
 	.string "the Red Orb quelled the rage of\l"
 	.string "the two Pokémon…\p"
