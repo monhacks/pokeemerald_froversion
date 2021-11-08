@@ -5,6 +5,7 @@
 #include "battle_message.h"
 #include "battle_anim.h"
 #include "battle_ai_script_commands.h"
+#include "battle_ai_switch_items.h"
 #include "battle_scripts.h"
 #include "constants/moves.h"
 #include "constants/abilities.h"
@@ -55,6 +56,7 @@
 #include "constants/rgb.h"
 #include "data.h"
 #include "constants/party_menu.h"
+#include "mgba_printf.h"
 
 extern struct MusicPlayerInfo gMPlayInfo_BGM;
 
@@ -3298,7 +3300,8 @@ static void Cmd_seteffectwithchance(void)
 {
     u32 percentChance;
 
-    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SERENE_GRACE)
+    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SERENE_GRACE
+        || IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gRiptorypsLine))
         percentChance = gBattleMoves[gCurrentMove].secondaryEffectChance * 2;
     else
         percentChance = gBattleMoves[gCurrentMove].secondaryEffectChance;
@@ -9601,6 +9604,7 @@ static void Cmd_confuseifrepeatingattackends(void)
 
 static void Cmd_setmultihitcounter(void)
 {
+    u32 sRuthlashMultiHitCounter = (Random() % 3) + 3;
     if (gBattlescriptCurrInstr[1])
     {
         gMultiHitCounter = gBattlescriptCurrInstr[1];
@@ -9610,6 +9614,11 @@ static void Cmd_setmultihitcounter(void)
         if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SKILL_LINK)
         {
             gMultiHitCounter = 5;
+        }
+        else if(IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gRuthlashLine))
+        {
+            Printf ("sRuthLashMultiHitCounter = %d", sRuthlashMultiHitCounter);
+            gMultiHitCounter = sRuthlashMultiHitCounter;
         }
         else if (B_MULTI_HIT_CHANCE >= GEN_5)
         {

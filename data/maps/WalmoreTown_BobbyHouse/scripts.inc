@@ -6,7 +6,7 @@ WalmoreTown_BobbyHouse_EventScript_BobbysMom::
 	//goto_if_set FLAG_RECIEVED_GRILLED_CHEESE
 	//WalmoreTown_BobbyHouse_EventScript_BobbysMomAlreadyGaveGrilledCheese
 	msgbox WalmoreTown_BobbyHouse_Text_BobbysMom, MSGBOX_NPC
-	//giveitem ITEM_GRILLED_CHEESE
+	giveitem ITEM_GRILLED_CHEESE
 	msgbox WalmoreTown_BobbyHouse_Text_BobbysMomGivesGrilledCheese
 	release
 	end

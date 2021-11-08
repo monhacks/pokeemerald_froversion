@@ -23,5 +23,10 @@ void RecordAbilityBattle(u8 battlerId, u16 abilityId);
 void ClearBattlerAbilityHistory(u8 battlerId);
 void RecordItemEffectBattle(u8 battlerId, u8 itemEffect);
 void ClearBattlerItemEffectHistory(u8 battlerId);
+bool32 IsSpeciesOneOf(u16 specie, const u16 *species);
+extern const u16 gRuthlashLine[];
+extern const u16 gMechobraLine[];
+extern const u16 gRiptorypsLine[];
+extern const u16 gLevitateMons[];
 
 #endif // GUARD_BATTLE_AI_SCRIPT_COMMANDS_H

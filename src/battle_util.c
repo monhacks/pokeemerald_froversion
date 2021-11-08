@@ -2384,9 +2384,7 @@ u8 DoBattlerEndTurnEffects(void)
              && !(gStatuses3[gActiveBattler] & STATUS3_HEAL_BLOCK)
              && gBattleMons[gActiveBattler].hp != 0)
             {
-                if (gBattleMons[gActiveBattler].species == SPECIES_MECHOBRA
-                 || gBattleMons[gActiveBattler].species == SPECIES_MORPHLO
-                 || gBattleMons[gActiveBattler].species == SPECIES_FLOBRA)
+                if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMechobraLine))
                 {
                     gBattleMoveDamage = GetDrainedBigRootHp(gActiveBattler, gBattleMons[gActiveBattler].maxHP / 8);
                     BattleScriptExecute(BattleScript_AquaRingHeal);
@@ -6908,6 +6906,8 @@ bool32 IsMoveMakingContact(u16 move, u8 battlerAtk)
 
 bool32 IsBattlerGrounded(u8 battlerId)
 {
+    Printf ("BattlerId = %d", gBattleMons[battlerId].species);
+    Printf ("SpeciesCheckIsBattlerGrounder = %d", IsSpeciesOneOf(battlerId, gLevitateMons));
     if (GetBattlerHoldEffect(battlerId, TRUE) == HOLD_EFFECT_IRON_BALL)
         return TRUE;
     else if (gFieldStatuses & STATUS_FIELD_GRAVITY)
@@ -6924,6 +6924,8 @@ bool32 IsBattlerGrounded(u8 battlerId)
     else if (GetBattlerHoldEffect(battlerId, TRUE) == HOLD_EFFECT_AIR_BALLOON)
         return FALSE;
     else if (GetBattlerAbility(battlerId) == ABILITY_LEVITATE)
+        return FALSE;
+    else if (IsSpeciesOneOf(gBattleMons[battlerId].species, gLevitateMons))
         return FALSE;
     else if (GetBattlerAbility(battlerId) == ABILITY_MEGA_GENGAR_ABILITY)
         return FALSE;
@@ -8216,10 +8218,13 @@ static u16 CalcTypeEffectivenessMultiplierInternal(u16 move, u8 moveType, u8 bat
 
     if (moveType == TYPE_GROUND && !IsBattlerGrounded(battlerDef))
     {
+        Printf ("SpeciesCheckCalcTypeEffectiveness = %d", IsSpeciesOneOf(gBattleMons[battlerDef].species, gLevitateMons));
         modifier = UQ_4_12(0.0);
         if ((recordAbilities && GetBattlerAbility(battlerDef) == ABILITY_LEVITATE)
-        || (recordAbilities && GetBattlerAbility(battlerDef) == ABILITY_MEGA_GENGAR_ABILITY))
+        || (recordAbilities && GetBattlerAbility(battlerDef) == ABILITY_MEGA_GENGAR_ABILITY)
+        || IsSpeciesOneOf(gBattleMons[battlerDef].species, gLevitateMons))
         {
+            Printf ("SpeciesCheck = %d", IsSpeciesOneOf(gBattleMons[battlerDef].species, gLevitateMons));
             gLastUsedAbility = ABILITY_LEVITATE;
             gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
             gLastLandedMoves[battlerDef] = 0;
@@ -8263,9 +8268,11 @@ u16 CalcPartyMonTypeEffectivenessMultiplier(u16 move, u16 speciesDef, u16 abilit
 {
     u16 modifier = UQ_4_12(1.0);
     u8 moveType = gBattleMoves[move].type;
+    Printf ("SpeciesCheckCalcPartyMonTypeEffectivenessMultiplier = %d", IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gLevitateMons));
 
     if (move != MOVE_STRUGGLE && moveType != TYPE_MYSTERY)
     {
+        Printf ("IsSpeciesOneOf = %d", IsSpeciesOneOf(speciesDef, gLevitateMons));
         MulByTypeEffectiveness(&modifier, move, moveType, 0, gBaseStats[speciesDef].type1, 0, FALSE);
         if (gBaseStats[speciesDef].type2 != gBaseStats[speciesDef].type1)
             MulByTypeEffectiveness(&modifier, move, moveType, 0, gBaseStats[speciesDef].type2, 0, FALSE);
@@ -8273,6 +8280,8 @@ u16 CalcPartyMonTypeEffectivenessMultiplier(u16 move, u16 speciesDef, u16 abilit
         if (moveType == TYPE_GROUND && abilityDef == ABILITY_LEVITATE && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
             modifier = UQ_4_12(0.0);
         if (moveType == TYPE_GROUND && abilityDef == ABILITY_MEGA_GENGAR_ABILITY && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
+            modifier = UQ_4_12(0.0);
+        if (moveType == TYPE_GROUND && (IsSpeciesOneOf(speciesDef, gLevitateMons)) && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
             modifier = UQ_4_12(0.0);
         if (abilityDef == ABILITY_WONDER_GUARD && modifier <= UQ_4_12(1.0) && gBattleMoves[move].power)
             modifier = UQ_4_12(0.0);

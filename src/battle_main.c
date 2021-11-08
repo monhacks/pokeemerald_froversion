@@ -4370,6 +4370,16 @@ bool32 IsMoveOneOf(u16 move, const u16 *moves)
         return FALSE;
 }
 
+bool32 IsSpeciesOneOf(u16 specie, const u16 *species)
+{
+    for (; *species !=0xFFFF; species ++)
+        {
+        if (*species == specie)
+            return TRUE;
+        }
+        return FALSE;
+}
+
 const u16 gSlashingMoves[] =
     {
         MOVE_AIR_CUTTER,
@@ -4401,6 +4411,49 @@ const u16 gSlashingMoves[] =
         MOVE_DRAGON_TAIL,
         0xFFFF
     };
+
+    const u16 gRuthlashLine[] =
+    {
+        SPECIES_RASCALOOT,
+        SPECIES_BANDITHUG,
+        SPECIES_RUTHLASH,
+        0xFFFF
+    };
+
+    const u16 gMechobraLine[] =
+    {
+        SPECIES_FLOBRA,
+        SPECIES_MORPHLO,
+        SPECIES_MECHOBRA,
+        0xFFFF
+    };
+
+    const u16 gRiptorypsLine[] =
+    {
+        SPECIES_EMBORYPS,
+        SPECIES_HUNTORYPS,
+        SPECIES_RIPTORYPS,
+        0xFFFF
+    };
+
+    const u16 gLevitateMons[] =
+    {
+        SPECIES_MISDREAVUS,
+        SPECIES_DUSKULL,
+        SPECIES_LUNATONE,
+        SPECIES_SOLROCK,
+        SPECIES_KOFFING,
+        SPECIES_WEEZING,
+        SPECIES_GASTLY,
+        SPECIES_HAUNTER,
+        SPECIES_GENGAR,
+        SPECIES_SPIRITOMB,
+        SPECIES_GLALIE,
+        SPECIES_MAGNEMITE,
+        SPECIES_MAGNETON,
+        0xFFFF
+    };
+
 
 s8 GetMovePriority(u32 battlerId, u16 move)
 {

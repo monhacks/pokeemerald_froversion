@@ -706,9 +706,12 @@
 #define ITEM_STEEL_CAMOUFLAGE    606
 #define ITEM_FAIRY_CAMOUFLAGE    607
 
+//Misc Froversion Items
+#define ITEM_GRILLED_CHEESE      608
 
 
-#define ITEMS_COUNT 608
+
+#define ITEMS_COUNT 609
 
 
 

@@ -69,6 +69,8 @@
 #define ITEM6_HEAL_FULL   ((u8) -1)
 #define ITEM6_HEAL_HALF   ((u8) -2)
 #define ITEM6_HEAL_LVL_UP ((u8) -3)
+#define ITEM6_HEAL_HP_QUARTER ((u8) -4)
+#define ITEM6_HEAL_HP_HALF ((u8) -5)
 
 // Used for GetItemEffectType.
 #define ITEM_EFFECT_X_ITEM 0

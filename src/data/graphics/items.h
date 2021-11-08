@@ -1528,3 +1528,7 @@ const u32 gItemIconPalette_WaterMemory[] = INCBIN_U32("graphics/items/icon_palet
 const u32 gItemIconPalette_BugTMHM[] = INCBIN_U32("graphics/items/icon_palettes/bug_tm_hm.gbapal.lz");
 
 const u32 gItemIconPalette_FairyTMHM[] = INCBIN_U32("graphics/items/icon_palettes/fairy_tm_hm.gbapal.lz");
+
+const u32 gItemIcon_GrilledCheese[] = INCBIN_U32("graphics/items/icons/grilled_cheese.4bpp.lz");
+const u32 gItemIconPalette_GrilledCheese[] = INCBIN_U32("graphics/items/icon_palettes/grilled_cheese.gbapal.lz");
+
