@@ -7,13 +7,19 @@ WalmoreTown_MapScripts::
 
 // Scripts	
 
-Script_WMT_Signpost_JohnsHouse:
+Script_WMT_Signpost_CoreysHouse::
+	lock
+	msgbox Text_Signpost_WMT_CoreysHouse, MSGBOX_SIGN
+	release
+	end
+
+Script_WMT_Signpost_JohnsHouse::
 	lock
 	msgbox Text_Signpost_WMT_JohnsHouse, MSGBOX_SIGN
 	release
 	end
 
-Script_WMT_Signpost_BobbysHouse:
+Script_WMT_Signpost_BobbysHouse::
 	lock
 	msgbox Text_Signpost_WMT_BobbysHouse, MSGBOX_SIGN
 	release
@@ -245,3 +251,7 @@ Text_Signpost_WMT_JohnsHouse:
 
 Text_Signpost_WMT_BobbysHouse:
 	.string "Wasula Residence$"
+
+Text_Signpost_WMT_CoreysHouse:
+	.string "Coreys House.\p"
+	.string "Looking for lost Darts.$"

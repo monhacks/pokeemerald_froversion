@@ -5050,6 +5050,16 @@
       "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/EverGrandeCity_Hall6/border.bin",
       "blockdata_filepath": "data/layouts/EverGrandeCity_Hall6/map.bin"
+    },
+    {
+      "id": "LAYOUT_TEST_MAP",
+      "name": "TestMAp_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_SnowGeneral",
+      "secondary_tileset": "gTileset_SnowSecondary",
+      "border_filepath": "data/layouts/TestMAp/border.bin",
+      "blockdata_filepath": "data/layouts/TestMAp/map.bin"
     }
   ]
 }

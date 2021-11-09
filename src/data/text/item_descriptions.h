@@ -3025,4 +3025,7 @@ static const u8 sFairyCamouflageDesc[] = _(
     "holder as\n"
     "Fairy-type.");
 
-
+static const u8 sGrilledCheeseDesc[] = _(
+    "A hold item that\n"
+    "restores 1/4 HP\n"
+    "battle.");

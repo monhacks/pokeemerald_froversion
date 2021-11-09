@@ -2243,8 +2243,8 @@ static void Cmd_resultmessage(void)
     {
         if (gBattleCommunication[6] > 2) // Wonder Guard or Levitate - show the ability pop-up
             CreateAbilityPopUp(gBattlerTarget, gBattleMons[gBattlerTarget].ability, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
-        stringId = gMissStringIds[gBattleCommunication[6]];
-        gBattleCommunication[MSG_DISPLAY] = 1;
+            stringId = gMissStringIds[gBattleCommunication[6]];
+            gBattleCommunication[MSG_DISPLAY] = 1;
     }
     else
     {

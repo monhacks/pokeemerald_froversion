@@ -670,3 +670,17 @@ gMetatiles_GrandIslandGym::
 	.align 1
 gMetatileAttributes_GrandIslandGym::
 	.incbin "data/tilesets/secondary/grandislandgym/metatile_attributes.bin"
+	.align 1
+gMetatiles_SnowGeneral::
+	.incbin "data/tilesets/primary/snowgeneral/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SnowGeneral::
+	.incbin "data/tilesets/primary/snowgeneral/metatile_attributes.bin"
+	.align 1
+gMetatiles_SnowSecondary::
+	.incbin "data/tilesets/secondary/snowsecondary/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SnowSecondary::
+	.incbin "data/tilesets/secondary/snowsecondary/metatile_attributes.bin"

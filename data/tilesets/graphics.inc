@@ -2049,3 +2049,43 @@ gTilesetPalettes_GrandIslandGym::
 	.align 2
 gTilesetTiles_GrandIslandGym::
 	.incbin "data/tilesets/secondary/grandislandgym/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SnowGeneral::
+	.incbin "data/tilesets/primary/snowgeneral/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/snowgeneral/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/snowgeneral/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/snowgeneral/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/snowgeneral/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/snowgeneral/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/snowgeneral/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/snowgeneral/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/snowgeneral/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/snowgeneral/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/snowgeneral/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/snowgeneral/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/snowgeneral/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SnowGeneral::
+	.incbin "data/tilesets/primary/snowgeneral/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SnowSecondary::
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/snowsecondary/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SnowSecondary::
+	.incbin "data/tilesets/secondary/snowsecondary/tiles.4bpp.lz"

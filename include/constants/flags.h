@@ -733,7 +733,7 @@
 #define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
 #define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
 #define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
-#define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
+#define FLAG_RECIEVED_GRILLED_CHEESE  0x2B7 // Bobbys Mom has given first free grilled cheese
 #define FLAG_HIDE_MAGA_COLANGELO_GRAPHICS  0x2B8 // Hides Lattka and Paul inside Colangelo Graphics.
 #define FLAG_FORCE_BATTLE_STYLE_SET  0x2B9 // Unused Flag
 #define FLAG_NICOLAS_CAGE_QUIZ_COMPLETE  0x2BA // Unused Flag

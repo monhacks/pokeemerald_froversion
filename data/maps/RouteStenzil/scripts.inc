@@ -39,6 +39,7 @@ SummitCave_EventScript_BobbyRivalBattleTrigger2::
 EventScript_SummitCave_GiveItemDependingOnStarterBattleLost:
 	lock
 	msgbox Text_SummitCave_BobbyPostBattleLost, MSGBOX_DEFAULT
+	special HealPlayerParty
 	switch VAR_STARTER_MON
 	case 0, SummitCave_EventScript_GiveItemRascaloot //fros starter is rascaloot
 	case 1, SummitCave_EventScript_GiveItemFlobra //fros starter is Flobra

@@ -1006,3 +1006,25 @@ gTileset_GrandIslandGym::
 	.4byte gMetatiles_GrandIslandGym
 	.4byte gMetatileAttributes_GrandIslandGym
 	.4byte NULL
+
+	.align 2
+gTileset_SnowGeneral::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_SnowGeneral
+	.4byte gTilesetPalettes_SnowGeneral
+	.4byte gMetatiles_SnowGeneral
+	.4byte gMetatileAttributes_SnowGeneral
+	.4byte NULL
+
+	.align 2
+gTileset_SnowSecondary::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_SnowSecondary
+	.4byte gTilesetPalettes_SnowSecondary
+	.4byte gMetatiles_SnowSecondary
+	.4byte gMetatileAttributes_SnowSecondary
+	.4byte NULL

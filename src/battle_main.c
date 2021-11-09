@@ -4451,6 +4451,7 @@ const u16 gSlashingMoves[] =
         SPECIES_GLALIE,
         SPECIES_MAGNEMITE,
         SPECIES_MAGNETON,
+        SPECIES_DRACASTER,
         0xFFFF
     };
 
