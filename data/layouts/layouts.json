@@ -5054,10 +5054,10 @@
     {
       "id": "LAYOUT_TEST_MAP",
       "name": "TestMAp_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_SnowGeneral",
-      "secondary_tileset": "gTileset_SnowSecondary",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/TestMAp/border.bin",
       "blockdata_filepath": "data/layouts/TestMAp/map.bin"
     }
