@@ -1284,7 +1284,7 @@
 #define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
 #define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag
 #define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
-#define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
+#define FLAG_RED_EYES_FLY_AWAY                                      0x4D7 // Spoke To Zendano Already but didnt have enough pokemon to battle
 #define FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA                          0x4D8 // Hides Team MAGA after Dewgong Battle
 #define FLAG_BATTLE_POISON_FIELD                                    0x4D9 // Enable poison build-up
 #define FLAG_BATTLE_RECHARGE                                        0x4DA // Enable recharge effect for attacking moves

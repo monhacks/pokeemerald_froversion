@@ -109,6 +109,7 @@
 #define MAP_JOHNS_ROOM                  (100 | (0 << 8))
 #define MAP_EVER_GRANDE_CITY_HALL6      (101 | (0 << 8))
 #define MAP_TEST_MAP                    (102 | (0 << 8))
+#define MAP_DELETE_THIS                 (103 | (0 << 8))
 
 // Map Group 1
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F     (0 | (1 << 8))
@@ -658,6 +659,6 @@
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {103, 10, 9, 10, 8, 8, 9, 7, 7, 14, 8, 20, 10, 23, 14, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 2, 0};
+// static const u8 MAP_GROUP_COUNT[] = {104, 10, 9, 10, 8, 8, 9, 7, 7, 14, 8, 20, 10, 23, 14, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 2, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

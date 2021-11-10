@@ -12034,7 +12034,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_MEGA_HOUNDOOM_MT_CHIMNEY] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
-        .trainerClass = TRAINER_CLASS_MAGA_LEADER,
+        .trainerClass = TRAINER_CLASS_GMP,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_ZENDANO,
         .trainerName = _("Zendano"),
@@ -12050,7 +12050,7 @@ const struct Trainer gTrainers[] = {
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_MAGA_LEADER,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_LATTKA,
         .trainerName = _("Lattka"),
@@ -12064,7 +12064,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_SUMMIT_CAVERNS_LATTKA_2] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_MAGA_LEADER,
+        .trainerClass = TRAINER_CLASS_GMP,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_LATTKA,
         .trainerName = _("Lattka"),
@@ -12078,7 +12078,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_MAGMA_HIDEOUT_MEGA_GENGAR] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_MAGA_LEADER,
+        .trainerClass = TRAINER_CLASS_GMP,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_ZENDANO,
         .trainerName = _("Zendano"),
@@ -12092,7 +12092,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_COLANGELO_GRAPHICS_DOM] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM,
-        .trainerClass = TRAINER_CLASS_MAGA_LEADER,
+        .trainerClass = TRAINER_CLASS_GMP,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_ZENDANO,
         .trainerName = _("Dom"),

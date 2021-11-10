@@ -186,15 +186,16 @@ VictoryRoad_1F_Text_AlbertPostBattle: @ 82362A4
 	.string "to become the CHAMPION…$"
 
 VictoryRoad_1F_Text_HopeIntro: @ 82362EE
-	.string "This seemingly infinite and harsh road\n"
-	.string "lives up to its name of VICTORY.$"
+	.string "Nothing is real. Color is black,\n"
+	.string "is white, is colorblind$"
 
 VictoryRoad_1F_Text_HopeDefeat: @ 8236336
-	.string "Your battle style is fantastic…$"
+	.string "See yourself to the exit. we can't\n"
+	.string "afford to watch you resort to this.$"
 
 VictoryRoad_1F_Text_HopePostBattle: @ 8236356
-	.string "You seem to have the potential for\n"
-	.string "becoming the CHAMPION.$"
+	.string "See yourself to the exit. we can't\n"
+	.string "afford to watch you resort to this.$"
 
 VictoryRoad_1F_Text_QuincyIntro: @ 8236390
 	.string "What is the VICTORY ROAD?\n"

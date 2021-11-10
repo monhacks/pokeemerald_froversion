@@ -6,6 +6,14 @@ struct AbilitySetter
     u8 level;
 };
 
+static const struct AbilitySetter sHaagletAbilitySet[] = 
+{
+    {ABILITY_RIVALRY, 1},
+    {ABILITY_HYDRATION, 19},
+    {ABILITY_SAND_FORCE, 37},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter sBulbasaurAbilitySet[] = 
 {
     {ABILITY_OVERGROW, 1},
@@ -1070,6 +1078,15 @@ static const struct AbilitySetter sSnoumeseAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sFrentoadAbilitySet[] = 
+{
+    {ABILITY_CUTE_CHARM, 1},
+    {ABILITY_RUN_AWAY, 1},
+    {ABILITY_FLAME_BODY, 10},
+    {ABILITY_PRANKSTER, 21},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter sRabatoastAbilitySet[] = 
 {
     {ABILITY_MAGMA_ARMOR, 1},
@@ -1267,7 +1284,10 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_SNOUBAUL] = sSnoumeseAbilitySet,
     [SPECIES_INVERTEBRAKE] = sInvertebrakeAbilitySet,
     [SPECIES_SKARMORY] = sSkarmoryAbilitySet,
+    [SPECIES_FRENTOAD] = sFrentoadAbilitySet,
     [SPECIES_RABATOAST] = sRabatoastAbilitySet,
+    [SPECIES_HAAGLET] = sHaagletAbilitySet,
+    [SPECIES_WARTHAAG] = sHaagletAbilitySet,
     
 
 

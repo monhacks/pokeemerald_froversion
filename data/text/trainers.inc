@@ -2115,16 +2115,16 @@ Route115_Text_CyndyPostRematch: @ 829B737
 	.string "It must be that I love Pokémon.$"
 
 Route115_Text_HectorIntro: @ 829B78F
-	.string "I have a rare Pokémon!\n"
-	.string "Would you like me to show you?$"
+	.string "Your mind is a mountain before\n"
+	.string "you$"
 
 Route115_Text_HectorDefeat: @ 829B7C5
-	.string "You…\n"
-	.string "You want my Pokémon, don't you?$"
+	.string "You've reached the summit, now\n"
+	.string "transcend the skies.$"
 
 Route115_Text_HectorPostBattle: @ 829B7EA
-	.string "I have this rare Pokémon.\n"
-	.string "It's enough to keep me satisfied.$"
+	.string "You've reached the summit, now\n"
+	.string "transcend the skies.$"
 
 Route115_Text_KyraIntro: @ 829B826
 	.string "I'll battle while I'm running!\n"
@@ -3640,18 +3640,20 @@ Route124_Text_RolandPostBattle: @ 82A0AD9
 	.string "I wish I could ride a Pokémon like you…$"
 
 Route124_Text_JennyIntro: @ 82A0B37
-	.string "If you just float in the sea like\n"
-	.string "this, Pokémon come around to play.$"
+	.string "I used to be so young and\n"
+	.string "invicible.\p"
+	.string "The mistakes of my youth are\n"
+	.string "finally catching up to me.$"
 
 Route124_Text_JennyDefeat: @ 82A0B7C
-	.string "Oh, darn.\n"
-	.string "I've gone and lost.$"
+	.string "I've never been so tired. I've.\n"
+	.string "Never felt so weak. My storied life\l"
+	.string "is coming to a graceful descent.$"
 
 Route124_Text_JennyPostBattle: @ 82A0B9A
-	.string "While swimming, I noticed that some\n"
-	.string "Pokémon attack, and some just watch.\p"
-	.string "I guess Pokémon have personalities\n"
-	.string "of their own.$"
+	.string "I've never been so tired. I've.\n"
+	.string "Never felt so weak. My storied life\l"
+	.string "is coming to a graceful descent.$"
 
 Route124_Text_JennyRegister: @ 82A0C14
 	.string "It's only on a whim, but maybe I'll get\n"
@@ -4093,15 +4095,16 @@ Route127_Text_JonahPostBattle: @ 82A240C
 	.string "The line remains in the water…$"
 
 Route127_Text_HenryIntro: @ 82A2450
-	.string "Whoops! Don't tell me I snagged\n"
-	.string "a SURFING Pokémon?$"
+	.string "The people who survive the sword\n"
+	.string "will find favor in the desert.$"
 
 Route127_Text_HenryDefeat: @ 82A2483
-	.string "I can't keep up!$"
+	.string "I will build you up again.\n"
+	.string "You will be rebuilt.$"
 
 Route127_Text_HenryPostBattle: @ 82A2494
-	.string "It'd be a handful if I hooked\n"
-	.string "your tough Pokémon!$"
+	.string "I will build you up again.\n"
+	.string "You will be rebuilt.$"
 
 Route127_Text_RogerIntro: @ 82A24C6
 	.string "Well, hey! This is a match between\n"

@@ -61,12 +61,12 @@ MtChimney_EventScript_Maxie:: @ 822EE0B
 	waitmovement 0
 	applymovement LOCALID_MAXIE, Common_Movement_Delay48
 	waitmovement 0
-	msgbox MtChimney_Text_MaxieIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_MAXIE_MT_CHIMNEY, MtChimney_Text_MaxieDefeat
+	trainerbattle_double TRAINER_MAXIE_MT_CHIMNEY, MtChimney_Text_MaxieIntro, MtChimney_Text_MaxieDefeat,Route104_Text_GinaNotEnoughMons
 	special HealPlayerParty
-	msgbox MtChimney_Text_MaxieJustWatchThePowerOfTheOrb, MSGBOX_DEFAULT
-	closemessage
-	trainerbattle_no_intro TRAINER_MEGA_HOUNDOOM_MT_CHIMNEY, MtChimney_Text_MaxieDefeat
+	//msgbox MtChimney_Text_MaxieJustWatchThePowerOfTheOrb, MSGBOX_DEFAULT
+	//closemessage
+	//trainerbattle_no_intro TRAINER_MEGA_HOUNDOOM_MT_CHIMNEY, MtChimney_Text_MaxieDefeat
+	trainerbattle_double TRAINER_MEGA_HOUNDOOM_MT_CHIMNEY, MtChimney_Text_MaxieJustWatchThePowerOfTheOrb, MtChimney_Text_MaxieDefeat, Route104_Text_GinaNotEnoughMons
 	msgbox MtChimney_Text_MaxieYouHaventSeenLastOfMagma, MSGBOX_DEFAULT
 	delay 30
 	fadescreen FADE_TO_BLACK
@@ -560,7 +560,7 @@ MtChimney_EventScript_SawyerRematch:: @ 822F253
 	end
 
 MtChimney_Text_MeteoriteWillActivateVolcano: @ 822F26A
-	.string "The power contained in the Team MAGA…\p"
+	.string "The power contained in the Metorite…\p"
 	.string "By amplifying its power with this\n"
 	.string "machine, Mt. Wheatfield's volcanic\l"
 	.string "activity will instantly intensify…\p"
@@ -583,7 +583,7 @@ MtChimney_Text_MaxieIntro: @ 822F32E
 	//.string "That is why land is all important!\n"
 	//.string "It is the cradle of all!\p"
 	.string "Long ago, American used to respected!\l"
-	.string "That is why Team MAGA is dedicated\n"
+	.string "That is why Team MAGA is dedicated\l"
 	.string "to military expansion.\p"
 	.string "It is for further advancement of\n"
 	.string "humankind and Pokémon!\p"
@@ -830,19 +830,16 @@ MtChimney_Text_MelissaPostBattle: @ 8230292
 	.string "me up, baby!$"
 
 MtChimney_Text_SheilaIntro: @ 82302BD
-	.string "I've finally made it to Mt. Wheatfield.\n"
-	.string "I want to make my Pokémon battle!$"
+	.string "Everything looks the same.\n"
+	.string "It's all so watered down$"
 
 MtChimney_Text_SheilaDefeat: @ 8230304
-	.string "The way you battle…\n"
-	.string "It's like a Mt. Wheatfield eruption!$"
+	.string "Hold up! Hold on! Lets go!\n"
+	.string "It might really hurt this time.$"
 
 MtChimney_Text_SheilaPostBattle: @ 823033A
-	.string "Like I said, I've finally made it to\n"
-	.string "Mt. Wheatfield. It would be a shame if\l"
-	.string "I only do a little sightseeing…\p"
-	.string "I want to get in some battles and buy\n"
-	.string "Cookies as souvenirs.$"
+	.string "Hold up! Hold on! Lets go!\n"
+	.string "It might really hurt this time.$"
 
 MtChimney_Text_ShirleyIntro: @ 82303DF
 	.string "Since I bathed in the hot springs,\n"

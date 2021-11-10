@@ -383,6 +383,7 @@
 #define TRAINER_CLASS_MESSENGER      0x42
 #define TRAINER_CLASS_BOBBY          0x43
 #define TRAINER_CLASS_MARRIOTT       0x44
+#define TRAINER_CLASS_GMP            0x45
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

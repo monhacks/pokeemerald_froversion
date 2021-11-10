@@ -12,6 +12,7 @@ MagmaHideout_4F_MapScripts:: @ 823A55F
 MagmaHideout_4F_EventScript_Maxie:: @ 823A560
 	lockall
 	playbgm MUS_ENCOUNTER_MAGMA, 0
+	goto_if_set FLAG_RED_EYES_FLY_AWAY, MagmaHideout_4F_EventScript_ZendanoBattle
 	msgbox MagmaHideout_4F_Text_MaxieAwakenGroudon, MSGBOX_DEFAULT
 	closemessage
 	delay 20
@@ -60,14 +61,16 @@ MagmaHideout_4F_EventScript_Maxie:: @ 823A560
 	delay 30
 	applymovement LOCALID_MAXIE, Common_Movement_FacePlayer
 	waitmovement 0
-	msgbox MagmaHideout_4F_Text_MaxieOhItWasYou, MSGBOX_DEFAULT
-	closemessage
 	setvar VAR_MUGSHOT_ID, MUGSHOT_ZENDANO
-	trainerbattle_no_intro TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieDefeat
-	msgbox MagmaHideout_4F_Text_MaxieImGoingAfterGroudon, MSGBOX_DEFAULT
-	closemessage
+	setflag FLAG_RED_EYES_FLY_AWAY
+	goto MagmaHideout_4F_EventScript_ZendanoBattle
+	releaseall
+	end
+
+	MagmaHideout_4F_EventScript_ZendanoBattle:
+	trainerbattle_double TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieOhItWasYou, MagmaHideout_4F_Text_MaxieDefeat, Route104_Text_GinaNotEnoughMons
 	special HealPlayerParty
-	trainerbattle_no_intro TRAINER_MAGMA_HIDEOUT_MEGA_GENGAR, SummitCaverns_Text_LattkaDefeat2
+	trainerbattle_double TRAINER_MAGMA_HIDEOUT_MEGA_GENGAR, MagmaHideout_4F_Text_MaxieImGoingAfterGroudon, MagmaHideout_4F_Text_MaxieDefeat, Route104_Text_GinaNotEnoughMons
 	clearflag FLAG_HIDE_SLATEPORT_CITY_CAPTAIN_STERN
 	clearflag FLAG_HIDE_SLATEPORT_CITY_GABBY_AND_TY
 	setvar VAR_SLATEPORT_CITY_STATE, 1
