@@ -90,7 +90,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_OLDALE_TOWN_STATE",
+      "var_value": "14",
+      "script": "RustboroCity_ColangeloGraphics_3F_EventScript_RevealMAGABoss"
+    }
   ],
   "bg_events": [
     {

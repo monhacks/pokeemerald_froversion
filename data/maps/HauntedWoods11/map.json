@@ -1,0 +1,97 @@
+{
+  "id": "MAP_HAUNTED_WOODS11",
+  "name": "HauntedWoods11",
+  "layout": "LAYOUT_HAUNTED_WOODS11",
+  "music": "MUS_FV_NIAGARA_WOODS",
+  "region_map_section": "MAPSEC_FORTREE_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_FOG_HORIZONTAL",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 28,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_HAUNTED_WOODS12",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 28,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_HAUNTED_WOODS12",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 28,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_HAUNTED_WOODS12",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 23,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_HAUNTED_WOODS1",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 22,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_HAUNTED_WOODS1",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 17,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_LAKE_MEAD_VILLAGE_NALLS_RESIDENCE_2F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 17,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_LAKE_MEAD_VILLAGE_NALLS_RESIDENCE_2F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 17,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_LAKE_MEAD_VILLAGE_NALLS_RESIDENCE_2F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 22,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_HAUNTED_WOODS1",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 23,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_HAUNTED_WOODS1",
+      "dest_warp_id": 1
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

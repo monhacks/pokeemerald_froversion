@@ -554,6 +554,7 @@
 #define MUS_FV_GOODNIGHT                       618
 #define MUS_FV_INTRO                           619
 #define MUS_FV_VS_GMP                          620
+#define MUS_FV_NIAGARA_WOODS                   621
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

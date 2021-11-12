@@ -155,6 +155,8 @@ RustboroCity_ColangeloGraphics_3F_EventScript_MrStone:: @ 821256C
 	faceplayer
 	goto_if_set FLAG_RECEIVED_EXP_SHARE, RustboroCity_ColangeloGraphics_3F_EventScript_MrStoneAfterFavor
 	goto_if_set FLAG_DELIVERED_STEVEN_LETTER, RustboroCity_ColangeloGraphics_3F_EventScript_GiveExpShare
+	compare VAR_OLDALE_TOWN_STATE, 15
+	goto_if_eq RustboroCity_ColangeloGraphics_3F_EventScript_StartDomBattle
 	msgbox RustboroCity_ColangeloGraphics_3F_Text_CountingOnYou, MSGBOX_DEFAULT
 	closemessage
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
@@ -316,9 +318,14 @@ RustboroCity_ColangeloGraphics_3F_EventScript_RevealMAGABoss::
 	clearflag FLAG_HIDE_MAGA_COLANGELO_GRAPHICS
 	msgbox ColangeloGraphics_Text_DomIsAngry, MSGBOX_DEFAULT
 	applymovement OBJ_EVENT_ID_PLAYER, ColangeloGraphics_Movement_PlayerToBoss
-	waitmovement OBJ_EVENT_ID_PLAYER
-	trainerbattle_double TRAINER_COLANGELO_GRAPHICS_DOM, ColangeloGraphics_Text_SoYouveRuinedOurPlans, ColangeloGraphics_Text_DomDefeat, Route104_Text_GinaNotEnoughMons
 	setvar VAR_OLDALE_TOWN_STATE, 15
+	waitmovement OBJ_EVENT_ID_PLAYER
+	goto RustboroCity_ColangeloGraphics_3F_EventScript_StartDomBattle
+	releaseall
+	end
+RustboroCity_ColangeloGraphics_3F_EventScript_StartDomBattle::
+	applymovement 1, Common_Movement_FacePlayer
+	trainerbattle_double TRAINER_COLANGELO_GRAPHICS_DOM, ColangeloGraphics_Text_SoYouveRuinedOurPlans, ColangeloGraphics_Text_DomDefeat, Route104_Text_GinaNotEnoughMons
 	msgbox ColangeloGraphics_Text_MaybePokemonArentMeantToBeUsedAsWeapons, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	removeobject 5
@@ -329,6 +336,8 @@ RustboroCity_ColangeloGraphics_3F_EventScript_RevealMAGABoss::
 	msgbox ColangeloGraphics_Text_ThankYouForStandingUpToMe, MSGBOX_DEFAULT
 	giveitem ITEM_HM07
 	setflag FLAG_RECEIVED_HM07
+	goto RustboroCity_ColangeloGraphics_3F_EventScript_End
+RustboroCity_ColangeloGraphics_3F_EventScript_End:
 	releaseall
 	end
 

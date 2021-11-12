@@ -140,7 +140,10 @@
     "JohnsRoom",
     "EverGrandeCity_Hall6",
     "TestMAp",
-    "DeleteThis"
+    "DeleteThis",
+    "HauntedWoods2",
+    "HauntedWoods6",
+    "HauntedWoods7"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",
@@ -686,6 +689,17 @@
   ],
   "gMapGroup33": [
     "Route124_DivingTreasureHuntersHouse",
-    "JagowSyConnection1"
+    "JagowSyConnection1",
+    "HauntedWoods1",
+    "NewMap1",
+    "HauntedWoods3",
+    "HauntedWoods4",
+    "HauntedWoods5",
+    "HauntedWoods8",
+    "HauntedWoods9",
+    "HauntedWoods10",
+    "HauntedWoods11",
+    "HauntedWoods12",
+    "HauntedWoods13"
   ]
 }

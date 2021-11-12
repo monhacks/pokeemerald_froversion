@@ -684,3 +684,17 @@ gMetatiles_SnowSecondary::
 	.align 1
 gMetatileAttributes_SnowSecondary::
 	.incbin "data/tilesets/secondary/snowsecondary/metatile_attributes.bin"
+	.align 1
+gMetatiles_NiagaraWoodsPrimary::
+	.incbin "data/tilesets/primary/niagarawoodsprimary/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_NiagaraWoodsPrimary::
+	.incbin "data/tilesets/primary/niagarawoodsprimary/metatile_attributes.bin"
+	.align 1
+gMetatiles_NiagaraWoodsSecondary::
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_NiagaraWoodsSecondary::
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/metatile_attributes.bin"

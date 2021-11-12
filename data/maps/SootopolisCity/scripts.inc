@@ -1505,7 +1505,7 @@ SootopolisCity_Text_WhatIsThatGreenPokemon: @ 81E6750
 	.string "What is that green Pokémon?!$"
 
 SootopolisCity_Text_WhereDidLegendariesGo: @ 81E677F
-	.string "GROUDON and KYOGRE…\n"
+	.string "Voeyedra and Wheyevrn…\n"
 	.string "Where did they go?\p"
 	.string "Will they cause droughts or downpours\n"
 	.string "somewhere else?$"
@@ -1663,7 +1663,7 @@ SootopolisCity_Text_YouBroughtFlyingMon: @ 81E728C
 	.string "Well, aren't you amazing!$"
 
 SootopolisCity_Text_GroudonPleaseStop: @ 81E72DB
-	.string "Zendano: G… GROUDON…\n"
+	.string "Zendano: G… Voeyedra…\n"
 	.string "Please! Stop what you're doing!\p"
 	.string "I know the extent of your power now!\p"
 	.string "If you keep going, all Niagara, not just\n"
@@ -1671,7 +1671,7 @@ SootopolisCity_Text_GroudonPleaseStop: @ 81E72DB
 
 SootopolisCity_Text_AfterAllOurScheming: @ 81E737E
 	.string "Zendano: So the super-ancient Pokémon\n"
-	.string "weren't only GROUDON and KYOGRE…\p"
+	.string "weren't only Voeyedra and Wheyevrn…\p"
 	.string "After all our fruitless scheming and\n"
 	.string "frantic efforts, that one Pokémon's\l"
 	.string "simple action puts everything right\l"
@@ -1680,16 +1680,16 @@ SootopolisCity_Text_AfterAllOurScheming: @ 81E737E
 	.string "Fuhahaha…$"
 
 SootopolisCity_Text_KyogreCalmDown: @ 81E7460
-	.string "Shawn: KYOGRE! What's wrong?!\n"
-	.string "Look over here! It's the RED ORB!\l"
-	.string "Calm down! KYOGRE!\p"
+	.string "Shawn: Wheyevrn! What's wrong?!\n"
+	.string "Look over here! It's the Red Orb!\l"
+	.string "Calm down! Wheyevrn!\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "It's no good!\n"
 	.string "It's not responding at all!$"
 
 SootopolisCity_Text_TryingMeaninglessToPokemon: @ 81E74F6
-	.string "Shawn: KYOGRE and GROUDON both\n"
+	.string "Shawn: Wheyevrn and Voeyedra both\n"
 	.string "flew off to who knows where.\p"
 	.string "The weather in Niagara has returned\n"
 	.string "to its normal state…\p"
@@ -1701,7 +1701,7 @@ SootopolisCity_Text_TryingMeaninglessToPokemon: @ 81E74F6
 
 SootopolisCity_Text_InvolvedWithCrisisComeWithMe: @ 81E75CB
 	.string "Bobby: Those Pokémon fighting…\n"
-	.string "GROUDON… And KYOGRE…\p"
+	.string "Voeyedra… And Wheyevrn…\p"
 	.string "The two super-ancient Pokémon\n"
 	.string "were awakened from a long sleep…\p"
 	.string "And now they are smashing each other\n"
@@ -1716,7 +1716,7 @@ SootopolisCity_Text_InvolvedWithCrisisComeWithMe: @ 81E75CB
 
 SootopolisCity_Text_DoesThisMakeYourFearPokemon: @ 81E7737
 	.string "Bobby: Listen, {PLAYER}{KUN}.\p"
-	.string "Does seeing GROUDON and KYOGRE make\n"
+	.string "Does seeing Voeyedra and Wheyevrn make\n"
 	.string "you think Pokémon are to be feared?\p"
 	.string "But that's not true.\n"
 	.string "Pokémon are really more…\p"

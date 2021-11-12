@@ -110,6 +110,9 @@
 #define MAP_EVER_GRANDE_CITY_HALL6      (101 | (0 << 8))
 #define MAP_TEST_MAP                    (102 | (0 << 8))
 #define MAP_DELETE_THIS                 (103 | (0 << 8))
+#define MAP_HAUNTED_WOODS2              (104 | (0 << 8))
+#define MAP_HAUNTED_WOODS6              (105 | (0 << 8))
+#define MAP_HAUNTED_WOODS7              (106 | (0 << 8))
 
 // Map Group 1
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F     (0 | (1 << 8))
@@ -656,9 +659,20 @@
 // Map Group 33
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
 #define MAP_JAGOW_SY_CONNECTION1                   (1 | (33 << 8))
+#define MAP_HAUNTED_WOODS1                         (2 | (33 << 8))
+#define MAP_NEW_MAP1                               (3 | (33 << 8))
+#define MAP_HAUNTED_WOODS3                         (4 | (33 << 8))
+#define MAP_HAUNTED_WOODS4                         (5 | (33 << 8))
+#define MAP_HAUNTED_WOODS5                         (6 | (33 << 8))
+#define MAP_HAUNTED_WOODS8                         (7 | (33 << 8))
+#define MAP_HAUNTED_WOODS9                         (8 | (33 << 8))
+#define MAP_HAUNTED_WOODS10                        (9 | (33 << 8))
+#define MAP_HAUNTED_WOODS11                        (10 | (33 << 8))
+#define MAP_HAUNTED_WOODS12                        (11 | (33 << 8))
+#define MAP_HAUNTED_WOODS13                        (12 | (33 << 8))
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {104, 10, 9, 10, 8, 8, 9, 7, 7, 14, 8, 20, 10, 23, 14, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 2, 0};
+// static const u8 MAP_GROUP_COUNT[] = {107, 10, 9, 10, 8, 8, 9, 7, 7, 14, 8, 20, 10, 23, 14, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 13, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

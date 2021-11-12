@@ -71,7 +71,7 @@ CaveOfOrigin_B1F_Text_WallaceStory: @ 823586E
 	.string "with the GYM's operation.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "GROUDON and KYOGRE, the two Pokémon\n"
+	.string "Voeyedra and Wheyevrn, the two Pokémon\n"
 	.string "wreaking havoc here, are considered\l"
 	.string "to be super-ancient Pokémon.\p"
 	.string "But there aren't just two super-\n"

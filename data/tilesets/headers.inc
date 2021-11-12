@@ -1028,3 +1028,25 @@ gTileset_SnowSecondary::
 	.4byte gMetatiles_SnowSecondary
 	.4byte gMetatileAttributes_SnowSecondary
 	.4byte NULL
+
+	.align 2
+gTileset_NiagaraWoodsPrimary::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_NiagaraWoodsPrimary
+	.4byte gTilesetPalettes_NiagaraWoodsPrimary
+	.4byte gMetatiles_NiagaraWoodsPrimary
+	.4byte gMetatileAttributes_NiagaraWoodsPrimary
+	.4byte NULL
+
+	.align 2
+gTileset_NiagaraWoodsSecondary::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_NiagaraWoodsSecondary
+	.4byte gTilesetPalettes_NiagaraWoodsSecondary
+	.4byte gMetatiles_NiagaraWoodsSecondary
+	.4byte gMetatileAttributes_NiagaraWoodsSecondary
+	.4byte NULL

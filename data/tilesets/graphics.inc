@@ -2089,3 +2089,43 @@ gTilesetPalettes_SnowSecondary::
 	.align 2
 gTilesetTiles_SnowSecondary::
 	.incbin "data/tilesets/secondary/snowsecondary/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_NiagaraWoodsPrimary::
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/niagarawoodsprimary/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_NiagaraWoodsPrimary::
+	.incbin "data/tilesets/primary/niagarawoodsprimary/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_NiagaraWoodsSecondary::
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_NiagaraWoodsSecondary::
+	.incbin "data/tilesets/secondary/niagarawoodssecondary/tiles.4bpp.lz"

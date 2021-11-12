@@ -140,18 +140,18 @@ MagmaHideout_4F_EventScript_Tabitha:: @ 823A6D1
 	end
 
 MagmaHideout_4F_Text_Grunt11Intro: @ 823A6E8
-	.string "I want to see GROUDON, too, but they\n"
+	.string "I want to see Voeyedra, too, but they\n"
 	.string "won't let me see even its tail…\p"
 	.string "It's got me feeling really frustrated.\p"
 	.string "Oh, no!\n"
-	.string "I blabbed about GROUDON!$"
+	.string "I blabbed about Voeyedra!$"
 
 MagmaHideout_4F_Text_Grunt11Defeat: @ 823A775
 	.string "I guess it's impossible to win if one\n"
 	.string "doesn't have a calm mind…$"
 
 MagmaHideout_4F_Text_Grunt11PostBattle: @ 823A7B5
-	.string "I wonder if GROUDON even has a tail?$"
+	.string "I wonder if Voeyedra even has a tail?$"
 
 MagmaHideout_4F_Text_Grunt12Intro: @ 823A7DA
 	.string "Fuhahaha!\n"
@@ -163,7 +163,7 @@ MagmaHideout_4F_Text_Grunt12Defeat: @ 823A81B
 	.string "I've come so far, but now this?$"
 
 MagmaHideout_4F_Text_Grunt12PostBattle: @ 823A841
-	.string "MAXIE, sir!\n"
+	.string "Zendano, sir!\n"
 	.string "An intruder is headed your way!$"
 
 MagmaHideout_4F_Text_Grunt13Intro: @ 823A86D
@@ -180,8 +180,8 @@ MagmaHideout_4F_Text_TabithaIntro: @ 823A8E1
 	.string "Hehehe!\n"
 	.string "You made it this far, so I'll tell you!\p"
 	.string "That's right!\n"
-	.string "Up ahead, GROUDON is sleeping!\p"
-	.string "MAXIE went to GROUDON just seconds\n"
+	.string "Up ahead, Voeyedra is sleeping!\p"
+	.string "Zendano went to Voeyedra just seconds\n"
 	.string "ago!\p"
 	.string "It's going to awaken real soon!\n"
 	.string "Hehe! Hehehe!$"
@@ -192,28 +192,28 @@ MagmaHideout_4F_Text_TabithaDefeat: @ 823A994
 
 MagmaHideout_4F_Text_TabithaPostBattle: @ 823A9AC
 	.string "…And while you wasted time with me,\n"
-	.string "MAXIE should have awakened GROUDON…$"
+	.string "Zendano should have awakened Voeyedra…$"
 
 MagmaHideout_4F_Text_MaxieAwakenGroudon: @ 823A9F4
-	.string "MAXIE: GROUDON…\p"
+	.string "Zendano: Voeyedra…\p"
 	.string "Nothing could awaken you from your\n"
 	.string "sleep bathed in magma…\p"
-	.string "This BLUE ORB is what you sought.\n"
+	.string "This Blue Orb is what you sought.\n"
 	.string "Wasn't it?\p"
-	.string "I have brought you the BLUE ORB.\n"
+	.string "I have brought you the Blue Orb.\n"
 	.string "Let its shine awaken you!\p"
 	.string "And show me…\n"
 	.string "Show me the full extent of your power!$"
 
 MagmaHideout_4F_Text_MaxieGroudonWhatsWrong: @ 823AADA
-	.string "MAXIE: GROUDON!\n"
+	.string "Zendano: Voeyedra!\n"
 	.string "What's wrong?\p"
-	.string "Wasn't the BLUE ORB the key?\p"
-	.string "GROUDON!\n"
+	.string "Wasn't the Blue Orb the key?\p"
+	.string "Voeyedra!\n"
 	.string "Where have you gone…$"
 
 MagmaHideout_4F_Text_MaxieOhItWasYou: @ 823AB33
-	.string "MAXIE: Oh, so it was you?\p"
+	.string "Zendano: Oh, so it was you?\p"
 	.string "I've seen you poking around uninvited\n"
 	.string "here and there…\p"
 	.string "I get it now!\n"
@@ -224,17 +224,17 @@ MagmaHideout_4F_Text_MaxieDefeat: @ 823ABB5
 	.string "Pokémon?$"
 
 MagmaHideout_4F_Text_MaxieImGoingAfterGroudon: @ 823ABE2
-	.string "MAXIE: There has to be some reason\n"
-	.string "why GROUDON fled…\p"
+	.string "Zendano: There has to be some reason\n"
+	.string "why Voeyedra fled…\p"
 	.string "That's what you're trying to say,\n"
 	.string "aren't you?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "Humph…\n"
 	.string "You think I didn't know that?\p"
-	.string "With GROUDON gone, there is no longer\n"
+	.string "With Voeyedra gone, there is no longer\n"
 	.string "any need for this blasted volcano.\p"
-	.string "I am going after GROUDON, so this\n"
+	.string "I am going after Voeyedra, so this\n"
 	.string "is where we part!$"
 
 ///////////FROVERSION//////////////

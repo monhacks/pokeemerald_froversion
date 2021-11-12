@@ -7,6 +7,7 @@ LockportTrail_BF2_MapScripts::
 
 SummitCaverns_EventScript_LattkaBattleTrigger::
 	lockall
+	goto_if_set FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA_ZENDANO, SummitCaverns_EventScript_LattkaBattleEnd
 	playbgm MUS_FV_TEAM_MAGA, 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement OBJ_EVENT_ID_PLAYER
@@ -29,8 +30,14 @@ SummitCaverns_EventScript_LattkaBattleTrigger::
 	applymovement LOCALID_ZENDANO, SummitCavenrs_Movement_ZendanoLeaves2
 	waitmovement LOCALID_ZENDANO
 	removeobject LOCALID_ZENDANO
+	setflag FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA_ZENDANO
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement OBJ_EVENT_ID_PLAYER
+	goto SummitCaverns_EventScript_LattkaBattleNPC
+	releaseall
+	end
+
+	SummitCaverns_EventScript_LattkaBattleNPC::
 	trainerbattle_double TRAINER_SUMMIT_CAVERNS_LATTKA_1, SummitCaverns_Text_LattkaBattle, SummitCaverns_Text_LattkaDefeat1, Route104_Text_GinaNotEnoughMons
 	special HealPlayerParty
 	trainerbattle_double TRAINER_SUMMIT_CAVERNS_LATTKA_2, SummitCaverns_Text_LattkaBattlePrototype, SummitCaverns_Text_LattkaDefeat2,Route104_Text_GinaNotEnoughMons
@@ -45,6 +52,11 @@ SummitCaverns_EventScript_LattkaBattleTrigger::
 	setflag FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA
 	setvar VAR_PETALBURG_CITY_STATE, 8
 	fadedefaultbgm
+	goto SummitCaverns_EventScript_LattkaBattleEnd
+	releaseall
+	end
+
+SummitCaverns_EventScript_LattkaBattleEnd:
 	releaseall
 	end
 

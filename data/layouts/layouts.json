@@ -5070,6 +5070,146 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/DeleteThis/border.bin",
       "blockdata_filepath": "data/layouts/DeleteThis/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS1",
+      "name": "HauntedWoods1_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HauntedWoods1/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods1/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP1",
+      "name": "NewMap1_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NewMap1/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap1/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS2",
+      "name": "HauntedWoods2_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HauntedWoods2/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods2/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS3",
+      "name": "HauntedWoods3_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HauntedWoods3/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods3/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS4",
+      "name": "HauntedWoods4_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HauntedWoods4/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods4/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS5",
+      "name": "HauntedWoods5_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HauntedWoods5/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods5/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS6",
+      "name": "HauntedWoods6_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HauntedWoods6/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods6/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS7",
+      "name": "HauntedWoods7_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HauntedWoods7/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods7/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS8",
+      "name": "HauntedWoods8_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HauntedWoods8/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods8/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS9",
+      "name": "HauntedWoods9_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HauntedWoods9/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods9/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS10",
+      "name": "HauntedWoods10_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HauntedWoods10/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods10/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS11",
+      "name": "HauntedWoods11_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HauntedWoods11/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods11/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS12",
+      "name": "HauntedWoods12_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HauntedWoods12/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods12/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAUNTED_WOODS13",
+      "name": "HauntedWoods13_Layout",
+      "width": 45,
+      "height": 54,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
+      "border_filepath": "data/layouts/HauntedWoods13/border.bin",
+      "blockdata_filepath": "data/layouts/HauntedWoods13/map.bin"
     }
   ]
 }

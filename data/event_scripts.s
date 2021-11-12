@@ -1197,3 +1197,31 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/TestMAp/scripts.inc"
 
 	.include "data/maps/DeleteThis/scripts.inc"
+
+	.include "data/maps/HauntedWoods1/scripts.inc"
+
+	.include "data/maps/NewMap1/scripts.inc"
+
+	.include "data/maps/HauntedWoods2/scripts.inc"
+
+	.include "data/maps/HauntedWoods3/scripts.inc"
+
+	.include "data/maps/HauntedWoods4/scripts.inc"
+
+	.include "data/maps/HauntedWoods5/scripts.inc"
+
+	.include "data/maps/HauntedWoods6/scripts.inc"
+
+	.include "data/maps/HauntedWoods7/scripts.inc"
+
+	.include "data/maps/HauntedWoods8/scripts.inc"
+
+	.include "data/maps/HauntedWoods9/scripts.inc"
+
+	.include "data/maps/HauntedWoods10/scripts.inc"
+
+	.include "data/maps/HauntedWoods11/scripts.inc"
+
+	.include "data/maps/HauntedWoods12/scripts.inc"
+
+	.include "data/maps/HauntedWoods13/scripts.inc"

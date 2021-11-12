@@ -52,6 +52,7 @@ MtChimney_EventScript_ArchieBusyFighting:: @ 822EE02
 
 MtChimney_EventScript_Maxie:: @ 822EE0B
 	lockall
+	goto_if_set FLAG_TEMP_1, MtChimney_EventScript_MaxieBattle
 	playbgm MUS_ENCOUNTER_MAGMA, 0
 	msgbox MtChimney_Text_MeteoriteWillActivateVolcano, MSGBOX_DEFAULT
 	applymovement LOCALID_MAXIE, Common_Movement_FacePlayer
@@ -61,6 +62,12 @@ MtChimney_EventScript_Maxie:: @ 822EE0B
 	waitmovement 0
 	applymovement LOCALID_MAXIE, Common_Movement_Delay48
 	waitmovement 0
+	setflag FLAG_TEMP_1
+	goto MtChimney_EventScript_MaxieBattle
+	releaseall
+	end
+
+	MtChimney_EventScript_MaxieBattle:
 	trainerbattle_double TRAINER_MAXIE_MT_CHIMNEY, MtChimney_Text_MaxieIntro, MtChimney_Text_MaxieDefeat,Route104_Text_GinaNotEnoughMons
 	special HealPlayerParty
 	//msgbox MtChimney_Text_MaxieJustWatchThePowerOfTheOrb, MSGBOX_DEFAULT
