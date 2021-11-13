@@ -1453,6 +1453,10 @@ const u32 gBattleAnimBgImage_FocusBlast[] = INCBIN_U32("graphics/battle_anims/ba
 const u32 gBattleAnimBgPalette_FocusBlast[] = INCBIN_U32("graphics/battle_anims/backgrounds/new/focus_blast.gbapal.lz");
 const u32 gBattleAnimBgTilemap_FocusBlast[] = INCBIN_U32("graphics/battle_anims/backgrounds/new/focus_blast.bin");
 
+const u32 gBattleAnimBgImage_DarkTether[] = INCBIN_U32("graphics/battle_anims/backgrounds/new/dark_tether.4bpp.lz");
+const u32 gBattleAnimBgPalette_DarkTether[] = INCBIN_U32("graphics/battle_anims/backgrounds/new/dark_tether.gbapal.lz");
+const u32 gBattleAnimBgTilemap_DarkTether[] = INCBIN_U32("graphics/battle_anims/backgrounds/new/dark_tether.bin");
+
 const u32 gBattleAnimBgPalette_GarbageFalls[] = INCBIN_U32("graphics/battle_anims/backgrounds/new/garbage_falls.gbapal.lz");
 
 const u32 gBattleAnimBgImage_GigaImpactOpponent[] = INCBIN_U32("graphics/battle_anims/backgrounds/new/giga_impact_opponent.4bpp.lz");

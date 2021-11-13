@@ -724,6 +724,8 @@ static const u8 sText_Buff1WasRevived[] = _("{B_BUFF1} was revived!");
 static const u8 sText_PkmnCutsSpaAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncuts {B_DEF_NAME_WITH_PREFIX}'s Sp. Atk!");
 static const u8 sText_TorridActivatesWaterPrevention[] =_("{B_DEF_NAME_WITH_PREFIX} coated itself in Magma\n Armor. Water is now useless!");
 static const u8 sText_PkmnLevitatedGroundMovesMiss[] = _("{B_DEF_NAME_WITH_PREFIX} levitates. Ground\n moves can't connect!");
+static const u8 sText_DarkTetherActivates[] = _("A Magic circle encompasses\n the battlefield!");
+static const u8 sText_DarkTetherEnds[] = _("The Magic disappeared!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1311,11 +1313,13 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_RESETSVERTEBRAKESSTATLEVELS - 12] = sText_ResetsVertebrakesStatLevels,
     [STRINGID_TORRIDACTIVATESWATERPREVENTION - 12] = sText_TorridActivatesWaterPrevention,
     [STRINGID_PKMNLEVITATEDGROUNDMOVESMISS - 12] = sText_PkmnLevitatedGroundMovesMiss,
+    [STRINGID_DARKTETHERACTIVATES - 12] = sText_DarkTetherActivates,
+    [STRINGID_DARKTETHERENDS - 12] = sText_DarkTetherEnds,
 };
 
 const u16 gTerrainStringIds[] =
 {
-    STRINGID_TERRAINBECOMESMISTY, STRINGID_TERRAINBECOMESGRASSY, STRINGID_TERRAINBECOMESELECTRIC, STRINGID_TERRAINBECOMESPSYCHIC
+    STRINGID_TERRAINBECOMESMISTY, STRINGID_TERRAINBECOMESGRASSY, STRINGID_TERRAINBECOMESELECTRIC, STRINGID_TERRAINBECOMESPSYCHIC, STRINGID_DARKTETHERACTIVATES
 };
 
 const u16 gTerrainPreventsStringIds[] =

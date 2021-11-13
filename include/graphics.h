@@ -6344,6 +6344,9 @@ extern const u32 gBattleAnimBgTilemap_ZMoveActivate[];
 extern const u32 gBattleAnimBgImage_ZMoveMountain[];
 extern const u32 gBattleAnimBgPalette_ZMoveMountain[];
 extern const u32 gBattleAnimBgTilemap_ZMoveMountain[];
+extern const u32 gBattleAnimBgImage_DarkTether[];
+extern const u32 gBattleAnimBgPalette_DarkTether[];
+extern const u32 gBattleAnimBgTilemap_DarkTether[];
 
 
 extern const u32 gMetalShineGfx[];

@@ -7222,6 +7222,10 @@ static void HandleTerrainMove(u32 moveEffect)
         statusFlag = STATUS_FIELD_PSYCHIC_TERRAIN, timer = &gFieldTimers.psychicTerrainTimer;
         gBattleCommunication[MULTISTRING_CHOOSER] = 3;
         break;
+    case EFFECT_DARK_TETHER:
+        statusFlag = STATUS_FIELD_DARK_TETHER, timer = &gFieldTimers.darkTetherTimer;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 2;
+        break;
     }
 
     if (gFieldStatuses & statusFlag || statusFlag == 0)

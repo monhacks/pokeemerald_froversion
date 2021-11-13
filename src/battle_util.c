@@ -1697,6 +1697,7 @@ enum
     ENDTURN_POISON_FIELD,
     ENDTURN_POISON_FIELD_BATTLERS,
     ENDTURN_RAIN_HEAL,
+    ENDTURN_DARK_TETHER,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -2157,6 +2158,15 @@ u8 DoFieldEndTurnEffects(void)
             {
                 gFieldStatuses &= ~(STATUS_FIELD_PSYCHIC_TERRAIN);
                 BattleScriptExecute(BattleScript_PsychicTerrainEnds);
+                effect++;
+            }
+            gBattleStruct->turnCountersTracker++;
+            break;
+        case ENDTURN_DARK_TETHER:
+            if (gFieldStatuses & STATUS_FIELD_DARK_TETHER && --gFieldTimers.darkTetherTimer == 0)
+            {
+                gFieldStatuses &= ~(STATUS_FIELD_DARK_TETHER);
+                BattleScriptExecute(BattleScript_DarkTetherEnds);
                 effect++;
             }
             gBattleStruct->turnCountersTracker++;
@@ -4243,6 +4253,13 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (TryChangeBattleTerrain(battler, STATUS_FIELD_PSYCHIC_TERRAIN, &gFieldTimers.psychicTerrainTimer))
             {
                 BattleScriptPushCursorAndCallback(BattleScript_PsychicSurgeActivates);
+                effect++;
+            }
+            break;
+        case ABILITY_DARK_TETHER:
+            if (TryChangeBattleTerrain(battler, STATUS_FIELD_DARK_TETHER, &gFieldTimers.darkTetherTimer))
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_DarkTetherActivates);
                 effect++;
             }
             break;

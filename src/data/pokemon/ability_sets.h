@@ -1018,6 +1018,15 @@ static const struct AbilitySetter sContraramAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sDracasterAbilitySet[] = 
+{
+    {ABILITY_DARK_TETHER, 1},
+    {ABILITY_PRESSURE, 1},
+    {ABILITY_MAGIC_BOUNCE, 1},
+    {ABILITY_MAGICIAN, 1},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter sTogekissAbilitySet[] = 
 {
     {ABILITY_HUSTLE, 1},
@@ -1288,6 +1297,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_RABATOAST] = sRabatoastAbilitySet,
     [SPECIES_HAAGLET] = sHaagletAbilitySet,
     [SPECIES_WARTHAAG] = sHaagletAbilitySet,
+    [SPECIES_DRACASTER] = sDracasterAbilitySet,
     
 
 

@@ -178,6 +178,7 @@ static const u8 sGooeyDescription[] = _("Lowers Speed on contact.");
 static const u8 sAerilateDescription[] = _("Normal moves become Flying.");
 static const u8 sParentalBondDescription[] = _("Moves hit twice.");
 static const u8 sDarkAuraDescription[] = _("Boosts Dark moves.");
+static const u8 sDarkTetherDescription[] = _("Makes battlefield magical.");
 static const u8 sFairyAuraDescription[] = _("Boosts Fairy moves.");
 static const u8 sAuraBreakDescription[] = _("Reverse aura abilities.");
 static const u8 sPrimordialSeaDescription[] = _("Summons heavy rain.");
@@ -547,6 +548,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MEGA_HOUNDOOM_ABILITY] = _("Torrid"),
     [ABILITY_MEGA_GENGAR_ABILITY] = _("Malevolent"),
     [ABILITY_INVERTEBRAKE_HIDDEN_ABILITY] = _("MotorCloak"),
+    [ABILITY_DARK_TETHER] = _("Dark Tether"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -832,4 +834,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_MEGA_HOUNDOOM_ABILITY] = sMercilessDescription,
     [ABILITY_MEGA_GENGAR_ABILITY] = sMercilessDescription,
     [ABILITY_INVERTEBRAKE_HIDDEN_ABILITY] = sMercilessDescription,
+    [ABILITY_DARK_TETHER] = sDarkTetherDescription,
 };

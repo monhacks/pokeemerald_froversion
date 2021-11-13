@@ -5845,6 +5845,12 @@ BattleScript_PsychicTerrainEnds::
 	playanimation BS_ATTACKER, B_ANIM_RESTORE_BG, NULL
 	end2
 
+BattleScript_DarkTetherEnds::
+	printstring STRINGID_DARKTETHERENDS
+	waitmessage 0x40
+	playanimation BS_ATTACKER, B_ANIM_RESTORE_BG, NULL
+	end2
+
 BattleScript_MudSportEnds::
 	printstring STRINGID_MUDSPORTENDS
 	waitmessage 0x40
@@ -7402,6 +7408,14 @@ BattleScript_PsychicSurgeActivates::
 	pause 0x20
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_TERRAINBECOMESPSYCHIC
+	waitstate
+	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
+	end3
+
+BattleScript_DarkTetherActivates::
+	pause 0x20
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_DARKTETHERACTIVATES
 	waitstate
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 	end3
