@@ -430,13 +430,13 @@ DewfordTown_Gym_Text_ReceivedKnuckleBadge: @ 81FD07D
 	.string "from Wesss.$"
 
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis: @ 81FD0A8
-	.string "The KNUCKLE BADGE makes all Pokémon\n"
+	.string "The Strike Badge makes all Pokémon\n"
 	.string "up to Level 30, even those you get in\l"
 	.string "trades, obey without question.\p"
 	.string "And, you'll be able to use the HM move\n"
-	.string "FLASH outside of battle.\p"
-	.string "If you'd like, use this TECHNICAL\n"
-	.string "MACHINE, too.$"
+	.string "Flash outside of battle.\p"
+	.string "If you'd like, use this Technical\n"
+	.string "Machine, too.$"
 
 DewfordTown_Gym_Text_ExplainBulkUp: @ 81FD181
 	.string "That TM11 contains Sunny Day.\p"
@@ -454,15 +454,15 @@ DewfordTown_Gym_Text_BrawlyPostBattle: @ 81FD20D
 	.string "among Trainers one day!$"
 
 DewfordTown_Gym_Text_GymStatue: @ 81FD272
-	.string "DEWFORD TOWN Pokémon GYM$"
+	.string "Raintree Island Pokémon GYM$"
 
 DewfordTown_Gym_Text_GymStatueCertified: @ 81FD28B
-	.string "DEWFORD TOWN Pokémon GYM\p"
-	.string "BRAWLY'S CERTIFIED Trainers:\n"
+	.string "Raintree Island Pokémon Gym\p"
+	.string "Wes's Certified Trainers:\n"
 	.string "{PLAYER}$"
 
 DewfordTown_Gym_Text_BrawlyPreRematch: @ 81FD2C4
-	.string "BRAWLY: A wave may draw back, but it\n"
+	.string "Wes: A wave may draw back, but it\n"
 	.string "always returns to the shore.\p"
 	.string "A giant wave of a talent like you…\n"
 	.string "I knew you would return!\p"

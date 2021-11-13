@@ -1258,10 +1258,10 @@ PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon: @ 82057A2
 	.string "Hm… Then I guess you're going to\n"
 	.string "become a Trainer like me, Steak.\p"
 	.string "That's great news!\n"
-	.string "I'll be looking forward to it crushing\l"
+	.string "I'll be looking forward to crushing\l"
 	.string "you!\p"
 	.string "But I won't accept a challenge from you\n"
-	.string "yet. I can tell you're still too weak.\p"
+	.string "yet. I can tell you're still too weak.$\p"
 
 
 PetalburgCity_Gym_Text_WallyIdLikeAPokemon: @ 82058B1

@@ -353,7 +353,7 @@
       "flag": "FLAG_HIDE_MT_CHIMNEY_TRAINERS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "graphics_id": "OBJ_EVENT_GFX_MESSENGER",
       "x": 29,
       "y": 7,
       "elevation": 3,
