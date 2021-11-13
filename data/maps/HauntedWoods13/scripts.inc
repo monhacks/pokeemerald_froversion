@@ -8,7 +8,7 @@ HauntedWoods13_Dracster_Battle:: @ 8239722
 	playmoncry SPECIES_RAYQUAZA, 2
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_DRACASTER, 80, ITEM_NONE
+	setwildbattle SPECIES_DRACASTER, 50, ITEM_NONE
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate

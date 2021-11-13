@@ -18,3 +18,8 @@ Riptoryps
 **Type: Fire/Dragon**
 
 Learnset
+
+Well… that’s an organizational issue they ought to fix
+If you change the incbin to say .bin.lz, or .bin.whatever compression it uses, you can then rename the file to how it’s supposed to be and decompress it with gbagfx
+tools/gbagfx/gbagfx path/to/compressed/file.bin.lz path/to/compressed/file.bin
+Gbagfx relies on file extensions to do its job, so the rename is required if you were to do that 
