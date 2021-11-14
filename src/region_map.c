@@ -339,7 +339,8 @@ static const u8 sMapHealLocations[][3] =
     {MAP_GROUP(ROUTE132), MAP_NUM(ROUTE132), 0},
     {MAP_GROUP(ROUTE133), MAP_NUM(ROUTE133), 0},
     {MAP_GROUP(ROUTE134), MAP_NUM(ROUTE134), 0},
-    {MAP_GROUP(DEWFORD_TOWN), MAP_NUM(DEWFORD_TOWN), HEAL_LOCATION_DEWFORD_TOWN}
+    {MAP_GROUP(DEWFORD_TOWN), MAP_NUM(DEWFORD_TOWN), HEAL_LOCATION_DEWFORD_TOWN},
+    {MAP_GROUP(WALMORE_TOWN), MAP_NUM(WALMORE_TOWN), HEAL_LOCATION_WALMORE_TOWN},
 };
 
 static const u8 *const sEverGrandeCityNames[] =
@@ -1218,6 +1219,8 @@ static u8 GetMapsecType(u16 mapSecId)
         return FlagGet(FLAG_LANDMARK_BATTLE_FRONTIER) ? MAPSECTYPE_BATTLE_FRONTIER : MAPSECTYPE_NONE;
     case MAPSEC_SOUTHERN_ISLAND:
         return FlagGet(FLAG_LANDMARK_SOUTHERN_ISLAND) ? MAPSECTYPE_ROUTE : MAPSECTYPE_NONE;
+    case MAPSEC_WALMORE_TOWN:
+        return FlagGet(FLAG_VISITED_WALMORE_TOWN) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     default:
         return MAPSECTYPE_ROUTE;
     }
@@ -2003,6 +2006,9 @@ static void CB_ExitFlyMap(void)
                     break;
                 case MAPSEC_LAKE_MEAD_VILLAGE:
                     SetWarpDestinationToHealLocation(gSaveBlock2Ptr->playerGender == MALE ? HEAL_LOCATION_LAKE_MEAD_VILLAGE : HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE);
+                    break;
+                case MAPSEC_WALMORE_TOWN:
+                    SetWarpDestinationToHealLocation(HEAL_LOCATION_WALMORE_TOWN);
                     break;
                 case MAPSEC_EVER_GRANDE_CITY:
                     SetWarpDestinationToHealLocation(FlagGet(FLAG_LANDMARK_POKEMON_LEAGUE) && sFlyMap->regionMap.posWithinMapSec == 0 ? HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE : HEAL_LOCATION_EVER_GRANDE_CITY);

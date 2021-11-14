@@ -3,7 +3,7 @@
   "name": "WalmoreTown",
   "layout": "LAYOUT_WALMORE_TOWN",
   "music": "MUS_LITTLEROOT",
-  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "region_map_section": "MAPSEC_WALMORE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",

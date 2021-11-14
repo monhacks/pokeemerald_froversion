@@ -2,8 +2,12 @@
 .set LOCALID_FREEWOMAN, 2
 
 WalmoreTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, WalmoreTown_OnTransition
 	.byte 0
 
+WalmoreTown_OnTransition:
+	setflag FLAG_VISITED_WALMORE_TOWN
+	end
 
 // Scripts	
 
