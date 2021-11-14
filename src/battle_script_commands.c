@@ -2237,16 +2237,16 @@ static void Cmd_resultmessage(void)
     u32 stringId = 0;
     if (gBattleControllerExecFlags)
         return;
-    if (gMoveResultFlags & MOVE_RESULT_MISSED && (!(gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE) || gBattleCommunication[6] > 2) && IsSpeciesOneOf(gBattleMons[gBattlerTarget].species, gLevitateMons))
+    if (gMoveResultFlags & MOVE_RESULT_MISSED && (!(gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE) || gBattleCommunication[6] > 2))
     {
-        if (gBattleCommunication[6] > 2) // Wonder Guard or Levitate - show the ability pop-up
-            stringId = STRINGID_PKMNLEVITATEDGROUNDMOVESMISS;
+        if (gBattleCommunication[6] == 3) // Wonder Guard - show the ability pop-up
+            CreateAbilityPopUp(gBattlerTarget, gBattleMons[gBattlerTarget].ability, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
+            stringId = gMissStringIds[gBattleCommunication[6]];
             gBattleCommunication[MSG_DISPLAY] = 1;
     }
-    else if (gMoveResultFlags & MOVE_RESULT_MISSED && (!(gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE) || gBattleCommunication[6] > 2))
+    if (gMoveResultFlags & MOVE_RESULT_MISSED && (!(gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE) || gBattleCommunication[6] > 2))
     {
-        if (gBattleCommunication[6] > 2) // Wonder Guard or Levitate - show the ability pop-up
-            CreateAbilityPopUp(gBattlerTarget, gBattleMons[gBattlerTarget].ability, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
+        if (gBattleCommunication[6] == 4) //  Levitate - don't show the ability pop-up
             stringId = gMissStringIds[gBattleCommunication[6]];
             gBattleCommunication[MSG_DISPLAY] = 1;
     }

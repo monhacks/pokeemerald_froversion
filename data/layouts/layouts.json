@@ -4744,10 +4744,10 @@
     {
       "id": "LAYOUT_NIAGARA_VILLAGE",
       "name": "NiagaraVillage_Layout",
-      "width": 21,
-      "height": 32,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "width": 45,
+      "height": 37,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
       "border_filepath": "data/layouts/NiagaraVillage/border.bin",
       "blockdata_filepath": "data/layouts/NiagaraVillage/map.bin"
     },

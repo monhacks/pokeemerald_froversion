@@ -1050,3 +1050,14 @@ gTileset_NiagaraWoodsSecondary::
 	.4byte gMetatiles_NiagaraWoodsSecondary
 	.4byte gMetatileAttributes_NiagaraWoodsSecondary
 	.4byte NULL
+
+	.align 2
+gTileset_NiagaraVillage::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_NiagaraVillage
+	.4byte gTilesetPalettes_NiagaraVillage
+	.4byte gMetatiles_NiagaraVillage
+	.4byte gMetatileAttributes_NiagaraVillage
+	.4byte NULL

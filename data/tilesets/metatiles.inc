@@ -698,3 +698,10 @@ gMetatiles_NiagaraWoodsSecondary::
 	.align 1
 gMetatileAttributes_NiagaraWoodsSecondary::
 	.incbin "data/tilesets/secondary/niagarawoodssecondary/metatile_attributes.bin"
+	.align 1
+gMetatiles_NiagaraVillage::
+	.incbin "data/tilesets/secondary/niagaravillage/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_NiagaraVillage::
+	.incbin "data/tilesets/secondary/niagaravillage/metatile_attributes.bin"
