@@ -100,7 +100,7 @@ LavaridgeTown_Gym_1F_EventScript_GiveOverheat2:: @ 81FE81D
 	clearflag FLAG_BATTLE_RAIN
 	clearflag FLAG_SYS_NO_BAG_USE
 	clearflag FLAG_FORCE_BATTLE_STYLE_SET
-	giveitem ITEM_TM50
+	giveitem ITEM_TM18
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	msgbox LavaridgeTown_Gym_1F_Text_ExplainOverheat, MSGBOX_DEFAULT
@@ -112,7 +112,7 @@ LavaridgeTown_Gym_1F_EventScript_GiveOverheat:: @ 81FE841
 	clearflag FLAG_BATTLE_RAIN
 	clearflag FLAG_SYS_NO_BAG_USE
 	clearflag FLAG_FORCE_BATTLE_STYLE_SET
-	giveitem ITEM_TM50
+	giveitem ITEM_TM18
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_BagIsFull
 	msgbox LavaridgeTown_Gym_1F_Text_ExplainOverheat, MSGBOX_DEFAULT
@@ -362,12 +362,10 @@ LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis: @ 81FF359
 	.string "Don't be shy about taking it!$"
 
 LavaridgeTown_Gym_1F_Text_ExplainOverheat: @ 81FF45C
-	.string "That TM50 contains OVERHEAT.\p"
-	.string "That move inflicts serious damage on\n"
-	.string "the opponent.\p"
-	.string "But it also sharply cuts the Sp. Atk\n"
-	.string "of the Pokémon using it. It might not\l"
-	.string "be suitable for longer battles.$"
+	.string "That TM18 contains Rain Dance.\p"
+	.string "This moves creates a rainy\n"
+	.string "environment that weakens fire and\l"
+	.string "boosts water!$"
 
 LavaridgeTown_Gym_1F_Text_RegisteredFlannery: @ 81FF517
 	.string "Registered Gym Leader Marriott\n"

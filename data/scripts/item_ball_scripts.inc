@@ -59,7 +59,7 @@ Route110_EventScript_ItemElixir:: @ 8290D8E
 	end
 
 Route111_EventScript_ItemTM37:: @ 8290D9B
-	finditem ITEM_TM37
+	finditem ITEM_TM34
 	end
 
 Route111_EventScript_ItemStardust:: @ 8290DA8
@@ -455,7 +455,7 @@ AbandonedShip_HiddenFloorRooms_EventScript_ItemWaterStone:: @ 8291295
 	end
 
 AbandonedShip_HiddenFloorRooms_EventScript_ItemTM18:: @ 82912A2
-	finditem ITEM_TM18
+	finditem ITEM_TM50
 	end
 
 ScorchedSlab_EventScript_ItemTM08:: @ 82912AF
@@ -499,7 +499,7 @@ MtPyre_5F_EventScript_ItemLaxIncense:: @ 8291324
 	end
 
 MtPyre_6F_EventScript_ItemTM30:: @ 8291331
-	finditem ITEM_TM30
+	finditem ITEM_TM40
 	end
 
 MtPyre_Exterior_EventScript_ItemMaxPotion:: @ 829133E
@@ -611,7 +611,7 @@ VictoryRoad_1F_EventScript_ItemPPUp:: @ 8291490
 	end
 
 VictoryRoad_B1F_EventScript_ItemTM29:: @ 829149D
-	finditem ITEM_TM29
+	finditem ITEM_TM03
 	end
 
 VictoryRoad_B1F_EventScript_ItemFullRestore:: @ 82914AA

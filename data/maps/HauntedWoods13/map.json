@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "HauntedWoods13_Dracster_Battle",
-      "flag": "FLAG_DEFEATED_RAYQUAZA"
+      "flag": "FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT"
     }
   ],
   "warp_events": [

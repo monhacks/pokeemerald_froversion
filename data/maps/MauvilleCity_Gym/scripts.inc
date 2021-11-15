@@ -134,7 +134,7 @@ MauvilleCity_Gym_EventScript_GiveShockWave2:: @ 820DF8D
 	end
 
 MauvilleCity_Gym_EventScript_GiveShockWave:: @ 820DFB1
-	giveitem ITEM_TM34
+	giveitem ITEM_TM37
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_BagIsFull
 	msgbox MauvilleCity_Gym_Text_ExplainShockWave, MSGBOX_DEFAULT
@@ -368,7 +368,7 @@ MauvilleCity_Gym_Text_WattsonDefeat: @ 820E734
 	.string "Wahahahah!\n"
 	.string "Fine, I lost!\p"
 	.string "You ended up giving me a thrill!\n"
-	.string "Take this BADGE!$"
+	.string "Take this Badge!$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge: @ 820E77F
 	.string "{PLAYER} received the DYNAMO BADGE\n"
@@ -383,9 +383,9 @@ MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis: @ 820E7AA
 	.string "You should take this, too!$"
 
 MauvilleCity_Gym_Text_ExplainShockWave: @ 820E844
-	.string "That TM34 there contains SHOCK WAVE.\p"
-	.string "It's a trustworthy move that never\n"
-	.string "misses! You can count on it!\p"
+	.string "That TM37 there contains Sandstorm.\p"
+	.string "It's a trustworthy move that chips\n"
+	.string "away at opponents.\p"
 	.string "… … … … … …$"
 
 MauvilleCity_Gym_Text_RegisteredWattson: @ 820E8B5

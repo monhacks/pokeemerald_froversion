@@ -1,10 +1,24 @@
 HauntedWoods13_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, HauntedWoos13_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, HauntedWoods13_OnTransition
 	.byte 0
 
 HauntedWoos13_OnResume: @ 82396C8
 	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, HauntedWoods13_EventScript_TryRemoveDracaster
 	end
+
+HauntedWoods13_OnTransition::
+	compare VAR_SKY_PILLAR_STATE, 2
+	goto_if_ge HauntedWoods13_TryShowDracaster
+	end
+
+HauntedWoods13_TryShowDracaster::
+	call_if_unset FLAG_DEFEATED_RAYQUAZA, HauntedWoods13_ShowDracaster
+	return
+
+HauntedWoods13_ShowDracaster:
+	clearflag FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT
+	return
 
 
 HauntedWoods13_EventScript_TryRemoveDracaster:: @ 82396D2

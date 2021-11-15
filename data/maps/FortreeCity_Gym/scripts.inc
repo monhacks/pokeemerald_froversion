@@ -62,7 +62,7 @@ FortreeCity_Gym_EventScript_GiveAerialAce2:: @ 8216646
 	clearflag FLAG_BATTLE_HAUNTING
 	clearflag FLAG_SYS_NO_BAG_USE
 	clearflag FLAG_FORCE_BATTLE_STYLE_SET
-	giveitem ITEM_TM40
+	giveitem ITEM_TM30
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	msgbox FortreeCity_Gym_Text_ExplainAerialAce, MSGBOX_DEFAULT
@@ -74,7 +74,7 @@ FortreeCity_Gym_EventScript_GiveAerialAce:: @ 821666A
 	clearflag FLAG_BATTLE_HAUNTING
 	clearflag FLAG_SYS_NO_BAG_USE
 	clearflag FLAG_FORCE_BATTLE_STYLE_SET
-	giveitem ITEM_TM40
+	giveitem ITEM_TM30
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_BagIsFull
 	msgbox FortreeCity_Gym_Text_ExplainAerialAce, MSGBOX_DEFAULT
@@ -283,9 +283,9 @@ FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis: @ 8216F17
 	.string "This is a gift from me.$"
 
 FortreeCity_Gym_Text_ExplainAerialAce: @ 8216FEC
-	.string "TM40 contains AERIAL ACE.\p"
-	.string "Its speed…\n"
-	.string "No Pokémon should be able to avoid it.\p"
+	.string "TM40 contains Shadow Ball.\p"
+	.string "Its damage is powerful…\n"
+	.string "and it has a shot to lower SpDef…\p"
 	.string "… … … … … …$"
 
 FortreeCity_Gym_Text_RegisteredWinona: @ 8217044

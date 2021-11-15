@@ -3,7 +3,7 @@
   "name": "NiagaraVillage",
   "layout": "LAYOUT_NIAGARA_VILLAGE",
   "music": "MUS_RG_LAVENDER",
-  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "region_map_section": "MAPSEC_NIAGARA_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",

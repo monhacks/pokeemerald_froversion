@@ -413,6 +413,7 @@ const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_VIRIDIAN_CITY]              = {0, 0, 1, 1, sMapName_ViridianCity},
     [MAPSEC_VIRIDIAN_FOREST]            = {0, 0, 1, 1, sMapName_ViridianForest},
     [MAPSEC_WALMORE_TOWN]               = {5, 12, 1, 1, sMapName_WalmoreTown},
+    [MAPSEC_NIAGARA_VILLAGE]            = {11,-1, 1, 1, sMapName_NiagaraVillage},
     [MAPSEC_WATER_LABYRINTH]            = {0, 0, 1, 1, sMapName_WaterLabyrinth},
     [MAPSEC_WATER_PATH]                 = {0, 0, 1, 1, sMapName_WaterPath},
     [MAPSEC_WEEPTH_CHAMBER]             = {0, 0, 1, 1, sMapName_WeepthChamber},

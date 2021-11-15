@@ -131,7 +131,7 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated:: @ 8224F82
 	end
 
 SootopolisCity_Gym_1F_EventScript_GiveWaterPulse:: @ 8224FD4
-	giveitem ITEM_TM03
+	giveitem ITEM_TM29
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_BagIsFull
 	msgbox SootopolisCity_Gym_1F_Text_ExplainWaterPulse, MSGBOX_DEFAULT
@@ -142,7 +142,7 @@ SootopolisCity_Gym_1F_EventScript_GiveWaterPulse:: @ 8224FD4
 	return
 
 SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2:: @ 8224FF7
-	giveitem ITEM_TM03
+	giveitem ITEM_TM29
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	msgbox SootopolisCity_Gym_1F_Text_ExplainWaterPulse, MSGBOX_DEFAULT
@@ -271,9 +271,9 @@ SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis: @ 82255BE
 
 SootopolisCity_Gym_1F_Text_ExplainWaterPulse: @ 82256C1
 	.string "The Technical Machine I handed you\n"
-	.string "contains WATER PULSE.\p"
-	.string "In use, it will occasionally confuse\n"
-	.string "the target with ultrasonic waves.\p"
+	.string "contains Psychic.\p"
+	.string "It is a very strong attack that\n"
+	.string "may lower the targets SpDef.\p"
 	.string "… … … … … …$"
 
 SootopolisCity_Gym_1F_Text_RegisteredJuan: @ 822574D
