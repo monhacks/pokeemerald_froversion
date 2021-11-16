@@ -67,13 +67,14 @@ MtChimney_EventScript_Maxie:: @ 822EE0B
 	releaseall
 	end
 
-	MtChimney_EventScript_MaxieBattle:
-	trainerbattle_double TRAINER_MAXIE_MT_CHIMNEY, MtChimney_Text_MaxieIntro, MtChimney_Text_MaxieDefeat,Route104_Text_GinaNotEnoughMons
+MtChimney_EventScript_MaxieBattle:
+	trainerbattle_double TRAINER_MAXIE_MT_CHIMNEY, MtChimney_Text_MaxieIntro, MtChimney_Text_MaxieDefeat,Route104_Text_GinaNotEnoughMons, MtChimneyHoundoomBattle
+
+MtChimneyHoundoomBattle::
 	special HealPlayerParty
-	//msgbox MtChimney_Text_MaxieJustWatchThePowerOfTheOrb, MSGBOX_DEFAULT
-	//closemessage
-	//trainerbattle_no_intro TRAINER_MEGA_HOUNDOOM_MT_CHIMNEY, MtChimney_Text_MaxieDefeat
-	trainerbattle_double TRAINER_MEGA_HOUNDOOM_MT_CHIMNEY, MtChimney_Text_MaxieJustWatchThePowerOfTheOrb, MtChimney_Text_MaxieDefeat, Route104_Text_GinaNotEnoughMons
+	msgbox MtChimney_Text_MaxieJustWatchThePowerOfTheOrb, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_MEGA_HOUNDOOM_MT_CHIMNEY, MtChimney_Text_MaxieDefeat
 	msgbox MtChimney_Text_MaxieYouHaventSeenLastOfMagma, MSGBOX_DEFAULT
 	delay 30
 	fadescreen FADE_TO_BLACK

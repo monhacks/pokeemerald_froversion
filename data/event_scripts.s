@@ -1225,3 +1225,9 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/HauntedWoods12/scripts.inc"
 
 	.include "data/maps/HauntedWoods13/scripts.inc"
+
+	.include "data/maps/LockportTrail_BF1LeftConnection/scripts.inc"
+
+	.include "data/maps/LockportTrail_BF2TopConnection/scripts.inc"
+
+	.include "data/maps/LockportTrail_BF1RightConnection/scripts.inc"

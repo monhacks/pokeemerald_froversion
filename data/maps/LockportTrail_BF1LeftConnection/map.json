@@ -1,0 +1,39 @@
+{
+  "id": "MAP_LOCKPORT_TRAIL_BF1LEFT_CONNECTION",
+  "name": "LockportTrail_BF1LeftConnection",
+  "layout": "LAYOUT_LOCKPORT_TRAIL_BF1LEFT_CONNECTION",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_ROUTE_101",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "right",
+      "offset": 6,
+      "map": "MAP_LOCKPORT_TRAIL_BF1"
+    },
+    {
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_LOCKPORT_TRAIL_BF2TOP_CONNECTION"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

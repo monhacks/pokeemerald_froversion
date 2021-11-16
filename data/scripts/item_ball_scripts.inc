@@ -657,3 +657,15 @@ MagmaHideout_4F_EventScript_MaxRevive:: @ 829151F
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope:: @ 829152C
 	finditem ITEM_ESCAPE_ROPE
 	end
+
+SummitCaverns_EventScript_MaxRevive:: @ 8290CD8
+	finditem ITEM_MAX_REVIVE
+	end
+
+SummitCaverns_EventScript_IceCamo::
+	finditem ITEM_ICE_CAMOUFLAGE
+	end
+
+SummitCaverns_EventScript_XDef::
+	finditem ITEM_X_DEFENSE
+	end

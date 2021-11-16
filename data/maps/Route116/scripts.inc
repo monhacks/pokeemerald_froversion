@@ -310,14 +310,7 @@ Route116_EventScript_Janice:: @ 81F2F7C
 	end
 
 Route116_EventScript_Karen:: @ 81F2F93
-	trainerbattle_single TRAINER_KAREN_1, Route116_Text_KarenIntro, Route116_Text_KarenDefeat, Route116_EventScript_TryRegisterKarenAfterBattle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	compare VAR_RESULT, TRUE
-	goto_if_eq Route116_EventScript_RematchKaren
-	setvar VAR_0x8004, TRAINER_KAREN_1
-	specialvar VAR_RESULT, IsTrainerRegistered
-	compare VAR_RESULT, FALSE
-	goto_if_eq Route116_EventScript_TryRegisterKaren
+	trainerbattle_single TRAINER_KAREN_1, Route116_Text_KarenIntro, Route116_Text_KarenDefeat
 	msgbox Route116_Text_KarenPostBattle, MSGBOX_DEFAULT
 	release
 	end

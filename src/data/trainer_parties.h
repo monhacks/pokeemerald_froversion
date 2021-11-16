@@ -3867,12 +3867,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Karen2[] = {
     {
     .iv = 20,
     .lvl = 26,
-    .species = SPECIES_SHROOMISH,
+    .species = SPECIES_GOLBAT,
     },
     {
     .iv = 20,
     .lvl = 26,
-    .species = SPECIES_WHISMUR,
+    .species = SPECIES_GRIMER,
     }
 };
 
@@ -3880,38 +3880,38 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Karen3[] = {
     {
     .iv = 30,
     .lvl = 29,
-    .species = SPECIES_SHROOMISH,
+    .species = SPECIES_CRACTHORN,
     },
     {
     .iv = 30,
-    .lvl = 29,
-    .species = SPECIES_LOUDRED,
+    .lvl = 28,
+    .species = SPECIES_GLOOM,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Karen4[] = {
     {
     .iv = 40,
-    .lvl = 32,
-    .species = SPECIES_BRELOOM,
+    .lvl = 27,
+    .species = SPECIES_HOUNDOUR,
     },
     {
     .iv = 40,
-    .lvl = 32,
-    .species = SPECIES_LOUDRED,
+    .lvl = 26,
+    .species = SPECIES_CLEFAIRY,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Karen5[] = {
     {
     .iv = 50,
-    .lvl = 35,
-    .species = SPECIES_BRELOOM,
+    .lvl = 27,
+    .species = SPECIES_OCTIRE,
     },
     {
     .iv = 50,
-    .lvl = 35,
-    .species = SPECIES_EXPLOUD,
+    .lvl = 27,
+    .species = SPECIES_PILOPOO,
     }
 };
 

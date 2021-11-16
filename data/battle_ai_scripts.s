@@ -769,7 +769,7 @@ AI_CBM_Substitute: @ 82DC568
 	is_first_turn_for AI_USER
 	if_equal 1, Score_Plus15
 	if_status2 AI_USER, STATUS2_SUBSTITUTE, Score_Minus30
-	if_hp_less_than AI_USER, 26, Score_Minus10
+	if_hp_less_than AI_USER, 26, Score_Minus30
 	end
 
 AI_CBM_LeechSeed: @ 82DC57A

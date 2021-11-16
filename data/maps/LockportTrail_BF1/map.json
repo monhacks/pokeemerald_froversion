@@ -12,9 +12,37 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "direction": "left",
+      "offset": -6,
+      "map": "MAP_LOCKPORT_TRAIL_BF1LEFT_CONNECTION"
+    },
+    {
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_LOCKPORT_TRAIL_BF2TOP_CONNECTION"
+    },
+    {
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_LOCKPORT_TRAIL_BF1RIGHT_CONNECTION"
+    }
+  ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 38,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SummitCaverns_EventScript_XDef",
+      "flag": "FLAG_ITEM_SUMMIT_CAVERNS_X_DEF"
+    }
   ],
   "warp_events": [
     {
@@ -33,35 +61,35 @@
     },
     {
       "x": 44,
-      "y": 4,
+      "y": 3,
       "elevation": 0,
       "dest_map": "MAP_LOCKPORT_TRAIL",
       "dest_warp_id": 3
     },
     {
       "x": 38,
-      "y": 35,
+      "y": 34,
       "elevation": 0,
       "dest_map": "MAP_LOCKPORT_TRAIL",
       "dest_warp_id": 4
     },
     {
       "x": 25,
-      "y": 35,
+      "y": 34,
       "elevation": 0,
       "dest_map": "MAP_LOCKPORT_TRAIL_BF2",
       "dest_warp_id": 0
     },
     {
       "x": 19,
-      "y": 8,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_LOCKPORT_TRAIL_BF2",
       "dest_warp_id": 1
     },
     {
       "x": 15,
-      "y": 18,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_LOCKPORT_TRAIL_BF2",
       "dest_warp_id": 2

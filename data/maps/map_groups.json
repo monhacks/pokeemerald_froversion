@@ -143,7 +143,10 @@
     "DeleteThis",
     "HauntedWoods2",
     "HauntedWoods6",
-    "HauntedWoods7"
+    "HauntedWoods7",
+    "LockportTrail_BF1LeftConnection",
+    "LockportTrail_BF2TopConnection",
+    "LockportTrail_BF1RightConnection"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",

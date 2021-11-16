@@ -305,7 +305,7 @@
       "id": "LAYOUT_ROUTE115",
       "name": "Route115_Layout",
       "width": 40,
-      "height": 80,
+      "height": 88,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/Route115/border.bin",
@@ -5210,6 +5210,36 @@
       "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
       "border_filepath": "data/layouts/HauntedWoods13/border.bin",
       "blockdata_filepath": "data/layouts/HauntedWoods13/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOCKPORT_TRAIL_BF1LEFT_CONNECTION",
+      "name": "LockportTrail_BF1LeftConnection_Layout",
+      "width": 6,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave2",
+      "border_filepath": "data/layouts/LockportTrail_BF1LeftConnection/border.bin",
+      "blockdata_filepath": "data/layouts/LockportTrail_BF1LeftConnection/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOCKPORT_TRAIL_BF2TOP_CONNECTION",
+      "name": "LockportTrail_BF2TopConnection_Layout",
+      "width": 56,
+      "height": 6,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave2",
+      "border_filepath": "data/layouts/LockportTrail_BF2TopConnection/border.bin",
+      "blockdata_filepath": "data/layouts/LockportTrail_BF2TopConnection/map.bin"
+    },
+    {
+      "id": "LAYOUT_LOCKPORT_TRAIL_BF1RIGHT_CONNECTION",
+      "name": "LockportTrail_BF1RightConnection_Layout",
+      "width": 6,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave2",
+      "border_filepath": "data/layouts/LockportTrail_BF1RightConnection/border.bin",
+      "blockdata_filepath": "data/layouts/LockportTrail_BF1RightConnection/map.bin"
     }
   ]
 }

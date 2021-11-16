@@ -5,6 +5,30 @@ LockportTrail_BF2_MapScripts::
 	.byte 0
 
 
+SummitCaverns_EventScript_MagaGruntBF21:: @ 81F2F93
+	trainerbattle_single TRAINER_KAREN_2, SummitCaverns_Text_MagaGruntBF21Intro, SummitCaverns_Text_MagaGruntBF21Defeat
+	msgbox SummitCaverns_Text_MagaGruntBF21PostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+SummitCaverns_EventScript_MagaGruntBF22:: @ 81F2F93
+	trainerbattle_single TRAINER_KAREN_3, SummitCaverns_Text_MagaGruntBF22Intro, SummitCaverns_Text_MagaGruntBF22Defeat
+	msgbox SummitCaverns_Text_MagaGruntBF22PostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+SummitCaverns_EventScript_MagaGruntBF23:: @ 81F2F93
+	trainerbattle_single TRAINER_KAREN_4, SummitCaverns_Text_MagaGruntBF23Intro, SummitCaverns_Text_MagaGruntBF23Defeat
+	msgbox SummitCaverns_Text_MagaGruntBF23PostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+SummitCaverns_EventScript_MagaGruntBF24:: @ 81F2F93
+	trainerbattle_single TRAINER_KAREN_5, SummitCaverns_Text_MagaGruntBF24Intro, SummitCaverns_Text_MagaGruntBF24Defeat
+	msgbox SummitCaverns_Text_MagaGruntBF24PostBattle, MSGBOX_DEFAULT
+	release
+	end
+
 SummitCaverns_EventScript_LattkaBattleTrigger::
 	lockall
 	goto_if_set FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA_ZENDANO, SummitCaverns_EventScript_LattkaBattleEnd
@@ -22,6 +46,7 @@ SummitCaverns_EventScript_LattkaBattleTrigger::
 	applymovement LOCALID_LATTKA, Common_Movement_FaceDown
 	waitmovement LOCALID_LATTKA
 	msgbox SummitCaverns_Text_YouAgain, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_ZENDANO, SummitCavenrs_Movement_ZendanoLeaves1
 	waitmovement LOCALID_ZENDANO
 	playse SE_WALL_HIT
@@ -30,18 +55,22 @@ SummitCaverns_EventScript_LattkaBattleTrigger::
 	applymovement LOCALID_ZENDANO, SummitCavenrs_Movement_ZendanoLeaves2
 	waitmovement LOCALID_ZENDANO
 	removeobject LOCALID_ZENDANO
-	setflag FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA_ZENDANO
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp_LockportTrail
 	waitmovement OBJ_EVENT_ID_PLAYER
-	goto SummitCaverns_EventScript_LattkaBattleNPC
+	setflag FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA_ZENDANO
+	msgbox SummitCaverns_Text_LattkaChallengesFro, MSGBOX_DEFAULT
 	releaseall
 	end
 
-	SummitCaverns_EventScript_LattkaBattleNPC::
-	trainerbattle_double TRAINER_SUMMIT_CAVERNS_LATTKA_1, SummitCaverns_Text_LattkaBattle, SummitCaverns_Text_LattkaDefeat1, Route104_Text_GinaNotEnoughMons
+SummitCaverns_EventScript_LattkaBattleNPC::
+	trainerbattle_double TRAINER_SUMMIT_CAVERNS_LATTKA_1, SummitCaverns_Text_LattkaBattle, SummitCaverns_Text_LattkaDefeat1, Route104_Text_GinaNotEnoughMons, SummitCaverns_EventScript_LattkaBattleNPCPart2
+	
+SummitCaverns_EventScript_LattkaBattleNPCPart2::
 	special HealPlayerParty
-	trainerbattle_double TRAINER_SUMMIT_CAVERNS_LATTKA_2, SummitCaverns_Text_LattkaBattlePrototype, SummitCaverns_Text_LattkaDefeat2,Route104_Text_GinaNotEnoughMons
+	msgbox SummitCaverns_Text_LattkaBattlePrototype, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_SUMMIT_CAVERNS_LATTKA_2, SummitCaverns_Text_LattkaDefeat2
 	msgbox SummitCaverns_Text_PostLattkaBattle, MSGBOX_DEFAULT
+	closemessage
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_LATTKA
 	removeobject 3
@@ -115,6 +144,11 @@ SummitCavenrs_Movement_ZendanoLeaves1:
 	face_left
 	step_end
 
+Common_Movement_FaceUp_LockportTrail:
+	face_up
+	lock_facing_direction
+	step_end
+
 SummitCaverns_Text_YouAgain:
 	.string "You again?!\p"
 	.string "Lattka: Is this the thug that stole \n"
@@ -152,3 +186,51 @@ SummitCaverns_Text_TestSubjectResults:
 	.string "Zendano: I'll report this to the boss.\n"
 	.string "Have the subject ready for a field\l"
 	.string "test as soon as you can.$"
+
+SummitCaverns_Text_MagaGruntBF21Intro:
+	.string "It's so damp down here!\p"
+	.string "I wish I could have gotten a better\n"
+	.string "assignment!$"
+
+SummitCaverns_Text_MagaGruntBF21Defeat:
+	.string "I can't wait until we no longer\n"
+	.string "have use for this cave!$"
+
+SummitCaverns_Text_MagaGruntBF21PostBattle:
+	.string "I'm starting to question my life\n"
+	.string "choices.$"
+
+SummitCaverns_Text_MagaGruntBF22Intro:
+	.string "How did you make it all the way\n"
+	.string "down here?$"
+
+SummitCaverns_Text_MagaGruntBF22Defeat:
+	.string "You are strong. But not strong\n"
+	.string "enough to stop our science!$"
+
+SummitCaverns_Text_MagaGruntBF22PostBattle:
+	.string "We've got plans bigger than you\n"
+	.string "can imagine!$"
+
+SummitCaverns_Text_MagaGruntBF23Intro:
+	.string "FOR AMERICA!$"
+
+SummitCaverns_Text_MagaGruntBF23Defeat:
+	.string "RETREAT!$"
+
+SummitCaverns_Text_MagaGruntBF23PostBattle:
+	.string "AMERICA WILL HAVE VENGEANCE!$"
+
+SummitCaverns_Text_MagaGruntBF24Intro:
+	.string "Unmasked. Unmuzzled. Unafraid.$"
+
+SummitCaverns_Text_MagaGruntBF24Defeat:
+	.string "Unmasked. Unmuzzled. Unable to\n"
+	.string "breathe...$"
+
+SummitCaverns_Text_MagaGruntBF24PostBattle:
+	.string "Unexpected. Underground.$"
+
+SummitCaverns_Text_LattkaChallengesFro:
+	.string "Lattka: Well com on then, punk.\n"
+	.string "Challenge me if you dare.$"

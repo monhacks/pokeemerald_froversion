@@ -4,7 +4,7 @@ SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp)
 
 
 
-token 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
+token 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
 
 
 I would probably just add an `if` statement to `static void MulByTypeEffectiveness` in `src/battle_util.c`
