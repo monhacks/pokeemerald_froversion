@@ -1394,7 +1394,7 @@ SummitCity_Pokemart_Amneet:
 SummitCity_EventScript_CaveOpenOrClosed::
 	lock
 	faceplayer
-	goto_if_set FLAG_BADGE04_GET, SummitCity_EventScript_Path2Cleared
+	goto_if_set FLAG_MET_ARCHIE_METEOR_FALLS, SummitCity_EventScript_Path2Cleared
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_SummitCity_PlayerFaceHiker
 	applymovement 17, Movement_SummitCity_HikerFacePlayer
 	applymovement 19, Movement_SummitCity_HikerFacePlayer

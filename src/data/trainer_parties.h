@@ -3504,34 +3504,34 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     .lvl = 23,
     .species = SPECIES_SOLROCK,
     .heldItem = ITEM_ROCKY_HELMET,
-    .moves = {MOVE_WILL_O_WISP, MOVE_PSYCHIC, MOVE_STEALTH_ROCK, MOVE_ROCK_POLISH},
+    .moves = {MOVE_PSYCHIC, MOVE_BUG_BUZZ, MOVE_NONE, MOVE_NONE},
     .abilityNum = 0
     },
-    {
-    .iv = 200,
-    .lvl = 24,
-    .species = SPECIES_ARON,
-    .heldItem = ITEM_LIFE_ORB,
-    .moves = {MOVE_ROCK_SLIDE, MOVE_IRON_HEAD, MOVE_TAKE_DOWN, MOVE_ROCK_POLISH},
-    .abilityNum = 1
-    },
-    {
-    .iv = 175,
-    .lvl = 24,
-    .species = SPECIES_SANDSLASH,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_DIG, MOVE_FURY_SWIPES, MOVE_ROCK_TOMB, MOVE_NONE},
-    .abilityNum = 1
-    },
-    {
-    .iv = 225,
-    .lvl = 25,
-    .species = SPECIES_CRACKTUSS,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_INGRAIN, MOVE_ABSORB, MOVE_LEECH_SEED, MOVE_PIN_MISSILE},
-    .abilityNum = 0,
-    .nickname = gText_JordanCactusNickname
-    }
+    // {
+    // .iv = 200,
+    // .lvl = 24,
+    // .species = SPECIES_ARON,
+    // .heldItem = ITEM_LIFE_ORB,
+    // .moves = {MOVE_ROCK_SLIDE, MOVE_IRON_HEAD, MOVE_TAKE_DOWN, MOVE_ROCK_POLISH},
+    // .abilityNum = 1
+    // },
+    // {
+    // .iv = 175,
+    // .lvl = 24,
+    // .species = SPECIES_SANDSLASH,
+    // .heldItem = ITEM_LEFTOVERS,
+    // .moves = {MOVE_DIG, MOVE_FURY_SWIPES, MOVE_ROCK_TOMB, MOVE_NONE},
+    // .abilityNum = 1
+    // },
+    // {
+    // .iv = 225,
+    // .lvl = 25,
+    // .species = SPECIES_CRACKTUSS,
+    // .heldItem = ITEM_SITRUS_BERRY,
+    // .moves = {MOVE_INGRAIN, MOVE_ABSORB, MOVE_LEECH_SEED, MOVE_PIN_MISSILE},
+    // .abilityNum = 0,
+    // .nickname = gText_JordanCactusNickname
+    // }
 };
 
 static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {

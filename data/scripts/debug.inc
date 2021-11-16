@@ -81,8 +81,10 @@ Debug_Script_4::
 	end
 
 Debug_Script_5::
-	setvar VAR_PETALBURG_CITY_STATE, 5
-	warpsilent MAP_PETALBURG_CITY, 0, 6, 9 
+	setflag FLAG_BADGE01_GET
+	setflag FLAG_BADGE02_GET
+	setflag FLAG_BADGE03_GET
+
 	end
 
 Debug_Script_6::
