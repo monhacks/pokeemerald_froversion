@@ -1231,3 +1231,15 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/LockportTrail_BF2TopConnection/scripts.inc"
 
 	.include "data/maps/LockportTrail_BF1RightConnection/scripts.inc"
+
+	.include "data/maps/HomesteadNorth/scripts.inc"
+
+	.include "data/maps/HomesteadCavernsEntrance/scripts.inc"
+
+	.include "data/maps/HomesteadCavernsMainRoom/scripts.inc"
+
+	.include "data/maps/HomesteadCaverns1/scripts.inc"
+
+	.include "data/maps/HomesteadCaverns2/scripts.inc"
+
+	.include "data/maps/HomesteadCaverns3/scripts.inc"

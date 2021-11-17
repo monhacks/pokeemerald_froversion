@@ -4340,6 +4340,8 @@ extern const u32 gItemIcon_EnigmaBerry[];
 extern const u32 gItemIconPalette_EnigmaBerry[];
 extern const u32 gItemIcon_GrilledCheese[];
 extern const u32 gItemIconPalette_GrilledCheese[];
+extern const u32 gItemIcon_Snowflake[];
+extern const u32 gItemIconPalette_Snowflake[];
 // Hold items
 extern const u32 gItemIcon_BrightPowder[];
 extern const u32 gItemIconPalette_BrightPowder[];

@@ -146,7 +146,8 @@
     "HauntedWoods7",
     "LockportTrail_BF1LeftConnection",
     "LockportTrail_BF2TopConnection",
-    "LockportTrail_BF1RightConnection"
+    "LockportTrail_BF1RightConnection",
+    "HomesteadNorth"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",
@@ -348,7 +349,12 @@
     "SootopolisCity_House7",
     "SootopolisCity_LotadAndSeedotHouse",
     "SootopolisCity_MysteryEventsHouse_1F",
-    "SootopolisCity_MysteryEventsHouse_B1F"
+    "SootopolisCity_MysteryEventsHouse_B1F",
+    "HomesteadCavernsEntrance",
+    "HomesteadCavernsMainRoom",
+    "HomesteadCaverns1",
+    "HomesteadCaverns2",
+    "HomesteadCaverns3"
   ],
   "gMapGroup16": [
     "EverGrandeCity_SidneysRoom",

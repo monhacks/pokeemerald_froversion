@@ -731,8 +731,8 @@
 #define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
 #define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
 #define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
-#define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
-#define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
+#define FLAG_MATT_INTRO    0x2B5 // Spoke To Matt at homestead north
+#define FLAG_SNOWVILLAGE_GREAT_BALLS_RECIEVED  0x2B6 // Give Great Balls in Snow Village
 #define FLAG_RECIEVED_GRILLED_CHEESE  0x2B7 // Bobbys Mom has given first free grilled cheese
 #define FLAG_HIDE_MAGA_COLANGELO_GRAPHICS  0x2B8 // Hides Lattka and Paul inside Colangelo Graphics.
 #define FLAG_FORCE_BATTLE_STYLE_SET  0x2B9 // Unused Flag

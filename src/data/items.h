@@ -7710,4 +7710,18 @@ const struct Item gItems[] =
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
     },
+
+    [ITEM_SNOWFLAKE] =
+    {
+        .name = _("Snowflake"),
+        .itemId = ITEM_SNOWFLAKE,
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_NONE,
+        .holdEffectParam = 4,
+        .description = sSnowflakeDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 0,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
 };

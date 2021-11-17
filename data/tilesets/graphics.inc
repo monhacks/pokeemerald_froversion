@@ -2149,3 +2149,63 @@ gTilesetPalettes_NiagaraVillage::
 	.align 2
 gTilesetTiles_NiagaraVillage::
 	.incbin "data/tilesets/secondary/niagaravillage/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SnowCavePrimary::
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/snowcaveprimary/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SnowCavePrimary::
+	.incbin "data/tilesets/primary/snowcaveprimary/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_SnowCaveSecondary::
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/snowcavesecondary/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_SnowCaveSecondary::
+	.incbin "data/tilesets/secondary/snowcavesecondary/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_HomesteadNorth::
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/homesteadnorth/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_HomesteadNorth::
+	.incbin "data/tilesets/secondary/homesteadnorth/tiles.4bpp.lz"

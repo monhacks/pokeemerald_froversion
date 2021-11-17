@@ -1566,8 +1566,8 @@
       "name": "CaveOfOrigin_Entrance_Layout",
       "width": 19,
       "height": 26,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "primary_tileset": "gTileset_SnowCavePrimary",
+      "secondary_tileset": "gTileset_SnowSecondary",
       "border_filepath": "data/layouts/CaveOfOrigin_Entrance/border.bin",
       "blockdata_filepath": "data/layouts/CaveOfOrigin_Entrance/map.bin"
     },
@@ -1576,8 +1576,8 @@
       "name": "CaveOfOrigin_1F_Layout",
       "width": 23,
       "height": 23,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "primary_tileset": "gTileset_SnowCavePrimary",
+      "secondary_tileset": "gTileset_SnowSecondary",
       "border_filepath": "data/layouts/CaveOfOrigin_1F/border.bin",
       "blockdata_filepath": "data/layouts/CaveOfOrigin_1F/map.bin"
     },
@@ -1616,8 +1616,8 @@
       "name": "CaveOfOrigin_B1F_Layout",
       "width": 19,
       "height": 19,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "primary_tileset": "gTileset_SnowCavePrimary",
+      "secondary_tileset": "gTileset_SnowSecondary",
       "border_filepath": "data/layouts/CaveOfOrigin_B1F/border.bin",
       "blockdata_filepath": "data/layouts/CaveOfOrigin_B1F/map.bin"
     },
@@ -5240,6 +5240,66 @@
       "secondary_tileset": "gTileset_Cave2",
       "border_filepath": "data/layouts/LockportTrail_BF1RightConnection/border.bin",
       "blockdata_filepath": "data/layouts/LockportTrail_BF1RightConnection/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_NORTH",
+      "name": "HomesteadNorth_Layout",
+      "width": 70,
+      "height": 60,
+      "primary_tileset": "gTileset_GeneralSnow",
+      "secondary_tileset": "gTileset_HomesteadNorth",
+      "border_filepath": "data/layouts/HomesteadNorth/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadNorth/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_CAVERNS_ENTRANCE",
+      "name": "HomesteadCavernsEntrance_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_SnowCavePrimary",
+      "secondary_tileset": "gTileset_SnowSecondary",
+      "border_filepath": "data/layouts/HomesteadCavernsEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadCavernsEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_CAVERNS_MAIN_ROOM",
+      "name": "HomesteadCavernsMainRoom_Layout",
+      "width": 34,
+      "height": 55,
+      "primary_tileset": "gTileset_SnowCavePrimary",
+      "secondary_tileset": "gTileset_SnowSecondary",
+      "border_filepath": "data/layouts/HomesteadCavernsMainRoom/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadCavernsMainRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_CAVERNS1",
+      "name": "HomesteadCaverns1_Layout",
+      "width": 42,
+      "height": 25,
+      "primary_tileset": "gTileset_SnowCavePrimary",
+      "secondary_tileset": "gTileset_SnowSecondary",
+      "border_filepath": "data/layouts/HomesteadCaverns1/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadCaverns1/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_CAVERNS2",
+      "name": "HomesteadCaverns2_Layout",
+      "width": 20,
+      "height": 35,
+      "primary_tileset": "gTileset_SnowCavePrimary",
+      "secondary_tileset": "gTileset_SnowSecondary",
+      "border_filepath": "data/layouts/HomesteadCaverns2/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadCaverns2/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_CAVERNS3",
+      "name": "HomesteadCaverns3_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_SnowCavePrimary",
+      "secondary_tileset": "gTileset_SnowSecondary",
+      "border_filepath": "data/layouts/HomesteadCaverns3/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadCaverns3/map.bin"
     }
   ]
 }

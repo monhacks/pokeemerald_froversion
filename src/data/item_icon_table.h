@@ -632,5 +632,6 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_FAIRY_CAMOUFLAGE] = {gItemIcon_FairyGem, gItemIconPalette_FairyGem},
     // Misc Froversion Items
     [ITEM_GRILLED_CHEESE] = {gItemIcon_GrilledCheese, gItemIconPalette_GrilledCheese},
+    [ITEM_SNOWFLAKE] = {gItemIcon_Snowflake, gItemIconPalette_Snowflake},
 
 };

@@ -1061,3 +1061,36 @@ gTileset_NiagaraVillage::
 	.4byte gMetatiles_NiagaraVillage
 	.4byte gMetatileAttributes_NiagaraVillage
 	.4byte NULL
+
+	.align 2
+gTileset_SnowCavePrimary::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_SnowCavePrimary
+	.4byte gTilesetPalettes_SnowCavePrimary
+	.4byte gMetatiles_SnowCavePrimary
+	.4byte gMetatileAttributes_SnowCavePrimary
+	.4byte NULL
+
+	.align 2
+gTileset_SnowCaveSecondary::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_SnowCaveSecondary
+	.4byte gTilesetPalettes_SnowCaveSecondary
+	.4byte gMetatiles_SnowCaveSecondary
+	.4byte gMetatileAttributes_SnowCaveSecondary
+	.4byte NULL
+
+	.align 2
+gTileset_HomesteadNorth::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_HomesteadNorth
+	.4byte gTilesetPalettes_HomesteadNorth
+	.4byte gMetatiles_HomesteadNorth
+	.4byte gMetatileAttributes_HomesteadNorth
+	.4byte NULL

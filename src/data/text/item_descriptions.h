@@ -3029,3 +3029,9 @@ static const u8 sGrilledCheeseDesc[] = _(
     "A hold item that\n"
     "restores 1/4 HP\n"
     "battle.");
+
+static const u8 sSnowflakeDesc[] = _(
+    "A special token that\n"
+    "is collected to \n"
+    "prove worthiness.");
+

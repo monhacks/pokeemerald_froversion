@@ -1532,3 +1532,7 @@ const u32 gItemIconPalette_FairyTMHM[] = INCBIN_U32("graphics/items/icon_palette
 const u32 gItemIcon_GrilledCheese[] = INCBIN_U32("graphics/items/icons/grilled_cheese.4bpp.lz");
 const u32 gItemIconPalette_GrilledCheese[] = INCBIN_U32("graphics/items/icon_palettes/grilled_cheese.gbapal.lz");
 
+
+const u32 gItemIcon_Snowflake[] = INCBIN_U32("graphics/items/icons/snowflake.4bpp.lz");
+const u32 gItemIconPalette_Snowflake[] = INCBIN_U32("graphics/items/icon_palettes/snowflake.gbapal.lz");
+

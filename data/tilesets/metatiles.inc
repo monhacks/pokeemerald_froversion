@@ -705,3 +705,24 @@ gMetatiles_NiagaraVillage::
 	.align 1
 gMetatileAttributes_NiagaraVillage::
 	.incbin "data/tilesets/secondary/niagaravillage/metatile_attributes.bin"
+	.align 1
+gMetatiles_SnowCavePrimary::
+	.incbin "data/tilesets/primary/snowcaveprimary/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SnowCavePrimary::
+	.incbin "data/tilesets/primary/snowcaveprimary/metatile_attributes.bin"
+	.align 1
+gMetatiles_SnowCaveSecondary::
+	.incbin "data/tilesets/secondary/snowcavesecondary/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_SnowCaveSecondary::
+	.incbin "data/tilesets/secondary/snowcavesecondary/metatile_attributes.bin"
+	.align 1
+gMetatiles_HomesteadNorth::
+	.incbin "data/tilesets/secondary/homesteadnorth/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_HomesteadNorth::
+	.incbin "data/tilesets/secondary/homesteadnorth/metatile_attributes.bin"
