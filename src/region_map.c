@@ -305,6 +305,7 @@ static const u8 sMapHealLocations[][3] =
     {MAP_GROUP(MOSSDEEP_CITY), MAP_NUM(MOSSDEEP_CITY), HEAL_LOCATION_MOSSDEEP_CITY},
     {MAP_GROUP(SOOTOPOLIS_CITY), MAP_NUM(SOOTOPOLIS_CITY), HEAL_LOCATION_SOOTOPOLIS_CITY},
     {MAP_GROUP(EVER_GRANDE_CITY), MAP_NUM(EVER_GRANDE_CITY), HEAL_LOCATION_EVER_GRANDE_CITY},
+    {MAP_GROUP(WALMORE_TOWN), MAP_NUM(WALMORE_TOWN), HEAL_LOCATION_WALMORE_TOWN},
     {MAP_GROUP(ROUTE101), MAP_NUM(ROUTE101), 0},
     {MAP_GROUP(ROUTE102), MAP_NUM(ROUTE102), 0},
     {MAP_GROUP(ROUTE103), MAP_NUM(ROUTE103), 0},
@@ -340,7 +341,6 @@ static const u8 sMapHealLocations[][3] =
     {MAP_GROUP(ROUTE133), MAP_NUM(ROUTE133), 0},
     {MAP_GROUP(ROUTE134), MAP_NUM(ROUTE134), 0},
     {MAP_GROUP(DEWFORD_TOWN), MAP_NUM(DEWFORD_TOWN), HEAL_LOCATION_DEWFORD_TOWN},
-    {MAP_GROUP(WALMORE_TOWN), MAP_NUM(WALMORE_TOWN), HEAL_LOCATION_WALMORE_TOWN},
 };
 
 static const u8 *const sEverGrandeCityNames[] =
@@ -1852,7 +1852,7 @@ static void CreateFlyDestIcons(void)
     u8 spriteId;
 
     canFlyFlag = FLAG_VISITED_LITTLEROOT_TOWN;
-    for (mapSecId = MAPSEC_LAKE_MEAD_VILLAGE; mapSecId <= MAPSEC_EVER_GRANDE_CITY; mapSecId++)
+    for (mapSecId = MAPSEC_LAKE_MEAD_VILLAGE; mapSecId <= MAPSEC_WALMORE_TOWN; mapSecId++)
     {
         GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
         x = (x + MAPCURSOR_X_MIN) * 8 + 4;
@@ -2007,9 +2007,9 @@ static void CB_ExitFlyMap(void)
                 case MAPSEC_LAKE_MEAD_VILLAGE:
                     SetWarpDestinationToHealLocation(gSaveBlock2Ptr->playerGender == MALE ? HEAL_LOCATION_LAKE_MEAD_VILLAGE : HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE);
                     break;
-                case MAPSEC_WALMORE_TOWN:
-                    SetWarpDestinationToHealLocation(HEAL_LOCATION_WALMORE_TOWN);
-                    break;
+                // case MAPSEC_WALMORE_TOWN:
+                //     SetWarpDestinationToHealLocation(HEAL_LOCATION_WALMORE_TOWN);
+                //     break;
                 case MAPSEC_EVER_GRANDE_CITY:
                     SetWarpDestinationToHealLocation(FlagGet(FLAG_LANDMARK_POKEMON_LEAGUE) && sFlyMap->regionMap.posWithinMapSec == 0 ? HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE : HEAL_LOCATION_EVER_GRANDE_CITY);
                     break;

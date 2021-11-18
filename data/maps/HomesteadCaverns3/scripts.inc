@@ -10,7 +10,7 @@ NedTrainer::
 	end
 
 IceCave_EventScript_Ned::
-	trainerbattle_single TRAINER_NED, IceCave_Text_NedIntro, IceCave_Text_NedDefeated, IceCave_EventScript_NedGivesSnowflake
+	trainerbattle_single TRAINER_JENNY_4, IceCave_Text_NedIntro, IceCave_Text_NedDefeated, IceCave_EventScript_NedGivesSnowflake
 	msgbox IceCave_Text_NedPostBattle, MSGBOX_AUTOCLOSE
 	end
 

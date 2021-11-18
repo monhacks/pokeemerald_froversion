@@ -53,7 +53,7 @@ end
 
 
 IceCave_EventScript_CalvinTrainerBattle:
-	trainerbattle_single TRAINER_CALVIN_1, IceCave_Text_CalvinIntro, IceCave_Text_CalvinDefeated, IceCave_EventScript_CalvinGivesSnowflake
+	trainerbattle_single TRAINER_ROSE_4, IceCave_Text_CalvinIntro, IceCave_Text_CalvinDefeated, IceCave_EventScript_CalvinGivesSnowflake
 	msgbox IceCave_Text_CalvinPostBattle, MSGBOX_DEFAULT
 	release
 end
@@ -79,7 +79,7 @@ IceCave_Text_CalvinPostBattle:
 	.string "Good luck with the \nrest of the trainers.$"
 
 IceCave_EventScript_Rick::
-	trainerbattle_single TRAINER_RICK, IceCave_Text_RickIntro, IceCave_Text_RickDefeated, IceCave_EventScript_RickGivesSnowflake
+	trainerbattle_single TRAINER_DIANA_5, IceCave_Text_RickIntro, IceCave_Text_RickDefeated, IceCave_EventScript_RickGivesSnowflake
 	msgbox IceCave_Text_RickPostBattle, MSGBOX_AUTOCLOSE
 end
 
@@ -92,7 +92,7 @@ IceCave_EventScript_RickGivesSnowflake:
 end
 
 IceCave_EventScript_Tiana::
-	trainerbattle_single TRAINER_TIANA, IceCave_Text_TianaIntro, IceCave_Text_TianaDefeated, IceCave_EventScript_TianaGivesSnowflake
+	trainerbattle_single TRAINER_DIANA_3, IceCave_Text_TianaIntro, IceCave_Text_TianaDefeated, IceCave_EventScript_TianaGivesSnowflake
 	msgbox IceCave_Text_TianaPostBattle, MSGBOX_AUTOCLOSE
 end
 
@@ -105,7 +105,7 @@ IceCave_EventScript_TianaGivesSnowflake:
 end
 
 IceCave_EventScript_Allen::
-	trainerbattle_single TRAINER_ALLEN, IceCave_Text_AllenIntro, IceCave_Text_AllenDefeated, IceCave_EventScript_AllenGivesSnowflake
+	trainerbattle_single TRAINER_ROSE_2, IceCave_Text_AllenIntro, IceCave_Text_AllenDefeated, IceCave_EventScript_AllenGivesSnowflake
 	msgbox IceCave_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
 	
 end	
@@ -119,7 +119,7 @@ IceCave_EventScript_AllenGivesSnowflake:
 end
 
 IceCave_EventScript_Ivan::
-	trainerbattle_single TRAINER_IVAN, IceCave_Text_IvanIntro, IceCave_Text_IvanDefeated, IceCave_EventScript_IvanGivesSnowflake
+	trainerbattle_single TRAINER_DIANA_4, IceCave_Text_IvanIntro, IceCave_Text_IvanDefeated, IceCave_EventScript_IvanGivesSnowflake
 	msgbox IceCave_Text_IvanPostBattle, MSGBOX_AUTOCLOSE
 end	
 
@@ -131,7 +131,7 @@ IceCave_EventScript_IvanGivesSnowflake:
 end
 
 IceCave_EventScript_Billy::
-	trainerbattle_single TRAINER_BILLY, IceCave_Text_BillyIntro, IceCave_Text_BillyDefeated, IceCave_EventScript_BillyGivesSnowflake
+	trainerbattle_single TRAINER_ROSE_3, IceCave_Text_BillyIntro, IceCave_Text_BillyDefeated, IceCave_EventScript_BillyGivesSnowflake
 	msgbox IceCave_Text_BillyPostBattle, MSGBOX_AUTOCLOSE
 end	
 
@@ -143,7 +143,7 @@ IceCave_EventScript_BillyGivesSnowflake:
 end
 
 IceCave_EventScript_Elliot::
-	trainerbattle_single TRAINER_ELLIOT_1, IceCave_Text_ElliotIntro, IceCave_Text_ElliotDefeated, IceCave_EventScript_ElliotGivesSnowflake
+	trainerbattle_single TRAINER_JENNY_5, IceCave_Text_ElliotIntro, IceCave_Text_ElliotDefeated, IceCave_EventScript_ElliotGivesSnowflake
 	msgbox IceCave_Text_ElliotPostBattle, MSGBOX_AUTOCLOSE
 	end	
 

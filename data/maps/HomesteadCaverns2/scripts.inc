@@ -9,7 +9,7 @@ KylaTrainer::
 	end
 
 IceCave_EventScript_Kyla::
-	trainerbattle_single TRAINER_KYLA, IceCave_Text_KylaIntro, IceCave_Text_KylaDefeated, IceCave_EventScript_KylaGivesSnowflake
+	trainerbattle_single TRAINER_DIANA_2, IceCave_Text_KylaIntro, IceCave_Text_KylaDefeated, IceCave_EventScript_KylaGivesSnowflake
 	msgbox IceCave_Text_KylaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -40,7 +40,7 @@ DouglasTrainer::
 	end
 
 IceCave_EventScript_Douglas::
-	trainerbattle_single TRAINER_DOUGLAS, IceCave_Text_DouglasIntro, IceCave_Text_DouglasDefeated, IceCave_EventScript_DouglasGivesSnowflake
+	trainerbattle_single TRAINER_JENNY_3, IceCave_Text_DouglasIntro, IceCave_Text_DouglasDefeated, IceCave_EventScript_DouglasGivesSnowflake
 	msgbox IceCave_Text_DouglasPostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -30,7 +30,7 @@ Script_TransitionMapPokecenter_MagaCaveCutscene:
 	removeobject LOCALID_LATTKA
 	msgbox T_TransitionMapPokecenter_ZendanoCallsFro, MSGBOX_DEFAULT
 	setvar VAR_OLDALE_TOWN_STATE, 13
-	warpsilent MAP_SOOTOPOLIS_CITY, 255, 31, 33
+	warpsilent MAP_HOMESTEAD_NORTH, 255, 41, 14
 	end
 
 M_TransitionMapPokecenter_LattkaLeaves:

@@ -1,8 +1,10 @@
 .set LOCALID_GREETER, 1
-.set LOCALID_SNOWFLAKE_CHAMPION, 7
+.set LOCALID_SNOWFLAKE_CHAMPION, 6
 
 HomesteadNorth_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, SnowVillage_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, SnowVillage_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, SnowVillageOnWarp
 	.byte 0
 
 SnowVillage_EventScript_PlayerFaceUp::
@@ -13,6 +15,25 @@ SnowVillage_OnFrame::
 	map_script_2 VAR_HOMESTEAD_NORTH_STATE, 0, SnowVillage_EventScript_Intoduction
 	map_script_2 VAR_OLDALE_TOWN_STATE, 13, SootopolisCity_EventScript_ZendanoCallsFro
 	.2byte 0
+
+SnowVillageOnWarp::
+	map_script_2 VAR_OLDALE_TOWN_STATE, 13, LakeMead_FrosHouse_1F_SetFroWest
+	.2byte 0
+
+
+LakeMead_FrosHouse_1F_SetFroWest:
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	end
+
+SnowVillage_OnLoad::
+	compare VAR_OLDALE_TOWN_STATE, 13
+	goto_if_eq SnowVillage_EventScript_MoveChampion
+	end
+
+SnowVillage_EventScript_MoveChampion:
+	setobjectxyperm LOCALID_SNOWFLAKE_CHAMPION, 32, 14
+	setobjectmovementtype LOCALID_SNOWFLAKE_CHAMPION, MOVEMENT_TYPE_FACE_RIGHT
+	end
 
 @------------------------------------------------------------------------------------------------------
 @-------------------------------SCRIPTS----------------------------------------------------------------
@@ -99,7 +120,7 @@ SnowVillage_EventScript_FinalBattle::
 SnowVillage_EventScript_StartFinalBattle:
 	msgbox SnowVillage_Text_CongratsYouCollectedAllSnowflakes, MSGBOX_NPC
 	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, BattleFrontier_BattlePikeRoomNormal_Movement_CameraPanUp
+	applymovement OBJ_EVENT_ID_CAMERA, HomesteadNorth_Movement_PanCameraUp
 	applymovement LOCALID_SNOWFLAKE_CHAMPION, SnowVillage_Movement_ChampionTakesBattlePosition
 	applymovement OBJ_EVENT_ID_PLAYER, SnowVillage_Movement_PlayerTakesBattlePosition
 	waitmovement 0
@@ -318,3 +339,11 @@ SnowVillage_Text_CaveGuard:
 
 SnowVillage_Text_HouseLocked:
 	.string "This house is locked.$"
+
+HomesteadNorth_Movement_PanCameraUp: @ 825D9B0
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end

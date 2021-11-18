@@ -1472,10 +1472,8 @@ SootopolisCity_Movement_DestroyTask:: @ 81E656D
 	step_end
 
 SootopolisCity_Text_GymSign: @ 81E656F
-	.string "Homestead Town Pokémon Gym\n"
-	.string "Leader: Icee\p"
-	.string "“The Gym Leader with the beauty\n"
-	.string "of pure Icee!”$"
+	.string "The Fratt House:\n"
+	.string "Where all the boys hang!$"
 
 SootopolisCity_Text_CitySign: @ 81E65C8
 	.string "Homestead Town\p"

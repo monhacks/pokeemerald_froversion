@@ -2,7 +2,7 @@
   "id": "MAP_HOMESTEAD_CAVERNS_ENTRANCE",
   "name": "HomesteadCavernsEntrance",
   "layout": "LAYOUT_HOMESTEAD_CAVERNS_ENTRANCE",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_FV_HOMESTEAD_CAVERNS",
   "region_map_section": "MAPSEC_SOOTOPOLIS_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

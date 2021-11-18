@@ -71,8 +71,7 @@ Debug_Script_2::
 	end
 
 Debug_Script_3::
-	givemon SPECIES_RUTHLASH, 100, ITEM_ACRO_BIKE
-	setvar VAR_STARTER_MON, 0
+	settrainerflag TRAINER_JUAN_1
 	end
 	end
 
@@ -84,7 +83,10 @@ Debug_Script_5::
 	setflag FLAG_BADGE01_GET
 	setflag FLAG_BADGE02_GET
 	setflag FLAG_BADGE03_GET
-
+	setflag FLAG_BADGE04_GET
+	setflag FLAG_BADGE05_GET
+	giveitem ITEM_HM08, 1
+	givecustommon SPECIES_DRACASTER,100, ITEM_LEFTOVERS, ITEM_POKE_BALL, NATURE_BRAVE,1,61,54,50,52,51,56,16,16,16,16,16,16, MOVE_DARK_PULSE, MOVE_MOONBLAST, MOVE_SURF, MOVE_IRON_HEAD, 0
 	end
 
 Debug_Script_6::

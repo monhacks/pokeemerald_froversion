@@ -10,7 +10,7 @@ MikeTrainer::
 	end
 
 IceCave_EventScript_MikeTrainerBattle:
-	trainerbattle_single TRAINER_MIKE_1, IceCave_Text_MikeIntro, IceCave_Text_MikeDefeated, IceCave_EventScript_MikeGivesSnowflake
+	trainerbattle_single TRAINER_JENNY_2, IceCave_Text_MikeIntro, IceCave_Text_MikeDefeated, IceCave_EventScript_MikeGivesSnowflake
 	msgbox IceCave_Text_MikePostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -42,7 +42,7 @@ JoeyTrainer::
 	end
 
 IceCave_EventScript_JoeyTrainerBattle:
-	trainerbattle_single TRAINER_JOEY, IceCave_Text_JoeyIntro, IceCave_Text_JoeyDefeated, IceCave_EventScript_JoeyGivesSnowflake
+	trainerbattle_single TRAINER_ROSE_5, IceCave_Text_JoeyIntro, IceCave_Text_JoeyDefeated, IceCave_EventScript_JoeyGivesSnowflake
 	msgbox IceCave_Text_JoeyPostBattle, MSGBOX_DEFAULT
 	release
 	end

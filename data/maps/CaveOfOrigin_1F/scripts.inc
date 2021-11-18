@@ -13,8 +13,8 @@ CaveOfOrigin_1F_OnLoad:
 	end
 
 SkyPillar_Top_SetExitForNorthHomestead:
-	setmetatile 12, 4 , 0x2C9, 1
-	setmetatile 12, 3 , 0x2C1, 0
+	setmetatile 12, 4 , 0x2C9, 0
+	setmetatile 12, 3 , 0x2C1, 1
 	end
 
 

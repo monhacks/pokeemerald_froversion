@@ -1298,3 +1298,10 @@ $(MID_SUBDIR)/mus_fv_vs_gmp.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_fv_niagara_woods.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G018 -V080
+
+$(MID_SUBDIR)/mus_fv_stillsnow.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G51 -V056
+
+
+$(MID_SUBDIR)/mus_fv_homestead_caverns.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G111 -V090

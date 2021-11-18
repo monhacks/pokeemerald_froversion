@@ -83,11 +83,10 @@ SootopolisCity_Gym_1F_Movement_FallThroughIce: @ 8224F42
 	step_end
 
 SootopolisCity_Gym_1F_EventScript_Juan:: @ 8224F44
-	cleartrainerflag TRAINER_JUAN_1
 	setflag FLAG_BATTLE_DREAM_FOG
 	setflag FLAG_SYS_NO_BAG_USE
 	setflag FLAG_FORCE_BATTLE_STYLE_SET
-	trainerbattle_single TRAINER_JUAN_1, SnowVillage_Text_LetTheBattleBegin, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
+	goto SootopolisCity_Gym_1F_EventScript_JuanDefeated
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	clearflag FLAG_BATTLE_DREAM_FOG
@@ -105,7 +104,6 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated:: @ 8224F82
 	clearflag FLAG_BATTLE_DREAM_FOG
 	clearflag FLAG_SYS_NO_BAG_USE
 	clearflag FLAG_FORCE_BATTLE_STYLE_SET
-	setvar VAR_OLDALE_TOWN_STATE, 11
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis, MSGBOX_DEFAULT
@@ -127,6 +125,7 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated:: @ 8224F82
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_JUAN_MATCH_CALL
+	goto SootopolisCity_EventScript_WarpToMagaCutscene
 	release
 	end
 
