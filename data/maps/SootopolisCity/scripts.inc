@@ -1364,7 +1364,7 @@ SootopolisCity_EventScript_Wallace:: @ 81E6446
 	faceplayer
 	compare VAR_SOOTOPOLIS_CITY_STATE, 4
 	goto_if_eq SootopolisCity_EventScript_GoToSkyPillar
-	goto_if_set FLAG_RECEIVED_HM07, SootopolisCity_EventScript_GoToGym
+	goto_if_set FLAG_RECIEVED_HOMESTEAD_HYPER_POTION, SootopolisCity_EventScript_GoToGym
 	goto_if_set FLAG_SOOTOPOLIS_ARCHIE_MAXIE_LEAVE, SootopolisCity_EventScript_GiveWaterfall
 	msgbox SootopolisCity_Text_AquaMagmaDidntMeanHarm, MSGBOX_DEFAULT
 	release
@@ -1373,6 +1373,9 @@ SootopolisCity_EventScript_Wallace:: @ 81E6446
 SootopolisCity_EventScript_GiveWaterfall:: @ 81E646F
 	msgbox SootopolisCity_Text_ThankYouForHelpAcceptThis, MSGBOX_DEFAULT
 	giveitem ITEM_HYPER_POTION
+	setflag FLAG_RECIEVED_HOMESTEAD_HYPER_POTION
+	closemessage
+	msgbox SootopolisCity_Text_ExplainWaterfallGoToGym, MSGBOX_DEFAULT
 	closemessage
 	compare VAR_FACING, DIR_NORTH
 	call_if_eq SootopolisCity_EventScript_WallaceMoveFromGym
@@ -1403,6 +1406,8 @@ SootopolisCity_EventScript_GoToSkyPillar:: @ 81E64D8
 	end
 
 SootopolisCity_EventScript_GoToGym:: @ 81E64E2
+	msgbox SootopolisCity_Text_ExplainWaterfallGoToGym, MSGBOX_DEFAULT
+	closemessage
 	msgbox SootopolisCity_Text_DazzledByMentor, MSGBOX_DEFAULT
 	release
 	end
@@ -1773,21 +1778,25 @@ SootopolisCity_Text_ThankYouForHelpAcceptThis: @ 81E7ACF
 	.string "Please accept it.$"
 
 SootopolisCity_Text_ExplainWaterfallGoToGym: @ 81E7B86
-	.string "That Hidden Machine contains\n"
-	.string "Waterfall.\p"
-	.string "If you have the Tit Badge, a Pokémon\n"
-	.string "that has learned that HM move can\l"
-	.string "force its way up waterfalls.\p"
-	.string "And where does one get the Tit Badge?\n"
-	.string "You know, don't you?\p"
-	.string "That's right! You have to beat\n"
-	.string "the Homestead Gym Leader.\p"
-	.string "When you're all set to go, step through\n"
-	.string "that door.$"
+	.string "This house here used to be where\n"
+	.string "the Gym Leader, Icee, faced\l"
+	.string "challengers.\p"
+	.string "But now, this is where all the\n"
+	.string "boys hang out.\p"
+	.string "I've heard that they have set up\n"
+	.string "a serious challenge for experienced\l"
+	.string "Trainers.\p"
+	.string "Unfortunately, it's locked right now,\n"
+	.string "and the only person with a key is Icee.\p"
+	.string "Icee moved to the North Section of\n"
+	.string "Homestead. You can get there through\l"
+	.string "the Cave Of Origin.\p"
+	.string "You should go challenge him for his\n"
+	.string "Gym Badge, and House Key!$"
 
 SootopolisCity_Text_DazzledByMentor: @ 81E7CBC
 	.string "Wallace: I'm sure that you will be\n"
-	.string "dazzled by my mentor's breathtakingly\l"
+	.string "dazzled Icee and his breathtakingly\l"
 	.string "elegant battle style.$"
 
 //////////////////////////////

@@ -5300,6 +5300,16 @@
       "secondary_tileset": "gTileset_SnowSecondary",
       "border_filepath": "data/layouts/HomesteadCaverns3/border.bin",
       "blockdata_filepath": "data/layouts/HomesteadCaverns3/map.bin"
+    },
+    {
+      "id": "LAYOUT_PETALBURG_GYM_BORDER",
+      "name": "PetalburgGymBorder_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PetalburgGym",
+      "border_filepath": "data/layouts/PetalburgGymBorder/border.bin",
+      "blockdata_filepath": "data/layouts/PetalburgGymBorder/map.bin"
     }
   ]
 }

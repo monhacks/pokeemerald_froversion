@@ -1282,7 +1282,7 @@
 #define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
 #define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
 #define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
-#define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag
+#define FLAG_RECIEVED_HOMESTEAD_HYPER_POTION                        0x4D5 // FWallace Dialouge Flag
 #define FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA_ZENDANO                  0x4D6 // Flag To specifically hide Zendano
 #define FLAG_RED_EYES_FLY_AWAY                                      0x4D7 // Spoke To Zendano Already but didnt have enough pokemon to battle
 #define FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA                          0x4D8 // Hides Team MAGA after Dewgong Battle

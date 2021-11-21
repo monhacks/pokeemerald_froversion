@@ -1243,3 +1243,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/HomesteadCaverns2/scripts.inc"
 
 	.include "data/maps/HomesteadCaverns3/scripts.inc"
+
+	.include "data/maps/PetalburgGymBorder/scripts.inc"

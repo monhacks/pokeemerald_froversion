@@ -1304,4 +1304,4 @@ $(MID_SUBDIR)/mus_fv_stillsnow.s: %.s: %.mid
 
 
 $(MID_SUBDIR)/mus_fv_homestead_caverns.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G111 -V090
+	$(MID) $< $@ -E -R$(STD_REVERB) -G083 -V090

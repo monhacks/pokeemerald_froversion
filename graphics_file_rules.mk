@@ -235,10 +235,10 @@ $(TILESETGFXDIR)/secondary/lavaridge_gym/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 54
 
 $(TILESETGFXDIR)/secondary/petalburg_gym/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 148
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/fortree_gym/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 61
+	$(GFX) $< $@ -num_tiles 512
 
 $(TILESETGFXDIR)/secondary/mossdeep_gym/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 82
