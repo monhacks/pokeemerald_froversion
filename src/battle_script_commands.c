@@ -3504,6 +3504,11 @@ static void Cmd_cleareffectsonfaint(void)
             MarkBattlerForControllerExec(gActiveBattler);
         }
 
+        if (gWishFutureKnock.weatherBattler == gActiveBattler)
+        {
+            gWishFutureKnock.weather1 = gWishFutureKnock.weather2 = ENUM_WEATHER_NONE;
+        }
+
         FaintClearSetData(); // Effects like attractions, trapping, etc.
         gBattlescriptCurrInstr += 2;
     }
@@ -5998,6 +6003,23 @@ static void SetLandmineBattlescript(u8 battlerId, u8 multistringId)
         gBattlescriptCurrInstr = BattleScript_DmgLandmineOnFaintedBattler;
 }
 
+const u8 gTypeWeathers[NUMBER_OF_MON_TYPES] =
+{
+    [TYPE_ROCK] = ENUM_WEATHER_SANDSTORM,
+    [TYPE_GROUND] = ENUM_WEATHER_SANDSTORM,
+    [TYPE_FIRE] = ENUM_WEATHER_SUN,
+    [TYPE_WATER] = ENUM_WEATHER_RAIN,
+    [TYPE_ICE] = ENUM_WEATHER_HAIL,
+};
+
+static const u8 *const sTypeWeatherScripts[ENUM_WEATHER_COUNT] =
+{
+    [ENUM_WEATHER_RAIN] = BattleScript_TypeWeatherActivates_Rain,
+    [ENUM_WEATHER_SUN] = BattleScript_TypeWeatherActivates_Sun,
+    [ENUM_WEATHER_SANDSTORM] = BattleScript_TypeWeatherActivates_Sandstorm,
+    [ENUM_WEATHER_HAIL] = BattleScript_TypeWeatherActivates_Hail,
+};
+
 static void Cmd_switchineffects(void)
 {
     s32 i;
@@ -6102,6 +6124,36 @@ static void Cmd_switchineffects(void)
         gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~SIDE_STATUS_LANDMINE;
         gBattleMoveDamage = GetLandmineHazardDamage(TYPE_NORMAL, 100, gActiveBattler);
         SetLandmineBattlescript(gActiveBattler, 2);
+    }
+    else if (!(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_TYPE_WEATHER_TRIGGERED)
+     && GetBattlerSide(gActiveBattler) == B_SIDE_OPPONENT
+     && FlagGet(FLAG_BATTLE_TYPE_WEATHER))
+    {
+        u8 weather1, weather2;
+        const u8 *script;
+        gSideStatuses[GetBattlerSide(gActiveBattler)] |= SIDE_STATUS_TYPE_WEATHER_TRIGGERED;
+        weather1 = gTypeWeathers[gBattleMons[gActiveBattler].type1];
+        weather2 = gTypeWeathers[gBattleMons[gActiveBattler].type2];
+        if (weather1 == ENUM_WEATHER_NONE)
+            weather1 = weather2;
+        if (weather2 == ENUM_WEATHER_NONE)
+            weather2 = weather1;
+        script = sTypeWeatherScripts[weather1];
+        if (weather1 != ENUM_WEATHER_NONE && script)
+        {
+            gWishFutureKnock.weather1 = weather1;
+            gWishFutureKnock.weather2 = weather2;
+            gWishFutureKnock.weatherBattler = gActiveBattler;
+            if (TryChangeBattleWeather(gWishFutureKnock.weatherBattler, gWishFutureKnock.weather1, 2))
+            {
+                u8 temp;
+                SWAP(gWishFutureKnock.weather1, gWishFutureKnock.weather2, temp);
+                gBattleScripting.battler = gWishFutureKnock.weatherBattler;
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = script;
+                return;
+            }
+        }
     }
     else
     {

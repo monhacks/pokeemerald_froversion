@@ -221,6 +221,7 @@
 #define SIDE_STATUS_MAT_BLOCK               (1 << 21)
 #define SIDE_STATUS_POISON_FIELD_DAMAGED    (1 << 22)
 #define SIDE_STATUS_LANDMINE                (1 << 23)
+#define SIDE_STATUS_TYPE_WEATHER_TRIGGERED  (1 << 24)
 
 // Field affecting statuses.
 #define STATUS_FIELD_MAGIC_ROOM         0x1
@@ -278,6 +279,7 @@
 #define ENUM_WEATHER_SANDSTORM      3
 #define ENUM_WEATHER_HAIL           4
 #define ENUM_WEATHER_HAIL_PERM      5
+#define ENUM_WEATHER_COUNT          6
 
 // Move Effects
 #define MOVE_EFFECT_SLEEP               0x1

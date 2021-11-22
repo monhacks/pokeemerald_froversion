@@ -726,6 +726,10 @@ static const u8 sText_TorridActivatesWaterPrevention[] =_("{B_DEF_NAME_WITH_PREF
 static const u8 sText_PkmnLevitatedGroundMovesMiss[] = _("{B_DEF_NAME_WITH_PREFIX} levitates. Ground\n moves can't connect!");
 static const u8 sText_DarkTetherActivates[] = _("A Magic circle encompasses\n the battlefield!");
 static const u8 sText_DarkTetherEnds[] = _("The Magic disappeared!");
+static const u8 sText_PkmnMadeItRain2[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made in rain!");
+static const u8 sText_PkmnMadeItSunny[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made in sunny!");
+static const u8 sText_PkmnWhippedUpASandstorm[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} whipped up a sandstorm!");
+static const u8 sText_PkmnMadeItHail[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made in hail!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1315,6 +1319,10 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNLEVITATEDGROUNDMOVESMISS - 12] = sText_PkmnLevitatedGroundMovesMiss,
     [STRINGID_DARKTETHERACTIVATES - 12] = sText_DarkTetherActivates,
     [STRINGID_DARKTETHERENDS - 12] = sText_DarkTetherEnds,
+    [STRINGID_PKMNMADEITRAIN2 - 12] = sText_PkmnMadeItRain2,
+    [STRINGID_PKMNMADEITSUNNY - 12] = sText_PkmnMadeItSunny,
+    [STRINGID_PKMNWHIPPEDUPASANDSTORM - 12] = sText_PkmnWhippedUpASandstorm,
+    [STRINGID_PKMNMADEITHAIL - 12] = sText_PkmnMadeItHail,
 };
 
 const u16 gTerrainStringIds[] =

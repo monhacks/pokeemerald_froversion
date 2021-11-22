@@ -3499,6 +3499,14 @@ static void DoBattleIntro(void)
     }
 }
 
+const u8 *const gTypeWeatherScripts[ENUM_WEATHER_COUNT] =
+{
+    [ENUM_WEATHER_RAIN] = BattleScript_TypeWeatherActivates2_Rain,
+    [ENUM_WEATHER_SUN] = BattleScript_TypeWeatherActivates2_Sun,
+    [ENUM_WEATHER_SANDSTORM] = BattleScript_TypeWeatherActivates2_Sandstorm,
+    [ENUM_WEATHER_HAIL] = BattleScript_TypeWeatherActivates2_Hail,
+};
+
 static void TryDoEventsBeforeFirstTurn(void)
 {
     s32 i, j;
@@ -3563,6 +3571,44 @@ static void TryDoEventsBeforeFirstTurn(void)
         }
     }
     memset(gTotemBoosts, 0, sizeof(gTotemBoosts));  // erase all totem boosts just to be safe
+
+    if (!gBattleStruct->switchInWeatherDone
+     && FlagGet(FLAG_BATTLE_TYPE_WEATHER))
+    {
+        gBattleStruct->switchInWeatherDone = TRUE;
+        for (i = 0; i < gBattlersCount; i++)
+        {
+            u8 weather1, weather2;
+            gActiveBattler = gBattlerByTurnOrder[i];
+            if (GetBattlerSide(gActiveBattler) == B_SIDE_PLAYER)
+                continue;
+            weather1 = gTypeWeathers[gBattleMons[gActiveBattler].type1];
+            weather2 = gTypeWeathers[gBattleMons[gActiveBattler].type2];
+            if (weather1 == ENUM_WEATHER_NONE)
+                weather1 = weather2;
+            if (weather2 == ENUM_WEATHER_NONE)
+                weather2 = weather1;
+            if (weather1 != ENUM_WEATHER_NONE)
+            {
+                gWishFutureKnock.weather1 = weather1;
+                gWishFutureKnock.weather2 = weather2;
+                gWishFutureKnock.weatherBattler = gActiveBattler;
+            }
+        }
+        if (gWishFutureKnock.weather1)
+        {
+            const u8 *script = gTypeWeatherScripts[gWishFutureKnock.weather1];
+            if (script
+             && TryChangeBattleWeather(gWishFutureKnock.weatherBattler, gWishFutureKnock.weather1, 2))
+            {
+                u8 temp;
+                SWAP(gWishFutureKnock.weather1, gWishFutureKnock.weather2, temp);
+                gBattleScripting.battler = gWishFutureKnock.weatherBattler;
+                BattleScriptExecute(script);
+                return;
+            }
+        }
+    }
 
     // Check all switch in abilities happening from the fastest mon to slowest.
     while (gBattleStruct->switchInAbilitiesCounter < gBattlersCount)
