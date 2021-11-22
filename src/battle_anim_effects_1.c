@@ -3582,7 +3582,7 @@ static void AnimSporeParticle_Step(struct Sprite* sprite)
 // No args.
 void AnimTask_SporeDoubleBattle(u8 taskId)
 {
-    if (IsContest() || !IsDoubleBattle())
+    if (IsContest() || !IsDoubleBattle(gBattleAnimTarget))
     {
         DestroyAnimVisualTask(taskId);
     }
@@ -3808,7 +3808,7 @@ static void AnimTranslateLinearSingleSineWave_Step(struct Sprite* sprite)
 // arg 4: speedup frame (particles move faster at the end of the animation)
 void AnimMoveTwisterParticle(struct Sprite* sprite)
 {
-    if (IsDoubleBattle() == TRUE)
+    if (IsDoubleBattle(gBattleAnimTarget))
         SetAverageBattlerPositions(gBattleAnimTarget, 1, &sprite->pos1.x, &sprite->pos1.y);
 
     sprite->pos1.y += 32;
@@ -5246,7 +5246,7 @@ static void AnimSparkingStars(struct Sprite* sprite)
     else
         battler = gBattleAnimTarget;
 
-    if (IsDoubleBattle() && IsBattlerSpriteVisible(BATTLE_PARTNER(battler)))
+    if (IsDoubleBattle(battler) && IsBattlerSpriteVisible(BATTLE_PARTNER(battler)))
     {
         SetAverageBattlerPositions(battler, gBattleAnimArgs[6], &sprite->pos1.x, &sprite->pos1.y);
         SetAnimSpriteInitialXOffset(sprite, gBattleAnimArgs[0]);
