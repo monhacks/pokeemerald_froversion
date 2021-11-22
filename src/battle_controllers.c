@@ -655,6 +655,11 @@ static void SetBattlePartyIds(void)
 
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
             gBattlerPartyIndexes[1] = 0, gBattlerPartyIndexes[3] = 3;
+
+        if (gBattlerPartyIndexes[0] == gBattlerPartyIndexes[2])
+            gBattlerPartyIndexes[2]++;
+        if (gBattlerPartyIndexes[1] == gBattlerPartyIndexes[3])
+            gBattlerPartyIndexes[3]++;
     }
 }
 

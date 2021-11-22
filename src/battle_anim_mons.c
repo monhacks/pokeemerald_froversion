@@ -1,6 +1,7 @@
 #include "global.h"
 #include "battle.h"
 #include "battle_anim.h"
+#include "battle_setup.h"
 #include "bg.h"
 #include "contest.h"
 #include "data.h"
@@ -15,8 +16,6 @@
 #include "trig.h"
 #include "util.h"
 #include "constants/battle_anim.h"
-
-#define IS_DOUBLE_BATTLE() ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
 
 extern const struct OamData gOamData_AffineNormal_ObjNormal_64x64;
 
@@ -124,10 +123,10 @@ u8 GetBattlerSpriteCoord(u8 battlerId, u8 coordType)
     {
     case BATTLER_COORD_X:
     case BATTLER_COORD_X_2:
-        retVal = sBattlerCoords[IS_DOUBLE_BATTLE()][GetBattlerPosition(battlerId)].x;
+        retVal = sBattlerCoords[IsDoubleBattle(battlerId)][GetBattlerPosition(battlerId)].x;
         break;
     case BATTLER_COORD_Y:
-        retVal = sBattlerCoords[IS_DOUBLE_BATTLE()][GetBattlerPosition(battlerId)].y;
+        retVal = sBattlerCoords[IsDoubleBattle(battlerId)][GetBattlerPosition(battlerId)].y;
         break;
     case BATTLER_COORD_Y_PIC_OFFSET:
     case BATTLER_COORD_Y_PIC_OFFSET_DEFAULT:
@@ -276,7 +275,7 @@ u8 GetBattlerSpriteFinal_Y(u8 battlerId, u16 species, bool8 a3)
         offset = GetBattlerYDelta(battlerId, species);
         offset -= GetBattlerElevation(battlerId, species);
     }
-    y = offset + sBattlerCoords[IS_DOUBLE_BATTLE()][GetBattlerPosition(battlerId)].y;
+    y = offset + sBattlerCoords[IsDoubleBattle(battlerId)][GetBattlerPosition(battlerId)].y;
     if (a3)
     {
         if (GetBattlerSide(battlerId) == B_SIDE_PLAYER)
@@ -880,9 +879,12 @@ bool8 IsBattlerSpritePresent(u8 battlerId)
     }
 }
 
-bool8 IsDoubleBattle(void)
+bool8 IsDoubleBattle(u32 battlerId)
 {
-    return IS_DOUBLE_BATTLE();
+    if (GetBattlerSide(battlerId) == B_SIDE_PLAYER)
+        return gBattleTypeFlags & BATTLE_TYPE_DOUBLE;
+    else
+        return (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && !gTrainers[gTrainerBattleOpponent_A].twoVsOne;
 }
 
 void sub_80A6B30(struct BattleAnimBgData *unk)
@@ -2284,7 +2286,7 @@ void SetAverageBattlerPositions(u8 battlerId, bool8 respectMonPicOffsets, s16 *x
 
     battlerX = GetBattlerSpriteCoord(battlerId, xCoordType);
     battlerY = GetBattlerSpriteCoord(battlerId, yCoordType);
-    if (IsDoubleBattle() && !IsContest())
+    if (IsDoubleBattle(battlerId) && !IsContest())
     {
         partnerX = GetBattlerSpriteCoord(BATTLE_PARTNER(battlerId), xCoordType);
         partnerY = GetBattlerSpriteCoord(BATTLE_PARTNER(battlerId), yCoordType);
