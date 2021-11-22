@@ -394,5 +394,13 @@ extern const u8 BattleScript_NegateActivates[];
 extern const u8 BattleScript_ResurrectionActivatesAttacker[];
 extern const u8 BattleScript_ResurrectionActivatesTarget[];
 extern const u8 BattleScript_RainHpHeal[];
+extern const u8 BattleScript_TypeWeatherActivates_Rain[];
+extern const u8 BattleScript_TypeWeatherActivates_Sun[];
+extern const u8 BattleScript_TypeWeatherActivates_Sandstorm[];
+extern const u8 BattleScript_TypeWeatherActivates_Hail[];
+extern const u8 BattleScript_TypeWeatherActivates2_Rain[];
+extern const u8 BattleScript_TypeWeatherActivates2_Sun[];
+extern const u8 BattleScript_TypeWeatherActivates2_Sandstorm[];
+extern const u8 BattleScript_TypeWeatherActivates2_Hail[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

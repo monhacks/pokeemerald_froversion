@@ -8468,3 +8468,59 @@ BattleScript_ResurrectionActivatesTarget::
 	waitmessage 0x40
 BattleScript_ResurrectionTargetEnd:
 	return
+
+BattleScript_TypeWeatherActivates_Rain::
+	printstring STRINGID_PKMNMADEITRAIN2
+	waitmessage 0x20
+	playanimation BS_BATTLER_0, B_ANIM_RAIN_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	return
+
+BattleScript_TypeWeatherActivates_Sun::
+	printstring STRINGID_PKMNMADEITSUNNY
+	waitmessage 0x20
+	playanimation BS_BATTLER_0, B_ANIM_SUN_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	return
+
+BattleScript_TypeWeatherActivates_Sandstorm::
+	printstring STRINGID_PKMNWHIPPEDUPASANDSTORM
+	waitmessage 0x20
+	playanimation BS_BATTLER_0, B_ANIM_SANDSTORM_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	return
+
+BattleScript_TypeWeatherActivates_Hail::
+	printstring STRINGID_PKMNMADEITHAIL
+	waitmessage 0x20
+	playanimation BS_BATTLER_0, B_ANIM_HAIL_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	return
+
+BattleScript_TypeWeatherActivates2_Rain::
+	printstring STRINGID_PKMNMADEITRAIN2
+	waitmessage 0x20
+	playanimation BS_BATTLER_0, B_ANIM_RAIN_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	end2
+
+BattleScript_TypeWeatherActivates2_Sun::
+	printstring STRINGID_PKMNMADEITSUNNY
+	waitmessage 0x20
+	playanimation BS_BATTLER_0, B_ANIM_SUN_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	end2
+
+BattleScript_TypeWeatherActivates2_Sandstorm::
+	printstring STRINGID_PKMNWHIPPEDUPASANDSTORM
+	waitmessage 0x20
+	playanimation BS_BATTLER_0, B_ANIM_SANDSTORM_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	end2
+
+BattleScript_TypeWeatherActivates2_Hail::
+	printstring STRINGID_PKMNMADEITHAIL
+	waitmessage 0x20
+	playanimation BS_BATTLER_0, B_ANIM_HAIL_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	end2

@@ -1681,6 +1681,7 @@ enum
     ENDTURN_HAIL,
     ENDTURN_DREAM_FOG,
     ENDTURN_DARKNESS,
+    ENDTURN_TYPE_WEATHER,
     ENDTURN_GRAVITY,
     ENDTURN_WATER_SPORT,
     ENDTURN_MUD_SPORT,
@@ -2094,6 +2095,24 @@ u8 DoFieldEndTurnEffects(void)
                     gBattlescriptCurrInstr = BattleScript_DarknessReturns;
                     BattleScriptExecute(gBattlescriptCurrInstr);
                     effect++;
+                }
+            }
+            gBattleStruct->turnCountersTracker++;
+            break;
+        case ENDTURN_TYPE_WEATHER:
+            if (gWishFutureKnock.weather1 != ENUM_WEATHER_NONE)
+            {
+                u8 temp;
+                if (TryChangeBattleWeather(gWishFutureKnock.weatherBattler, gWishFutureKnock.weather1, 2))
+                {
+                    const u8 *script = gTypeWeatherScripts[gWishFutureKnock.weather1];
+                    SWAP(gWishFutureKnock.weather1, gWishFutureKnock.weather2, temp);
+                    if (script)
+                    {
+                        gBattleScripting.battler = gWishFutureKnock.weatherBattler;
+                        BattleScriptExecute(script);
+                        effect++;
+                    }
                 }
             }
             gBattleStruct->turnCountersTracker++;
@@ -3711,7 +3730,7 @@ static const u16 sWeatherFlagsInfo[][3] =
     [ENUM_WEATHER_HAIL_PERM] = {WEATHER_HAIL_PERMANENT, HOLD_EFFECT_ICY_ROCK},
 };
 
-bool32 TryChangeBattleWeather(u8 battler, u32 weatherEnumId, bool32 viaAbility)
+bool32 TryChangeBattleWeather(u8 battler, u32 weatherEnumId, u32 viaAbility)
 {
     bool32 wasDarkness = gBattleWeather & WEATHER_DARKNESS_ANY;
 
@@ -3728,6 +3747,8 @@ bool32 TryChangeBattleWeather(u8 battler, u32 weatherEnumId, bool32 viaAbility)
     else if (!(gBattleWeather & (sWeatherFlagsInfo[weatherEnumId][0] | sWeatherFlagsInfo[weatherEnumId][1])))
     {
         gBattleWeather = (sWeatherFlagsInfo[weatherEnumId][0]);
+        if (viaAbility == 2)
+            gBattleWeather |= sWeatherFlagsInfo[weatherEnumId][1];
         if (weatherEnumId != ENUM_WEATHER_SUN && gBattleStruct->darknessTimer > 0)
         {
             gWishFutureKnock.weatherDuration = 1;

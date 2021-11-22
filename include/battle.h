@@ -237,6 +237,9 @@ struct WishFutureKnock
     u8 autosubMons[2];
     u8 counterMons[2];
     u8 resurrectionMons[2];
+    u8 weather1;
+    u8 weather2;
+    u8 weatherBattler;
 };
 
 struct AI_SavedBattleMon
@@ -455,6 +458,7 @@ struct BattleStruct
     u8 battlerPreventingSwitchout;
     u8 moneyMultiplier;
     u8 savedTurnActionNumber;
+    bool8 switchInWeatherDone;
     u8 switchInAbilitiesCounter;
     u8 faintedActionsState;
     u8 faintedActionsBattlerId;
@@ -860,6 +864,8 @@ extern u8 gBattlerAbility;
 extern u16 gPartnerSpriteId;
 extern struct TotemBoost gTotemBoosts[MAX_BATTLERS_COUNT];
 extern const struct BerryBoost gBerryBoosts[];
+extern const u8 gTypeWeathers[];
+extern const u8 *const gTypeWeatherScripts[];
 
 extern void (*gPreBattleCallback1)(void);
 extern void (*gBattleMainFunc)(void);
