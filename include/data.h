@@ -72,7 +72,8 @@ struct Trainer
     /*0x03*/ u8 trainerPic;
     /*0x04*/ u8 trainerName[12];
     /*0x10*/ u16 items[4];
-    /*0x18*/ bool8 doubleBattle;
+    /*0x18*/ bool8 doubleBattle:1;
+             bool8 twoVsOne:1;
     /*0x1C*/ u32 aiFlags;
     /*0x20*/ u8 partySize;
     /*0x24*/ u8 transition:7;

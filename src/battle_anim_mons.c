@@ -1,6 +1,7 @@
 #include "global.h"
 #include "battle.h"
 #include "battle_anim.h"
+#include "battle_setup.h"
 #include "bg.h"
 #include "contest.h"
 #include "data.h"
@@ -883,7 +884,7 @@ bool8 IsDoubleBattle(u32 battlerId)
     if (GetBattlerSide(battlerId) == B_SIDE_PLAYER)
         return gBattleTypeFlags & BATTLE_TYPE_DOUBLE;
     else
-        return (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && gEnemyPartyCount > 1;
+        return (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && !gTrainers[gTrainerBattleOpponent_A].twoVsOne;
 }
 
 void sub_80A6B30(struct BattleAnimBgData *unk)

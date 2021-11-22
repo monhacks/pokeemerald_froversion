@@ -2976,8 +2976,7 @@ static void BattleStartClearSetData(void)
 
     gBattleStruct->mega.triggerSpriteId = 0xFF;
 
-    CalculateEnemyPartyCount();
-    if (gEnemyPartyCount == 1 && gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+    if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && gTrainers[gTrainerBattleOpponent_A].twoVsOne)
         gBattlersCount = 3;
 }
 
