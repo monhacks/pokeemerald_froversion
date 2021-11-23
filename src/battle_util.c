@@ -66,9 +66,9 @@ static const u8 sGoNearCounterToEscapeFactor[] = {4, 4, 4, 4};
 
 static const u16 sPostProductionMoves[PARTY_SIZE][3] =
 {
-    { MOVE_TACKLE, MOVE_GROWL, MOVE_HOWL },
-    { MOVE_STRUGGLE },
-    { MOVE_STRUGGLE },
+    { MOVE_THUNDERBOLT, MOVE_THUNDER, MOVE_THUNDER_SHOCK },
+    { MOVE_FLAMETHROWER, MOVE_EMBER, MOVE_FIRE_SPIN },
+    { MOVE_SCREECH, MOVE_CONFIDE, MOVE_LEER },
     { MOVE_STRUGGLE },
     { MOVE_STRUGGLE },
     { MOVE_STRUGGLE },
@@ -145,7 +145,7 @@ void HandleAction_UseMove(void)
 
     if (FlagGet(FLAG_BATTLE_POST_PRODUCTION)
      && GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER
-     && Random() % 100 < 10) // 10% chance.
+     && Random() % 100 < 12) // 10% chance.
     {
         u32 partyIndex = gBattlerPartyIndexes[GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)];
         int i;

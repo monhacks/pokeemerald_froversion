@@ -90,7 +90,7 @@ Debug_Script_5::
 	end
 
 Debug_Script_6::
-	cleartrainerflag TRAINER_MISSY
+	cleartrainerflag TRAINER_DUSTY_2
 	cleartrainerflag TRAINER_ELI
 	cleartrainerflag TRAINER_JEFF
 	cleartrainerflag TRAINER_KEEGAN

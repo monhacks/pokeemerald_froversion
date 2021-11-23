@@ -117,6 +117,7 @@
 #define MAP_LOCKPORT_TRAIL_BF2TOP_CONNECTION   (108 | (0 << 8))
 #define MAP_LOCKPORT_TRAIL_BF1RIGHT_CONNECTION (109 | (0 << 8))
 #define MAP_HOMESTEAD_NORTH                    (110 | (0 << 8))
+#define MAP_HOMESTEAD_SOUTH_FRATT_HOUSE        (111 | (0 << 8))
 
 // Map Group 1
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F     (0 | (1 << 8))
@@ -683,6 +684,6 @@
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {111, 10, 9, 10, 8, 8, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 13, 0};
+// static const u8 MAP_GROUP_COUNT[] = {112, 10, 9, 10, 8, 8, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 13, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

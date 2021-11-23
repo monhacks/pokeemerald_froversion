@@ -147,7 +147,8 @@
     "LockportTrail_BF1LeftConnection",
     "LockportTrail_BF2TopConnection",
     "LockportTrail_BF1RightConnection",
-    "HomesteadNorth"
+    "HomesteadNorth",
+    "HomesteadSouth_FrattHouse"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",

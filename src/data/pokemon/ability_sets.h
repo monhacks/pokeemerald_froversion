@@ -932,8 +932,6 @@ static const struct AbilitySetter sRiptorypsAbilitySet[] =
     {ABILITY_MAGMA_ARMOR, 15},
     {ABILITY_FLASH_FIRE, 30},
     {ABILITY_AUTOSUB, 45},
-    {ABILITY_BEAST_BOOST, 50},
-
     ABILITY_SET_END
 };
 

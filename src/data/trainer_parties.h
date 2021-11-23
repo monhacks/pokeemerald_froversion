@@ -587,31 +587,75 @@ static const struct TrainerMonNoItemCustomMoves sParty_Foster[] = {
     }
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Dusty2[] = {
+static const struct TrainerMonItemCustomMoves sParty_Dusty2[] = {
     {
-    .iv = 60,
-    .lvl = 27,
-    .species = SPECIES_SANDSLASH,
-    .moves = {MOVE_DIG, MOVE_SLASH, MOVE_SAND_ATTACK, MOVE_POISON_STING}
-    }
+    .abilityNum = 3,
+    .iv = 255,
+    .lvl = 55,
+    .species = SPECIES_SCIZOR,
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_BULLET_PUNCH, MOVE_U_TURN, MOVE_SUPERPOWER, MOVE_PURSUIT}
+    },
+    {
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 55,
+    .species = SPECIES_MACHAMP,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_DYNAMIC_PUNCH, MOVE_SUBSTITUTE, MOVE_PAYBACK, MOVE_STONE_EDGE},
+    },
+    {
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 55,
+    .species = SPECIES_GYARADOS,
+    .heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_WATERFALL, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE, MOVE_BOUNCE},
+    },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Dusty3[] = {
+static const struct TrainerMonItemCustomMoves sParty_Dusty3[] = {
     {
-    .iv = 70,
-    .lvl = 30,
-    .species = SPECIES_SANDSLASH,
-    .moves = {MOVE_DIG, MOVE_SLASH, MOVE_SAND_ATTACK, MOVE_POISON_STING}
-    }
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 55,
+    .species = SPECIES_VAYPING,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SLUDGE_BOMB, MOVE_SMOKESCREEN, MOVE_SHADOW_BALL}
+    },
+    {
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 55,
+    .species = SPECIES_HOUNDOOM,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_FLAMETHROWER, MOVE_DARK_PULSE, MOVE_NASTY_PLOT, MOVE_SUCKER_PUNCH}
+    },
+    {
+    .abilityNum = 1,
+    .iv = 250,
+    .lvl = 55,
+    .species = SPECIES_MECHOBRA,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_HYDRO_PUMP, MOVE_SUBSTITUTE, MOVE_AQUA_RING, MOVE_ICE_BEAM}
+    },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_Dusty4[] = {
+static const struct TrainerMonItemCustomMoves sParty_Dusty4[] = {
     {
-    .iv = 80,
-    .lvl = 33,
-    .species = SPECIES_SANDSLASH,
-    .moves = {MOVE_DIG, MOVE_SLASH, MOVE_SAND_ATTACK, MOVE_POISON_STING}
-    }
+    .iv = 250,
+    .lvl = 55,
+    .species = SPECIES_GASTLY,
+    .heldItem = ITEM_EVIOLITE,
+    .moves = {MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_EXPLOSION, MOVE_SAND_ATTACK}
+    },
+    {
+    .iv = 250,
+    .lvl = 55,
+    .species = SPECIES_PHOKAI,
+    .heldItem = ITEM_EVIOLITE,
+    .moves = {MOVE_MOONBLAST, MOVE_SHADOW_BALL, MOVE_CURSE, MOVE_REVIVE}
+    },
 };
 
 static const struct TrainerMonNoItemCustomMoves sParty_Dusty5[] = {
@@ -12908,14 +12952,6 @@ static const struct TrainerMonItemCustomMoves sParty_MegaHoundoomMtChimney[] = {
     .statHP = 350,
     .statMaxHP = 350,
     }, 
-    {
-    .iv = 0,
-    .heldItem = ITEM_FLAME_ORB,
-    .lvl = 1,
-    .species = SPECIES_MAGIKARP,
-    .moves = {MOVE_SPLASH, MOVE_NONE, MOVE_NONE, MOVE_NONE},
-    .statHP = 1,
-    }
 };
 
 static const struct TrainerMonItemCustomMoves sParty_SummitCavernsLattka1[] = {
@@ -12957,14 +12993,6 @@ static const struct TrainerMonItemCustomMoves sParty_SummitCavernsLattka2[] = {
     .statHP = 525,
     .statMaxHP = 525,
     },
-    {
-    .iv = 150,
-    .lvl = 1,
-    .species = SPECIES_MAGIKARP,
-    .heldItem = ITEM_FLAME_ORB,
-    .moves = {MOVE_SPLASH, MOVE_SPLASH, MOVE_SPLASH, MOVE_SPLASH},
-    .statHP = 1,
-    }
 };
 
 static const struct TrainerMonItemCustomMoves sParty_MagmaHideoutMegaGengar[] = {
@@ -12980,14 +13008,6 @@ static const struct TrainerMonItemCustomMoves sParty_MagmaHideoutMegaGengar[] = 
     .statHP = 707,
     .statMaxHP = 707,
     },
-    {
-    .iv = 150,
-    .lvl = 1,
-    .species = SPECIES_MAGIKARP,
-    .heldItem = ITEM_FLAME_ORB,
-    .moves = {MOVE_SPLASH, MOVE_SPLASH, MOVE_SPLASH, MOVE_SPLASH},
-    .statHP = 0,
-    }
 };
 
 static const struct TrainerMonItemCustomMoves sParty_ColangeloGraphicsDom[] = {
@@ -13003,14 +13023,6 @@ static const struct TrainerMonItemCustomMoves sParty_ColangeloGraphicsDom[] = {
     .statHP = 1725,
     .statMaxHP = 1725,
     },
-    {
-    .iv = 150,
-    .lvl = 1,
-    .species = SPECIES_MAGIKARP,
-    .heldItem = ITEM_FLAME_ORB,
-    .moves = {MOVE_SPLASH, MOVE_SPLASH, MOVE_SPLASH, MOVE_SPLASH},
-    .statHP = 1,
-    }
 };
 
 static const struct TrainerMonItemCustomMoves sParty_JohnChampionsHallMudkip[] = {

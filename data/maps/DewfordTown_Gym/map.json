@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DewfordTown_Gym_EventScript_Brawly",
+      "script": "MossdeepCity_Gym_EventScript_TateAndLiza",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "DewfordTown_Gym_EventScript_Takao",
+      "script": "MossdeepCity_Gym_EventScript_Virgil",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "DewfordTown_Gym_EventScript_Jocelyn",
+      "script": "TRAINER_SYLVIA",
       "flag": "0"
     },
     {
@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "DewfordTown_Gym_EventScript_Laura",
+      "script": "MossdeepCity_Gym_EventScript_Preston",
       "flag": "0"
     },
     {
@@ -89,7 +89,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "DewfordTown_Gym_EventScript_Cristian",
+      "script": "MossdeepCity_Gym_EventScript_Nate",
       "flag": "0"
     },
     {
@@ -102,7 +102,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "DewfordTown_Gym_EventScript_Lilith",
+      "script": "MossdeepCity_Gym_EventScript_Samantha",
       "flag": "0"
     },
     {
@@ -115,7 +115,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "DewfordTown_Gym_EventScript_Brenden",
+      "script": "MossdeepCity_Gym_EventScript_Blake",
       "flag": "0"
     }
   ],
@@ -125,14 +125,14 @@
       "y": 27,
       "elevation": 0,
       "dest_map": "MAP_MOSSDEEP_CITY",
-      "dest_warp_id": 2
+      "dest_warp_id": 1
     },
     {
       "x": 6,
       "y": 27,
       "elevation": 0,
       "dest_map": "MAP_MOSSDEEP_CITY",
-      "dest_warp_id": 2
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [

@@ -5310,6 +5310,16 @@
       "secondary_tileset": "gTileset_PetalburgGym",
       "border_filepath": "data/layouts/PetalburgGymBorder/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgGymBorder/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_SOUTH_FRATT_HOUSE",
+      "name": "HomesteadSouth_FrattHouse_Layout",
+      "width": 17,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/HomesteadSouth_FrattHouse/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadSouth_FrattHouse/map.bin"
     }
   ]
 }

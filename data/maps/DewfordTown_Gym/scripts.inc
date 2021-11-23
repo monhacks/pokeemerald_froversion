@@ -1,157 +1,16 @@
 DewfordTown_Gym_MapScripts:: @ 81FC63C
-	map_script MAP_SCRIPT_ON_TRANSITION, DewfordTown_Gym_OnTransition
 	.byte 0
 
-DewfordTown_Gym_OnTransition: @ 81FC642
-	call DewfordTown_Gym_EventScript_SetFlashRadius
-	end
-
-DewfordTown_Gym_EventScript_SetFlashRadius:: @ 81FC648
-	goto_if_defeated TRAINER_BRAWLY_1, DewfordTown_Gym_EventScript_SetLightsOn
-	call DewfordTown_Gym_EventScript_CountTrainersDefeated
-	copyvar VAR_0x8001, VAR_0x8000
-	compare VAR_0x8000, 0
-	goto_if_eq DewfordTown_Gym_EventScript_SetFlashRadius7
-	compare VAR_0x8000, 1
-	goto_if_eq DewfordTown_Gym_EventScript_SetFlashRadius6
-	compare VAR_0x8000, 2
-	goto_if_eq DewfordTown_Gym_EventScript_SetFlashRadius5
-	compare VAR_0x8000, 3
-	goto_if_eq DewfordTown_Gym_EventScript_SetFlashRadius4
-	compare VAR_0x8000, 4
-	goto_if_eq DewfordTown_Gym_EventScript_SetFlashRadius3
-	compare VAR_0x8000, 5
-	goto_if_eq DewfordTown_Gym_EventScript_SetFlashRadius2
-	goto DewfordTown_Gym_EventScript_SetFlashRadius1
-
-DewfordTown_Gym_EventScript_SetLightsOn:: @ 81FC6A2
-	setflashradius 0
-	return
-
-DewfordTown_Gym_EventScript_SetFlashRadius1:: @ 81FC6A6
-	setflashradius 1
-	return
-
-DewfordTown_Gym_EventScript_SetFlashRadius2:: @ 81FC6AA
-	setflashradius 2
-	return
-
-DewfordTown_Gym_EventScript_SetFlashRadius3:: @ 81FC6AE
-	setflashradius 3
-	return
-
-DewfordTown_Gym_EventScript_SetFlashRadius4:: @ 81FC6B2
-	setflashradius 4
-	return
-
-DewfordTown_Gym_EventScript_SetFlashRadius5:: @ 81FC6B6
-	setflashradius 5
-	return
-
-DewfordTown_Gym_EventScript_SetFlashRadius6:: @ 81FC6BA
-	setflashradius 6
-	return
-
-DewfordTown_Gym_EventScript_SetFlashRadius7:: @ 81FC6BE
-	setflashradius 7
-	return
-
-DewfordTown_Gym_EventScript_BrightenRoom:: @ 81FC6C2
-	call DewfordTown_Gym_EventScript_CountTrainersDefeated
-	nop1
-	compare VAR_0x8000, VAR_0x8001
-	goto_if_eq DewfordTown_Gym_EventScript_NoLightChange
-	copyvar VAR_0x8001, VAR_0x8000
-	compare VAR_0x8000, 1
-	goto_if_eq DewfordTown_Gym_EventScript_AnimateFlash1Trainer
-	compare VAR_0x8000, 2
-	goto_if_eq DewfordTown_Gym_EventScript_AnimateFlash2Trainers
-	compare VAR_0x8000, 3
-	goto_if_eq DewfordTown_Gym_EventScript_AnimateFlash3Trainers
-	compare VAR_0x8000, 4
-	goto_if_eq DewfordTown_Gym_EventScript_AnimateFlash4Trainers
-	compare VAR_0x8000, 5
-	goto_if_eq DewfordTown_Gym_EventScript_AnimateFlash5Trainers
-	compare VAR_0x8000, 6
-	goto_if_eq DewfordTown_Gym_EventScript_AnimateFlash6Trainers
-
-DewfordTown_Gym_EventScript_NoLightChange:: @ 81FC71A
-	return
-
-@ NOTE: A little confusingly, a larger animateflash param value is a smaller flash radius
-DewfordTown_Gym_EventScript_AnimateFlash1Trainer:: @ 81FC71B
-	playse SE_SWITCH
-	animateflash 6
-	call DewfordTown_Gym_EventScript_SetFlashRadius
-	return
-
-DewfordTown_Gym_EventScript_AnimateFlash2Trainers:: @ 81FC726
-	playse SE_SWITCH
-	animateflash 5
-	call DewfordTown_Gym_EventScript_SetFlashRadius
-	return
-
-DewfordTown_Gym_EventScript_AnimateFlash3Trainers:: @ 81FC731
-	playse SE_SWITCH
-	animateflash 4
-	call DewfordTown_Gym_EventScript_SetFlashRadius
-	return
-
-DewfordTown_Gym_EventScript_AnimateFlash4Trainers:: @ 81FC73C
-	playse SE_SWITCH
-	animateflash 3
-	call DewfordTown_Gym_EventScript_SetFlashRadius
-	return
-
-DewfordTown_Gym_EventScript_AnimateFlash5Trainers:: @ 81FC747
-	playse SE_SWITCH
-	animateflash 2
-	call DewfordTown_Gym_EventScript_SetFlashRadius
-	return
-
-DewfordTown_Gym_EventScript_AnimateFlash6Trainers:: @ 81FC752
-	playse SE_SWITCH
-	animateflash 1
-	call DewfordTown_Gym_EventScript_SetFlashRadius
-	return
-
-DewfordTown_Gym_EventScript_AnimateFlashFullBrightness:: @ 81FC75D
-	playse SE_SWITCH
-	animateflash 0
-	call DewfordTown_Gym_EventScript_SetFlashRadius
-	return
-
-DewfordTown_Gym_EventScript_CountTrainersDefeated:: @ 81FC768
-	setvar VAR_0x8000, 0
-	goto_if_not_defeated TRAINER_TAKAO, DewfordTown_Gym_EventScript_CheckJocelyn
-	addvar VAR_0x8000, 1
-DewfordTown_Gym_EventScript_CheckJocelyn:: @ 81FC77B
-	goto_if_not_defeated TRAINER_JOCELYN, DewfordTown_Gym_EventScript_CheckLaura
-	addvar VAR_0x8000, 1
-DewfordTown_Gym_EventScript_CheckLaura:: @ 81FC789
-	goto_if_not_defeated TRAINER_LAURA, DewfordTown_Gym_EventScript_CheckBrenden
-	addvar VAR_0x8000, 1
-DewfordTown_Gym_EventScript_CheckBrenden:: @ 81FC797
-	goto_if_not_defeated TRAINER_BRENDEN, DewfordTown_Gym_EventScript_CheckCristian
-	addvar VAR_0x8000, 1
-DewfordTown_Gym_EventScript_CheckCristian:: @ 81FC7A5
-	goto_if_not_defeated TRAINER_CRISTIAN, DewfordTown_Gym_EventScript_CheckLilith
-	addvar VAR_0x8000, 1
-DewfordTown_Gym_EventScript_CheckLilith:: @ 81FC7B3
-	goto_if_not_defeated TRAINER_LILITH, DewfordTown_Gym_EventScript_StopCountingTrainers
-	addvar VAR_0x8000, 1
-DewfordTown_Gym_EventScript_StopCountingTrainers:: @ 81FC7C1
-	return
 
 DewfordTown_Gym_EventScript_Brawly:: @ 81FC7C2
 	// setweather WEATHER_DROUGHT
 	// doweather
-	setflag	FLAG_BATTLE_SUN
+	setflag	FLAG_BATTLE_TYPE_WEATHER
 	setflag FLAG_SYS_NO_BAG_USE
 	setflag FLAG_FORCE_BATTLE_STYLE_SET
 	setvar VAR_MUGSHOT_ID, MUGSHOT_WES_THOMPSON
 	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
-	clearflag FLAG_BATTLE_SUN
+	clearflag FLAG_BATTLE_TYPE_WEATHER
 	clearflag FLAG_SYS_NO_BAG_USE
 	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -166,7 +25,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated:: @ 81FC7F7
 	//call DewfordTown_Gym_EventScript_AnimateFlashFullBrightness
 	message DewfordTown_Gym_Text_ReceivedKnuckleBadge
 	waitmessage
-	clearflag FLAG_BATTLE_SUN
+	clearflag FLAG_BATTLE_TYPE_WEATHER
 	clearflag FLAG_SYS_NO_BAG_USE
 	clearflag FLAG_FORCE_BATTLE_STYLE_SET
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -220,7 +79,6 @@ DewfordTown_Gym_EventScript_Takao:: @ 81FC8B7
 	end
 
 DewfordTown_Gym_EventScript_TakaoBrightenRoom:: @ 81FC8D2
-	call DewfordTown_Gym_EventScript_BrightenRoom
 	release
 	end
 
@@ -230,7 +88,6 @@ DewfordTown_Gym_EventScript_Jocelyn:: @ 81FC8D9
 	end
 
 DewfordTown_Gym_EventScript_JocelynBrightenRoom:: @ 81FC8F4
-	call DewfordTown_Gym_EventScript_BrightenRoom
 	release
 	end
 
@@ -240,7 +97,6 @@ DewfordTown_Gym_EventScript_Laura:: @ 81FC8FB
 	end
 
 DewfordTown_Gym_EventScript_LauraBrightenRoom:: @ 81FC916
-	call DewfordTown_Gym_EventScript_BrightenRoom
 	release
 	end
 
@@ -250,7 +106,6 @@ DewfordTown_Gym_EventScript_Brenden:: @ 81FC91D
 	end
 
 DewfordTown_Gym_EventScript_BrendenBrightenRoom:: @ 81FC938
-	call DewfordTown_Gym_EventScript_BrightenRoom
 	release
 	end
 
@@ -260,7 +115,6 @@ DewfordTown_Gym_EventScript_Cristian:: @ 81FC93F
 	end
 
 DewfordTown_Gym_EventScript_CristianBrightenRoom:: @ 81FC95A
-	call DewfordTown_Gym_EventScript_BrightenRoom
 	release
 	end
 
@@ -270,7 +124,6 @@ DewfordTown_Gym_EventScript_Lilith:: @ 81FC961
 	end
 
 DewfordTown_Gym_EventScript_LilithBrightenRoom:: @ 81FC97C
-	call DewfordTown_Gym_EventScript_BrightenRoom
 	release
 	end
 
