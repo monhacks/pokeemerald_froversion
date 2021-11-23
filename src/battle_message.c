@@ -726,10 +726,10 @@ static const u8 sText_TorridActivatesWaterPrevention[] =_("{B_DEF_NAME_WITH_PREF
 static const u8 sText_PkmnLevitatedGroundMovesMiss[] = _("{B_DEF_NAME_WITH_PREFIX} levitates. Ground\n moves can't connect!");
 static const u8 sText_DarkTetherActivates[] = _("A Magic circle encompasses\n the battlefield!");
 static const u8 sText_DarkTetherEnds[] = _("The Magic disappeared!");
-static const u8 sText_PkmnMadeItRain2[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made in rain!");
-static const u8 sText_PkmnMadeItSunny[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made in sunny!");
+static const u8 sText_PkmnMadeItRain2[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made it rain!");
+static const u8 sText_PkmnMadeItSunny[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made it sunny!");
 static const u8 sText_PkmnWhippedUpASandstorm[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} whipped up a sandstorm!");
-static const u8 sText_PkmnMadeItHail[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made in hail!");
+static const u8 sText_PkmnMadeItHail[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made it hail!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
