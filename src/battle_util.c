@@ -2103,16 +2103,15 @@ u8 DoFieldEndTurnEffects(void)
             if (gWishFutureKnock.weather1 != ENUM_WEATHER_NONE)
             {
                 u8 temp;
-                if (TryChangeBattleWeather(gWishFutureKnock.weatherBattler, gWishFutureKnock.weather1, 2))
+                const u8 *script;
+                SWAP(gWishFutureKnock.weather1, gWishFutureKnock.weather2, temp);
+                script = gTypeWeatherScripts[gWishFutureKnock.weather2];
+                if (script
+                 && TryChangeBattleWeather(gWishFutureKnock.weatherBattler, gWishFutureKnock.weather2, 2))
                 {
-                    const u8 *script = gTypeWeatherScripts[gWishFutureKnock.weather1];
-                    SWAP(gWishFutureKnock.weather1, gWishFutureKnock.weather2, temp);
-                    if (script)
-                    {
-                        gBattleScripting.battler = gWishFutureKnock.weatherBattler;
-                        BattleScriptExecute(script);
-                        effect++;
-                    }
+                    gBattleScripting.battler = gWishFutureKnock.weatherBattler;
+                    BattleScriptExecute(script);
+                    effect++;
                 }
             }
             gBattleStruct->turnCountersTracker++;

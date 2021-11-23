@@ -3597,12 +3597,13 @@ static void TryDoEventsBeforeFirstTurn(void)
         }
         if (gWishFutureKnock.weather1)
         {
-            const u8 *script = gTypeWeatherScripts[gWishFutureKnock.weather1];
+            u8 temp;
+            const u8 *script;
+            SWAP(gWishFutureKnock.weather1, gWishFutureKnock.weather2, temp);
+            script = gTypeWeatherScripts[gWishFutureKnock.weather2];
             if (script
-             && TryChangeBattleWeather(gWishFutureKnock.weatherBattler, gWishFutureKnock.weather1, 2))
+             && TryChangeBattleWeather(gWishFutureKnock.weatherBattler, gWishFutureKnock.weather2, 2))
             {
-                u8 temp;
-                SWAP(gWishFutureKnock.weather1, gWishFutureKnock.weather2, temp);
                 gBattleScripting.battler = gWishFutureKnock.weatherBattler;
                 BattleScriptExecute(script);
                 return;

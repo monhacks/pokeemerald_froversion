@@ -3507,6 +3507,7 @@ static void Cmd_cleareffectsonfaint(void)
         if (gWishFutureKnock.weatherBattler == gActiveBattler)
         {
             gWishFutureKnock.weather1 = gWishFutureKnock.weather2 = ENUM_WEATHER_NONE;
+            gWishFutureKnock.weatherBattler = gBattlersCount;
         }
 
         FaintClearSetData(); // Effects like attractions, trapping, etc.
@@ -6129,7 +6130,7 @@ static void Cmd_switchineffects(void)
      && GetBattlerSide(gActiveBattler) == B_SIDE_OPPONENT
      && FlagGet(FLAG_BATTLE_TYPE_WEATHER))
     {
-        u8 weather1, weather2;
+        u8 weather1, weather2, temp;
         const u8 *script;
         gSideStatuses[GetBattlerSide(gActiveBattler)] |= SIDE_STATUS_TYPE_WEATHER_TRIGGERED;
         weather1 = gTypeWeathers[gBattleMons[gActiveBattler].type1];
@@ -6144,10 +6145,9 @@ static void Cmd_switchineffects(void)
             gWishFutureKnock.weather1 = weather1;
             gWishFutureKnock.weather2 = weather2;
             gWishFutureKnock.weatherBattler = gActiveBattler;
-            if (TryChangeBattleWeather(gWishFutureKnock.weatherBattler, gWishFutureKnock.weather1, 2))
+            SWAP(gWishFutureKnock.weather1, gWishFutureKnock.weather2, temp);
+            if (TryChangeBattleWeather(gWishFutureKnock.weatherBattler, gWishFutureKnock.weather2, 2))
             {
-                u8 temp;
-                SWAP(gWishFutureKnock.weather1, gWishFutureKnock.weather2, temp);
                 gBattleScripting.battler = gWishFutureKnock.weatherBattler;
                 BattleScriptPushCursor();
                 gBattlescriptCurrInstr = script;
@@ -6174,7 +6174,7 @@ static void Cmd_switchineffects(void)
             || AbilityBattleEffects(ABILITYEFFECT_FORECAST, 0, 0, 0, 0))
             return;
 
-        gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~(SIDE_STATUS_SPIKES_DAMAGED | SIDE_STATUS_TOXIC_SPIKES_DAMAGED | SIDE_STATUS_STEALTH_ROCK_DAMAGED | SIDE_STATUS_STICKY_WEB_DAMAGED | SIDE_STATUS_POISON_FIELD_DAMAGED);
+        gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~(SIDE_STATUS_SPIKES_DAMAGED | SIDE_STATUS_TOXIC_SPIKES_DAMAGED | SIDE_STATUS_STEALTH_ROCK_DAMAGED | SIDE_STATUS_STICKY_WEB_DAMAGED | SIDE_STATUS_POISON_FIELD_DAMAGED | SIDE_STATUS_TYPE_WEATHER_TRIGGERED);
 
         for (i = 0; i < gBattlersCount; i++)
         {
