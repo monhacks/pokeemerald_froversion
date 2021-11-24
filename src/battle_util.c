@@ -6040,6 +6040,12 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 BattleScriptPushCursorAndCallback(BattleScript_AirBaloonMsgIn);
                 RecordItemEffectBattle(battlerId, HOLD_EFFECT_AIR_BALLOON);
                 break;
+            case HOLD_EFFECT_DRAGONS_ORB:
+                effect = ITEM_EFFECT_OTHER;
+                gBattleScripting.battler = battlerId;
+                BattleScriptPushCursorAndCallback(BattleScript_AirBaloonMsgIn);
+                RecordItemEffectBattle(battlerId, HOLD_EFFECT_AIR_BALLOON);
+                break;
             case HOLD_EFFECT_TYPE_CHANGE:
                 i = ItemId_GetSecondaryId(gLastUsedItem);
                 if (gBattleMons[battlerId].type1 != i
@@ -6960,6 +6966,8 @@ bool32 IsBattlerGrounded(u8 battlerId)
     else if (gStatuses3[battlerId] & STATUS3_MAGNET_RISE)
         return FALSE;
     else if (GetBattlerHoldEffect(battlerId, TRUE) == HOLD_EFFECT_AIR_BALLOON)
+        return FALSE;
+    else if ((IsSpeciesOneOf(gBattleMons[battlerId].species, gRiptorypsLine) && (GetBattlerHoldEffect(battlerId, TRUE) == HOLD_EFFECT_DRAGONS_ORB)))
         return FALSE;
     else if (GetBattlerAbility(battlerId) == ABILITY_LEVITATE)
         return FALSE;

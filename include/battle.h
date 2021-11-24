@@ -591,6 +591,14 @@ struct BattleStruct
     gBattleMons[battlerId].type3 = TYPE_MYSTERY;    \
 }
 
+#define SET_BATTLER_TYPE_DRAGON_ORB(battlerId, type)           \
+{                                                   \
+    gBattleMons[battlerId].type1 = type;            \
+    gBattleMons[battlerId].type2 = TYPE_DRAGON;            \
+    gBattleMons[battlerId].type3 = TYPE_MYSTERY;    \
+}
+
+
 #define GET_STAT_BUFF_ID(n)((n & 7))              // first three bits 0x1, 0x2, 0x4
 #define GET_STAT_BUFF_VALUE_WITH_SIGN(n)((n & 0xF8))
 #define GET_STAT_BUFF_VALUE(n)(((n >> 3) & 0xF))      // 0x8, 0x10, 0x20, 0x40

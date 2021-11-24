@@ -730,6 +730,7 @@ static const u8 sText_PkmnMadeItRain2[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} mad
 static const u8 sText_PkmnMadeItSunny[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made it sunny!");
 static const u8 sText_PkmnWhippedUpASandstorm[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} whipped up a sandstorm!");
 static const u8 sText_PkmnMadeItHail[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made it hail!");
+static const u8 sText_DragonOrbActivates[] = _("{B_ATK_NAME_WITH_PREFIX}'s Dragon Orb\n transformed it into the \l{B_BUFF1} type!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1323,6 +1324,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNMADEITSUNNY - 12] = sText_PkmnMadeItSunny,
     [STRINGID_PKMNWHIPPEDUPASANDSTORM - 12] = sText_PkmnWhippedUpASandstorm,
     [STRINGID_PKMNMADEITHAIL - 12] = sText_PkmnMadeItHail,
+    [STRINGID_DRAGONORBACTIVATES - 12] = sText_DragonOrbActivates,
 };
 
 const u16 gTerrainStringIds[] =

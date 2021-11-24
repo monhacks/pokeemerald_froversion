@@ -709,10 +709,11 @@
 //Misc Froversion Items
 #define ITEM_GRILLED_CHEESE      608
 #define ITEM_SNOWFLAKE           609
+#define ITEM_DRAGONS_ORB         610
 
 
 
-#define ITEMS_COUNT 610
+#define ITEMS_COUNT 611
 
 
 

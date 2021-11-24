@@ -7724,4 +7724,18 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
+
+    [ITEM_DRAGONS_ORB] =
+    {
+        .name = _("Dragon Orb"),
+        .itemId = ITEM_DRAGONS_ORB,
+        .price = 20000,
+        .holdEffect = HOLD_EFFECT_DRAGONS_ORB,
+        .holdEffectParam = 0,
+        .description = sAirBalloonDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
 };

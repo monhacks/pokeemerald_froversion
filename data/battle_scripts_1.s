@@ -7642,6 +7642,11 @@ BattleScript_ProteanActivates::
 	waitmessage 0x40
 	return
 
+BattleScript_DragonOrbActivates::
+	printstring STRINGID_DRAGONORBACTIVATES
+	waitmessage 0x40
+	return
+
 BattleScript_CursedBodyActivates::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_CUSEDBODYDISABLED

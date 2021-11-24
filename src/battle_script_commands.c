@@ -1309,6 +1309,21 @@ static void Cmd_attackcanceler(void)
         gBattlescriptCurrInstr = BattleScript_ProteanActivates;
         return;
     }
+///Dragon Orb
+    GET_MOVE_TYPE(gCurrentMove, moveType);
+    Printf("Type 1 beford ability = %d", gBattleMons[gBattlerAttacker].type1);
+    if ((IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gRiptorypsLine) && GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_DRAGONS_ORB)
+        && gBattleMons[gBattlerAttacker].type1 != moveType 
+        && gCurrentMove != MOVE_STRUGGLE)
+    {
+        PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
+        gBattleMons[gBattlerAttacker].type1 = moveType;
+        gBattlerAbility = gBattlerAttacker;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_DragonOrbActivates;
+        Printf("Type 1 after ability = %d", gBattleMons[gBattlerAttacker].type1);
+        return;
+    }
 
     if (AtkCanceller_UnableToUseMove2())
         return;
