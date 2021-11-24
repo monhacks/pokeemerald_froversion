@@ -1,6 +1,7 @@
 #include "global.h"
 #include "reshow_battle_screen.h"
 #include "battle.h"
+#include "battle_setup.h"
 #include "palette.h"
 #include "pokemon.h"
 #include "main.h"
@@ -277,6 +278,12 @@ static void CreateBattlerSprite(u8 battler)
 
 static void CreateHealthboxSprite(u8 battler)
 {
+    if (gTrainers[gTrainerBattleOpponent_A].twoVsOne
+     && battler == B_POSITION_OPPONENT_RIGHT)
+    {
+        return;
+    }
+
     if (battler < gBattlersCount)
     {
         u8 healthboxSpriteId;

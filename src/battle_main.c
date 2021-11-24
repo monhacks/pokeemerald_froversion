@@ -2977,7 +2977,9 @@ static void BattleStartClearSetData(void)
     gBattleStruct->mega.triggerSpriteId = 0xFF;
 
     if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && gTrainers[gTrainerBattleOpponent_A].twoVsOne)
-        gBattlersCount = 3;
+    {
+        gAbsentBattlerFlags |= gBitTable[B_POSITION_OPPONENT_RIGHT];
+    }
 }
 
 void SwitchInClearSetData(void)
