@@ -31,6 +31,8 @@ FrattHouse_EventScript_WasulaBattleStart:
 	setflag FLAG_FORCE_BATTLE_STYLE_SET
 	setvar VAR_TEMP_0, 1
 	trainerbattle_single TRAINER_DUSTY_2, FrattHouse_Text_WasulaIntro, FrattHouse_Text_WasulaPostBattleMessage, FrattHouse_EventScript_WasulaResult, NO_MUSIC
+	msgbox FrattHouse_Text_WasulaBattleWon, MSGBOX_DEFAULT
+	release
 end
 
 FrattHouse_EventScript_WasulaResult:
@@ -81,6 +83,8 @@ FrattHouse_EventScript_MarkBattleStart:
 	setflag FLAG_FORCE_BATTLE_STYLE_SET
 	setvar VAR_TEMP_0, 1
 	trainerbattle_single TRAINER_DUSTY_3, FrattHouse_Text_MarkIntro, FrattHouse_Text_MarkPostBattleMessage, FrattHouse_EventScript_MarkResult, NO_MUSIC
+	msgbox FrattHouse_Text_MarkBattleWon, MSGBOX_DEFAULT
+	release
 end
 
 FrattHouse_EventScript_MarkResult:
@@ -130,7 +134,9 @@ FrattHouse_EventScript_KostiwBattleStart:
 	setflag FLAG_SYS_NO_BAG_USE
 	setflag FLAG_FORCE_BATTLE_STYLE_SET
 	setvar VAR_TEMP_0, 1
-	trainerbattle_single TRAINER_DUSTY_4, FrattHouse_Text_KostiwIntro, FrattHouse_Text_KostiwPostBattleMessage, FrattHouse_EventScript_KostiwResult, NO_MUSIC
+	trainerbattle_single TRAINER_DUSTY_4, FrattHouse_Text_KostiwIntro, FrattHouse_Text_KostiwPostBattleMessage, FrattHouse_EventScript_KostiwResult, NO_MUSIC	
+	msgbox FrattHouse_Text_KostiwBattleWon, MSGBOX_DEFAULT	
+	release
 end
 
 FrattHouse_EventScript_KostiwResult:
