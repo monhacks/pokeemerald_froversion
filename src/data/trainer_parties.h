@@ -605,7 +605,7 @@ static const struct TrainerMonItemCustomMoves sParty_Dusty2[] = {
     .moves = {MOVE_DYNAMIC_PUNCH, MOVE_SUBSTITUTE, MOVE_PAYBACK, MOVE_STONE_EDGE},
     },
     {
-    .abilityNum = 2,
+    .abilityNum = 1,
     .iv = 250,
     .lvl = 55,
     .species = SPECIES_GYARADOS,

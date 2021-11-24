@@ -7738,4 +7738,18 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
+
+    [ITEM_NIKITA] =
+    {
+        .name = _("Nikita"),
+        .itemId = ITEM_NIKITA,
+        .price = 200,
+        .holdEffect = HOLD_EFFECT_NIKITA,
+        .holdEffectParam = 10,
+        .description = sLeftoversDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
 };

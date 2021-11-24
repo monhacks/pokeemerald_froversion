@@ -10054,6 +10054,7 @@ static void Cmd_tryKO(void)
         if ((((gStatuses3[gBattlerTarget] & STATUS3_ALWAYS_HITS)
                 && gDisableStructs[gBattlerTarget].battlerWithSureHit == gBattlerAttacker)
             || GetBattlerAbility(gBattlerAttacker) == ABILITY_NO_GUARD
+            || (IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gMechobraLine) && GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_NIKITA)
             || GetBattlerAbility(gBattlerTarget) == ABILITY_NO_GUARD)
             && gBattleMons[gBattlerAttacker].level >= gBattleMons[gBattlerTarget].level)
         {
