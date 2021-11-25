@@ -6962,8 +6962,6 @@ bool32 IsMoveMakingContact(u16 move, u8 battlerAtk)
 
 bool32 IsBattlerGrounded(u8 battlerId)
 {
-    Printf ("BattlerId = %d", gBattleMons[battlerId].species);
-    Printf ("SpeciesCheckIsBattlerGrounder = %d", IsSpeciesOneOf(battlerId, gLevitateMons));
     if (GetBattlerHoldEffect(battlerId, TRUE) == HOLD_EFFECT_IRON_BALL)
         return TRUE;
     else if (gFieldStatuses & STATUS_FIELD_GRAVITY)
