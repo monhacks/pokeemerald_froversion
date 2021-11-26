@@ -701,16 +701,16 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_DUSTY_5] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_RUIN_MANIAC,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
-        .trainerPic = TRAINER_PIC_RUIN_MANIAC,
-        .trainerName = _("DUSTY"),
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_LEADER_WINONA,
+        .trainerName = _("Icee"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER | AI_SCRIPT_SETUP_FIRST_TURN,
         .partySize = ARRAY_COUNT(sParty_Dusty5),
-        .party = {.NoItemCustomMoves = sParty_Dusty5},
+        .party = {.ItemCustomMoves = sParty_Dusty5},
     },
 
     [TRAINER_GABBY_AND_TY_1] =
@@ -841,58 +841,58 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_LOLA_2] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("LOLA"),
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_WES_THOMPSON,
+        .trainerName = _("Wes"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER | AI_SCRIPT_SETUP_FIRST_TURN,
         .partySize = ARRAY_COUNT(sParty_Lola2),
-        .party = {.NoItemDefaultMoves = sParty_Lola2},
+        .party = {.ItemCustomMoves = sParty_Lola2},
     },
 
     [TRAINER_LOLA_3] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("LOLA"),
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_JOHNM,
+        .trainerName = _("John"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER | AI_SCRIPT_SETUP_FIRST_TURN,
         .partySize = ARRAY_COUNT(sParty_Lola3),
-        .party = {.NoItemDefaultMoves = sParty_Lola3},
+        .party = {.ItemCustomMoves = sParty_Lola3},
     },
 
     [TRAINER_LOLA_4] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("LOLA"),
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_MARRIOTT,
+        .trainerName = _("Marriott"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_PREFER_BATON_PASS,
         .partySize = ARRAY_COUNT(sParty_Lola4),
-        .party = {.NoItemDefaultMoves = sParty_Lola4},
+        .party = {.ItemCustomMoves = sParty_Lola4},
     },
 
     [TRAINER_LOLA_5] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TUBER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
-        .trainerPic = TRAINER_PIC_TUBER_F,
-        .trainerName = _("LOLA"),
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_NIKE,
+        .trainerName = _("Nike"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_PREFER_BATON_PASS,
         .partySize = ARRAY_COUNT(sParty_Lola5),
-        .party = {.NoItemDefaultMoves = sParty_Lola5},
+        .party = {.ItemCustomMoves = sParty_Lola5},
     },
 
     [TRAINER_RICKY_1] =
@@ -1149,16 +1149,16 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_VITO] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
-        .trainerName = _("VITO"),
-        .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_CHADANDMARK,
+        .trainerName = _("Chad"),
+        .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER | AI_SCRIPT_SETUP_FIRST_TURN,
         .partySize = ARRAY_COUNT(sParty_Vito),
-        .party = {.NoItemDefaultMoves = sParty_Vito},
+        .party = {.ItemCustomMoves = sParty_Vito},
     },
 
     [TRAINER_OWEN] =

@@ -634,5 +634,7 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_GRILLED_CHEESE] = {gItemIcon_GrilledCheese, gItemIconPalette_GrilledCheese},
     [ITEM_SNOWFLAKE] = {gItemIcon_Snowflake, gItemIconPalette_Snowflake},
     [ITEM_DRAGONS_ORB] = {gItemIcon_AirBalloon, gItemIconPalette_AirBalloon},
+    [ITEM_NIKITA] = {gItemIcon_Leftovers, gItemIconPalette_Leftovers},
+    [ITEM_AKU_BERRY] = {gItemIcon_SitrusBerry, gItemIconPalette_SitrusBerry}
 
 };

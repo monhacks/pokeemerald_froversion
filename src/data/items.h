@@ -7743,7 +7743,7 @@ const struct Item gItems[] =
     {
         .name = _("Nikita"),
         .itemId = ITEM_NIKITA,
-        .price = 200,
+        .price = 20000,
         .holdEffect = HOLD_EFFECT_NIKITA,
         .holdEffectParam = 10,
         .description = sLeftoversDesc,
@@ -7752,4 +7752,16 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
 
+    [ITEM_AKU_BERRY] =
+    {
+        .name = _("Aku Berry"),
+        .itemId = ITEM_AKU_BERRY,
+        .price = 20000,
+        .holdEffect = HOLD_EFFECT_AKU_BERRY,
+        .holdEffectParam = 8,
+        .description = sShellBellDesc,
+        .pocket = POCKET_BERRIES,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };

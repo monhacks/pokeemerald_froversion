@@ -139,6 +139,7 @@
 #define HOLD_EFFECT_TYPE_CHANGE      155
 #define HOLD_EFFECT_DRAGONS_ORB      156
 #define HOLD_EFFECT_NIKITA           157
+#define HOLD_EFFECT_AKU_BERRY        158
 
 #define HOLD_EFFECT_CHOICE(holdEffect)((holdEffect == HOLD_EFFECT_CHOICE_BAND || holdEffect == HOLD_EFFECT_CHOICE_SCARF || holdEffect == HOLD_EFFECT_CHOICE_SPECS))
 

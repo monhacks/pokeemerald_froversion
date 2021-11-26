@@ -79,6 +79,7 @@ const struct BerryBoost gBerryBoosts[] =
     { ITEM_ORAN_BERRY, STAT_ATK, 1, STAT_DEF, 1 },
     { ITEM_CHERI_BERRY, STAT_SPEED, 1 },
     { ITEM_SITRUS_BERRY, STAT_ATK, 2},
+    { ITEM_AKU_BERRY, STAT_DEF, 1},
     { 0xFFFF },
 };
 
@@ -6043,8 +6044,11 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             case HOLD_EFFECT_DRAGONS_ORB:
                 effect = ITEM_EFFECT_OTHER;
                 gBattleScripting.battler = battlerId;
+                if(IsSpeciesOneOf(gBattleMons[battlerId].species, gRiptorypsLine))
+                {
                 BattleScriptPushCursorAndCallback(BattleScript_AirBaloonMsgIn);
                 RecordItemEffectBattle(battlerId, HOLD_EFFECT_AIR_BALLOON);
+                }
                 break;
             case HOLD_EFFECT_TYPE_CHANGE:
                 i = ItemId_GetSecondaryId(gLastUsedItem);
@@ -6541,6 +6545,27 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     gPotentialItemEffectBattler = gBattlerAttacker;
                     gBattleScripting.battler = gBattlerAttacker;
                     gBattleMoveDamage = (gSpecialStatuses[gBattlerTarget].dmg / atkHoldEffectParam) * -1;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = -1;
+                    gSpecialStatuses[gBattlerTarget].dmg = 0;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_ItemHealHP_Ret;
+                    effect++;
+                }
+                break;
+            case HOLD_EFFECT_AKU_BERRY:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                    && gSpecialStatuses[gBattlerTarget].dmg != 0
+                    && gSpecialStatuses[gBattlerTarget].dmg != 0xFFFF
+                    && gBattlerAttacker != gBattlerTarget
+                    && gBattleMons[gBattlerAttacker].hp != gBattleMons[gBattlerAttacker].maxHP
+                    && gBattleMons[gBattlerAttacker].hp != 0
+                    && IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gRuthlashLine))
+                {
+                    gLastUsedItem = atkItem;
+                    gPotentialItemEffectBattler = gBattlerAttacker;
+                    gBattleScripting.battler = gBattlerAttacker;
+                    gBattleMoveDamage = (gBattleMons[gBattlerAttacker].maxHP / 20) * -1;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = -1;
                     gSpecialStatuses[gBattlerTarget].dmg = 0;
@@ -8142,6 +8167,11 @@ static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 move
             if (updateFlags)
                 gSpecialStatuses[battlerDef].berryReduced = 1;
         }
+        break;
+    case HOLD_EFFECT_AKU_BERRY:
+        if(IsSpeciesOneOf(gBattleMons[battlerDef].species, gRuthlashLine)
+        && BATTLER_MAX_HP(battlerDef))
+            MulModifier(&finalModifier, UQ_4_12(0.5));
         break;
     }
 

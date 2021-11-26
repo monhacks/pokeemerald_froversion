@@ -711,10 +711,11 @@
 #define ITEM_SNOWFLAKE           609
 #define ITEM_DRAGONS_ORB         610
 #define ITEM_NIKITA              611
+#define ITEM_AKU_BERRY 612
 
 
 
-#define ITEMS_COUNT 612
+#define ITEMS_COUNT 613
 
 
 

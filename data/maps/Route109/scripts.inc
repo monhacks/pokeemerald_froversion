@@ -419,10 +419,7 @@ Route109_EventScript_RickyRematch:: @ 81EEAE4
 	end
 
 Route109_EventScript_Lola:: @ 81EEAFB
-	trainerbattle_single TRAINER_LOLA_1, Route109_Text_LolaIntro, Route109_Text_LolaDefeated, Route109_EventScript_LolaRegisterMatchCallAfterBattle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	compare VAR_RESULT, TRUE
-	goto_if_eq Route109_EventScript_LolaRematch
+	trainerbattle_single TRAINER_LOLA_1, Route109_Text_LolaIntro, Route109_Text_LolaDefeated
 	msgbox Route109_Text_LolaPostBattle, MSGBOX_DEFAULT
 	release
 	end

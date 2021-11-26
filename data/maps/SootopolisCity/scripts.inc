@@ -50,6 +50,15 @@ SootopolisCity_EventScript_LockGymDoor:: @ 81E56E5
 	return
 
 SootopolisCity_OnTransition: @ 81E56EF
+	cleartrainerflag TRAINER_DUSTY_2
+	cleartrainerflag TRAINER_DUSTY_3
+	cleartrainerflag TRAINER_DUSTY_4
+	cleartrainerflag TRAINER_DUSTY_5
+	cleartrainerflag TRAINER_LOLA_2
+	cleartrainerflag TRAINER_LOLA_3
+	cleartrainerflag TRAINER_LOLA_4
+	cleartrainerflag TRAINER_LOLA_5
+	cleartrainerflag TRAINER_VITO
 	setflag FLAG_VISITED_SOOTOPOLIS_CITY
 	compare VAR_SOOTOPOLIS_CITY_STATE, 1
 	call_if_eq SootopolisCity_EventScript_HideMapNamePopup
