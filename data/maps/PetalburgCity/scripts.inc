@@ -767,7 +767,7 @@ PetalburgCity_Text_CitySign: @ 81DCAF1
 	.string "“Where people mingle with nature.”$"
 
 PetalburgCity_Text_WallyHouseSign: @ 81DCB23
-	.string "Wally'S House$"
+	.string "Wally's House$"
 
 PetalburgCity_Text_AreYouATrainer: @ 81DCB31
 	.string "Excuse me!\p"
@@ -783,7 +783,7 @@ PetalburgCity_Text_WellMaybeNot: @ 81DCB82
 
 PetalburgCity_Text_ImLookingForTalentedTrainers: @ 81DCC09
 	.string "I'm roaming the land in search of\n"
-	.string "talented TrainerS.\p"
+	.string "talented Trainers.\p"
 	.string "I'm sorry to have taken your time.$"
 
 //////////////////

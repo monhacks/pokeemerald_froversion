@@ -100,7 +100,7 @@ WalmoreTown_PokemonSchool_Text_NotPayingAttention:
 WalmoreTown_PokemonSchool_Text_TryingToLearn:
 	.string "I come here to learn, but it's hard when\n"
 	.string "my friends would rather chat than listen\l"
-	.string "To the teacher.$"
+	.string "to the teacher.$"
 
 WalmoreTown_PokemonSchool_Text_PokemonTrainingTip:
 	.string "Teach says to always keep in mind a\n"

@@ -684,6 +684,7 @@ end
 
 FrattHouse_EventScript_GiveRascalootItem:
 	giveitem ITEM_AKU_BERRY
+	msgbox FrattHouse_Text_AkuBerryDescription, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_FRATT_HOUSE_ITEM
 	setvar VAR_TEMP_1, 0
 	setvar VAR_TEMP_0, 0
@@ -692,6 +693,7 @@ end
 
 FrattHouse_EventScript_GiveFlobraItem:
 	giveitem ITEM_NIKITA
+	msgbox FrattHouse_Text_NikitaDescription, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_FRATT_HOUSE_ITEM
 	setvar VAR_TEMP_1, 0
 	setvar VAR_TEMP_0, 0
@@ -700,6 +702,7 @@ end
 
 FrattHouse_EventScript_GiveEmborypsItem:
 	giveitem ITEM_DRAGONS_ORB
+	msgbox FrattHouse_Text_DragonOrbDescription, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_FRATT_HOUSE_ITEM
 	setvar VAR_TEMP_1, 0
 	setvar VAR_TEMP_0, 0
@@ -797,3 +800,30 @@ FrattHouse_Text_AlreadyReceivedItem:
 	.string "Congrats on beating us again,\n"
 	.string "but only one prize per\l"
 	.string "contestant.\p"
+
+FrattHouse_Text_AkuBerryDescription:
+	.string "That is a special, limited edition\n"
+	.string "item produced by Colangelo Graphics.\p"
+	.string "It can only be used by the Rascaloot\n"
+	.string "evolution line.\p"
+	.string "The Aku Berry gives a major defensive\n"
+	.string "boost and recovers HP with each\l"
+	.string "strike.$"
+
+	FrattHouse_Text_NikitaDescription:
+	.string "That is a special, limited edition\n"
+	.string "item produced by Colangelo Graphics.\p"
+	.string "It can only be used by the Flobra\n"
+	.string "evolution line.\p"
+	.string "The Nikita gives strong HP recovery\n"
+	.string "and makes it so no attack misses.$"
+
+FrattHouse_Text_DragonOrbDescription:
+	.string "That is a special, limited edition\n"
+	.string "item produced by Colangelo Graphics.\p"
+	.string "It can only be used by the Emboryps\n"
+	.string "evolution line.\p"
+	.string "The Dragon Orb gives a major offensive\n"
+	.string "boost and allows the holder to glide\l"
+	.string "above the ground at all times,\l"
+	.string "avoiding ground attacks.$"

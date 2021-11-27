@@ -227,8 +227,8 @@ case 2, Script_LMV_InitiateBobbyBattleRascaloot	//fro fire
 release
 end
 
-Script_LMV_InitiateBobbyBattleFlobra:
-	multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_BRENDAN_ROUTE_119_MUDKIP, TRAINER_BACK_PIC_STEVEN
+Script_LMV_InitiateBobbyBattleFlobra::
+	multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_BRENDAN_ROUTE_119_MUDKIP, TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST
@@ -251,7 +251,7 @@ Script_LMV_InitiateBobbyBattleFlobra:
 	end
 
 Script_LMV_InitiateBobbyBattleEmboryps:
-	multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_BRENDAN_ROUTE_119_TORCHIC, TRAINER_BACK_PIC_STEVEN
+	multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_BRENDAN_ROUTE_119_TORCHIC, TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST
@@ -274,7 +274,7 @@ Script_LMV_InitiateBobbyBattleEmboryps:
 	end
 
 Script_LMV_InitiateBobbyBattleRascaloot:
-	multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_BRENDAN_ROUTE_119_TREECKO, TRAINER_BACK_PIC_STEVEN
+	multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_BRENDAN_ROUTE_119_TREECKO, TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST

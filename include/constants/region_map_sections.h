@@ -219,6 +219,8 @@
 
 #define MAPSEC_NONE                         0xD7
 
+#define MAPSEC_SUMMIT_CAVERNS               0xD8
+
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE
 #define METLOC_FATEFUL_ENCOUNTER            0xFF

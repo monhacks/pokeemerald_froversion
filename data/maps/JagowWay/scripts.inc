@@ -8,6 +8,12 @@ JagowWay_MapScripts::
 
 //Scripts
 
+Script_JagowWay_SignpostSouth::
+	lock
+	msgbox T_JagowWay_SignPostForWalmore, MSGBOX_SIGN
+	release
+	end
+
 Script_JagowWay_TrainTracks_Right::
 	lock
 	msgbox T_JagowWay_TrainTracks, MSGBOX_DEFAULT
@@ -204,3 +210,6 @@ T_JW_JagowWoodsClosed:
 	.string "quickly before making my way to Summit\l"
 	.string "City to challenge the gym leaders there.\p"
 	.string "I'll see you around Fro, good luck!$"
+
+T_JagowWay_SignPostForWalmore:
+	.string "{UP_ARROW} Lake Mead\n {RIGHT_ARROW} Walmore Town$"

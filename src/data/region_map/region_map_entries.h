@@ -200,6 +200,7 @@ static const u8 sMapName_DesertUnderpass[] = _("DESERT UNDERPASS");
 static const u8 sMapName_TrainerHill[] = _("TRAINER HILL");
 static const u8 sMapName_NiagaraVillage[] = _("Niagara Village");
 static const u8 sMapName_WalmoreTown[] = _("Walmore Town");
+static const u8 sMapName_SummitCaverns[] = _("Summit Caverns");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_ABANDONED_SHIP]             = {6, 14, 1, 1, sMapName_AbandonedShip},
@@ -414,6 +415,7 @@ const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_VIRIDIAN_CITY]              = {0, 0, 1, 1, sMapName_ViridianCity},
     [MAPSEC_VIRIDIAN_FOREST]            = {0, 0, 1, 1, sMapName_ViridianForest},
     [MAPSEC_WALMORE_TOWN]               = {5, 12, 1, 1, sMapName_WalmoreTown},
+    [MAPSEC_SUMMIT_CAVERNS]             = {0, 0, 1, 1, sMapName_SummitCaverns},
     [MAPSEC_WATER_LABYRINTH]            = {0, 0, 1, 1, sMapName_WaterLabyrinth},
     [MAPSEC_WATER_PATH]                 = {0, 0, 1, 1, sMapName_WaterPath},
     [MAPSEC_WEEPTH_CHAMBER]             = {0, 0, 1, 1, sMapName_WeepthChamber},

@@ -2,7 +2,7 @@
   "id": "MAP_EVER_GRANDE_CITY_HALL1",
   "name": "EverGrandeCity_Hall1",
   "layout": "LAYOUT_EVER_GRANDE_CITY_SHORT_HALL",
-  "music": "MUS_VICTORY_ROAD",
+  "music": "MUS_FV_OFFICE",
   "region_map_section": "MAPSEC_EVER_GRANDE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -12,8 +12,10 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
-  "object_events": [],
+  "connections": 0,
+  "object_events": [
+
+  ],
   "warp_events": [
     {
       "x": 5,
@@ -44,6 +46,10 @@
       "dest_warp_id": 1
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }

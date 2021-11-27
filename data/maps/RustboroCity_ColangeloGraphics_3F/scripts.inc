@@ -307,7 +307,7 @@ RustboroCity_ColangeloGraphics_3F_Text_VisitCaptSternShipyard: @ 8212E41
 RustboroCity_ColangeloGraphics_3F_Text_RepeatAndTimerHugelyPopular: @ 8212E88
 	.string "C. G.'s new products, the Repeat Ball\n"
 	.string "and Timer Ball, have become hugely\l"
-	.string "popular among TrainerS.$"
+	.string "popular among Trainers.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_RareRocksDisplay: @ 8212EE9
 	.string "It's a collection of rare rocks and\n"

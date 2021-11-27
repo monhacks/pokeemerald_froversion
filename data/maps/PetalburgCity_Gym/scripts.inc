@@ -1440,7 +1440,7 @@ PetalburgCity_Gym_Text_GymGuideAdvice: @ 8206542
 	.string "Hey, how's it going, Champion-\n"
 	.string "bound Steak?\p"
 	.string "The doors in this Gym open when you\n"
-	.string "beat the awaiting TrainerS.\p"
+	.string "beat the awaiting Trainers.\p"
 	.string "Whoops! The doors in this room are\n"
 	.string "already open, so don't attack me!\p"
 	.string "The Trainers of Lynch Park Gym\n"
@@ -1558,7 +1558,7 @@ PetalburgCity_Gym_Text_MaryDefeat: @ 8206E0D
 
 PetalburgCity_Gym_Text_MaryPostBattle: @ 8206E26
 	.string "There are some even stronger\n"
-	.string "TrainerS waiting for you.\p"
+	.string "Trainers waiting for you.\p"
 	.string "The left is the Defense Room, and\n"
 	.string "the right is the Recovery Room.\p"
 	.string "Your Pokémon's Attack power will be\n"
@@ -1566,7 +1566,7 @@ PetalburgCity_Gym_Text_MaryPostBattle: @ 8206E26
 
 PetalburgCity_Gym_Text_MaryPostBadge: @ 8206ED8
 	.string "Do you know what we're trying to\n"
-	.string "achieve as TrainerS?\p"
+	.string "achieve as Trainers?\p"
 	.string "We're striving to become soul mates\n"
 	.string "with our Pokémon.$"
 
@@ -1584,7 +1584,7 @@ PetalburgCity_Gym_Text_AlexiaPostBattle: @ 8206F9F
 	.string "the Strength Room.\p"
 	.string "The right door opens to\n"
 	.string "the One-Hit KO Room.\p"
-	.string "Both of them have TrainerS who are\n"
+	.string "Both of them have Trainers who are\n"
 	.string "skilled at offense.$"
 
 PetalburgCity_Gym_Text_AlexiaPostBadge: @ 8207069

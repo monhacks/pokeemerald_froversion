@@ -216,7 +216,7 @@ step_end
 T_WMT_CheckOutTheTown:
 	.string "{COLOR RED}Hey, why so {COLOR BLUE}quick to pass through \n{COLOR DARK_GREY}town? Take a look around!$"
 T_WMT_WelcomeSign:
-	.string "Walmore Town. Where friends are made!$"
+	.string "Walmore Town. \nWhere friends are made!$"
 
 T_WMT_AmneetIntro:
 	.string "Salesman: So would you like 2 watches \n"
