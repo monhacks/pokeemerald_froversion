@@ -1193,3 +1193,45 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/JohnsRoom/scripts.inc"
 
 	.include "data/maps/EverGrandeCity_Hall6/scripts.inc"
+
+	.include "data/maps/HubRoom/scripts.inc"
+
+	.include "data/maps/NewMap1/scripts.inc"
+
+	.include "data/maps/BugMap2/scripts.inc"
+
+	.include "data/maps/BugA/scripts.inc"
+
+	.include "data/maps/bug3/scripts.inc"
+
+	.include "data/maps/Bug4/scripts.inc"
+
+	.include "data/maps/BugD/scripts.inc"
+
+	.include "data/maps/Poison1/scripts.inc"
+
+	.include "data/maps/Iceb/scripts.inc"
+
+	.include "data/maps/ICET/scripts.inc"
+
+	.include "data/maps/GhostT/scripts.inc"
+
+	.include "data/maps/GhostB/scripts.inc"
+
+	.include "data/maps/NewMap2/scripts.inc"
+
+	.include "data/maps/Fire2/scripts.inc"
+
+	.include "data/maps/watert/scripts.inc"
+
+	.include "data/maps/Water2/scripts.inc"
+
+	.include "data/maps/Steel1/scripts.inc"
+
+	.include "data/maps/Steel2/scripts.inc"
+
+	.include "data/maps/Electric1/scripts.inc"
+
+	.include "data/maps/Electric2/scripts.inc"
+
+	.include "data/maps/Psychic1/scripts.inc"

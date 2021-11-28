@@ -4,6 +4,7 @@ OldaleTown_Mart_MapScripts:: @ 81FC23F
 OldaleTown_Mart_EventScript_Clerk:: @ 81FC240
 	lock
 	faceplayer
+	goto_if_unset FLAG_PICKED_STARTER, HubRoom_EventScripts_YouDontHaveAPokemon
 	message gText_HowMayIServeYou
 	waitmessage
 	goto_if_set FLAG_ADVENTURE_STARTED, OldaleTown_Mart_ExpandedItems
@@ -17,6 +18,7 @@ OldaleTown_Mart_Pokemart_Basic: @ 81FC260
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
+	.2byte ITEM_POKE_BALL
 	.2byte ITEM_NONE
 	release
 	end

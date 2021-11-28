@@ -5050,6 +5050,216 @@
       "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/EverGrandeCity_Hall6/border.bin",
       "blockdata_filepath": "data/layouts/EverGrandeCity_Hall6/map.bin"
+    },
+    {
+      "id": "LAYOUT_HUB_ROOM",
+      "name": "HubRoom_Layout",
+      "width": 70,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/HubRoom/border.bin",
+      "blockdata_filepath": "data/layouts/HubRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP1",
+      "name": "NewMap1_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NewMap1/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap1/map.bin"
+    },
+    {
+      "id": "LAYOUT_BUG_MAP2",
+      "name": "BugMap2_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/BugMap2/border.bin",
+      "blockdata_filepath": "data/layouts/BugMap2/map.bin"
+    },
+    {
+      "id": "LAYOUT_BUG_A",
+      "name": "BugA_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/BugA/border.bin",
+      "blockdata_filepath": "data/layouts/BugA/map.bin"
+    },
+    {
+      "id": "LAYOUT_BUG3",
+      "name": "bug3_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/bug3/border.bin",
+      "blockdata_filepath": "data/layouts/bug3/map.bin"
+    },
+    {
+      "id": "LAYOUT_BUG4",
+      "name": "Bug4_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Bug4/border.bin",
+      "blockdata_filepath": "data/layouts/Bug4/map.bin"
+    },
+    {
+      "id": "LAYOUT_BUG_D",
+      "name": "BugD_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_WalmoreTown",
+      "border_filepath": "data/layouts/BugD/border.bin",
+      "blockdata_filepath": "data/layouts/BugD/map.bin"
+    },
+    {
+      "id": "LAYOUT_POISON1",
+      "name": "Poison1_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_GeneralSnow",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/Poison1/border.bin",
+      "blockdata_filepath": "data/layouts/Poison1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ICEB",
+      "name": "Iceb_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_GeneralSnow",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Iceb/border.bin",
+      "blockdata_filepath": "data/layouts/Iceb/map.bin"
+    },
+    {
+      "id": "LAYOUT_ICET",
+      "name": "ICET_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_GeneralSnow",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ICET/border.bin",
+      "blockdata_filepath": "data/layouts/ICET/map.bin"
+    },
+    {
+      "id": "LAYOUT_GHOST_T",
+      "name": "GhostT_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/GhostT/border.bin",
+      "blockdata_filepath": "data/layouts/GhostT/map.bin"
+    },
+    {
+      "id": "LAYOUT_GHOST_B",
+      "name": "GhostB_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/GhostB/border.bin",
+      "blockdata_filepath": "data/layouts/GhostB/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP2",
+      "name": "NewMap2_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/NewMap2/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap2/map.bin"
+    },
+    {
+      "id": "LAYOUT_FIRE2",
+      "name": "Fire2_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Fire2/border.bin",
+      "blockdata_filepath": "data/layouts/Fire2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATERT",
+      "name": "watert_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/watert/border.bin",
+      "blockdata_filepath": "data/layouts/watert/map.bin"
+    },
+    {
+      "id": "LAYOUT_WATER2",
+      "name": "Water2_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/Water2/border.bin",
+      "blockdata_filepath": "data/layouts/Water2/map.bin"
+    },
+    {
+      "id": "LAYOUT_STEEL1",
+      "name": "Steel1_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_EliteFour",
+      "border_filepath": "data/layouts/Steel1/border.bin",
+      "blockdata_filepath": "data/layouts/Steel1/map.bin"
+    },
+    {
+      "id": "LAYOUT_STEEL2",
+      "name": "Steel2_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Steel2/border.bin",
+      "blockdata_filepath": "data/layouts/Steel2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ELECTRIC1",
+      "name": "Electric1_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Electric1/border.bin",
+      "blockdata_filepath": "data/layouts/Electric1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ELECTRIC2",
+      "name": "Electric2_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/Electric2/border.bin",
+      "blockdata_filepath": "data/layouts/Electric2/map.bin"
+    },
+    {
+      "id": "LAYOUT_PSYCHIC1",
+      "name": "Psychic1_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/Psychic1/border.bin",
+      "blockdata_filepath": "data/layouts/Psychic1/map.bin"
     }
   ]
 }

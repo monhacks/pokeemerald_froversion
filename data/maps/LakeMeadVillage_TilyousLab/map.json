@@ -137,8 +137,8 @@
       "x": 6,
       "y": 12,
       "elevation": 0,
-      "dest_map": "MAP_LAKE_MEAD_VILLAGE",
-      "dest_warp_id": 2
+      "dest_map": "MAP_HUB_ROOM",
+      "dest_warp_id": 16
     },
     {
       "x": 7,

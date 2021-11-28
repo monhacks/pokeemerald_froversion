@@ -134,8 +134,6 @@ Script_TilyousLab_DontLeaveBeforePickingAPokemon::
 
 Script_TilyousLab_RascalootPokeball::
 	lock
-	compare VAR_LITTLEROOT_TOWN_STATE, 3
-	goto_if_lt Script_TilyousLab_ProfTilyousPokeball
 	showmonpic SPECIES_RASCALOOT, 10, 3
 	msgbox T_TilyousLab_PickRascaloot, MSGBOX_YESNO
 	hidemonpic
@@ -149,6 +147,8 @@ Script_TilyousLab_RascalootYes:
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 0
 	givemon SPECIES_RASCALOOT, 5, ITEM_NONE
+	removemoney 30000, 0
+	setflag FLAG_PICKED_STARTER
 	playfanfare MUS_OBTAIN_ITEM
 	removeobject 4
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_RASCALOOT
@@ -157,7 +157,6 @@ Script_TilyousLab_RascalootYes:
 	compare VAR_RESULT, YES
 	goto_if_eq TilyousLab_EventScript_NicknameStarter
 	compare VAR_RESULT, NO
-	goto_if_eq TilyousLab_BobbyAndJohnPick
 	closemessage
 	release
 	end
@@ -216,8 +215,6 @@ Script_TilyousLab_FroTookRascaloot:
 
 Script_TilyousLab_FlobraPokeball::
 	lock
-	compare VAR_LITTLEROOT_TOWN_STATE, 3
-	goto_if_lt Script_TilyousLab_ProfTilyousPokeball
 	showmonpic SPECIES_FLOBRA, 10, 3
 	msgbox T_TilyousLab_PickFlobra, MSGBOX_YESNO
 	hidemonpic
@@ -232,6 +229,8 @@ Script_TilyousLab_FlobraYes:
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 1
 	givemon SPECIES_FLOBRA, 5, ITEM_NONE
+	removemoney 30000, 0
+	setflag FLAG_PICKED_STARTER
 	playfanfare MUS_OBTAIN_ITEM
 	removeobject 5
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_FLOBRA
@@ -240,7 +239,6 @@ Script_TilyousLab_FlobraYes:
 	compare VAR_RESULT, YES
 	goto_if_eq TilyousLab_EventScript_NicknameStarter
 	compare VAR_RESULT, NO
-	goto_if_eq TilyousLab_BobbyAndJohnPick
 	closemessage
 	release
 	end	
@@ -276,8 +274,6 @@ Script_TilyousLab_FroTookFlobra:
 	
 Script_TilyousLab_EmborypsPokeball::
 	lock
-	compare VAR_LITTLEROOT_TOWN_STATE, 3
-	goto_if_lt Script_TilyousLab_ProfTilyousPokeball
 	showmonpic SPECIES_EMBORYPS, 10, 3
 	msgbox T_TilyousLab_PickEmboryps, MSGBOX_YESNO
 	hidemonpic
@@ -292,6 +288,8 @@ Script_TilyousLab_EmborypsYes:
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 2
 	givemon SPECIES_EMBORYPS, 5, ITEM_NONE
+	removemoney 30000, 0
+	setflag FLAG_PICKED_STARTER
 	playfanfare MUS_OBTAIN_ITEM
 	removeobject 6
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS
@@ -300,7 +298,6 @@ Script_TilyousLab_EmborypsYes:
 	compare VAR_RESULT, YES
 	goto_if_eq TilyousLab_EventScript_NicknameStarter
 	compare VAR_RESULT, NO
-	goto_if_eq TilyousLab_BobbyAndJohnPick
 	closemessage
 	release
 	end	
@@ -681,7 +678,7 @@ T_TilyousLab_ProfTilyousPokemon:
 	.string "A Pokéball belonging to Prof. \nTilyou. \pYou can hear a quite buzz coming \nfrom inside of it.$"
 	
 T_TilyousLab_PickRascaloot:
-	.string "The Pokéball contains the grass \ntype Bandicoot Pokémon Rascaloot. \pIs this the Pokémon you choose?$"
+	.string "The Pokéball contains the grass \ntype Bandicoot Pokémon Rascaloot. \pIs this the Pokémon you wish to \lpurchase for 30000?$"
 	
 T_TilyousLab_RascalootYes:
 
@@ -724,7 +721,7 @@ T_TilyousLab_JohnLongTimeNoSee:
 	.string "Don't make us wait any longer!$"
 	
 T_TilyousLab_PickFlobra:
-	.string "The Pokéball contains the water \ntype Pokémon Flobra. \pIs this the Pokémon you choose?$"
+	.string "The Pokéball contains the water \ntype Pokémon Flobra. \pIs this the Pokémon you wish to \lpurchase for 30000?$"
 	
 T_TilyousLab_FlobraYes:
 
@@ -739,7 +736,7 @@ T_TilyousLab_BobbyEmboryps:
 	.string "Bobby took the Fire Pokémon, \nEmboryps!$"
 	
 T_TilyousLab_PickEmboryps:
-	.string "The Pokéball contains the Fire \ntype Pokémon Emboryps. \pIs this the Pokémon you choose?$"
+	.string "The Pokéball contains the Fire \ntype Pokémon Emboryps. \pIs this the Pokémon you wish to \lpurchase for 30000?$"
 	
 T_TilyousLab_EmborypsYes:
 

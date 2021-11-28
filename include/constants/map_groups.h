@@ -293,6 +293,27 @@
 #define MAP_MOSSDEEP_CITY_GAME_CORNER_1F    (11 | (14 << 8))
 #define MAP_MOSSDEEP_CITY_GAME_CORNER_B1F   (12 | (14 << 8))
 #define MAP_WARD_CITY_GYM                   (13 | (14 << 8))
+#define MAP_HUB_ROOM                        (14 | (14 << 8))
+#define MAP_NEW_MAP1                        (15 | (14 << 8))
+#define MAP_BUG_MAP2                        (16 | (14 << 8))
+#define MAP_BUG_A                           (17 | (14 << 8))
+#define MAP_BUG3                            (18 | (14 << 8))
+#define MAP_BUG4                            (19 | (14 << 8))
+#define MAP_BUG_D                           (20 | (14 << 8))
+#define MAP_POISON1                         (21 | (14 << 8))
+#define MAP_ICEB                            (22 | (14 << 8))
+#define MAP_ICET                            (23 | (14 << 8))
+#define MAP_GHOST_T                         (24 | (14 << 8))
+#define MAP_GHOST_B                         (25 | (14 << 8))
+#define MAP_NEW_MAP2                        (26 | (14 << 8))
+#define MAP_FIRE2                           (27 | (14 << 8))
+#define MAP_WATERT                          (28 | (14 << 8))
+#define MAP_WATER2                          (29 | (14 << 8))
+#define MAP_STEEL1                          (30 | (14 << 8))
+#define MAP_STEEL2                          (31 | (14 << 8))
+#define MAP_ELECTRIC1                       (32 | (14 << 8))
+#define MAP_ELECTRIC2                       (33 | (14 << 8))
+#define MAP_PSYCHIC1                        (34 | (14 << 8))
 
 // Map Group 15
 #define MAP_SOOTOPOLIS_CITY_GYM_1F                   (0 | (15 << 8))
@@ -657,6 +678,6 @@
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {102, 10, 9, 10, 8, 8, 9, 7, 7, 14, 8, 20, 10, 23, 14, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 2, 0};
+// static const u8 MAP_GROUP_COUNT[] = {102, 10, 9, 10, 8, 8, 9, 7, 7, 14, 8, 20, 10, 23, 35, 15, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 2, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H
