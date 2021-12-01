@@ -48,7 +48,7 @@
 #define FLAG_SYS_NO_CATCHING        0x24 // Unused Flag //DEBUG
 #define FLAG_DEFEATED_POISON        0x25 // Beat Poison Room
 #define FLAG_PICKED_STARTER   0x26 // Picked A Starter
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
+#define FLAG_DEFEATED_NORMAL    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag

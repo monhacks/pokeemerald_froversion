@@ -13172,3 +13172,39 @@ static const struct TrainerMonItemCustomMoves sParty_JohnChampionsHallTorchic[] 
     .evs = {0, 151, 4, 151, 0, 20},
     }
 };
+
+static const struct TrainerMonItemCustomMoves sParty_ChadPoisonLeader[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_VAYPING,
+    .moves = {MOVE_THUNDER_SHOCK, MOVE_POISON_STING, MOVE_SMOKESCREEN, MOVE_TOXIC_SPIKES},
+    },
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_LEFTOVERS,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_GRIMER,
+    .moves = {MOVE_SLUDGE, MOVE_HARDEN, MOVE_MUD_BOMB, MOVE_NONE},
+    },
+    {
+    .abilityNum = 1,
+    .heldItem = ITEM_POISON_CAMOUFLAGE,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_CHAD_BUG_1,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_PIN_MISSILE, MOVE_FURY_ATTACK, MOVE_PROTECT},
+    },
+    {
+    .heldItem = ITEM_LEFTOVERS,
+    .abilityNum = 0,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_ODDISH,
+    .moves = {MOVE_ABSORB, MOVE_ACID, MOVE_NONE, MOVE_NONE},
+    },
+};
+

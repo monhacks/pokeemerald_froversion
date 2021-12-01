@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EventScript_RaintreeIsland_FireRoom_GymTrainer3",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EventScript_RaintreeIsland_IceRoom_GymTrainer2",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EventScript_RaintreeIsland_IceRoom_GymTrainer4",
       "flag": "0"
     },
     {
@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EventScript_RaintreeIsland_FireRoom_GymTrainer5",
       "flag": "0"
     },
     {
@@ -76,7 +76,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EventScript_RaintreeIsland_FireRoom_GymTrainer1",
       "flag": "0"
     },
     {
@@ -89,7 +89,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EventScript_BugRoom3_TrainerBattle1",
       "flag": "0"
     },
     {
@@ -102,7 +102,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "EventScript_BugRoom3_TrainerBattle2",
       "flag": "0"
     },
     {
@@ -115,7 +115,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_EventScript_Isabel",
       "flag": "0"
     },
     {
@@ -128,7 +128,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_EventScript_Kaleb",
       "flag": "0"
     },
     {
@@ -141,7 +141,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_EventScript_Timmy",
       "flag": "0"
     },
     {
@@ -154,7 +154,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_TrickHousePuzzle1_EventScript_Sally",
       "flag": "0"
     },
     {
@@ -167,7 +167,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_TrickHousePuzzle1_EventScript_Robin",
       "flag": "0"
     },
     {
@@ -180,7 +180,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_TrickHousePuzzle1_EventScript_Eddie",
       "flag": "0"
     },
     {
@@ -193,7 +193,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route103_EventScript_Daisy",
       "flag": "0"
     },
     {
@@ -206,7 +206,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route103_EventScript_Liv",
       "flag": "0"
     },
     {
@@ -219,7 +219,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route103_EventScript_Miguel",
       "flag": "0"
     },
     {
@@ -232,7 +232,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route103_EventScript_Andrew",
       "flag": "0"
     },
     {
@@ -245,7 +245,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_EventScript_Jacob",
       "flag": "0"
     },
     {
@@ -258,7 +258,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_EventScript_Jasmine",
       "flag": "0"
     },
     {
@@ -271,7 +271,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_EventScript_Benjamin",
       "flag": "0"
     },
     {
@@ -284,7 +284,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_EventScript_Anthony",
       "flag": "0"
     },
     {
@@ -297,7 +297,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_EventScript_Dale",
       "flag": "0"
     },
     {
@@ -310,7 +310,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_EventScript_Alyssa",
       "flag": "0"
     },
     {
@@ -323,7 +323,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route117_EventScript_Maria",
       "flag": "0"
     },
     {
@@ -336,7 +336,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route117_EventScript_Isaac",
       "flag": "0"
     },
     {
@@ -349,7 +349,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route117_EventScript_Meg",
       "flag": "0"
     },
     {
@@ -362,7 +362,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route117_EventScript_Dylan",
       "flag": "0"
     },
     {
@@ -375,7 +375,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_EventScript_Edward",
       "flag": "0"
     },
     {
@@ -388,7 +388,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_EventScript_Joseph",
       "flag": "0"
     },
     {
@@ -401,12 +401,38 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route110_EventScript_Abigail",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_KLENDER",
+      "x": 32,
+      "y": 26,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_ChadPoisonLeader",
       "flag": "0"
     }
   ],
   "warp_events": [
-
+    {
+      "x": 19,
+      "y": 78,
+      "elevation": 0,
+      "dest_map": "MAP_BUG_A",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 72,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_HUB_ROOM",
+      "dest_warp_id": 16
+    }
   ],
   "coord_events": [
 

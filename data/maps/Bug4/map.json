@@ -403,6 +403,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
+      "x": 71,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_BugRoom4_TrainerBattle2",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -412,10 +425,25 @@
       "elevation": 0,
       "dest_map": "MAP_HUB_ROOM",
       "dest_warp_id": 0
+    },
+    {
+      "x": 72,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_BUG_D",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 72,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_TOWN_STATE",
+      "var_value": "1",
+      "script": "EventScript_BugRoom4_CantAdvance"
+    }
   ],
   "bg_events": [
 

@@ -144,13 +144,16 @@ Script_TilyousLab_RascalootPokeball::
 	end
 	
 Script_TilyousLab_RascalootYes:
+	checkmoney 30000, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq LilycoveCity_DepartmentStoreRooftop_EventScript_NotEnoughMoneyForPokemon
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 0
 	givemon SPECIES_RASCALOOT, 5, ITEM_NONE
 	removemoney 30000, 0
 	setflag FLAG_PICKED_STARTER
 	playfanfare MUS_OBTAIN_ITEM
-	removeobject 4
+	removeobject 3
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_RASCALOOT
 	waitfanfare
 	msgbox T_TilyousLab_RascalootYes, MSGBOX_YESNO
@@ -164,7 +167,6 @@ Script_TilyousLab_RascalootYes:
 TilyousLab_EventScript_NicknameStarter::
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
-	goto TilyousLab_BobbyAndJohnPick
 	end
 	
 TilyousLab_BobbyAndJohnPick:
@@ -208,7 +210,7 @@ Script_TilyousLab_FroTookRascaloot:
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 	removeobject 3
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
-	setvar VAR_LITTLEROOT_TOWN_STATE, 4
+	
 	
 	release
 	end
@@ -226,6 +228,9 @@ Script_TilyousLab_FlobraPokeball::
 	
 	
 Script_TilyousLab_FlobraYes:
+	checkmoney 30000, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq LilycoveCity_DepartmentStoreRooftop_EventScript_NotEnoughMoneyForPokemon
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 1
 	givemon SPECIES_FLOBRA, 5, ITEM_NONE
@@ -268,7 +273,7 @@ Script_TilyousLab_FroTookFlobra:
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 	removeobject 3
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
-	setvar VAR_LITTLEROOT_TOWN_STATE, 4
+	
 	release
 	end	
 	
@@ -285,13 +290,16 @@ Script_TilyousLab_EmborypsPokeball::
 	
 	
 Script_TilyousLab_EmborypsYes:
+	checkmoney 30000, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq LilycoveCity_DepartmentStoreRooftop_EventScript_NotEnoughMoneyForPokemon
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 2
 	givemon SPECIES_EMBORYPS, 5, ITEM_NONE
 	removemoney 30000, 0
 	setflag FLAG_PICKED_STARTER
 	playfanfare MUS_OBTAIN_ITEM
-	removeobject 6
+	removeobject 4
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS
 	waitfanfare
 	msgbox T_TilyousLab_EmborypsYes, MSGBOX_YESNO
@@ -301,6 +309,12 @@ Script_TilyousLab_EmborypsYes:
 	closemessage
 	release
 	end	
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_NotEnoughMoneyForPokemon:
+	msgbox Text_NotEnoughMoneyForPokemon, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
 	
 Script_TilyousLab_FroTookEmboryps:
 	applymovement 3, M_TilyousLab_JohnFlobra
@@ -327,7 +341,7 @@ Script_TilyousLab_FroTookEmboryps:
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 	removeobject 3
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
-	setvar VAR_LITTLEROOT_TOWN_STATE, 4
+	
 	release
 	end	
 
@@ -678,7 +692,7 @@ T_TilyousLab_ProfTilyousPokemon:
 	.string "A Pokéball belonging to Prof. \nTilyou. \pYou can hear a quite buzz coming \nfrom inside of it.$"
 	
 T_TilyousLab_PickRascaloot:
-	.string "The Pokéball contains the grass \ntype Bandicoot Pokémon Rascaloot. \pIs this the Pokémon you wish to \lpurchase for 30000?$"
+	.string "The Pokéball contains the grass \ntype Bandicoot Pokémon Rascaloot. \pIs this the Pokémon you wish to \npurchase for 30000?$"
 	
 T_TilyousLab_RascalootYes:
 
@@ -721,7 +735,7 @@ T_TilyousLab_JohnLongTimeNoSee:
 	.string "Don't make us wait any longer!$"
 	
 T_TilyousLab_PickFlobra:
-	.string "The Pokéball contains the water \ntype Pokémon Flobra. \pIs this the Pokémon you wish to \lpurchase for 30000?$"
+	.string "The Pokéball contains the water \ntype Pokémon Flobra. \pIs this the Pokémon you wish to \npurchase for 30000?$"
 	
 T_TilyousLab_FlobraYes:
 
@@ -736,7 +750,7 @@ T_TilyousLab_BobbyEmboryps:
 	.string "Bobby took the Fire Pokémon, \nEmboryps!$"
 	
 T_TilyousLab_PickEmboryps:
-	.string "The Pokéball contains the Fire \ntype Pokémon Emboryps. \pIs this the Pokémon you wish to \lpurchase for 30000?$"
+	.string "The Pokéball contains the Fire \ntype Pokémon Emboryps. \pIs this the Pokémon you wish to \npurchase for 30000?$"
 	
 T_TilyousLab_EmborypsYes:
 
@@ -804,3 +818,5 @@ T_TilyousLab_BobbyGivesExpShare:
 	.string "This makes raising multiple Pokemon \nmuch easier by giving a portion of \lExp. to all Pokémon in your party, \leven the ones who didn't participate \lin battle!\p"
 	.string "Place it in your Key Items pocket \nin your bag, and you can turn it on \lor off depending on how much of a \lchallenge you want.$"
 
+Text_NotEnoughMoneyForPokemon:
+	.string "Son, you can't afford that!$"

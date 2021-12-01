@@ -19,26 +19,22 @@ RaintreeIsland_Gym_EventScript_RemoveIceBlocks:
 EventScript_RaintreeIsland_IceRoom_GymTrainer2::
 	trainerbattle_single TRAINER_LILITH, RaintreeIsland_IceRoom_Text_GymTrainer2Intro, RaintreeIsland_IceRoom_Text_GymTrainer2Defeat, EventScript_RaintreeIsland_IceRoom_GymTrainer2PostBattle
 	msgbox Text_RaintreeIsland_GymTrainer2Defeat, MSGBOX_DEFAULT
-	warpsilent MAP_RAINTREE_ISLAND_GYM_FIRE_ROOM, 255, 7, 16
 	release
 	end
 
 EventScript_RaintreeIsland_IceRoom_GymTrainer2PostBattle:
 	msgbox Text_RaintreeIsland_GymTrainer2Defeat, MSGBOX_DEFAULT
-	warpsilent MAP_RAINTREE_ISLAND_GYM_FIRE_ROOM, 255, 7, 16
 	release
 	end
 
 	EventScript_RaintreeIsland_IceRoom_GymTrainer4::
 	trainerbattle_single TRAINER_CRISTIAN, RaintreeIsland_IceRoom_Text_GymTrainer4Intro, RaintreeIsland_IceRoom_Text_GymTrainer4Defeat, EventScript_RaintreeIsland_IceRoom_GymTrainer4PostBattle
 	msgbox Text_RaintreeIsland_GymTrainer4Defeat, MSGBOX_DEFAULT
-	warpsilent MAP_RAINTREE_ISLAND_GYM_FIRE_ROOM, 255, 19, 31
 	release
 	end
 
 EventScript_RaintreeIsland_IceRoom_GymTrainer4PostBattle:
 	msgbox Text_RaintreeIsland_GymTrainer4Defeat, MSGBOX_DEFAULT
-	warpsilent MAP_RAINTREE_ISLAND_GYM_FIRE_ROOM, 255, 19, 31
 	release
 	end
 
@@ -46,7 +42,7 @@ EventScript_RaintreeIsland_IceRoom_GymLeaderIce::
 	lock
 	goto_if_unset FLAG_DEFEATED_POISON, EventScript_RaintreeIsland_IceRoom_HaventBeatedAllGrunts
 	goto_if_unset FLAG_PICKED_STARTER, EventScript_RaintreeIsland_IceRoom_HaventBeatedAllGrunts
-	goto_if_unset FLAG_UNUSED_0x027, EventScript_RaintreeIsland_IceRoom_HaventBeatedAllGrunts
+	goto_if_unset FLAG_DEFEATED_NORMAL, EventScript_RaintreeIsland_IceRoom_HaventBeatedAllGrunts
 	goto_if_unset FLAG_UNUSED_0x028, EventScript_RaintreeIsland_IceRoom_HaventBeatedAllGrunts
 	goto_if_unset FLAG_UNUSED_0x029, EventScript_RaintreeIsland_IceRoom_HaventBeatedAllGrunts
 	setflag FLAG_SYS_NO_BAG_USE

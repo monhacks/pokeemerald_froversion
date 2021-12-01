@@ -42,10 +42,29 @@ HubRoom_EventScripts_WarpToNormalRoom:
 	release
 end
 
-
-
 HubRoom_Text_WouldYouLikeToEnterNormalRoom:
 	.string "Would you like to enter the \nNormal Room?$"
+
+HubRoom_EventScripts_WouldYouLikeToEnterIceRoom::
+	lockall
+	goto_if_unset FLAG_DEFEATED_NORMAL, HubRoom_EventScripts_HaventUnlockedRoom
+	msgbox HubRoom_Text_WouldYouLikeToEnterIceRoom, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq HubRoom_EventScripts_WarpToIceRoom
+	compare VAR_RESULT, NO
+	goto_if_eq HubRoom_EventScripts_DontWarpToRoom
+	releaseall
+end
+
+HubRoom_EventScripts_WarpToIceRoom:
+	warp MAP_POISON1, 0, 11, 78
+	release
+end
+
+
+
+HubRoom_Text_WouldYouLikeToEnterIceRoom:
+	.string "Would you like to enter the \nIce Room?$"
 
 
 ////////////////Universal/////////////////////
