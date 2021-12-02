@@ -388,7 +388,7 @@ Route120_EventScript_Callie:: @ 81F5981
 	end
 
 Route120_Text_StevenGreeting: @ 81F5998
-	.string "Steven: Hm? {PLAYER}{KUN}, hi.\n"
+	.string "Mike: Hm? {PLAYER}{KUN}, hi.\n"
 	.string "It's been a while.\p"
 	.string "There's something here that you can't\n"
 	.string "see, right?\p"
@@ -401,15 +401,15 @@ Route120_Text_StevenGreeting: @ 81F5998
 	.string "battle?$"
 
 Route120_Text_StevenIllWaitHere: @ 81F5AAC
-	.string "Steven: No?\p"
+	.string "Mike: No?\p"
 	.string "I'll wait here, so you can get ready.$"
 
 Route120_Text_StevenReadyForBattle: @ 81F5ADE
-	.string "Steven: {PLAYER}{KUN}, are your Pokémon\n"
+	.string "Mike: {PLAYER}{KUN}, are your Pokémon\n"
 	.string "ready for battle?$"
 
 Route120_Text_StevenShowMeYourPower: @ 81F5B0F
-	.string "Steven: {PLAYER}{KUN}, show me your true\n"
+	.string "Mike: {PLAYER}{KUN}, show me your true\n"
 	.string "power as a Trainer!$"
 
 Route120_Text_StevenUsedDevonScope: @ 81F5B43
@@ -419,7 +419,7 @@ Route120_Text_StevenUsedDevonScope: @ 81F5B43
 	.string "The startled Pokémon attacked!$"
 
 Route120_Text_StevenGiveDevonScope: @ 81F5BAF
-	.string "Steven: I see…\n"
+	.string "Mike: I see…\n"
 	.string "Your battle style is intriguing.\p"
 	.string "Your Pokémon have obviously grown\n"
 	.string "since I first met you in Raintree.\p"
@@ -429,7 +429,7 @@ Route120_Text_StevenGiveDevonScope: @ 81F5BAF
 	.string "concealed Pokémon.$"
 
 Route120_Text_StevenGoodbye: @ 81F5C7B
-	.string "Steven: {PLAYER}{KUN}.\p"
+	.string "Mike: {PLAYER}{KUN}.\p"
 	.string "I enjoy seeing Pokémon and Trainers\n"
 	.string "who strive together.\p"
 	.string "I think you're doing great.\p"

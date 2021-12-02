@@ -157,7 +157,7 @@ MossdeepCity_StevensHouse_EventScript_DiveItemBall:: @ 8222926
 	end
 
 MossdeepCity_StevensHouse_Text_YouveEarnedHMDive: @ 8222936
-	.string "STEVEN: {PLAYER}{KUN}…\p"
+	.string "Mike: {PLAYER}{KUN}…\p"
 	.string "As you can see, there's not much here,\n"
 	.string "but this is my home.\p"
 	.string "Thank you for all that you've done.\p"
@@ -167,7 +167,7 @@ MossdeepCity_StevensHouse_Text_YouveEarnedHMDive: @ 8222936
 	.string "this HM.$"
 
 MossdeepCity_StevensHouse_Text_ExplainDive: @ 8222A0E
-	.string "STEVEN: While you're using SURF, you\n"
+	.string "Mike: While you're using SURF, you\n"
 	.string "should notice dark patches of water.\p"
 	.string "Use DIVE if you come to deep water\n"
 	.string "like it. You'll drop to the seafloor.\p"
@@ -177,7 +177,7 @@ MossdeepCity_StevensHouse_Text_ExplainDive: @ 8222A0E
 	.string "for you to surface, though.$"
 
 MossdeepCity_StevensHouse_Text_UnderwateCavernBetweenMossdeepSootopolis: @ 8222B11
-	.string "STEVEN: Apparently, there's an\n"
+	.string "Mike: Apparently, there's an\n"
 	.string "underwater cavern between\l"
 	.string "Ward and Homestead.\p"
 	.string "You know, the one that Capt. Stern\n"
@@ -215,9 +215,9 @@ MossdeepCity_StevensHouse_Text_LetterFromSteven: @ 8222C4E
 	.string "Pokémon.\p"
 	.string "I'm counting on you.\p"
 	.string "May our paths cross someday.\p"
-	.string "STEVEN STONE$"
+	.string "Mike Lynch$"
 
 MossdeepCity_StevensHouse_Text_CollectionOfRareRocks: @ 8222D97
 	.string "It's a collection of rare rocks and\n"
-	.string "stones assembled by STEVEN.$"
+	.string "stones assembled by Mike.$"
 

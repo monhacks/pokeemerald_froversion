@@ -384,7 +384,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_WINSTRATE, 10},
     {TRAINER_CLASS_MESSENGER, 22},
     {TRAINER_CLASS_BOBBY, 22},
-    {TRAINER_CLASS_GMP, 255},
+    {TRAINER_CLASS_GMP, 75},
     {0xFF, 5},
 };
 
@@ -1916,7 +1916,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 if (partyData[i].statHP > 0)
                    SetMonData(&party[i], MON_DATA_HP, &partyData[i].statHP); 
                 if (partyData[i].statMaxHP > 0)
-                   SetMonData(&party[i], MON_DATA_MAX_HP, &partyData[i].statMaxHP); 
+                   SetMonData(&party[i], MON_DATA_MAX_HP, &partyData[i].statMaxHP);
+                if (partyData[i].movePP1 > 0)
+                   SetMonData(&party[i], MON_DATA_PP1, &partyData[i].movePP1); 
                 break;
             }
             }

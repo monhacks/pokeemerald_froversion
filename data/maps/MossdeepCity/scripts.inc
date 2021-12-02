@@ -316,7 +316,7 @@ MossdeepCity_Movement_ScottExitEast: @ 81E4CE2
 	step_end
 
 MossdeepCity_Text_WantKingsRockStevenGaveMe: @ 81E4CED
-	.string "I got this from STEVEN, but I don't\n"
+	.string "I got this from Mike, but I don't\n"
 	.string "know what it's good for.\p"
 	.string "I think it's called KING'S ROCK.\n"
 	.string "Do you want it?$"
@@ -325,10 +325,10 @@ MossdeepCity_Text_YouCanKeepIt: @ 81E4D5B
 	.string "Why would you want it?\n"
 	.string "You're weird.\p"
 	.string "You can keep it, but keep it a secret\n"
-	.string "from STEVEN.$"
+	.string "from Mike.$"
 
 MossdeepCity_Text_StevensHouseOverThere: @ 81E4DB3
-	.string "STEVEN's house is right over there!$"
+	.string "Mike's house is right over there!$"
 
 MossdeepCity_Text_WhatToDoWithWeirdRock: @ 81E4DD7
 	.string "Yeah, you think so, too! What are you\n"

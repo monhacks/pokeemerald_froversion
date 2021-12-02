@@ -371,11 +371,11 @@ MauvilleCity_Gym_Text_WattsonDefeat: @ 820E734
 	.string "Take this Badge!$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge: @ 820E77F
-	.string "{PLAYER} received the DYNAMO BADGE\n"
+	.string "{PLAYER} received the Boulder Badge\n"
 	.string "from Jordan.$"
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis: @ 820E7AA
-	.string "With the DYNAMO BADGE, Pokémon can\n"
+	.string "With the Boulder Badge, Pokémon can\n"
 	.string "use Rock Smash out of battle.\p"
 	.string "And, it will make your Pokémon a little\n"
 	.string "bit faster, too.\p"

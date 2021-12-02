@@ -1,10 +1,10 @@
 Route111_Text_MakingRoomUseTMToMakeYourOwn: @ 82762C9
 	.string "What's that?\n"
 	.string "What am I doing?\p"
-	.string "I'm thinking about making my own room\n"
-	.string "here using a Pokémon move.\p"
+	.string "I'm thinking about building a\n"
+	.string "barrier using a Pokémon move.\p"
 	.string "I know! I'll give you this TM.\n"
-	.string "Will you use it to make your own room?$"
+	.string "Will you use it build a barrier?$"
 
 Route111_Text_ExplainSecretPower: @ 827636E
 	.string "This TM04 Contains Calm Mind.\p"

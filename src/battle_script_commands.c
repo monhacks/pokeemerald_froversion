@@ -1368,7 +1368,8 @@ static void Cmd_attackcanceler(void)
 
     if (gProtectStructs[gBattlerTarget].bounceMove
         && gBattleMoves[gCurrentMove].flags & FLAG_MAGIC_COAT_AFFECTED
-        && !gProtectStructs[gBattlerAttacker].usesBouncedMove)
+        && !gProtectStructs[gBattlerAttacker].usesBouncedMove
+            && !IsAbilityOnField(ABILITY_MEGA_GENGAR_ABILITY))
     {
         PressurePPLose(gBattlerAttacker, gBattlerTarget, MOVE_MAGIC_COAT);
         gProtectStructs[gBattlerTarget].bounceMove = 0;
@@ -1380,7 +1381,8 @@ static void Cmd_attackcanceler(void)
     }
     else if (GetBattlerAbility(gBattlerTarget) == ABILITY_MAGIC_BOUNCE
              && gBattleMoves[gCurrentMove].flags & FLAG_MAGIC_COAT_AFFECTED
-             && !gProtectStructs[gBattlerAttacker].usesBouncedMove)
+             && !gProtectStructs[gBattlerAttacker].usesBouncedMove
+            && !IsAbilityOnField(ABILITY_MEGA_GENGAR_ABILITY))
     {
         RecordAbilityBattle(gBattlerTarget, ABILITY_MAGIC_BOUNCE);
         gProtectStructs[gBattlerTarget].usesBouncedMove = 1;
@@ -1391,7 +1393,8 @@ static void Cmd_attackcanceler(void)
     }
     else if (gSideTimers[GetBattlerSide(gBattlerTarget)].magicMirrorTimer > 0
              && gBattleMoves[gCurrentMove].split == SPLIT_SPECIAL
-            && !gProtectStructs[gBattlerAttacker].usesBouncedMove)
+            && !gProtectStructs[gBattlerAttacker].usesBouncedMove
+            && !IsAbilityOnField(ABILITY_MEGA_GENGAR_ABILITY))
     {
         PressurePPLose(gBattlerAttacker, gBattlerTarget, MOVE_MAGIC_MIRROR);
         gProtectStructs[gBattlerTarget].usesBouncedMove = 1;
@@ -11891,6 +11894,10 @@ static void Cmd_tryswapabilities(void) // skill swap
     case ABILITY_NONE:
     case ABILITY_WONDER_GUARD:
     case ABILITY_DISGUISE:
+    case ABILITY_MEGA_GENGAR_ABILITY:
+    case ABILITY_MEGA_HOUNDOOM_ABILITY:
+    case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
+    case ABILITY_MEGA_DEWGONG_ABILITY:
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
         return;
     }
@@ -11900,6 +11907,10 @@ static void Cmd_tryswapabilities(void) // skill swap
     case ABILITY_NONE:
     case ABILITY_WONDER_GUARD:
     case ABILITY_DISGUISE:
+    case ABILITY_MEGA_GENGAR_ABILITY:
+    case ABILITY_MEGA_HOUNDOOM_ABILITY:
+    case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
+    case ABILITY_MEGA_DEWGONG_ABILITY:
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
         return;
     }

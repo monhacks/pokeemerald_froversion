@@ -464,7 +464,7 @@ MossdeepCity_SpaceCenter_2F_Text_MaxieDontInterfere: @ 822467B
 	.string "Don't you dare interfere!$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenWhyStealRocketFuel: @ 82246B2
-	.string "Steven: Team MAGA…\p"
+	.string "Mike: Team MAGA…\p"
 	.string "What's the point of stealing rocket\n"
 	.string "fuel?$"
 
@@ -480,13 +480,13 @@ MossdeepCity_SpaceCenter_2F_Text_MaxieUseFuelToEruptVolcano: @ 82246F0
 	.string "It will be savage!$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle: @ 82247FF
-	.string "Steven: {PLAYER}{KUN}!\n"
+	.string "Mike: {PLAYER}{KUN}!\n"
 	.string "You're going to help me?\p"
 	.string "Let's go into battle together!\n"
 	.string "Are you ready?$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly: @ 8224854
-	.string "Steven: Then, hurry!\n"
+	.string "Mike: Then, hurry!\n"
 	.string "Get ready quickly!$"
 
 MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand: @ 822487C
@@ -518,7 +518,7 @@ MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp: @ 82249DC
 	.string "matters that I must examine…$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenThankYouComeSeeMeAtHome: @ 8224A4A
-	.string "Steven: Whew, that was too tense.\n"
+	.string "Mike: Whew, that was too tense.\n"
 	.string "{PLAYER}{KUN}, thank you.\p"
 	.string "I have something to give you as\n"
 	.string "thanks for your support.\p"

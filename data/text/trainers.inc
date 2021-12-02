@@ -1642,14 +1642,14 @@ Route113_Text_DillonIntro: @ 8299DE3
 Route113_Text_DillonDefeat: @ 8299E1C
 	.string "Oh God, we live in misery, lying here\n"
 	.string "in desperation...\p"
-	.string "We need you here more than anything,"
+	.string "We need you here more than anything,\n"
 	.string "right now.$"
 
 
 Route113_Text_DillonPostBattle: @ 8299E38
 	.string "Oh God, we live in misery, lying here\n"
 	.string "in desperation...\p"
-	.string "We need you here more than anything,"
+	.string "We need you here more than anything,\n"
 	.string "right now.$"
 
 Route113_Text_MadelineIntro: @ 8299EA6
@@ -4456,7 +4456,7 @@ Route131_Text_ReliDefeat: @ 82A381F
 	.string "worked together…$"
 
 Route131_Text_ReliPostBattle: @ 82A3855
-	.string "RELI: The people of PACIFIDLOG are\n"
+	.string "RELI: The people of The Falls are\n"
 	.string "together with the sea and Pokémon from\l"
 	.string "the time they are born.$"
 
@@ -4473,10 +4473,10 @@ Route131_Text_IanDefeat: @ 82A3925
 	.string "but we still couldn't win…$"
 
 Route131_Text_IanPostBattle: @ 82A3960
-	.string "IAN: You know how PACIFIDLOG is\n"
+	.string "IAN: You know how The Falls is\n"
 	.string "a floating town?\p"
 	.string "So, wherever there is the sea,\n"
-	.string "that's a part of PACIFIDLOG!$"
+	.string "that's a part of The Falls!$"
 
 Route131_Text_IanNotEnoughMons: @ 82A39CD
 	.string "IAN: If you have two Pokémon,\n"
@@ -4496,7 +4496,7 @@ Route131_Text_TaliaPostBattle: @ 82A3A48
 	.string "Why don't you go take a look?$"
 
 Route131_Text_KevinIntro: @ 82A3AA0
-	.string "The people of PACIFIDLOG are\n"
+	.string "The people of The Falls are\n"
 	.string "a peaceful bunch.\p"
 	.string "They never get angry.\n"
 	.string "That goes for me, too.$"
@@ -4815,7 +4815,7 @@ GeneralTrainer_Text_MessengerIntro:
 	.string "Only those who devote themselves \nfully to our teachings have any chance \lof discovering the truth.\p"
 	.string "I, along with 11 fellow disciples, \nhave been tasked with spreading \lour gospel to the world.\p"
 	.string "We each hold an important message \nthat will reveal this power to \l{COLOR RED}The one.{COLOR DARK_GREY}\p"
-	.string "We will reveal these messages to any \ntrainer that can defeat us after \lbattle, but only {COLOR RED}The one.{COLOR DARK_GREY} will be \lable to understand their true meaning.$"
+	.string "We will reveal these messages to any \ntrainer that can defeat us after \lbattle, but only {COLOR RED}The one{COLOR DARK_GREY} will be \lable to understand their true meaning.$"
 
 LancelotPath_Text_CalvinIntro:
 	.string "Hahah! Our eyes met!\n"
@@ -4825,7 +4825,7 @@ LancelotPath_Text_CalvinDefeated:
 	.string "Ow! Down and out!$"
 
 LancelotPath_Text_CalvinPostBattle:
-	.string "If you lock eyes with a TRAINER,\n"
+	.string "If you lock eyes with a Trainer,\n"
 	.string "you have to challenge! It's a rule!$"
 
 LancelotPath_Text_Messenger1:

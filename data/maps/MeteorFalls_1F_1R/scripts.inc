@@ -255,7 +255,7 @@ MeteorFalls_1F_1R_Text_HoldItRightThereMagma: @ 822BFE4
 
 MeteorFalls_1F_1R_Text_BeSeeingYouTeamAqua: @ 822C04E
 	.string "Hehehe!\n"
-	.string "Sounds good Leader Hasley\p"
+	.string "Sounds good Leader Haseley\p"
 	.string "This kid is too much trouble to deal\n"
 	.string "with anyway...\p"
 	.string "Mt. Lancelot we go!\p"

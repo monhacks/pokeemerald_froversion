@@ -670,7 +670,7 @@ Route104_Text_LandedInDewfordDeliverLetter: @ 81E9AAF
 	.string "K. Trippy: Ahoy!\n"
 	.string "We've hit land in Raintree.\p"
 	.string "I suppose you're off to deliver that\n"
-	.string "Letter to, who was it now, Steven!$"
+	.string "Letter to, who was it now, Mike!$"
 
 DewfordTown_Text_SetSailBackToPetalburg: @ 81E9B24
 	.string "K. Trippy: Have you delivered your\n"

@@ -73,6 +73,8 @@ Script_WalmoreTown_AmneetIntroductionTrigger1::
 	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
 	waitmovement LOCALID_AMNEET
 	setflag FLAG_HIDE_WMT_AMNEET
+	removeobject LOCALID_FREEWOMAN
+	removeobject LOCALID_AMNEET
 	fadedefaultbgm
 	release
 	end
@@ -95,6 +97,8 @@ Script_WalmoreTown_AmneetIntroductionTrigger2::
 	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
 	waitmovement LOCALID_AMNEET
 	setflag FLAG_HIDE_WMT_AMNEET
+	removeobject LOCALID_FREEWOMAN
+	removeobject LOCALID_AMNEET
 	fadedefaultbgm
 	release
 	end
@@ -117,9 +121,9 @@ Script_WalmoreTown_AmneetIntroductionTrigger3::
 	closemessage
 	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
 	waitmovement LOCALID_AMNEET
+	setflag FLAG_HIDE_WMT_AMNEET
 	removeobject LOCALID_FREEWOMAN
 	removeobject LOCALID_AMNEET
-	setflag FLAG_HIDE_WMT_AMNEET
 	fadedefaultbgm
 	release
 	end

@@ -53,6 +53,7 @@ struct TrainerMonItemCustomMoves
     u16 statMaxHP;
     u16 statSpDef;
     u16 statHP;
+    u16 movePP1;
     const u8 *nickname;
 };
 

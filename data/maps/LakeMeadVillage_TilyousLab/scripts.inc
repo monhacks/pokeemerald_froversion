@@ -788,7 +788,7 @@ T_TilyousLab_IsiahExplainsWhatHeSaw:
 	.string "Isiah: ...and that is when Fro and \nBobby showed up an saved me.\p"
 	.string "Prof Tilyou: So you saw team MAGA \ntaking a caged, mutated Pokémon, along \lwith equipment down into Lake Mead's \lnatural caverns?\p"
 	.string "That does not sound good. I will get \nthe Village Leaders together and \linvestigate. \pYou kids need to be more careful, \nteam MAGA is not to be taken lightly. \pIf Bobby and Fro didn't come to your \nrescue who knows what could have \lhappened.\p"
-	.string "Thank you for letting me know what you \nsaw. I don't want any of you messing \laround at the Lake until we can look \linto this futher. \pPlease continue on your gym challenge \nand try to stay out of team MAGA's \lway if you run into them\p"
+	.string "Thank you for letting me know what you \nsaw. I don't want any of you messing \laround at the Lake until we can look \linto this futher. \pPlease continue with your gym challenge \nand try to stay out of team MAGA's \lway if you run into them.\p"
 	.string "Isiah: Thank you professor, I will \nbe more careful not to get caught \ldoing anything wrong from now on.$"
 	
 T_TilyousLab_ComeOnFroLetsGo:
