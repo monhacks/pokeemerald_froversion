@@ -153,10 +153,10 @@ RustboroCity_ColangeloGraphics_3F_Movement_PlayerApproachDesk: @ 8212566
 RustboroCity_ColangeloGraphics_3F_EventScript_MrStone:: @ 821256C
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_EXP_SHARE, RustboroCity_ColangeloGraphics_3F_EventScript_MrStoneAfterFavor
-	goto_if_set FLAG_DELIVERED_STEVEN_LETTER, RustboroCity_ColangeloGraphics_3F_EventScript_GiveExpShare
 	compare VAR_OLDALE_TOWN_STATE, 15
 	goto_if_eq RustboroCity_ColangeloGraphics_3F_EventScript_StartDomBattle
+	goto_if_set FLAG_RECEIVED_EXP_SHARE, RustboroCity_ColangeloGraphics_3F_EventScript_MrStoneAfterFavor
+	goto_if_set FLAG_DELIVERED_STEVEN_LETTER, RustboroCity_ColangeloGraphics_3F_EventScript_GiveExpShare
 	msgbox RustboroCity_ColangeloGraphics_3F_Text_CountingOnYou, MSGBOX_DEFAULT
 	closemessage
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
@@ -166,7 +166,7 @@ RustboroCity_ColangeloGraphics_3F_EventScript_MrStone:: @ 821256C
 
 RustboroCity_ColangeloGraphics_3F_EventScript_GiveExpShare:: @ 8212595
 	msgbox RustboroCity_ColangeloGraphics_3F_Text_ThankYouForDeliveringLetter, MSGBOX_DEFAULT
-	giveitem ITEM_EXP_SHARE
+	giveitem ITEM_MASTER_BALL
 	compare VAR_RESULT, FALSE
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_EXP_SHARE
@@ -320,12 +320,14 @@ RustboroCity_ColangeloGraphics_3F_EventScript_RevealMAGABoss::
 	applymovement OBJ_EVENT_ID_PLAYER, ColangeloGraphics_Movement_PlayerToBoss
 	setvar VAR_OLDALE_TOWN_STATE, 15
 	waitmovement OBJ_EVENT_ID_PLAYER
-	goto RustboroCity_ColangeloGraphics_3F_EventScript_StartDomBattle
 	releaseall
 	end
+	
 RustboroCity_ColangeloGraphics_3F_EventScript_StartDomBattle::
-	applymovement 1, Common_Movement_FacePlayer
-	trainerbattle_double TRAINER_COLANGELO_GRAPHICS_DOM, ColangeloGraphics_Text_SoYouveRuinedOurPlans, ColangeloGraphics_Text_DomDefeat, Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_COLANGELO_GRAPHICS_DOM, ColangeloGraphics_Text_SoYouveRuinedOurPlans, ColangeloGraphics_Text_DomDefeat, Route104_Text_GinaNotEnoughMons, RustboroCity_ColangeloGraphics_3F_EventScript_StartDomBattle2
+	end
+
+RustboroCity_ColangeloGraphics_3F_EventScript_StartDomBattle2:
 	msgbox ColangeloGraphics_Text_MaybePokemonArentMeantToBeUsedAsWeapons, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	removeobject 5
@@ -422,3 +424,25 @@ ColangeloGraphics_Movement_PlayerToBoss:
 	walk_down
 	walk_right
 	step_end
+
+
+LattkaEventScript::
+	lockall
+	msgbox Text_LattkaCG_BossWillCrushYou, MSGBOX_NPC
+	releaseall
+	end
+
+HaighEventScript::
+	lockall
+	msgbox Text_HaighCG_BossWillCrushYou, MSGBOX_NPC
+	releaseall
+	end
+
+Text_HaighCG_BossWillCrushYou:
+	.string "You think I've been tough?\n"
+	.string "Wait until you see Dom in action!$"
+
+Text_LattkaCG_BossWillCrushYou:
+	.string "I developed some crazy technology\n"
+	.string "for the boss. You won't stand a\l"
+	.string "chance! Lattka OUT!$"

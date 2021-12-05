@@ -5579,6 +5579,12 @@ u32 GetBattlerAbility(u8 battlerId)
 {
     if (gBattleMons[battlerId].ability == ABILITY_MEGA_GENGAR_ABILITY)
         return gBattleMons[battlerId].ability;
+    else if (gBattleMons[battlerId].ability == ABILITY_MEGA_HOUNDOOM_ABILITY)
+        return gBattleMons[battlerId].ability;
+    else if (gBattleMons[battlerId].ability == ABILITY_INVERTEBRAKE_HIDDEN_ABILITY)
+        return gBattleMons[battlerId].ability;
+    else if (gBattleMons[battlerId].ability == ABILITY_MEGA_DEWGONG_ABILITY)
+        return gBattleMons[battlerId].ability;
     else if (gStatuses3[battlerId] & STATUS3_GASTRO_ACID)
         return ABILITY_NONE;
     else if ((((gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER
