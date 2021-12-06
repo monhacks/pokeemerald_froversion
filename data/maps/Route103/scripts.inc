@@ -351,7 +351,7 @@ Route103_Text_BrendanTimeToHeadBack: @ 81ECA79
 
 Route103_Text_ShouldHaveBroughtPotion: @ 81ECB73
 	.string "My Pokémon is staggeringly tired…\n"
-	.string "I should have brought a POTION…$"
+	.string "I should have brought a Potion…$"
 
 Route103_Text_ShortcutToOldale: @ 81ECBB5
 	.string "If you cross the sea from here,\n"
