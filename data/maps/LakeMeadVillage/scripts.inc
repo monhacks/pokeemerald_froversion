@@ -1,7 +1,7 @@
 .set LOCALID_WASULA, 8
 
 LakeMeadVillage_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, LakeMeadVilage_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, LakeMeadVillage_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, LakeMeadVillage_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeMeadVillage_OnFrame
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LakeMeadVillage_OnWarp	
