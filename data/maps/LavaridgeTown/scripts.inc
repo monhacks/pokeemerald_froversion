@@ -261,7 +261,7 @@ LavaridgeTown_EventScript_EggWoman:: @ 81EA744
 	playfanfare MUS_OBTAIN_ITEM
 	message LavaridgeTown_Text_ReceivedTheEgg
 	waitfanfare
-	giveegg SPECIES_WYNAUT
+	giveegg SPECIES_TOGEPI
 	release
 	end
 
@@ -446,6 +446,8 @@ LavaridgeCity_Pokemart_Amneet:
 	.2byte ITEM_LIFE_ORB
 	.2byte ITEM_CARBOS
 	.2byte ITEM_HEART_SCALE
+	.2byte ITEM_WATER_CAMO
+	.2byte ITEM_GRASS_CAMO
 	.2byte ITEM_NONE
 	release
 	end

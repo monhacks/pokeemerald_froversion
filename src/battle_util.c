@@ -79,7 +79,7 @@ const struct BerryBoost gBerryBoosts[] =
     { ITEM_ORAN_BERRY, STAT_ATK, 1, STAT_DEF, 1 },
     { ITEM_CHERI_BERRY, STAT_SPEED, 1 },
     { ITEM_SITRUS_BERRY, STAT_ATK, 2},
-    { ITEM_AKU_BERRY, STAT_DEF, 1},
+    { ITEM_AKU_BERRY, STAT_DEF, STAT_SPDEF, 1},
     { 0xFFFF },
 };
 
@@ -8179,7 +8179,7 @@ static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 move
     case HOLD_EFFECT_AKU_BERRY:
         if(IsSpeciesOneOf(gBattleMons[battlerDef].species, gRuthlashLine)
         && BATTLER_MAX_HP(battlerDef))
-            MulModifier(&finalModifier, UQ_4_12(0.5));
+            MulModifier(&finalModifier, UQ_4_12(0.25));
         break;
     }
 
