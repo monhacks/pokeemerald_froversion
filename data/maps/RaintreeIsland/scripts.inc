@@ -1,6 +1,11 @@
 RaintreeIsland_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, RaintreeIsland_OnTransition
 	.byte 0
 
+
+RaintreeIsland_OnTransition: @ 81E950D
+	setflag FLAG_VISITED_DEWFORD_TOWN
+end
 
 RaintreeIsland_EventScript_AmneetTravelingMerchant::
 	lock

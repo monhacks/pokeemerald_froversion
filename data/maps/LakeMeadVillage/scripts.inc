@@ -1,6 +1,7 @@
 .set LOCALID_WASULA, 8
 
 LakeMeadVillage_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, LakeMeadVilage_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, LakeMeadVillage_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LakeMeadVillage_OnFrame
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LakeMeadVillage_OnWarp	
@@ -30,6 +31,10 @@ LakeMeadVillage_MapScripts::
 
 
 //Mapscripts
+
+LakeMeadVillage_OnTransition: @ 81E7DDB
+	setflag FLAG_VISITED_LITTLEROOT_TOWN
+end
 
 LakeMeadVillage_OnFrame:
 map_script_2 VAR_OLDALE_TOWN_STATE, 2, Script_LMV_SilentWarpToCutscene
