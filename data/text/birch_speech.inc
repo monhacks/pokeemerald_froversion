@@ -57,5 +57,5 @@ gText_Birch_AreYouReady:: @ 82C8C7A
 	.string "again.\p"
 	.string "Take courage, and leap into the\n"
 	.string "world of Pokémon with your fellow\l"
-	.string "americans!\p"
+	.string "Americans!\p"
 	.string "$"

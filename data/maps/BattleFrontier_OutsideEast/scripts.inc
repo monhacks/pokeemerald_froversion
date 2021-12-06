@@ -240,7 +240,7 @@ BattleFrontier_OutsideEast_EventScript_Camper:: @ 8242E08
 BattleFrontier_OutsideEast_Text_BattleTowerSign: @ 8242E11
 	.string "This is the BATTLE TOWER!\n"
 	.string "Keep the win streak as the toughest\l"
-	.string "TRAINER!$"
+	.string "Trainer!$"
 
 BattleFrontier_OutsideEast_Text_BattlePalaceSign: @ 8242E58
 	.string "This is the BATTLE PALACE!\n"
@@ -361,7 +361,7 @@ BattleFrontier_OutsideEast_Text_SometimesImportantOldManInThere: @ 8243668
 BattleFrontier_OutsideEast_Text_LegendOfBattlePyramid: @ 82436F2
 	.string "Do you know it?\n"
 	.string "The legend of the BATTLE PYRAMID?\p"
-	.string "When there comes a confident TRAINER\n"
+	.string "When there comes a confident Trainer\n"
 	.string "reaching for the golden pinnacle,\l"
 	.string "there shall appear a man among men.\p"
 	.string "Don't know that legend?\n"
@@ -380,7 +380,7 @@ BattleFrontier_OutsideEast_Text_GotWipedOut: @ 8243809
 
 BattleFrontier_OutsideEast_Text_ToughTrainerInBattleTower: @ 8243895
 	.string "This guy ran into a horribly tough\n"
-	.string "TRAINER while he was on the BATTLE\l"
+	.string "Trainer while he was on the BATTLE\l"
 	.string "TOWER challenge.\p"
 	.string "Now look at him…\p"
 	.string "You need to be cautious if you ever\n"

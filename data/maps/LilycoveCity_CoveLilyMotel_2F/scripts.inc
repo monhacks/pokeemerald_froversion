@@ -133,5 +133,5 @@ LilycoveCity_CoveLilyMotel_2F_Text_ContestsDoTakeStrategy: @ 8218C33
 	.string "Scott: I think it does take strategy\n"
 	.string "to win a Contest.\p"
 	.string "Devising Contest strategies is one way\n"
-	.string "of becoming a better TRAINER, I'd say.$"
+	.string "of becoming a better Trainer, I'd say.$"
 

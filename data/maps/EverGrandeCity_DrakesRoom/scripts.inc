@@ -80,9 +80,9 @@ EverGrandeCity_DrakesRoom_Text_Defeat: @ 8228895
 
 EverGrandeCity_DrakesRoom_Text_PostBattleSpeech: @ 82288B0
 	.string "You deserve every credit for coming\n"
-	.string "this far as a TRAINER of Pokémon.\p"
+	.string "this far as a Trainer of Pokémon.\p"
 	.string "You do seem to know what is needed.\p"
-	.string "Yes, what a TRAINER needs is a\n"
+	.string "Yes, what a Trainer needs is a\n"
 	.string "virtuous heart.\p"
 	.string "Pokémon touch the good hearts of\n"
 	.string "Trainers and learn good from wrong.\p"

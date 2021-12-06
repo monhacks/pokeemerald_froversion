@@ -98,26 +98,17 @@ Script_TilyousLab_PickAPokemon:
 	applymovement 1, M_TilyousLab_TilyouMovesToTop
 	applymovement OBJ_EVENT_ID_PLAYER, M_TilyousLab_PlayerFollows
 	waitmovement 1
-	setvar VAR_0x8000, MUGSHOT_TILYOU
-	callnative DrawMugshot
 	msgbox T_TilyousLab_TellPlayerToPick, MSGBOX_DEFAULT
 	applymovement 2, M_TilyousLab_BobbyFacesTilyou
 	waitmovement 2
-	setvar VAR_0x8000, MUGSHOT_BOBBY
-	callnative DrawMugshot
 	msgbox T_TilyousLab_BobbySaysFroCanGo MSGBOX_DEFAULT
 	applymovement 3, M_TilyousLab_JohnFacesTilyou
 	waitmovement 3
-	setvar VAR_0x8000, MUGSHOT_JOHN
-	callnative DrawMugshot
 	msgbox T_TilyousLab_JohnAgrees MSGBOX_DEFAULT
 	applymovement 2, M_TilyousLab_BobbyFacesDown
 	applymovement 3, M_TilyousLab_JohnFacesDown
 	waitmovement 3
-	setvar VAR_0x8000, MUGSHOT_TILYOU
-	callnative DrawMugshot
 	msgbox T_TilyousLab_OkAnthonyGoAhead, MSGBOX_DEFAULT
-	callnative ClearMugshot
 	closemessage
 	setvar VAR_LITTLEROOT_TOWN_STATE, 3
 	release

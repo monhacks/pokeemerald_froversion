@@ -120,7 +120,7 @@ FallarborTown_BattleTentLobby_Text_LookingForwardToArrival: @ 82C504C
 VerdanturfTown_BattleTentLobby_Text_WelcomeToBattleTent: @ 82C50C3
 	.string "I welcome you to the BATTLE TENT\n"
 	.string "VERDANTURF SITE!\p"
-	.string "Here, the TRAINER's trust toward\n"
+	.string "Here, the Trainer's trust toward\n"
 	.string "Pokémon is tested.$"
 
 VerdanturfTown_BattleTentLobby_Text_TakeChallenge: @ 82C5129
@@ -327,16 +327,16 @@ SlateportCity_BattleTentLobby_Text_ExplainBasicRules: @ 82C5F08
 
 SlateportCity_BattleTentLobby_Text_ExplainSwapPartnerRules: @ 82C5F9D
 	.string "You may swap Pokémon only with\n"
-	.string "the TRAINER you have just defeated.\p"
+	.string "the Trainer you have just defeated.\p"
 	.string "You may swap for only those Pokémon\n"
-	.string "used by the beaten TRAINER.$"
+	.string "used by the beaten Trainer.$"
 
 SlateportCity_BattleTentLobby_Text_ExplainSwapNumberRules: @ 82C6020
 	.string "After every battle you win, you may\n"
 	.string "swap for one of your defeated\l"
 	.string "opponent's Pokémon.\p"
 	.string "You will not be able to swap Pokémon\n"
-	.string "with the third TRAINER in the event.$"
+	.string "with the third Trainer in the event.$"
 
 SlateportCity_BattleTentLobby_Text_ExplainSwapNotes: @ 82C60C0
 	.string "There are two key points to be aware\n"
@@ -404,7 +404,7 @@ VerdanturfTown_BattleTentLobby_Text_ExplainMoveRules: @ 82C64BA
 
 @ Unused
 VerdanturfTown_BattleTentLobby_Text_ExplainUnderpoweredRules: @ 82C6612
-	.string "When not under command by its TRAINER,\n"
+	.string "When not under command by its Trainer,\n"
 	.string "a Pokémon may be unable to effectively\l"
 	.string "use certain moves.\p"
 	.string "A Pokémon is not good at using any\n"
@@ -425,7 +425,7 @@ BattleTentLobby_Text_ExplainLevelRules: @ 82C67CD
 	.string "At this BATTLE TENT, the levels of\n"
 	.string "your opponents will be adjusted to\l"
 	.string "match the levels of your Pokémon.\p"
-	.string "However, no TRAINER you face will\n"
+	.string "However, no Trainer you face will\n"
 	.string "have any Pokémon below Level 30.$"
 
 VerdanturfTown_BattleTentLobby_Text_RulesAreListed: @ 82C6878
