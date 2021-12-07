@@ -130,7 +130,7 @@ gPokeNewsTextBlendMaster_Upcoming:: @ 0828DBEC
 	.string "spinning a BERRY BLENDER.\p"
 	.string "Those people who want to make great\n"
 	.string "{POKEBLOCK}S or see the MASTER in action\l"
-	.string "are urged to save their BERRIES.\p"
+	.string "are urged to save their Berries.\p"
 	.string "That's the news on Pokémon NEWS.$"
 
 gPokeNewsTextBlendMaster_Ongoing:: @ 0828DD9E

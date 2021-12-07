@@ -38,7 +38,7 @@ gBerryDescriptionPart1_Oran:: @ 8589C86
 	.string "A peculiar BERRY with a mix of flavors.$"
 
 gBerryDescriptionPart2_Oran:: @ 8589CAE
-	.string "BERRIES grow in half a day.$"
+	.string "Berries grow in half a day.$"
 
 gBerryDescriptionPart1_Persim:: @ 8589CCA
 	.string "Loves sunlight. The BERRY's color$"
@@ -50,7 +50,7 @@ gBerryDescriptionPart1_Lum:: @ 8589D11
 	.string "Slow to grow. If raised with loving$"
 
 gBerryDescriptionPart2_Lum:: @ 8589D35
-	.string "care, it may grow two BERRIES.$"
+	.string "care, it may grow two Berries.$"
 
 gBerryDescriptionPart1_Sitrus:: @ 8589D54
 	.string "Closely related to ORAN. The large$"
@@ -122,7 +122,7 @@ gBerryDescriptionPart1_Pomeg:: @ 858A04A
 	.string "However much it is watered,$"
 
 gBerryDescriptionPart2_Pomeg:: @ 858A066
-	.string "it only grows up to six BERRIES.$"
+	.string "it only grows up to six Berries.$"
 
 gBerryDescriptionPart1_Kelpsy:: @ 858A087
 	.string "A rare variety shaped like a root.$"

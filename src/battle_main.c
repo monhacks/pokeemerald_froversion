@@ -3552,7 +3552,8 @@ static void TryDoEventsBeforeFirstTurn(void)
             gActiveBattler = gBattleStruct->poisonFieldSwitchInCounter - 1;
             gBattleStruct->poisonFieldSwitchInCounter++;
             if (!(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
-                && GetBattlerAbility(gActiveBattler) != ABILITY_IMMUNITY)
+                && GetBattlerAbility(gActiveBattler) != ABILITY_IMMUNITY
+                && !(IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL)))
             {
                 gBattleMons[gActiveBattler].status1 |= STATUS1_POISON;
                 BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);

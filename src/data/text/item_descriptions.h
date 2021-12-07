@@ -1432,7 +1432,7 @@ static const u8 sContestPassDesc[] = _(
 
 static const u8 sWailmerPailDesc[] = _(
     "A tool used for\n"
-    "watering BERRIES\n"
+    "watering Berries\n"
     "and plants.");
 
 static const u8 sColangeloGearsDesc[] = _(
@@ -1940,7 +1940,7 @@ static const u8 sTMCaseDesc[] = _(
 static const u8 sBerryPouchDesc[] = _(
     "A convenient\n"
     "container that\n"
-    "holds BERRIES.");
+    "holds Berries.");
 
 static const u8 sTeachyTVDesc[] = _(
     "A TV set tuned to\n"

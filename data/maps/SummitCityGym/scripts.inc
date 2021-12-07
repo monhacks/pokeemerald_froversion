@@ -164,7 +164,7 @@ SummitCityGym_EventScript_CongratsYouSolvedRiddle:
 	msgbox SummitCity_Gym_Text_SolvedRiddleRevealSecretPassage, MSGBOX_DEFAULT
 	setflag FLAG_SOLVED_SUMMIT_GYM_PUZZLE
 	playse SE_DOOR
-	warpsilent MAP_SUMMIT_CITY_GYM, 255, 5, 3
+	warpsilent MAP_SUMMIT_CITY_GYM, 255, 3, 4
 	release
 	end
 

@@ -267,7 +267,7 @@ MossdeepCity_GameCorner_1F_Text_PokemonJumpInfo: @ 8278ACB
 MossdeepCity_GameCorner_1F_Text_DodrioBerryPickingInfo: @ 8278BF1
 	.string "“DODRIO BERRY-PICKING”\p"
 	.string "Command DODRIO's three heads to\n"
-	.string "catch falling BERRIES.\p"
+	.string "catch falling Berries.\p"
 	.string "Press right, up, or left on the\n"
 	.string "{PLUS} Control Pad to move the heads.\p"
 	.string "To play this game, you must have\n"

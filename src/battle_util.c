@@ -2259,7 +2259,8 @@ u8 DoFieldEndTurnEffects(void)
                 gActiveBattler = gBattlerByTurnOrder[gBattleStruct->turnEffectsBattlerId++];
                 if (IsBattlerAlive(gActiveBattler)
                     && !(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
-                    && !(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SAFEGUARD))
+                    && !(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SAFEGUARD)
+                    && !(IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL)))
                 {
                     gBattleMons[gActiveBattler].status1 |= STATUS1_POISON;
                     BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gActiveBattler].status1);

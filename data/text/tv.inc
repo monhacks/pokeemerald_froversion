@@ -2047,7 +2047,7 @@ gTVWhatsNo1InHoennTodayText04:: @ 082882BE
 
 gTVWhatsNo1InHoennTodayText05:: @ 08288355
 	.string "In just one day, {STR_VAR_1} planted\n"
-	.string "{STR_VAR_2} BERRIES!\p"
+	.string "{STR_VAR_2} Berries!\p"
 	.string "As a result, {STR_VAR_1}'s clothes\n"
 	.string "became filthy with dirt.\p"
 	.string "Where the Trainer planted, countless\n"
@@ -2057,9 +2057,9 @@ gTVWhatsNo1InHoennTodayText05:: @ 08288355
 
 gTVWhatsNo1InHoennTodayText06:: @ 0828842B
 	.string "In just one day, {STR_VAR_1} picked\n"
-	.string "{STR_VAR_2} BERRIES!\p"
+	.string "{STR_VAR_2} Berries!\p"
 	.string "{STR_VAR_1}'s BAG became so filled\n"
-	.string "with BERRIES, the Trainer had trouble\l"
+	.string "with Berries, the Trainer had trouble\l"
 	.string "walking afterward!$"
 
 gTVWhatsNo1InHoennTodayText07:: @ 082884A5
