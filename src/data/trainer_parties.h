@@ -4482,7 +4482,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Billy[] = {
     {
     .iv = 0,
     .lvl = 8,
-    .species = SPECIES_NIDORAN_M,
+    .species = SPECIES_SPINARAK,
     },
     {
     .iv = 0,
@@ -4504,7 +4504,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tommy[] = {
     {
     .iv = 110,
     .lvl = 11,
-    .species = SPECIES_NIDORAN_M,
+    .species = SPECIES_SPINARAK,
     },
     {
     .iv = 120,
