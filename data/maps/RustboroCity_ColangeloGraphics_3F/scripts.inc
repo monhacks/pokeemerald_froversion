@@ -213,11 +213,11 @@ RustboroCity_ColangeloGraphics_3F_Text_MrStoneIHaveFavor: @ 8212609
 	.string "I have a favor to ask of an amazing\n"
 	.string "person like you.\p"
 	.string "I understand that you're delivering\n"
-	.string "a package to Slateport's Shipyard.\p"
+	.string "a package to Riverside's Shipyard.\p"
 	.string "Well, on the way, could you stop off in\n"
 	.string "Raintree Island?\p"
 	.string "I was hoping that you'd deliver a\n"
-	.string "Letter to Steven in Raintree.$"
+	.string "Letter to Mike in Raintree.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_MrStoneWantYouToHaveThis: @ 821277C
 	.string "Dom: Now, you should know that\n"
@@ -237,7 +237,7 @@ RustboroCity_ColangeloGraphics_3F_Text_MrStoneExplainPokenavRestUp: @ 8212837
 	.string "Trainer on an adventure.\p"
 	.string "It has a map of the Niagara region.\p"
 	.string "You can check the locations of\n"
-	.string "Raintree and Slateport easily!\p"
+	.string "Raintree and Riverside easily!\p"
 	.string "By the way, I've heard that sinister\n"
 	.string "criminals--MAGA, I believe--\l"
 	.string "have been making trouble far and wide.\p"
@@ -284,7 +284,7 @@ RustboroCity_ColangeloGraphics_3F_Text_ThisIs3rdFloorWaitHere: @ 8212C37
 	.string "Um… By the way, that parcel\n"
 	.string "you got back for us…\p"
 	.string "Could I get you to deliver that to\n"
-	.string "the Shipyard in Slateport?\p"
+	.string "the Shipyard in Riverside?\p"
 	.string "It would be awful if those robbers\n"
 	.string "tried to take it again.\p"
 	.string "Uh… Hehehe, so, uh, could I count\n"
@@ -301,7 +301,7 @@ RustboroCity_ColangeloGraphics_3F_Text_PleaseGoAhead: @ 8212E2F
 	.string "Please, go ahead.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_VisitCaptSternShipyard: @ 8212E41
-	.string "If you visit the Shipyard in Slateport,\n"
+	.string "If you visit the Shipyard in Riverside,\n"
 	.string "you should go see Capt. Stern.$"
 
 RustboroCity_ColangeloGraphics_3F_Text_RepeatAndTimerHugelyPopular: @ 8212E88

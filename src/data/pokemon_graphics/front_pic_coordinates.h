@@ -318,7 +318,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_ABRA] =
     {
         .size = 0x66,
-        .y_offset = 11,
+        .y_offset = 0,
     },
     [SPECIES_KADABRA] =
     {
@@ -2463,7 +2463,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_FRENTOAD] =
     {
         .size = 0x88,
-        .y_offset = 0x00,
+        .y_offset = 16,
     },
     [SPECIES_RABATOAST] =
     {

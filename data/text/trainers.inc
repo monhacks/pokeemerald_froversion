@@ -395,13 +395,13 @@ Route104_Text_CindyPostBattle: @ 8295AC3
 Route104_Text_CindyRegister1: @ 8295B01
 	.string "Hello, we meet again.\p"
 	.string "We seem to be drawn together. Let's\n"
-	.string "register each other in our PokénavS.$"
+	.string "register each other in our Pokénavs.$"
 
 Route104_Text_CindyRegister2: @ 8295B60
 	.string "We should commemorate how we seem\n"
 	.string "to be drawn to each other.\p"
 	.string "Let's register each other in our\n"
-	.string "PokénavS.$"
+	.string "Pokénavs.$"
 
 Route104_Text_CindyRematchIntro: @ 8295BC8
 	.string "Hello, we meet again.\n"
@@ -847,7 +847,7 @@ Route109_Text_EdmondPostBattle: @ 82972ED
 	.string "I'm a SAILOR, but…$"
 
 Route109_Text_RickyIntro: @ 829733B
-	.string "I'm thirsty… I could go for a SODA POP\n"
+	.string "I'm thirsty… I could go for a Soda Pop\n"
 	.string "at the SEASHORE HOUSE…$"
 
 Route109_Text_RickyDefeated: @ 8297379
@@ -1314,7 +1314,7 @@ Route111_Text_DustyRegister: @ 8298C00
 	.string "I haven't been searching for any\n"
 	.string "tough Pokémon.\p"
 	.string "But, for some reason, I sure do like\n"
-	.string "PokénavS.$"
+	.string "Pokénavs.$"
 
 Route111_Text_DustyRematchIntro: @ 8298C5F
 	.string "For thirty years I have searched for\n"
@@ -1595,7 +1595,7 @@ Route112_Text_CarolPostBattle: @ 8299B4C
 	.string "If you have the most fun, you win!$"
 
 Route112_Text_BryantIntro: @ 8299BAE
-	.string "I caught hot Pokémon in FIERY PATH!\n"
+	.string "I caught hot Pokémon in Lancelot Path!\n"
 	.string "Take a look!$"
 
 Route112_Text_BryantDefeat: @ 8299BDF
@@ -1923,7 +1923,7 @@ Route114_Text_ClaudeDefeat: @ 829AD0A
 
 Route114_Text_ClaudePostBattle: @ 829AD2E
 	.string "I think I'll try my luck at landing\n"
-	.string "a big one at METEOR FALLS.\p"
+	.string "a big one at Meteor Falls.\p"
 	.string "There has to be something in there.\n"
 	.string "I just know it.$"
 
@@ -3211,7 +3211,7 @@ Route121_Text_TammyDefeat: @ 829F3B9
 	.string "I have lost…$"
 
 Route121_Text_TammyPostBattle: @ 829F3C6
-	.string "MT. PYRE…\n"
+	.string "Mt. Pyre…\n"
 	.string "There is a mysterious power\l"
 	.string "at work there…$"
 
@@ -3421,7 +3421,7 @@ Route123_Text_CameronRematchDefeat: @ 829FF1B
 	.string "I feel sad…$"
 
 Route123_Text_CameronPostRematch: @ 829FF27
-	.string "I should train at MT. PYRE…\n"
+	.string "I should train at Mt. Pyre…\n"
 	.string "I'll never beat you this way…$"
 
 Route123_Text_JackiIntro: @ 829FF61
@@ -3483,7 +3483,7 @@ Route123_Text_YukiNotEnoughMons: @ 82A0224
 	.string "don't have two Pokémon.$"
 
 Route123_Text_KindraIntro: @ 82A025F
-	.string "MT. PYRE…\n"
+	.string "Mt. Pyre…\n"
 	.string "Where the spirits of Pokémon sleep…\l"
 	.string "Will your Pokémon sleep?$"
 
@@ -3491,7 +3491,7 @@ Route123_Text_KindraDefeat: @ 82A02A6
 	.string "Overflowing with vitality…$"
 
 Route123_Text_KindraPostBattle: @ 82A02C1
-	.string "MT. PYRE…\n"
+	.string "Mt. Pyre…\n"
 	.string "Where the spirits of Pokémon sleep…\p"
 	.string "It must overflow with a power that\n"
 	.string "soothes spirits…$"
@@ -3859,7 +3859,7 @@ Route125_Text_ErnestDefeat: @ 82A173A
 
 Route125_Text_ErnestPostBattle: @ 82A1755
 	.string "The tide ebbs and flows inside the\n"
-	.string "SHOAL CAVE.\p"
+	.string "Shoal Cave.\p"
 	.string "By the way, it's about six hours from\n"
 	.string "high tide to low tide. Did you know?$"
 
@@ -3876,7 +3876,7 @@ Route125_Text_ErnestRematchDefeat: @ 82A1851
 	.string "I flat out couldn't win!$"
 
 Route125_Text_ErnestRematchPostBattle: @ 82A187A
-	.string "The SHOAL CAVE…\p"
+	.string "The Shoal Cave…\p"
 	.string "There are places you can and can't\n"
 	.string "get to depending on the rise and fall\l"
 	.string "of the tide.\p"
@@ -3885,7 +3885,7 @@ Route125_Text_ErnestRematchPostBattle: @ 82A187A
 
 Route125_Text_KimIntro: @ 82A192B
 	.string "KIM: A funny old man lives in the\n"
-	.string "SHOAL CAVE. Someone told me.\l"
+	.string "Shoal Cave. Someone told me.\l"
 	.string "Are you going to see him, too?$"
 
 Route125_Text_KimDefeat: @ 82A1989
@@ -3893,7 +3893,7 @@ Route125_Text_KimDefeat: @ 82A1989
 
 Route125_Text_KimPostBattle: @ 82A19A6
 	.string "KIM: A funny old man lives in the\n"
-	.string "SHOAL CAVE, doesn't he?\p"
+	.string "Shoal Cave, doesn't he?\p"
 	.string "Let's go see him, IRIS!$"
 
 Route125_Text_KimNotEnoughMons: @ 82A19F8
@@ -3909,7 +3909,7 @@ Route125_Text_IrisDefeat: @ 82A1A71
 
 Route125_Text_IrisPostBattle: @ 82A1A92
 	.string "IRIS: KIM, are we really going into\n"
-	.string "the SHOAL CAVE?\l"
+	.string "the Shoal Cave?\l"
 	.string "We'll get all wet.$"
 
 Route125_Text_IrisNotEnoughMons: @ 82A1AD9
@@ -4749,7 +4749,7 @@ Route134_Text_AaronDefeat: @ 82A47E1
 
 Route134_Text_AaronPostBattle: @ 82A47FD
 	.string "We will return for more training at\n"
-	.string "METEOR FALLS.\p"
+	.string "Meteor Falls.\p"
 	.string "If you'd like, you should go, too.\n"
 	.string "It will definitely toughen you up!$"
 

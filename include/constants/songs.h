@@ -558,6 +558,8 @@
 #define MUS_FV_STILLSNOW                       622
 #define MUS_FV_HOMESTEAD_CAVERNS               623
 #define MUS_FV_OFFICE                624
+#define MUS_FV_KOSTIW               625
+#define MUS_FV_MAGEE               626
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

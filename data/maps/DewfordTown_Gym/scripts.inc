@@ -48,6 +48,9 @@ DewfordTown_Gym_EventScript_BrawlyDefeated:: @ 81FC7F7
 	setflag FLAG_ENABLE_BRAWLY_MATCH_CALL
 	setvar VAR_ROXANNE_CALL_STEP_COUNTER, 0
 	setflag FLAG_ENABLE_ROXANNE_FIRST_CALL
+	fadescreen FADE_TO_BLACK
+	warpsilent MAP_RAINTREE_ISLAND_GYM, 255, 7, 3
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 

@@ -269,10 +269,12 @@ RustboroCity_PokemonSchool_Text_TradingRightNow: @ 821459F
 	.string "this town."
 
 RustboroCity_PokemonSchool_Text_AlwaysWantedSeedot: @ 82145CD
-	.string "There are these items called Pops.\n"
+	.string "There are these items called \n"
+	.string "Camo.\p"
 	.string "Pokémon love to eat them!\p"
 	.string "They change a Pokémon's primary Type\n"
-	.string "based on the flavor of the Pop!$"
+	.string "based on the flavor of the \n"
+	.string "Camo!$"
 
 RustboroCity_PokemonSchool_Text_PokemontCantUseManMadeItems: @ 8214604
 	.string "Pokémon can hold items, but they\n"

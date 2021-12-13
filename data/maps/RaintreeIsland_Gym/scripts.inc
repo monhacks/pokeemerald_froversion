@@ -10,6 +10,12 @@ RaintreeIsland_Gym_EventScript_RemoveIceBlocks:
 	setmetatile 11, 30, 0x20B, 0
 	setmetatile 12, 30, 0x20C, 0
 	setmetatile 13, 30, 0x20D, 0
+	setmetatile 21, 10, 0x22E, 0
+	setmetatile 21, 11, 0x22E, 0
+	setmetatile 9, 2, 0x225, 0
+	setmetatile 9, 3, 0x22D, 0
+	setmetatile 8, 4, 0x22D, 0
+	setmetatile 8, 5, 0x234, 0
 	end
 	
 ///////////////////////////////////////

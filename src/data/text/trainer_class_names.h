@@ -68,4 +68,6 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_MESSENGER] = _("Messenger"),
     [TRAINER_CLASS_BOBBY] = _("Rival"),
     [TRAINER_CLASS_GMP] = _("Maga Boss"),
+    [TRAINER_CLASS_KOSTIW] = _("Black Belt"),
+    [TRAINER_CLASS_MAGEE] = _("Leader"),
 };

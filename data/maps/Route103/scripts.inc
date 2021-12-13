@@ -299,7 +299,7 @@ Route103_EventScript_Isabelle:: @ 81EC78F
 
 Route103_Text_MayRoute103Pokemon: @ 81EC7A6
 	.string "MAY: Let's see… The Pokémon found\n"
-	.string "on ROUTE 103 include…$"
+	.string "on Route 103 include…$"
 
 Route103_Text_MayLetsBattle: @ 81EC7DE
 	.string "Oh, hi, {PLAYER}{KUN}!\p"
@@ -326,7 +326,7 @@ Route103_Text_MayTimeToHeadBack: @ 81EC8AE
 
 Route103_Text_BrendanRoute103Pokemon: @ 81EC989
 	.string "BRENDAN: Okay, so it's this one and\n"
-	.string "that one that live on ROUTE 103…$"
+	.string "that one that live on Route 103…$"
 
 Route103_Text_BrendanLetsBattle: @ 81EC9CE
 	.string "Hey, it's {PLAYER}!\p"
@@ -359,7 +359,7 @@ Route103_Text_ShortcutToOldale: @ 81ECBB5
 	.string "Fufufu, that's useful, isn't it?$"
 
 Route103_Text_RouteSign: @ 81ECC1A
-	.string "ROUTE 103\n"
+	.string "Route 103\n"
 	.string "{DOWN_ARROW} Six Corners$"
 
 //////FROVERSION SCRIPTS///////////

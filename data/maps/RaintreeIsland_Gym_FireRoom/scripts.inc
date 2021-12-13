@@ -8,13 +8,13 @@ RaintreeIsland_Gym_FireRoom_MapScripts::
 EventScript_RaintreeIsland_FireRoom_GymTrainer1::
 	trainerbattle_single TRAINER_LAURA, RaintreeIsland_FireRoom_Text_GymTrainer1Intro, RaintreeIsland_FireRoom_Text_GymTrainer1Defeat, EventScript_RaintreeIsland_FireRoom_GymTrainer1PostBattle
 	msgbox Text_RaintreeIsland_GymTrainer1Defeated, MSGBOX_DEFAULT
-	warpsilent MAP_RAINTREE_ISLAND_GYM, 255, 12, 26
+	warpsilent MAP_RAINTREE_ISLAND_GYM, 255, 12, 28
 	release
 	end
 
 EventScript_RaintreeIsland_FireRoom_GymTrainer1PostBattle:
 	msgbox Text_RaintreeIsland_GymTrainer1Defeated, MSGBOX_DEFAULT
-	warpsilent MAP_RAINTREE_ISLAND_GYM, 255, 12, 26
+	warpsilent MAP_RAINTREE_ISLAND_GYM, 255, 12, 28
 	release
 	end
 

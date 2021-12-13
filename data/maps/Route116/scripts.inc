@@ -468,7 +468,7 @@ Route116_Text_RusturfTunnelSign: @ 81F37B7
 	.string "canceled.”$"
 
 Route116_Text_TunnelersRestHouse: @ 81F380F
-	.string "Tunneler'S Rest House$"
+	.string "Tunneler's Rest House$"
 
 Route116_Text_TrainerTipsBToStopEvolution: @ 81F3825
 	.string "Trainer Tips\p"

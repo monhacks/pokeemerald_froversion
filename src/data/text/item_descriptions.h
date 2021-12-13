@@ -312,12 +312,12 @@ static const u8 sSacredAshDesc[] = _(
 static const u8 sShoalSaltDesc[] = _(
     "Salt obtained from\n"
     "deep inside the\n"
-    "SHOAL CAVE.");
+    "Shoal Cave.");
 
 static const u8 sShoalShellDesc[] = _(
     "A seashell found\n"
     "deep inside the\n"
-    "SHOAL CAVE.");
+    "Shoal Cave.");
 
 static const u8 sRedShardDesc[] = _(
     "A shard from an\n"
@@ -1446,8 +1446,8 @@ static const u8 sSootSackDesc[] = _(
     "volcanic ash.");
 
 static const u8 sBasementKeyDesc[] = _(
-    "The key for NEW\n"
-    "MAUVILLE beneath\n"
+    "The key for New\n"
+    "Wheatfield beneath\n"
     "Wheafield Quarry.");
 
 static const u8 sAcroBikeDesc[] = _(
@@ -1461,9 +1461,9 @@ static const u8 sPokeblockCaseDesc[] = _(
     "a BERRY BLENDER.");
 
 static const u8 sLetterDesc[] = _(
-    "A letter to STEVEN\n"
-    "from the PRESIDENT\n"
-    "of the DEVON CORP.");
+    "A letter to Mike\n"
+    "from the President\n"
+    "of the C. G.");
 
 static const u8 sEonTicketDesc[] = _(
     "The ticket for a\n"
@@ -1492,7 +1492,7 @@ static const u8 sGoGogglesDesc[] = _(
 
 static const u8 sMeteoriteDesc[] = _(
     "A meteorite found\n"
-    "at METEOR FALLS.");
+    "at Meteor Falls.");
 
 static const u8 sRoom1KeyDesc[] = _(
     "A key that opens a\n"

@@ -6546,6 +6546,10 @@ u16 GetBattleBGM(void)
         {
         case TRAINER_CLASS_BOBBY:
             return MUS_FV_BOBBY;
+        case TRAINER_CLASS_KOSTIW:
+            return MUS_FV_KOSTIW;
+        case TRAINER_CLASS_MAGEE:
+            return MUS_FV_MAGEE;
         case TRAINER_CLASS_MARRIOTT:
         case TRAINER_CLASS_GMP:
             return MUS_FV_VS_GMP;

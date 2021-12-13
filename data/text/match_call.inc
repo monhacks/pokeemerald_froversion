@@ -726,7 +726,7 @@ MatchCall_PersonalizedText9:: @ 82AC682
 	.string "Right now, behind you…\l"
 	.string "Wasn't there something…?\p"
 	.string "The power of the Pokémon that\n"
-	.string "sleep here at MT. PYRE…\p"
+	.string "sleep here at Mt. Pyre…\p"
 	.string "It's telling me about you…\p"
 	.string "You should walk away quickly and\n"
 	.string "never once look back…\p"
@@ -2394,7 +2394,7 @@ MatchCall_Text_May7:: @ 2B3E69
 
 MatchCall_Text_May8:: @ 2B3ECD
 	.string "John: {PLAYER}{KUN}, hi.\p"
-	.string "MT. PYRE is a memorial to Pokémon\n"
+	.string "Mt. Pyre is a memorial to Pokémon\n"
 	.string "whose lives have ended.\p"
 	.string "Maybe as a result, it's infested\n"
 	.string "with many Ghost-type Pokémon!$"
@@ -2521,7 +2521,7 @@ MatchCall_Text_Brendan7:: @ 2B47F4
 
 MatchCall_Text_Brendan8:: @ 2B4882
 	.string "Bobby: {PLAYER}!\p"
-	.string "MT. PYRE is a memorial to Pokémon\n"
+	.string "Mt. Pyre is a memorial to Pokémon\n"
 	.string "whose lives have ended.\p"
 	.string "That's probably why it's infested\n"
 	.string "with many Ghost-type Pokémon!$"
@@ -2530,7 +2530,7 @@ MatchCall_Text_Brendan9:: @ 2B4909
 	.string "Bobby: Hey there, {PLAYER}.\p"
 	.string "I was on my way back to the hot\n"
 	.string "spring in G. Island.\p"
-	.string "But around JAGGED PASS, I ran into\n"
+	.string "But around Jagged Pass, I ran into\n"
 	.string "some nasty-looking characters.\p"
 	.string "Those creeps…\n"
 	.string "I think they were TEAM MAGMA.$"
@@ -2539,7 +2539,7 @@ MatchCall_Text_Brendan10:: @ 2B49C4
 	.string "Bobby: Hi, {PLAYER}!\n"
 	.string "Did you catch the news?\p"
 	.string "They say Capt. Stern discovered\n"
-	.string "the SEAFLOOR CAVERN while on his\l"
+	.string "the Seafloor Cavern while on his\l"
 	.string "submarine expedition.$"
 
 MatchCall_Text_Brendan11:: @ 2B4A44
@@ -2662,7 +2662,7 @@ MatchCall_Text_Scott2:: @ 2B5275
 MatchCall_Text_Scott3:: @ 2B5323
 	.string "SCOTT: Hi, hi, {PLAYER}{KUN}!\p"
 	.string "Have you had the chance to climb\n"
-	.string "MT. PYRE?\p"
+	.string "Mt. Pyre?\p"
 	.string "The place is a memorial to Pokémon\n"
 	.string "that have passed away.\p"
 	.string "It's somewhere every Trainer\n"
@@ -2914,7 +2914,7 @@ MatchCall_Text_MrStone6:: @ 82B6526
 
 MatchCall_Text_MrStone7:: @ 82B65BB
 	.string "Hello!\n"
-	.string "This is DEVON CORPORATI…\l"
+	.string "This is C. GORATI…\l"
 	.string "Oh, hello, {PLAYER}!\p"
 	.string "Our President was here a little\n"
 	.string "while ago, but he's gone out.\p"

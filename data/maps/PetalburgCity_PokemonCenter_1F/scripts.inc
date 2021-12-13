@@ -1,4 +1,5 @@
 .set LOCALID_NURSE, 1
+.set LOCALID_MOVE_RELEARNER, 6
 
 PetalburgCity_PokemonCenter_1F_MapScripts:: @ 82079E8
 	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_PokemonCenter_1F_OnTransition

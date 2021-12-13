@@ -1610,7 +1610,7 @@ SootopolisCity_Text_CaveOfOriginPleaseLeave: @ 81E6D77
 	.string "Who might you be?\p"
 	.string "This is the CAVE OF ORIGIN.\p"
 	.string "The spirits of Pokémon, becalmed at\n"
-	.string "MT. PYRE, are said to be revived here.\p"
+	.string "Mt. Pyre, are said to be revived here.\p"
 	.string "Please leave.$"
 
 SootopolisCity_Text_LeadSuperiorTrainerToCave: @ 81E6DFE
@@ -1760,7 +1760,7 @@ SootopolisCity_Text_SoThatsRayquaza: @ 81E78E5
 SootopolisCity_Text_MaxieArchieLeft: @ 81E794B
 	.string "Bobby: It looks like both Zendano and\n"
 	.string "Shawn have gone away somewhere.\p"
-	.string "Perhaps they've gone to MT. PYRE to\n"
+	.string "Perhaps they've gone to Mt. Pyre to\n"
 	.string "return those ORBS…$"
 
 SootopolisCity_Text_HaventYouScaledSkyPillar: @ 81E79C8

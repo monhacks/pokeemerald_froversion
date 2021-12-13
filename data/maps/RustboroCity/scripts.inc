@@ -1418,7 +1418,7 @@ Movement_SummitCity_HikerFacePlayer:
 	step_end
 
 SummitCity_Text_CaveNotSafe:
-	.string "This cave collapsed and we are \lclearning out the rubble. \pIt's not safe right now.$"
+	.string "This cave collapsed and we are \nclearning out the rubble. \pIt's not safe right now.$"
 
 SummitCity_Text_CaveIsSafe:
 	.string "The rubble is all cleared out now.$"

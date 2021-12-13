@@ -726,7 +726,7 @@ PetalburgCity_EventScript_GymBoy:: @ 81DC82E
 
 PetalburgCity_Text_WhereIsWally: @ 81DC837
 	.string "Where has our Wally gone?\p"
-	.string "We have to leave for Verdanturf Town\n"
+	.string "We have to leave for Saunders Settlement\n"
 	.string "very soon…$"
 
 PetalburgCity_Text_AreYouRookieTrainer: @ 81DC881

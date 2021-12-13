@@ -729,7 +729,7 @@
 #define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
 #define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
 #define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
-#define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
+#define FLAG_RECEIVED_WALMORE_POTION  0x2B3 // Received potion in walmore town
 #define FLAG_RECEIVED_FRATT_HOUSE_ITEM                    0x2B4 // Received Special Item after beating challenge
 #define FLAG_MATT_INTRO    0x2B5 // Spoke To Matt at homestead north
 #define FLAG_SNOWVILLAGE_GREAT_BALLS_RECIEVED  0x2B6 // Give Great Balls in Snow Village

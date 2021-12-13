@@ -2945,6 +2945,11 @@ static const u8 sEERIE_SPELLDescription[] = _(
 static const u8 sNotDoneYetDescription[] = _(
     "Not done yet.");
 
+
+static const u8 sMagicMirrorDescription[] = _(
+    "Reflects SpAtk back at\n"
+    "attacker.");
+
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
@@ -3709,7 +3714,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_LANDMINE - 1] = sNotDoneYetDescription,
     [MOVE_SPINNING_PUNCH - 1] = sNotDoneYetDescription,
     [MOVE_ELEMENTAL_BREATH - 1] = sNotDoneYetDescription,
-    [MOVE_MAGIC_MIRROR - 1] = sNotDoneYetDescription,
+    [MOVE_MAGIC_MIRROR - 1] = sMagicMirrorDescription,
     [MOVE_WARRIORS_SACRIFICE - 1] = sNotDoneYetDescription,
     [MOVE_REVIVE - 1] = sNotDoneYetDescription,
     [MOVE_PLASMA_BLADE - 1] = sNotDoneYetDescription,

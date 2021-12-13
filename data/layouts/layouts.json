@@ -315,7 +315,7 @@
       "id": "LAYOUT_ROUTE116",
       "name": "Route116_Layout",
       "width": 100,
-      "height": 20,
+      "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route116/border.bin",

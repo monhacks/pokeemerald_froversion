@@ -1371,7 +1371,7 @@ SlateportCity_Text_LetsRegisterEachOther: @ 81DF12B
 	.string "Scott: All right! I think you're going\n"
 	.string "to become a good friend.\p"
 	.string "So, let's register each other in our\n"
-	.string "PokénavS.\p"
+	.string "Pokénavs.\p"
 	.string "… … … … … …$"
 
 SlateportCity_Text_RegisteredScott: @ 81DF1A6
