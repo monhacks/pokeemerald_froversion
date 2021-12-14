@@ -2045,6 +2045,7 @@ const u16 gMonIconPalettes[][16] =
     INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_5.gbapal"),
     INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_6.gbapal"),
     INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_7.gbapal"),
+    INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_8.gbapal"),
 };
 
 const u16 gTitleScreenBgPalettes[] = INCBIN_U16("graphics/title_screen/pokemon_logo.gbapal",
