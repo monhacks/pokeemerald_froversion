@@ -49,11 +49,11 @@
 #define FLAG_DEFEATED_POISON        0x25 // Beat Poison Room
 #define FLAG_PICKED_STARTER   0x26 // Picked A Starter
 #define FLAG_DEFEATED_NORMAL    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
+#define FLAG_DEFEATED_ICE    0x28 // Unused Flag
+#define FLAG_DEFEATED_WATER    0x29 // Unused Flag
+#define FLAG_DEFEATED_FIRE    0x2A // Unused Flag
+#define FLAG_DEFEATED_ELECTRIC   0x2B // Unused Flag
+#define FLAG_DEFEATED_STEEL    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag

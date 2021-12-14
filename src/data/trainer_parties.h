@@ -13206,5 +13206,217 @@ static const struct TrainerMonItemCustomMoves sParty_ChadPoisonLeader[] = {
     .species = SPECIES_ODDISH,
     .moves = {MOVE_ABSORB, MOVE_ACID, MOVE_NONE, MOVE_NONE},
     },
+
+};
+
+
+static const struct TrainerMonItemCustomMoves sParty_FroNormalLeader[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_SNORLAX,
+    .moves = {MOVE_THUNDER_SHOCK, MOVE_POISON_STING, MOVE_SMOKESCREEN, MOVE_TOXIC_SPIKES},
+    },
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_LEFTOVERS,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_TAUROS,
+    .moves = {MOVE_SLUDGE, MOVE_HARDEN, MOVE_MUD_BOMB, MOVE_NONE},
+    },
+    {
+    .abilityNum = 1,
+    .heldItem = ITEM_POISON_CAMOUFLAGE,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_MEOWTH,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_PIN_MISSILE, MOVE_FURY_ATTACK, MOVE_PROTECT},
+    },
+    {
+    .heldItem = ITEM_LEFTOVERS,
+    .abilityNum = 0,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_SLAKING,
+    .moves = {MOVE_ABSORB, MOVE_ACID, MOVE_NONE, MOVE_NONE},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_SeelIceLeader[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_SNORLAX,
+    .moves = {MOVE_THUNDER_SHOCK, MOVE_POISON_STING, MOVE_SMOKESCREEN, MOVE_TOXIC_SPIKES},
+    },
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_LEFTOVERS,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_TAUROS,
+    .moves = {MOVE_SLUDGE, MOVE_HARDEN, MOVE_MUD_BOMB, MOVE_NONE},
+    },
+    {
+    .abilityNum = 1,
+    .heldItem = ITEM_POISON_CAMOUFLAGE,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_MEOWTH,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_PIN_MISSILE, MOVE_FURY_ATTACK, MOVE_PROTECT},
+    },
+    {
+    .heldItem = ITEM_LEFTOVERS,
+    .abilityNum = 0,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_SLAKING,
+    .moves = {MOVE_ABSORB, MOVE_ACID, MOVE_NONE, MOVE_NONE},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_MarriottWaterLeader[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_SNORLAX,
+    .moves = {MOVE_THUNDER_SHOCK, MOVE_POISON_STING, MOVE_SMOKESCREEN, MOVE_TOXIC_SPIKES},
+    },
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_LEFTOVERS,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_TAUROS,
+    .moves = {MOVE_SLUDGE, MOVE_HARDEN, MOVE_MUD_BOMB, MOVE_NONE},
+    },
+    {
+    .abilityNum = 1,
+    .heldItem = ITEM_POISON_CAMOUFLAGE,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_MEOWTH,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_PIN_MISSILE, MOVE_FURY_ATTACK, MOVE_PROTECT},
+    },
+    {
+    .heldItem = ITEM_LEFTOVERS,
+    .abilityNum = 0,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_SLAKING,
+    .moves = {MOVE_ABSORB, MOVE_ACID, MOVE_NONE, MOVE_NONE},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_WesFireLeader[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_VAYPING,
+    .moves = {MOVE_THUNDER_SHOCK, MOVE_POISON_STING, MOVE_SMOKESCREEN, MOVE_TOXIC_SPIKES},
+    },
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_LEFTOVERS,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_GRIMER,
+    .moves = {MOVE_SLUDGE, MOVE_HARDEN, MOVE_MUD_BOMB, MOVE_NONE},
+    },
+    {
+    .abilityNum = 1,
+    .heldItem = ITEM_POISON_CAMOUFLAGE,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_CHAD_BUG_1,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_PIN_MISSILE, MOVE_FURY_ATTACK, MOVE_PROTECT},
+    },
+    {
+    .heldItem = ITEM_LEFTOVERS,
+    .abilityNum = 0,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_ODDISH,
+    .moves = {MOVE_ABSORB, MOVE_ACID, MOVE_NONE, MOVE_NONE},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_MarkElectricLeader[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_SNORLAX,
+    .moves = {MOVE_THUNDER_SHOCK, MOVE_POISON_STING, MOVE_SMOKESCREEN, MOVE_TOXIC_SPIKES},
+    },
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_LEFTOVERS,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_TAUROS,
+    .moves = {MOVE_SLUDGE, MOVE_HARDEN, MOVE_MUD_BOMB, MOVE_NONE},
+    },
+    {
+    .abilityNum = 1,
+    .heldItem = ITEM_POISON_CAMOUFLAGE,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_MEOWTH,
+    .moves = {MOVE_FOCUS_ENERGY, MOVE_PIN_MISSILE, MOVE_FURY_ATTACK, MOVE_PROTECT},
+    },
+    {
+    .heldItem = ITEM_LEFTOVERS,
+    .abilityNum = 0,
+    .iv = 255,
+    .lvl = 20,
+    .species = SPECIES_SLAKING,
+    .moves = {MOVE_ABSORB, MOVE_ACID, MOVE_NONE, MOVE_NONE},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_BobbySteelLeader[] = {
+    {
+    .abilityNum = 0,
+    .heldItem = ITEM_FLAME_ORB,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_BARBELLION,
+    .moves = {MOVE_BULK_UP, MOVE_FLARE_BLITZ, MOVE_ROAR, MOVE_SHADOW_CLAW},
+    },
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_LIFE_ORB,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_ALAKAZAM,
+    .moves = {MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_DARK_PULSE, MOVE_MAGIC_MIRROR},
+    },
+    {
+    .abilityNum = 1,
+    .heldItem = ITEM_LEFTOVERS,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_STEELIX,
+    .moves = {MOVE_EARTHQUAKE, MOVE_CURSE, MOVE_TOXIC, MOVE_RECOVER},
+    },
+    {
+    .heldItem = ITEM_LIFE_ORB,
+    .abilityNum = 0,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_SCIZOR,
+    .moves = {MOVE_U_TURN, MOVE_OVERHEAT, MOVE_AGILITY, MOVE_BATON_PASS},
+    },
 };
 

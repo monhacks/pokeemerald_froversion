@@ -5632,3 +5632,22 @@ static void ClearSearchParameterBoxText(void)
 {
     ClearSearchMenuRect(144, 8, 96, 96);
 }
+
+void CheckPartyForType(void)
+{
+    int i;
+    u32 type = gSpecialVar_0x8000;
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        u32 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2, NULL);
+        if (species != SPECIES_NONE && species != SPECIES_EGG)
+        {
+            if (gBaseStats[species].type1 != type && gBaseStats[species].type2 != type)
+            {
+                gSpecialVar_Result = FALSE;
+                return;
+            }
+        }
+    }
+    gSpecialVar_Result = TRUE;
+}

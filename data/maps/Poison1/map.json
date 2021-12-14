@@ -23,6 +23,34 @@
       "elevation": 0,
       "dest_map": "MAP_HUB_ROOM",
       "dest_warp_id": 1
+    },
+    {
+      "x": 46,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_HUB_ROOM",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 47,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_HUB_ROOM",
+      "dest_warp_id": 1
+    },
+    {
+      "x": 12,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_ICEB",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 13,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_ICEB",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

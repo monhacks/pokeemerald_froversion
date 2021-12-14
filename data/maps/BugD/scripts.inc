@@ -4,9 +4,13 @@ BugD_MapScripts::
 
 EventScript_FroNormalLeader::
 	lock
+	setvar VAR_0x8000, TYPE_NORMAL
+	callnative CheckPartyForType
+	compare VAR_RESULT, FALSE
+	goto_if_eq NikeVersionEventScript_YouHavePokemonThatCantBeUsed
 	setflag FLAG_BATTLE_ROULETTE
 	setflag FLAG_SYS_NO_BAG_USE
-	trainerbattle_single TRAINER_CHAD_POISON_LEADER, FroNormalLeader_IntroText, FroNormalLeader_DefeatText, FroNormalLeader_DefeatedScript
+	trainerbattle_single TRAINER_FRO_NORMAL_LEADER, FroNormalLeader_IntroText, FroNormalLeader_DefeatText, FroNormalLeader_DefeatedScript
 	clearflag FLAG_BATTLE_ROULETTE
 	clearflag FLAG_SYS_NO_BAG_USE
 	msgbox FroNormalLeader_DefeatedText, MSGBOX_DEFAULT

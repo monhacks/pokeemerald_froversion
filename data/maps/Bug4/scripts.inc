@@ -16,7 +16,7 @@ EventScript_BugRoom4_CantAdvance::
 	applymovement LOCALID_NORMALBOSS1, Common_Movement_FacePlayer
 	applymovement LOCALID_NORMALBOSS1, Common_Movement_ExclamationMark
 	waitmovement LOCALID_NORMALBOSS1
-	trainerbattle_single TRAINER_MELINDA, Bug4_Text_BossIntro, RusturfTunnel_Text_GruntDefeat, NormalBossSetVar
+	trainerbattle_single TRAINER_MELINA, Bug4_Text_BossIntro, RusturfTunnel_Text_GruntDefeat, NormalBossSetVar
 	release
 end
 

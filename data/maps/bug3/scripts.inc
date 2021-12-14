@@ -4,6 +4,10 @@ bug3_MapScripts::
 
 EventScript_ChadPoisonLeader::
 	lock
+	setvar VAR_0x8000, TYPE_POISON
+	callnative CheckPartyForType
+	compare VAR_RESULT, FALSE
+	goto_if_eq NikeVersionEventScript_YouHavePokemonThatCantBeUsed
 	setflag FLAG_BATTLE_POISON_FIELD
 	setflag FLAG_SYS_NO_BAG_USE
 	trainerbattle_single TRAINER_CHAD_POISON_LEADER, ChadPoisonLeader_IntroText, ChadPoisonLeader_DefeatText, ChadPoisonLeader_DefeatedScript
@@ -44,7 +48,10 @@ EventScript_BugRoom3_TrainerBattle2::
 	release
 end
 
-
+NikeVersionEventScript_YouHavePokemonThatCantBeUsed:
+	msgbox NikeVersion_Text_PokemonCantBeUsed, MSGBOX_DEFAULT
+	release
+end
 
 ///////////////////Texts////////////////////////
 ///////////////////////////////////////////////
@@ -67,4 +74,10 @@ BugRoom3_Trainer2_Defeat:
 BugRoom3_Trainer2_Defeated:
 	.string "Post battle message 2.$"
 
-
+NikeVersion_Text_PokemonCantBeUsed:
+	.string "I'm sorry Nike, but you\n"
+	.string "can only use Pokémon that\l"
+	.string "you've caught in this room\l"
+	.string "for our battle.\p"
+	.string "Come back when all your Pokémon\n"
+	.string "are the correct type!$"

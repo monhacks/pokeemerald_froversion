@@ -866,12 +866,18 @@
 #define TRAINER_JOHN_CHAMPIONS_HALL_MUDKIP  862
 #define TRAINER_JOHN_CHAMPIONS_HALL_TORCHIC 863
 #define TRAINER_CHAD_POISON_LEADER          864
+#define TRAINER_FRO_NORMAL_LEADER           865
+#define TRAINER_SEEL_ICE_LEADER             866
+#define TRAINER_MARRIOTT_WATER_LEADER       867
+#define TRAINER_WES_FIRE_LEADER             868 
+#define TRAINER_MARK_ELECTRIC_LEADER          869
+#define TRAINER_BOBBY_STEEL_LEADER          870
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      865
+#define TRAINERS_COUNT                      871
 #define MAX_TRAINERS_COUNT                  1000
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

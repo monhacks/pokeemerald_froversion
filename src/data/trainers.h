@@ -12158,4 +12158,89 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_ChadPoisonLeader),
         .party = {.ItemCustomMoves = sParty_ChadPoisonLeader},
     },
+
+    [TRAINER_WES_FIRE_LEADER] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_CHADANDMARK,
+        .trainerName = _("Chad"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_WesFireLeader),
+        .party = {.ItemCustomMoves = sParty_WesFireLeader},
+    },
+
+    [TRAINER_FRO_NORMAL_LEADER] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_CHADANDMARK,
+        .trainerName = _("Chad"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_FroNormalLeader),
+        .party = {.ItemCustomMoves = sParty_FroNormalLeader},
+    },
+
+    [TRAINER_SEEL_ICE_LEADER] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_CHADANDMARK,
+        .trainerName = _("Chad"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_SeelIceLeader),
+        .party = {.ItemCustomMoves = sParty_SeelIceLeader},
+    },
+
+    [TRAINER_MARRIOTT_WATER_LEADER] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_CHADANDMARK,
+        .trainerName = _("Chad"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_MarriottWaterLeader),
+        .party = {.ItemCustomMoves = sParty_MarriottWaterLeader},
+    },
+
+    [TRAINER_MARK_ELECTRIC_LEADER] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_CHADANDMARK,
+        .trainerName = _("Chad"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_MarkElectricLeader),
+        .party = {.ItemCustomMoves = sParty_MarkElectricLeader},
+    },
+
+    [TRAINER_BOBBY_STEEL_LEADER] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_BOBBY,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_WASULA,
+        .trainerName = _("Bobby"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_BobbySteelLeader),
+        .party = {.ItemCustomMoves = sParty_BobbySteelLeader},
+    },
+
 };
