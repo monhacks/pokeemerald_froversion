@@ -1007,6 +1007,22 @@ static const struct AbilitySetter sBillfaloAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sSablizzardAbilitySet[] = 
+{
+    {ABILITY_DEFEATIST, 1},
+    {ABILITY_ICE_SCALES, 25},
+    {ABILITY_SLUSH_RUSH, 42},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sPassimianAbilitySet[] = 
+{
+    {ABILITY_RECEIVER, 1},
+    {ABILITY_DEFIANT, 28},
+    {ABILITY_CONTRARY, 40},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter sContraramAbilitySet[] = 
 {
     {ABILITY_FLASH_FIRE, 1},
@@ -1296,6 +1312,8 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_HAAGLET] = sHaagletAbilitySet,
     [SPECIES_WARTHAAG] = sHaagletAbilitySet,
     [SPECIES_DRACASTER] = sDracasterAbilitySet,
+    [SPECIES_PASSIMIAN] = sPassimianAbilitySet,
+    [SPECIES_SABLIZZARD] = sSablizzardAbilitySet,
     
 
 

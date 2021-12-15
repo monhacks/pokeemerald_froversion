@@ -1,6 +1,16 @@
 .set LOCALID_NURSE, 1
 .set LOCALID_MOVE_RELEARNER, 6
 
+PetalBurgCity_PokemonCenter_EventScript_MoveRelearner:: @ 8201383
+	lockall
+	applymovement LOCALID_MOVE_RELEARNER, Common_Movement_FacePlayer
+	waitmovement 0
+	goto_if_set FLAG_TEMP_1, FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
+	msgbox FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor, MSGBOX_DEFAULT
+	setflag FLAG_TEMP_1
+	goto FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
+	end
+
 PetalburgCity_PokemonCenter_1F_MapScripts:: @ 82079E8
 	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume

@@ -77,8 +77,9 @@ WalmoreTown_Mart_EventScript_PokeBallsInStock::
 WalmoreTown_Mart_EventScript_Boy::
 	lock
 	goto_if_set FLAG_RECEIVED_WALMORE_POTION, WalmoreTown_Mart_EventScript_AlreadyReceivedPotion
-	giveitem ITEM_POTION
 	msgbox WalmoreTown_Mart_Text_RestoreHPWithPotion, MSGBOX_NPC
+	giveitem ITEM_POTION
+	setflag FLAG_RECEIVED_WALMORE_POTION
 	end
 
 WalmoreTown_Mart_EventScript_AlreadyReceivedPotion:

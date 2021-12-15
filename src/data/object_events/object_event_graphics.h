@@ -425,3 +425,6 @@ const u16 gObjectEventPal_Fro[] = INCBIN_U16("graphics/object_events/palettes/fr
 const u32 gObjectEventPic_AntifaGrunt[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/antifa_grunt.4bpp");
 const u16 gObjectEventPal_AntifaGrunt[] = INCBIN_U16("graphics/object_events/palettes/antifa_grunt.gbapal");
 const u16 gObjectEventPal_RotatingPuzzle[] = INCBIN_U16("graphics/object_events/palettes/rotating_gate.gbapal");
+
+const u32 gObjectEventPic_Isiah[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/isiah.4bpp");
+const u16 gObjectEventPal_Isiah[] = INCBIN_U16("graphics/object_events/palettes/isiah.gbapal");

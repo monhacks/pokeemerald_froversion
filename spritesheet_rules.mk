@@ -785,6 +785,8 @@ $(OBJEVENTGFXDIR)/people/froversion_trainers/ktrippy.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/froversion_trainers/antifa_grunt.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/froversion_trainers/isiah.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 
 
