@@ -3772,7 +3772,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona1[] = {
     .lvl = 44,
     .species = SPECIES_PHOTOGEIST,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_DARK_PULSE, MOVE_SHADOW_BALL, MOVE_NASTY_PLOT, MOVE_LIGHT_SCREEN},
+    .moves = {MOVE_DARK_PULSE, MOVE_SHADOW_BALL, MOVE_NASTY_PLOT, MOVE_REVIVE},
     .evs = {252, 0, 252, 0, 0, 4},
     },
     {
