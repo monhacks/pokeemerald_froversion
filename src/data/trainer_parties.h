@@ -3571,7 +3571,7 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
 
 static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     {
-    .iv = 75,
+    .iv = 45,
     .lvl = 14,
     .species = SPECIES_CHAD_BUG_1,
     .heldItem = ITEM_POISON_CAMOUFLAGE,
@@ -3579,7 +3579,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     .abilityNum = 0
     },
     {
-    .iv = 75,
+    .iv = 45,
     .lvl = 13,
     .species = SPECIES_BEEDRILL,
     .heldItem = ITEM_ORAN_BERRY,
@@ -3587,7 +3587,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     .abilityNum = 1
     },
     {
-    .iv = 75,
+    .iv = 45,
     .lvl = 14,
     .species = SPECIES_VAYPING,
     .heldItem = ITEM_ORAN_BERRY,
@@ -3598,11 +3598,11 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
 
 static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     {
-    .iv = 125,
+    .iv = 175,
     .lvl = 19,
     .species = SPECIES_KABOWL,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_FLAME_WHEEL, MOVE_MORNING_SUN, MOVE_TAKE_DOWN, MOVE_NONE},
+    .moves = {MOVE_EMBER, MOVE_QUICK_ATTACK, MOVE_PECK, MOVE_DOUBLE_TEAM},
     .abilityNum = 1
     },
     {
@@ -3773,6 +3773,15 @@ static const struct TrainerMonItemCustomMoves sParty_Winona1[] = {
     .species = SPECIES_PHOTOGEIST,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_DARK_PULSE, MOVE_SHADOW_BALL, MOVE_NASTY_PLOT, MOVE_LIGHT_SCREEN},
+    .evs = {252, 0, 252, 0, 0, 4},
+    },
+    {
+    .abilityNum = 0,
+    .iv = 255,
+    .lvl = 44,
+    .species = SPECIES_FURRET,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_TAKE_DOWN, MOVE_CLOSE_COMBAT, MOVE_BULK_UP, MOVE_DOUBLE_TEAM},
     .evs = {252, 0, 252, 0, 0, 4},
     }
 };

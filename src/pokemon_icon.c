@@ -548,7 +548,7 @@ const u8 *const gMonIconTable[] =
     [SPECIES_FILLER_39] = gMonIcon_Filler_39,
     [SPECIES_FILLER_40] = gMonIcon_Filler_40,
     [SPECIES_FILLER_41] = gMonIcon_Filler_41,
-    [SPECIES_FILLER_42] = gMonIcon_Filler_42,
+    [SPECIES_SPIRETT] = gMonIcon_Spirett,
 };
 
 const u8 gMonIconPaletteIndices[] =
@@ -1077,7 +1077,7 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_FILLER_39] = 0,
     [SPECIES_FILLER_40] = 0,
     [SPECIES_FILLER_41] = 0,
-    [SPECIES_FILLER_42] = 0,
+    [SPECIES_SPIRETT] = 0,
 
 };
 

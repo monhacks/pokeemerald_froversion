@@ -496,5 +496,5 @@ const struct LevelUpMove *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_FILLER_39] = sFiller_39LevelUpLearnset,
     [SPECIES_FILLER_40] = sFiller_40LevelUpLearnset,
     [SPECIES_FILLER_41] = sFiller_41LevelUpLearnset,
-    [SPECIES_FILLER_42] = sFiller_42LevelUpLearnset,
+    [SPECIES_SPIRETT] = sSpirettLevelUpLearnset,
 };

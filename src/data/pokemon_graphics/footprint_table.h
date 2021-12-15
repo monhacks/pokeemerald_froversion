@@ -495,6 +495,6 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_FILLER_39] = gMonFootprint_Filler_39,
     [SPECIES_FILLER_40] = gMonFootprint_Filler_40,
     [SPECIES_FILLER_41] = gMonFootprint_Filler_41,
-    [SPECIES_FILLER_42] = gMonFootprint_Filler_42,
+    [SPECIES_SPIRETT] = gMonFootprint_Spirett,
     [SPECIES_EGG] = gMonFootprint_Bulbasaur,
 };

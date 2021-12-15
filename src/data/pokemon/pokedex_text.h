@@ -2735,7 +2735,7 @@ const u8 gFiller_41PokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_42PokedexText[] = _(
+const u8 gSpirettPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"

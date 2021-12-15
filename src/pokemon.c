@@ -595,7 +595,7 @@ const u16 gSpeciesToHoennPokedexNum[] = // Assigns all species to the Hoenn Dex 
     SPECIES_TO_HOENN(FILLER_39),
     SPECIES_TO_HOENN(FILLER_40),
     SPECIES_TO_HOENN(FILLER_41),
-    SPECIES_TO_HOENN(FILLER_42),
+    SPECIES_TO_HOENN(SPIRETT),
 };
 
 const u16 gSpeciesToNationalPokedexNum[] = // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -1095,7 +1095,7 @@ const u16 gSpeciesToNationalPokedexNum[] = // Assigns all species to the Nationa
     SPECIES_TO_NATIONAL(FILLER_39),
     SPECIES_TO_NATIONAL(FILLER_40),
     SPECIES_TO_NATIONAL(FILLER_41),
-    SPECIES_TO_NATIONAL(FILLER_42),
+    SPECIES_TO_NATIONAL(SPIRETT),
 };
 
 const u16 gHoennToNationalOrder[] = // Assigns Hoenn Dex Pokémon (Using National Dex Index)
@@ -1595,7 +1595,7 @@ HOENN_TO_NATIONAL(FILLER_38),
 HOENN_TO_NATIONAL(FILLER_39),
 HOENN_TO_NATIONAL(FILLER_40),
 HOENN_TO_NATIONAL(FILLER_41),
-HOENN_TO_NATIONAL(FILLER_42),
+HOENN_TO_NATIONAL(SPIRETT),
 };
 
 const struct SpindaSpot gSpindaSpotGraphics[] =
@@ -2148,7 +2148,7 @@ static const u8 sMonFrontAnimIdsTable[] =
 [SPECIES_FILLER_39 - 1] = 0x09,
 [SPECIES_FILLER_40 - 1] = 0x09,
 [SPECIES_FILLER_41 - 1] = 0x09,
-[SPECIES_FILLER_42 - 1] = 0x09,
+[SPECIES_SPIRETT - 1] = 0x09,
 };
 
 static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =

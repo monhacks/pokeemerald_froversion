@@ -218,5 +218,5 @@ const u16 gSpeciesIdToCryId[] =
     [SPECIES_FILLER_39 - 277] = 468,
     [SPECIES_FILLER_40 - 277] = 469,
     [SPECIES_FILLER_41 - 277] = 470,
-    [SPECIES_FILLER_42 - 277] = 471,
+    [SPECIES_SPIRETT - 277] = 471,
 };

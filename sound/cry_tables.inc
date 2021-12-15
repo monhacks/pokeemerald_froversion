@@ -472,7 +472,7 @@ cry Cry_Filler_38
 cry Cry_Filler_39
 cry Cry_Filler_40
 cry Cry_Filler_41
-cry Cry_Filler_42
+cry Cry_Spirett
 
 	.align 2
 gCryTable2:: @ 869EF24
@@ -948,5 +948,5 @@ cry2 Cry_Filler_38
 cry2 Cry_Filler_39
 cry2 Cry_Filler_40
 cry2 Cry_Filler_41
-cry2 Cry_Filler_42
+cry2 Cry_Spirett
 

@@ -547,12 +547,12 @@
               {
                 "min_level": 4,
                 "max_level": 6,
-                "species": "SPECIES_POLIWAG"
+                "species": "SPECIES_FRENTOAD"
               },
               {
-                "min_level": 7,
+                "min_level": 3,
                 "max_level": 7,
-                "species": "SPECIES_MARILL"
+                "species": "SPECIES_FRENTOAD"
               },
               {
                 "min_level": 6,

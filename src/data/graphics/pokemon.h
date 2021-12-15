@@ -2908,7 +2908,7 @@ const u32 gMonStillFrontPic_Filler_38[] = INCBIN_U32("graphics/pokemon/filler_38
 const u32 gMonStillFrontPic_Filler_39[] = INCBIN_U32("graphics/pokemon/filler_39/front.4bpp.lz");
 const u32 gMonStillFrontPic_Filler_40[] = INCBIN_U32("graphics/pokemon/filler_40/front.4bpp.lz");
 const u32 gMonStillFrontPic_Filler_41[] = INCBIN_U32("graphics/pokemon/filler_41/front.4bpp.lz");
-const u32 gMonStillFrontPic_Filler_42[] = INCBIN_U32("graphics/pokemon/filler_42/front.4bpp.lz");
+const u32 gMonStillFrontPic_Spirett[] = INCBIN_U32("graphics/pokemon/spirett/front.4bpp.lz");
 
 const u32 gMonPalette_Rascaloot[] = INCBIN_U32("graphics/pokemon/rascaloot/normal.gbapal.lz");
 const u32 gMonPalette_Bandithug[] = INCBIN_U32("graphics/pokemon/bandithug/normal.gbapal.lz");
@@ -2993,7 +2993,7 @@ const u32 gMonPalette_Filler_38[] = INCBIN_U32("graphics/pokemon/filler_38/norma
 const u32 gMonPalette_Filler_39[] = INCBIN_U32("graphics/pokemon/filler_39/normal.gbapal.lz");
 const u32 gMonPalette_Filler_40[] = INCBIN_U32("graphics/pokemon/filler_40/normal.gbapal.lz");
 const u32 gMonPalette_Filler_41[] = INCBIN_U32("graphics/pokemon/filler_41/normal.gbapal.lz");
-const u32 gMonPalette_Filler_42[] = INCBIN_U32("graphics/pokemon/filler_42/normal.gbapal.lz");
+const u32 gMonPalette_Spirett[] = INCBIN_U32("graphics/pokemon/spirett/normal.gbapal.lz");
 
 const u32 gMonBackPic_Rascaloot[] = INCBIN_U32("graphics/pokemon/rascaloot/back.4bpp.lz");
 const u32 gMonBackPic_Bandithug[] = INCBIN_U32("graphics/pokemon/bandithug/back.4bpp.lz");
@@ -3078,7 +3078,7 @@ const u32 gMonBackPic_Filler_38[] = INCBIN_U32("graphics/pokemon/filler_38/back.
 const u32 gMonBackPic_Filler_39[] = INCBIN_U32("graphics/pokemon/filler_39/back.4bpp.lz");
 const u32 gMonBackPic_Filler_40[] = INCBIN_U32("graphics/pokemon/filler_40/back.4bpp.lz");
 const u32 gMonBackPic_Filler_41[] = INCBIN_U32("graphics/pokemon/filler_41/back.4bpp.lz");
-const u32 gMonBackPic_Filler_42[] = INCBIN_U32("graphics/pokemon/filler_42/back.4bpp.lz");
+const u32 gMonBackPic_Spirett[] = INCBIN_U32("graphics/pokemon/spirett/back.4bpp.lz");
 
 const u32 gMonShinyPalette_Rascaloot[] = INCBIN_U32("graphics/pokemon/rascaloot/shiny.gbapal.lz");
 const u32 gMonShinyPalette_Bandithug[] = INCBIN_U32("graphics/pokemon/bandithug/shiny.gbapal.lz");
@@ -3163,7 +3163,7 @@ const u32 gMonShinyPalette_Filler_38[] = INCBIN_U32("graphics/pokemon/filler_38/
 const u32 gMonShinyPalette_Filler_39[] = INCBIN_U32("graphics/pokemon/filler_39/shiny.gbapal.lz");
 const u32 gMonShinyPalette_Filler_40[] = INCBIN_U32("graphics/pokemon/filler_40/shiny.gbapal.lz");
 const u32 gMonShinyPalette_Filler_41[] = INCBIN_U32("graphics/pokemon/filler_41/shiny.gbapal.lz");
-const u32 gMonShinyPalette_Filler_42[] = INCBIN_U32("graphics/pokemon/filler_42/shiny.gbapal.lz");
+const u32 gMonShinyPalette_Spirett[] = INCBIN_U32("graphics/pokemon/spirett/shiny.gbapal.lz");
 
 const u8 gMonIcon_Rascaloot[] = INCBIN_U8("graphics/pokemon/rascaloot/icon.4bpp");
 const u8 gMonIcon_Bandithug[] = INCBIN_U8("graphics/pokemon/bandithug/icon.4bpp");
@@ -3248,7 +3248,7 @@ const u8 gMonIcon_Filler_38[] = INCBIN_U8("graphics/pokemon/filler_38/icon.4bpp"
 const u8 gMonIcon_Filler_39[] = INCBIN_U8("graphics/pokemon/filler_39/icon.4bpp");
 const u8 gMonIcon_Filler_40[] = INCBIN_U8("graphics/pokemon/filler_40/icon.4bpp");
 const u8 gMonIcon_Filler_41[] = INCBIN_U8("graphics/pokemon/filler_41/icon.4bpp");
-const u8 gMonIcon_Filler_42[] = INCBIN_U8("graphics/pokemon/filler_42/icon.4bpp");
+const u8 gMonIcon_Spirett[] = INCBIN_U8("graphics/pokemon/spirett/icon.4bpp");
 
 const u8 gMonFootprint_Rascaloot[] = INCBIN_U8("graphics/pokemon/rascaloot/footprint.1bpp");
 const u8 gMonFootprint_Bandithug[] = INCBIN_U8("graphics/pokemon/bandithug/footprint.1bpp");
@@ -3333,4 +3333,4 @@ const u8 gMonFootprint_Filler_38[] = INCBIN_U8("graphics/pokemon/filler_38/footp
 const u8 gMonFootprint_Filler_39[] = INCBIN_U8("graphics/pokemon/filler_39/footprint.1bpp");
 const u8 gMonFootprint_Filler_40[] = INCBIN_U8("graphics/pokemon/filler_40/footprint.1bpp");
 const u8 gMonFootprint_Filler_41[] = INCBIN_U8("graphics/pokemon/filler_41/footprint.1bpp");
-const u8 gMonFootprint_Filler_42[] = INCBIN_U8("graphics/pokemon/filler_42/footprint.1bpp");
+const u8 gMonFootprint_Spirett[] = INCBIN_U8("graphics/pokemon/spirett/footprint.1bpp");

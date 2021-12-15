@@ -511,5 +511,5 @@ const u32 gMonFrontPic_Filler_38[] = INCBIN_U32("graphics/pokemon/filler_38/anim
 const u32 gMonFrontPic_Filler_39[] = INCBIN_U32("graphics/pokemon/filler_39/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Filler_40[] = INCBIN_U32("graphics/pokemon/filler_40/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Filler_41[] = INCBIN_U32("graphics/pokemon/filler_41/anim_front.4bpp.lz");
-const u32 gMonFrontPic_Filler_42[] = INCBIN_U32("graphics/pokemon/filler_42/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Spirett[] = INCBIN_U32("graphics/pokemon/spirett/anim_front.4bpp.lz");
 

@@ -5307,7 +5307,7 @@ static const union AnimCmd sAnim_FILLER_41_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_42_1[] = 
+static const union AnimCmd sAnim_SPIRETT_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
@@ -7794,9 +7794,9 @@ static const union AnimCmd *const sAnims_FILLER_41[] ={
     sAnim_GeneralFrame0,
     sAnim_FILLER_41_1,
 };
-static const union AnimCmd *const sAnims_FILLER_42[] ={
+static const union AnimCmd *const sAnims_SPIRETT[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_42_1,
+    sAnim_SPIRETT_1,
 };
 
 //////////////////////////////////////
@@ -8335,7 +8335,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(FILLER_39),
     ANIM_CMD(FILLER_40),
     ANIM_CMD(FILLER_41),
-    ANIM_CMD(FILLER_42),
+    ANIM_CMD(SPIRETT),
 };
 
 #undef ANIM_CMD

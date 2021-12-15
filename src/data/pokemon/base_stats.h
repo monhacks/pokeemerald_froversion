@@ -15015,7 +15015,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_42] =
+[SPECIES_SPIRETT] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,

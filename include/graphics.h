@@ -2985,7 +2985,7 @@ extern const u32 gMonFrontPic_Filler_38[];
 extern const u32 gMonFrontPic_Filler_39[];
 extern const u32 gMonFrontPic_Filler_40[];
 extern const u32 gMonFrontPic_Filler_41[];
-extern const u32 gMonFrontPic_Filler_42[];
+extern const u32 gMonFrontPic_Spirett[];
 
 extern const u32 gMonPalette_Rascaloot[];
 extern const u32 gMonPalette_Bandithug[];
@@ -3070,7 +3070,7 @@ extern const u32 gMonPalette_Filler_38[];
 extern const u32 gMonPalette_Filler_39[];
 extern const u32 gMonPalette_Filler_40[];
 extern const u32 gMonPalette_Filler_41[];
-extern const u32 gMonPalette_Filler_42[];
+extern const u32 gMonPalette_Spirett[];
 
 extern const u32 gMonBackPic_Rascaloot[];
 extern const u32 gMonBackPic_Bandithug[];
@@ -3155,7 +3155,7 @@ extern const u32 gMonBackPic_Filler_38[];
 extern const u32 gMonBackPic_Filler_39[];
 extern const u32 gMonBackPic_Filler_40[];
 extern const u32 gMonBackPic_Filler_41[];
-extern const u32 gMonBackPic_Filler_42[];
+extern const u32 gMonBackPic_Spirett[];
 
 extern const u32 gMonShinyPalette_Rascaloot[];
 extern const u32 gMonShinyPalette_Bandithug[];
@@ -3240,7 +3240,7 @@ extern const u32 gMonShinyPalette_Filler_38[];
 extern const u32 gMonShinyPalette_Filler_39[];
 extern const u32 gMonShinyPalette_Filler_40[];
 extern const u32 gMonShinyPalette_Filler_41[];
-extern const u32 gMonShinyPalette_Filler_42[];
+extern const u32 gMonShinyPalette_Spirett[];
 
 extern const u32 gMonStillFrontPic_Rascaloot[];
 extern const u32 gMonStillFrontPic_Bandithug[];
@@ -3325,7 +3325,7 @@ extern const u32 gMonStillFrontPic_Filler_38[];
 extern const u32 gMonStillFrontPic_Filler_39[];
 extern const u32 gMonStillFrontPic_Filler_40[];
 extern const u32 gMonStillFrontPic_Filler_41[];
-extern const u32 gMonStillFrontPic_Filler_42[];
+extern const u32 gMonStillFrontPic_Spirett[];
 
 extern const u8 gMonFootprint_Rascaloot[];
 extern const u8 gMonFootprint_Bandithug[];
@@ -3410,7 +3410,7 @@ extern const u8 gMonFootprint_Filler_38[];
 extern const u8 gMonFootprint_Filler_39[];
 extern const u8 gMonFootprint_Filler_40[];
 extern const u8 gMonFootprint_Filler_41[];
-extern const u8 gMonFootprint_Filler_42[];
+extern const u8 gMonFootprint_Spirett[];
 
 extern const u8 gMonIcon_Rascaloot[];
 extern const u8 gMonIcon_Bandithug[];
@@ -3495,7 +3495,7 @@ extern const u8 gMonIcon_Filler_38[];
 extern const u8 gMonIcon_Filler_39[];
 extern const u8 gMonIcon_Filler_40[];
 extern const u8 gMonIcon_Filler_41[];
-extern const u8 gMonIcon_Filler_42[];
+extern const u8 gMonIcon_Spirett[];
 
 // trainer sprites
 extern const u32 gTrainerFrontPic_Hiker[];
