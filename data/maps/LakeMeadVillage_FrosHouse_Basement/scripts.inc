@@ -38,23 +38,21 @@ LakeMeadVillage_FrosHouse_Basement_WouldYouLikeToSleep::
 	delay 180
 	delay 180
 	delay 180
-	setvar VAR_0x8000, MUGSHOT_BOBBY
+	setvar VAR_0x8000, MUGSHOT_TRUMP_DREAM
 	callnative DrawMugshot
 	msgbox Text_LakeMeadVillageFrosHouseBasement_Dream1, MSGBOX_AUTOCLOSE
 	delay 180
-	setvar VAR_0x8000, MUGSHOT_AMNEET
+	setvar VAR_0x8000, MUGSHOT_PIKACHU_DREAM
 	callnative DrawMugshot
 	msgbox Text_LakeMeadVillageFrosHouseBasement_Dream2, MSGBOX_AUTOCLOSE
 	delay 180
-	setvar VAR_0x8000, MUGSHOT_BOBBY
-	callnative DrawMugshot
 	msgbox Text_LakeMeadVillageFrosHouseBasement_Dream3, MSGBOX_AUTOCLOSE
 	delay 180
-	setvar VAR_0x8000, MUGSHOT_AMNEET
+	setvar VAR_0x8000, MUGSHOT_BATTLE_DREAM
 	callnative DrawMugshot
 	msgbox Text_LakeMeadVillageFrosHouseBasement_Dream4, MSGBOX_AUTOCLOSE
 	delay 180
-	setvar VAR_0x8000, MUGSHOT_BOBBY
+	setvar VAR_0x8000, MUGSHOT_FRO_TRAINER
 	callnative DrawMugshot
 	msgbox Text_LakeMeadVillageFrosHouseBasement_Dream5, MSGBOX_AUTOCLOSE
 	delay 180
