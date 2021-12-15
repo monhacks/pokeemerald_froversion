@@ -428,3 +428,7 @@ const u16 gObjectEventPal_RotatingPuzzle[] = INCBIN_U16("graphics/object_events/
 
 const u32 gObjectEventPic_Isiah[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/isiah.4bpp");
 const u16 gObjectEventPal_Isiah[] = INCBIN_U16("graphics/object_events/palettes/isiah.gbapal");
+
+
+const u32 gObjectEventPic_MikeLynch[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/mikelynch.4bpp");
+const u16 gObjectEventPal_MikeLynch[] = INCBIN_U16("graphics/object_events/palettes/mikelynch.gbapal");

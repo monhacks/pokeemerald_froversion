@@ -32,9 +32,35 @@ LakeMeadVillage_FrosHouse_Basement_WouldYouLikeToSleep::
 	goto_if_eq LakeMeadVillage_FrosHouse_Basement_NoToSleep
 	applymovement OBJ_EVENT_ID_PLAYER, MovementLakeMeadVillageFrosHouseBasementFroSleeps
 	fadescreen 1
-	playfanfare MUS_FV_GOODNIGHT
-	waitfanfare
-	msgbox Text_LakeMeadVillageFrosHouseBasement_YesToSleep, MSGBOX_DEFAULT
+	fadenewbgm MUS_FV_DREAM
+	delay 180
+	msgbox Text_LakeMeadVillageFrosHouseBasement_YesToSleep, MSGBOX_AUTOCLOSE
+	delay 180
+	delay 180
+	delay 180
+	setvar VAR_0x8000, MUGSHOT_BOBBY
+	callnative DrawMugshot
+	msgbox Text_LakeMeadVillageFrosHouseBasement_Dream1, MSGBOX_AUTOCLOSE
+	delay 180
+	setvar VAR_0x8000, MUGSHOT_AMNEET
+	callnative DrawMugshot
+	msgbox Text_LakeMeadVillageFrosHouseBasement_Dream2, MSGBOX_AUTOCLOSE
+	delay 180
+	setvar VAR_0x8000, MUGSHOT_BOBBY
+	callnative DrawMugshot
+	msgbox Text_LakeMeadVillageFrosHouseBasement_Dream3, MSGBOX_AUTOCLOSE
+	delay 180
+	setvar VAR_0x8000, MUGSHOT_AMNEET
+	callnative DrawMugshot
+	msgbox Text_LakeMeadVillageFrosHouseBasement_Dream4, MSGBOX_AUTOCLOSE
+	delay 180
+	setvar VAR_0x8000, MUGSHOT_BOBBY
+	callnative DrawMugshot
+	msgbox Text_LakeMeadVillageFrosHouseBasement_Dream5, MSGBOX_AUTOCLOSE
+	delay 180
+	callnative ClearMugshot
+	fadedefaultbgm
+	delay 180
 	fadescreen 0
 	msgbox Text_LakeMeadVillageFrosHouseBasement_OneYearLater, MSGBOX_DEFAULT
 	setvar VAR_LITTLEROOT_INTRO_STATE, 3
@@ -169,4 +195,38 @@ Text_LakeMeadVillageFrosHouseBasement_Dresser1:
 Text_LakeMeadVillageFrosHouseBasement_Dresser2:
 	.string "Some of your Yu-Gi-Oh cards are \nmissing...$"
 
+Text_LakeMeadVillageFrosHouseBasement_Dream1:
+	.string "That night, {PLAYER} went to sleep,\n"
+	.string "dreaming about how much he despised\l"
+	.string "Trump and his lie about Pokémon being\l"
+	.string "discovered.$" 
+
+Text_LakeMeadVillageFrosHouseBasement_Dream2:
+	.string "But when he woke up, more news\n"
+	.string "started to surface about Pokémon\l"
+	.string "being discovered.\p"
+	.string "Within weeks, the world as we once\n"
+	.string "knew it was overrun with Wild Pokémon.$"
+
+Text_LakeMeadVillageFrosHouseBasement_Dream3:
+	.string "With {PLAYER}'s untimely grounding,\n"
+    .string "he would not be able to keep up with\l"
+    .string "the rapidly changing world.\p"
+    .string "All of {PLAYER}'s friends, quickly\n"
+    .string "adapted and moved up in this brave\l"
+    .string "new world.$"
+
+Text_LakeMeadVillageFrosHouseBasement_Dream4:
+    .string "Over the course of the year in which\n"
+    .string "{PLAYER} was grounded, the Niagara\l"
+    .string "Region underwent significant\l"
+    .string "geographical changes.\p"
+    .string "Roads were no longer able to be\n"
+    .string "maintained for fear of endangering\l"
+    .string "wild Pokémon. Technology soon became\l"
+    .string "obsolete.$"
 	
+Text_LakeMeadVillageFrosHouseBasement_Dream5:	
+	.string "Now, a year later, {PLAYER} is\n"
+	.string "finally ready to begin his very own\l"
+	.string "Pokémon Adventure.$" 

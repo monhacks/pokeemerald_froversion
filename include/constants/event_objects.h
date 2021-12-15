@@ -265,8 +265,9 @@
 #define OBJ_EVENT_GFX_KTRIPPY                    261
 #define OBJ_EVENT_GFX_ANTIFA_GRUNT               262
 #define OBJ_EVENT_GFX_ISIAH               263
+#define OBJ_EVENT_GFX_MIKE_LYNCH               264
 
-#define NUM_OBJ_EVENT_GFX                        264
+#define NUM_OBJ_EVENT_GFX                        265
 
 
 // These are dynamic object gfx ids.
