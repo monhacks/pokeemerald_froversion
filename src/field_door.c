@@ -132,6 +132,12 @@ static const u8 sDoorAnimTiles_TrainerHillLobbyElevator[] = INCBIN_U8("graphics/
 static const u16 sDoorNullPalette48[16] = {};
 static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_roof_elevator.4bpp");
 static const u16 sDoorNullPalette49[16] = {};
+static const u8 sDoorAnimTiles_LakeMeadNallsResidence[] = INCBIN_U8("graphics/door_anims/lakemeadnallsresidence.4bpp");
+static const u8 sDoorAnimTiles_LakeMeadTilyousLab[] = INCBIN_U8("graphics/door_anims/lakemeadtilyouslab.4bpp");
+static const u8 sDoorAnimTiles_LakeMeadFrosHouse[] = INCBIN_U8("graphics/door_anims/lakemeadfroshouse.4bpp");
+static const u8 sDoorAnimTiles_WalmoreTownBobsHouse[] = INCBIN_U8("graphics/door_anims/walmoretownbobshouse.4bpp");
+static const u8 sDoorAnimTiles_WalmoreTownJohnsHouse[] = INCBIN_U8("graphics/door_anims/walmoretownjohnshouse.4bpp");
+
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
 {
@@ -220,6 +226,11 @@ static const u8 sDoorAnimPalettes_BattleDomePreBattleRoom[] = {9, 9, 7, 7, 7, 7,
 static const u8 sDoorAnimPalettes_BattleTentInterior[] = {9, 9, 9, 9, 9, 9, 9, 9};
 static const u8 sDoorAnimPalettes_TrainerHillLobbyElevator[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7, 7, 7};
+static const u8 sDoorAnimPalettes_LakeMeadNallsResidence[] = {11, 11, 11, 11, 11, 11, 11, 11};
+static const u8 sDoorAnimPalettes_LakeMeadTilyousLab[] = {11, 11, 11, 11, 11, 11, 11, 11};
+static const u8 sDoorAnimPalettes_LakeMeadFrosHouse[] = {11, 11, 11, 11, 11, 11, 11, 11};
+static const u8 sDoorAnimPalettes_WalmoreTownBobsHouse[] = {11, 11, 11, 11, 11, 11, 11, 11};
+static const u8 sDoorAnimPalettes_WalmoreTownJohnsHouse[] = {11, 11, 11, 11, 11, 11, 11, 11};
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
@@ -276,6 +287,11 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_BattleTent_Door,                              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleTentInterior, sDoorAnimPalettes_BattleTentInterior},
     {METATILE_TrainerHill_Door_Elevator_Lobby,              DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillLobbyElevator, sDoorAnimPalettes_TrainerHillLobbyElevator},
     {METATILE_TrainerHill_Door_Elevator_Roof,               DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillRoofElevator, sDoorAnimPalettes_TrainerHillRoofElevator},
+    {METATILE_LakeMeadVillage_Door_NallsResidence,                DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_LakeMeadNallsResidence, sDoorAnimPalettes_LakeMeadNallsResidence},
+    {METATILE_LakeMeadVillage_Door_TillyousLab,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_LakeMeadTilyousLab, sDoorAnimPalettes_LakeMeadTilyousLab},
+    {METATILE_LakeMeadVillage_FuckingTest,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_LakeMeadFrosHouse, sDoorAnimPalettes_LakeMeadFrosHouse},
+    {METATILE_WalmoreTown_Door_BobsHouse,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_WalmoreTownBobsHouse, sDoorAnimPalettes_WalmoreTownBobsHouse},
+    {METATILE_WalmoreTown_DoorsFuckingSuck,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_WalmoreTownJohnsHouse, sDoorAnimPalettes_WalmoreTownJohnsHouse},
     {},
 };
 

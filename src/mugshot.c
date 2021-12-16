@@ -66,9 +66,9 @@ static const struct Mugshot sMugshots[] = {
     [MUGSHOT_SEARS_TREASURE_MAP] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_SearsTreasureMap, .palette = sMugshotPal_SearsTreasureMap},
     [MUGSHOT_SEARS_CREDIT_CARD] = {.x = 6, .y = 1, .width = 144, .height = 96, .image = sMugshotImg_SearsCreditCard, .palette = sMugshotPal_SearsCreditCard},
     [MUGSHOT_SEARS_ATTACHMENT] = {.x = 12, .y = 1, .width = 40, .height = 96, .image = sMugshotImg_SearsAttachment, .palette = sMugshotPal_SearsAttachment},
-    [MUGSHOT_TRUMP_DREAM] = {.x = 1, .y = 1, .width = 224, .height = 104, .image = sMugshotImg_TrumpDream, .palette = sMugshotPal_TrumpDream},
-    [MUGSHOT_PIKACHU_DREAM] = {.x = 1, .y = 1, .width = 224, .height = 104, .image = sMugshotImg_PikachuDream, .palette = sMugshotPal_PikachuDream},
-    [MUGSHOT_BATTLE_DREAM] = {.x = 1, .y = 1, .width = 224, .height = 104, .image = sMugshotImg_BattleDream, .palette = sMugshotPal_BattleDream},
+    [MUGSHOT_TRUMP_DREAM] = {.x = 1, .y = 1, .width = 224, .height = 96, .image = sMugshotImg_TrumpDream, .palette = sMugshotPal_TrumpDream},
+    [MUGSHOT_PIKACHU_DREAM] = {.x = 1, .y = 1, .width = 224, .height = 96, .image = sMugshotImg_PikachuDream, .palette = sMugshotPal_PikachuDream},
+    [MUGSHOT_BATTLE_DREAM] = {.x = 1, .y = 1, .width = 224, .height = 96, .image = sMugshotImg_BattleDream, .palette = sMugshotPal_BattleDream},
     [MUGSHOT_FRO_TRAINER] = {.x = 11, .y = 4, .width = 64, .height = 64, .image = sMugshotImg_FroTrainer, .palette = sMugshotPal_FroTrainer},
 };
 

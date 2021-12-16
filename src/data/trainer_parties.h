@@ -7248,7 +7248,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Treecko[] = {
     {
     .iv = 50,
     .lvl = 20,
-    .species = SPECIES_SKIPLOOM,
+    .species = SPECIES_FRENTOAD,
+    },
+    {
+    .iv = 50,
+    .lvl = 20,
+    .species = SPECIES_HOPPIP,
     },
     {
     .iv = 100,
@@ -7266,7 +7271,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Mudkip[] = {
     {
     .iv = 50,
     .lvl = 43,
-    .species = SPECIES_FLAAFFY,
+    .species = SPECIES_RABATOAST,
     },
     {
     .iv = 100,
@@ -7293,7 +7298,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Mudkip[] = {
     {
     .iv = 50,
     .lvl = 20,
-    .species = SPECIES_MAREEP,
+    .species = SPECIES_FRENTOAD,
+    },
+    {
+    .iv = 50,
+    .lvl = 20,
+    .species = SPECIES_SKIPLOOM,
     },
     {
     .iv = 100,
@@ -7303,6 +7313,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Mudkip[] = {
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Treecko[] = {
+    {
+    .iv = 50,
+    .lvl = 43,
+    .species = SPECIES_FRENTOAD,
+    },
     {
     .iv = 50,
     .lvl = 43,
@@ -7337,7 +7352,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Torchic[] = {
     {
     .iv = 50,
     .lvl = 20,
-    .species = SPECIES_GROWLITHE,
+    .species = SPECIES_FRENTOAD,
     },
     {
     .iv = 100,
@@ -7358,8 +7373,8 @@ static const struct TrainerMonItemCustomMoves sParty_MayRoute119Torchic[] = {
     .iv = 50,
     .lvl = 43,
     .heldItem = ITEM_LIFE_ORB,
-    .species = SPECIES_ARCANINE,
-    .moves = {MOVE_EXTREME_SPEED, MOVE_FLAMETHROWER, MOVE_HOWL, MOVE_ROCK_SMASH},
+    .species = SPECIES_RABATOAST,
+    .moves = {MOVE_FLAME_BURST, MOVE_MOONBLAST, MOVE_MUD_SHOT, MOVE_MORNING_SUN},
     },
     {
     .iv = 100,
@@ -9476,8 +9491,8 @@ static const struct TrainerMonItemCustomMoves sParty_MayLilycoveMudkip[] = {
     .heldItem = ITEM_SITRUS_BERRY,
     .iv = 255,
     .lvl = 47,
-    .species = SPECIES_SCYTHER,
-    .moves = {MOVE_U_TURN, MOVE_AIR_CUTTER, MOVE_SLASH, MOVE_NONE},
+    .species = SPECIES_RABATOAST,
+    .moves = {MOVE_ERUPTION, MOVE_MOONBLAST, MOVE_AMNESIA, MOVE_MORNING_SUN},
     .evs = {126, 0, 126, 0, 0, 4},
     },
     {
@@ -9534,6 +9549,14 @@ static const struct TrainerMonItemCustomMoves sParty_MayLilycoveTreecko[] = {
     },
     {
     .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 49,
+    .species = SPECIES_RABATOAST,
+    .moves = {MOVE_ERUPTION, MOVE_PSYCH_UP, MOVE_MOONBLAST, MOVE_AMNESIA},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
     .abilityNum = 3,
     .iv = 255,
     .lvl = 50,
@@ -9564,8 +9587,8 @@ static const struct TrainerMonItemCustomMoves sParty_MayLilycoveTorchic[] = {
     .heldItem = ITEM_SITRUS_BERRY,
     .iv = 255,
     .lvl = 53,
-    .species = SPECIES_ARCANINE,
-    .moves = {MOVE_EXTREME_SPEED, MOVE_HOWL, MOVE_FLAMETHROWER, MOVE_ROAR},
+    .species = SPECIES_RABATOAST,
+    .moves = {MOVE_ERUPTION, MOVE_MOONBLAST, MOVE_ENCORE, MOVE_MORNING_SUN},
     .evs = {126, 0, 126, 0, 0, 4},
     },
     {
@@ -10835,7 +10858,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRustboroMudkip[] = {
     {
     .iv = 25,
     .lvl = 19,
-    .species = SPECIES_MAREEP,
+    .species = SPECIES_FRENTOAD,
     },
     {
     .iv = 50,
@@ -10848,7 +10871,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRustboroTorchic[] = {
     {
     .iv = 25,
     .lvl = 19,
-    .species = SPECIES_GROWLITHE,
+    .species = SPECIES_FRENTOAD,
     },
     {
     .iv = 50,

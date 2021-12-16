@@ -1828,9 +1828,9 @@ static const u8 sHM08Desc[] = _(
 
 // FireRed/LeafGreen key items
 static const u8 sOaksParcelDesc[] = _(
-    "A parcel for PROF.\n"
-    "OAK from a Pokémon\n"
-    "MART's clerk.");
+    "A parcel for Prof.\n"
+    "Tilyou from a Pokémon\n"
+    "Mart's clerk.");
 
 static const u8 sPokeFluteDesc[] = _(
     "A sweet-sounding\n"

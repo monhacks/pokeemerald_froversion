@@ -256,6 +256,11 @@
 #define METATILE_InsideShip_IntactDoor_Bottom_Locked    0x233
 #define METATILE_InsideShip_IntactDoor_Bottom_Unlocked  0x22B
 
+// gTileset_LakeMeadVillage
+#define METATILE_LakeMeadVillage_Door_NallsResidence  0x32A
+#define METATILE_LakeMeadVillage_Door_TillyousLab     0x363
+#define METATILE_LakeMeadVillage_FuckingTest          0x2F1
+
 // gTileset_Lavaridge
 #define METATILE_Lavaridge_AshGrass             0x207
 #define METATILE_Lavaridge_CaveEntrance_Bottom  0x25E
@@ -788,5 +793,10 @@
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
+
+// gTileset_WalmoreTown
+#define METATILE_WalmoreTown_Door_BobsHouse    0x220
+#define METATILE_WalmoreTown_Door_JohnsHouse   0x29D
+#define METATILE_WalmoreTown_DoorsFuckingSuck  0x260
 
 #endif // GUARD_METATILE_LABELS_H
