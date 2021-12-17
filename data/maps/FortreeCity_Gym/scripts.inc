@@ -270,11 +270,11 @@ FortreeCity_Gym_Text_WinonaDefeat: @ 8216E60
 	.string "I present to you this Gym Badge.$"
 
 FortreeCity_Gym_Text_ReceivedFeatherBadge: @ 8216EEC
-	.string "{PLAYER} received the FEATHER Badge\n"
+	.string "{PLAYER} received the Haunted Badge\n"
 	.string "from Kostiw.$"
 
 FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis: @ 8216F17
-	.string "With the FEATHER Badge, all Pokémon up\n"
+	.string "With the Haunted Badge, all Pokémon up\n"
 	.string "to LV 70, even those received through\l"
 	.string "trades, will obey your every command.\p"
 	.string "You will also be able to use\n"

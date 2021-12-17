@@ -332,7 +332,7 @@ LavaridgeTown_Gym_1F_Text_FlanneryIntro: @ 81FF0DC
 	.string "It's me, Marriott, and I'm the Gym\n"
 	.string "Leader here!\p"
 	.string "When I'm not putting away criminals I\n"
-	.string "defend the honor of the WATER BADGE\p"
+	.string "defend the honor of the Gavel Badge\p"
 	.string "With skills inherited from my law\n"
 	.string "degree, I shall, demonstrate the tidal\l"
 	.string "power of Water!$"
@@ -348,11 +348,11 @@ LavaridgeTown_Gym_1F_Text_FlanneryDefeat: @ 81FF233
 	.string "For that, you deserve this.$"
 
 LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge: @ 81FF32F
-	.string "{PLAYER} received the WATER BADGE\n"
+	.string "{PLAYER} received the Gavel Badge\n"
 	.string "from Marriott.$"
 
 LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis: @ 81FF359
-	.string "If you have a WATER BADGE, all Pokémon\n"
+	.string "If you have a Gavel Badge, all Pokémon\n"
 	.string "up to Level 50, even those you get in\l"
 	.string "trades from other people, will obey\l"
 	.string "you completely.\p"

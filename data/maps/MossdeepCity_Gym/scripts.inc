@@ -571,11 +571,11 @@ MossdeepCity_Gym_Text_TateAndLizaDefeat: @ 82218EC
 	.string "So, in recognition, take this.$"
 
 MossdeepCity_Gym_Text_ReceivedMindBadge: @ 822196A
-	.string "{PLAYER} received the Dark Badge\n"
+	.string "{PLAYER} received the Kings Badge\n"
 	.string "from Nike.$"
 
 MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis: @ 8221999
-	.string "Nike: The Dark Badge lets you use\n"
+	.string "Nike: The Kings Badge lets you use\n"
 	.string "the HM move Dive outside of battle.\p"
 	.string "You should also take this, too.$"
 

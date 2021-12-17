@@ -252,17 +252,17 @@ SootopolisCity_Gym_1F_Text_JuanDefeat: @ 8225432
 	.string "… … … … … …\p"
 	.string "Hahaha, I merely jest!\p"
 	.string "Rather than my clothes, I shall reward\n"
-	.string "you with this, the RAIN BADGE!$"
+	.string "you with this, the Tit Badge!$"
 
 SootopolisCity_Gym_1F_Text_ReceivedRainBadge: @ 8225598
-	.string "{PLAYER} received the RAIN BADGE\n"
+	.string "{PLAYER} received the Tit Badge\n"
 	.string "from JUAN.$"
 
 SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis: @ 82255BE
-	.string "Having the RAIN BADGE shall assure you\n"
+	.string "Having the Tit Badge shall assure you\n"
 	.string "the full obedience of all your Pokémon\l"
 	.string "to your every command.\p"
-	.string "The RAIN BADGE also allows the use\n"
+	.string "The Tit Badge also allows the use\n"
 	.string "of the HM move WATERFALL to scale\l"
 	.string "walls of cascading water.\p"
 	.string "And, so that you never forget the\n"

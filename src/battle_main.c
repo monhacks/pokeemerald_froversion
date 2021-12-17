@@ -3051,9 +3051,9 @@ void SwitchInClearSetData(void)
         gDisableStructs[gActiveBattler].perishSongTimer = disableStructCopy.perishSongTimer;
         gDisableStructs[gActiveBattler].perishSongTimerStartValue = disableStructCopy.perishSongTimerStartValue;
         gDisableStructs[gActiveBattler].battlerPreventingEscape = disableStructCopy.battlerPreventingEscape;
-        gDisableStructs[gActiveBattler].hasType1 = disableStructCopy.hasType1;
+        gDisableStructs[gActiveBattler].hasType2 = disableStructCopy.hasType2;
         gDisableStructs[gActiveBattler].type1 = disableStructCopy.type1;
-        if (gDisableStructs[gActiveBattler].hasType1)
+        if (gDisableStructs[gActiveBattler].hasType2)
             gBattleMons[gActiveBattler].type1 = disableStructCopy.type1;
     }
 

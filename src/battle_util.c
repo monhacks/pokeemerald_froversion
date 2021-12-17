@@ -6066,8 +6066,8 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                  && gBattleMons[battlerId].type3 != i)
                 {
                     gBattleScripting.battler = battlerId;
-                    gBattleMons[battlerId].type1 = i;
-                    gDisableStructs[battlerId].hasType1 = TRUE;
+                    gBattleMons[battlerId].type2 = i;
+                    gDisableStructs[battlerId].hasType2 = TRUE;
                     gDisableStructs[battlerId].type1 = i;
                     PREPARE_TYPE_BUFFER(gBattleTextBuff1, i);
                     BattleScriptPushCursorAndCallback(BattleScript_TypeChangeItem);
@@ -6618,6 +6618,16 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_WEAKNESS_POLICY:
+                if (IsBattlerAlive(battlerId)
+                    && TARGET_TURN_DAMAGED
+                    && gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE)
+                {
+                    effect = ITEM_STATS_CHANGE;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_WeaknessPolicy;
+                }
+                break;
+            case HOLD_EFFECT_AKU_BERRY:
                 if (IsBattlerAlive(battlerId)
                     && TARGET_TURN_DAMAGED
                     && gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE)

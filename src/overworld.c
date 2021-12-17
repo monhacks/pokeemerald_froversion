@@ -423,6 +423,7 @@ static void Overworld_ResetStateAfterWhiteOut(void)
     FlagClear(FLAG_BATTLE_RAIN);
     FlagClear(FLAG_BATTLE_SUN);
     FlagClear(FLAG_FORCE_BATTLE_STYLE_SET);
+    FlagClear(FLAG_BATTLE_TYPE_WEATHER);
     FlagClear(FLAG_SYS_NO_BAG_USE);
 
     FollowMe_TryRemoveFollowerOnWhiteOut();
@@ -817,6 +818,20 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     SetDefaultFlashLevel();
     Overworld_ClearSavedMusic();
     RunOnTransitionMapScript();
+    FlagClear(FLAG_BATTLE_POISON_FIELD);
+    FlagClear(FLAG_BATTLE_RECHARGE);
+    FlagClear(FLAG_BATTLE_POST_PRODUCTION);
+    FlagClear(FLAG_BATTLE_HAUNTING);
+    FlagClear(FLAG_BATTLE_ROULETTE);
+    FlagClear(FLAG_BATTLE_DARKNESS);
+    FlagClear(FLAG_BATTLE_DREAM_FOG);
+    FlagClear(FLAG_BATTLE_SANDSTORM);
+    FlagClear(FLAG_BATTLE_RAIN);
+    FlagClear(FLAG_BATTLE_SUN);
+    FlagClear(FLAG_FORCE_BATTLE_STYLE_SET);
+    FlagClear(FLAG_BATTLE_TYPE_WEATHER);
+    FlagClear(FLAG_SYS_NO_BAG_USE);
+
     InitMap();
     CopySecondaryTilesetToVramUsingHeap(gMapHeader.mapLayout);
     LoadSecondaryTilesetPalette(gMapHeader.mapLayout);
@@ -870,6 +885,19 @@ static void LoadMapFromWarp(bool32 a1)
     SetDefaultFlashLevel();
     Overworld_ClearSavedMusic();
     RunOnTransitionMapScript();
+    FlagClear(FLAG_BATTLE_POISON_FIELD);
+    FlagClear(FLAG_BATTLE_RECHARGE);
+    FlagClear(FLAG_BATTLE_POST_PRODUCTION);
+    FlagClear(FLAG_BATTLE_HAUNTING);
+    FlagClear(FLAG_BATTLE_ROULETTE);
+    FlagClear(FLAG_BATTLE_DARKNESS);
+    FlagClear(FLAG_BATTLE_DREAM_FOG);
+    FlagClear(FLAG_BATTLE_SANDSTORM);
+    FlagClear(FLAG_BATTLE_RAIN);
+    FlagClear(FLAG_BATTLE_SUN);
+    FlagClear(FLAG_FORCE_BATTLE_STYLE_SET);
+    FlagClear(FLAG_BATTLE_TYPE_WEATHER);
+    FlagClear(FLAG_SYS_NO_BAG_USE);
     UpdateLocationHistoryForRoamer();
     RoamerMoveToOtherLocationSet();
     if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)

@@ -8021,7 +8021,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Cristian[] = {
     {
     .iv = 200,
     .lvl = 17,
-    .species = SPECIES_RABATOAST,
+    .species = SPECIES_FRENTOAD,
     }
 };
 
