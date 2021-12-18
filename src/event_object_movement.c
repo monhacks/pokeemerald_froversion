@@ -465,6 +465,9 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_ROTATING_GATE           0x113E
 #define OBJ_EVENT_PAL_TAG_ISIAH                   0x113F
 #define OBJ_EVENT_PAL_TAG_MIKE_LYNCH              0x1140
+#define OBJ_EVENT_PAL_TAG_NIKE                    0x1141
+#define OBJ_EVENT_PAL_TAG_KOSTIW                  0x1142
+#define OBJ_EVENT_PAL_TAG_MATT                    0x1143
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -540,6 +543,9 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_RotatingPuzzle,         OBJ_EVENT_PAL_TAG_ROTATING_GATE},
     {gObjectEventPal_Isiah,                   OBJ_EVENT_PAL_TAG_ISIAH},
     {gObjectEventPal_MikeLynch,                   OBJ_EVENT_PAL_TAG_MIKE_LYNCH},
+    {gObjectEventPal_Kostiw,                   OBJ_EVENT_PAL_TAG_KOSTIW},
+    {gObjectEventPal_Nike,                   OBJ_EVENT_PAL_TAG_NIKE},
+    {gObjectEventPal_Matt,                   OBJ_EVENT_PAL_TAG_MATT},
     {NULL,                                  0x0000},
 };
 

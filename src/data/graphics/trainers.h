@@ -313,11 +313,15 @@ const u32 gTrainerFrontPic_ShawnHaseley[] = INCBIN_U32("graphics/trainers/front_
 const u32 gTrainerFrontPic_WesThompson[] = INCBIN_U32("graphics/trainers/front_pics/wes_thompson_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_Zendano[] = INCBIN_U32("graphics/trainers/front_pics/zendano_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_ChadAndMark[] = INCBIN_U32("graphics/trainers/front_pics/chadandmark_front_pic.4bpp.lz");
+const u32 gTrainerFrontPic_Mark[] = INCBIN_U32("graphics/trainers/front_pics/mark_front_pic.4bpp.lz");
+const u32 gTrainerFrontPic_Chad[] = INCBIN_U32("graphics/trainers/front_pics/chad_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_MagaGruntA[] = INCBIN_U32("graphics/trainers/front_pics/magagrunta_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_MagaGruntB[] = INCBIN_U32("graphics/trainers/front_pics/magagruntb_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_MagaGrunts[] = INCBIN_U32("graphics/trainers/front_pics/magagrunts_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_Nike[] = INCBIN_U32("graphics/trainers/front_pics/nike_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_AntifaGrunt[] = INCBIN_U32("graphics/trainers/front_pics/antifa_grunt_front_pic.4bpp.lz");
+const u32 gTrainerFrontPic_Matt[] = INCBIN_U32("graphics/trainers/front_pics/matt_front_pic.4bpp.lz");
+const u32 gTrainerFrontPic_Kostiw[] = INCBIN_U32("graphics/trainers/front_pics/kostiw_front_pic.4bpp.lz");
 
 const u32 gTrainerPalette_JohnM[] = INCBIN_U32("graphics/trainers/palettes/johnm.gbapal.lz");
 const u32 gTrainerPalette_Wasula[] = INCBIN_U32("graphics/trainers/palettes/wasula.gbapal.lz");
@@ -343,4 +347,6 @@ const u32 gTrainerPalette_MagaGruntB[] = INCBIN_U32("graphics/trainers/palettes/
 const u32 gTrainerPalette_MagaGrunts[] = INCBIN_U32("graphics/trainers/palettes/magagrunts.gbapal.lz");
 const u32 gTrainerPalette_Nike[] = INCBIN_U32("graphics/trainers/palettes/nike.gbapal.lz");
 const u32 gTrainerPalette_AntifaGrunt[] = INCBIN_U32("graphics/trainers/palettes/antifa_grunt.gbapal.lz");
+const u32 gTrainerPalette_Matt[] = INCBIN_U32("graphics/trainers/palettes/matt.gbapal.lz");
+const u32 gTrainerPalette_Kostiw[] = INCBIN_U32("graphics/trainers/palettes/kostiw.gbapal.lz");
 

@@ -537,4 +537,8 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_MAGA_GRUNTS] = sAnims_FroversionTrainers,
     [TRAINER_PIC_NIKE] = sAnims_FroversionTrainers,
     [TRAINER_PIC_ANTIFA_GRUNT] = sAnims_FroversionTrainers,
-};
+    [TRAINER_PIC_KOSTIW] = sAnims_FroversionTrainers,
+    [TRAINER_PIC_MATT] = sAnims_FroversionTrainers,
+    [TRAINER_PIC_MARK] = sAnims_FroversionTrainers,
+    [TRAINER_PIC_CHAD] = sAnims_FroversionTrainers,
+    };

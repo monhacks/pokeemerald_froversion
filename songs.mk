@@ -1318,3 +1318,6 @@ $(MID_SUBDIR)/mus_fv_magee.s: %.s: %.mid
 $(MID_SUBDIR)/mus_fv_dream.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G116 -V090
 
+$(MID_SUBDIR)/mus_fv_chark.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G158 -V090 
+

@@ -101,9 +101,9 @@ SnowVillage_EventScript_NormalNPCDialouge1::
 end
 
 SnowVillage_EventScript_Battle::
-	applymovement 5, SnowVillage_Movement_WalkJumpRight
+	applymovement 4, SnowVillage_Movement_WalkJumpRight
 	waitmovement 0
-	applymovement 10, SnowVillage_Movement_walkJumpLeft
+	applymovement 9, SnowVillage_Movement_walkJumpLeft
 	waitmovement 0
 	setvar VAR_TEMP_0, 1
 end

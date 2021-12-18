@@ -432,3 +432,12 @@ const u16 gObjectEventPal_Isiah[] = INCBIN_U16("graphics/object_events/palettes/
 
 const u32 gObjectEventPic_MikeLynch[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/mikelynch.4bpp");
 const u16 gObjectEventPal_MikeLynch[] = INCBIN_U16("graphics/object_events/palettes/mikelynch.gbapal");
+
+const u32 gObjectEventPic_Nike[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/nike.4bpp");
+const u16 gObjectEventPal_Nike[] = INCBIN_U16("graphics/object_events/palettes/nike.gbapal");
+
+const u32 gObjectEventPic_Kostiw[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/kostiw.4bpp");
+const u16 gObjectEventPal_Kostiw[] = INCBIN_U16("graphics/object_events/palettes/kostiw.gbapal");
+
+const u32 gObjectEventPic_Matt[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/matt.4bpp");
+const u16 gObjectEventPal_Matt[] = INCBIN_U16("graphics/object_events/palettes/matt.gbapal");
