@@ -2457,7 +2457,14 @@ u8 DoBattlerEndTurnEffects(void)
                 MAGIC_GAURD_CHECK;
 
                 gBattlerTarget = gStatuses3[gActiveBattler] & STATUS3_LEECHSEED_BATTLER; // Notice gBattlerTarget is actually the HP receiver.
+                if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
+                {
+                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 24;
+                }
+                else 
+                {
                 gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
+                }
                 if (gBattleMoveDamage == 0)
                     gBattleMoveDamage = 1;
                 gBattleScripting.animArg1 = gBattlerTarget;

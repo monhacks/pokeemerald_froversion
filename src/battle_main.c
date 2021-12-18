@@ -4494,6 +4494,15 @@ const u16 gSlashingMoves[] =
         0xFFFF
     };
 
+    const u16 gMegaBosses[] =
+    {
+        SPECIES_FILLER_8,
+        SPECIES_FILLER_9,
+        SPECIES_MEGA_DEWGONG,
+        SPECIES_INVERTEBRAKE,
+        0xFFFF
+    };
+
     const u16 gLevitateMons[] =
     {
         SPECIES_MISDREAVUS,

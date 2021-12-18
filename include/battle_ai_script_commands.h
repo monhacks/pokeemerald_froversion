@@ -27,6 +27,7 @@ bool32 IsSpeciesOneOf(u16 specie, const u16 *species);
 extern const u16 gRuthlashLine[];
 extern const u16 gMechobraLine[];
 extern const u16 gRiptorypsLine[];
+extern const u16 gMegaBosses[];
 extern const u16 gLevitateMons[];
 
 #endif // GUARD_BATTLE_AI_SCRIPT_COMMANDS_H
