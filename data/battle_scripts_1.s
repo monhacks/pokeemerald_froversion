@@ -5992,6 +5992,29 @@ BattleScript_WeaknessPolicyRemoveItem:
 BattleScript_WeaknessPolicyEnd:
 	return
 
+BattleScript_AkuBerryBoostSE::
+	copybyte sBATTLER, gBattlerTarget
+	jumpifstat BS_TARGET, CMP_LESS_THAN, STAT_ATK, 0xC, BattleScript_AkuBerryBoostSEAtk
+	jumpifstat BS_TARGET, CMP_EQUAL, STAT_SPATK, 0xC, BattleScript_AkuBerryBoostSEEnd
+BattleScript_AkuBerryBoostSEAtk:
+	playanimation BS_TARGET, B_ANIM_HELD_ITEM_EFFECT, NULL
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_TARGET, BIT_ATK | BIT_SPATK, STAT_CHANGE_BY_TWO
+	setstatchanger STAT_ATK, 2, FALSE
+	statbuffchange STAT_BUFF_ALLOW_PTR, BattleScript_AkuBerryBoostSESpAtk
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_AkuBerryBoostSESpAtk
+	printstring STRINGID_USINGXTHEYOFZN
+	waitmessage 0x40
+BattleScript_AkuBerryBoostSESpAtk:
+	setstatchanger STAT_SPATK, 2, FALSE
+	statbuffchange STAT_BUFF_ALLOW_PTR, BattleScript_AkuBerryBoostSEEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_AkuBerryBoostSEEnd
+	printstring STRINGID_USINGXTHEYOFZN
+	waitmessage 0x40
+BattleScript_AkuBerryBoostSEEnd:
+	return
+
 BattleScript_TargetItemStatRaise::
 	copybyte sBATTLER, gBattlerTarget
 	statbuffchange 0, BattleScript_TargetItemStatRaiseRemoveItemRet

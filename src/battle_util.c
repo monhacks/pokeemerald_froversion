@@ -6641,7 +6641,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 {
                     effect = ITEM_STATS_CHANGE;
                     BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_WeaknessPolicy;
+                    gBattlescriptCurrInstr = BattleScript_AkuBerryBoostSE;
                 }
                 break;
             case HOLD_EFFECT_SNOWBALL:

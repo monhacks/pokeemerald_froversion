@@ -8318,7 +8318,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_BRENDAN_RUSTBORO_TREECKO] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .trainerClass = TRAINER_CLASS_CHAMPION,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_WASULA,
         .trainerName = _("Bobby"),
@@ -8332,7 +8332,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_BRENDAN_RUSTBORO_MUDKIP] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .trainerClass = TRAINER_CLASS_CHAMPION,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_WASULA,
         .trainerName = _("Bobby"),
@@ -8416,7 +8416,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_BRENDAN_RUSTBORO_TORCHIC] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
+        .trainerClass = TRAINER_CLASS_CHAMPION,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_WASULA,
         .trainerName = _("Bobby"),
