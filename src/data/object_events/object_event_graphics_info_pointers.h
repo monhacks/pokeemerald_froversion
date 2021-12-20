@@ -268,6 +268,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WesThompson;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zendano;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ktrippy;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AntifaGrunt;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Matt;
 
 
 
@@ -535,6 +536,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ZENDANO] =                  &gObjectEventGraphicsInfo_Zendano,
     [OBJ_EVENT_GFX_KTRIPPY] =                  &gObjectEventGraphicsInfo_Ktrippy,
     [OBJ_EVENT_GFX_ANTIFA_GRUNT] =             &gObjectEventGraphicsInfo_AntifaGrunt,
+    
+    [OBJ_EVENT_GFX_MATT] =             &gObjectEventGraphicsInfo_Matt,
 
 
 };

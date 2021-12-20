@@ -8721,7 +8721,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Clark[] = {
     }
 };
 
-Satic const struct TrainerMonNoItemDefaultMoves sParty_Eric[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_Eric[] = {
     {
     .iv = 0,
     .lvl = 26,
@@ -13421,3 +13421,37 @@ static const struct TrainerMonItemCustomMoves sParty_BobbySteelLeader[] = {
     },
 };
 
+static const struct TrainerMonItemCustomMoves sParty_StrangeOldMan[] = {
+    {
+    .abilityNum = 0,
+    .heldItem = ITEM_FLAME_ORB,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_BARBELLION,
+    .moves = {MOVE_BULK_UP, MOVE_FLARE_BLITZ, MOVE_ROAR, MOVE_SHADOW_CLAW},
+    },
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_LIFE_ORB,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_ALAKAZAM,
+    .moves = {MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_DARK_PULSE, MOVE_MAGIC_MIRROR},
+    },
+    {
+    .abilityNum = 1,
+    .heldItem = ITEM_LEFTOVERS,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_STEELIX,
+    .moves = {MOVE_EARTHQUAKE, MOVE_CURSE, MOVE_TOXIC, MOVE_RECOVER},
+    },
+    {
+    .heldItem = ITEM_LIFE_ORB,
+    .abilityNum = 0,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_SCIZOR,
+    .moves = {MOVE_U_TURN, MOVE_OVERHEAT, MOVE_AGILITY, MOVE_BATON_PASS},
+    },
+};

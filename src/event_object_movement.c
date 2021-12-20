@@ -461,6 +461,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_KTRIPPY                 0x113A
 #define OBJ_EVENT_PAL_TAG_FRO                     0x113B
 #define OBJ_EVENT_PAL_TAG_ANTIFA_GRUNT            0x113C
+#define OBJ_EVENT_PAL_TAG_MATT                    0x113D
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -532,6 +533,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Ktrippy,               OBJ_EVENT_PAL_TAG_KTRIPPY},
     {gObjectEventPal_Fro,                   OBJ_EVENT_PAL_TAG_FRO},
     {gObjectEventPal_AntifaGrunt,           OBJ_EVENT_PAL_TAG_ANTIFA_GRUNT},
+    {gObjectEventPal_Matt,                  OBJ_EVENT_PAL_TAG_MATT},
 
     
     {NULL,                                  0x0000},

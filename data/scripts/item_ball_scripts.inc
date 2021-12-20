@@ -18,6 +18,11 @@ Route104_EventScript_ItemPokeBall:: @ 8290D0C
 	finditem ITEM_POKE_BALL
 	end
 
+HubRoom_EventScript_ItemPokeBall:: @ 8290D0C
+	finditem ITEM_COIN_CASE
+	setflag FLAG_FOUND_LOST_WALLET
+	end
+
 Route104_EventScript_ItemXAccuracy:: @ 8290D19
 	finditem ITEM_X_ACCURACY
 	end

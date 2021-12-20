@@ -266,7 +266,7 @@ Route110_EventScript_AbigailRematch:: @ 81EF58B
 	end
 
 Route110_EventScript_Isabel:: @ 81EF5A2
-	trainerbattle_single TRAINER_ISABEL_1, Route110_Text_IsabelIntro, Route110_Text_IsabelDefeated, Route110_EventScript_IsabelRegisterMatchCallAfterBattle
+	trainerbattle_single TRAINER_ISABEL_1, Route110_Text_IsabelIntro, Route110_Text_IsabelDefeated
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route110_EventScript_IsabelRematch

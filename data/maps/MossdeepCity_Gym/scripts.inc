@@ -464,15 +464,21 @@ MossdeepCity_Gym_Text_SamanthaDefeat: @ 8221230
 
 MossdeepCity_Gym_Text_SamanthaPostBattle: @ 822123D
 	.string "You will wage a terrifically intense\n"
-	.string "battle with our Gym LeaderS…\p"
+	.string "battle with our Gym Leaders…\p"
 	.string "The result…\n"
 	.string "You won't hear it from me!$"
 
 MossdeepCity_Gym_Text_MauraIntro: @ 82212A6
-	.string "The roads you have traveled…\n"
-	.string "What you have experienced…\p"
-	.string "Come at me with everything you've\n"
-	.string "learned!$"
+	.string "Bud Termin: Hey Nike, Glad you made\n"
+	.string "it this far!\p"
+	.string "You must have done some good neck\n"
+	.string "stretches!\p"
+	.string "Just like it's important to stretch\n"
+	.string "out before you bowl, I like to stretch\l"
+	.string "out my battles.\p"
+	.string "Hmm how about this. If you can beat me\n"
+	.string "without using an attacking move I'll\l"
+	.string "give you a reward.$"
 
 MossdeepCity_Gym_Text_MauraDefeat: @ 8221309
 	.string "You've traveled a path of greatness!$"
@@ -485,8 +491,18 @@ MossdeepCity_Gym_Text_MauraPostBattle: @ 822132E
 	.string "What goes around comes around…$"
 
 MossdeepCity_Gym_Text_SylviaIntro: @ 82213C2
-	.string "Even at the risk of life, I will win\n"
-	.string "this battle!$"
+	.string "Army of People Marching across NFBLVD:\n"
+	.string "We are the Niagara Falls Boulevard\l"
+	.string "army, an ancient army who attack\l"
+	.string "stray walkers!\p"
+	.string "Prove to us that you have an army\n"
+	.string "of different Pokemon and we will\l"
+	.string "reward you with something that will\l"
+	.string "help you to power up your army\l"
+	.string "exponentially!"
+	.string "All you have to do is defeat us\n"
+	.string "with a team of 6 Pokemon, and no\l"
+	.string "overlapping types!$"
 
 MossdeepCity_Gym_Text_SylviaDefeat: @ 82213F4
 	.string "What you do…\n"

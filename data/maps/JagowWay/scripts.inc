@@ -29,15 +29,12 @@ Script_JagowWay_TrainTracks_Left::
 
 Script_JagowWay_StarterBattle:: 
 	lock
-	addobject 1
-	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
+	goto_if_defeated TRAINER_JOHN_JAGOW_WAY_MUDKIP, Script_JagowWay_AfterJohnBattle
+	goto_if_defeated TRAINER_JOHN_JAGOW_WAY_TREECKO, Script_JagowWay_AfterJohnBattle
+	goto_if_defeated TRAINER_JOHN_JAGOW_WAY_TORCHIC, Script_JagowWay_AfterJohnBattle
 	playbgm MUS_ENCOUNTER_BRENDAN, 1
-	applymovement 1, M_JagowWay_JohnChallengesFro
-	waitmovement 1
 	msgbox T_JagowWay_JohnBattleDialouge, MSGBOX_DEFAULT
 	closemessage
-	msgbox T_JagowWay_JohnBattleDialouge2, MSGBOX_DEFAULT
-	setflag FLAG_CAN_LOSE_NEXT_BATTLE
 	switch VAR_STARTER_MON
 	case 0, Script_JagowWay_StarterBattleRascaloot
 	case 1, Script_JagowWay_StarterBattleFlobra
@@ -45,29 +42,17 @@ Script_JagowWay_StarterBattle::
 	end
 	
 Script_JagowWay_StarterBattleRascaloot:
-	setvar VAR_MUGSHOT_ID, MUGSHOT_JOHNM
 	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_MUDKIP, T_JagowWay_JohnDefeated
-	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_LOST
-	goto_if_eq Script_JagowWay_AfterJohnBattleLost
 	goto Script_JagowWay_AfterJohnBattle
 	end
 
 Script_JagowWay_StarterBattleFlobra:
-	setvar VAR_MUGSHOT_ID, MUGSHOT_JOHNM
 	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_TREECKO, T_JagowWay_JohnDefeated
-	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_LOST
-	goto_if_eq Script_JagowWay_AfterJohnBattleLost
 	goto Script_JagowWay_AfterJohnBattle
 	end
 
 Script_JagowWay_StarterBattleEmboryps:
-	setvar VAR_MUGSHOT_ID, MUGSHOT_JOHNM
 	trainerbattle_no_intro TRAINER_JOHN_JAGOW_WAY_TORCHIC, T_JagowWay_JohnDefeated
-	specialvar VAR_RESULT, GetBattleOutcome
-	compare VAR_RESULT, B_OUTCOME_LOST
-	goto_if_eq Script_JagowWay_AfterJohnBattleLost
 	goto Script_JagowWay_AfterJohnBattle
 	end	
 	
@@ -89,16 +74,13 @@ Script_JagowWay_StarterBattle2::
 	end
 	
 Script_JagowWay_AfterJohnBattle:
+setvar VAR_OLDALE_TOWN_STATE, 1
+delay 30
 setvar VAR_LITTLEROOT_TOWN_STATE, 5
 msgbox T_JohnAfterBattle MSGBOX_DEFAULT
 special HealPlayerParty
-msgbox T_JW_JagowWoodsClosed, MSGBOX_DEFAULT
 closemessage
 fadedefaultbgm
-applymovement 1, M_JagowWay_JohnLeaves
-waitmovement 1
-removeobject 1
-setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
 release
 end
 
@@ -109,10 +91,6 @@ special HealPlayerParty
 msgbox T_JW_JagowWoodsClosed, MSGBOX_DEFAULT
 closemessage
 fadedefaultbgm
-applymovement 1, M_JagowWay_JohnLeaves
-waitmovement 1
-removeobject 1
-setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
 release
 end
 
@@ -175,17 +153,34 @@ T_JagowWay_SignPostForLakeMead:
 	
 
 T_JagowWay_JohnBattleDialouge:
-	.string "John: Hey Fro, before you go out \ninto the wild why don't I show you \lhow to battle with your new \lPokemon?\p"
-	.string "Fro: How hard can it be? Is this \nreally necessary?$"
+	.string "I am Janus.\n"
+	.string "The mighty god of doors and\l"
+	.string "beginnings!\p"
+	.string "If you truly desire\n"
+ 	.string "my help, you will have to prove\l"
+	.string	"yourself by defeating me in a\l"
+	.string "Pokémon battle!$" 
+
 	
 T_JagowWay_JohnBattleDialouge2: 
 	.string "John: Experience is a valuable \nteacher. Now let's battle!$"
 
 T_JagowWay_JohnDefeated:
-	.string "John: You're a natural, Fro!$"
+	.string "ugh you beat me so easily…\n" 
+	.string "Well what did you expect?\l"
+	.string "I'm the god of fuckin doors!\l"
+	.string "Very well I will grant you access\l"
+	.string "to the first door…$" 
+
 	
 T_JohnAfterBattle:
-	.string "John: Great job Fro. I look forward \nto seeing you grow as a trainer. \pLet me heal your Pokemon.\p$"
+	.string "Go now and take the poison\n"
+	.string "challenge… if you can beat that\l"
+	.string "challenge I will give you another\l"
+	.string "test to enter door number two…\p"
+	.string "but be warned next time I will\n"
+	.string "call on one of my more powerful\l"
+	.string "friends to test you.$"
 
 T_JohnAfterBattleLost:
 	.string "John: Great try Fro.\p You're kinda trash right now tbh though\nlol. \pI look forward \nto seeing you grow as a trainer. \pLet me heal your Pokemon.\p$"

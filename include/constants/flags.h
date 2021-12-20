@@ -86,9 +86,9 @@
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag
 #define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
+#define FLAG_FOUND_LOST_WALLET    0x4D // Unused Flag
+#define FLAG_INTRO_SEQUENCE_COMPLETE    0x4E // Unused Flag
+#define FLAG_ITEM_HUB_ROOM_COIN_CASE    0x4F // Unused Flag
 
 // Scripts
 #define FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT  0x50
@@ -733,7 +733,7 @@
 #define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
 #define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
 #define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
-#define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
+#define FLAG_KOSTIW_INTRO  0x2B7 // Unused Flag
 #define FLAG_HIDE_MAGA_COLANGELO_GRAPHICS  0x2B8 // Hides Lattka and Paul inside Colangelo Graphics.
 #define FLAG_FORCE_BATTLE_STYLE_SET  0x2B9 // Unused Flag
 #define FLAG_NICOLAS_CAGE_QUIZ_COMPLETE  0x2BA // Unused Flag

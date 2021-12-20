@@ -5133,91 +5133,91 @@ static const union AnimCmd sAnim_FILLER_12_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_13_1[] = 
+static const union AnimCmd sAnim_BUCCANILE_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_14_1[] = 
+static const union AnimCmd sAnim_BUCCANITE_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_15_1[] = 
+static const union AnimCmd sAnim_BUCCAFEAR_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_16_1[] = 
+static const union AnimCmd sAnim_KOPIRAR_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_17_1[] = 
+static const union AnimCmd sAnim_KOPISPAR_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_18_1[] = 
+static const union AnimCmd sAnim_KOPIROAR_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_19_1[] = 
+static const union AnimCmd sAnim_WALLITE_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_20_1[] = 
+static const union AnimCmd sAnim_WALLOCK_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_21_1[] = 
+static const union AnimCmd sAnim_WARSOCK_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_22_1[] = 
+static const union AnimCmd sAnim_KICWINDO_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_23_1[] = 
+static const union AnimCmd sAnim_HAUSODOOM_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_24_1[] = 
+static const union AnimCmd sAnim_DROPYCE_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_25_1[] = 
+static const union AnimCmd sAnim_METAROURA_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_26_1[] = 
+static const union AnimCmd sAnim_CHERNABOG_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_27_1[] = 
+static const union AnimCmd sAnim_CARLILE_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
@@ -7678,65 +7678,65 @@ static const union AnimCmd *const sAnims_FILLER_12[] ={
     sAnim_GeneralFrame0,
     sAnim_FILLER_12_1,
 };
-static const union AnimCmd *const sAnims_FILLER_13[] ={
+static const union AnimCmd *const sAnims_BUCCANILE[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_13_1,
+    sAnim_BUCCANILE_1,
 };
-static const union AnimCmd *const sAnims_FILLER_14[] ={
+static const union AnimCmd *const sAnims_BUCCANITE[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_14_1,
+    sAnim_BUCCANITE_1,
 };
-static const union AnimCmd *const sAnims_FILLER_15[] ={
+static const union AnimCmd *const sAnims_BUCCAFEAR[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_15_1,
+    sAnim_BUCCAFEAR_1,
 };
-static const union AnimCmd *const sAnims_FILLER_16[] ={
+static const union AnimCmd *const sAnims_KOPIRAR[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_16_1,
+    sAnim_KOPIRAR_1,
 };
-static const union AnimCmd *const sAnims_FILLER_17[] ={
+static const union AnimCmd *const sAnims_KOPISPAR[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_17_1,
+    sAnim_KOPISPAR_1,
 };
-static const union AnimCmd *const sAnims_FILLER_18[] ={
+static const union AnimCmd *const sAnims_KOPIROAR[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_18_1,
+    sAnim_KOPIROAR_1,
 };
-static const union AnimCmd *const sAnims_FILLER_19[] ={
+static const union AnimCmd *const sAnims_WALLITE[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_19_1,
+    sAnim_WALLITE_1,
 };
-static const union AnimCmd *const sAnims_FILLER_20[] ={
+static const union AnimCmd *const sAnims_WALLOCK[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_20_1,
+    sAnim_WALLOCK_1,
 };
-static const union AnimCmd *const sAnims_FILLER_21[] ={
+static const union AnimCmd *const sAnims_WARSOCK[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_21_1,
+    sAnim_WARSOCK_1,
 };
-static const union AnimCmd *const sAnims_FILLER_22[] ={
+static const union AnimCmd *const sAnims_KICWINDO[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_22_1,
+    sAnim_KICWINDO_1,
 };
-static const union AnimCmd *const sAnims_FILLER_23[] ={
+static const union AnimCmd *const sAnims_HAUSODOOM[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_23_1,
+    sAnim_HAUSODOOM_1,
 };
-static const union AnimCmd *const sAnims_FILLER_24[] ={
+static const union AnimCmd *const sAnims_DROPYCE[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_24_1,
+    sAnim_DROPYCE_1,
 };
-static const union AnimCmd *const sAnims_FILLER_25[] ={
+static const union AnimCmd *const sAnims_METAROURA[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_25_1,
+    sAnim_METAROURA_1,
 };
-static const union AnimCmd *const sAnims_FILLER_26[] ={
+static const union AnimCmd *const sAnims_CHERNABOG[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_26_1,
+    sAnim_CHERNABOG_1,
 };
-static const union AnimCmd *const sAnims_FILLER_27[] ={
+static const union AnimCmd *const sAnims_CARLILE[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_27_1,
+    sAnim_CARLILE_1,
 };
 static const union AnimCmd *const sAnims_FILLER_28[] ={
     sAnim_GeneralFrame0,
@@ -8306,21 +8306,21 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(FRENTOAD),
     ANIM_CMD(RABATOAST),
     ANIM_CMD(FILLER_12),
-    ANIM_CMD(FILLER_13),
-    ANIM_CMD(FILLER_14),
-    ANIM_CMD(FILLER_15),
-    ANIM_CMD(FILLER_16),
-    ANIM_CMD(FILLER_17),
-    ANIM_CMD(FILLER_18),
-    ANIM_CMD(FILLER_19),
-    ANIM_CMD(FILLER_20),
-    ANIM_CMD(FILLER_21),
-    ANIM_CMD(FILLER_22),
-    ANIM_CMD(FILLER_23),
-    ANIM_CMD(FILLER_24),
-    ANIM_CMD(FILLER_25),
-    ANIM_CMD(FILLER_26),
-    ANIM_CMD(FILLER_27),
+    ANIM_CMD(BUCCANILE),
+    ANIM_CMD(BUCCANITE),
+    ANIM_CMD(BUCCAFEAR),
+    ANIM_CMD(KOPIRAR),
+    ANIM_CMD(KOPISPAR),
+    ANIM_CMD(KOPIROAR),
+    ANIM_CMD(WALLITE),
+    ANIM_CMD(WALLOCK),
+    ANIM_CMD(WARSOCK),
+    ANIM_CMD(KICWINDO),
+    ANIM_CMD(HAUSODOOM),
+    ANIM_CMD(DROPYCE),
+    ANIM_CMD(METAROURA),
+    ANIM_CMD(CHERNABOG),
+    ANIM_CMD(CARLILE),
     ANIM_CMD(FILLER_28),
     ANIM_CMD(FILLER_29),
     ANIM_CMD(FILLER_30),
