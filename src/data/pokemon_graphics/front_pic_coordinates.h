@@ -2475,77 +2475,77 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_13] =
+    [SPECIES_BUCCANILE] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_14] =
+    [SPECIES_BUCCANITE] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_15] =
+    [SPECIES_BUCCAFEAR] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_16] =
+    [SPECIES_KOPIRAR] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_17] =
+    [SPECIES_KOPISPAR] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_18] =
+    [SPECIES_KOPIROAR] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_19] =
+    [SPECIES_WALLITE] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_20] =
+    [SPECIES_WALLOCK] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_21] =
+    [SPECIES_WARSOCK] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_22] =
+    [SPECIES_KICWINDO] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_23] =
+    [SPECIES_HAUSODOOM] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_24] =
+    [SPECIES_DROPYCE] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_25] =
+    [SPECIES_METAROURA] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_26] =
+    [SPECIES_CHERNABOG] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_27] =
+    [SPECIES_CARLILE] =
     {
         .size = 0x88,
         .y_offset = 0x00,

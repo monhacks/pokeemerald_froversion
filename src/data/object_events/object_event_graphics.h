@@ -423,3 +423,5 @@ const u16 gObjectEventPal_Ktrippy[] = INCBIN_U16("graphics/object_events/palette
 const u16 gObjectEventPal_Fro[] = INCBIN_U16("graphics/object_events/palettes/fro.gbapal");
 const u32 gObjectEventPic_AntifaGrunt[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/antifa_grunt.4bpp");
 const u16 gObjectEventPal_AntifaGrunt[] = INCBIN_U16("graphics/object_events/palettes/antifa_grunt.gbapal");
+const u32 gObjectEventPic_Matt[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/matt.4bpp");
+const u16 gObjectEventPal_Matt[] = INCBIN_U16("graphics/object_events/palettes/matt.gbapal");

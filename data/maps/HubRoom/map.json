@@ -78,6 +78,71 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Script_TilyousLab_FlobraPokeball",
       "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_FLOBRA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MATT",
+      "x": 4,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HubRoom_EventScripts_NPCMatt",
+      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ANTIFA_GRUNT",
+      "x": 60,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HubRoom_EventScripts_NPCKostiw",
+      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_KTRIPPY",
+      "x": 60,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HubRoom_EventScript_OfficerGratwick",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 1,
+      "y": 19,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HubRoom_EventScript_ItemPokeBall",
+      "flag": "FLAG_ITEM_HUB_ROOM_COIN_CASE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OFFICE_JIM",
+      "x": 4,
+      "y": 19,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Script_JagowWay_StarterBattle",
+      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU"
     }
   ],
   "warp_events": [
@@ -201,8 +266,8 @@
       "dest_warp_id": 0
     },
     {
-      "x": 0,
-      "y": 0,
+      "x": 1,
+      "y": 1,
       "elevation": 0,
       "dest_map": "MAP_HUB_ROOM",
       "dest_warp_id": 0

@@ -9,12 +9,23 @@ Route111_OldLadysRestStop_OnTransition: @ 822A91C
 Route111_OldLadysRestStop_EventScript_OldLady:: @ 822A920
 	lock
 	faceplayer
+	goto_if_unset FLAG_PICKED_STARTER, EventScript_Hubroom_NoPokemonToHeal
 	msgbox Route111_OldLadysRestStop_Text_RestUpHere, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route111_OldLadysRestStop_EventScript_Rest
 	compare VAR_RESULT, NO
 	goto_if_eq Route111_OldLadysRestStop_EventScript_DeclineRest
 	end
+
+EventScript_Hubroom_NoPokemonToHeal:
+	msgbox Text_NoPokemonToHeal, MSGBOX_DEFAULT
+	release
+	end
+
+Text_NoPokemonToHeal:
+	.string "You don't have any Pokemon for me\n"
+	.string "to heal.$"
+
 
 Route111_OldLadysRestStop_EventScript_Rest:: @ 822A941
 	msgbox Route111_OldLadysRestStop_Text_TakeYourTimeRestUp, MSGBOX_DEFAULT

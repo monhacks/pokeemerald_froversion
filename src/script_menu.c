@@ -864,6 +864,13 @@ static const u8 sText_Number9[] =_("9");
 static const u8 sText_PA[] =_("5YR PA");
 static const u8 sText_CreditCard[] =_("Credit Card");
 static const u8 sText_Attachment[] =_("Attachment");
+static const u8 sText_Surprised[] =_("Surprised");
+static const u8 sText_Greedy[] =_("Greedy");
+static const u8 sText_Concerned[] =_("Concerned");
+static const u8 sText_Reminiscent[] =_("Reminiscent");
+static const u8 sText_Casual[] =_("Casual");
+static const u8 sText_Confused[] =_("Confused");
+
 
 
 
@@ -983,7 +990,16 @@ static const struct ListMenuItem sKickAssQuestion3[] =
     {sText_OldAge, 3},
 };
 
+static const struct ListMenuItem sGratwickCop[] =
+{
+    {sText_Surprised, 0},
+    {sText_Greedy, 1},
+    {sText_Concerned, 2},
+    {sText_Reminiscent, 3},
+    {sText_Casual, 4},
+    {sText_Confused, 5},
 
+};
 
 
 // Table of your multichoice sets.
@@ -1001,7 +1017,8 @@ struct
     {sKickAssQuestion3, ARRAY_COUNT(sKickAssQuestion3)}, //5
     {sAlphabet, ARRAY_COUNT(sAlphabet)}, //6
     {sNumbers, ARRAY_COUNT(sNumbers)}, //7
-    {sSummitCityEscapePuzzles, ARRAY_COUNT(sSummitCityEscapePuzzles)}, //7
+    {sSummitCityEscapePuzzles, ARRAY_COUNT(sSummitCityEscapePuzzles)}, //8
+    {sGratwickCop, ARRAY_COUNT(sGratwickCop)}, //9
     
     
 };

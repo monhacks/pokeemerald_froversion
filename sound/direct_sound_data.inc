@@ -2337,50 +2337,50 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
     Cry_Filler_12::
 	.incbin "sound/direct_sound_samples/cries/filler_12.bin"
 .align 2
-    Cry_Filler_13::
-	.incbin "sound/direct_sound_samples/cries/filler_13.bin"
+    Cry_Buccanile::
+	.incbin "sound/direct_sound_samples/cries/buccanile.bin"
 .align 2
-    Cry_Filler_14::
-	.incbin "sound/direct_sound_samples/cries/filler_14.bin"
+    Cry_Buccanite::
+	.incbin "sound/direct_sound_samples/cries/buccanite.bin"
 .align 2
-    Cry_Filler_15::
-	.incbin "sound/direct_sound_samples/cries/filler_15.bin"
+    Cry_Buccafear::
+	.incbin "sound/direct_sound_samples/cries/buccafear.bin"
 .align 2
-    Cry_Filler_16::
-	.incbin "sound/direct_sound_samples/cries/filler_16.bin"
+    Cry_Kopirar::
+	.incbin "sound/direct_sound_samples/cries/kopirar.bin"
 .align 2
-    Cry_Filler_17::
-	.incbin "sound/direct_sound_samples/cries/filler_17.bin"
+    Cry_Kopispar::
+	.incbin "sound/direct_sound_samples/cries/kopispar.bin"
 .align 2
-    Cry_Filler_18::
-	.incbin "sound/direct_sound_samples/cries/filler_18.bin"
+    Cry_Kopiroar::
+	.incbin "sound/direct_sound_samples/cries/kopiroar.bin"
 .align 2
-    Cry_Filler_19::
-	.incbin "sound/direct_sound_samples/cries/filler_19.bin"
+    Cry_Wallite::
+	.incbin "sound/direct_sound_samples/cries/wallite.bin"
 .align 2
-    Cry_Filler_20::
-	.incbin "sound/direct_sound_samples/cries/filler_20.bin"
+    Cry_Wallock::
+	.incbin "sound/direct_sound_samples/cries/wallock.bin"
 .align 2
-    Cry_Filler_21::
-	.incbin "sound/direct_sound_samples/cries/filler_21.bin"
+    Cry_Warsock::
+	.incbin "sound/direct_sound_samples/cries/warsock.bin"
 .align 2
-    Cry_Filler_22::
-	.incbin "sound/direct_sound_samples/cries/filler_22.bin"
+    Cry_Kicwindo::
+	.incbin "sound/direct_sound_samples/cries/kicwindo.bin"
 .align 2
-    Cry_Filler_23::
-	.incbin "sound/direct_sound_samples/cries/filler_23.bin"
+    Cry_Hausodoom::
+	.incbin "sound/direct_sound_samples/cries/hausodoom.bin"
 .align 2
-    Cry_Filler_24::
-	.incbin "sound/direct_sound_samples/cries/filler_24.bin"
+    Cry_Dropyce::
+	.incbin "sound/direct_sound_samples/cries/dropyce.bin"
 .align 2
-    Cry_Filler_25::
-	.incbin "sound/direct_sound_samples/cries/filler_25.bin"
+    Cry_Metaroura::
+	.incbin "sound/direct_sound_samples/cries/metaroura.bin"
 .align 2
-    Cry_Filler_26::
-	.incbin "sound/direct_sound_samples/cries/filler_26.bin"
+    Cry_Chernabog::
+	.incbin "sound/direct_sound_samples/cries/chernabog.bin"
 .align 2
-    Cry_Filler_27::
-	.incbin "sound/direct_sound_samples/cries/filler_27.bin"
+    Cry_Carlile::
+	.incbin "sound/direct_sound_samples/cries/carlile.bin"
 .align 2
     Cry_Filler_28::
 	.incbin "sound/direct_sound_samples/cries/filler_28.bin"

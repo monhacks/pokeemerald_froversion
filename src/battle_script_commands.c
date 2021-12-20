@@ -558,12 +558,12 @@ static void Cmd_metalburstdamagecalculator(void);
 
 const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
 {
-    FLAG_DEFEATED_POISON, FLAG_BADGE02_GET, FLAG_BADGE03_GET, FLAG_BADGE04_GET,
-    FLAG_BADGE05_GET, FLAG_BADGE06_GET, FLAG_BADGE07_GET, FLAG_BADGE08_GET,
+    FLAG_DEFEATED_POISON, FLAG_DEFEATED_NORMAL, FLAG_DEFEATED_ICE, FLAG_DEFEATED_WATER,
+    FLAG_DEFEATED_FIRE, FLAG_BADGE06_GET, FLAG_BADGE07_GET, FLAG_BADGE08_GET,
     FLAG_SYS_GAME_CLEAR,
 };
 
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 20, 18, 24, 30, 38, 45, 52, 60, 70 };
+const u16 sLevelCaps[NUM_SOFT_CAPS] = { 20, 25, 30, 35, 40, 45, 50, 55, 60 };
 const double sLevelCapReduction[7] = { .5, .33, .25, .20, .15, .10, .05 };
 const double sRelativePartyScaling[27] =
 {

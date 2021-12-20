@@ -1,3 +1,5 @@
+.set LOCALID_KOSTIW, 7
+
 LakeMeadVillage_TilyousLab_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, MS_LakeMeadVillage_TilyousLab_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, MS_LakeMeadVillage_TilyousLab_OnFrame
@@ -134,7 +136,8 @@ Script_TilyousLab_DontLeaveBeforePickingAPokemon::
 
 Script_TilyousLab_RascalootPokeball::
 	lock
-	showmonpic SPECIES_RASCALOOT, 10, 3
+	goto_if_unset FLAG_KOSTIW_INTRO, Script_TilyousLab_ProfTilyousPokeball
+	showmonpic SPECIES_BUCCANILE, 10, 3
 	msgbox T_TilyousLab_PickRascaloot, MSGBOX_YESNO
 	hidemonpic
 	compare VAR_RESULT, 1
@@ -149,7 +152,7 @@ Script_TilyousLab_RascalootYes:
 	goto_if_eq LilycoveCity_DepartmentStoreRooftop_EventScript_NotEnoughMoneyForPokemon
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 0
-	givemon SPECIES_RASCALOOT, 5, ITEM_NONE
+	givemon SPECIES_BUCCANILE, 5, ITEM_NONE
 	removemoney 30000, 0
 	setflag FLAG_PICKED_STARTER
 	playfanfare MUS_OBTAIN_ITEM
@@ -160,6 +163,31 @@ Script_TilyousLab_RascalootYes:
 	compare VAR_RESULT, YES
 	goto_if_eq TilyousLab_EventScript_NicknameStarter
 	compare VAR_RESULT, NO
+	goto_if_eq HubRoom_EventScript_AfterRecievedPoke
+	release
+	end
+
+HubRoom_EventScript_AfterRecievedPoke:	
+	msgbox Text_HubRoom_KostiwAfterPokePicked, MSGBOX_DEFAULT
+	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU
+	addobject 10
+	setobjectxyperm 10, 7, 10
+	applymovement LOCALID_KOSTIW, PositionKostiwToWalk
+	waitmovement LOCALID_KOSTIW
+	applymovement OBJ_EVENT_ID_PLAYER, KostiwWalksNikeToJanus
+	applymovement LOCALID_KOSTIW, KostiwWalksNikeToJanus
+	msgbox Text_HubRoom_SeeDadThisIsNike, MSGBOX_DEFAULT
+	applymovement 10, JanusExit
+	waitmovement 10
+	msgbox Text_HubRoom_TakesDoorsTooSeriously, MSGBOX_DEFAULT
+	applymovement LOCALID_KOSTIW, Common_Movement_ExclamationMark
+	waitmovement LOCALID_KOSTIW
+	msgbox Text_Charlie, MSGBOX_DEFAULT
+	applymovement LOCALID_KOSTIW, KostiwRunsThroughDoors
+	waitmovement LOCALID_KOSTIW
+	removeobject LOCALID_KOSTIW
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	setvar VAR_OLDALE_TOWN_STATE, 1
 	closemessage
 	release
 	end
@@ -167,6 +195,8 @@ Script_TilyousLab_RascalootYes:
 TilyousLab_EventScript_NicknameStarter::
 	setvar VAR_0x8004, 0
 	call Common_EventScript_NameReceivedPartyMon
+	goto HubRoom_EventScript_AfterRecievedPoke
+	release
 	end
 	
 TilyousLab_BobbyAndJohnPick:
@@ -217,6 +247,7 @@ Script_TilyousLab_FroTookRascaloot:
 
 Script_TilyousLab_FlobraPokeball::
 	lock
+	goto_if_unset FLAG_KOSTIW_INTRO, Script_TilyousLab_ProfTilyousPokeball
 	showmonpic SPECIES_FLOBRA, 10, 3
 	msgbox T_TilyousLab_PickFlobra, MSGBOX_YESNO
 	hidemonpic
@@ -244,9 +275,110 @@ Script_TilyousLab_FlobraYes:
 	compare VAR_RESULT, YES
 	goto_if_eq TilyousLab_EventScript_NicknameStarter
 	compare VAR_RESULT, NO
+	msgbox Text_HubRoom_KostiwAfterPokePicked, MSGBOX_DEFAULT
+	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU
+	addobject 10
+	setobjectxyperm 10, 7, 10
+	applymovement LOCALID_KOSTIW, PositionKostiwToWalk
+	waitmovement LOCALID_KOSTIW
+	applymovement OBJ_EVENT_ID_PLAYER, KostiwWalksNikeToJanus
+	applymovement LOCALID_KOSTIW, KostiwWalksNikeToJanus
+	msgbox Text_HubRoom_SeeDadThisIsNike, MSGBOX_DEFAULT
+	applymovement 10, JanusExit
+	waitmovement 10
+	msgbox Text_HubRoom_TakesDoorsTooSeriously, MSGBOX_DEFAULT
+	applymovement LOCALID_KOSTIW, Common_Movement_ExclamationMark
+	waitmovement LOCALID_KOSTIW
+	msgbox Text_Charlie, MSGBOX_DEFAULT
+	applymovement LOCALID_KOSTIW, KostiwRunsThroughDoors
+	waitmovement LOCALID_KOSTIW
+	removeobject LOCALID_KOSTIW
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 	closemessage
 	release
 	end	
+
+KostiwRunsThroughDoors:
+	walk_fastest_left
+	walk_fastest_up
+	walk_fastest_left
+	walk_fastest_up
+	walk_fastest_left
+	walk_fastest_up
+	walk_fastest_left
+	walk_fastest_up
+	step_end
+
+Text_Charlie:
+	.string "CHARLIE!$"
+
+Text_HubRoom_SeeDadThisIsNike:
+	.string "Kostiw: Hey Dad!  This is Nike,\n"
+	.string "Can you help him to get in\l"
+	.string "to the first room?\p" 
+
+	.string "Janus: He doesn't look like\n"
+	.string "Nike.\p"
+
+
+	.string "Kostiw: he's a different Nike,\n"
+	.string "he's Morpheus' son.\p"
+
+	.string "Janus: Very well, I'll help him\n"
+	.string "IF he can prove himself worthy.\p"
+	.string "Tell him to come see me\n" 
+	.string "when he's ready.$"
+
+JanusExit:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Text_HubRoom_TakesDoorsTooSeriously:
+	.string "See? I told you he\n"
+	.string "takes doors way too seriously!\p"
+	.string "But he should be able to help\n"
+	.string "you out now.  Good luck when you\l"
+	.string "get in, I'm sure I'll be seeing\l"
+	.string "you when you're ready to challe-$"
+
+
+Text_HubRoom_KostiwAfterPokePicked:	
+	.string "Okay you're ready! Come on,\n"
+	.string "I'll take you to someone who can\l"
+	.string "help you with those doors… But\l"
+	.string "I have to warn you he takes doors\l"
+	.string "really, REALLY seriously so he'll\l"
+	.string "probably need you to like, prove\l"
+	.string "yourself or something before he\l"
+	.string "helps you with them.$"
+
+
+PositionKostiwToWalk:
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+KostiwWalksNikeToJanus:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
 	
 Script_TilyousLab_FroTookFlobra:
 	applymovement 3, M_TilyousLab_JohnRascaloot
@@ -279,7 +411,8 @@ Script_TilyousLab_FroTookFlobra:
 	
 Script_TilyousLab_EmborypsPokeball::
 	lock
-	showmonpic SPECIES_EMBORYPS, 10, 3
+	goto_if_unset FLAG_KOSTIW_INTRO, Script_TilyousLab_ProfTilyousPokeball
+	showmonpic SPECIES_KOPIRAR, 10, 3
 	msgbox T_TilyousLab_PickEmboryps, MSGBOX_YESNO
 	hidemonpic
 	compare VAR_RESULT, 1
@@ -295,7 +428,7 @@ Script_TilyousLab_EmborypsYes:
 	goto_if_eq LilycoveCity_DepartmentStoreRooftop_EventScript_NotEnoughMoneyForPokemon
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 2
-	givemon SPECIES_EMBORYPS, 5, ITEM_NONE
+	givemon SPECIES_KOPIRAR, 5, ITEM_NONE
 	removemoney 30000, 0
 	setflag FLAG_PICKED_STARTER
 	playfanfare MUS_OBTAIN_ITEM
@@ -306,6 +439,26 @@ Script_TilyousLab_EmborypsYes:
 	compare VAR_RESULT, YES
 	goto_if_eq TilyousLab_EventScript_NicknameStarter
 	compare VAR_RESULT, NO
+	
+	msgbox Text_HubRoom_KostiwAfterPokePicked, MSGBOX_DEFAULT
+	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU
+	addobject 10
+	setobjectxyperm 10, 7, 10
+	applymovement LOCALID_KOSTIW, PositionKostiwToWalk
+	waitmovement LOCALID_KOSTIW
+	applymovement OBJ_EVENT_ID_PLAYER, KostiwWalksNikeToJanus
+	applymovement LOCALID_KOSTIW, KostiwWalksNikeToJanus
+	msgbox Text_HubRoom_SeeDadThisIsNike, MSGBOX_DEFAULT
+	applymovement 10, JanusExit
+	waitmovement 10
+	msgbox Text_HubRoom_TakesDoorsTooSeriously, MSGBOX_DEFAULT
+	applymovement LOCALID_KOSTIW, Common_Movement_ExclamationMark
+	waitmovement LOCALID_KOSTIW
+	msgbox Text_Charlie, MSGBOX_DEFAULT
+	applymovement LOCALID_KOSTIW, KostiwRunsThroughDoors
+	waitmovement LOCALID_KOSTIW
+	removeobject LOCALID_KOSTIW
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 	closemessage
 	release
 	end	
@@ -689,14 +842,20 @@ T_TilyousLab_HeyDontGoYet:
 	.string "I'm trying to help you not die. I \ncould always give you a carbon \lmonoxide detector if you would \lprefer!$"
 	
 T_TilyousLab_ProfTilyousPokemon:
-	.string "A Pokéball belonging to Prof. \nTilyou. \pYou can hear a quite buzz coming \nfrom inside of it.$"
+	.string "A Pokéball. \pYou can hear a quiet buzz coming \nfrom inside of it.$"
 	
 T_TilyousLab_PickRascaloot:
-	.string "The Pokéball contains the grass \ntype Bandicoot Pokémon Rascaloot. \pIs this the Pokémon you wish to \npurchase for 30000?$"
-	
+	.string "Oh, you're going with the\n"
+	.string "Bucs Pokémon, Buccanile?\p"
+	.string "It's Dark/Water type. Can't\n"
+	.string "think of a better partner for\l" 
+	.string "good ol' bucslange40yahoo.com.\p"
+	.string "Is this the partner you want?$"
+
+
 T_TilyousLab_RascalootYes:
 
-	.string "You've recieved Rascaloot!\p"
+	.string "You've recieved Buccanile!\p"
 	.string "Why don't you give it a nickname?$"
 
 T_TilyousLab_OkJohnYoureUp:
@@ -706,8 +865,8 @@ T_TilyousLab_JohnSoundsGood:
 	.string "John: Sounds good! I know who I \nwant!$"
 	
 T_TilyousLab_JohnEmboryps:
-	.string "John took the Fire Pokémon, \nEmboryps!\p"
-	.string "John: Emboryps is so lit!$"
+	.string "John took the Fire Pokémon, \nKopirar!\p"
+	.string "John: Kopirar is so lit!$"
 
 T_TilyousLab_TilyouBobbysTurn:
 	.string "Prof. Tilyou: Great pick Johnny \nWaffles. \pNow it's time for Bobby to pick!$"
@@ -735,26 +894,36 @@ T_TilyousLab_JohnLongTimeNoSee:
 	.string "Don't make us wait any longer!$"
 	
 T_TilyousLab_PickFlobra:
-	.string "The Pokéball contains the water \ntype Pokémon Flobra. \pIs this the Pokémon you wish to \npurchase for 30000?$"
-	
+	.string "Ah so you're choosing the\n" 
+	.string "Red Sox Pokémon, Wallite?\p" 
+	.string "It's Psychic/Grass type, can't go\n"
+	.string "wrong there since you are an\l"
+	.string "Official Red Sox Fan.\p"
+	.string "Is this the partner you want?$"
+
 T_TilyousLab_FlobraYes:
 
 	.string "You've recieved Flobra!\p"
 	.string "Why don't you give it a nickname?$"
 	
 T_TilyousLab_JohnRascaloot:
-	.string "John took the Grass Pokémon, \nRascaloot!\p"
-	.string "John: My Rascaloot is on fleek!$"
+	.string "John took the Grass Pokémon, \nBuccanile!\p"
+	.string "John: My Buccanile is on fleek!$"
 	
 T_TilyousLab_BobbyEmboryps:
-	.string "Bobby took the Fire Pokémon, \nEmboryps!$"
+	.string "Bobby took the Fire Pokémon, \nKopirar!$"
 	
 T_TilyousLab_PickEmboryps:
-	.string "The Pokéball contains the Fire \ntype Pokémon Emboryps. \pIs this the Pokémon you wish to \npurchase for 30000?$"
-	
+	.string "So you want the Kings Pokémon,\n"
+	.string "Kopirar… It's Fighting/Ice type,\l"
+	.string "it's an excellent choice…\p" 
+	.string "you know, because\n"
+	.string "King's got a heart.\p"  
+	.string "Is this the partner you want?$"
+
 T_TilyousLab_EmborypsYes:
 
-	.string "You've recieved Emboryps!\p"
+	.string "You've recieved Kopirar!\p"
 	.string "Why don't you give it a nickname?$"
 	
 T_TilyousLab_JohnFlobra:
@@ -762,7 +931,7 @@ T_TilyousLab_JohnFlobra:
 	.string "John: Flobra is dirty A F!$"
 	
 T_TilyousLab_BobbyRascaloot:
-	.string "Bobby took the Grass Pokémon, \nRascaloot!$"
+	.string "Bobby took the Grass Pokémon, \nBuccanile!$"
 	
 T_TilyousLab_DoesntSpendAlotOfTimeInLab:
 	.string "I'm not sure where Prof. Tilyou is. \nHe is not in the Lab very often. He \lprefers to do field work.\p"
@@ -819,4 +988,5 @@ T_TilyousLab_BobbyGivesExpShare:
 	.string "Place it in your Key Items pocket \nin your bag, and you can turn it on \lor off depending on how much of a \lchallenge you want.$"
 
 Text_NotEnoughMoneyForPokemon:
-	.string "Son, you can't afford that!$"
+	.string "You can't afford that, you lost all\n"
+	.string "your money at pai gow.$"

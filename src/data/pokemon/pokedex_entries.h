@@ -5241,166 +5241,166 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_13] =
+[NATIONAL_DEX_BUCCANILE] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_13PokedexText,
+        .description = gBuccanilePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_14] =
+[NATIONAL_DEX_BUCCANITE] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_14PokedexText,
+        .description = gBuccanitePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_15] =
+[NATIONAL_DEX_BUCCAFEAR] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_15PokedexText,
+        .description = gBuccafearPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_16] =
+[NATIONAL_DEX_KOPIRAR] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_16PokedexText,
+        .description = gKopirarPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_17] =
+[NATIONAL_DEX_KOPISPAR] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_17PokedexText,
+        .description = gKopisparPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_18] =
+[NATIONAL_DEX_KOPIROAR] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_18PokedexText,
+        .description = gKopiroarPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_19] =
+[NATIONAL_DEX_WALLITE] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_19PokedexText,
+        .description = gWallitePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_20] =
+[NATIONAL_DEX_WALLOCK] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_20PokedexText,
+        .description = gWallockPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_21] =
+[NATIONAL_DEX_WARSOCK] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_21PokedexText,
+        .description = gWarsockPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_22] =
+[NATIONAL_DEX_KICWINDO] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_22PokedexText,
+        .description = gKicwindoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_23] =
+[NATIONAL_DEX_HAUSODOOM] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_23PokedexText,
+        .description = gHausodoomPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_24] =
+[NATIONAL_DEX_DROPYCE] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_24PokedexText,
+        .description = gDropycePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_25] =
+[NATIONAL_DEX_METAROURA] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_25PokedexText,
+        .description = gMetarouraPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_26] =
+[NATIONAL_DEX_CHERNABOG] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_26PokedexText,
+        .description = gChernabogPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_27] =
+[NATIONAL_DEX_CARLILE] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_27PokedexText,
+        .description = gCarlilePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,

@@ -47,8 +47,19 @@ Route102_Text_AllenPostBattle: @ 82947DB
 	.string "I wish I would win soon…$"
 
 Route102_Text_RickIntro: @ 829480C
-	.string "Hahah! Our eyes met!\n"
-	.string "I'll take you on with my Bug Pokémon!$"
+	.string "Charlie: I fell on the way in here\n"
+	.string "to grab some breakfast…\p"
+	.string "Luckily my great friend Joe was here\n"
+	.string "to help me out…\p"
+	.string "Oh you're a friend of Joe's?\n"
+	.string "So do you care when people fall too?\p"
+	.string "I'll tell you what if you can take me\n"
+	.string "on without letting any of your Pokemon\l"
+	.string "fall, I'll give you access to my\l"
+	.string "breakfast spot: “Mom's Berry Orchard”.\p"
+	.string "I'll even throw in an old rod for\n" 
+	.string "good measure.\p"
+	.string "Deal?$"
 
 Route102_Text_RickDefeated: @ 8294847
 	.string "Ow! Down and out!$"
@@ -1158,8 +1169,15 @@ Route110_Text_DalePostBattle: @ 8298303
 	.string "You have to focus on the floater.$"
 
 Route110_Text_IsabelIntro: @ 8298349
-	.string "Ahahaha! I would go anywhere to show\n"
-	.string "off my delightful Pokémon.$"
+	.string "Cedric the Entertainer: Well well well,\n"
+	.string "if it isn't the so called\l"
+	.string "“Cedric the Entertainer the First”.\p"
+	.string "If you truly are \n"
+	.string "“Cedric the Entertainer the First”,\l"
+	.string "then let's see if you can you beat\l"
+	.string "me using only first evolutions!\p"
+	.string "And Pokemon that can't evolve\n"
+	.string "don't count!"
 
 Route110_Text_IsabelDefeated: @ 8298389
 	.string "Oh, dear, this won't do.$"

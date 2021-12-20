@@ -14116,7 +14116,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_13] =
+[SPECIES_BUCCANILE] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14147,7 +14147,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_14] =
+[SPECIES_BUCCANITE] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14178,7 +14178,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_15] =
+[SPECIES_BUCCAFEAR] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14209,7 +14209,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_16] =
+[SPECIES_KOPIRAR] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14240,7 +14240,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_17] =
+[SPECIES_KOPISPAR] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14271,7 +14271,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_18] =
+[SPECIES_KOPIROAR] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14302,7 +14302,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_19] =
+[SPECIES_WALLITE] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14333,7 +14333,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_20] =
+[SPECIES_WALLOCK] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14364,7 +14364,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_21] =
+[SPECIES_WARSOCK] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14395,7 +14395,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_22] =
+[SPECIES_KICWINDO] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14426,7 +14426,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_23] =
+[SPECIES_HAUSODOOM] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14457,7 +14457,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_24] =
+[SPECIES_DROPYCE] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14488,7 +14488,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_25] =
+[SPECIES_METAROURA] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14519,7 +14519,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_26] =
+[SPECIES_CHERNABOG] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
@@ -14550,7 +14550,7 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_27] =
+[SPECIES_CARLILE] =
     {
         .baseHP        = 48,
         .baseAttack    = 51,
