@@ -46,7 +46,7 @@ Route109_EventScript_ItemPotion:: @ 8290D67
 	finditem ITEM_POTION
 	end
 
-Route110_EventScript_ItemRareCandy:: @ 8290D74
+Route110_EventScript_ItemRareCandy:: @ 8290D74 
 	finditem ITEM_RARE_CANDY
 	end
 
