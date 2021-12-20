@@ -2321,245 +2321,236 @@ const u8 gDeoxysPokedexText[] = _(
     "agility and speed.");
 
 const u8 gRascalootPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Rascaloots love berries, and a pack of\n"
+    "them can eat all the berries from a\n"
+    "field in a day. When there are no berries\n"
+    "left, they resort to stealing from crates.");
 const u8 gBandithugPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Bandithug are aggressive and territorial,\n"
+    "and rival gangs of these Pokémon\n"
+    "are often seen fighting over\n"
+    "berry turf.");
 const u8 gRuthlashPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Ruthlash believe in taking everything by\n"
+    "force. Equipped with thorny vines\n"
+    "and a massive physique, no Pokémon\n"
+    "dare to cross their territory.");
 const u8 gFlobraPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "A slithery body of water and a\n"
+    "strangely metallic head. Experts have\n"
+    "yet to decide if Flobra's head is\n"
+    "natural or manmade.");
 const u8 gMorphloPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Morphlo's head revolves like an engine,\n"
+    "moving very fast especially on water.\n"
+    "Some days, they can be seen feeding\n"
+    "on a tree frog.");
 const u8 gMechobraPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Mechobra's shoulder cannons are both\n"
+    "fast and deadly. When it locks on to\n"
+    "prey, their ordeal becomes the trial\n"
+    "to survive.");
 const u8 gEmborypsPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Embyrops are very shy. They prefer\n"
+    "the comfort of their egg shell, and\n"
+    "use their tails as the main tool\n"
+    "for collecting food.");
 const u8 gHuntorypsPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Because they are used to living inside\n"
+    "their shell, Huntoryps prefer darker\n"
+    "environments, and cover their eyes with\n"
+    "parts of their shell as they grow up.");
 const u8 gRiptorypsPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Do not be fooled by Reyeptilian's blindfold.\n"
+    "They have special sensors in their wings\n"
+    "that seek and find their enemies better\n"
+    "than a drone.");
 const u8 gSpiritombPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
 const u8 gSnoumesePokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "They may look fluffy, but Snoumese.\n"
+    "are NOT friendly. One bad stare\n"
+    "and any enemy will be frozen solid.");
 const u8 gSnoubaulPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "It is impossible to\n"
+    "hide from Snoubaul's field of\n"
+    "vision. They can find and\n"
+    "freeze any target within seconds");
 const u8 gNevawokPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "A spirit living inside the ghost of\n"
+    "Nike's Lost shoe, Nevawok spends its\n"
+    "existence looking for its other half,\n"
+    "so it may walk again");
 const u8 gWokaginPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Wokagin's power more than doubles after\n"
+    "evolving. Possessing tremendous\n"
+    "coordination, the two halves are once\n"
+    "again able to walk.");
 const u8 gVaypingPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Vayping are considered a spiritual\n"
+    "counterpart to Koffing. However they\n"
+    "smell better, and do a ton of cool\n"
+    "tricks no one wants to see.");
 const u8 gKabowlPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Kabowl always hatch in groups of 10.\n"
+    "A Group of Kabowl is called a strike.");
 const u8 gBowlastPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Bowlast are often seen flying against\n"
+    "their young with great speed. While\n"
+    "this might look like bad parenting, they.\n"
+    "are actually training them to blast.");
 const u8 gPhokaiPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Phokai are said to be powered by stars.\n"
+    "Because of this, many are seen at night\n"
+    "floating upwards towards the vast\n."
+    "night sky");
 const u8 gPhotasmPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Playful and deviant by nature, Photasm\n"
+    "use their phazing abilities to make\n"
+    "objects such as dice to move on their\n"
+    "own and alter results of games");
 const u8 gPhotogeistPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "To some, it is uncertain if Photogeist\n"
+    "is real, or merely a projection.\n"
+    "Its true form is only revealed\n"
+    "to a trusting trainer.");
 const u8 gTogekissPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
 const u8 gOtdorblePokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Tougher than they are cute,\n"
+    "Otdorble often fool their\n"
+    "opponents with their Baby Doll\n"
+    "Eyes.");
 const u8 gLutradorPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Able to fend off attacks from\n"
+    "both front and back, it is\n"
+    "impossible to ambush Lutrador.");
 const u8 gDumbellionPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Even as a cub, Dumbellion can bench over\n"
+    "295 lbs. He can't quite get to 300 though.\n"
+    "But he doesn't let that discourage him.\n"
+    "He works out hard everyday.");
 const u8 gBarbellionPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Evolves from Dumbellion as soon as\n"
+    "Dumbellion trains hard enough to bench\n"
+    "300 lbs. No longer held back, Barbellion\n"
+    "shows his true form.");
 const u8 gOctirePokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "This Pokémon is a master of disguise.\n"
+    "Often found gathering spare car parts\n"
+    "from the bottom of the ocean, he seems\n"
+    "to have found a perfect shield.");
 const u8 gInvertebrakePokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "However unbelievable, this Pokémon\n"
+    "contains the strength to rip\n"
+    "A semi-truck in half with\n"
+    "it's bare tentacles.");
 const u8 gHaagletPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "The skin of a Haaglet is very smooth.\n"
+    "They use their comb-like tails to\n"
+    "collect and sculpt mud on their heads.");
 const u8 gWarthaagPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Their mud wigs are a status symbol.\n"
+    "Extremely vain and self-centered,\n"
+    "the only thing Warthaags care about is\n"
+    "having the best looking skin and hair.");
 const u8 gTaquittlePokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "To protect their soft bodies,\n"
+    "Taquittle develop sharp points out\n"
+    "of the corn they consume.");
 const u8 gEscaratacoPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "After evolving, Escarataco's meat\n"
+    "to cheese ratio is improved vastly.\n"
+    "They still can't move fast, but their\n"
+    "shells are fortified.");
 const u8 gChad_Bug_1PokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "This Pokémon possesses\n"
+    "impeccable accuracy.\n"
+    "It also likes to\n"
+    "avoid conflicts.");
 const u8 gChad_Bug_2PokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "When readying an attack, it will\n"
+    "collapse it's wings to increase it's\n"
+    "speed and accuracy. When it is focused\n"
+    "it will always hit it's mark.");
 const u8 gPilopooPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "A Pokémon whose personality is\n"
+    "captured in it's appearance. Lacking\n"
+    "confidece Pilopoo often belittles\n"
+    "its peers to make itself feel better");
 const u8 gBillfaloPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Though historically Billfalo were.\n"
+    "known for their strong defensive\n"
+    "capabilities, they are now thought\n"
+    "to be more capable offensively."
+    );
 const u8 gSablizzardPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Sablizzard lack consistency,\n"
+    "which has made even it's most\n"
+    "loyal supporters to declare it\n"
+    "unusable.");
 const u8 gPassimianPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "KOBE!");
 const u8 gCactarPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Some people have a strange.\n"
+    "obsession with this Pokémon.\n"
+    "They are collected and used\n"
+    "as decorations.");
 const u8 gCracthornPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Tired of being a house decoration\n"
+    "Cracthorn fights back against any\n"
+    "human who dares try to plant it.");
 const u8 gCracktussPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Some Cracthorn aren't strong enough\n"
+    "to break out of their planters.\n"
+    "Cracktuss has evolved to liberate\n"
+    "it's prior evolution.");
 const u8 gDracasterPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "The ultimate\n"
+    "Wizard in\n"
+    "terms of Attack\n"
+    "and Defense.");
 const u8 gBlue_EyesPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
-const u8 gFiller_1PokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "This legendary dragon is a powerful\n"
+    "engine of destruction. Virtually\n"
+    "invincible, very few have faced this\n"
+    "awesome creature and lived to tell the tale.");
+const u8 gRed_EyesPokedexText[] = _(
+    "A ferocious.\n"
+    "Dragon with.\n"
+    "a deadly.\n"
+    "attack.");
 const u8 gMarowak_AlolanPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
 const u8 gContraramPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "A hot and cold Pokémon.\n"
+    "When it's hot you can't slow\n"
+    "it down! When it's cold\n"
+    "prepare for a slugfest!");
 const u8 gPlasmungPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Plasmung are very hostile and dim.\n"
+    "When in trouble, it's hands\n"
+    "will begin to glow, shortly\n"
+    "before exploding.");
 const u8 gGruntazePokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Gruntaze keeps the hostility of it's\n"
+    "kin, but it's much smarter.\n"
+    "Rather than exploding hands, thier hands\n"
+    "are now a half-sword.");
 const u8 gElitetricPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "An alien life form, who has\n"
+    "an incredible gift in swordfighting.\n"
+    "It is said that his sword hands burn\n"
+    "through steel.");
 const u8 gMega_DewgongPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
@@ -2576,15 +2567,15 @@ const u8 gFiller_9PokedexText[] = _(
     "Line 3.\n"
     "Line 4.");
 const u8 gFrentoadPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Frentoad loves making friends and lures\n"
+    "humans in with its delicious odor.\n"
+    "Unfortunate, those it lures end up wanting\n"
+    "to eat it, especially trainers named John.");
 const u8 gRabatoastPokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+    "Rabatoast learned to fight back\n"
+    "against those who try to eat it.\n"
+    "It shoots melted butter into foes\n"
+    "leaving them cooked.");
 const u8 gFiller_12PokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
