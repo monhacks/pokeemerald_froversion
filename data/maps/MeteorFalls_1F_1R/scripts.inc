@@ -264,7 +264,7 @@ MeteorFalls_1F_1R_Text_BeSeeingYouTeamAqua: @ 822C04E
 
 MeteorFalls_1F_1R_Text_ArchieSeenYouBefore: @ 822C11C
 	.string "Zendano: Didn't I see you before?\n"
-	.string "At Slateport's Museum?\p"
+	.string "At Riverside's Museum?\p"
 	.string "Ah, so your name is {PLAYER}.\p"
 	//.string "At the time, I thought you were one\n"
 	//.string "of Team MAGA's goons.\p"

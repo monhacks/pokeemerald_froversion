@@ -1095,7 +1095,7 @@ RustboroCity_Text_MrBrineyLovesPeeko: @ 81E1589
 	.string "The old sailor K. Trippy lives in\n"
 	.string "a cottage by the sea.\p"
 	.string "He said he was going shopping in\n"
-	.string "Slateport for his pet, Peeko.\p"
+	.string "Riverside for his pet, Peeko.\p"
 	.string "That old sea dog, he must really love\n"
 	.string "that Peeko.$"
 

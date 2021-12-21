@@ -479,7 +479,7 @@ Route109_EventScript_Elijah:: @ 81EEC06
 
 DewfordTown_Text_BrineyLandedInSlateportDeliverGoods: @ 81EEC1D
 	.string "K. Trippy: Ahoy!\n"
-	.string "We've made land in Slateport!\p"
+	.string "We've made land in Riverside!\p"
 	.string "I suppose you're going to visit Capt.\n"
 	.string "Stern and deliver the Colangelo Gears?$"
 
@@ -498,9 +498,9 @@ Route109_Text_BrineyDeliverColangeloGears: @ 81EED5E
 	.string "K. Trippy: Then you go on and deliver\n"
 	.string "the Colangelo Gears. I'll be waiting.$"
 
-DewfordTown_Text_BrineyLandedInSlateport: @ 81EEDA7
+DewfordTown_Text_BrineyLandedInRiverside: @ 81EEDA7
 	.string "K. Trippy: Ahoy! We've made land in\n"
-	.string "Slateport!\p"
+	.string "Riverside!\p"
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail again!$"
 
