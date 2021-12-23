@@ -5320,6 +5320,36 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/HomesteadSouth_FrattHouse/border.bin",
       "blockdata_filepath": "data/layouts/HomesteadSouth_FrattHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIAGARA_VILLAGE_HOUSE1",
+      "name": "NiagaraVillage_House1_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NiagaraVillage_House1/border.bin",
+      "blockdata_filepath": "data/layouts/NiagaraVillage_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIAGARA_VILLAGE_HOUSE2",
+      "name": "NiagaraVillageHouse2_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NiagaraVillageHouse2/border.bin",
+      "blockdata_filepath": "data/layouts/NiagaraVillageHouse2/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIAGARA_VILLAGE_HOUSE3",
+      "name": "NiagaraVillageHouse3_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NiagaraVillageHouse3/border.bin",
+      "blockdata_filepath": "data/layouts/NiagaraVillageHouse3/map.bin"
     }
   ]
 }

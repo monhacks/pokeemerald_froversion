@@ -137,6 +137,7 @@ static const u8 sDoorAnimTiles_LakeMeadTilyousLab[] = INCBIN_U8("graphics/door_a
 static const u8 sDoorAnimTiles_LakeMeadFrosHouse[] = INCBIN_U8("graphics/door_anims/lakemeadfroshouse.4bpp");
 static const u8 sDoorAnimTiles_WalmoreTownBobsHouse[] = INCBIN_U8("graphics/door_anims/walmoretownbobshouse.4bpp");
 static const u8 sDoorAnimTiles_WalmoreTownJohnsHouse[] = INCBIN_U8("graphics/door_anims/walmoretownjohnshouse.4bpp");
+static const u8 sDoorAnimTiles_NiagaraVillage[] = INCBIN_U8("graphics/door_anims/niagara_village.4bpp");
 
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
@@ -231,6 +232,7 @@ static const u8 sDoorAnimPalettes_LakeMeadTilyousLab[] = {11, 11, 11, 11, 11, 11
 static const u8 sDoorAnimPalettes_LakeMeadFrosHouse[] = {11, 11, 11, 11, 11, 11, 11, 11};
 static const u8 sDoorAnimPalettes_WalmoreTownBobsHouse[] = {11, 11, 11, 11, 11, 11, 11, 11};
 static const u8 sDoorAnimPalettes_WalmoreTownJohnsHouse[] = {11, 11, 11, 11, 11, 11, 11, 11};
+static const u8 sDoorAnimPalettes_NiagaraVillage[] = {2, 2, 2, 2, 2, 2, 2, 2};
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
@@ -292,6 +294,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_LakeMeadVillage_FuckingTest,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_LakeMeadFrosHouse, sDoorAnimPalettes_LakeMeadFrosHouse},
     {METATILE_WalmoreTown_Door_BobsHouse,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_WalmoreTownBobsHouse, sDoorAnimPalettes_WalmoreTownBobsHouse},
     {METATILE_WalmoreTown_DoorsFuckingSuck,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_WalmoreTownJohnsHouse, sDoorAnimPalettes_WalmoreTownJohnsHouse},
+    {METATILE_NiagaraWoodsPrimary_HouseDoor,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_NiagaraVillage, sDoorAnimPalettes_NiagaraVillage},
     {},
 };
 

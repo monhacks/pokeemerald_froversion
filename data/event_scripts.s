@@ -1247,3 +1247,9 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/PetalburgGymBorder/scripts.inc"
 
 	.include "data/maps/HomesteadSouth_FrattHouse/scripts.inc"
+
+	.include "data/maps/NiagaraVillage_House1/scripts.inc"
+
+	.include "data/maps/NiagaraVillageHouse2/scripts.inc"
+
+	.include "data/maps/NiagaraVillageHouse3/scripts.inc"

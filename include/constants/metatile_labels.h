@@ -367,6 +367,9 @@
 #define METATILE_Mossdeep_Door              0x2A1
 #define METATILE_Mossdeep_Door_SpaceCenter  0x2ED
 
+// gTileset_NiagaraWoodsPrimary
+#define METATILE_NiagaraWoodsPrimary_HouseDoor  0x0B3
+
 // gTileset_Pacifidlog
 #define METATILE_Pacifidlog_Door                           0x21A
 #define METATILE_Pacifidlog_FloatingLogs_Horizontal0       0x250

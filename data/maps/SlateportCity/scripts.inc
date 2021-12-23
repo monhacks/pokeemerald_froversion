@@ -1015,7 +1015,7 @@ SlateportCity_Text_HowTownIsBornAndGrows: @ 81DD8A6
 SlateportCity_Text_SlateportWonderfulPlace: @ 81DD93D
 	.string "Shopping where you can breathe the\n"
 	.string "scent of the ocean…\p"
-	.string "Slateport is such a wonderful place!$"
+	.string "Riverside is such a wonderful place!$"
 
 SlateportCity_Text_BuyBricksSoDecorWontGetDirty: @ 81DD999
 	.string "If you put Dolls or Cushions on\n"
@@ -1144,7 +1144,7 @@ SlateportCity_Text_CantChangeTradeMonName: @ 81DE16C
 
 SlateportCity_Text_BattleTentBuiltRecently: @ 81DE1EC
 	.string "Recently, a Battle Tent was built\n"
-	.string "in Slateport.\p"
+	.string "in Riverside.\p"
 	.string "Gyms are fun, but the Battle Tent's\n"
 	.string "awesome in its own way.\p"
 	.string "You should go find tough Pokémon\n"
@@ -1242,7 +1242,7 @@ SlateportCity_Text_PleaseComeWithMe: @ 81DE8A0
 	.string "Please, come with me!$"
 
 SlateportCity_Text_BattleTentSign: @ 81DE8BC
-	.string "Battle Tent Slateport Site\n"
+	.string "Battle Tent Riverside Site\n"
 	.string "“Find it! The ultimate Pokémon!”$"
 
 SlateportCity_Text_SternsShipyardWantedSign: @ 81DE8F8
@@ -1254,11 +1254,11 @@ SlateportCity_Text_SternsShipyardNearsCompletion: @ 81DE940
 	.string "Stern'S Shipyard\p"
 	.string "“The ferry S. S. Tidal nears\n"
 	.string "completion for serving the ports of\l"
-	.string "Slateport and Lilycove.”$"
+	.string "Riverside and Lilycove.”$"
 
 SlateportCity_Text_SternsShipyardFerryComplete: @ 81DE9AA
 	.string "Stern'S Shipyard\p"
-	.string "“Boarding of the Slateport-Lilycove\n"
+	.string "“Boarding of the Riverside-Lilycove\n"
 	.string "ferry S. S. Tidal is handled at the\l"
 	.string "Harbor.”$"
 
@@ -1277,18 +1277,18 @@ SlateportCity_Text_CitySign: @ 81DEA6F
 	.string "cross paths.”$"
 
 SlateportCity_Text_MarketSign: @ 81DEAAF
-	.string "Slateport Market\n"
+	.string "Riverside Market\n"
 	.string "“Unique items found nowhere else!”$"
 
 SlateportCity_Text_HarborFerryUnderConstruction: @ 81DEAE3
-	.string "Slateport Harbor\p"
+	.string "Riverside Harbor\p"
 	.string "“The ferry S. S. Tidal is under\n"
 	.string "construction in the Shipyard.\p"
 	.string "“Service is scheduled to begin\n"
 	.string "shortly.”$"
 
 SlateportCity_Text_HarborSign: @ 81DEB5A
-	.string "Slateport Harbor\p"
+	.string "Riverside Harbor\p"
 	.string "“Enjoy a delightful cruise on\n"
 	.string "the ferry S. S. Tidal.”$"
 
