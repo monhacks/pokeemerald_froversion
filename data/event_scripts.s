@@ -1253,3 +1253,15 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/NiagaraVillageHouse2/scripts.inc"
 
 	.include "data/maps/NiagaraVillageHouse3/scripts.inc"
+
+	.include "data/maps/HomesteadNorth_House1/scripts.inc"
+
+	.include "data/maps/HomesteadNorth_House2/scripts.inc"
+
+	.include "data/maps/HomesteadNorth_House3/scripts.inc"
+
+	.include "data/maps/HomesteadNorth_House4/scripts.inc"
+
+	.include "data/maps/HomesteadNorth_Pokecenter/scripts.inc"
+
+	.include "data/maps/NewMap2/scripts.inc"

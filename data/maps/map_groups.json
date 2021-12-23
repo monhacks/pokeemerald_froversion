@@ -151,7 +151,13 @@
     "HomesteadSouth_FrattHouse",
     "NiagaraVillage_House1",
     "NiagaraVillageHouse2",
-    "NiagaraVillageHouse3"
+    "NiagaraVillageHouse3",
+    "HomesteadNorth_House1",
+    "HomesteadNorth_House2",
+    "HomesteadNorth_House3",
+    "HomesteadNorth_House4",
+    "HomesteadNorth_Pokecenter",
+    "NewMap2"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",

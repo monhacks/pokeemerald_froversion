@@ -2041,6 +2041,7 @@ bool8 UsedPokemonCenterWarp(void)
         MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F, 
         MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F, 
         MAP_UNION_ROOM, 
+        MAP_HOMESTEAD_NORTH_POKECENTER,
         0xFFFF 
     };
 

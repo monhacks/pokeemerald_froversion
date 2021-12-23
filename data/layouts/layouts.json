@@ -5350,6 +5350,66 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/NiagaraVillageHouse3/border.bin",
       "blockdata_filepath": "data/layouts/NiagaraVillageHouse3/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_NORTH_HOUSE1",
+      "name": "HomesteadNorth_House1_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/HomesteadNorth_House1/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadNorth_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_NORTH_HOUSE2",
+      "name": "HomesteadNorth_House2_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/HomesteadNorth_House2/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadNorth_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_NORTH_HOUSE3",
+      "name": "HomesteadNorth_House3_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/HomesteadNorth_House3/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadNorth_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_NORTH_HOUSE4",
+      "name": "HomesteadNorth_House4_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/HomesteadNorth_House4/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadNorth_House4/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMESTEAD_NORTH_POKECENTER",
+      "name": "HomesteadNorth_Pokecenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/HomesteadNorth_Pokecenter/border.bin",
+      "blockdata_filepath": "data/layouts/HomesteadNorth_Pokecenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP2",
+      "name": "NewMap2_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/NewMap2/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap2/map.bin"
     }
   ]
 }

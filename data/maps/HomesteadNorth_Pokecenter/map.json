@@ -1,12 +1,12 @@
 {
-  "id": "MAP_FALLARBOR_TOWN_POKEMON_CENTER_1F",
-  "name": "FallarborTown_PokemonCenter_1F",
-  "layout": "LAYOUT_POKEMON_CENTER_1F",
-  "music": "MUS_POKE_CENTER",
-  "region_map_section": "MAPSEC_FALLARBOR_TOWN",
+  "id": "MAP_HOMESTEAD_NORTH_POKECENTER",
+  "name": "HomesteadNorth_Pokecenter",
+  "layout": "LAYOUT_HOMESTEAD_NORTH_POKECENTER",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_INDOOR",
+  "map_type": "MAP_TYPE_NONE",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
@@ -19,16 +19,16 @@
       "x": 7,
       "y": 2,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FallarborTown_PokemonCenter_1F_EventScript_Nurse",
+      "script": "HomesteadNorth_PokemonCenter_1F_EventScript_Nurse",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
       "x": 10,
       "y": 6,
       "elevation": 3,
@@ -37,57 +37,50 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FallarborTown_PokemonCenter_1F_EventScript_Girl",
+      "script": "HomesteadNorth_EventScript_ExpertF",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 2,
-      "y": 3,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "FallarborTown_PokemonCenter_1F_EventScript_ExpertM",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 10,
-      "y": 2,
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 12,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FallarborTown_PokemonCenter_1F_EventScript_Lanette",
-      "flag": "FLAG_HIDE_FALLORBOR_POKEMON_CENTER_LANETTE"
+      "script": "HomesteadNorth_EventScript_Hiker",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "x": 1,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HomesteadNorth_EventScript_Gentleman",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
       "x": 7,
       "y": 8,
-      "elevation": 3,
-      "dest_map": "MAP_FALLARBOR_TOWN",
-      "dest_warp_id": 2
+      "elevation": 0,
+      "dest_map": "MAP_HOMESTEAD_NORTH",
+      "dest_warp_id": 6
     },
     {
       "x": 6,
       "y": 8,
-      "elevation": 3,
-      "dest_map": "MAP_FALLARBOR_TOWN",
-      "dest_warp_id": 2
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "elevation": 4,
-      "dest_map": "MAP_FALLARBOR_TOWN_POKEMON_CENTER_2F",
-      "dest_warp_id": 0
+      "elevation": 0,
+      "dest_map": "MAP_HOMESTEAD_NORTH",
+      "dest_warp_id": 6
     }
   ],
   "coord_events": [

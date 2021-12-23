@@ -187,6 +187,7 @@ end
 SnowVillage_Movement_PlayerBegins:
 	walk_up
 	walk_up
+	walk_up
 	walk_right
 	walk_right
 step_end
@@ -347,3 +348,32 @@ HomesteadNorth_Movement_PanCameraUp: @ 825D9B0
 	walk_up
 	walk_up
 	step_end
+
+HomesteadNorth_EventScript_Boy1::
+	lock
+	faceplayer
+	msgbox HomesteadNorth_Text_Gingerbread, MSGBOX_DEFAULT
+	release
+end
+
+HomesteadNorth_Text_GingerBread:
+	.string "When the town was first founded,\n"
+	.string "all the houses were made out of\l"
+	.string "gingerbread in the spirit of\l"
+	.string "Christmas.\p"
+	.string "That didn't last long. Gingerbread\n"
+	.string "has poor structural integrity.$"
+
+HomesteadNorth_EventScript_Boy2::
+	lock
+	faceplayer
+	msgbox HomesteadNorth_Text_LikeToEatCookies, MSGBOX_DEFAULT
+	release
+end
+
+HomesteadNorth_Text_LikeToEatCookies:
+	.string "NOM NOM NOM NOM NOM.\p"
+	.string "...\n"
+	.string "...\p"
+	.string "I eat all the cookies Mom\n"
+	.string "leaves for Santa!$"
