@@ -185,6 +185,48 @@
       "elevation": 0,
       "dest_map": "MAP_HOMESTEAD_CAVERNS_ENTRANCE",
       "dest_warp_id": 0
+    },
+    {
+      "x": 27,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_HOMESTEAD_NORTH",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 47,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_HOMESTEAD_NORTH",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 13,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_HOMESTEAD_NORTH",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 12,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_HOMESTEAD_NORTH",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 58,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 45,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_HOMESTEAD_NORTH",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

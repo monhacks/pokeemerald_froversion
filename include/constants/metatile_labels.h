@@ -241,6 +241,11 @@
 #define METATILE_GenericBuilding_TrickHouse_Door_Closed  0x21B
 #define METATILE_GenericBuilding_TrickHouse_Stairs_Down  0x219
 
+// gTileset_HomesteadNorth
+#define METATILE_HomesteadNorth_Door_Lodge       0x24B
+#define METATILE_HomesteadNorth_Door_PokeCenter  0x293
+#define METATILE_HomesteadNorth_Door_Pokemart    0x2B3
+
 // gTileset_InsideOfTruck
 #define METATILE_InsideOfTruck_DoorClosedFloor_Bottom  0x21D
 #define METATILE_InsideOfTruck_DoorClosedFloor_Mid     0x215
