@@ -498,7 +498,7 @@ Route109_Text_BrineyDeliverColangeloGears: @ 81EED5E
 	.string "K. Trippy: Then you go on and deliver\n"
 	.string "the Colangelo Gears. I'll be waiting.$"
 
-DewfordTown_Text_BrineyLandedInRiverside: @ 81EEDA7
+DewfordTown_Text_BrineyLandedInSlateport: @ 81EEDA7
 	.string "K. Trippy: Ahoy! We've made land in\n"
 	.string "Riverside!\p"
 	.string "You just go on and tell me whenever\n"

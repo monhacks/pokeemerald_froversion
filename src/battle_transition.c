@@ -281,6 +281,7 @@ static const u8 sUnusedBrendan_Gfx[] = INCBIN_U8("graphics/battle_transitions/un
 static const u8 sUnusedLass_Gfx[] = INCBIN_U8("graphics/battle_transitions/unused_lass.4bpp");
 static const u32 sShrinkingBoxTileset[] = INCBIN_U32("graphics/battle_transitions/shrinking_box.4bpp");
 static const u16 sEvilTeam_Palette[] = INCBIN_U16("graphics/battle_transitions/evil_team.gbapal");
+static const u16 sTeamMaga_Palette[] = INCBIN_U16("graphics/battle_transitions/team_maga.gbapal");
 static const u32 sTeamAqua_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_aqua.4bpp.lz");
 static const u32 sTeamAqua_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_aqua.bin.lz");
 static const u32 sTeamMagma_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_magma.4bpp.lz");
@@ -1382,7 +1383,7 @@ static bool8 Phase2_Aqua_Func1(struct Task *task)
     GetBg0TilesDst(&tilemap, &tileset);
     CpuFill16(0, tilemap, 0x800);
     LZ77UnCompVram(sTeamAqua_Tileset, tileset);
-    LoadPalette(sEvilTeam_Palette, 0xF0, 0x20);
+    LoadPalette(sTeamMaga_Palette, 0xF0, 0x20);
 
     task->tState++;
     return FALSE;
