@@ -292,18 +292,16 @@ Route104_Text_MiaNotEnoughMons: @ 8295449
 	.string "We're too strong for you!$"
 
 Route104_Text_IvanIntro: @ 82954BD
-	.string "Why keep it a secret?\n"
-	.string "I'm the WATER Pokémon expert!\p"
-	.string "Huh?\n"
-	.string "You don't know me?$"
+	.string "Brycen Hopkins and Kendall\n"
+	.string "Blanton. Pick your poison.$"
 
 Route104_Text_IvanDefeat: @ 8295509
-	.string "I thought I wasn't too bad, if I may\n"
-	.string "say so, but I guess not… Bleah…$"
+	.string "Brycen Hopkins and Kendall\n"
+	.string "Blanton. Pick your poison.$"
 
 Route104_Text_IvanPostBattle: @ 829554E
-	.string "I got too into fishing.\n"
-	.string "I forgot I had to raise my Pokémon…$"
+	.string "Brycen Hopkins and Kendall\n"
+	.string "Blanton. Pick your poison.$"
 
 Route104_Text_BillyIntro: @ 829558A
 	.string "Leaving footprints in the sand is\n"
@@ -452,17 +450,19 @@ Route105_Text_FosterPostBattle: @ 8295DAB
 	.string "at a nice rock without growing bored.$"
 
 Route105_Text_LuisIntro: @ 8295DF5
-	.string "Whew! I was worried that a kid was\n"
-	.string "drowning when I saw you.\p"
-	.string "You seem to be okay, so what do you\n"
-	.string "say to a battle?$"
+	.string "I don't think the cabin pressure\n"
+	.string "would allow a normal person to\p"
+	.string "open the door in flight.$"
 
 Route105_Text_LuisDefeated: @ 8295E66
-	.string "Glub… Glub…$"
+	.string "I don't think the cabin pressure\n"
+	.string "would allow a normal person to\p"
+	.string "open the door in flight.$"
 
 Route105_Text_LuisPostBattle: @ 8295E72
-	.string "If you are drowning, the signal is to\n"
-	.string "wave one arm toward the beach.$"
+	.string "I don't think the cabin pressure\n"
+	.string "would allow a normal person to\p"
+	.string "open the door in flight.$"
 
 Route105_Text_DominikIntro: @ 8295EB7
 	.string "Swimming the deep blue sea…\n"
@@ -478,17 +478,22 @@ Route105_Text_DominikPostBattle: @ 8295F08
 	.string "SLATEPORT, but I forgot.$"
 
 Route105_Text_BeverlyIntro: @ 8295F5C
-	.string "My body feels lighter in the water.\n"
-	.string "It's as if I've gotten slimmer!$"
+	.string "In middle school after we had a\n"
+	.string "food fight we got assigned seats\l"
+	.string "at lunch and he ate tray fulls\l"
+	.string "of Mayo plain$"
 
 Route105_Text_BeverlyDefeated: @ 8295FA0
-	.string "I'm floating…$"
+	.string "In middle school after we had a\n"
+	.string "food fight we got assigned seats\l"
+	.string "at lunch and he ate tray fulls\l"
+	.string "of Mayo plain$"
 
 Route105_Text_PostBattle: @ 8295FAE
-	.string "Your body weight is reduced to just\n"
-	.string "one tenth in the water.\p"
-	.string "That would make me…\n"
-	.string "Whoops! I'm not telling you my weight!$"
+	.string "In middle school after we had a\n"
+	.string "food fight we got assigned seats\l"
+	.string "at lunch and he ate tray fulls\l"
+	.string "of Mayo plain$"
 
 Route105_Text_ImaniIntro: @ 8296025
 	.string "The blue, blue sky…\n"
@@ -1003,8 +1008,9 @@ Route109_Text_HaileyPostBattle: @ 8297A40
 	.string "my Pokémon will become tougher.$"
 
 Route109_Text_ElijahIntro: @ 8297A82
-	.string "For a guy as macho as me, this kind\n"
-	.string "of Pokémon is the perfect match!$"
+	.string "I had food poisoning about 10\n"
+	.string "years ago in Disney World.\n"
+	.string "Think that was my last throw up.$"
 
 Route109_Text_ElijahDefeated: @ 8297AC7
 	.string "I'm cool even in defeat, hey?$"
@@ -1039,15 +1045,16 @@ Route110_Text_AnthonyPostBattle: @ 8297C1F
 	.string "I need to reconsider this…$"
 
 Route110_Text_BenjaminIntro: @ 8297C63
-	.string "Don't panic if your BIKE's going fast!$"
+	.string "Looks like a pokemon, could be\n"
+	.string "wrong though.$"
 
 Route110_Text_BenjaminDefeated: @ 8297C8A
-	.string "I shouldn't panic during Pokémon\n"
-	.string "battles…$"
+	.string "Looks like a pokemon, could be\n"
+	.string "wrong though.$"
 
 Route110_Text_BenjaminPostBattle: @ 8297CB4
-	.string "There's no need to panic or stress.\n"
-	.string "Take it easy. There's plenty of time.$"
+	.string "Looks like a pokemon, could be\n"
+	.string "wrong though.$"
 
 Route110_Text_BenjaminRegister: @ 8297CFE
 	.string "I'll keep chugging on without stressing.\n"
@@ -1157,16 +1164,14 @@ Route110_Text_EdwinRematchPostBattle: @ 82982A2
 	.string "mine!$"
 
 Route110_Text_DaleIntro: @ 82982CC
-	.string "Hey!\n"
-	.string "Don't sneak up behind me like that!$"
+	.string "Nature is HEALING$"
 
 Route110_Text_DaleDefeated: @ 82982F5
-	.string "I lost!\n"
-	.string "Drat!$"
+	.string "Nature is HEALING$"
 
 Route110_Text_DalePostBattle: @ 8298303
-	.string "Fishing is all about concentration.\n"
-	.string "You have to focus on the floater.$"
+	.string "Nature is HEALING$"
+
 
 Route110_Text_IsabelIntro: @ 8298349
 	.string "Cedric the Entertainer: Well well well,\n"
@@ -1287,20 +1292,22 @@ Route111_Text_HeidiPostBattle: @ 829891B
 	.string "an eye on it!$"
 
 Route111_Text_BeauIntro: @ 829898E
-	.string "Swallow your pride and surrender,\n"
-	.string "because silence is golden. And I\l"
-	.string "wouldn't pay a penny to hear your\l"
-	.string "thoughts$"
+	.string "They need to normalize more\n"
+	.string "advanced metrics in the NFL like\l"
+	.string "baseball but the fans would\l"
+	.string "get confused.$"
 
 Route111_Text_BeauDefeat: @ 82989E6
-	.string "Lie down your guard and surrender.\n"
-	.string "All that you're proving is your\l"
-	.string "ignorance.$"
+	.string "They need to normalize more\n"
+	.string "advanced metrics in the NFL like\l"
+	.string "baseball but the fans would\l"
+	.string "get confused.$"
 
 Route111_Text_BeauPostBattle: @ 8298A03
-	.string "I'm going to be a real hero one day.\n"
-	.string "I'm going to work harder to make me\l"
-	.string "and my Pokémon stronger.$"
+	.string "They need to normalize more\n"
+	.string "advanced metrics in the NFL like\l"
+	.string "baseball but the fans would\l"
+	.string "get confused.$"
 
 Route111_Text_BeckyIntro: @ 8298A65
 	.string "I heard there are fossils to be found\n"
@@ -1515,15 +1522,19 @@ Route111_Text_CelinaPostBattle: @ 829964B
 	.string "You're one fabulous TRAINER.$"
 
 Route111_Text_HaydenIntro: @ 8299682
-	.string "When you're as famished as I am,\n"
-	.string "there is no room for pity!$"
+	.string "A gallon of milk a day when\n"
+	.string "you're almost 30 is not a normal\l"
+	.string "part of an adult's diet.$"
 
 Route111_Text_HaydenDefeat: @ 82996BE
-	.string "Groan…$"
+	.string "A gallon of milk a day when\n"
+	.string "you're almost 30 is not a normal\l"
+	.string "part of an adult's diet.$"
 
 Route111_Text_HaydenPostBattle: @ 82996C5
-	.string "My stomach is grumbling!\n"
-	.string "Maybe I can grill some BERRIES…$"
+	.string "A gallon of milk a day when\n"
+	.string "you're almost 30 is not a normal\l"
+	.string "part of an adult's diet.$"
 
 Route111_Text_BiancaIntro: @ 82996FE
 	.string "Did you come from MAUVILLE?\n"
@@ -1726,18 +1737,16 @@ Route113_Text_LaoPostRematch: @ 829A13A
 	.string "I bid thee farewell.$"
 
 Route113_Text_LungIntro: @ 829A192
-	.string "Thanks for finding me!\n"
-	.string "But we still have to battle!$"
+	.string "Six to eight eggs for a grown\n"
+	.string "man is a normal serving.$"
 
 Route113_Text_LungDefeat: @ 829A1C6
-	.string "I'll use my ninjutsu on you…\n"
-	.string "“VOLCANIC ASH SWIRL CLOAK”!\p"
-	.string "…What?\n"
-	.string "It's already over?$"
+	.string "Six to eight eggs for a grown\n"
+	.string "man is a normal serving.$"
 
 Route113_Text_LungPostBattle: @ 829A219
-	.string "You know what's crummy about hiding?\n"
-	.string "It's lonely if no one comes along.$"
+	.string "Six to eight eggs for a grown\n"
+	.string "man is a normal serving.$"
 
 Route113_Text_ToriIntro: @ 829A261
 	.string "TORI: Both of us, we collect ashes.\n"
@@ -1847,17 +1856,16 @@ Route114_Text_LucasPostBattle: @ 829A7D4
 	.string "with blizzards and avalanches.$"
 
 Route114_Text_ShaneIntro: @ 829A818
-	.string "Camping's fun! You can fish, roast\n"
-	.string "marshmallows, and tell spooky stories!\p"
-	.string "But the best of all are the Pokémon\n"
-	.string "battles!$"
+	.string "Is it normal to be itchy where\n"
+	.string "you get your Covid shot?$"
 
 Route114_Text_ShaneDefeat: @ 829A88F
-	.string "Way too strong!$"
+	.string "Is it normal to be itchy where\n"
+	.string "you get your Covid shot?$"
 
 Route114_Text_ShanePostBattle: @ 829A89F
-	.string "I think it's great that I can go\n"
-	.string "camping with my Pokémon.$"
+	.string "Is it normal to be itchy where\n"
+	.string "you get your Covid shot?$"
 
 Route114_Text_NancyIntro: @ 829A8D9
 	.string "I need to exercise after a meal.\n"
@@ -2030,18 +2038,19 @@ Route114_Text_AngelinaPostBattle: @ 829B1BC
 	.string "they evolve, it's startling!$"
 
 Route115_Text_TimothyIntro: @ 829B1FA
-	.string "Hm…\n"
-	.string "You seem rather capable…\l"
-	.string "Let me keep you company!$"
+	.string "If you could be one Pokemon in\n"
+	.string "this normal world, which one\l"
+	.string "would you be?$"
 
 Route115_Text_TimothyDefeat: @ 829B230
-	.string "You're much stronger than\n"
-	.string "I'd imagined!$"
+	.string "If you could be one Pokemon in\n"
+	.string "this normal world, which one\l"
+	.string "would you be?$"
 
 Route115_Text_TimothyPostBattle: @ 829B258
-	.string "There is no such thing as a born genius.\n"
-	.string "It all depends on effort!\l"
-	.string "That is what I believe…$"
+	.string "If you could be one Pokemon in\n"
+	.string "this normal world, which one\l"
+	.string "would you be?$"
 
 Route115_Text_TimothyRegister: @ 829B2B3
 	.string "Hmm… A loss this thorough has been\n"
@@ -2229,20 +2238,30 @@ Route116_Text_JoeyPostBattle: @ 829BBC6
 	.string "I've got another one!$"
 
 Route116_Text_JoseIntro: @ 829BBFD
-	.string "I won't hesitate to put you in your\n"
-	.string "place.\p"
-	.string "You are the straw that's crushing\n"
-	.string "my back.$"
+	.string "I had food poisoning like 2 years\n"
+	.string "ago. Threw up every half hour\p"
+	.string "for like 9 hours and was literally\n"
+	.string "like too weak to do anything for\p"
+	.string "like a week and a half. Hit me\n"
+	.string "out of nowhere. Honestly it was\p"
+	.string "a good thing it happened during\n"
+	.string "the time I was laid off because\P
+	.string "I definitely couldn't go anywhere$"
+
 
 Route116_Text_JoseDefeat: @ 829BC25
-	.string "You ask me to be blameless.\p"
-	.string "But who are you to decide what's\n"
-	.string "right?$"
+	.string "No no no.\$"
 
 Route116_Text_JosePostBattle: @ 829BC42
-	.string "You ask me to be blameless.\p"
-	.string "But who are you to decide what's\n"
-	.string "right?$"
+	.string "I had food poisoning like 2 years\n"
+	.string "ago. Threw up every half hour\p"
+	.string "for like 9 hours and was literally\n"
+	.string "like too weak to do anything for\p"
+	.string "like a week and a half. Hit me\n"
+	.string "out of nowhere. Honestly it was\p"
+	.string "a good thing it happened during\n"
+	.string "the time I was laid off because\P
+	.string "I definitely couldn't go anywhere$"
 
 Route116_Text_JaniceIntro: @ 829BC7F
 	.string "Let me teach you how strong my\n"
@@ -2256,18 +2275,16 @@ Route116_Text_JanicePostBattle: @ 829BCCC
 	.string "power, that's ideal, I think.$"
 
 Route116_Text_JerryIntro: @ 829BD0C
-	.string "We learn all sorts of things at the\n"
-	.string "TRAINER'S SCHOOL.\p"
-	.string "I want to test things out for real!$"
+	.string "The new venom movie looks\n"
+	.string "like it’s going to be bad.$"
 
 Route116_Text_JerryDefeat: @ 829BD66
-	.string "I slacked off in school…\n"
-	.string "That's why I lost.$"
+	.string "The new venom movie looks\n"
+	.string "like it’s going to be bad.$"
 
 Route116_Text_JerryPostBattle: @ 829BD92
-	.string "I'll have to redo some courses at\n"
-	.string "the TRAINER'S SCHOOL.\l"
-	.string "If I don't, ROXANNE will be steamed.$"
+	.string "The new venom movie looks\n"
+	.string "like it’s going to be bad.$"
 
 Route116_Text_JerryRegister1: @ 829BDEF
 	.string "I learned at the TRAINER'S SCHOOL\n"
@@ -2432,16 +2449,16 @@ Route117_Text_LydiaPostRematch: @ 829C75A
 	.string "of {POKEBLOCK}S, depending on their nature.$"
 
 Route117_Text_DylanIntro: @ 829C7A5
-	.string "I'm in the middle of a triathlon, but,\n"
-	.string "whatever, let's have a battle!$"
+	.string "It was like, our poison control\n"
+	.string "number or something.$"
 
 Route117_Text_DylanDefeat: @ 829C7EB
-	.string "I ran out of energy!$"
+	.string "It was like, our poison control\n"
+	.string "number or something.$"
 
 Route117_Text_DylanPostBattle: @ 829C800
-	.string "I may have blown it…\p"
-	.string "I might have dropped to last during\n"
-	.string "that battle…$"
+	.string "It was like, our poison control\n"
+	.string "number or something.$"
 
 Route117_Text_DylanRegister: @ 829C846
 	.string "Pokémon have to be strong, too?\n"
