@@ -2245,12 +2245,12 @@ Route116_Text_JoseIntro: @ 829BBFD
 	.string "like a week and a half. Hit me\n"
 	.string "out of nowhere. Honestly it was\p"
 	.string "a good thing it happened during\n"
-	.string "the time I was laid off because\P
+	.string "the time I was laid off because\p"
 	.string "I definitely couldn't go anywhere$"
 
 
 Route116_Text_JoseDefeat: @ 829BC25
-	.string "No no no.\$"
+	.string "No no no.$"
 
 Route116_Text_JosePostBattle: @ 829BC42
 	.string "I had food poisoning like 2 years\n"
@@ -2260,7 +2260,7 @@ Route116_Text_JosePostBattle: @ 829BC42
 	.string "like a week and a half. Hit me\n"
 	.string "out of nowhere. Honestly it was\p"
 	.string "a good thing it happened during\n"
-	.string "the time I was laid off because\P
+	.string "the time I was laid off because\p"
 	.string "I definitely couldn't go anywhere$"
 
 Route116_Text_JaniceIntro: @ 829BC7F
@@ -2276,15 +2276,15 @@ Route116_Text_JanicePostBattle: @ 829BCCC
 
 Route116_Text_JerryIntro: @ 829BD0C
 	.string "The new venom movie looks\n"
-	.string "like it’s going to be bad.$"
+	.string "like it's going to be bad.$"
 
 Route116_Text_JerryDefeat: @ 829BD66
 	.string "The new venom movie looks\n"
-	.string "like it’s going to be bad.$"
+	.string "like it's going to be bad.$"
 
 Route116_Text_JerryPostBattle: @ 829BD92
 	.string "The new venom movie looks\n"
-	.string "like it’s going to be bad.$"
+	.string "like it's going to be bad.$"
 
 Route116_Text_JerryRegister1: @ 829BDEF
 	.string "I learned at the TRAINER'S SCHOOL\n"

@@ -9842,8 +9842,9 @@ static const struct TrainerMonItemDefaultMoves sParty_Sarah[] = {
     .iv = 0,
     .lvl = 13,
     .species = SPECIES_TANGELA,
-    .heldItem = ITEM_NONE
+    .heldItem = ITEM_NONE,
     },
+    {
     .lvl = 13,
     .species = SPECIES_FURRET,
     .heldItem = ITEM_NUGGET
