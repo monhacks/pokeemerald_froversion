@@ -1013,12 +1013,14 @@ Route109_Text_ElijahIntro: @ 8297A82
 	.string "Think that was my last throw up.$"
 
 Route109_Text_ElijahDefeated: @ 8297AC7
-	.string "I'm cool even in defeat, hey?$"
+	.string "I had food poisoning about 10\n"
+	.string "years ago in Disney World.\n"
+	.string "Think that was my last throw up.$"
 
 Route109_Text_ElijahPostBattle: @ 8297AE5
-	.string "For a guy as macho as me, a port\n"
-	.string "is the perfect setting!\p"
-	.string "I guess I'll head for SLATEPORT.$"
+	.string "I had food poisoning about 10\n"
+	.string "years ago in Disney World.\n"
+	.string "Think that was my last throw up.$""
 
 Route110_Text_JacobIntro: @ 8297B3F
 	.string "Whoa! Watch it!\n"
@@ -2245,12 +2247,12 @@ Route116_Text_JoseIntro: @ 829BBFD
 	.string "like a week and a half. Hit me\n"
 	.string "out of nowhere. Honestly it was\p"
 	.string "a good thing it happened during\n"
-	.string "the time I was laid off because\P
+	.string "the time I was laid off because\p"
 	.string "I definitely couldn't go anywhere$"
 
 
 Route116_Text_JoseDefeat: @ 829BC25
-	.string "No no no.\$"
+	.string "No no no.$"
 
 Route116_Text_JosePostBattle: @ 829BC42
 	.string "I had food poisoning like 2 years\n"
@@ -2260,7 +2262,7 @@ Route116_Text_JosePostBattle: @ 829BC42
 	.string "like a week and a half. Hit me\n"
 	.string "out of nowhere. Honestly it was\p"
 	.string "a good thing it happened during\n"
-	.string "the time I was laid off because\P
+	.string "the time I was laid off because\p"
 	.string "I definitely couldn't go anywhere$"
 
 Route116_Text_JaniceIntro: @ 829BC7F
@@ -2276,15 +2278,15 @@ Route116_Text_JanicePostBattle: @ 829BCCC
 
 Route116_Text_JerryIntro: @ 829BD0C
 	.string "The new venom movie looks\n"
-	.string "like it’s going to be bad.$"
+	.string "like it's going to be bad.$"
 
 Route116_Text_JerryDefeat: @ 829BD66
 	.string "The new venom movie looks\n"
-	.string "like it’s going to be bad.$"
+	.string "like it's going to be bad.$"
 
 Route116_Text_JerryPostBattle: @ 829BD92
 	.string "The new venom movie looks\n"
-	.string "like it’s going to be bad.$"
+	.string "like it's going to be bad.$"
 
 Route116_Text_JerryRegister1: @ 829BDEF
 	.string "I learned at the TRAINER'S SCHOOL\n"
