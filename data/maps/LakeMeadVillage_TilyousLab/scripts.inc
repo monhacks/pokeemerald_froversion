@@ -248,7 +248,7 @@ Script_TilyousLab_FroTookRascaloot:
 Script_TilyousLab_FlobraPokeball::
 	lock
 	goto_if_unset FLAG_KOSTIW_INTRO, Script_TilyousLab_ProfTilyousPokeball
-	showmonpic SPECIES_FLOBRA, 10, 3
+	showmonpic SPECIES_WALLITE, 10, 3
 	msgbox T_TilyousLab_PickFlobra, MSGBOX_YESNO
 	hidemonpic
 	compare VAR_RESULT, 1
@@ -264,7 +264,7 @@ Script_TilyousLab_FlobraYes:
 	goto_if_eq LilycoveCity_DepartmentStoreRooftop_EventScript_NotEnoughMoneyForPokemon
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_STARTER_MON 1
-	givemon SPECIES_FLOBRA, 5, ITEM_NONE
+	givemon SPECIES_WALLITE, 5, ITEM_NONE
 	removemoney 30000, 0
 	setflag FLAG_PICKED_STARTER
 	playfanfare MUS_OBTAIN_ITEM
@@ -903,7 +903,7 @@ T_TilyousLab_PickFlobra:
 
 T_TilyousLab_FlobraYes:
 
-	.string "You've recieved Flobra!\p"
+	.string "You've recieved Wallite!\p"
 	.string "Why don't you give it a nickname?$"
 	
 T_TilyousLab_JohnRascaloot:

@@ -28,7 +28,7 @@ end
 
 TrainerBattle2SetVar:
 	lock
-	setvar VAR_LITTLEROOT_TOWN_STATE, 1
+	setvar VAR_LITTLEROOT_TOWN_STATE, 6
 	msgbox RusturfTunnel_Text_GruntDefeat, MSGBOX_DEFAULT
 	release
 end

@@ -839,15 +839,22 @@ Route109_Text_AlicePostBattle: @ 829720F
 	.string "Cheeks are the most prone to burning!$"
 
 Route109_Text_HueyIntro: @ 8297235
-	.string "I've laid anchor in ports around\n"
-	.string "the world, but SLATEPORT's the best.$"
+	.string "Hey Nike, Glad you made it\n"
+	.string "this far! You must have done some\l"
+	.string "good neck stretches!  Just like\l"
+	.string "it's important to stretch out\l"
+	.string "before you bowl, I like to\l"
+	.string "stretch out my battles.\p"
+	.string "Hmmm/p"
+	.string "How about this if you can beat me\n"
+	.string "without using an attacking move\l"
+	.string "I'll give you a reward?$"
 
 Route109_Text_HueyDefeated: @ 829727B
-	.string "You're the best!$"
+	.string "(Sniffle Sniffle)\p"
 
 Route109_Text_HueyPostBattle: @ 829728C
-	.string "In the best port was the best\n"
-	.string "TRAINER…$"
+	.string "(Sniffle Sniffle)$"
 
 Route109_Text_EdmondIntro: @ 82972B3
 	.string "Urrrrppp…\n"
@@ -1020,7 +1027,7 @@ Route109_Text_ElijahDefeated: @ 8297AC7
 Route109_Text_ElijahPostBattle: @ 8297AE5
 	.string "I had food poisoning about 10\n"
 	.string "years ago in Disney World.\n"
-	.string "Think that was my last throw up.$""
+	.string "Think that was my last throw up.$"
 
 Route110_Text_JacobIntro: @ 8297B3F
 	.string "Whoa! Watch it!\n"
@@ -3110,18 +3117,19 @@ Route120_Text_JenniferPostBattle: @ 829EB6E
 	.string "will make battle styles change.$"
 
 Route120_Text_ChipIntro: @ 829EBAF
-	.string "Who might you be?\p"
-	.string "Are you perhaps searching for ancient\n"
-	.string "ruins that are rumored to possibly\l"
-	.string "exist according to legend?$"
+	.string "This part of the?\n"
+	.string "game is not finished yet.\p"
+	.string "Calm the fuck down.$"
 
 Route120_Text_ChipDefeat: @ 829EC25
-	.string "What a disgraceful setback…$"
+	.string "This part of the?\n"
+	.string "game is not finished yet.\p"
+	.string "Calm the fuck down.$"
 
 Route120_Text_ChipPostBattle: @ 829EC41
-	.string "That giant rock… I would like to\n"
-	.string "believe it may indeed contain ancient\l"
-	.string "ruins. But I see no entrance.$"
+	.string "This part of the?\n"
+	.string "game is not finished yet.\p"
+	.string "Calm the fuck down.$"
 
 Route120_Text_ClarissaIntro: @ 829ECA6
 	.string "Why am I carrying this parasol?\p"
@@ -3575,16 +3583,17 @@ Route123_Text_DavisPostBattle: @ 82A0512
 	.string "You have to keep it a secret!$"
 
 Route123_Text_JazmynIntro: @ 82A054E
-	.string "My confidence will get a boost by\n"
-	.string "beating someone obviously strong!$"
+	.string "I will let you through\n"
+	.string "this door if you can\l"
+	.string "your strenght has grown.$"
 
 Route123_Text_JazmynDefeat: @ 82A0592
-	.string "There goes my confidence…$"
+	.string "Well Done.$"
 
 Route123_Text_JazmynPostBattle: @ 82A05AC
-	.string "They say that you can't judge a person\n"
-	.string "by their appearance.\p"
-	.string "But often, their looks don't lie…$"
+	.string "Come see me in the HUB\n"
+	.string "room when you defeat the.\l"
+	.string "next leader.$"
 
 Route123_Text_FrederickIntro: @ 82A060A
 	.string "Hello, child!\n"

@@ -2500,9 +2500,9 @@ static const u8 sFairyGemDesc[] = _(
     "Type moves.");
 
 static const u8 sAssaultVestDesc[] = _(
-    "Raises Sp. Def but\n"
-    "prevents the use\n"
-    "of status moves.");
+    "A soccer ball you're\n"
+    "confident you can\n"
+    "kick over a shed.");
 
 static const u8 sPixiePlateDesc[] = _(
     "A stone tablet that\n"

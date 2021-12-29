@@ -2,22 +2,98 @@
 .set LOCALID_KOSTIW, 7
 
 HubRoom_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, HubroomOnTransition
 	map_script MAP_SCRIPT_ON_LOAD, MS_HubRoom_OnLoad
 	.byte 0
 
+HubroomOnTransition::
+	setrespawn HEAL_LOCATION_HUB_ROOM
+
 MS_HubRoom_OnLoad::
 	compare VAR_OLDALE_TOWN_STATE, 0
-	goto_if_eq Script_HubRoom_RemoveKostiwMatt
+	call_if_eq Script_HubRoom_RemoveKostiwMatt
+	compare VAR_HUBROOM_STATE, 1
+	call_if_eq Script_ShowJohnHubRoom
 end
+
+HubRoom_John_Dialouge::
+	goto_if_set FLAG_JOHN_DIALOUGE_COMPLETE, John_Dialouge_End
+	msgbox HubRoom_JohnDialouge_Text, MSGBOX_DEFAULT
+	giveegg SPECIES_TOGEPI
+John_Dialouge_End:
+	msgbox HubRoom_JohnDialougeEnd_Text, MSGBOX_DEFAULT
+	setflag FLAG_JOHN_DIALOUGE_COMPLETE
+	release
+end
+
+HubRoom_JohnDialougeEnd_Text:
+	.string "Good luck out there man. If you\n"
+	.string "get into trouble don't forget to\l"
+	.string "use balrog's gambit!$"
+
+
+HubRoom_JohnDialouge_Text:
+	.string "Nike! I hear you really\n" 
+	.string "destroyed Chad in that battle.\p"
+	.string "Congrats dude.\n"
+	.string "How's your foot doing?\p"
+	.string "Still can't believe you did that…\p "
+	.string "Anyway I'm glad I ran into\n"
+	.string "you! Long story, but I'm the\l"
+	.string "Dark Room Master, it's bullshit,\l"
+	.string "and something really strange\l"
+	.string "happened to me I wanted\l"
+	.string "to tell you about.\p"
+	.string "Since I'm in the Dark room\n"
+	.string "there are usually only Dark type\l"
+	.string "pokemon there, which is bullshit,\l"
+	.string "but today I saw a pokemon that\l"
+	.string "wasn't Dark type in there.\p"
+	.string "A togekiss flew in.  I couldn't\n"
+	.string "figure out what possibly could\l"
+	.string "have brought her to such a dark\l"
+	.string "and bullshit place until I \l"
+	.string "realized she was being chased\l"
+	.string "by something!\p"
+	.string "Just then a huge Dark Pokemon\n"
+	.string "came crashing in and attacked\l"
+	.string "her with this crazy dark attack,\l"
+	.string "which was bullshit, and it\l"
+	.string "engulfed her in powerful darkness.\p"
+	.string "The Dark pokemon flew away before\n"
+	.string "I could try to battle it but it\l"
+	.string "looked really powerful…\p"
+	.string "I tried to save the Togekiss\n"
+	.string "but she was still engulfed in\l"
+	.string "darkness and it was slowly\l"
+	.string "killing her. It was such bullshit!\p"
+	.string "And that's not even the \n"
+	.string "saddest or most bullshit part,\l"
+	.string "she was also pregnant! And just\l"
+	.string "before she died she laid this egg.\p"
+	.string "That's why I wanted to come\n"
+	.string "see you. I know how much you love\l"
+	.string "Togekiss, so I thought you'd be a\l"
+	.string "good person to take\l"
+	.string "care of this Togepi egg!$"
 
 Script_HubRoom_RemoveKostiwMatt:
 	removeobject LOCALID_MATT
 	removeobject LOCALID_KOSTIW
 	removeobject 10
+	removeobject 11
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU
-	end
+	setflag FLAG_HUBROOM_JOHN
+return
+
+Script_ShowJohnHubRoom:
+	addobject 11
+	addobject 12
+	clearflag FLAG_HUBROOM_JOHN
+return
+	
 
 HubRoom_EventScripts_WouldYouLikeToEnterPoisonRoom::
 	lockall
@@ -188,6 +264,8 @@ HubRoom_EventScripts_WouldYouLikeToEnterNormalRoom::
 end
 
 HubRoom_EventScripts_WarpToNormalRoom:
+	compare VAR_HUBROOM_STATE, 2
+	goto_if_lt HubRoom_EventScript_RoomIsLocked
 	warp MAP_BUG4, 0, 11, 78
 	release
 end

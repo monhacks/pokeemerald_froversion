@@ -74,6 +74,7 @@ Script_JagowWay_StarterBattle2::
 	end
 	
 Script_JagowWay_AfterJohnBattle:
+goto_if_set FLAG_DEFEATED_POISON, JanusAfterPoisonScript
 setvar VAR_OLDALE_TOWN_STATE, 1
 delay 30
 setvar VAR_LITTLEROOT_TOWN_STATE, 5
@@ -103,6 +104,48 @@ Script_JagowWay_NorthSignPost::
 msgbox T_JagowWay_SignPostForLakeMead, MSGBOX_SIGN
 release
 end
+
+JanusAfterPoisonScript:	
+	msgbox JanusAfterPoisonText, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq JanusBattle2
+	release
+	end
+
+JanusBattle2:
+	msgbox TycheIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_110_MUDKIP, JanusDefeated2Text
+	msgbox JanusPostBattle2Text, MSGBOX_DEFAULT
+	setvar VAR_HUBROOM_STATE, 2
+	release
+	end
+
+TycheIntro:
+	.string "I am Tyche, The goddess of\n"
+	.string "Luck and Fortune!\p"
+	.string "Remember when you stopped playing\n"
+	.string "Roulette one spin before you\l"
+	.string "would have landed on 8? That was\l"
+	.string "me just crushing your dreams… Now\l"
+	.string "I'm here to crush you're\l"
+	.string "pokemon dreams!$"
+
+JanusDefeated2Text:
+	.string "You have defeated me. You're more\n"
+	.string "fortunate than I had expected!$"
+
+JanusPostBattle2Text:
+	.string "Janus: You have passed my second\n"
+	.string "challenge! I will need to call\l"
+	.string "in someone else next time.\p"
+	.string "You may access the second door.$"
+
+JanusAfterPoisonText:
+	.string "Well done on completing your\n"
+	.string "poison challenge… if you want me\l"
+	.string "to unlock the next door you will\l"
+	.string "have to defeat one of my friends…\p"
+	.string "Are you ready?$"
 
 //Movements
 

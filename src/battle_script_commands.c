@@ -563,7 +563,7 @@ const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
     FLAG_SYS_GAME_CLEAR,
 };
 
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 20, 25, 30, 35, 40, 45, 50, 55, 60 };
+const u16 sLevelCaps[NUM_SOFT_CAPS] = { 20, 27, 34, 41, 48, 55, 62, 69, 76 };
 const double sLevelCapReduction[7] = { .5, .33, .25, .20, .15, .10, .05 };
 const double sRelativePartyScaling[27] =
 {

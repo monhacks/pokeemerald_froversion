@@ -22,17 +22,28 @@ ChadPoisonLeader_DefeatedScript:
 	clearflag FLAG_SYS_NO_BAG_USE
 	setflag FLAG_DEFEATED_POISON
 	msgbox ChadPoisonLeader_DefeatedText, MSGBOX_DEFAULT
+	setvar VAR_HUBROOM_STATE, 1
+	giveitem ITEM_EXP_SHARE, 1
+	giveegg SPECIES_CHAD_BUG_1
 	release
 end
 
 ChadPoisonLeader_IntroText:	
-	.string "I'm chad and I like poison!$"
+	.string "What's up Nike? I see you've been\n"
+	.string "catching a lot of Poison pokemon.\p"
+	.string "But do you really think you can\n"
+	.string "take on the poison dart champ?$"
 
 ChadPoisonLeader_DefeatText:
-	.string "I'm chad and I lost!$"
+	.string "Wow!  That was some great use of$"
+	.string "poison!  Have you ever considered\n"
+	.string "getting into a poison darts\l"
+	.string "league? I play every week down\l"
+	.string "at the poison wagon wheel.$"
 
 ChadPoisonLeader_DefeatedText:
-	.string "I'm chad and you won!$"
+	.string "Here take good care\n"
+	.string "of this egg!$"
 
 EventScript_BugRoom3_TrainerBattle1::
 	lock
@@ -77,7 +88,7 @@ BugRoom3_Trainer2_Defeated:
 NikeVersion_Text_PokemonCantBeUsed:
 	.string "I'm sorry Nike, but you\n"
 	.string "can only use Pokémon that\l"
-	.string "you've caught in this room\l"
+	.string "are the same type as mine\l"
 	.string "for our battle.\p"
 	.string "Come back when all your Pokémon\n"
 	.string "are the correct type!$"

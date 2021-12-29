@@ -6361,16 +6361,13 @@ const struct Item gItems[] =
 
     [ITEM_ASSAULT_VEST] =
     {
-        .name = _("Assault Vest"),
+        .name = _("Soccer Ball"),
         .itemId = ITEM_ASSAULT_VEST,
-        .price = 200,
-        .holdEffect = HOLD_EFFECT_ASSAULT_VEST,
-        .holdEffectParam = 50,
+        .price = 2000,
         .description = sAssaultVestDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 0,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone
     },
 
     [ITEM_PIXIE_PLATE] =

@@ -1,7 +1,7 @@
 #ifndef GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
 #define GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
 
-static const u8 sMapName_LakeMeadVillage[] = _("Lake Mead Village");
+static const u8 sMapName_LakeMeadVillage[] = _("Chad's Camp");
 static const u8 sMapName_OldaleTown[] = _("Six Corners");
 static const u8 sMapName_DewfordTown[] = _("RainTree Island");
 static const u8 sMapName_LavaridgeTown[] = _("Grand Island");
@@ -17,7 +17,7 @@ static const u8 sMapName_LilycoveCity[] = _("Fashion Outlets");
 static const u8 sMapName_MossdeepCity[] = _("Ward City");
 static const u8 sMapName_SootopolisCity[] = _("Homestead Town");
 static const u8 sMapName_EverGrandeCity[] = _("Scranton");
-static const u8 sMapName_Route101[] = _("Lake Mead");
+static const u8 sMapName_Route101[] = _("Chad's Camp");
 static const u8 sMapName_Route102[] = _("Route 102");
 static const u8 sMapName_Route103[] = _("Route 103");
 static const u8 sMapName_Route104[] = _("Route 104");

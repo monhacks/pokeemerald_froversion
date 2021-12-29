@@ -88,9 +88,15 @@ Route102_EventScript_CalvinRematch:: @ 81EC19C
 	end
 
 Route102_EventScript_Rick:: @ 81EC1B3
-	trainerbattle_single TRAINER_RICK, Route102_Text_RickIntro, Route102_Text_RickDefeated
+	msgbox Route102_Text_RickIntro, MSGBOX_YESNO
+	compare VAR_RESULT, FALSE
+	goto_if_eq ExitBattle
+	trainerbattle_no_intro TRAINER_RICK, Route102_Text_RickDefeated
 	msgbox Route102_Text_RickPostBattle, MSGBOX_AUTOCLOSE
-	end
+ExitBattle:
+	closemessage
+	release
+end
 
 Route102_EventScript_Tiana:: @ 81EC1CA
 	trainerbattle_single TRAINER_TIANA, Route102_Text_TianaIntro, Route102_Text_TianaDefeated
