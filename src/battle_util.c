@@ -6644,6 +6644,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     && !(gBattleMons[gBattlerAttacker].status1 & STATUS1_ANY)
                     && !IsAbilityStatusProtected(gBattlerAttacker)
                     && DragonsOrbRandomChance == 0
+                    && IsSpeciesOneOf(gBattleMons[battlerId].species, gRiptorypsLine)
                     )
                         {
                             gBattleScripting.moveEffect = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_BURN;
@@ -6662,6 +6663,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     && !(gBattleMons[gBattlerAttacker].status1 & STATUS1_ANY)
                     && !IsAbilityStatusProtected(gBattlerAttacker)
                     && DragonsOrbRandomChance == 1
+                    && IsSpeciesOneOf(gBattleMons[battlerId].species, gRiptorypsLine)
                     )
                         {
                             gBattleScripting.moveEffect = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_PARALYSIS;
@@ -6680,6 +6682,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     && !(gBattleMons[gBattlerAttacker].status1 & STATUS1_ANY)
                     && !IsAbilityStatusProtected(gBattlerAttacker)
                     && DragonsOrbRandomChance == 2
+                    && IsSpeciesOneOf(gBattleMons[battlerId].species, gRiptorypsLine)
                     )
                         {
                             gBattleScripting.moveEffect = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_FREEZE;
