@@ -730,7 +730,10 @@ static const u8 sText_PkmnMadeItRain2[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} mad
 static const u8 sText_PkmnMadeItSunny[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made it sunny!");
 static const u8 sText_PkmnWhippedUpASandstorm[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} whipped up a sandstorm!");
 static const u8 sText_PkmnMadeItHail[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} made it hail!");
-static const u8 sText_DragonOrbActivates[] = _("{B_ATK_NAME_WITH_PREFIX}'s Dragon Orb\n transformed it into the \l{B_BUFF1} type!");
+static const u8 sText_DragonOrbActivates[] = _("{B_ATK_NAME_WITH_PREFIX}'s Dragon Orb\ntransformed it into the \l{B_BUFF1} type!");
+static const u8 sText_PkmnParalyzedByOrb[] = _("{B_ATK_NAME_WITH_PREFIX} is\nparalyzed by {B_DEF_NAME_WITH_PREFIX}'s \lDragon Orb!");
+static const u8 sText_PkmnBurnedByOrb[] = _("{B_ATK_NAME_WITH_PREFIX} is\nburned by {B_DEF_NAME_WITH_PREFIX}'s \lDragon Orb!");
+static const u8 sText_PkmnFrozenByOrb[] = _("{B_ATK_NAME_WITH_PREFIX} is\nfrozen by {B_DEF_NAME_WITH_PREFIX}'s \lDragon Orb!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1325,6 +1328,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNWHIPPEDUPASANDSTORM - 12] = sText_PkmnWhippedUpASandstorm,
     [STRINGID_PKMNMADEITHAIL - 12] = sText_PkmnMadeItHail,
     [STRINGID_DRAGONORBACTIVATES - 12] = sText_DragonOrbActivates,
+    [STRINGID_PKMNPARALYZEDBYORB - 12] = sText_PkmnParalyzedByOrb,
+    [STRINGID_PKMNBURNEDBYORB - 12] = sText_PkmnBurnedByOrb,
+    [STRINGID_PKMNFROZENBYORB - 12] = sText_PkmnFrozenByOrb,
 };
 
 const u16 gTerrainStringIds[] =
@@ -1521,7 +1527,7 @@ const u16 gGotPoisonedStringIds[] =
 
 const u16 gGotParalyzedStringIds[] =
 {
-    STRINGID_PKMNWASPARALYZED, STRINGID_PKMNWASPARALYZEDBY
+    STRINGID_PKMNWASPARALYZED, STRINGID_PKMNWASPARALYZEDBY, STRINGID_PKMNPARALYZEDBYORB
 };
 
 const u16 gFellAsleepStringIds[] =
@@ -1531,12 +1537,12 @@ const u16 gFellAsleepStringIds[] =
 
 const u16 gGotBurnedStringIds[] =
 {
-    STRINGID_PKMNWASBURNED, STRINGID_PKMNBURNEDBY
+    STRINGID_PKMNWASBURNED, STRINGID_PKMNBURNEDBY, STRINGID_PKMNBURNEDBYORB
 };
 
 const u16 gGotFrozenStringIds[] =
 {
-    STRINGID_PKMNWASFROZEN, STRINGID_PKMNFROZENBY
+    STRINGID_PKMNWASFROZEN, STRINGID_PKMNFROZENBY, STRINGID_PKMNFROZENBYORB
 };
 
 const u16 gGotDefrostedStringIds[] =

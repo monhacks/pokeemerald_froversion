@@ -4000,6 +4000,7 @@ bool8 InPokemonCenter(void)
         MAP_TRADE_CENTER,
         MAP_RECORD_CORNER,
         MAP_BATTLE_COLOSSEUM_4P,
+        MAP_HOMESTEAD_NORTH_POKECENTER,
         0xFFFF
     };
 

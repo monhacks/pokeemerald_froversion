@@ -6946,6 +6946,10 @@ BattleScript_UpdateEffectStatusIconRet::
 	updatestatusicon BS_EFFECT_BATTLER
 	waitstate
 	return
+BattleScript_UpdateEffectStatusDragonsOrb::
+	updatestatusicon BS_ATTACKER
+	waitstate
+	return
 
 BattleScript_YawnMakesAsleep::
 	statusanimation BS_EFFECT_BATTLER
@@ -6975,6 +6979,24 @@ BattleScript_ToxicOrb::
 	setbyte cMULTISTRING_CHOOSER, 0
 	copybyte gEffectBattler, gBattlerAttacker
 	call BattleScript_MoveEffectToxic
+	end2
+
+BattleScript_DragonsOrbOnHitBurn::
+	setbyte cMULTISTRING_CHOOSER, 0
+	copybyte gEffectBattler, gBattlerAttacker
+	call BattleScript_MoveEffectDragonsOrbBurn
+	end2
+
+BattleScript_DragonsOrbOnHitParalyze::
+	setbyte cMULTISTRING_CHOOSER, 0
+	copybyte gEffectBattler, gBattlerAttacker
+	call BattleScript_MoveEffectDragonsOrbParalyze
+	end2
+
+BattleScript_DragonsOrbOnHitFreeze::
+	setbyte cMULTISTRING_CHOOSER, 0
+	copybyte gEffectBattler, gBattlerAttacker
+	call BattleScript_MoveEffectDragonsOrbFreeze
 	end2
 
 BattleScript_FlameOrb::
@@ -7017,6 +7039,24 @@ BattleScript_MoveEffectToxic::
 	printstring STRINGID_PKMNBADLYPOISONED
 	waitmessage 0x40
 	goto BattleScript_UpdateEffectStatusIconRet
+
+BattleScript_MoveEffectDragonsOrbBurn:
+	statusanimation BS_ATTACKER
+	printstring STRINGID_PKMNWASBURNED
+	waitmessage 0x40
+	goto BattleScript_UpdateEffectStatusDragonsOrb
+
+BattleScript_MoveEffectDragonsOrbParalyze:
+	statusanimation BS_ATTACKER
+	printstring STRINGID_PKMNWASPARALYZED
+	waitmessage 0x40
+	goto BattleScript_UpdateEffectStatusDragonsOrb
+
+BattleScript_MoveEffectDragonsOrbFreeze:
+	statusanimation BS_ATTACKER
+	printstring STRINGID_PKMNWASFROZEN
+	waitmessage 0x40
+	goto BattleScript_UpdateEffectStatusDragonsOrb
 
 BattleScript_MoveEffectPayDay::
 	printstring STRINGID_COINSSCATTERED
@@ -7870,6 +7910,11 @@ BattleScript_CuteCharmActivates::
 BattleScript_AbilityStatusEffect::
 	waitstate
 	call BattleScript_AbilityPopUp
+	seteffectsecondary
+	return
+
+BattleScript_ItemStatusEffect::
+	waitstate
 	seteffectsecondary
 	return
 

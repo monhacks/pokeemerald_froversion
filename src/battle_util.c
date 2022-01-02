@@ -2542,6 +2542,14 @@ u8 DoBattlerEndTurnEffects(void)
                         effect++;
                     }
                 }
+                else if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
+                {
+                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 24;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    BattleScriptExecute(BattleScript_PoisonTurnDmg);
+                    effect++;
+                }
                 else
                 {
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
@@ -5869,6 +5877,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
     u8 battlerHoldEffect, atkHoldEffect;
     u8 atkHoldEffectParam;
     u16 atkItem;
+    s32 DragonsOrbRandomChance = (Random() % 9);
 
     gLastUsedItem = gBattleMons[battlerId].item;
     battlerHoldEffect = GetBattlerHoldEffect(battlerId, TRUE);
@@ -6623,6 +6632,62 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     PREPARE_ITEM_BUFFER(gBattleTextBuff1, gLastUsedItem);
                     RecordItemEffectBattle(battlerId, HOLD_EFFECT_ROCKY_HELMET);
                 }
+                break;
+            case HOLD_EFFECT_DRAGONS_ORB:
+                if (TARGET_TURN_DAMAGED
+                    && IsMoveMakingContact(gCurrentMove, gBattlerAttacker)
+                    && IsBattlerAlive(gBattlerAttacker)
+                    && GetBattlerAbility(gBattlerAttacker) != ABILITY_MAGIC_GUARD
+                    && gBattleStruct->rouletteEffect != 2
+                    && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_FIRE)
+                    && GetBattlerAbility(gBattlerAttacker) != ABILITY_WATER_VEIL
+                    && !(gBattleMons[gBattlerAttacker].status1 & STATUS1_ANY)
+                    && !IsAbilityStatusProtected(gBattlerAttacker)
+                    && DragonsOrbRandomChance == 0
+                    )
+                        {
+                            gBattleScripting.moveEffect = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_BURN;
+                            BattleScriptPushCursor();
+                            gBattlescriptCurrInstr = BattleScript_ItemStatusEffect;
+                            gHitMarker |= HITMARKER_IGNORE_SAFEGUARD;
+                            effect++;
+                        }
+                if (TARGET_TURN_DAMAGED
+                    && IsMoveMakingContact(gCurrentMove, gBattlerAttacker)
+                    && IsBattlerAlive(gBattlerAttacker)
+                    && GetBattlerAbility(gBattlerAttacker) != ABILITY_MAGIC_GUARD
+                    && gBattleStruct->rouletteEffect != 2
+                    && CanParalyzeType(gBattlerTarget, gBattlerAttacker)
+                    && GetBattlerAbility(gBattlerAttacker) != ABILITY_LIMBER
+                    && !(gBattleMons[gBattlerAttacker].status1 & STATUS1_ANY)
+                    && !IsAbilityStatusProtected(gBattlerAttacker)
+                    && DragonsOrbRandomChance == 1
+                    )
+                        {
+                            gBattleScripting.moveEffect = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_PARALYSIS;
+                            BattleScriptPushCursor();
+                            gBattlescriptCurrInstr = BattleScript_ItemStatusEffect;
+                            gHitMarker |= HITMARKER_IGNORE_SAFEGUARD;
+                            effect++;
+                        }
+                    if (TARGET_TURN_DAMAGED
+                    && IsMoveMakingContact(gCurrentMove, gBattlerAttacker)
+                    && IsBattlerAlive(gBattlerAttacker)
+                    && GetBattlerAbility(gBattlerAttacker) != ABILITY_MAGIC_GUARD
+                    && gBattleStruct->rouletteEffect != 2
+                    && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
+                    && GetBattlerAbility(gBattlerAttacker) != ABILITY_MAGMA_ARMOR
+                    && !(gBattleMons[gBattlerAttacker].status1 & STATUS1_ANY)
+                    && !IsAbilityStatusProtected(gBattlerAttacker)
+                    && DragonsOrbRandomChance == 2
+                    )
+                        {
+                            gBattleScripting.moveEffect = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_FREEZE;
+                            BattleScriptPushCursor();
+                            gBattlescriptCurrInstr = BattleScript_ItemStatusEffect;
+                            gHitMarker |= HITMARKER_IGNORE_SAFEGUARD;
+                            effect++;
+                        }
                 break;
             case HOLD_EFFECT_WEAKNESS_POLICY:
                 if (IsBattlerAlive(battlerId)
@@ -8269,6 +8334,15 @@ static void MulByTypeEffectiveness(u16 *modifier, u16 move, u8 moveType, u8 batt
         if (recordAbilities)
             RecordItemEffectBattle(battlerDef, HOLD_EFFECT_RING_TARGET);
     }
+
+    if (mod <= UQ_4_12(0.5) && GetBattlerHoldEffect(battlerAtk, TRUE) == HOLD_EFFECT_NIKITA)
+    {
+        mod = UQ_4_12(1.0);
+        if (recordAbilities)
+            RecordItemEffectBattle(battlerAtk, HOLD_EFFECT_NIKITA);
+    }
+
+
     else if ((moveType == TYPE_FIGHTING || moveType == TYPE_NORMAL) && defType == TYPE_GHOST && gBattleMons[battlerDef].status2 & STATUS2_FORESIGHT && mod == UQ_4_12(0.0))
     {
         mod = UQ_4_12(1.0);

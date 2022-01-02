@@ -13065,6 +13065,7 @@ static const struct TrainerMonItemCustomMoves sParty_MegaHoundoomMtChimney[] = {
     .statSpDef = 225,
     .statHP = 350,
     .statMaxHP = 350,
+    .movePP1 = 99,
     }, 
 };
 
@@ -13106,7 +13107,10 @@ static const struct TrainerMonItemCustomMoves sParty_SummitCavernsLattka2[] = {
     .statSpDef = 180,
     .statHP = 525,
     .statMaxHP = 525,
-    .movePP1 = 50,
+    .movePP1 = 99,
+    .movePP2 = 99,
+    .movePP3 = 99,
+    .movePP4 = 99,
     },
 };
 
@@ -13122,7 +13126,10 @@ static const struct TrainerMonItemCustomMoves sParty_MagmaHideoutMegaGengar[] = 
     .statSpDef = 290,
     .statHP = 707,
     .statMaxHP = 707,
-    .movePP1 = 50,
+    .movePP1 = 99,
+    .movePP2 = 99,
+    .movePP3 = 99,
+    .movePP4 = 99,
     },
 };
 
@@ -13138,6 +13145,10 @@ static const struct TrainerMonItemCustomMoves sParty_ColangeloGraphicsDom[] = {
     .statSpDef = 350,
     .statHP = 1725,
     .statMaxHP = 1725,
+    .movePP1 = 99,
+    .movePP2 = 99,
+    .movePP3 = 99,
+    .movePP4 = 99,
     },
 };
 

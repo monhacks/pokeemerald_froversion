@@ -356,7 +356,7 @@ HomesteadNorth_EventScript_Boy1::
 	release
 end
 
-HomesteadNorth_Text_GingerBread:
+HomesteadNorth_Text_Gingerbread:
 	.string "When the town was first founded,\n"
 	.string "all the houses were made out of\l"
 	.string "gingerbread in the spirit of\l"

@@ -2766,8 +2766,13 @@ void SetMoveEffect(bool32 primary, u32 certain)
             gActiveBattler = gEffectBattler;
             BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[gEffectBattler].status1);
             MarkBattlerForControllerExec(gActiveBattler);
-
-            if (gHitMarker & HITMARKER_IGNORE_SAFEGUARD)
+            
+            if (GetBattlerHoldEffect(gBattlerTarget, TRUE) == HOLD_EFFECT_DRAGONS_ORB)
+            {
+                gBattleCommunication[MULTISTRING_CHOOSER] = 2;
+                gHitMarker &= ~(HITMARKER_IGNORE_SAFEGUARD);
+            }
+            else if (gHitMarker & HITMARKER_IGNORE_SAFEGUARD)
             {
                 gBattleCommunication[MULTISTRING_CHOOSER] = 1;
                 gHitMarker &= ~(HITMARKER_IGNORE_SAFEGUARD);

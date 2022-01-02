@@ -1224,7 +1224,15 @@ AI_CheckViability:
 	if_effect EFFECT_TOXIC_SPIKES, AI_CV_Hazards
 	if_effect EFFECT_PERISH_SONG, AI_CV_PerishSong
 	if_effect EFFECT_PLASMA_BLADE, AI_CV_PlasmaBlade
+	if_effect EFFECT_YAWN, AI_CV_Yawn
 	end
+
+AI_CV_Yawn:
+	if_status3 AI_USER, STATUS3_YAWN, Score_Minus5
+	if_status AI_TARGET, STATUS1_SLEEP, Score_Minus5
+	end
+	
+
 	
 AI_CV_PlasmaBlade:
 	if_type AI_TARGET, TYPE_STEEL, AI_CV_PlasmaBlade2
