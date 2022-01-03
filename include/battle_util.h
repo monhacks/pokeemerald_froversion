@@ -32,6 +32,7 @@
 #define ITEMEFFECT_KINGSROCK_SHELLBELL          0x4
 #define ITEMEFFECT_TARGET                       0x5
 #define ITEMEFFECT_ORBS                         0x6
+#define ITEMEFFECT_ABSORBING                    0x7
 
 #define WEATHER_HAS_EFFECT ((!IsAbilityOnField(ABILITY_CLOUD_NINE) && !IsAbilityOnField(ABILITY_AIR_LOCK)))
 
