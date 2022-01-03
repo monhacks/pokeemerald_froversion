@@ -6712,6 +6712,25 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     gBattlescriptCurrInstr = BattleScript_AkuBerryBoostSE;
                 }
                 break;
+            case HOLD_EFFECT_NIKITA:
+                if (IsBattlerAlive(battlerId)
+                    && TARGET_TURN_DAMAGED
+                    && gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE)
+                {
+                    effect = ITEM_STATS_CHANGE;
+                    BattleScriptPushCursor();
+                    if (moveType == TYPE_ELECTRIC)
+                    {
+                    gBattleMoveDamage = 0;
+                    gBattlescriptCurrInstr = BattleScript_NikitaElectricBoost;
+                    }
+                    if (moveType == TYPE_FIGHTING)
+                    {
+                    gBattleMoveDamage = 0;
+                    gBattlescriptCurrInstr = BattleScript_NikitaFightingBoost;
+                    }
+                }
+                break;
             case HOLD_EFFECT_SNOWBALL:
                 if (IsBattlerAlive(battlerId)
                     && TARGET_TURN_DAMAGED

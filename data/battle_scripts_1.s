@@ -6015,6 +6015,57 @@ BattleScript_AkuBerryBoostSESpAtk:
 BattleScript_AkuBerryBoostSEEnd:
 	return
 
+BattleScript_NikitaElectricBoost::
+	copybyte sBATTLER, gBattlerTarget
+	jumpifstat BS_TARGET, CMP_LESS_THAN, STAT_SPEED, 0xC, BattleScript_NikitaElectricBoostSpeed
+	jumpifstat BS_TARGET, CMP_EQUAL, STAT_SPEED, 0xC, BattleScript_NikitaElectricBoostEnd
+BattleScript_NikitaElectricBoostSpeed:
+	playanimation BS_TARGET, B_ANIM_HELD_ITEM_EFFECT, NULL
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_TARGET, BIT_ATK | BIT_SPEED, STAT_CHANGE_BY_TWO
+	setstatchanger STAT_SPEED, 2, FALSE
+	statbuffchange STAT_BUFF_ALLOW_PTR, BattleScript_NikitaElectricBoostEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_NikitaElectricBoostEnd
+	printstring STRINGID_USINGXTHEYOFZN
+	waitmessage 0x40
+BattleScript_NikitaElectricBoostEnd:
+	return
+
+BattleScript_NikitaFightingBoost::
+	copybyte sBATTLER, gBattlerTarget
+	jumpifstat BS_TARGET, CMP_LESS_THAN, STAT_DEF, 0xC, BattleScript_NikitaFightingBoostSpeed
+	jumpifstat BS_TARGET, CMP_EQUAL, STAT_DEF, 0xC, BattleScript_NikitaFightingBoostEnd
+BattleScript_NikitaFightingBoostSpeed:
+	playanimation BS_TARGET, B_ANIM_HELD_ITEM_EFFECT, NULL
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_TARGET, BIT_ATK | BIT_DEF, STAT_CHANGE_BY_TWO
+	setstatchanger STAT_DEF, 2, FALSE
+	statbuffchange STAT_BUFF_ALLOW_PTR, BattleScript_NikitaFightingBoostEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_NikitaFightingBoostEnd
+	printstring STRINGID_USINGXTHEYOFZN
+	waitmessage 0x40
+BattleScript_NikitaFightingBoostEnd:
+	return
+
+BattleScript_NikitaGroundBoost::
+	copybyte sBATTLER, gBattlerTarget
+	jumpifstat BS_TARGET, CMP_LESS_THAN, STAT_EVASION, 0xC, BattleScript_NikitaGroundBoostSpeed
+	jumpifstat BS_TARGET, CMP_EQUAL, STAT_EVASION, 0xC, BattleScript_NikitaGroundBoostEnd
+BattleScript_NikitaGroundBoostSpeed:
+	playanimation BS_TARGET, B_ANIM_HELD_ITEM_EFFECT, NULL
+	waitanimation
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	playstatchangeanimation BS_TARGET, BIT_ATK | BIT_SPEED, STAT_CHANGE_BY_TWO
+	setstatchanger STAT_EVASION, 2, FALSE
+	statbuffchange STAT_BUFF_ALLOW_PTR, BattleScript_NikitaGroundBoostEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_NikitaGroundBoostEnd
+	printstring STRINGID_USINGXTHEYOFZN
+	waitmessage 0x40
+BattleScript_NikitaGroundBoostEnd:
+	return
+
 BattleScript_TargetItemStatRaise::
 	copybyte sBATTLER, gBattlerTarget
 	statbuffchange 0, BattleScript_TargetItemStatRaiseRemoveItemRet
