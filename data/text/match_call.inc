@@ -2832,7 +2832,7 @@ MatchCall_Text_Steven7:: @ 82B5ED9
 	.string "somewhere!$"
 
 MatchCall_Text_BirchRegisterCall: @ 82B5F52
-	.string "PROF. BIRCH: Oh, {PLAYER}{KUN}!\n"
+	.string "Prof. Tilyou: Oh, {PLAYER}{KUN}!\n"
 	.string "I've already heard about you!\p"
 	.string "It seems your Pokénav's been\n"
 	.string "upgraded with Match Call.\p"
@@ -2843,11 +2843,11 @@ MatchCall_Text_BirchRegisterCall: @ 82B5F52
 	.string "… … … … … …$"
 
 MatchCall_Text_RegisteredBirch: @ 82B603A
-	.string "Registered PROF. BIRCH\n"
+	.string "Registered Prof. Tilyou\n"
 	.string "in the Pokénav.$"
 
 MatchCall_Text_UnusedProfBirch:
-	.string "PROF. BIRCH: When one has both\n"
+	.string "Prof. Tilyou: When one has both\n"
 	.string "the Pokédex and Pokénav, studying\l"
 	.string "Pokémon becomes more fun, eh?$"
 

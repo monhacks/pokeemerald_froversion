@@ -109,8 +109,8 @@ EverGrandeCity_ChampionsRoom_EventScript_Defeated:: @ 8228A61
 	call_if_eq EverGrandeCity_ChampionsRoom_EventScript_PlayMayMusic
 	compare VAR_RESULT, FEMALE
 	call_if_eq EverGrandeCity_ChampionsRoom_EventScript_PlayBrendanMusic
-	addobject LOCALID_RIVAL
-	call EverGrandeCity_ChampionsRoom_EventScript_RivalApproachPlayer
+//	addobject LOCALID_RIVAL
+//f	call EverGrandeCity_ChampionsRoom_EventScript_RivalApproachPlayer
 	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq EverGrandeCity_ChampionsRoom_EventScript_MayAdvice
@@ -278,7 +278,7 @@ EverGrandeCity_ChampionsRoom_Movement_BirchArrives: @ 8228C43
 	step_end
 
 EverGrandeCity_ChampionsRoom_Text_IntroSpeech: @ 8228C4C
-	.string "WALLACE: Welcome, {PLAYER}{KUN}.\p"
+	.string "John: Welcome, {PLAYER}{KUN}.\p"
 	.string "That incident in Homestead Town…\n"
 	.string "That was superb work, putting an end\l"
 	.string "to that crisis all by yourself.\p"
@@ -297,11 +297,11 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech: @ 8228C4C
 	.string "others like you have achieved.\p"
 	.string "Now!\p"
 	.string "Who can most elegantly dance with\n"
-	.string "their Pokémon in HOENN?\p"
+	.string "their Pokémon in Niagara?\p"
 	.string "Show me right here and now!$"
 
 EverGrandeCity_ChampionsRoom_Text_Defeat: @ 8228EAC
-	.string "I, the CHAMPION, fall in defeat…\p"
+	.string "I, the Champion, fall in defeat…\p"
 	.string "That was wonderful work.\n"
 	.string "You were elegant, infuriatingly so.\l"
 	.string "And yet it was utterly glorious!\p"
@@ -310,7 +310,7 @@ EverGrandeCity_ChampionsRoom_Text_Defeat: @ 8228EAC
 	.string "Trainer!$"
 
 EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech: @ 8228F66
-	.string "WALLACE: The Pokémon you sent into\n"
+	.string "John: The Pokémon you sent into\n"
 	.string "battle…\p"
 	.string "At times they danced like a spring\n"
 	.string "breeze, and at times they struck\l"
@@ -322,63 +322,60 @@ EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech: @ 8228F66
 	.string "You now stand at the glorious peak\n"
 	.string "of the Pokémon League.\p"
 	.string "I now proclaim you to be the new\n"
-	.string "HOENN region…$"
+	.string "Niagara region…$"
 
 EverGrandeCity_ChampionsRoom_Text_MayAdvice: @ 82290CA
-	.string "MAY: {PLAYER}{KUN}!\p"
-	.string "Here's some advice before you challenge\n"
-	.string "the CHAMPION…$"
+	.string "Bobby: {PLAYER}{KUN}!\p"
+	.string "That was impressive.\p"
+	.string "You battled with such heart…$"
 
 EverGrandeCity_ChampionsRoom_Text_MayItsAlreadyOver: @ 822910B
-	.string "MAY: Huh?\n"
-	.string "What, what, what?\p"
-	.string "{PLAYER}{KUN}…\n"
-	.string "Could it be that…\l"
+	.string "Could it be that…\n"
 	.string "It's already over?$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanAdvice: @ 8229152
 	.string "BRENDAN: {PLAYER}!\p"
 	.string "How would you like some advice before\n"
-	.string "you challenge the CHAMPION?…$"
+	.string "you challenge the Champion?…$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon: @ 82291A2
 	.string "BRENDAN: {PLAYER}…\p"
 	.string "Are you trying to tell me…\n"
-	.string "You've beaten the CHAMPION?$"
+	.string "You've beaten the Champion?$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex: @ 82291E6
-	.string "PROF. BIRCH: See?\n"
+	.string "Prof. Tilyou: See?\n"
 	.string "What did I tell you, {RIVAL}?\p"
 	.string "Didn't I tell you that you don't need\n"
 	.string "to worry about {PLAYER}{KUN}?\p"
 	.string "… … … … … … … …\n"
 	.string "{PLAYER}{KUN}, you've finally done it.\p"
 	.string "When I heard that you defeated your\n"
-	.string "own father at the PETALBURG GYM,\l"
+	.string "own father at the Lynch Park,\l"
 	.string "I thought perhaps you had a chance…\p"
 	.string "But to think you've actually become\n"
-	.string "the CHAMPION!\p"
+	.string "the Champion!\p"
 	.string "Ah, yes!\p"
 	.string "What became of your Pokédex?\n"
 	.string "Here, let me see.$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchCongratulations: @ 822934D
-	.string "PROF. BIRCH: Anyways,\n"
+	.string "Prof. Tilyou: Anyways,\n"
 	.string "congratulations!\p"
 	.string "Now, go proudly into the final room!$"
 
 EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe: @ 8229399
-	.string "WALLACE: {PLAYER}{KUN}…\p"
+	.string "John: {PLAYER}{KUN}…\p"
 	.string "No, let me rephrase that properly.\p"
-	.string "The new CHAMPION!\p"
+	.string "The new Champion!\p"
 	.string "Come with me.$"
 
 EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside: @ 82293EB
-	.string "WALLACE: I'm sorry, but…\p"
+	.string "John: I'm sorry, but…\p"
 	.string "From here on, only those Trainers who\n"
-	.string "have become CHAMPIONS may enter.\p"
+	.string "have become Champions may enter.\p"
 	.string "You'll have to wait outside with\n"
-	.string "PROF. BIRCH.$"
+	.string "Prof. Tilyou.$"
 
 EverGrandeCity_ChampionsRoom_Text_MayCongratulations: @ 8229479
 	.string "MAY: Groan…\p"

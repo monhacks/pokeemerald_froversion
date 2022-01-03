@@ -327,7 +327,7 @@ PlayersHouse_1F_Text_OhComeQuickly: @ 81F7B96
 	.string "Quick! Come quickly!$"
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn: @ 81F7BBC
-	.string "MOM: Look! It's PETALBURG GYM!\n"
+	.string "MOM: Look! It's Lynch Park!\n"
 	.string "Maybe DAD will be on!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim: @ 81F7BF1
@@ -338,7 +338,7 @@ PlayersHouse_1F_Text_ItsOverWeMissedHim: @ 81F7BF1
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor: @ 81F7C35
 	.string "Oh, yes.\n"
 	.string "One of DAD's friends lives in town.\p"
-	.string "PROF. BIRCH is his name.\p"
+	.string "Prof. Tilyou is his name.\p"
 	.string "He lives right next door, so you should\n"
 	.string "go over and introduce yourself.$"
 
@@ -347,7 +347,7 @@ PlayersHouse_1F_Text_SeeYouHoney: @ 81F7CC3
 
 PlayersHouse_1F_Text_DidYouMeetProfBirch: @ 81F7CD8
 	.string "MOM: Did you introduce yourself to\n"
-	.string "PROF. BIRCH?$"
+	.string "Prof. Tilyou?$"
 
 PlayersHouse_1F_Text_YouShouldRestABit: @ 81F7D08
 	.string "MOM: How are you doing, {PLAYER}?\n"
@@ -385,7 +385,7 @@ PlayersHouse_1F_Text_Vigoroth2: @ 81F7EB3
 
 PlayersHouse_1F_Text_ReportFromPetalburgGym: @ 81F7EC6
 	.string "INTERVIEWER: …We brought you this\n"
-	.string "report from in front of PETALBURG GYM.$"
+	.string "report from in front of Lynch Park.$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV: @ 81F7F0F
 	.string "There is a movie on TV.\p"
@@ -418,7 +418,7 @@ PlayersHouse_1F_Text_PortsInSlateportLilycove: @ 81F80FE
 	.string "Riverside and The Outlets.$"
 
 PlayersHouse_1F_Text_BetterGetBackToGym: @ 81F815B
-	.string "I'd better get back to PETALBURG GYM.\p"
+	.string "I'd better get back to Lynch Park.\p"
 	.string "MOM, thanks for looking after the house\n"
 	.string "while I'm away.$"
 

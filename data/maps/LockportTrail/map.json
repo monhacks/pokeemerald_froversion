@@ -2,7 +2,7 @@
   "id": "MAP_LOCKPORT_TRAIL",
   "name": "LockportTrail",
   "layout": "LAYOUT_LOCKPORT_TRAIL",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_PETALBURG_WOODS",
   "region_map_section": "MAPSEC_ROUTE_101",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

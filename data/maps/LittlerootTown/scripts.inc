@@ -1064,9 +1064,9 @@ LittlerootTown_Text_WaitPlayer: @ 81E87E1
 
 LittlerootTown_Text_WearTheseRunningShoes: @ 81E87F0
 	.string "MOM: {PLAYER}! {PLAYER}! Did you\n"
-	.string "introduce yourself to PROF. BIRCH?\p"
+	.string "introduce yourself to Prof. Tilyou?\p"
 	.string "Oh! What an adorable Pokémon!\n"
-	.string "You got it from PROF. BIRCH. How nice!\p"
+	.string "You got it from Prof. Tilyou. How nice!\p"
 	.string "You're your father's child, all right.\n"
 	.string "You look good together with Pokémon!\p"
 	.string "Here, honey! If you're going out on an\n"
@@ -1101,10 +1101,10 @@ LittlerootTown_Text_CanUsePCToStoreItems: @ 81E8ACF
 	.string "The power of science is staggering!$"
 
 LittlerootTown_Text_BirchSpendsDaysInLab: @ 81E8B25
-	.string "PROF. BIRCH spends days in his LAB\n"
+	.string "Prof. Tilyou spends days in his LAB\n"
 	.string "studying, then he'll suddenly go out in\l"
 	.string "the wild to do more research…\p"
-	.string "When does PROF. BIRCH spend time\n"
+	.string "When does Prof. Tilyou spend time\n"
 	.string "at home?$"
 
 LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut: @ 81E8BB8
@@ -1126,7 +1126,7 @@ LittlerootTown_Text_CanYouGoSeeWhatsHappening: @ 81E8C3A
 	.string "for me?$"
 
 LittlerootTown_Text_YouSavedBirch: @ 81E8CE3
-	.string "You saved PROF. BIRCH!\n"
+	.string "You saved Prof. Tilyou!\n"
 	.string "I'm so glad!$"
 
 LittlerootTown_Text_GoodLuckCatchingPokemon: @ 81E8D07
@@ -1138,16 +1138,16 @@ LittlerootTown_Text_TownSign: @ 81E8D32
 	.string "“A town that can't be shaded any hue.”$"
 
 LittlerootTown_Text_ProfBirchsLab: @ 81E8D69
-	.string "PROF. BIRCH'S Pokémon LAB$"
+	.string "Prof. Tilyou'S Pokémon LAB$"
 
 LittlerootTown_Text_PlayersHouse: @ 81E8D83
 	.string "{PLAYER}'s HOUSE$"
 
 LittlerootTown_Text_ProfBirchsHouse: @ 81E8D8E
-	.string "PROF. BIRCH'S HOUSE$"
+	.string "Prof. Tilyou'S HOUSE$"
 
 LittlerootTown_Text_BirchSomethingToShowYouAtLab: @ 81E8DA2
-	.string "PROF. BIRCH: Well, well, {PLAYER}{KUN}!\n"
+	.string "Prof. Tilyou: Well, well, {PLAYER}{KUN}!\n"
 	.string "That was good work out there!\p"
 	.string "I knew there was something special\n"
 	.string "about you when I first saw you,\l"
