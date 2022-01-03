@@ -413,7 +413,7 @@ Route120_Text_StevenShowMeYourPower: @ 81F5B0F
 	.string "power as a Trainer!$"
 
 Route120_Text_StevenUsedDevonScope: @ 81F5B43
-	.string "Steven used the C. G. Scope.\p"
+	.string "Mikeused the C. G. Scope.\p"
 	.string "An invisible Pokémon became completely\n"
 	.string "visible!\p"
 	.string "The startled Pokémon attacked!$"

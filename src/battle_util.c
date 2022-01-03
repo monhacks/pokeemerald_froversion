@@ -6729,6 +6729,11 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     gBattleMoveDamage = 0;
                     gBattlescriptCurrInstr = BattleScript_NikitaFightingBoost;
                     }
+                    if (moveType == TYPE_GROUND)
+                    {
+                    gBattleMoveDamage = 0;
+                    gBattlescriptCurrInstr = BattleScript_NikitaGroundBoost;
+                    }
                 }
                 break;
             case HOLD_EFFECT_SNOWBALL:
