@@ -248,12 +248,8 @@ MagmaHideout_4F_Text_MaxieImGoingAfterGroudon: @ 823ABE2
 MagmaHideout_EventScript_Amneet::
 	lock
 	faceplayer
-	playbgm MUS_FV_PIMP, 0
-	message SummitCity_Text_AmneetSummitCityMerchant
-	waitmessage
 	pokemart MagmaHideout_Pokemart_Amneet
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
-	fadedefaultbgm
 	release
 	end
 
@@ -273,3 +269,27 @@ MagmaHideout_Pokemart_Amneet:
 	release
 	end
 
+MagmaHideout_EventScript_Porygon::
+	lock
+	playmoncry SPECIES_PORYGON, 0
+	scrollingmultichoice 9, 2, 3, 3, TRUE
+	compare VAR_RESULT, 0
+	goto_if_eq Eventscript_Porygon_PCMainMenu
+	compare VAR_RESULT, 1
+	goto_if_eq MagmaHideout_EventScript_Amneet
+	compare VAR_RESULT, 2
+	goto_if_eq BossBattleMoveRelearner
+	release
+	end
+
+MagmaHideout_EventScript_ChanseyHeal::
+	lock
+	faceplayer
+	playmoncry SPECIES_CHANSEY, 0
+	setrespawn HEAL_LOCATION_LOCKPORT_TRAIL_BF2
+	msgbox SummitCaverns_Text_RestUpHere, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq SummitCaverns_EventScript_Rest
+	closemessage
+	release
+	end

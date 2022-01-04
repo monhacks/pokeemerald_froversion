@@ -52,6 +52,7 @@ MtChimney_EventScript_ArchieBusyFighting:: @ 822EE02
 
 MtChimney_EventScript_Maxie:: @ 822EE0B
 	lockall
+	setrespawn HEAL_LOCATION_MT_CHIMNEY
 	goto_if_set FLAG_TEMP_1, MtChimney_EventScript_MaxieBattle
 	playbgm MUS_ENCOUNTER_MAGMA, 0
 	msgbox MtChimney_Text_MeteoriteWillActivateVolcano, MSGBOX_DEFAULT
@@ -916,14 +917,8 @@ ImTheMoveTutor:
 ///////////FROVERSION//////////////
 
 MyChimney_EventScript_Amneet::
-	lock
-	faceplayer
-	playbgm MUS_FV_PIMP, 0
-	message SummitCity_Text_AmneetSummitCityMerchant
-	waitmessage
 	pokemart MyChimney_Pokemart_Amneet
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
-	fadedefaultbgm
 	release
 	end
 
@@ -940,5 +935,18 @@ MyChimney_Pokemart_Amneet:
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_DIRE_HIT
 	.2byte ITEM_NONE
+	release
+	end
+
+
+MtChimney_EventScript_ChanseyHeal::
+	lock
+	faceplayer
+	playmoncry SPECIES_CHANSEY, 0
+	setrespawn HEAL_LOCATION_MT_CHIMNEY
+	msgbox SummitCaverns_Text_RestUpHere, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq SummitCaverns_EventScript_Rest
+	closemessage
 	release
 	end

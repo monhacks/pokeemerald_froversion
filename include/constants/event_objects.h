@@ -269,8 +269,10 @@
 #define OBJ_EVENT_GFX_NIKE                       265
 #define OBJ_EVENT_GFX_KOSTIW                     266
 #define OBJ_EVENT_GFX_MATT                       267
+#define OBJ_EVENT_GFX_CHANSEY                    268
+#define OBJ_EVENT_GFX_PORYGON                   269
 
-#define NUM_OBJ_EVENT_GFX                        268
+#define NUM_OBJ_EVENT_GFX                        270
 
 
 // These are dynamic object gfx ids.

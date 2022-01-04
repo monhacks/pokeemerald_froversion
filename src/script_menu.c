@@ -864,6 +864,9 @@ static const u8 sText_Number9[] =_("9");
 static const u8 sText_PA[] =_("5YR PA");
 static const u8 sText_CreditCard[] =_("Credit Card");
 static const u8 sText_Attachment[] =_("Attachment");
+static const u8 sText_PC[] =_("PC");
+static const u8 sText_Shop[] =_("Shop");
+static const u8 sText_MoveReleaner[] =_("Teach");
 
 
 
@@ -983,7 +986,12 @@ static const struct ListMenuItem sKickAssQuestion3[] =
     {sText_OldAge, 3},
 };
 
-
+static const struct ListMenuItem sPorygonMenu[] =
+{
+    {sText_PC, 0},
+    {sText_Shop, 1},
+    {sText_MoveReleaner, 2},
+};
 
 
 // Table of your multichoice sets.
@@ -1001,7 +1009,8 @@ struct
     {sKickAssQuestion3, ARRAY_COUNT(sKickAssQuestion3)}, //5
     {sAlphabet, ARRAY_COUNT(sAlphabet)}, //6
     {sNumbers, ARRAY_COUNT(sNumbers)}, //7
-    {sSummitCityEscapePuzzles, ARRAY_COUNT(sSummitCityEscapePuzzles)}, //7
+    {sSummitCityEscapePuzzles, ARRAY_COUNT(sSummitCityEscapePuzzles)}, //8
+    {sPorygonMenu, ARRAY_COUNT(sPorygonMenu)}, //9
     
     
 };

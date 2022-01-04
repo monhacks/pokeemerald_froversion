@@ -2520,3 +2520,28 @@ const struct SpriteFrameImage gObjectEventPicTable_Matt[] = {
     overworld_frame(gObjectEventPic_Matt, 2, 4, 7),
     overworld_frame(gObjectEventPic_Matt, 2, 4, 8),
 };
+
+const struct SpriteFrameImage gObjectEventPicTable_Chansey[] = {
+    overworld_frame(gObjectEventPic_Chansey, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Chansey, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Chansey, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Chansey, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Chansey, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Chansey, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Chansey, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Chansey, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Chansey, 2, 2, 2),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Porygon[] = {
+    overworld_frame(gObjectEventPic_Porygon, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Porygon, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Porygon, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Porygon, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Porygon, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Porygon, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Porygon, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Porygon, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Porygon, 2, 2, 2),
+};
+

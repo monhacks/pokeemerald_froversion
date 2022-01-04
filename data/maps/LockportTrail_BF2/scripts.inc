@@ -4,6 +4,38 @@
 LockportTrail_BF2_MapScripts::
 	.byte 0
 
+SummitCaverns_EventScript_ChanseyHeal::
+	lock
+	faceplayer
+	playmoncry SPECIES_CHANSEY, 0
+	setrespawn HEAL_LOCATION_LOCKPORT_TRAIL_BF2
+	msgbox SummitCaverns_Text_RestUpHere, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq SummitCaverns_EventScript_Rest
+	closemessage
+	release
+	end
+
+SummitCaverns_EventScript_Porygon::
+	lock
+	playmoncry SPECIES_PORYGON, 0
+	scrollingmultichoice 9, 2, 3, 3, TRUE
+	compare VAR_RESULT, 0
+	goto_if_eq Eventscript_Porygon_PCMainMenu
+	compare VAR_RESULT, 1
+	goto_if_eq MyChimney_EventScript_Amneet
+	compare VAR_RESULT, 2
+	goto_if_eq BossBattleMoveRelearner
+	release
+	end
+
+SummitCaverns_EventScript_Rest:: @ 822A941
+	msgbox SummitCaverns_Text_TakeYourTimeRestUp, MSGBOX_DEFAULT
+	closemessage
+	call Common_EventScript_OutOfCenterPartyHeal
+	release
+	end
+
 
 SummitCaverns_EventScript_MagaGruntBF21:: @ 81F2F93
 	trainerbattle_single TRAINER_KAREN_2, SummitCaverns_Text_MagaGruntBF21Intro, SummitCaverns_Text_MagaGruntBF21Defeat
@@ -31,6 +63,7 @@ SummitCaverns_EventScript_MagaGruntBF24:: @ 81F2F93
 
 SummitCaverns_EventScript_LattkaBattleTrigger::
 	lockall
+	setrespawn HEAL_LOCATION_LOCKPORT_TRAIL_BF2
 	goto_if_set FLAG_HIDE_SUMMIT_CAVERNS_TEAM_MAGA_ZENDANO, SummitCaverns_EventScript_LattkaBattleEnd
 	playbgm MUS_FV_TEAM_MAGA, 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
@@ -234,3 +267,11 @@ SummitCaverns_Text_MagaGruntBF24PostBattle:
 SummitCaverns_Text_LattkaChallengesFro:
 	.string "Lattka: Well com on then, punk.\n"
 	.string "Challenge me if you dare.$"
+
+SummitCaverns_Text_RestUpHere: @ 822A978
+	.string "The path ahead looks tough.\n"
+	.string "If you'd like, rest up here.$"
+
+SummitCaverns_Text_TakeYourTimeRestUp: @ 822A9EC
+	.string "That's right.\n"
+	.string "Take your time and rest up!$"

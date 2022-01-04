@@ -441,3 +441,11 @@ const u16 gObjectEventPal_Kostiw[] = INCBIN_U16("graphics/object_events/palettes
 
 const u32 gObjectEventPic_Matt[] = INCBIN_U32("graphics/object_events/pics/people/froversion_trainers/matt.4bpp");
 const u16 gObjectEventPal_Matt[] = INCBIN_U16("graphics/object_events/palettes/matt.gbapal");
+
+
+const u32 gObjectEventPic_Chansey[] = INCBIN_U32("graphics/object_events/pics/pokemon/chansey.4bpp");
+const u16 gObjectEventPal_Chansey[] = INCBIN_U16("graphics/object_events/palettes/chansey.gbapal");
+
+
+const u32 gObjectEventPic_Porygon[] = INCBIN_U32("graphics/object_events/pics/pokemon/porygon.4bpp");
+const u16 gObjectEventPal_Porygon[] = INCBIN_U16("graphics/object_events/palettes/porygon.gbapal");

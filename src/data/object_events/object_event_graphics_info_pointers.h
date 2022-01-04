@@ -273,6 +273,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MikeLynch;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nike;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kostiw;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Matt;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chansey;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Porygon;
 
 
 
@@ -545,6 +547,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_NIKE] =             &gObjectEventGraphicsInfo_Nike,
     [OBJ_EVENT_GFX_KOSTIW] =             &gObjectEventGraphicsInfo_Kostiw,
     [OBJ_EVENT_GFX_MATT] =             &gObjectEventGraphicsInfo_Matt,
+    [OBJ_EVENT_GFX_CHANSEY] =             &gObjectEventGraphicsInfo_Chansey,
+    [OBJ_EVENT_GFX_PORYGON] =             &gObjectEventGraphicsInfo_Porygon,
 
 
 };

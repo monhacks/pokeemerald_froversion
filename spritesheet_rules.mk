@@ -800,5 +800,9 @@ $(OBJEVENTGFXDIR)/people/froversion_trainers/kostiw.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/froversion_trainers/matt.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/pokemon/chansey.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 2
 
 
+$(OBJEVENTGFXDIR)/pokemon/porygon.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 2
