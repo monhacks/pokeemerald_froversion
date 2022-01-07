@@ -62,10 +62,10 @@ EverGrandeCity_GlaciasRoom_EventScript_Defeated:: @ 822849A
 	end
 
 EverGrandeCity_GlaciasRoom_Text_IntroSpeech: @ 82284AC
-	.string "Welcome, my name is GLACIA\n"
+	.string "Welcome, my name is Jim\n"
 	.string "of the Elite Four.\p"
-	.string "I've traveled from afar to HOENN\n"
-	.string "so that I may hone my ice skills.\p"
+	.string "I've traveled from afar to Niagara\n"
+	.string "so that I may hone my skills.\p"
 	.string "But all I have seen are challenges by\n"
 	.string "weak Trainers and their Pokémon.\p"
 	.string "What about you?\p"

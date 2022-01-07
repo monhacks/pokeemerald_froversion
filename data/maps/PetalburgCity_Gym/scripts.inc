@@ -369,6 +369,7 @@ PetalburgCity_Gym_EventScript_NormanFaceDoorEast:: @ 8204D7F
 	return
 
 PetalburgCity_Gym_EventScript_NormanPostBattle:: @ 8204D80
+	goto_if_unset FLAG_BADGE05_GET, PetalburgCity_Gym_EventScript_NormanBattle   @ put this in as some testers were saying norman just hands the TM and doesnt battle. Can't see why this would happen so this is a hard check.
 	clearflag FLAG_SYS_NO_BAG_USE
 	clearflag FLAG_BATTLE_ROULETTE
 	clearflag FLAG_FORCE_BATTLE_STYLE_SET

@@ -78,27 +78,27 @@ CaveOfOrigin_B1F_Text_WallaceStory: @ 823586E
 	.string "ancient Pokémon.\p"
 	.string "There is one more somewhere.\p"
 	.string "Somewhere, there is a super-\n"
-	.string "ancient Pokémon named RAYQUAZA.\p"
-	.string "It's said that it was RAYQUAZA that\n"
+	.string "ancient Pokémon named Dracaster.\p"
+	.string "It's said that it was Dracaster that\n"
 	.string "becalmed the two combatants in\l"
 	.string "the distant past.\p"
 	.string "But even I have no clue as to\n"
-	.string "RAYQUAZA's whereabouts…$"
+	.string "Dracaster's whereabouts…$"
 
 CaveOfOrigin_B1F_Text_WhereIsRayquaza: @ 8235ACE
-	.string "WALLACE: {PLAYER}{KUN}, do you perhaps\n"
-	.string "know where RAYQUAZA is now?\p"
+	.string "Wallace: {PLAYER}{KUN}, do you perhaps\n"
+	.string "know where Dracaster is now?\p"
 	.string "If you do, please tell me.$"
 
 CaveOfOrigin_B1F_Text_ButWereInCaveOfOrigin: @ 8235B23
-	.string "WALLACE: The CAVE OF ORIGIN?\p"
+	.string "Wallace: The CAVE OF ORIGIN?\p"
 	.string "But that's right here!\n"
 	.string "I need you to do better than that!\p"
 	.string "Please, I need you to think about\n"
-	.string "where RAYQUAZA might be right now.$"
+	.string "where Dracaster might be right now.$"
 
 CaveOfOrigin_B1F_Text_OldLadyDidntMentionThat: @ 8235BBF
-	.string "WALLACE: Mt. Pyre?\p"
+	.string "Wallace: Mt. Pyre?\p"
 	.string "But when I met the old lady there\n"
 	.string "earlier, she made no mention of it.\p"
 	.string "I very much doubt that the old lady\n"
@@ -107,12 +107,12 @@ CaveOfOrigin_B1F_Text_OldLadyDidntMentionThat: @ 8235BBF
 	.string "more carefully for me?$"
 
 CaveOfOrigin_B1F_Text_CantYouRememberSomehow: @ 8235C99
-	.string "WALLACE: Huh? You don't remember?\n"
+	.string "Wallace: Huh? You don't remember?\n"
 	.string "Hmm… That's a problem…\p"
 	.string "Can't you remember somehow?$"
 
 CaveOfOrigin_B1F_Text_WellHeadToSkyPillar: @ 8235CEE
-	.string "WALLACE: The Sky Pillar?\p"
+	.string "Wallace: The Sky Pillar?\p"
 	.string "That's it!\n"
 	.string "It must be the Sky Pillar!\p"
 	.string "{PLAYER}{KUN}, there's not a moment to lose!\n"

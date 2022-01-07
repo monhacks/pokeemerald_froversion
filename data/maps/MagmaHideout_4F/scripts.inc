@@ -286,7 +286,7 @@ MagmaHideout_EventScript_ChanseyHeal::
 	lock
 	faceplayer
 	playmoncry SPECIES_CHANSEY, 0
-	setrespawn HEAL_LOCATION_LOCKPORT_TRAIL_BF2
+	setrespawn HEAL_LOCATION_MAGMA_HIDEOUT_4F
 	msgbox SummitCaverns_Text_RestUpHere, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq SummitCaverns_EventScript_Rest

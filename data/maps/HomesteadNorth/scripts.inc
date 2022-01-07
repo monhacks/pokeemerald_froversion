@@ -112,6 +112,7 @@ SnowVillage_EventScript_FinalBattle::
 	lock
 	compare VAR_HOMESTEAD_NORTH_STATE, 13
 	goto_if_eq SnowVillage_EventScript_StartFinalBattle
+	goto_if_gt SootopolisCity_Gym_1F_EventScript_Juan
 	goto_if_unset FLAG_MATT_INTRO, SnowVillage_EventScript_ChampionIntro
 	msgbox SnowVillage_Text_YouDontHaveEnoughSnowflakes, MSGBOX_NPC
 	release

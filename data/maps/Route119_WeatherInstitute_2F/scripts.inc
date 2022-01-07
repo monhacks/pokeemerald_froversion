@@ -128,7 +128,7 @@ Route119_WeatherInstitute_2F_EventScript_ReceivedCastformFanfare:: @ 82700DB
 	message Route119_WeatherInstitute_2F_Text_PlayerReceivedCastform
 	waitmessage
 	waitfanfare
-	bufferspeciesname 0, SPECIES_CASTFORM
+	bufferspeciesname 0, SPECIES_EEVEE
 	return
 
 Route119_WeatherInstitute_2F_EventScript_ExplainCastform:: @ 82700EA

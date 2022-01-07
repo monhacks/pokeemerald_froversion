@@ -19,7 +19,6 @@ FortreeCity_Gym_EventScript_Winona:: @ 82165C8
 	setflag	FLAG_BATTLE_HAUNTING
 	setflag FLAG_SYS_NO_BAG_USE
 	setflag FLAG_FORCE_BATTLE_STYLE_SET
-	cleartrainerflag TRAINER_WINONA_1
 	trainerbattle_single TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaIntro, FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE

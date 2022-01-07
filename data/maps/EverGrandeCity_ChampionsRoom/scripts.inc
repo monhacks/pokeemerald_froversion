@@ -372,13 +372,13 @@ EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe: @ 8229399
 
 EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside: @ 82293EB
 	.string "John: I'm sorry, but…\p"
-	.string "From here on, only those Trainers who\n"
-	.string "have become Champions may enter.\p"
+	.string "From here on, only the current\n"
+	.string "Champion and I may enter.\p"
 	.string "You'll have to wait outside with\n"
 	.string "Prof. Tilyou.$"
 
 EverGrandeCity_ChampionsRoom_Text_MayCongratulations: @ 8229479
-	.string "MAY: Groan…\p"
+	.string "Bobby: Groan…\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
 	.string "I'm just joking! That's okay!\n"

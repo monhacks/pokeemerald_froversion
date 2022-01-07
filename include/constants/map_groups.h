@@ -1,6 +1,10 @@
 #ifndef GUARD_CONSTANTS_MAP_GROUPS_H
 #define GUARD_CONSTANTS_MAP_GROUPS_H
 
+//
+// DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/map_groups.json
+//
+
 // Map Group 0
 #define MAP_PETALBURG_CITY                     (0 | (0 << 8))
 #define MAP_SLATEPORT_CITY                     (1 | (0 << 8))
@@ -688,5 +692,7 @@
 #define MAP_HAUNTED_WOODS13                        (12 | (33 << 8))
 
 #define MAP_GROUPS_COUNT 34
+
+// static const u8 MAP_GROUP_COUNT[] = {121, 10, 9, 10, 8, 8, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 13, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

@@ -87,6 +87,7 @@ SootopolisCity_Gym_1F_EventScript_Juan:: @ 8224F44
 	setflag FLAG_SYS_NO_BAG_USE
 	setflag FLAG_FORCE_BATTLE_STYLE_SET
 	trainerbattle_single TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanIntro, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
+	addvar VAR_HOMESTEAD_NORTH_STATE, 1
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	clearflag FLAG_BATTLE_DREAM_FOG
@@ -200,9 +201,9 @@ SootopolisCity_Gym_1F_EventScript_GymStatue:: @ 8225089
 SootopolisCity_Gym_1F_Text_GymGuideAdvice: @ 8225093
 	.string "Yo! How's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
-	.string "Homestead's Gym Leader JUAN is\n"
+	.string "Homestead's Gym Leader Icee is\n"
 	.string "a master of WATER-type Pokémon.\p"
-	.string "And, to get to JUAN, an icy floor\n"
+	.string "And, to get to Icee, an icy floor\n"
 	.string "will hamper your progress…\p"
 	.string "Listen, I'm sorry, but that's all the\n"
 	.string "advice that I have for you.\p"
@@ -210,17 +211,17 @@ SootopolisCity_Gym_1F_Text_GymGuideAdvice: @ 8225093
 	.string "go for it yourself!$"
 
 SootopolisCity_Gym_1F_Text_GymGuidePostVictory: @ 82251AF
-	.string "Yow! You've beaten even JUAN, who\n"
-	.string "was supposedly the best in all HOENN!\p"
-	.string "Okay! Check out your TRAINER CARD.\p"
-	.string "If you've gotten all the BADGES, you're\n"
+	.string "Yow! You've beaten even Icee, who\n"
+	.string "was supposedly the best in all Niagara!\p"
+	.string "Okay! Check out your Trainer Card.\p"
+	.string "If you've gotten all the Badges, you're\n"
 	.string "set for the Pokémon League challenge!$"
 
 SootopolisCity_Gym_1F_Text_JuanIntro: @ 8225268
 	.string "Let me ask you.\n"
 	.string "Did you know?\l"
 	.string "Ah, I should not be so coy.\p"
-	.string "It was I who taught WALLACE everything\n"
+	.string "It was I who taught Wallace everything\n"
 	.string "there is to know about Pokémon.\p"
 	.string "Once, I had given up my position as\n"
 	.string "the Gym Leader.\p"
@@ -256,7 +257,7 @@ SootopolisCity_Gym_1F_Text_JuanDefeat: @ 8225432
 
 SootopolisCity_Gym_1F_Text_ReceivedRainBadge: @ 8225598
 	.string "{PLAYER} received the Tit Badge\n"
-	.string "from JUAN.$"
+	.string "from Icee.$"
 
 SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis: @ 82255BE
 	.string "Having the Tit Badge shall assure you\n"
@@ -276,22 +277,22 @@ SootopolisCity_Gym_1F_Text_ExplainWaterPulse: @ 82256C1
 	.string "… … … … … …$"
 
 SootopolisCity_Gym_1F_Text_RegisteredJuan: @ 822574D
-	.string "Registered Gym Leader JUAN\n"
+	.string "Registered Gym Leader Icee\n"
 	.string "in the Pokénav.$"
 
 SootopolisCity_Gym_1F_Text_JuanPostBattle: @ 8225778
 	.string "The Trainers who have gathered all\n"
-	.string "the GYM BADGES of HOENN should make\l"
+	.string "the Gym Badges of Niagara should make\l"
 	.string "way to the ultimate destination.\p"
 	.string "The Pokémon League.\p"
 	.string "Travel to the easternmost reaches\n"
-	.string "of HOENN, to the island Scranton.\p"
+	.string "of Niagara, to the island Scranton.\p"
 	.string "There, you shall find the Pokémon\n"
 	.string "League.$"
 
 SootopolisCity_Gym_1F_Text_GoGetFortreeBadge: @ 8225865
-	.string "There remains but one BADGE to\n"
-	.string "obtain in HOENN.\p"
+	.string "There remains but one Badge to\n"
+	.string "obtain in Niagara.\p"
 	.string "If you wish to challenge the Pokémon\n"
 	.string "League, you must obtain the last\l"
 	.string "BADGE from the GYM in Dawn Town.$"
@@ -301,11 +302,11 @@ SootopolisCity_Gym_1F_Text_GymStatue: @ 82258FA
 
 SootopolisCity_Gym_1F_Text_GymStatueCertified: @ 8225916
 	.string "Homestead Town Pokémon GYM\p"
-	.string "JUAN'S CERTIFIED Trainers:\n"
+	.string "Icee's Certified Trainers:\n"
 	.string "{PLAYER}$"
 
 SootopolisCity_Gym_1F_Text_JuanPreRematch: @ 8225950
-	.string "JUAN: Ah, this GYM had returned to its\n"
+	.string "Icee: Ah, this GYM had returned to its\n"
 	.string "usual state of serenity…\p"
 	.string "But our young typhoon has returned\n"
 	.string "to put us to the test again!\p"
@@ -318,7 +319,7 @@ SootopolisCity_Gym_1F_Text_JuanRematchDefeat: @ 8225A2E
 	.string "You have defeated me again!$"
 
 SootopolisCity_Gym_1F_Text_JuanPostRematch: @ 8225A67
-	.string "JUAN: If I told you to become my\n"
+	.string "Icee: If I told you to become my\n"
 	.string "apprentice, you will refuse, I am sure.\p"
 	.string "I would like to make a gift of my coat\n"
 	.string "to you.\p"
@@ -328,7 +329,7 @@ SootopolisCity_Gym_1F_Text_JuanPostRematch: @ 8225A67
 	.string "of nobility!$"
 
 SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons: @ 8225B48
-	.string "JUAN: Ah, this GYM had returned to its\n"
+	.string "Icee: Ah, this GYM had returned to its\n"
 	.string "usual state of serenity…\p"
 	.string "But our young typhoon has returned\n"
 	.string "to put us to the test again!\p"

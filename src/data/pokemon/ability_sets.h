@@ -977,7 +977,10 @@ static const struct AbilitySetter sLutradorAbilitySet[] =
 
 static const struct AbilitySetter sPhotogeistAbilitySet[] =
 {
-    {ABILITY_RESURRECTION, 1},
+    {ABILITY_FLARE_BOOST, 1},
+    {ABILITY_UNBURDEN, 15},
+    {ABILITY_AFTERMATH, 30},
+    {ABILITY_RESURRECTION, 40},
     ABILITY_SET_END
 };
 
@@ -1079,7 +1082,11 @@ static const struct AbilitySetter sMega_GengarAbilitySet[] =
 
 static const struct AbilitySetter sEscaratacoAbilitySet[] =
 {
-    {ABILITY_BEAST_BOOST, 1},
+    {ABILITY_EFFECT_SPORE, 1},
+    {ABILITY_DRY_SKIN, 8},
+    {ABILITY_DAMP, 15},
+    {ABILITY_OVERCOAT, 24},
+    {ABILITY_STURDY, 32},
     ABILITY_SET_END
 };
 
@@ -1288,6 +1295,8 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_LOTAD] = sLotadAbilitySet,
     [SPECIES_LOMBRE] = sLotadAbilitySet,
     [SPECIES_LUDICOLO] = sLotadAbilitySet,
+    [SPECIES_PHOKAI] = sPhotogeistAbilitySet,
+    [SPECIES_PHOTASM] = sPhotogeistAbilitySet,
     [SPECIES_PHOTOGEIST] = sPhotogeistAbilitySet,
     [SPECIES_DUMBELLION] = sDumbellionAbilitySet,
     [SPECIES_BARBELLION] = sDumbellionAbilitySet,
@@ -1299,6 +1308,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_MEGA_DEWGONG] = sMega_DewgongAbilitySet,
     [SPECIES_FILLER_8] = sMegaHoundoomAbilitySet,
     [SPECIES_FILLER_9] = sMega_GengarAbilitySet,
+    [SPECIES_TAQUITTLE] = sEscaratacoAbilitySet,
     [SPECIES_ESCARATACO] = sEscaratacoAbilitySet,
     [SPECIES_PLASMUNG] = sPlasmungAbilitySet,
     [SPECIES_GRUNTAZE] = sPlasmungAbilitySet,

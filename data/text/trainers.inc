@@ -1089,7 +1089,7 @@ Route110_Text_JasmineDefeated: @ 8297FD0
 	.string "I'm worried about muscle cramps…$"
 
 Route110_Text_JasminePostBattle: @ 8297FF1
-	.string "Oh, you have some GYM BADGES?\n"
+	.string "Oh, you have some Gym Badges?\n"
 	.string "No wonder you're so strong!$"
 
 Route110_Text_EdwardIntro: @ 829802B
@@ -3372,7 +3372,7 @@ Route123_Text_WendyPostBattle: @ 829FC42
 
 Route123_Text_BraxtonIntro: @ 829FC6F
 	.string "You seem to have a big collection\n"
-	.string "of GYM BADGES.\p"
+	.string "of Gym Badges.\p"
 	.string "Let me see if you're actually worthy of\n"
 	.string "those BADGES!$"
 

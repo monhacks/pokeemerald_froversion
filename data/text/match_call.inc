@@ -2690,7 +2690,7 @@ MatchCall_Text_Scott6:: @ 2B5541
 	.string "SCOTT: Hi, hi, {PLAYER}{KUN}!\p"
 	.string "You know that you can challenge\n"
 	.string "the Pokémon LEAGUE when you've\l"
-	.string "collected all the Gym BADGES?\p"
+	.string "collected all the Gym Badges?\p"
 	.string "With your talent, becoming the\n"
 	.string "CHAMPION isn't a pipe dream.\p"
 	.string "But did you know?\n"
@@ -2727,7 +2727,7 @@ MatchCall_Text_Norman2:: @ 82B5795
 
 MatchCall_Text_Norman3:: @ 82B584D
 	.string "DAD: I see…\n"
-	.string "You've collected four Gym BADGES…\p"
+	.string "You've collected four Gym Badges…\p"
 	.string "There's no avoiding it now.\n"
 	.string "We will battle like I promised.\p"
 	.string "Come anytime.\n"
