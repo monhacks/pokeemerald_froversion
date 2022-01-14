@@ -69,6 +69,7 @@ MtChimney_EventScript_Maxie:: @ 822EE0B
 	end
 
 MtChimney_EventScript_MaxieBattle:
+	goto_if_defeated TRAINER_MAXIE_MT_CHIMNEY MtChimneyHoundoomBattle
 	trainerbattle_double TRAINER_MAXIE_MT_CHIMNEY, MtChimney_Text_MaxieIntro, MtChimney_Text_MaxieDefeat,Route104_Text_GinaNotEnoughMons, MtChimneyHoundoomBattle
 
 MtChimneyHoundoomBattle::

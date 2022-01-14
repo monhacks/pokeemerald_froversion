@@ -11,6 +11,7 @@ MagmaHideout_4F_MapScripts:: @ 823A55F
 
 MagmaHideout_4F_EventScript_Maxie:: @ 823A560
 	lockall
+	setrespawn HEAL_LOCATION_MAGMA_HIDEOUT_4F
 	playbgm MUS_ENCOUNTER_MAGMA, 0
 	goto_if_set FLAG_RED_EYES_FLY_AWAY, MagmaHideout_4F_EventScript_ZendanoBattle
 	msgbox MagmaHideout_4F_Text_MaxieAwakenGroudon, MSGBOX_DEFAULT
@@ -68,6 +69,7 @@ MagmaHideout_4F_EventScript_Maxie:: @ 823A560
 	end
 
 MagmaHideout_4F_EventScript_ZendanoBattle:
+	goto_if_defeated TRAINER_MAXIE_MAGMA_HIDEOUT MagmaHideout_4F_EventScript_ZendanoBattle2
 	trainerbattle_double TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieOhItWasYou, MagmaHideout_4F_Text_MaxieDefeat, Route104_Text_GinaNotEnoughMons, MagmaHideout_4F_EventScript_ZendanoBattle2
 	end
 
