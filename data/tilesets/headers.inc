@@ -1094,3 +1094,14 @@ gTileset_HomesteadNorth::
 	.4byte gMetatiles_HomesteadNorth
 	.4byte gMetatileAttributes_HomesteadNorth
 	.4byte NULL
+
+	.align 2
+gTileset_WesternApproach::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_WesternApproach
+	.4byte gTilesetPalettes_WesternApproach
+	.4byte gMetatiles_WesternApproach
+	.4byte gMetatileAttributes_WesternApproach
+	.4byte NULL

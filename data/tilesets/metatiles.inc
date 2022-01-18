@@ -726,3 +726,10 @@ gMetatiles_HomesteadNorth::
 	.align 1
 gMetatileAttributes_HomesteadNorth::
 	.incbin "data/tilesets/secondary/homesteadnorth/metatile_attributes.bin"
+	.align 1
+gMetatiles_WesternApproach::
+	.incbin "data/tilesets/primary/westernapproach/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_WesternApproach::
+	.incbin "data/tilesets/primary/westernapproach/metatile_attributes.bin"

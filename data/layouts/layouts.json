@@ -5410,6 +5410,46 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/NewMap2/border.bin",
       "blockdata_filepath": "data/layouts/NewMap2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTERN_APPROACH_LOST_SPRING_CANYON",
+      "name": "WesternApproachLostSpringCanyon_Layout",
+      "width": 25,
+      "height": 47,
+      "primary_tileset": "gTileset_WesternApproach",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WesternApproachLostSpringCanyon/border.bin",
+      "blockdata_filepath": "data/layouts/WesternApproachLostSpringCanyon/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1",
+      "name": "WesternApproachLostSpringCanyonTrail1_Layout",
+      "width": 49,
+      "height": 24,
+      "primary_tileset": "gTileset_WesternApproach",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WesternApproachLostSpringCanyonTrail1/border.bin",
+      "blockdata_filepath": "data/layouts/WesternApproachLostSpringCanyonTrail1/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTERN_APPROACH_OPEN_LAND1",
+      "name": "WesternApproachOpenLand1_Layout",
+      "width": 69,
+      "height": 44,
+      "primary_tileset": "gTileset_WesternApproach",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WesternApproachOpenLand1/border.bin",
+      "blockdata_filepath": "data/layouts/WesternApproachOpenLand1/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTERN_APPROACH_OPEN_LAND2",
+      "name": "WesternApproachOpenLand2_Layout",
+      "width": 36,
+      "height": 41,
+      "primary_tileset": "gTileset_WesternApproach",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WesternApproachOpenLand2/border.bin",
+      "blockdata_filepath": "data/layouts/WesternApproachOpenLand2/map.bin"
     }
   ]
 }

@@ -1265,3 +1265,11 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/HomesteadNorth_Pokecenter/scripts.inc"
 
 	.include "data/maps/NewMap2/scripts.inc"
+
+	.include "data/maps/WesternApproachLostSpringCanyon/scripts.inc"
+
+	.include "data/maps/WesternApproachLostSpringCanyonTrail1/scripts.inc"
+
+	.include "data/maps/WesternApproachOpenLand1/scripts.inc"
+
+	.include "data/maps/WesternApproachOpenLand2/scripts.inc"
