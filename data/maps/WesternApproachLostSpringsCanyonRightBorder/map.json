@@ -1,7 +1,7 @@
 {
-  "id": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON",
-  "name": "WesternApproachLostSpringCanyon",
-  "layout": "LAYOUT_WESTERN_APPROACH_LOST_SPRING_CANYON",
+  "id": "MAP_WESTERN_APPROACH_LOST_SPRINGS_CANYON_RIGHT_BORDER",
+  "name": "WesternApproachLostSpringsCanyonRightBorder",
+  "layout": "LAYOUT_WESTERN_APPROACH_LOST_SPRINGS_CANYON_RIGHT_BORDER",
   "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
@@ -10,18 +10,13 @@
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
-      "offset": -24,
-      "map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1"
-    },
-    {
-      "direction": "right",
+      "direction": "left",
       "offset": 0,
-      "map": "MAP_WESTERN_APPROACH_LOST_SPRINGS_CANYON_RIGHT_BORDER"
+      "map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON"
     }
   ],
   "object_events": [

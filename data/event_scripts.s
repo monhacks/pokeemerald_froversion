@@ -1273,3 +1273,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/WesternApproachOpenLand1/scripts.inc"
 
 	.include "data/maps/WesternApproachOpenLand2/scripts.inc"
+
+	.include "data/maps/WesternApproachLostSpringsCanyonRightBorder/scripts.inc"

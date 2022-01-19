@@ -5450,6 +5450,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/WesternApproachOpenLand2/border.bin",
       "blockdata_filepath": "data/layouts/WesternApproachOpenLand2/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTERN_APPROACH_LOST_SPRINGS_CANYON_RIGHT_BORDER",
+      "name": "WesternApproachLostSpringsCanyonRightBorder_Layout",
+      "width": 25,
+      "height": 47,
+      "primary_tileset": "gTileset_WesternApproach",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WesternApproachLostSpringsCanyonRightBorder/border.bin",
+      "blockdata_filepath": "data/layouts/WesternApproachLostSpringsCanyonRightBorder/map.bin"
     }
   ]
 }
