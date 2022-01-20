@@ -5417,7 +5417,7 @@
       "width": 25,
       "height": 47,
       "primary_tileset": "gTileset_WesternApproach",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_WesternApproachSpringCanyon",
       "border_filepath": "data/layouts/WesternApproachLostSpringCanyon/border.bin",
       "blockdata_filepath": "data/layouts/WesternApproachLostSpringCanyon/map.bin"
     },

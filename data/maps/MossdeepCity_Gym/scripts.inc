@@ -52,7 +52,7 @@ MossdeepCity_Gym_EventScript_TateAndLiza:: @ 8220898
 	setflag	FLAG_BATTLE_DARKNESS
 	setflag FLAG_SYS_NO_BAG_USE
 	setflag FLAG_FORCE_BATTLE_STYLE_SET
-	setvar VAR_MUGSHOT_ID, MUGSHOT_WES_THOMPSON
+	setvar VAR_MUGSHOT_ID, MUGSHOT_NIKE
 	trainerbattle_single TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaIntro, MossdeepCity_Gym_Text_TateAndLizaDefeat, MossdeepCity_Gym_EventScript_TateAndLizaDefeated
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE

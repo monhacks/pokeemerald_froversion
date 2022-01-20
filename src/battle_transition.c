@@ -547,6 +547,7 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_WES_THOMPSON] = TRAINER_PIC_WES_THOMPSON,
     [MUGSHOT_ZENDANO] = TRAINER_PIC_ZENDANO,
     [MUGSHOT_CHADANDMARK] = TRAINER_PIC_CHADANDMARK,
+    [MUGSHOT_NIKE] = TRAINER_PIC_NIKE,
 };
 static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
 {
@@ -575,6 +576,7 @@ static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
     [MUGSHOT_WES_THOMPSON] = {0x1A0, 0x1A0},
     [MUGSHOT_ZENDANO] = {0x1A0, 0x1A0},
     [MUGSHOT_CHADANDMARK] = {0x1A0, 0x1A0},
+    [MUGSHOT_NIKE] = {0x1A0, 0x1A0},
     
 };
 static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
@@ -604,6 +606,7 @@ static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
     [MUGSHOT_WES_THOMPSON] = {-4,     6},
     [MUGSHOT_ZENDANO] = {-4,     6},
     [MUGSHOT_CHADANDMARK] = {-4,     6},
+    [MUGSHOT_NIKE] = {-4,     6},
     
 };
 
@@ -944,7 +947,8 @@ static const u16 *const sOpponentMugshotsPals[MUGSHOTS_COUNT] =
     [MUGSHOT_SHAWN_HASELEY] = sMugshotPal_Champion,
     [MUGSHOT_WES_THOMPSON] = sMugshotPal_Champion,
     [MUGSHOT_ZENDANO] = sMugshotPal_Champion,
-    [MUGSHOT_CHADANDMARK] = sMugshotPal_Champion
+    [MUGSHOT_CHADANDMARK] = sMugshotPal_Champion,
+    [MUGSHOT_NIKE] = sMugshotPal_Sidney,
 };
 
 static const u16 *const sPlayerMugshotsPals[GENDER_COUNT] =

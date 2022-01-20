@@ -733,3 +733,10 @@ gMetatiles_WesternApproach::
 	.align 1
 gMetatileAttributes_WesternApproach::
 	.incbin "data/tilesets/primary/westernapproach/metatile_attributes.bin"
+	.align 1
+gMetatiles_WesternApproachSpringCanyon::
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_WesternApproachSpringCanyon::
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/metatile_attributes.bin"

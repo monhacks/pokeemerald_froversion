@@ -43,6 +43,7 @@ static void TilesetAnim_MauvilleGym(u16);
 static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
+static void TilesetAnim_WesternApproach(u16);
 static void TilesetAnim_RaintreeIsland_Gym_Fire(u16);
 static void TilesetAnim_RaintreeIsland_Gym_Ice(u16);
 static void QueueAnimTiles_General_Flower(u16);
@@ -75,6 +76,7 @@ static void QueueAnimTiles_MauvilleGym_ElectricGates(u16);
 static void QueueAnimTiles_SootopolisGym_Waterfalls(u16);
 static void QueueAnimTiles_EliteFour_GroundLights(u16);
 static void QueueAnimTiles_EliteFour_WallLights(u16);
+static void QueueAnimTiles_WesternApproach_AnimatedWater(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Lava(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Rock(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Puddle(u16);
@@ -83,6 +85,30 @@ static void QueueAnimTiles_RaintreeIsland_Gym_Ice_Sparkle(u16);
 //////////////////////////////////////////////////////////
 /////////////////FROVERSION ANIMATION////////////////////
 /////////////////////////////////////////////////////////
+
+const u16 gTilesetAnims_WesternApproach_AnimatedWater_Frame0[] = INCBIN_U16("data/tilesets/primary/westernapproach/anim/water/animated_water0000.4bpp");
+const u16 gTilesetAnims_WesternApproach_AnimatedWater_Frame1[] = INCBIN_U16("data/tilesets/primary/westernapproach/anim/water/animated_water0001.4bpp");
+const u16 gTilesetAnims_WesternApproach_AnimatedWater_Frame2[] = INCBIN_U16("data/tilesets/primary/westernapproach/anim/water/animated_water0002.4bpp");
+const u16 gTilesetAnims_WesternApproach_AnimatedWater_Frame3[] = INCBIN_U16("data/tilesets/primary/westernapproach/anim/water/animated_water0003.4bpp");
+const u16 gTilesetAnims_WesternApproach_AnimatedWater_Frame4[] = INCBIN_U16("data/tilesets/primary/westernapproach/anim/water/animated_water0004.4bpp");
+const u16 gTilesetAnims_WesternApproach_AnimatedWater_Frame5[] = INCBIN_U16("data/tilesets/primary/westernapproach/anim/water/animated_water0005.4bpp");
+const u16 gTilesetAnims_WesternApproach_AnimatedWater_Frame6[] = INCBIN_U16("data/tilesets/primary/westernapproach/anim/water/animated_water0006.4bpp");
+const u16 gTilesetAnims_WesternApproach_AnimatedWater_Frame7[] = INCBIN_U16("data/tilesets/primary/westernapproach/anim/water/animated_water0007.4bpp");
+const u16 gTilesetAnims_WesternApproach_AnimatedWater_Frame8[] = INCBIN_U16("data/tilesets/primary/westernapproach/anim/water/animated_water0008.4bpp");
+const u16 gTilesetAnims_WesternApproach_AnimatedWater_Frame9[] = INCBIN_U16("data/tilesets/primary/westernapproach/anim/water/animated_water0009.4bpp");
+
+const u16 *const gTilesetAnims_WesternApproach_AnimatedWater[] = {
+    gTilesetAnims_WesternApproach_AnimatedWater_Frame0,
+    gTilesetAnims_WesternApproach_AnimatedWater_Frame1,
+    gTilesetAnims_WesternApproach_AnimatedWater_Frame2,
+    gTilesetAnims_WesternApproach_AnimatedWater_Frame3,
+    gTilesetAnims_WesternApproach_AnimatedWater_Frame4,
+    gTilesetAnims_WesternApproach_AnimatedWater_Frame5,
+    gTilesetAnims_WesternApproach_AnimatedWater_Frame6,
+    gTilesetAnims_WesternApproach_AnimatedWater_Frame7,
+    gTilesetAnims_WesternApproach_AnimatedWater_Frame8,
+    gTilesetAnims_WesternApproach_AnimatedWater_Frame9
+};
 
 const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame0[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/animated_lava0000.4bpp");
 const u16 gTilesetAnims_RaintreeIsland_Gym_Fire_Lava_Frame1[] = INCBIN_U16("data/tilesets/secondary/raintreeisland_gym_fire/anim/lava/animated_lava0001.4bpp");
@@ -728,6 +754,13 @@ void InitTilesetAnim_General(void)
     sPrimaryTilesetAnimCallback = TilesetAnim_General;
 }
 
+void InitTilesetAnim_WesternApproach(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_WesternApproach;
+}
+
 void InitTilesetAnim_Building(void)
 {
     sPrimaryTilesetAnimCounter = 0;
@@ -1076,6 +1109,12 @@ static void TilesetAnim_BattleFrontierOutsideEast(u16 timer)
         QueueAnimTiles_BattleFrontierOutsideEast_Flag(timer >> 3);
 }
 
+static void TilesetAnim_WesternApproach(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_WesternApproach_AnimatedWater(timer >> 4);
+}
+
 static void TilesetAnim_RaintreeIsland_Gym_Fire(u16 timer)
 {
     if (timer % 8 == 0)
@@ -1300,6 +1339,12 @@ static void QueueAnimTiles_BattlePyramid_StatueShadow(u16 timer)
 {
     u16 i = timer % 3;
     AppendTilesetAnimToBuffer(gTilesetAnims_BattlePyramid_StatueShadow[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 135)), 0x100);
+}
+
+static void QueueAnimTiles_WesternApproach_AnimatedWater(u16 timer)
+{
+    u16 i = timer % 4;
+    AppendTilesetAnimToBuffer(gTilesetAnims_WesternApproach_AnimatedWater[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(11)), 0x80);
 }
 
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Lava(u16 timer)

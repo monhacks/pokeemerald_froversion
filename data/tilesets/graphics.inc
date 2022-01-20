@@ -2229,3 +2229,23 @@ gTilesetPalettes_WesternApproach::
 	.align 2
 gTilesetTiles_WesternApproach::
 	.incbin "data/tilesets/primary/westernapproach/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_WesternApproachSpringCanyon::
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_WesternApproachSpringCanyon::
+	.incbin "data/tilesets/secondary/westernapproachspringcanyon/tiles.4bpp.lz"

@@ -26,6 +26,7 @@
 #define MUGSHOT_WES_THOMPSON     22
 #define MUGSHOT_ZENDANO         23
 #define MUGSHOT_CHADANDMARK    24
+#define MUGSHOT_NIKE     25
 
 #define MUGSHOTS_COUNT      
 

@@ -1104,4 +1104,15 @@ gTileset_WesternApproach::
 	.4byte gTilesetPalettes_WesternApproach
 	.4byte gMetatiles_WesternApproach
 	.4byte gMetatileAttributes_WesternApproach
+	.4byte InitTilesetAnim_WesternApproach
+
+	.align 2
+gTileset_WesternApproachSpringCanyon::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_WesternApproachSpringCanyon
+	.4byte gTilesetPalettes_WesternApproachSpringCanyon
+	.4byte gMetatiles_WesternApproachSpringCanyon
+	.4byte gMetatileAttributes_WesternApproachSpringCanyon
 	.4byte NULL
