@@ -22,6 +22,11 @@
       "direction": "left",
       "offset": 0,
       "map": "MAP_WESTERN_APPROACH_OPEN_LAND1"
+    },
+    {
+      "direction": "up",
+      "offset": 49,
+      "map": "MAP_WESTERN_APPROACH_LOST_SPRINGS_CANYON_RIGHT_BORDER"
     }
   ],
   "object_events": [

@@ -5424,10 +5424,10 @@
     {
       "id": "LAYOUT_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1",
       "name": "WesternApproachLostSpringCanyonTrail1_Layout",
-      "width": 49,
+      "width": 67,
       "height": 24,
       "primary_tileset": "gTileset_WesternApproach",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_WesternApproachSpringCanyon",
       "border_filepath": "data/layouts/WesternApproachLostSpringCanyonTrail1/border.bin",
       "blockdata_filepath": "data/layouts/WesternApproachLostSpringCanyonTrail1/map.bin"
     },
