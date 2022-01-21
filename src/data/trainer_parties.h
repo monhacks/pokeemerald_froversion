@@ -13316,3 +13316,739 @@ static const struct TrainerMonItemCustomMoves sParty_JohnChampionsHallTorchic[] 
     .evs = {0, 151, 4, 151, 0, 20},
     }
 };
+
+static const struct TrainerMonItemCustomMoves sParty_RichBoyTrainersHall3Badges[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 30,
+    .species = SPECIES_VAYPING,
+    .moves = {MOVE_THUNDERBOLT, MOVE_ACID, MOVE_SMOKESCREEN, MOVE_TOXIC_SPIKES},
+    },
+    {
+    .abilityNum = 3,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 30,
+    .species = SPECIES_GROWLITHE,
+    .moves = {MOVE_TAKE_DOWN, MOVE_HOWL, MOVE_FIRE_FANG, MOVE_ROAR},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_RichBoyTrainersHall4Badges[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 38,
+    .species = SPECIES_VAYPING,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SLUDGE_BOMB, MOVE_SMOKESCREEN, MOVE_TOXIC_SPIKES},
+    },
+    {
+    .abilityNum = 3,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 38,
+    .species = SPECIES_GROWLITHE,
+    .moves = {MOVE_TAKE_DOWN, MOVE_HOWL, MOVE_FIRE_FANG, MOVE_ROAR},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_RichBoyTrainersHall5Badges[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 45,
+    .species = SPECIES_VAYPING,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SLUDGE_BOMB, MOVE_SMOKESCREEN, MOVE_TOXIC},
+    },
+    {
+    .abilityNum = 3,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 45,
+    .species = SPECIES_ARCANINE,
+    .moves = {MOVE_TAKE_DOWN, MOVE_HOWL, MOVE_FIRE_BLAST, MOVE_ROAR},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_LEFTOVERS,
+    .abilityNum = 2,
+    .iv = 255,
+    .lvl = 45,
+    .species = SPECIES_MACHAMP,
+    .moves = {MOVE_MEGA_PUNCH, MOVE_PAYBACK, MOVE_BRICK_BREAK, MOVE_ICE_PUNCH},
+    .evs = {0, 151, 4, 151, 0, 20},
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_RichBoyTrainersHall6Badges[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 52,
+    .species = SPECIES_VAYPING,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SLUDGE_BOMB, MOVE_SMOKESCREEN, MOVE_HAZE},
+    },
+    {
+    .abilityNum = 3,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 52,
+    .species = SPECIES_ARCANINE,
+    .moves = {MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_FIRE_BLAST, MOVE_ROAR},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_LEFTOVERS,
+    .abilityNum = 2,
+    .iv = 255,
+    .lvl = 52,
+    .species = SPECIES_MACHAMP,
+    .moves = {MOVE_THUNDER_PUNCH, MOVE_PAYBACK, MOVE_BRICK_BREAK, MOVE_ICE_PUNCH},
+    .evs = {0, 151, 4, 151, 0, 20},
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_RichBoyTrainersHall7Badges[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_VAYPING,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SLUDGE_BOMB, MOVE_SMOKESCREEN, MOVE_HAZE},
+    },
+    {
+    .abilityNum = 3,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_ARCANINE,
+    .moves = {MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_FIRE_BLAST, MOVE_ROAR},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_LEFTOVERS,
+    .abilityNum = 2,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_MACHAMP,
+    .moves = {MOVE_THUNDER_PUNCH, MOVE_PAYBACK, MOVE_BRICK_BREAK, MOVE_ICE_PUNCH},
+    .evs = {0, 151, 4, 151, 0, 20},
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_RichBoyTrainersHall8Badges[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 68,
+    .species = SPECIES_VAYPING,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SLUDGE_BOMB, MOVE_SMOKESCREEN, MOVE_HAZE},
+    },
+    {
+    .abilityNum = 3,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 68,
+    .species = SPECIES_ARCANINE,
+    .moves = {MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_FIRE_BLAST, MOVE_ROAR},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_CHOICE_BAND,
+    .abilityNum = 2,
+    .iv = 255,
+    .lvl = 68,
+    .species = SPECIES_MACHAMP,
+    .moves = {MOVE_THUNDER_PUNCH, MOVE_FIRE_PUNCH, MOVE_DYNAMIC_PUNCH, MOVE_ICE_PUNCH},
+    .evs = {0, 151, 4, 151, 0, 20},
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_RichBoyTrainersHallChampion[] = {
+    {
+    .abilityNum = 2,
+    .heldItem = ITEM_BLACK_SLUDGE,
+    .iv = 255,
+    .lvl = 75,
+    .species = SPECIES_VAYPING,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SLUDGE_BOMB, MOVE_SMOKESCREEN, MOVE_HAZE},
+    },
+    {
+    .abilityNum = 3,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 75,
+    .species = SPECIES_ARCANINE,
+    .moves = {MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_FIRE_BLAST, MOVE_ROAR},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_CHOICE_BAND,
+    .abilityNum = 2,
+    .iv = 255,
+    .lvl = 75,
+    .species = SPECIES_MACHAMP,
+    .moves = {MOVE_THUNDER_PUNCH, MOVE_FIRE_PUNCH, MOVE_DYNAMIC_PUNCH, MOVE_ICE_PUNCH},
+    .evs = {0, 151, 4, 151, 0, 20},
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_LassTrainersHall3Badges[] = {
+    {
+    .heldItem = ITEM_NONE,
+    .iv = 255,
+    .lvl = 28,
+    .species = SPECIES_SNEASEL,
+    .moves = {MOVE_SLASH, MOVE_ICE_PUNCH, MOVE_SLASH, MOVE_ICE_PUNCH},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 28,
+    .species = SPECIES_OCTIRE,
+    .moves = {MOVE_IRON_HEAD, MOVE_IRON_DEFENSE, MOVE_SURF, MOVE_TOXIC_SPIKES},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 28,
+    .species = SPECIES_SKIPLOOM,
+    .moves = {MOVE_SLEEP_POWDER, MOVE_LEECH_SEED, MOVE_MEGA_DRAIN, MOVE_ACROBATICS},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_LassTrainersHall4Badges[] = {
+    {
+    .heldItem = ITEM_NONE,
+    .iv = 255,
+    .lvl = 43,
+    .species = SPECIES_SNEASEL,
+    .moves = {MOVE_SLASH, MOVE_ICE_PUNCH, MOVE_SLASH, MOVE_ICE_PUNCH},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 43,
+    .species = SPECIES_OCTIRE,
+    .moves = {MOVE_IRON_TAIL, MOVE_IRON_DEFENSE, MOVE_BUBBLE_BEAM, MOVE_TOXIC_SPIKES},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 43,
+    .species = SPECIES_SKIPLOOM,
+    .moves = {MOVE_SLEEP_POWDER, MOVE_LEECH_SEED, MOVE_MEGA_DRAIN, MOVE_ACROBATICS},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_LassTrainersHall5Badges[] = {
+    {
+    .heldItem = ITEM_NONE,
+    .iv = 255,
+    .lvl = 43,
+    .species = SPECIES_SNEASEL,
+    .moves = {MOVE_SLASH, MOVE_ICE_PUNCH, MOVE_SLASH, MOVE_ICE_PUNCH},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 43,
+    .species = SPECIES_INVERTEBRAKE,
+    .moves = {MOVE_IRON_HEAD, MOVE_IRON_DEFENSE, MOVE_SURF, MOVE_TOXIC_SPIKES},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 43,
+    .species = SPECIES_JUMPLUFF,
+    .moves = {MOVE_SLEEP_POWDER, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_ACROBATICS},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_LassTrainersHall6Badges[] = {
+    {
+    .heldItem = ITEM_NONE,
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_SNEASEL,
+    .moves = {MOVE_SLASH, MOVE_ICE_PUNCH, MOVE_SLASH, MOVE_ICE_PUNCH},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_INVERTEBRAKE,
+    .moves = {MOVE_IRON_HEAD, MOVE_IRON_DEFENSE, MOVE_SURF, MOVE_TOXIC_SPIKES},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_JUMPLUFF,
+    .moves = {MOVE_SLEEP_POWDER, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_ACROBATICS},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_LassTrainersHall7Badges[] = {
+    {
+    .heldItem = ITEM_NONE,
+    .iv = 255,
+    .lvl = 58,
+    .species = SPECIES_SNEASEL,
+    .moves = {MOVE_SLASH, MOVE_ICE_PUNCH, MOVE_SLASH, MOVE_ICE_PUNCH},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 59,
+    .species = SPECIES_INVERTEBRAKE,
+    .moves = {MOVE_IRON_HEAD, MOVE_IRON_DEFENSE, MOVE_SURF, MOVE_TOXIC_SPIKES},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_JUMPLUFF,
+    .moves = {MOVE_SLEEP_POWDER, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_ACROBATICS},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_LassTrainersHall8Badges[] = {
+    {
+    .heldItem = ITEM_NONE,
+    .iv = 255,
+    .lvl = 66,
+    .species = SPECIES_SNEASEL,
+    .moves = {MOVE_SLASH, MOVE_ICE_PUNCH, MOVE_SLASH, MOVE_ICE_PUNCH},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 65,
+    .species = SPECIES_INVERTEBRAKE,
+    .moves = {MOVE_IRON_HEAD, MOVE_IRON_DEFENSE, MOVE_SURF, MOVE_TOXIC_SPIKES},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 67,
+    .species = SPECIES_JUMPLUFF,
+    .moves = {MOVE_SLEEP_POWDER, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_ACROBATICS},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_LassTrainersHallChampion[] = {
+    {
+    .heldItem = ITEM_NONE,
+    .iv = 255,
+    .lvl = 73,
+    .species = SPECIES_SNEASEL,
+    .moves = {MOVE_SLASH, MOVE_ICE_PUNCH, MOVE_SLASH, MOVE_ICE_PUNCH},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 73,
+    .species = SPECIES_INVERTEBRAKE,
+    .moves = {MOVE_IRON_HEAD, MOVE_IRON_DEFENSE, MOVE_SURF, MOVE_TOXIC_SPIKES},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 73,
+    .species = SPECIES_JUMPLUFF,
+    .moves = {MOVE_SLEEP_POWDER, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_ACROBATICS},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_GentlemanTrainersHall3Badges[] = {
+    {
+    .heldItem = ITEM_EVIOLITE,
+    .iv = 255,
+    .lvl = 28,
+    .species = SPECIES_PIKACHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDERBOLT, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 28,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_FLAME_CHARGE, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_GentlemanTrainersHall4Badges[] = {
+    {
+    .heldItem = ITEM_EVIOLITE,
+    .iv = 255,
+    .lvl = 36,
+    .species = SPECIES_PIKACHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDERBOLT, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 35,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_FLAME_CHARGE, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 37,
+    .species = SPECIES_RHYHORN,
+    .moves = {MOVE_STOMP, MOVE_ROCK_SLIDE, MOVE_NONE, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_GentlemanTrainersHall5Badges[] = {
+    {
+    .heldItem = ITEM_EVIOLITE,
+    .iv = 255,
+    .lvl = 43,
+    .species = SPECIES_PIKACHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDERBOLT, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 42,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_FLAME_CHARGE, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 41,
+    .species = SPECIES_RHYHORN,
+    .moves = {MOVE_STOMP, MOVE_ROCK_SLIDE, MOVE_NONE, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_GentlemanTrainersHall6Badges[] = {
+    {
+    .heldItem = ITEM_EVIOLITE,
+    .iv = 255,
+    .lvl = 48,
+    .species = SPECIES_PIKACHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDERBOLT, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 49,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_FLAME_CHARGE, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 47,
+    .species = SPECIES_RHYHORN,
+    .moves = {MOVE_STOMP, MOVE_ROCK_SLIDE, MOVE_NONE, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_GentlemanTrainersHall7Badges[] = {
+    {
+    .heldItem = ITEM_EVIOLITE,
+    .iv = 255,
+    .lvl =58,
+    .species = SPECIES_PIKACHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDER, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 59,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_EXPLOSION, MOVE_FLARE_BLITZ, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_RHYHORN,
+    .moves = {MOVE_STOMPING_TANTRUM, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_GentlemanTrainersHall8Badges[] = {
+    {
+    .heldItem = ITEM_EVIOLITE,
+    .iv = 255,
+    .lvl = 66,
+    .species = SPECIES_PIKACHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDER, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 66,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_EXPLOSION, MOVE_FLARE_BLITZ, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 66,
+    .species = SPECIES_RHYHORN,
+    .moves = {MOVE_STOMPING_TANTRUM, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_GentlemanTrainersHallChampion[] = {
+    {
+    .heldItem = ITEM_LIFE_ORB,
+    .iv = 255,
+    .lvl = 74,
+    .species = SPECIES_RAICHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDER, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 76,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_EXPLOSION, MOVE_FLARE_BLITZ, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 78,
+    .species = SPECIES_RHYDON,
+    .moves = {MOVE_STOMPING_TANTRUM, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Gentleman2TrainersHall3Badges[] = {
+    {
+    .heldItem = ITEM_EVIOLITE,
+    .iv = 255,
+    .lvl = 28,
+    .species = SPECIES_PIKACHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDERBOLT, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 28,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_FLAME_CHARGE, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Gentleman2TrainersHall4Badges[] = {
+    {
+    .heldItem = ITEM_EVIOLITE,
+    .iv = 255,
+    .lvl = 36,
+    .species = SPECIES_PIKACHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDERBOLT, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 35,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_FLAME_CHARGE, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 37,
+    .species = SPECIES_RHYHORN,
+    .moves = {MOVE_STOMP, MOVE_ROCK_SLIDE, MOVE_NONE, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Gentleman2TrainersHall5Badges[] = {
+    {
+    .heldItem = ITEM_EVIOLITE,
+    .iv = 255,
+    .lvl = 43,
+    .species = SPECIES_PIKACHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDERBOLT, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 42,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_FLAME_CHARGE, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 41,
+    .species = SPECIES_RHYHORN,
+    .moves = {MOVE_STOMP, MOVE_ROCK_SLIDE, MOVE_NONE, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Gentleman2TrainersHall6Badges[] = {
+    {
+    .heldItem = ITEM_EVIOLITE,
+    .iv = 255,
+    .lvl = 48,
+    .species = SPECIES_PIKACHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDERBOLT, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 49,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_FLAME_CHARGE, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 47,
+    .species = SPECIES_RHYHORN,
+    .moves = {MOVE_STOMP, MOVE_ROCK_SLIDE, MOVE_NONE, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Gentleman2TrainersHall7Badges[] = {
+    {
+    .heldItem = ITEM_EVIOLITE,
+    .iv = 255,
+    .lvl =58,
+    .species = SPECIES_PIKACHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDER, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 59,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_EXPLOSION, MOVE_FLARE_BLITZ, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_RHYHORN,
+    .moves = {MOVE_STOMPING_TANTRUM, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Gentleman2TrainersHall8Badges[] = {
+    {
+    .heldItem = ITEM_EVIOLITE,
+    .iv = 255,
+    .lvl = 66,
+    .species = SPECIES_PIKACHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDER, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 66,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_EXPLOSION, MOVE_FLARE_BLITZ, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 66,
+    .species = SPECIES_RHYHORN,
+    .moves = {MOVE_STOMPING_TANTRUM, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Gentleman2TrainersHallChampion[] = {
+    {
+    .heldItem = ITEM_LIFE_ORB,
+    .iv = 255,
+    .lvl = 74,
+    .species = SPECIES_RAICHU,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_THUNDER, MOVE_SAND_ATTACK, MOVE_THUNDER_WAVE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 76,
+    .species = SPECIES_BOWLAST,
+    .moves = {MOVE_EXPLOSION, MOVE_FLARE_BLITZ, MOVE_WING_ATTACK, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 4},
+    },
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 78,
+    .species = SPECIES_RHYDON,
+    .moves = {MOVE_STOMPING_TANTRUM, MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_NONE},
+    .evs = {126, 0, 126, 0, 0, 150},
+    },
+};

@@ -12148,4 +12148,398 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_JohnChampionsHallTorchic),
         .party = {.ItemCustomMoves = sParty_JohnChampionsHallTorchic},
     },
+
+    [TRAINER_RICH_BOY_TRAINERS_HALL_3_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RICH_BOY,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_RICH_BOY,
+        .trainerName = _("Richard"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_RichBoyTrainersHall3Badges),
+        .party = {.ItemCustomMoves = sParty_RichBoyTrainersHall3Badges},
+    },
+
+    [TRAINER_RICH_BOY_TRAINERS_HALL_4_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RICH_BOY_2,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_RICH_BOY,
+        .trainerName = _("Richard"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_RichBoyTrainersHall4Badges),
+        .party = {.ItemCustomMoves = sParty_RichBoyTrainersHall4Badges},
+    },
+
+    [TRAINER_RICH_BOY_TRAINERS_HALL_5_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RICH_BOY_2,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_RICH_BOY,
+        .trainerName = _("Richard"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_RichBoyTrainersHall5Badges),
+        .party = {.ItemCustomMoves = sParty_RichBoyTrainersHall5Badges},
+    },
+
+    [TRAINER_RICH_BOY_TRAINERS_HALL_6_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RICH_BOY_3,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_RICH_BOY,
+        .trainerName = _("Richard"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_RichBoyTrainersHall6Badges),
+        .party = {.ItemCustomMoves = sParty_RichBoyTrainersHall6Badges},
+    },
+
+    [TRAINER_RICH_BOY_TRAINERS_HALL_7_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RICH_BOY_3,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_RICH_BOY,
+        .trainerName = _("Richard"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_RichBoyTrainersHall7Badges),
+        .party = {.ItemCustomMoves = sParty_RichBoyTrainersHall7Badges},
+    },
+
+    [TRAINER_RICH_BOY_TRAINERS_HALL_8_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RICH_BOY_3,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_RICH_BOY,
+        .trainerName = _("Richard"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_RichBoyTrainersHall8Badges),
+        .party = {.ItemCustomMoves = sParty_RichBoyTrainersHall8Badges},
+    },
+
+    [TRAINER_RICH_BOY_TRAINERS_HALL_CHAMPION] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_RICH_BOY_4,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_RICH_BOY,
+        .trainerName = _("Richard"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_RichBoyTrainersHallChampion),
+        .party = {.ItemCustomMoves = sParty_RichBoyTrainersHallChampion},
+    },
+
+    [TRAINER_LASS_TRAINERS_HALL_3_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LASS_2,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Lassley"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_LassTrainersHall3Badges),
+        .party = {.ItemCustomMoves = sParty_LassTrainersHall3Badges},
+    },
+
+    [TRAINER_LASS_TRAINERS_HALL_4_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LASS_2,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Lassley"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_LassTrainersHall4Badges),
+        .party = {.ItemCustomMoves = sParty_LassTrainersHall4Badges},
+    },
+
+    [TRAINER_LASS_TRAINERS_HALL_5_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LASS_3,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Lassley"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_LassTrainersHall5Badges),
+        .party = {.ItemCustomMoves = sParty_LassTrainersHall5Badges},
+    },
+
+    [TRAINER_LASS_TRAINERS_HALL_6_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LASS_3,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Lassley"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_LassTrainersHall6Badges),
+        .party = {.ItemCustomMoves = sParty_LassTrainersHall6Badges},
+    },
+
+    [TRAINER_LASS_TRAINERS_HALL_7_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LASS_4,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Lassley"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_LassTrainersHall7Badges),
+        .party = {.ItemCustomMoves = sParty_LassTrainersHall7Badges},
+    },
+
+    [TRAINER_LASS_TRAINERS_HALL_8_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LASS_4,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Lassley"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_LassTrainersHall8Badges),
+        .party = {.ItemCustomMoves = sParty_LassTrainersHall8Badges},
+    },
+
+    [TRAINER_LASS_TRAINERS_HALL_CHAMPION] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_LASS_5,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Lassley"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_LassTrainersHallChampion),
+        .party = {.ItemCustomMoves = sParty_LassTrainersHallChampion},
+    },
+
+    [TRAINER_GENTLEMAN_TRAINERS_HALL_3_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Djent"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_GentlemanTrainersHall3Badges),
+        .party = {.ItemCustomMoves = sParty_GentlemanTrainersHall3Badges},
+    },
+
+    [TRAINER_GENTLEMAN_TRAINERS_HALL_4_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN_2,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Djent"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_GentlemanTrainersHall4Badges),
+        .party = {.ItemCustomMoves = sParty_GentlemanTrainersHall4Badges},
+    },
+
+    [TRAINER_GENTLEMAN_TRAINERS_HALL_5_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN_2,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Djent"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_GentlemanTrainersHall5Badges),
+        .party = {.ItemCustomMoves = sParty_GentlemanTrainersHall5Badges},
+    },
+
+    [TRAINER_GENTLEMAN_TRAINERS_HALL_6_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN_3,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Djent"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_GentlemanTrainersHall6Badges),
+        .party = {.ItemCustomMoves = sParty_GentlemanTrainersHall6Badges},
+    },
+
+    [TRAINER_GENTLEMAN_TRAINERS_HALL_7_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN_3,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Djent"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_GentlemanTrainersHall7Badges),
+        .party = {.ItemCustomMoves = sParty_GentlemanTrainersHall7Badges},
+    },
+
+    [TRAINER_GENTLEMAN_TRAINERS_HALL_8_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN_4,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Djent"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_GentlemanTrainersHall8Badges),
+        .party = {.ItemCustomMoves = sParty_GentlemanTrainersHall8Badges},
+    },
+
+    [TRAINER_GENTLEMAN_TRAINERS_HALL_CHAMPION] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN_4,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Djent"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_GentlemanTrainersHallChampion),
+        .party = {.ItemCustomMoves = sParty_GentlemanTrainersHallChampion},
+    },
+
+    [TRAINER_GENTLEMAN_2_TRAINERS_HALL_3_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Elman"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_Gentleman2TrainersHall3Badges),
+        .party = {.ItemCustomMoves = sParty_Gentleman2TrainersHall3Badges},
+    },
+
+    [TRAINER_GENTLEMAN_2_TRAINERS_HALL_4_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN_2,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Elman"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_Gentleman2TrainersHall4Badges),
+        .party = {.ItemCustomMoves = sParty_Gentleman2TrainersHall4Badges},
+    },
+
+    [TRAINER_GENTLEMAN_2_TRAINERS_HALL_5_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN_2,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Elman"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_Gentleman2TrainersHall5Badges),
+        .party = {.ItemCustomMoves = sParty_Gentleman2TrainersHall5Badges},
+    },
+
+    [TRAINER_GENTLEMAN_2_TRAINERS_HALL_6_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN_2,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Elman"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_Gentleman2TrainersHall6Badges),
+        .party = {.ItemCustomMoves = sParty_Gentleman2TrainersHall6Badges},
+    },
+
+    [TRAINER_GENTLEMAN_2_TRAINERS_HALL_7_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN_3,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Elman"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_Gentleman2TrainersHall7Badges),
+        .party = {.ItemCustomMoves = sParty_Gentleman2TrainersHall7Badges},
+    },
+
+    [TRAINER_GENTLEMAN_2_TRAINERS_HALL_8_BADGES] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN_3,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Elman"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_Gentleman2TrainersHall8Badges),
+        .party = {.ItemCustomMoves = sParty_Gentleman2TrainersHall8Badges},
+    },
+
+    [TRAINER_GENTLEMAN_2_TRAINERS_HALL_CHAMPION] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GENTLEMAN_4,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Elman"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_Gentleman2TrainersHallChampion),
+        .party = {.ItemCustomMoves = sParty_Gentleman2TrainersHallChampion},
+    },
+
 };
+

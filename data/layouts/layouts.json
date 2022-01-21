@@ -5460,6 +5460,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/WesternApproachLostSpringsCanyonRightBorder/border.bin",
       "blockdata_filepath": "data/layouts/WesternApproachLostSpringsCanyonRightBorder/map.bin"
+    },
+    {
+      "id": "LAYOUT_FALLARBOR_TOWN_TRAINER_HOUSE",
+      "name": "FallarborTown_TrainerHouse_Layout",
+      "width": 18,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PetalburgGym",
+      "border_filepath": "data/layouts/FallarborTown_TrainerHouse/border.bin",
+      "blockdata_filepath": "data/layouts/FallarborTown_TrainerHouse/map.bin"
     }
   ]
 }

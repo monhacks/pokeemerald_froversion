@@ -391,6 +391,16 @@
 #define TRAINER_CLASS_KOSTIW          0x46
 #define TRAINER_CLASS_MAGEE         0x47
 #define TRAINER_CLASS_CHARK         0x48
+#define TRAINER_CLASS_RICH_BOY_2      0x49
+#define TRAINER_CLASS_RICH_BOY_3     0x4a
+#define TRAINER_CLASS_RICH_BOY_4     0x4b
+#define TRAINER_CLASS_LASS_2     0x4c
+#define TRAINER_CLASS_LASS_3     0x4d
+#define TRAINER_CLASS_LASS_4     0x4e
+#define TRAINER_CLASS_LASS_5     0x4f
+#define TRAINER_CLASS_GENTLEMAN_2      0x50
+#define TRAINER_CLASS_GENTLEMAN_3     0x51
+#define TRAINER_CLASS_GENTLEMAN_4     0x52
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

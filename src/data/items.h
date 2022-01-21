@@ -17,7 +17,7 @@ const struct Item gItems[] =
     {
         .name = _("Master Ball"),
         .itemId = ITEM_MASTER_BALL,
-        .price = 0,
+        .price = 65000,
         .description = sMasterBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_MASTER_BALL - FIRST_BALL,
@@ -1226,7 +1226,7 @@ const struct Item gItems[] =
     {
         .name = _("Sun Stone"),
         .itemId = ITEM_SUN_STONE,
-        .price = 2100,
+        .price = 25000,
         .description = sSunStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1237,7 +1237,7 @@ const struct Item gItems[] =
     {
         .name = _("Moon Stone"),
         .itemId = ITEM_MOON_STONE,
-        .price = 0,
+        .price = 25000,
         .description = sMoonStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1248,7 +1248,7 @@ const struct Item gItems[] =
     {
         .name = _("Fire Stone"),
         .itemId = ITEM_FIRE_STONE,
-        .price = 2100,
+        .price = 25000,
         .description = sFireStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1259,7 +1259,7 @@ const struct Item gItems[] =
     {
         .name = _("ThunderStone"),
         .itemId = ITEM_THUNDER_STONE,
-        .price = 2100,
+        .price = 25000,
         .description = sThunderStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1270,7 +1270,7 @@ const struct Item gItems[] =
     {
         .name = _("Water Stone"),
         .itemId = ITEM_WATER_STONE,
-        .price = 2100,
+        .price = 25000,
         .description = sWaterStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1281,7 +1281,7 @@ const struct Item gItems[] =
     {
         .name = _("Leaf Stone"),
         .itemId = ITEM_LEAF_STONE,
-        .price = 2100,
+        .price = 25000,
         .description = sLeafStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,

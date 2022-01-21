@@ -71,8 +71,7 @@ Debug_Script_2::
 	end
 
 Debug_Script_3::
-	settrainerflag TRAINER_JUAN_1
-	end
+	setflag FLAG_SYS_GAME_CLEAR
 	end
 
 Debug_Script_4::

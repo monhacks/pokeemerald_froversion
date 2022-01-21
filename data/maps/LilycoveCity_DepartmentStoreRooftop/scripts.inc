@@ -232,3 +232,39 @@ LilycoveCity_DepartmentStoreRooftop_Text_NotEnoughMoney: @ 82205F1
 
 LilycoveCity_DepartmentStoreRooftop_Text_DecidedAgainstBuyingDrink: @ 8220603
 	.string "Decided against buying a drink.$"
+
+
+
+
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_Amneet::
+	lock
+	faceplayer
+	playbgm MUS_FV_PIMP, 0
+	message LilycoveCity_DepartmentStoreRooftop_Text_AmneetSummitCityMerchant
+	waitmessage
+	pokemart LilycoveCity_DepartmentStoreRooftopCity_Pokemart_Amneet
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	fadedefaultbgm
+	release
+	end
+
+	.align 2
+LilycoveCity_DepartmentStoreRooftopCity_Pokemart_Amneet:
+	.2byte ITEM_MASTER_BALL
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_NUGGET
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_LUCKY_EGG
+	.2byte ITEM_NONE
+	release
+	end
+
+LilycoveCity_DepartmentStoreRooftop_Text_AmneetSummitCityMerchant:
+	.string "Congrats! You have found my secret\n"
+	.string "shop. Here I sell extremely rare and\l"
+	.string "valuable items!$"
+	
