@@ -147,7 +147,7 @@ RustboroCity_ColangeloGraphics_2F_EventScript_FossilMonReady:: @ 8211A03
 	end
 
 RustboroCity_ColangeloGraphics_2F_EventScript_LileepReady:: @ 8211A1A
-	bufferspeciesname 1, SPECIES_LILEEP
+	bufferspeciesname 1, SPECIES_CLOCLOCK
 	msgbox RustboroCity_ColangeloGraphics_2F_Text_FossilizedMonBroughtBackToLife, MSGBOX_DEFAULT
 	goto RustboroCity_ColangeloGraphics_2F_EventScript_ReceiveLileep
 	end
@@ -159,8 +159,8 @@ RustboroCity_ColangeloGraphics_2F_EventScript_AnorithReady:: @ 8211A2C
 	end
 
 RustboroCity_ColangeloGraphics_2F_EventScript_ReceiveLileep:: @ 8211A3E
-	setvar VAR_TEMP_1, SPECIES_LILEEP
-	givemon SPECIES_LILEEP, 20, ITEM_NONE
+	setvar VAR_TEMP_1, SPECIES_CLOCLOCK
+	givemon SPECIES_CLOCLOCK, 20, ITEM_NONE
 	compare VAR_RESULT, 0
 	goto_if_eq RustboroCity_ColangeloGraphics_2F_EventScript_ReceiveLileepParty
 	compare VAR_RESULT, 1
@@ -193,12 +193,12 @@ RustboroCity_ColangeloGraphics_2F_EventScript_TransferLileepToPC:: @ 8211AB9
 	end
 
 RustboroCity_ColangeloGraphics_2F_EventScript_ReceivedLileepFanfare:: @ 8211AC4
-	bufferspeciesname 1, SPECIES_LILEEP
+	bufferspeciesname 1, SPECIES_CLOCLOCK
 	playfanfare MUS_OBTAIN_ITEM
 	message RustboroCity_ColangeloGraphics_2F_Text_ReceivedMonFromResearcher
 	waitmessage
 	waitfanfare
-	bufferspeciesname 0, SPECIES_LILEEP
+	bufferspeciesname 0, SPECIES_CLOCLOCK
 	return
 
 RustboroCity_ColangeloGraphics_2F_EventScript_FinishReceivingLileep:: @ 8211AD7

@@ -1125,6 +1125,16 @@ static const struct AbilitySetter sRabatoastAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sCloclockAbilitySet[] = 
+{
+    {ABILITY_SOUNDPROOF, 1},
+    {ABILITY_SCREEN_CLEANER, 10},
+    {ABILITY_FILTER, 21},
+    {ABILITY_TECHNICIAN, 31},
+    {ABILITY_TIME_STOP, 40},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
@@ -1324,6 +1334,8 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_DRACASTER] = sDracasterAbilitySet,
     [SPECIES_PASSIMIAN] = sPassimianAbilitySet,
     [SPECIES_SABLIZZARD] = sSablizzardAbilitySet,
+    [SPECIES_CLOCLOCK] = sCloclockAbilitySet,
+    [SPECIES_WARKLOCK] = sCloclockAbilitySet,
     
 
 

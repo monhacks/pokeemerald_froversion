@@ -8726,7 +8726,9 @@ static void Cmd_various(void)
         else
         {
             gSideStatuses[GET_BATTLER_SIDE(gActiveBattler)] |= SIDE_STATUS_AURORA_VEIL;
-            if (GetBattlerHoldEffect(gActiveBattler, TRUE) == HOLD_EFFECT_LIGHT_CLAY)
+            if (GetBattlerAbility(gActiveBattler) == ABILITY_TIME_STOP)
+                gSideTimers[GET_BATTLER_SIDE(gActiveBattler)].auroraVeilTimer = 255;
+            else if (GetBattlerHoldEffect(gActiveBattler, TRUE) == HOLD_EFFECT_LIGHT_CLAY)
                 gSideTimers[GET_BATTLER_SIDE(gActiveBattler)].auroraVeilTimer = 8;
             else
                 gSideTimers[GET_BATTLER_SIDE(gActiveBattler)].auroraVeilTimer = 5;
@@ -9140,7 +9142,9 @@ static void Cmd_setreflect(void)
     else
     {
         gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] |= SIDE_STATUS_REFLECT;
-        if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_LIGHT_CLAY)
+        if (GetBattlerAbility(gActiveBattler) == ABILITY_TIME_STOP)
+            gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].reflectTimer = 255;
+        else if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_LIGHT_CLAY)
             gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].reflectTimer = 8;
         else
             gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].reflectTimer = 5;
@@ -10022,7 +10026,9 @@ static void Cmd_setlightscreen(void)
     else
     {
         gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] |= SIDE_STATUS_LIGHTSCREEN;
-        if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_LIGHT_CLAY)
+        if (GetBattlerAbility(gActiveBattler) == ABILITY_TIME_STOP)
+            gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].lightscreenTimer = 255;
+        else if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_LIGHT_CLAY)
             gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].lightscreenTimer = 8;
         else
             gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].lightscreenTimer = 5;
