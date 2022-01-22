@@ -2716,12 +2716,12 @@ const u8 gFiller_39PokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_40PokedexText[] = _(
+const u8 gWarklockPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_41PokedexText[] = _(
+const u8 gCloclockPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"

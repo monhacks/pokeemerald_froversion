@@ -493,7 +493,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_FILLER_37] = _("Filler37"),
     [SPECIES_FILLER_38] = _("Filler38"),
     [SPECIES_FILLER_39] = _("Filler39"),
-    [SPECIES_FILLER_40] = _("Filler40"),
-    [SPECIES_FILLER_41] = _("Filler41"),
+    [SPECIES_WARKLOCK] = _("Warklock"),
+    [SPECIES_CLOCLOCK] = _("Cloclock"),
     [SPECIES_SPIRETT] = _("Spirett"),
 };

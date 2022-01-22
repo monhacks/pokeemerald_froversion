@@ -470,8 +470,8 @@ cry Cry_Filler_36
 cry Cry_Filler_37
 cry Cry_Filler_38
 cry Cry_Filler_39
-cry Cry_Filler_40
-cry Cry_Filler_41
+cry Cry_Warklock
+cry Cry_Cloclock
 cry Cry_Spirett
 
 	.align 2
@@ -946,7 +946,7 @@ cry2 Cry_Filler_36
 cry2 Cry_Filler_37
 cry2 Cry_Filler_38
 cry2 Cry_Filler_39
-cry2 Cry_Filler_40
-cry2 Cry_Filler_41
+cry2 Cry_Warklock
+cry2 Cry_Cloclock
 cry2 Cry_Spirett
 

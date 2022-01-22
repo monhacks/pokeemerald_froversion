@@ -11303,19 +11303,16 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_STEVEN] =
     {
-        //.partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_3,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_STEVEN,
         .trainerName = _("STEVEN"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        //.partySize = ARRAY_COUNT(sParty_Steven),
-        //.party = {.ItemCustomMoves = sParty_Steven},
-        .partySize = ARRAY_COUNT(sParty_WasulaLakeMeadVillage_Emboryps),
-        .party = {.ItemDefaultMoves = sParty_WasulaLakeMeadVillage_Emboryps},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_Steven),
+        .party = {.ItemCustomMoves = sParty_Steven},
     },
 
     [TRAINER_ANABEL] =

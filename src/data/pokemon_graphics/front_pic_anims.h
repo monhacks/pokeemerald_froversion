@@ -5295,13 +5295,13 @@ static const union AnimCmd sAnim_FILLER_39_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_40_1[] = 
+static const union AnimCmd sAnim_WARKLOCK_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_41_1[] = 
+static const union AnimCmd sAnim_CLOCLOCK_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
@@ -7786,13 +7786,13 @@ static const union AnimCmd *const sAnims_FILLER_39[] ={
     sAnim_GeneralFrame0,
     sAnim_FILLER_39_1,
 };
-static const union AnimCmd *const sAnims_FILLER_40[] ={
+static const union AnimCmd *const sAnims_WARKLOCK[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_40_1,
+    sAnim_WARKLOCK_1,
 };
-static const union AnimCmd *const sAnims_FILLER_41[] ={
+static const union AnimCmd *const sAnims_CLOCLOCK[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_41_1,
+    sAnim_CLOCLOCK_1,
 };
 static const union AnimCmd *const sAnims_SPIRETT[] ={
     sAnim_GeneralFrame0,
@@ -8333,8 +8333,8 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(FILLER_37),
     ANIM_CMD(FILLER_38),
     ANIM_CMD(FILLER_39),
-    ANIM_CMD(FILLER_40),
-    ANIM_CMD(FILLER_41),
+    ANIM_CMD(WARKLOCK),
+    ANIM_CMD(CLOCLOCK),
     ANIM_CMD(SPIRETT),
 };
 

@@ -2610,12 +2610,12 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_40] =
+    [SPECIES_WARKLOCK] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_41] =
+    [SPECIES_CLOCLOCK] =
     {
         .size = 0x88,
         .y_offset = 0x00,

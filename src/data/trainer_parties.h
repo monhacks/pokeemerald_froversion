@@ -12181,45 +12181,45 @@ static const struct TrainerMonItemCustomMoves sParty_Steven[] = {
 
     {
     .iv = 255,
-    .lvl = 77,
+    .lvl = 85,
     .species = SPECIES_SKARMORY,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_TOXIC, MOVE_AERIAL_ACE, MOVE_SPIKES, MOVE_STEEL_WING}
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_TOXIC, MOVE_BRAVE_BIRD, MOVE_SPIKES, MOVE_ROOST}
     },
     {
     .iv = 255,
-    .lvl = 75,
-    .species = SPECIES_CLAYDOL,
-    .heldItem = ITEM_NONE,
+    .lvl = 86,
+    .species = SPECIES_SNORLAX,
+    .heldItem = ITEM_GHOST_CAMOUFLAGE,
     .moves = {MOVE_REFLECT, MOVE_LIGHT_SCREEN, MOVE_ANCIENT_POWER, MOVE_EARTHQUAKE}
     },
     {
     .iv = 255,
-    .lvl = 76,
-    .species = SPECIES_AGGRON,
+    .lvl = 87,
+    .species = SPECIES_MEDICHAM,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_THUNDER, MOVE_EARTHQUAKE, MOVE_SOLAR_BEAM, MOVE_DRAGON_CLAW}
     },
     {
     .iv = 255,
-    .lvl = 76,
+    .lvl = 88,
     .species = SPECIES_CRADILY,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_GIGA_DRAIN, MOVE_ANCIENT_POWER, MOVE_INGRAIN, MOVE_CONFUSE_RAY}
     },
     {
     .iv = 255,
-    .lvl = 76,
-    .species = SPECIES_ARMALDO,
+    .lvl = 89,
+    .species = SPECIES_PHOTOGEIST,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_WATER_PULSE, MOVE_ANCIENT_POWER, MOVE_AERIAL_ACE, MOVE_SLASH}
     },
     {
     .iv = 255,
-    .lvl = 78,
-    .species = SPECIES_METAGROSS,
+    .lvl = 90,
+    .species = SPECIES_ELITETRIC,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_EARTHQUAKE, MOVE_PSYCHIC, MOVE_METEOR_MASH, MOVE_SHADOW_BALL}
+    .moves = {MOVE_PLASMA_BLADE, MOVE_PSYCHO_CUT, MOVE_METEOR_MASH, MOVE_SHADOW_BALL}
     }
 };
 

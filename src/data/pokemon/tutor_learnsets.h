@@ -5834,8 +5834,8 @@ static const u32 sTutorLearnsets[] =
 [SPECIES_FILLER_37]           = (0),
 [SPECIES_FILLER_38]           = (0),
 [SPECIES_FILLER_39]           = (0),
-[SPECIES_FILLER_40]           = (0),
-[SPECIES_FILLER_41]           = (0),
+[SPECIES_WARKLOCK]           = (0),
+[SPECIES_CLOCLOCK]           = (0),
 [SPECIES_SPIRETT]           = (0),
 
 

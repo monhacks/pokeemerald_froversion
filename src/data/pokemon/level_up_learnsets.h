@@ -9112,11 +9112,11 @@ static const struct LevelUpMove sFiller_39LevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };
-static const struct LevelUpMove sFiller_40LevelUpLearnset[] = {
+static const struct LevelUpMove sWarklockLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };
-static const struct LevelUpMove sFiller_41LevelUpLearnset[] = {
+static const struct LevelUpMove sCloclockLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };

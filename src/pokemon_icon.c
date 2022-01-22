@@ -546,8 +546,8 @@ const u8 *const gMonIconTable[] =
     [SPECIES_FILLER_37] = gMonIcon_Filler_37,
     [SPECIES_FILLER_38] = gMonIcon_Filler_38,
     [SPECIES_FILLER_39] = gMonIcon_Filler_39,
-    [SPECIES_FILLER_40] = gMonIcon_Filler_40,
-    [SPECIES_FILLER_41] = gMonIcon_Filler_41,
+    [SPECIES_WARKLOCK] = gMonIcon_Warklock,
+    [SPECIES_CLOCLOCK] = gMonIcon_Cloclock,
     [SPECIES_SPIRETT] = gMonIcon_Spirett,
 };
 
@@ -1075,8 +1075,8 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_FILLER_37] = 0,
     [SPECIES_FILLER_38] = 0,
     [SPECIES_FILLER_39] = 0,
-    [SPECIES_FILLER_40] = 0,
-    [SPECIES_FILLER_41] = 0,
+    [SPECIES_WARKLOCK] = 0,
+    [SPECIES_CLOCLOCK] = 0,
     [SPECIES_SPIRETT] = 0,
 
 };
