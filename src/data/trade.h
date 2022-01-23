@@ -978,9 +978,9 @@ static const union AffineAnimCmd *const gSpriteAffineAnimTable_8338ECC[] =
 
 static const struct InGameTrade sIngameTrades[] =
 {
-    [INGAME_TRADE_SEEDOT] = 
+    [INGAME_TRADE_MEDITITE] = 
     {
-        .nickname = _("DOTS"), 
+        .nickname = _("Dots"), 
         .species = SPECIES_MEDITITE,
         .ivs = {15, 14, 15, 14, 14, 14},
         .abilityNum = 1, 
@@ -994,10 +994,10 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_MARILL
     }, 
-    [INGAME_TRADE_PLUSLE] = 
+    [INGAME_TRADE_CONTRARAM] = 
     {
-        .nickname = _("PLUSES"), 
-        .species = SPECIES_PLUSLE,
+        .nickname = _("Holt"), 
+        .species = SPECIES_CONTRARAM,
         .ivs = {4, 4, 4, 5, 5, 4},
         .abilityNum = 0, 
         .otId = 73996,
@@ -1008,12 +1008,12 @@ static const struct InGameTrade sIngameTrades[] =
         .otName = _("ROMAN"), 
         .otGender = MALE, 
         .sheen = 10,
-        .requestedSpecies = SPECIES_VOLBEAT
+        .requestedSpecies = SPECIES_CHAD_BUG_1
     }, 
-    [INGAME_TRADE_HORSEA] = 
+    [INGAME_TRADE_SNOUMESE] = 
     {
-        .nickname = _("SEASOR"),
-        .species = SPECIES_HORSEA,
+        .nickname = _("Fluffy"),
+        .species = SPECIES_SNOUMESE,
         .ivs = {5, 4, 4, 4, 5, 4},
         .abilityNum = 0, 
         .otId = 46285,
@@ -1021,26 +1021,26 @@ static const struct InGameTrade sIngameTrades[] =
         .personality = 0x7F,
         .heldItem = ITEM_WAVE_MAIL, 
         .mailNum = 1,
-        .otName = _("SKYLAR"), 
+        .otName = _("Matthew"), 
         .otGender = MALE, 
         .sheen = 10,
-        .requestedSpecies = SPECIES_BAGON
+        .requestedSpecies = SPECIES_MAREEP
     }, 
-    [INGAME_TRADE_MEOWTH] = 
+    [INGAME_TRADE_BILLFALO] = 
     {
-        .nickname = _("MEOWOW"),
-        .species = SPECIES_MEOWTH,
+        .nickname = _("Allen"),
+        .species = SPECIES_BILLFALO,
         .ivs = {4, 5, 4, 5, 4, 4},
-        .abilityNum = 0, 
+        .abilityNum = 4, 
         .otId = 91481,
         .conditions = {5, 5, 5, 30, 5},
         .personality = 0x8B,
         .heldItem = ITEM_RETRO_MAIL, 
         .mailNum = 2,
-        .otName = _("ISIS"), 
-        .otGender = FEMALE, 
+        .otName = _("McDermott"), 
+        .otGender = MALE, 
         .sheen = 10,
-        .requestedSpecies = SPECIES_SKITTY
+        .requestedSpecies = SPECIES_ARON
     }
 };
 

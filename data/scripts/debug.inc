@@ -109,4 +109,6 @@ Debug_Script_7::
 	end
 
 Debug_Script_8::
+	setflag FLAG_DEFEATED_KYOGRE
+	setflag FLAG_DEFEATED_GROUDON
 	end

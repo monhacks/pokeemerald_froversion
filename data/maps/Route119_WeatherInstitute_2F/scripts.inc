@@ -173,8 +173,83 @@ Route119_WeatherInstitute_2F_EventScript_LegendaryDefeated:: @ 8270160
 
 Route119_WeatherInstitute_2F_EventScript_NoAbnormalWeather:: @ 8270166
 	msgbox Route119_WeatherInstitute_2F_Text_NoAbnormalWeather, MSGBOX_DEFAULT
+	goto Route119_WeatherInstitute_2F_EventScript_EeveesForSale
 	release
 	end
+
+Route119_WeatherInstitute_2F_EventScript_EeveesForSale::
+	lock
+	msgbox Route119_WeatherInstitute_2F_Text_EeveesForSale, MSGBOX_YESNO
+	compare VAR_RESULT, NO 
+	goto_if_eq Route119_WeatherInstitute_2F_EventScript_EeveeDeclined
+	checkmoney 150000, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq LilycoveCity_DepartmentStoreRooftop_Text_NotEnoughMoney
+	removemoney 150000, 0
+	random 3
+	switch VAR_RESULT
+	case 0, Route119_WeatherInstitute_2F_EventScript_EeveeBought1
+	case 1, Route119_WeatherInstitute_2F_EventScript_EeveeBought2
+	case 2, Route119_WeatherInstitute_2F_EventScript_EeveeBought3
+	case 3, Route119_WeatherInstitute_2F_EventScript_EeveeBought4
+	case 4, Route119_WeatherInstitute_2F_EventScript_EeveeBought5
+	case 5, Route119_WeatherInstitute_2F_EventScript_EeveeBought6
+	case 6, Route119_WeatherInstitute_2F_EventScript_EeveeBought7
+	case 7, Route119_WeatherInstitute_2F_EventScript_EeveeBought8
+	case 8, Route119_WeatherInstitute_2F_EventScript_EeveeBought9
+	release
+end
+	
+
+Route119_WeatherInstitute_2F_EventScript_EeveeDeclined:
+	msgbox Route119_WeatherInstitute_2F_Text_EeveeDeclined, MSGBOX_DEFAULT
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveeBought1:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUIVER_DANCE, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, 1
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveeBought2:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveeBought3:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveeBought4:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveeBought5:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveeBought6:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveeBought7:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveeBought8:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveeBought9:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
+	release
+end
 
 Route119_WeatherInstitute_2F_Movement_GruntApproachShelly: @ 8270170
 	walk_fast_left
@@ -342,3 +417,13 @@ Route119_WeatherInstitute_2F_Text_NoAbnormalWeather: @ 82708FC
 	.string "The occasional rainfall is a blessing,\n"
 	.string "really.$"
 
+Route119_WeatherInstitute_2F_Text_EeveesForSale:
+	.string "Now that the abnormal weather has\n"
+	.string "cleared up, I have time to resume my\l"
+	.string "side gig!\p"
+	.string "How would you like to buy a pure bred\n"
+	.string "Eevee for only 150000?$"
+
+Route119_WeatherInstitute_2F_Text_EeveeDeclined:
+	.string "Okay then... Come back if\n"
+	.string "you change your mind...$"

@@ -9543,7 +9543,7 @@
               {
                 "min_level": 34,
                 "max_level": 34,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 33,
@@ -9568,7 +9568,7 @@
               {
                 "min_level": 37,
                 "max_level": 37,
-                "species": "SPECIES_SNOUMESE"
+                "species": "SPECIES_ABSOL"
               },
               {
                 "min_level": 39,
@@ -9578,7 +9578,7 @@
               {
                 "min_level": 40,
                 "max_level": 40,
-                "species": "SPECIES_SNOUMESE"
+                "species": "SPECIES_ABSOL"
               }
             ]
           },
@@ -9677,7 +9677,7 @@
               {
                 "min_level": 33,
                 "max_level": 33,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 34,
@@ -9687,7 +9687,7 @@
               {
                 "min_level": 35,
                 "max_level": 35,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 36,
@@ -11156,62 +11156,62 @@
               {
                 "min_level": 22,
                 "max_level": 22,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 24,
                 "max_level": 24,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 20,
                 "max_level": 20,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 26,
                 "max_level": 26,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 22,
                 "max_level": 22,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 24,
                 "max_level": 24,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 28,
                 "max_level": 28,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 18,
                 "max_level": 18,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 20,
                 "max_level": 20,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 26,
                 "max_level": 26,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 20,
                 "max_level": 20,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               },
               {
                 "min_level": 26,
                 "max_level": 26,
-                "species": "SPECIES_CONTRARAM"
+                "species": "SPECIES_SNEASEL"
               }
             ]
           }
@@ -12185,7 +12185,7 @@
               {
                 "min_level": 22,
                 "max_level": 26,
-                "species": "SPECIES_MEDITITE"
+                "species": "SPECIES_HARIYAMA"
               },
               {
                 "min_level": 22,
@@ -12438,7 +12438,7 @@
               {
                 "min_level": 22,
                 "max_level": 26,
-                "species": "SPECIES_MEDITITE"
+                "species": "SPECIES_HARIYAMA"
               },
               {
                 "min_level": 22,

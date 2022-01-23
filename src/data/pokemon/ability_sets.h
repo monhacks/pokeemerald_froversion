@@ -1007,6 +1007,7 @@ static const struct AbilitySetter sBillfaloAbilitySet[] =
     {ABILITY_INTIMIDATE, 15},
     {ABILITY_SAP_SIPPER, 32},
     {ABILITY_BEAST_BOOST, 50},
+    {ABILITY_HUGE_POWER, 150},
     ABILITY_SET_END
 };
 
