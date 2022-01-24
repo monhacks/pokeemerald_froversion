@@ -182,74 +182,88 @@ Route119_WeatherInstitute_2F_EventScript_EeveesForSale::
 	msgbox Route119_WeatherInstitute_2F_Text_EeveesForSale, MSGBOX_YESNO
 	compare VAR_RESULT, NO 
 	goto_if_eq Route119_WeatherInstitute_2F_EventScript_EeveeDeclined
-	checkmoney 150000, 0
+	checkmoney 75000, 0
 	compare VAR_RESULT, FALSE
-	goto_if_eq LilycoveCity_DepartmentStoreRooftop_Text_NotEnoughMoney
-	removemoney 150000, 0
-	random 3
+	goto_if_eq Route119_WeatherInstitute_2F_EventScript_NotEnoughMoney
+	removemoney 75000, 0
+	random 9
 	switch VAR_RESULT
-	case 0, Route119_WeatherInstitute_2F_EventScript_EeveeBought1
-	case 1, Route119_WeatherInstitute_2F_EventScript_EeveeBought2
-	case 2, Route119_WeatherInstitute_2F_EventScript_EeveeBought3
-	case 3, Route119_WeatherInstitute_2F_EventScript_EeveeBought4
-	case 4, Route119_WeatherInstitute_2F_EventScript_EeveeBought5
-	case 5, Route119_WeatherInstitute_2F_EventScript_EeveeBought6
-	case 6, Route119_WeatherInstitute_2F_EventScript_EeveeBought7
-	case 7, Route119_WeatherInstitute_2F_EventScript_EeveeBought8
-	case 8, Route119_WeatherInstitute_2F_EventScript_EeveeBought9
+	case 0, Route119_WeatherInstitute_2F_EventScript_EeveePurchase1
+	case 1, Route119_WeatherInstitute_2F_EventScript_EeveePurchase2
+	case 2, Route119_WeatherInstitute_2F_EventScript_EeveePurchase3
+	case 3, Route119_WeatherInstitute_2F_EventScript_EeveePurchase4
+	case 4, Route119_WeatherInstitute_2F_EventScript_EeveePurchase5
+	case 5, Route119_WeatherInstitute_2F_EventScript_EeveePurchase6
+	case 6, Route119_WeatherInstitute_2F_EventScript_EeveePurchase7
+	case 7, Route119_WeatherInstitute_2F_EventScript_EeveePurchase8
+	case 8, Route119_WeatherInstitute_2F_EventScript_EeveePurchase9
 	release
 end
-	
+
+Route119_WeatherInstitute_2F_EventScript_EeveePurchase1:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUIVER_DANCE, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, 1
+	msgbox Route119_WeatherInstitute_2F_Text_EeveeAccepted, MSGBOX_DEFAULT
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveePurchase2:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_BRAVE,1,0,252,0,252,0,0,31,31,31,31,31,31, MOVE_TACKLE, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, 0
+	msgbox Route119_WeatherInstitute_2F_Text_EeveeAccepted, MSGBOX_DEFAULT
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveePurchase3:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_RASH,1,0,0,252,0,252,0,31,31,31,31,31,31, MOVE_TACKLE, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, 0
+	msgbox Route119_WeatherInstitute_2F_Text_EeveeAccepted, MSGBOX_DEFAULT
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveePurchase4:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_SASSY,1,0,0,0,252,0,252,31,31,31,31,31,31, MOVE_TACKLE, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, 0
+	msgbox Route119_WeatherInstitute_2F_Text_EeveeAccepted, MSGBOX_DEFAULT
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveePurchase5:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_HARDY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_TACKLE, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, 0
+	msgbox Route119_WeatherInstitute_2F_Text_EeveeAccepted, MSGBOX_DEFAULT
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveePurchase6:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_BOLD,1,0,252,252,0,0,0,31,31,31,31,31,31, MOVE_TACKLE, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, 0
+	msgbox Route119_WeatherInstitute_2F_Text_EeveeAccepted, MSGBOX_DEFAULT
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveePurchase7:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_TIMID,1,0,0,252,252,0,0,31,31,31,31,31,31, MOVE_TACKLE, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, 0
+	msgbox Route119_WeatherInstitute_2F_Text_EeveeAccepted, MSGBOX_DEFAULT
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveePurchase8:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_JOLLY,1,0,0,252,252,0,0,31,31,31,31,31,31, MOVE_TACKLE, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, 0
+	msgbox Route119_WeatherInstitute_2F_Text_EeveeAccepted, MSGBOX_DEFAULT
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_EeveePurchase9:
+	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_CAREFUL,1,0,0,252,0,0,252,31,31,31,31,31,31, MOVE_TACKLE, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, 0
+	msgbox Route119_WeatherInstitute_2F_Text_EeveeAccepted, MSGBOX_DEFAULT
+	release
+end
+
+Route119_WeatherInstitute_2F_EventScript_NotEnoughMoney:
+	msgbox Route119_WeatherInstitute_2F_Text_NotEnoughMoney, MSGBOX_DEFAULT
+	release
+end
 
 Route119_WeatherInstitute_2F_EventScript_EeveeDeclined:
 	msgbox Route119_WeatherInstitute_2F_Text_EeveeDeclined, MSGBOX_DEFAULT
 	release
 end
-
-Route119_WeatherInstitute_2F_EventScript_EeveeBought1:
-	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUIVER_DANCE, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, 1
-	release
-end
-
-Route119_WeatherInstitute_2F_EventScript_EeveeBought2:
-	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
-	release
-end
-
-Route119_WeatherInstitute_2F_EventScript_EeveeBought3:
-	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
-	release
-end
-
-Route119_WeatherInstitute_2F_EventScript_EeveeBought4:
-	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
-	release
-end
-
-Route119_WeatherInstitute_2F_EventScript_EeveeBought5:
-	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
-	release
-end
-
-Route119_WeatherInstitute_2F_EventScript_EeveeBought6:
-	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
-	release
-end
-
-Route119_WeatherInstitute_2F_EventScript_EeveeBought7:
-	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
-	release
-end
-
-Route119_WeatherInstitute_2F_EventScript_EeveeBought8:
-	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
-	release
-end
-
-Route119_WeatherInstitute_2F_EventScript_EeveeBought9:
-	givecustommon SPECIES_EEVEE ,25, ITEM_QUICK_CLAW, ITEM_POKE_BALL, NATURE_NAUGHTY,1,252,0,252,0,0,0,31,31,31,31,31,31, MOVE_QUICK_ATTACK, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
-	release
-end
+	
 
 Route119_WeatherInstitute_2F_Movement_GruntApproachShelly: @ 8270170
 	walk_fast_left
@@ -422,8 +436,17 @@ Route119_WeatherInstitute_2F_Text_EeveesForSale:
 	.string "cleared up, I have time to resume my\l"
 	.string "side gig!\p"
 	.string "How would you like to buy a pure bred\n"
-	.string "Eevee for only 150000?$"
+	.string "Eevee for only 75000?$"
 
 Route119_WeatherInstitute_2F_Text_EeveeDeclined:
 	.string "Okay then... Come back if\n"
 	.string "you change your mind...$"
+
+Route119_WeatherInstitute_2F_Text_EeveeAccepted:
+	.string "Excellent. Here you go! This\n"
+	.string "money will go towards research!$"
+
+Route119_WeatherInstitute_2F_Text_NotEnoughMoney:
+	.string "Please don't waste my time.\n"
+	.string "If you're serious, come back with\l"
+	.string "enough money.$"
