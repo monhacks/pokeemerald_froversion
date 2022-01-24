@@ -254,6 +254,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(MATT, gTrainerFrontPic_Matt, 0x800),
     TRAINER_SPRITE(MARK, gTrainerFrontPic_Mark, 0x800),
     TRAINER_SPRITE(CHAD, gTrainerFrontPic_Chad, 0x800),
+    TRAINER_SPRITE(MIKE_LYNCH, gTrainerFrontPic_MikeLynch, 0x800),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -381,4 +382,5 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(KOSTIW, gTrainerPalette_Kostiw),
     TRAINER_PAL(MARK, gTrainerPalette_ChadAndMark),
     TRAINER_PAL(CHAD, gTrainerPalette_ChadAndMark),
+    TRAINER_PAL(MIKE_LYNCH, gTrainerPalette_MikeLynch),
 };

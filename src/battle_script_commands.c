@@ -7319,7 +7319,9 @@ static void HandleTerrainMove(u32 moveEffect)
     {
         gFieldStatuses &= ~STATUS_TERRAIN_ANY;
         gFieldStatuses |= statusFlag;
-        if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_TERRAIN_EXTENDER)
+        if (GetBattlerAbility(gActiveBattler) == ABILITY_TIME_STOP)
+            *timer = 255;
+        else if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_TERRAIN_EXTENDER)
             *timer = 8;
         else
             *timer = 5;

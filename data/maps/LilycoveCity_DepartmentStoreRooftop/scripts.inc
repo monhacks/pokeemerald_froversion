@@ -244,14 +244,31 @@ LilycoveCity_DepartmentStoreRooftop_EventScript_Amneet::
 	message LilycoveCity_DepartmentStoreRooftop_Text_AmneetSummitCityMerchant
 	waitmessage
 	pokemart LilycoveCity_DepartmentStoreRooftopCity_Pokemart_Amneet
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_SpecialDeal, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq LilycoveCity_DepartmentStoreRooftop_EventScript_Amneet_BuyMasterBall
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	fadedefaultbgm
 	release
-	end
+end
+
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_Amneet_BuyMasterBall:
+	checkmoney 500000, 0
+	compare VAR_RESULT, FALSE
+	goto_if_eq LilycoveCity_DepartmentStoreRooftop_EventScript_NotEnoughMoney
+	removemoney 500000, 0
+	giveitem ITEM_MASTER_BALL, 1
+	msgbox LilycoveCity_DepartmentStoreRooftop_Text_MasterBallPurchased, MSGBOX_DEFAULT
+return
+
+LilycoveCity_DepartmentStoreRooftop_EventScript_NotEnoughMoney:
+	msgbox Route119_WeatherInstitute_2F_Text_NotEnoughMoney, MSGBOX_DEFAULT
+	release
+end
 
 	.align 2
 LilycoveCity_DepartmentStoreRooftopCity_Pokemart_Amneet:
-	.2byte ITEM_MASTER_BALL
 	.2byte ITEM_WATER_STONE
 	.2byte ITEM_FIRE_STONE
 	.2byte ITEM_LEAF_STONE
@@ -259,6 +276,7 @@ LilycoveCity_DepartmentStoreRooftopCity_Pokemart_Amneet:
 	.2byte ITEM_NUGGET
 	.2byte ITEM_SHINY_STONE
 	.2byte ITEM_LUCKY_EGG
+	.2byte ITEM_PROTECTOR
 	.2byte ITEM_NONE
 	release
 	end
@@ -268,3 +286,13 @@ LilycoveCity_DepartmentStoreRooftop_Text_AmneetSummitCityMerchant:
 	.string "shop. Here I sell extremely rare and\l"
 	.string "valuable items!$"
 	
+LilycoveCity_DepartmentStoreRooftop_Text_SpecialDeal:
+	.string "Wait! I have a very rare item\n"
+	.string "I would be willing to part with.\p"
+	.string "How would you like a Master Ball\n"
+	.string "for only 500,000?$"
+
+LilycoveCity_DepartmentStoreRooftop_Text_MasterBallPurchased:
+	.string "Oh Hell Yea!\p"
+	.string "Here take it! I'm going to\n"
+	.string "Vegas baby!$"

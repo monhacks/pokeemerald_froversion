@@ -12178,48 +12178,56 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Darius[] = {
 };
 
 static const struct TrainerMonItemCustomMoves sParty_Steven[] = {
-
+    {
+    .abilityNum = 4,
+    .iv = 255,
+    .lvl = 88,
+    .species = SPECIES_WARKLOCK,
+    .heldItem = ITEM_FOCUS_SASH,
+    .moves = {MOVE_REFLECT, MOVE_LIGHT_SCREEN, MOVE_PSYCHIC_TERRAIN, MOVE_PSYCHIC},
+    .evs = {0, 0, 0, 252, 252, 4},
+    },
     {
     .iv = 255,
     .lvl = 85,
-    .species = SPECIES_SKARMORY,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_TOXIC, MOVE_BRAVE_BIRD, MOVE_SPIKES, MOVE_ROOST}
+    .species = SPECIES_BOWLAST,
+    .heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_EXPLOSION, MOVE_FLARE_BLITZ, MOVE_BRAVE_BIRD, MOVE_ROOST},
+    .evs = {4, 252, 0, 252, 0, 0},
     },
     {
+    .abilityNum = 3,
     .iv = 255,
     .lvl = 86,
     .species = SPECIES_SNORLAX,
     .heldItem = ITEM_GHOST_CAMOUFLAGE,
-    .moves = {MOVE_REFLECT, MOVE_LIGHT_SCREEN, MOVE_ANCIENT_POWER, MOVE_EARTHQUAKE}
+    .moves = {MOVE_BELLY_DRUM, MOVE_REST, MOVE_EARTHQUAKE, MOVE_BODY_SLAM},
+    .evs = {252, 0, 252, 0, 0, 252},
     },
     {
+    .abilityNum = 3,
     .iv = 255,
     .lvl = 87,
-    .species = SPECIES_MEDICHAM,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDER, MOVE_EARTHQUAKE, MOVE_SOLAR_BEAM, MOVE_DRAGON_CLAW}
+    .species = SPECIES_RHYDON,
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_MEGA_HORN, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE}
     },
     {
-    .iv = 255,
-    .lvl = 88,
-    .species = SPECIES_CRADILY,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_GIGA_DRAIN, MOVE_ANCIENT_POWER, MOVE_INGRAIN, MOVE_CONFUSE_RAY}
-    },
-    {
+    .abilityNum = 3,
     .iv = 255,
     .lvl = 89,
     .species = SPECIES_PHOTOGEIST,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_PULSE, MOVE_ANCIENT_POWER, MOVE_AERIAL_ACE, MOVE_SLASH}
+    .moves = {MOVE_REVIVE, MOVE_MOONBLAST, MOVE_DESTINY_BOND, MOVE_WISH},
+    .evs = {0, 0, 0, 0, 252, 252},
     },
     {
     .iv = 255,
     .lvl = 90,
     .species = SPECIES_ELITETRIC,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_PLASMA_BLADE, MOVE_PSYCHO_CUT, MOVE_METEOR_MASH, MOVE_SHADOW_BALL}
+    .moves = {MOVE_PLASMA_BLADE, MOVE_PSYCHO_CUT, MOVE_METEOR_MASH, MOVE_SHADOW_BALL},
+    .evs = {0, 152, 152, 0, 152, 152},
     }
 };
 
