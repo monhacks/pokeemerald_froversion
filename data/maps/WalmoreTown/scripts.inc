@@ -7,9 +7,15 @@ WalmoreTown_MapScripts::
 
 WalmoreTown_OnTransition:
 	setflag FLAG_VISITED_WALMORE_TOWN
+	call_if_set FLAG_SYS_GAME_CLEAR, WalmoreTown_EventScripts_ShowBobby
 	end
 
 // Scripts	
+
+WalmoreTown_EventScripts_ShowBobby:
+	clearflag FLAG_HIDE_BOBBY_HOUSE_BOBBY
+	showobjectat 2, MAP_WALMORE_TOWN_BOBBY_HOUSE
+	return
 
 Script_WMT_Signpost_CoreysHouse::
 	lock
@@ -34,12 +40,20 @@ Script_WalmoreTown_KickDownDoor::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox T_WMT_KickDownDoor, MSGBOX_YESNO
+	goto_if_set FLAG_DEFEATED_METEOR_FALLS_STEVEN, Script_WalmoreTown_KickDownDoor_PostGame
 	switch VAR_RESULT
 	case NO, WalmoreTown_EventScript_DidntAttemptKick
 	case YES, WalmoreTown_EventScript_TooWeakToKick
 	case MULTI_B_PRESSED, WalmoreTown_EventScript_DidntAttemptKick
 	release
 	end
+
+Script_WalmoreTown_KickDownDoor_PostGame:
+	msgbox T_WMT_KickedDownDoor, MSGBOX_DEFAULT
+	setvar VAR_JOHNS_DOOR, 1
+	release
+end
+
 
 WalmoreTown_EventScript_DidntAttemptKick:
 	msgbox T_WMT_DidntAttemptKick, MSGBOX_DEFAULT
@@ -263,3 +277,6 @@ Text_Signpost_WMT_BobbysHouse:
 Text_Signpost_WMT_CoreysHouse:
 	.string "Coreys House.\p"
 	.string "Looking for lost Darts.$"
+
+T_WMT_KickedDownDoor:
+	.string "{PLAYER} Kicked Down Door!$"

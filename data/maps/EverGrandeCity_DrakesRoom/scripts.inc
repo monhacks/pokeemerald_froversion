@@ -41,6 +41,7 @@ EverGrandeCity_DrakesRoom_EventScript_CloseDoor:: @ 82286ED
 EverGrandeCity_DrakesRoom_EventScript_Drake:: @ 82286F3
 	lock
 	faceplayer
+	goto_if_set FLAG_SYS_GAME_CLEAR, EverGrandeCity_DrakesRoom_EventScript_DrakePostGame
 	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_DrakesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, 0
 	msgbox EverGrandeCity_DrakesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
@@ -91,3 +92,51 @@ EverGrandeCity_DrakesRoom_Text_PostBattleSpeech: @ 82288B0
 	.string "Go! Go onwards!\n"
 	.string "The Champion is waiting!$"
 
+EverGrandeCity_DrakesRoom_EventScript_DrakePostGame:
+	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_DrakesRoom_EventScript_PostBattleSpeech
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, 0
+	msgbox EverGrandeCity_DrakesRoom_Text_IntroSpeechPostGame, MSGBOX_DEFAULT
+	setflag FLAG_SYS_NO_BAG_USE
+	setflag FLAG_FORCE_BATTLE_STYLE_SET
+	trainerbattle_no_intro TRAINER_DRAKE_REMATCH, EverGrandeCity_DrakesRoom_Text_Defeat
+	goto EverGrandeCity_DrakesRoom_EventScript_DefeatedPostGame
+	end
+
+EverGrandeCity_DrakesRoom_EventScript_DefeatedPostGame:: @ 8227F95
+	setflag FLAG_DEFEATED_ELITE_4_DRAKE
+	goto_if_set FLAG_RECEIVED_LEFT_LEG, EverGrandeCity_DrakesRoom_EventScript_DefeatedPostGameNoPackage
+	msgbox EverGrandeCity_DrakesRoom_Text_PostBattleSpeechPostGamePackage, MSGBOX_DEFAULT
+	giveitem ITEM_LEFT_LEG_OF_THE_FORBIDDEN_ONE, 1
+	setflag FLAG_RECEIVED_LEFT_LEG
+	fadescreen FADE_TO_BLACK
+	warpsilent MAP_LAKE_MEAD_VILLAGE, 255, 11, 14
+	release
+	end
+
+EverGrandeCity_DrakesRoom_EventScript_DefeatedPostGameNoPackage::
+	msgbox EverGrandeCity_DrakesRoom_Text_PostBattleSpeechPostGameNoPackage, MSGBOX_DEFAULT
+	fadescreen FADE_TO_BLACK
+	warpsilent MAP_LAKE_MEAD_VILLAGE, 255, 11, 14
+	release
+	end
+
+EverGrandeCity_DrakesRoom_Text_IntroSpeechPostGame: @ 8227FA7
+	.string "Welcome, champion!\n"
+	.string "You miss 100 percent of the\l"
+	.string "Shots you don't take!$"
+
+EverGrandeCity_DrakesRoom_Text_PostBattleSpeechPostGamePackage: @ 82280EC
+	.string "My motivational words work\n"
+	.string "wonders!\p"
+	.string "You are a true Champion!\p"
+	.string "Come back anytime you want to\n"
+	.string "battle for fun!\p"
+	.string "Oh yea, I almost forgot,\n"
+	.string "you recieved a package!$"
+
+EverGrandeCity_DrakesRoom_Text_PostBattleSpeechPostGameNoPackage: @ 82280EC
+	.string "My motivational words work\n"
+	.string "wonders!\p"
+	.string "You are a true Champion!\p"
+	.string "Come back anytime you want to\n"
+	.string "battle for fun!$"

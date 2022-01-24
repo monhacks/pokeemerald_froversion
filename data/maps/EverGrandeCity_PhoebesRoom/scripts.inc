@@ -40,6 +40,7 @@ EverGrandeCity_PhoebesRoom_EventScript_CloseDoor:: @ 82281C5
 EverGrandeCity_PhoebesRoom_EventScript_Phoebe:: @ 82281CB
 	lock
 	faceplayer
+	goto_if_set FLAG_SYS_GAME_CLEAR, EverGrandeCity_PhobesRoom_EventScript_PhobePostGame
 	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, 0
 	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
@@ -83,3 +84,27 @@ EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech: @ 8228343
 	.string "will carry you.\p"
 	.string "Go ahead, move on to the next room.$"
 
+EverGrandeCity_PhobesRoom_EventScript_PhobePostGame:
+	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, 0
+	msgbox EverGrandeCity_PhobesRoom_Text_IntroSpeechPostGame, MSGBOX_DEFAULT
+	setflag FLAG_SYS_NO_BAG_USE
+	setflag FLAG_FORCE_BATTLE_STYLE_SET
+	trainerbattle_no_intro TRAINER_PHOBE_REMATCH, EverGrandeCity_PhoebesRoom_Text_Defeat
+	goto EverGrandeCity_PhobesRoom_EventScript_DefeatedPostGame
+	end
+
+EverGrandeCity_PhobesRoom_EventScript_DefeatedPostGame:: @ 8227F95
+	setflag FLAG_DEFEATED_ELITE_4_PHOEBE
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_PhobesRoom_Text_PostBattleSpeechPostGame, MSGBOX_DEFAULT
+	release
+	end
+
+
+EverGrandeCity_PhobesRoom_Text_IntroSpeechPostGame: @ 8227FA7
+	.string "Welcome, champion!\n"
+	.string "Have you been practicing?!$"
+
+EverGrandeCity_PhobesRoom_Text_PostBattleSpeechPostGame: @ 82280EC
+	.string "I guess you still got it!$"

@@ -1536,3 +1536,6 @@ const u32 gItemIconPalette_GrilledCheese[] = INCBIN_U32("graphics/items/icon_pal
 const u32 gItemIcon_Snowflake[] = INCBIN_U32("graphics/items/icons/snowflake.4bpp.lz");
 const u32 gItemIconPalette_Snowflake[] = INCBIN_U32("graphics/items/icon_palettes/snowflake.gbapal.lz");
 
+const u32 gItemIcon_LeftLegOfTheForbiddenOne[] = INCBIN_U32("graphics/items/icons/left_leg_of_the_forbidden_one.4bpp.lz");
+const u32 gItemIconPalette_LeftLegOfTheForbiddenOne[] = INCBIN_U32("graphics/items/icon_palettes/left_leg_of_the_forbidden_one.gbapal.lz");
+

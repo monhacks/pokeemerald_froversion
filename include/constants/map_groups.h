@@ -155,6 +155,7 @@
 #define MAP_WALMORE_TOWN_POKEMON_CENTER   (6 | (2 << 8))
 #define MAP_WALMORE_TOWN_POKEMON_SCHOOL   (7 | (2 << 8))
 #define MAP_WALMORE_TOWN_BOBBY_HOUSE      (8 | (2 << 8))
+#define MAP_WALMORE_TOWN_JOHNS_HOUSE      (9 | (2 << 8))
 
 // Map Group 3
 #define MAP_DEWFORD_TOWN_HOUSE1            (0 | (3 << 8))
@@ -699,6 +700,6 @@
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {126, 10, 9, 10, 8, 9, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 13, 0};
+// static const u8 MAP_GROUP_COUNT[] = {126, 10, 10, 10, 8, 9, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 13, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

@@ -7319,7 +7319,7 @@ static void HandleTerrainMove(u32 moveEffect)
     {
         gFieldStatuses &= ~STATUS_TERRAIN_ANY;
         gFieldStatuses |= statusFlag;
-        if (GetBattlerAbility(gActiveBattler) == ABILITY_TIME_STOP)
+        if (GetBattlerAbility(gBattlerAttacker) == ABILITY_TIME_STOP)
             *timer = 255;
         else if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_TERRAIN_EXTENDER)
             *timer = 8;
@@ -9144,7 +9144,7 @@ static void Cmd_setreflect(void)
     else
     {
         gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] |= SIDE_STATUS_REFLECT;
-        if (GetBattlerAbility(gActiveBattler) == ABILITY_TIME_STOP)
+        if (GetBattlerAbility(gBattlerAttacker) == ABILITY_TIME_STOP)
             gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].reflectTimer = 255;
         else if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_LIGHT_CLAY)
             gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].reflectTimer = 8;
@@ -10028,7 +10028,7 @@ static void Cmd_setlightscreen(void)
     else
     {
         gSideStatuses[GET_BATTLER_SIDE(gBattlerAttacker)] |= SIDE_STATUS_LIGHTSCREEN;
-        if (GetBattlerAbility(gActiveBattler) == ABILITY_TIME_STOP)
+        if (GetBattlerAbility(gBattlerAttacker) == ABILITY_TIME_STOP)
             gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].lightscreenTimer = 255;
         else if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_LIGHT_CLAY)
             gSideTimers[GET_BATTLER_SIDE(gBattlerAttacker)].lightscreenTimer = 8;

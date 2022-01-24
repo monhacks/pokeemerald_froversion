@@ -3035,3 +3035,7 @@ static const u8 sSnowflakeDesc[] = _(
     "is collected to \n"
     "prove worthiness.");
 
+static const u8 sLeftLegDesc[] = _(
+    "A card of the Left\n"
+    "Leg of the\n"
+    "Forbidden One");

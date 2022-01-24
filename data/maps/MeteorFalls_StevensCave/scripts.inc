@@ -17,6 +17,7 @@ MeteorFalls_StevensCave_EventScript_Steven:: @ 823B182
 	msgbox MeteorFalls_StevensCave_Text_ShouldKnowHowGoodIAmExpectWorst, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_STEVEN, MeteorFalls_StevensCave_Text_StevenDefeat
 	msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT
+	msgbox MeteorFalls_StevensCave_Text_TakeThese, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_METEOR_FALLS_STEVEN
 	release
 	end
@@ -34,8 +35,6 @@ MeteorFalls_StevensCave_Text_ShouldKnowHowGoodIAmExpectWorst: @ 823B1E1
 	.string "Do you, uh…maybe think of me as\n"
 	.string "just a rock maniac?\p"
 	.string "No, that can't be right.\p"
-	.string "We battled alongside each other at\n"
-	.string "the Homestead SPACE Center.\p"
 	.string "You should have a very good idea\n"
 	.string "about how good I am.\p"
 	.string "Okay, {PLAYER}{KUN}, if you're going to mount\n"
@@ -47,13 +46,19 @@ MeteorFalls_StevensCave_Text_StevenDefeat: @ 823B32D
 
 MeteorFalls_StevensCave_Text_MyPredictionCameTrue: @ 823B358
 	.string "Mike: Come to think of it, ever since\n"
-	.string "our paths first crossed in GRANITE\l"
-	.string "CAVE in DEWFORD, I had this feeling.\p"
+	.string "our paths first crossed in Granite\l"
+	.string "Cave in Raintree, I had this feeling.\p"
 	.string "I thought that you would eventually\n"
-	.string "become the CHAMPION.\p"
+	.string "become the Champion.\p"
 	.string "My predictions usually come true.\p"
 	.string "And where will you go from here?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "Fufufu, even I couldn't tell you that.$"
+
+MeteorFalls_StevensCave_Text_TakeThese:
+	.string "Here, let me give you a little something.\n"
+	.string "These steel tips attach to the end of\l"
+	.string "your Running Shoes. You should be able\l"
+	.string "Do some damage with them.$"
 

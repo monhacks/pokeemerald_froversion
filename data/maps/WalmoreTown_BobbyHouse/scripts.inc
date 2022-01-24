@@ -69,3 +69,84 @@ WalmoreTown_BobbyHouse_Text_BobbysMomHaveFunBeSafe:
 	.string "for a project, if you can bring them\l"
 	.string "some, I will make you more Grilled\l"
 	.string "Cheese!$"
+
+
+WalmoreTown_BobbyHouse_EventScript_EggAlreadyGiven:
+	msgbox WalmoreTown_BobbyHouse_Text_TakeCareFro, MSGBOX_DEFAULT
+	release
+end
+
+WalmoreTown_BobbyHouse_EventScript_GiveEgg::
+@ Case 0: Fro Rascaloot/John Emboryps/Bobby Flobra
+@ Case 1: Fro Flobra/John Rascaloot/Bobby Emboryps
+@ Case 2: Fro Emboryps/John Flobra/Bobby Rascaloot
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_BOBBYS_EGG, WalmoreTown_BobbyHouse_EventScript_EggAlreadyGiven
+	msgbox WalmoreTown_BobbyHouse_Text_CongratsOnBecomingChampion, MSGBOX_DEFAULT
+	switch VAR_STARTER_MON
+	case 0, WalmoreTown_BobbyHouse_EventScript_FlobraEgg 
+	case 1, WalmoreTown_BobbyHouse_EventScript_EmborypsEgg 
+	case 2, WalmoreTown_BobbyHouse_EventScript_RascalootEgg
+
+WalmoreTown_BobbyHouse_EventScript_EmborypsEgg:	
+	msgbox WalmoreTown_BobbyHouse_Text_HaveEggWillYouTakeIt, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq LavaridgeTown_EventScript_DeclineEgg
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq LavaridgeTown_EventScript_NoRoomForEgg
+	msgbox LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_BOBBYS_EGG
+	playfanfare MUS_OBTAIN_ITEM
+	message LavaridgeTown_Text_ReceivedTheEgg
+	waitfanfare
+	giveegg SPECIES_EMBORYPS
+	release
+end
+
+WalmoreTown_BobbyHouse_EventScript_RascalootEgg:	
+	msgbox WalmoreTown_BobbyHouse_Text_HaveEggWillYouTakeIt, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq LavaridgeTown_EventScript_DeclineEgg
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq LavaridgeTown_EventScript_NoRoomForEgg
+	msgbox LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_BOBBYS_EGG
+	playfanfare MUS_OBTAIN_ITEM
+	message LavaridgeTown_Text_ReceivedTheEgg
+	waitfanfare
+	giveegg SPECIES_RASCALOOT
+	release
+end
+
+WalmoreTown_BobbyHouse_EventScript_FlobraEgg:	
+	msgbox WalmoreTown_BobbyHouse_Text_HaveEggWillYouTakeIt, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq LavaridgeTown_EventScript_DeclineEgg
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq LavaridgeTown_EventScript_NoRoomForEgg
+	msgbox LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_BOBBYS_EGG
+	playfanfare MUS_OBTAIN_ITEM
+	message LavaridgeTown_Text_ReceivedTheEgg
+	waitfanfare
+	giveegg SPECIES_FLOBRA
+	release
+end
+
+WalmoreTown_BobbyHouse_Text_CongratsOnBecomingChampion:
+	.string "Fro, Congrats on beating me.\p"
+	.string "You better believe I will be coming\n"
+	.string "at you for my title!$"
+
+WalmoreTown_BobbyHouse_Text_HaveEggWillYouTakeIt:
+	.string "Oh yea, do you want a raw egg?\p"
+	.string "I usually scramble mine, but I'm\n"
+	.string "full.$"
+
+WalmoreTown_BobbyHouse_Text_TakeCareFro:
+	.string "Take care {PLAYER}!\p"
+	.string "See you around!$"

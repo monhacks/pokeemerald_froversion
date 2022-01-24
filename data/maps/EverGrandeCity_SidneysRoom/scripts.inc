@@ -46,6 +46,7 @@ EverGrandeCity_SidneysRoom_EventScript_WalkInCloseDoor:: @ 8227F57
 EverGrandeCity_SidneysRoom_EventScript_Sidney:: @ 8227F64
 	lock
 	faceplayer
+	goto_if_set FLAG_SYS_GAME_CLEAR, EverGrandeCity_SidneysRoom_EventScript_SidneyPostGame
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, 0
 	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeech, MSGBOX_DEFAULT
@@ -88,3 +89,37 @@ EverGrandeCity_SidneysRoom_Text_PostBattleSpeech: @ 82280EC
 	.string "Now, go on to the next room and enjoy\l"
 	.string "your next battle!$"
 
+EverGrandeCity_SidneysRoom_EventScript_SidneyPostGame:
+	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, 0
+	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeechPostGame, MSGBOX_DEFAULT
+	setflag FLAG_SYS_NO_BAG_USE
+	setflag FLAG_FORCE_BATTLE_STYLE_SET
+	trainerbattle_no_intro TRAINER_SIDNEY_REMATCH, EverGrandeCity_SidneysRoom_Text_Defeat
+	goto EverGrandeCity_SidneysRoom_EventScript_DefeatedPostGame
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_DefeatedPostGame:: @ 8227F95
+	setflag FLAG_DEFEATED_ELITE_4_SIDNEY
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_SidneysRoom_Text_PostBattleSpeechPostGame, MSGBOX_DEFAULT
+	release
+	end
+
+
+EverGrandeCity_SidneysRoom_Text_IntroSpeechPostGame: @ 8227FA7
+	.string "Welcome, champion!\n"
+	.string "I like that look you're giving me.\l"
+	.string "I guess you'll give me a good match.\l"
+	.string "That's good! Looking real good!\p"
+	.string "All right! You and me, let's enjoy\n"
+	.string "a battle that can only be staged\l"
+	.string "here in the Pokémon League!$"
+
+EverGrandeCity_SidneysRoom_Text_PostBattleSpeechPostGame: @ 82280EC
+	.string "Well, listen to what this loser has\n"
+	.string "to say.\p"
+	.string "You've got what it takes to remain.\n"
+	.string "Champion!\l"
+	.string "Now, go on to the next room and enjoy\l"
+	.string "your next battle!$"

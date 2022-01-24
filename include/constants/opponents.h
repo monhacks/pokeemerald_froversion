@@ -825,10 +825,10 @@
 #define TRAINER_PABLO_3                     821
 #define TRAINER_PABLO_4                     822
 #define TRAINER_PABLO_5                     823
-#define TRAINER_KOJI_2                      824
-#define TRAINER_KOJI_3                      825
-#define TRAINER_KOJI_4                      826
-#define TRAINER_KOJI_5                      827
+#define TRAINER_SIDNEY_REMATCH                      824
+#define TRAINER_PHOBE_REMATCH                      825
+#define TRAINER_GLACIA_REMATCH                      826
+#define TRAINER_DRAKE_REMATCH                      827
 #define TRAINER_GENTLEMAN_2_TRAINERS_HALL_3_BADGES                   828
 #define TRAINER_GENTLEMAN_2_TRAINERS_HALL_4_BADGES                   829
 #define TRAINER_GENTLEMAN_2_TRAINERS_HALL_5_BADGES                   830

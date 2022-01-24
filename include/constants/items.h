@@ -712,10 +712,11 @@
 #define ITEM_DRAGONS_ORB         610
 #define ITEM_NIKITA              611
 #define ITEM_AKU_BERRY 612
+#define ITEM_LEFT_LEG_OF_THE_FORBIDDEN_ONE 613
 
 
 
-#define ITEMS_COUNT 613
+#define ITEMS_COUNT 614
 
 
 

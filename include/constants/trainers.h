@@ -143,7 +143,7 @@
 #define TRAINER_PIC_KOSTIW                120
 #define TRAINER_PIC_CHAD                  121
 #define TRAINER_PIC_MARK                  122
-#define TRAINER_PIC_MIKE_LYNCH                  123
+#define TRAINER_PIC_MIKE_LYNCH            123
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1

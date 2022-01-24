@@ -5470,6 +5470,16 @@
       "secondary_tileset": "gTileset_PetalburgGym",
       "border_filepath": "data/layouts/FallarborTown_TrainerHouse/border.bin",
       "blockdata_filepath": "data/layouts/FallarborTown_TrainerHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_WALMORE_TOWN_JOHNS_HOUSE",
+      "name": "WalmoreTown_JohnsHouse_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/WalmoreTown_JohnsHouse/border.bin",
+      "blockdata_filepath": "data/layouts/WalmoreTown_JohnsHouse/map.bin"
     }
   ]
 }

@@ -4352,6 +4352,8 @@ extern const u32 gItemIcon_GrilledCheese[];
 extern const u32 gItemIconPalette_GrilledCheese[];
 extern const u32 gItemIcon_Snowflake[];
 extern const u32 gItemIconPalette_Snowflake[];
+extern const u32 gItemIcon_LeftLegOfTheForbiddenOne[];
+extern const u32 gItemIconPalette_LeftLegOfTheForbiddenOne[];
 // Hold items
 extern const u32 gItemIcon_BrightPowder[];
 extern const u32 gItemIconPalette_BrightPowder[];

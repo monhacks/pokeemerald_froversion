@@ -7764,4 +7764,16 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+    [ITEM_LEFT_LEG_OF_THE_FORBIDDEN_ONE] =
+    {
+        .name = _("Left Leg"),
+        .itemId = ITEM_LEFT_LEG_OF_THE_FORBIDDEN_ONE,
+        .price = 0,
+        .description = sLeftLegDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };

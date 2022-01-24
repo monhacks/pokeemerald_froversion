@@ -12210,7 +12210,8 @@ static const struct TrainerMonItemCustomMoves sParty_Steven[] = {
     .lvl = 87,
     .species = SPECIES_RHYDON,
     .heldItem = ITEM_CHOICE_BAND,
-    .moves = {MOVE_MEGA_HORN, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE}
+    .moves = {MOVE_MEGAHORN, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE},
+    .evs = {252, 0, 252, 0, 0, 252},
     },
     {
     .abilityNum = 3,
@@ -12493,70 +12494,194 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Pablo5[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Koji2[] = {
+static const struct TrainerMonItemCustomMoves sParty_Koji2[] = { //PAM REMTACH
     {
-    .iv = 10,
-    .lvl = 37,
-    .species = SPECIES_MACHOKE,
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 85,
+    .species = SPECIES_FURRET,
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_DOUBLE_EDGE, MOVE_ROCK_SMASH, MOVE_U_TURN, MOVE_TRICK},
+    .evs = {4, 252, 0, 252, 0, 0},
     },
     {
-    .iv = 10,
-    .lvl = 37,
-    .species = SPECIES_MACHOKE,
+    .abilityNum = 1,
+    .iv = 250,
+    .lvl = 85,
+    .species = SPECIES_SLAKING,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_SKILL_SWAP, MOVE_EARTHQUAKE, MOVE_ICE_PUNCH, MOVE_FIRE_BLAST},
+    .evs = {4, 252, 0, 252, 0, 0},
+    },
+    {
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 85,
+    .species = SPECIES_CLEFABLE,
+    .heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_CALM_MIND, MOVE_THUNDERBOLT, MOVE_ICE_BEAM, MOVE_SOFT_BOILED},
+    .evs = {252, 0, 0, 0, 0, 252},
+    },
+    {
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 85,
+    .species = SPECIES_BLISSEY,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_WISH, MOVE_PROTECT, MOVE_SEISMIC_TOSS, MOVE_TOXIC},
+    .evs = {252, 0, 252, 4, 0, 0},
+    },
+    {
+    .abilityNum = 3,    
+    .iv = 255,
+    .lvl = 85,
+    .species = SPECIES_PIDGEOT,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_HURRICANE, MOVE_ROOST, MOVE_THUNDER, MOVE_U_TURN},
+    .evs = {44, 116, 0, 116, 116, 0},
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Koji3[] = {
+static const struct TrainerMonItemCustomMoves sParty_Koji3[] = { //DWIGHT
     {
-    .iv = 20,
-    .lvl = 39,
-    .species = SPECIES_MAKUHITA,
+    .abilityNum = 1,
+    .iv = 250,
+    .lvl = 90,
+    .species = SPECIES_MURKROW,
+    .heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_FLY, MOVE_SUCKER_PUNCH, MOVE_HEAT_WAVE, MOVE_PSYCHIC},
+    .evs = {0, 252, 0, 252, 4, 0},
     },
     {
-    .iv = 20,
-    .lvl = 39,
-    .species = SPECIES_MACHOKE,
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 90,
+    .species = SPECIES_SNEASEL,
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_PURSUIT, MOVE_ROCK_SMASH, MOVE_PUNISHMENT, MOVE_CRUSH_CLAW},
+    .evs = {0, 252, 0, 252, 0, 4},
     },
     {
-    .iv = 20,
-    .lvl = 39,
-    .species = SPECIES_MACHOKE,
+    .abilityNum = 3,
+    .iv = 250,
+    .lvl = 90,
+    .species = SPECIES_SABLEYE,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_FOUL_PLAY, MOVE_RECOVER, MOVE_TAUNT, MOVE_FAKE_OUT},
+    .evs = {252, 0, 252, 0, 0, 8},
+    },
+    {
+    .abilityNum = 1,
+    .iv = 250,
+    .lvl = 90,
+    .species = SPECIES_ABSOL,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SWORDS_DANCE, MOVE_KNOCK_OFF, MOVE_SUCKER_PUNCH, MOVE_PLAY_ROUGH},
+    .evs = {0, 252, 0, 252, 0, 4},
+    },
+    {
+    .abilityNum = 1,
+    .iv = 255,
+    .lvl = 90,
+    .species = SPECIES_SPIRITOMB,
+    .heldItem = ITEM_BLACK_GLASSES,
+    .moves = {MOVE_SUCKER_PUNCH, MOVE_PURSUIT, MOVE_TAUNT, MOVE_WILL_O_WISP},
+    .evs = {212, 252, 0, 44, 0, 0},
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Koji4[] = {
+static const struct TrainerMonItemCustomMoves sParty_Koji4[] = { //jim
     {
-    .iv = 30,
-    .lvl = 41,
-    .species = SPECIES_HARIYAMA,
+    .abilityNum =2,
+    .iv = 250,
+    .lvl = 95,
+    .species = SPECIES_PRIMEAPE,
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_CLOSE_COMBAT, MOVE_U_TURN, MOVE_STONE_EDGE, MOVE_EARTHQUAKE},
+    .evs = {4, 252, 0, 252, 0, 0},
     },
     {
-    .iv = 30,
-    .lvl = 41,
-    .species = SPECIES_MACHOKE,
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 95,
+    .species = SPECIES_POLIWRATH,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_ICE_PUNCH, MOVE_POWER_UP_PUNCH, MOVE_ROCK_SMASH, MOVE_BELLY_DRUM},
+    .evs = {252, 4, 252, 0, 0, 0},
     },
     {
-    .iv = 30,
-    .lvl = 41,
-    .species = SPECIES_MACHOKE,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_Koji5[] = {
-    {
-    .iv = 40,
-    .lvl = 43,
-    .species = SPECIES_HARIYAMA,
-    },
-    {
-    .iv = 40,
-    .lvl = 43,
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 95,
     .species = SPECIES_MACHAMP,
+    .heldItem = ITEM_ASSAULT_VEST,
+    .moves = {MOVE_DYNAMIC_PUNCH, MOVE_KNOCK_OFF, MOVE_HEAVY_SLAM, MOVE_STONE_EDGE},
+    .evs = {4, 252, 0, 252, 0, 0},
     },
     {
-    .iv = 40,
-    .lvl = 43,
-    .species = SPECIES_MACHAMP,
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 95,
+    .species = SPECIES_MEDICHAM,
+    .heldItem = ITEM_CHOICE_SCARF,
+    .moves = {MOVE_HIGH_JUMP_KICK, MOVE_PSYCHO_CUT, MOVE_THUNDER_PUNCH, MOVE_TRICK},
+    .evs = {212, 252, 0, 44, 0, 0},
+    },
+    {
+    .abilityNum = 1,
+    .iv = 255,
+    .lvl = 95,
+    .species = SPECIES_RUTHLASH,
+    .heldItem = ITEM_ASSAULT_VEST,
+    .moves = {MOVE_SPINNING_PUNCH, MOVE_BULLET_SEED, MOVE_FURY_SWIPES, MOVE_POWER_UP_PUNCH},
+    .evs = {4, 252, 0, 252, 0, 0},
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Koji5[] = {
+    {
+    .abilityNum = 3,
+    .iv = 250,
+    .lvl = 95,
+    .species = SPECIES_ESPEON,
+    .heldItem = ITEM_LIGHT_CLAY,
+    .moves = {MOVE_REFLECT, MOVE_LIGHT_SCREEN, MOVE_PSYCHIC, MOVE_SIGNAL_BEAM},
+    .evs = {4, 0, 0, 252, 252, 0},
+    },
+    {
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 95,
+    .species = SPECIES_JYNX,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_NASTY_PLOT, MOVE_ICE_BEAM, MOVE_PSYSHOCK, MOVE_LOVELY_KISS},
+    .evs = {4, 0, 0, 252, 252, 0},
+    },
+    {
+    .abilityNum = 3,
+    .iv = 250,
+    .lvl = 95,
+    .species = SPECIES_ALAKAZAM,
+    .heldItem = ITEM_LAGGING_TAIL,
+    .moves = {MOVE_FLASH_CANNON, MOVE_PSYCHIC, MOVE_DARK_PULSE, MOVE_TRICK},
+    .evs = {4, 0, 0, 252, 252, 0},
+    },
+    {
+    .abilityNum = 3,
+    .iv = 250,
+    .lvl = 95,
+    .species = SPECIES_ESPEON,
+    .heldItem = ITEM_LIGHT_CLAY,
+    .moves = {MOVE_REFLECT, MOVE_LIGHT_SCREEN, MOVE_PSYCHIC, MOVE_GRASS_KNOT},
+    .evs = {4, 0, 0, 252, 252, 0},
+    },
+    {
+    .iv = 255,
+    .lvl = 95,
+    .species = SPECIES_LUNATONE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_STEALTH_ROCK, MOVE_MOONLIGHT, MOVE_ANCIENT_POWER, MOVE_FLASH},
+    .evs = {252, 0, 0, 0, 4, 252},
     }
 };
 
