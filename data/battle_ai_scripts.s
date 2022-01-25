@@ -1022,6 +1022,10 @@ Score_Plus5:
 	score +5
 	end
 
+Score_Plus6:
+	score +6
+	end
+
 Score_Plus10:
 	score +10
 	end
@@ -1296,6 +1300,8 @@ AI_CV_PsychicTerrain:
 AI_CV_TerrainExpander:
 	get_hold_effect AI_USER
 	if_equal HOLD_EFFECT_TERRAIN_EXTENDER, Score_Plus2
+	get_ability AI_USER
+	if_equal ABILITY_TIME_STOP, Score_Plus6
 	end
 	
 AI_CV_Powder:
@@ -2164,6 +2170,8 @@ EncourageLightClay:
 	if_random_less_than 111, EncourageLightClayEnd
 	score +1
 EncourageLightClayEnd:
+	get_ability AI_USER
+	if_equal ABILITY_TIME_STOP, Score_Plus6
 	end
 	
 AI_CV_AuroraVeil:

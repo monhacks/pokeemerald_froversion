@@ -223,7 +223,7 @@ Script_LakeMeadVillage_FrosHouse_1F_GoDownstairsStandard::
 	release
 	end
 
-Script_LakeMeadVillage_FrosHouse_1F_MomRandom1::	
+Script_LakeMeadVillage_FrosHouse_1F_MomRandom1::
 	random 3
 	switch VAR_RESULT
 	case 0, Script_LakeMeadVillage_FrosHouse_1F_MomRandomText1
@@ -232,6 +232,7 @@ Script_LakeMeadVillage_FrosHouse_1F_MomRandom1::
 	end
 
 Script_LakeMeadVillage_FrosHouse_1F_MomAfterRecievedPoke::
+	goto_if_set FLAG_BADGE05_GET, PlayersHouse_1F_EventScript_TryGiveAmuletCoin
 	msgbox T_FrosHouse1F_YouFoundTheProfessor, MSGBOX_NPC
 	end
 

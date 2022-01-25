@@ -15,14 +15,23 @@ MeteorFalls_StevensCave_EventScript_Steven:: @ 823B182
 	applymovement LOCALID_STEVEN, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox MeteorFalls_StevensCave_Text_ShouldKnowHowGoodIAmExpectWorst, MSGBOX_DEFAULT
+	setflag FLAG_SYS_NO_BAG_USE
+	setflag FLAG_FORCE_BATTLE_STYLE_SET
+	setflag FLAG_BATTLE_TYPE_WEATHER
 	trainerbattle_no_intro TRAINER_STEVEN, MeteorFalls_StevensCave_Text_StevenDefeat
 	msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT
 	msgbox MeteorFalls_StevensCave_Text_TakeThese, MSGBOX_DEFAULT
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
+	clearflag FLAG_BATTLE_TYPE_WEATHER
 	setflag FLAG_DEFEATED_METEOR_FALLS_STEVEN
 	release
 	end
 
 MeteorFalls_StevensCave_EventScript_Defeated:: @ 823B1CD
+	clearflag FLAG_SYS_NO_BAG_USE
+	clearflag FLAG_FORCE_BATTLE_STYLE_SET
+	clearflag FLAG_BATTLE_TYPE_WEATHER
 	applymovement LOCALID_STEVEN, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT

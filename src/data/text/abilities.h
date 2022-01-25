@@ -428,7 +428,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_PRANKSTER] = _("Prankster"),
     [ABILITY_SAND_FORCE] = _("Sand Force"),
     [ABILITY_IRON_BARBS] = _("Iron Barbs"),
-    [ABILITY_ZEN_MODE] = _("Zen Mode"),
+    [ABILITY_TIME_STOP] = _("Time Stop"),
     [ABILITY_VICTORY_STAR] = _("Victory Star"),
     [ABILITY_TURBOBLAZE] = _("Turboblaze"),
     [ABILITY_TERAVOLT] = _("Teravolt"),
@@ -550,7 +550,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MEGA_GENGAR_ABILITY] = _("Malevolent"),
     [ABILITY_INVERTEBRAKE_HIDDEN_ABILITY] = _("MotorCloak"),
     [ABILITY_DARK_TETHER] = _("Dark Tether"),
-    [ABILITY_TIME_STOP] = _("Time Stop"),
+    [ABILITY_ZEN_MODE] = _("Zen Mode"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =

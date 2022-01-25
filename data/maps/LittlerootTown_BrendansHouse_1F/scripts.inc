@@ -309,7 +309,7 @@ PlayersHouse_1F_Text_MoversPokemonGoSetClock: @ 81F7A46
 	.string "This is so convenient!\p"
 	.string "{PLAYER}, your room is upstairs.\n"
 	.string "Go check it out, dear!\p"
-	.string "DAD bought you a new clock to mark\n"
+	.string "Grant bought you a new clock to mark\n"
 	.string "our move here.\l"
 	.string "Don't forget to set it!$"
 
@@ -328,16 +328,16 @@ PlayersHouse_1F_Text_OhComeQuickly: @ 81F7B96
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn: @ 81F7BBC
 	.string "MOM: Look! It's Lynch Park!\n"
-	.string "Maybe DAD will be on!$"
+	.string "Maybe Grant will be on!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim: @ 81F7BF1
 	.string "MOM: Oh… It's over.\p"
-	.string "I think DAD was on, but we missed him.\n"
+	.string "I think Grant was on, but we missed him.\n"
 	.string "Too bad.$"
 
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor: @ 81F7C35
 	.string "Oh, yes.\n"
-	.string "One of DAD's friends lives in town.\p"
+	.string "One of Grant's friends lives in town.\p"
 	.string "Prof. Tilyou is his name.\p"
 	.string "He lives right next door, so you should\n"
 	.string "go over and introduce yourself.$"
@@ -358,7 +358,7 @@ PlayersHouse_1F_Text_TakeCareHoney: @ 81F7D5C
 	.string "MOM: Take care, honey!$"
 
 PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom: @ 81F7D73
-	.string "MOM: Oh? Did DAD give you that BADGE?\p"
+	.string "MOM: Oh? Did Grant give you that BADGE?\p"
 	.string "Then here's something from your MOM!$"
 
 PlayersHouse_1F_Text_DontPushYourselfTooHard: @ 81F7DBE
@@ -402,7 +402,7 @@ PlayersHouse_1F_Text_RunningShoesManual: @ 81F7F66
 	.string "the road running!”$"
 
 PlayersHouse_1F_Text_TicketFromBrineyCameForYou: @ 81F800E
-	.string "DAD: Hm?\p"
+	.string "Grant: Hm?\p"
 	.string "Hey, it's {PLAYER}!\p"
 	.string "It's been a while since I saw you,\n"
 	.string "but you look…stronger, somehow.\p"
@@ -413,7 +413,7 @@ PlayersHouse_1F_Text_TicketFromBrineyCameForYou: @ 81F800E
 	.string "K. Trippy.$"
 
 PlayersHouse_1F_Text_PortsInSlateportLilycove: @ 81F80FE
-	.string "DAD: Hm, a TICKET for a ferry?\p"
+	.string "Grant: Hm, a TICKET for a ferry?\p"
 	.string "If I recall, there are ferry ports in\n"
 	.string "Riverside and The Outlets.$"
 
@@ -423,7 +423,7 @@ PlayersHouse_1F_Text_BetterGetBackToGym: @ 81F815B
 	.string "while I'm away.$"
 
 PlayersHouse_1F_Text_DadShouldStayLonger: @ 81F81B9
-	.string "MOM: That DAD of yours…\p"
+	.string "MOM: That Grant of yours…\p"
 	.string "He comes home for the first time in a\n"
 	.string "while, but all he talks about is Pokémon.\p"
 	.string "He should relax and stay a little longer.$"
