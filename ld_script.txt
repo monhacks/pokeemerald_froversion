@@ -1260,6 +1260,8 @@ SECTIONS {
         sound/songs/midi/mus_fv_dream.o(.rodata);
         sound/songs/midi/mus_fv_chark.o(.rodata);
         sound/songs/midi/mus_fv_halo.o(.rodata);
+        sound/songs/midi/mus_fv_western_approach.o(.rodata);
+        sound/songs/midi/mus_fv_sand_caves.o(.rodata);
         
     } =0
 

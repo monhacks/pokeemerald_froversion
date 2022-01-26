@@ -1324,4 +1324,8 @@ $(MID_SUBDIR)/mus_fv_chark.s: %.s: %.mid
 $(MID_SUBDIR)/mus_fv_halo.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G139 -V090
 
+$(MID_SUBDIR)/mus_fv_western_approach.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G010 -V080
 
+$(MID_SUBDIR)/mus_fv_sand_caves.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G018 -V080
