@@ -1279,3 +1279,9 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/FallarborTown_TrainerHouse/scripts.inc"
 
 	.include "data/maps/WalmoreTown_JohnsHouse/scripts.inc"
+
+	.include "data/maps/WesternApproachLostSpringCanyonTrail1Connection/scripts.inc"
+
+	.include "data/maps/WesternApproachStillRuins/scripts.inc"
+
+	.include "data/maps/WesternApproachStillRuins2/scripts.inc"

@@ -162,7 +162,10 @@
     "WesternApproachLostSpringCanyonTrail1",
     "WesternApproachOpenLand1",
     "WesternApproachOpenLand2",
-    "WesternApproachLostSpringsCanyonRightBorder"
+    "WesternApproachLostSpringsCanyonRightBorder",
+    "WesternApproachLostSpringCanyonTrail1Connection",
+    "WesternApproachStillRuins",
+    "WesternApproachStillRuins2"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",

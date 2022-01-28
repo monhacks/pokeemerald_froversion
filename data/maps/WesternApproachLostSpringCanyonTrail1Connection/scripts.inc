@@ -1,0 +1,2 @@
+WesternApproachLostSpringCanyonTrail1Connection_MapScripts::
+	.byte 0

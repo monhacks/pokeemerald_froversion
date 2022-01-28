@@ -20,8 +20,13 @@
     },
     {
       "direction": "down",
-      "offset": 23,
+      "offset": 0,
       "map": "MAP_WESTERN_APPROACH_OPEN_LAND2"
+    },
+    {
+      "direction": "right",
+      "offset": 24,
+      "map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1CONNECTION"
     }
   ],
   "object_events": [

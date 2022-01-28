@@ -5437,14 +5437,14 @@
       "width": 69,
       "height": 44,
       "primary_tileset": "gTileset_WesternApproach",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_WesternApproachSpringCanyon",
       "border_filepath": "data/layouts/WesternApproachOpenLand1/border.bin",
       "blockdata_filepath": "data/layouts/WesternApproachOpenLand1/map.bin"
     },
     {
       "id": "LAYOUT_WESTERN_APPROACH_OPEN_LAND2",
       "name": "WesternApproachOpenLand2_Layout",
-      "width": 36,
+      "width": 69,
       "height": 41,
       "primary_tileset": "gTileset_WesternApproach",
       "secondary_tileset": "gTileset_Petalburg",
@@ -5480,6 +5480,36 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/WalmoreTown_JohnsHouse/border.bin",
       "blockdata_filepath": "data/layouts/WalmoreTown_JohnsHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1CONNECTION",
+      "name": "WesternApproachLostSpringCanyonTrail1Connection_Layout",
+      "width": 67,
+      "height": 75,
+      "primary_tileset": "gTileset_WesternApproach",
+      "secondary_tileset": "gTileset_WesternApproachSpringCanyon",
+      "border_filepath": "data/layouts/WesternApproachLostSpringCanyonTrail1Connection/border.bin",
+      "blockdata_filepath": "data/layouts/WesternApproachLostSpringCanyonTrail1Connection/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTERN_APPROACH_STILL_RUINS",
+      "name": "WesternApproachStillRuins_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_WesternApproach",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WesternApproachStillRuins/border.bin",
+      "blockdata_filepath": "data/layouts/WesternApproachStillRuins/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTERN_APPROACH_STILL_RUINS2",
+      "name": "WesternApproachStillRuins2_Layout",
+      "width": 40,
+      "height": 27,
+      "primary_tileset": "gTileset_WesternApproach",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WesternApproachStillRuins2/border.bin",
+      "blockdata_filepath": "data/layouts/WesternApproachStillRuins2/map.bin"
     }
   ]
 }
