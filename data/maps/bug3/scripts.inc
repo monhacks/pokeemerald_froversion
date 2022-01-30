@@ -8,7 +8,6 @@ EventScript_ChadPoisonLeader::
 	callnative CheckPartyForType
 	compare VAR_RESULT, FALSE
 	goto_if_eq NikeVersionEventScript_YouHavePokemonThatCantBeUsed
-	setflag FLAG_BATTLE_POISON_FIELD
 	setflag FLAG_SYS_NO_BAG_USE
 	trainerbattle_single TRAINER_CHAD_POISON_LEADER, ChadPoisonLeader_IntroText, ChadPoisonLeader_DefeatText, ChadPoisonLeader_DefeatedScript
 	clearflag FLAG_BATTLE_POISON_FIELD
@@ -92,3 +91,27 @@ NikeVersion_Text_PokemonCantBeUsed:
 	.string "for our battle.\p"
 	.string "Come back when all your Pokémon\n"
 	.string "are the correct type!$"
+
+EventScript_Generator::
+	lock
+	setvar VAR_0x8000, TYPE_ELECTRIC
+	callnative CheckPartyForType
+	compare VAR_RESULT, FALSE
+	goto_if_eq NikeVersionEventScript_NothingHappened
+	msgbox NikeVersion_Text_GeneratorActivated, MSGBOX_DEFAULT
+	setflag FLAG_GENERATOR_ACTIVATED
+	release
+end
+
+NikeVersionEventScript_NothingHappened:
+	msgbox NikeVersion_Text_NothingHappened, MSGBOX_DEFAULT
+	release
+end
+	
+NikeVersion_Text_NothingHappened:
+	.string "Nothing Happened...$"
+
+NikeVersion_Text_GeneratorActivated:
+	.string "You activated the Generator\n"
+	.string "with your Electric Pokémon.$"
+

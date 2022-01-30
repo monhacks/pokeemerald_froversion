@@ -866,6 +866,7 @@ Route104_Movement_BrineyExitBoat: @ 81ED35C
 	step_end
 
 Route104_EventScript_Ivan:: @ 81ED35F
+	cleartrainerflag TRAINER_IVAN
 	trainerbattle_single TRAINER_IVAN, Route104_Text_IvanIntro, Route104_Text_IvanDefeat
 	msgbox Route104_Text_IvanPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -1019,6 +1020,7 @@ Route104_EventScript_Mia:: @ 81ED5B6
 	end
 
 Route104_EventScript_Darian:: @ 81ED5D5
+	cleartrainerflag TRAINER_DARIAN
 	trainerbattle_single TRAINER_DARIAN, Route104_Text_DarianIntro, Route104_Text_DarianDefeat
 	msgbox Route104_Text_DarianPostBattle, MSGBOX_AUTOCLOSE
 	end

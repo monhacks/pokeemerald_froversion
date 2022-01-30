@@ -353,7 +353,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "graphics_id": "OBJ_EVENT_GFX_NOLAND",
       "x": 53,
       "y": 44,
       "elevation": 3,
@@ -392,9 +392,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
-      "x": 71,
-      "y": 2,
+      "graphics_id": "OBJ_EVENT_GFX_OFFICE_JIM",
+      "x": 86,
+      "y": -6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -453,7 +453,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route111_EventScript_Wilton",
+      "script": "Route109_EventScript_Huey",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OFFICE_JIM",
+      "x": 71,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Route123_EventScript_Wendy",
       "flag": "0"
     }
   ],
@@ -476,8 +489,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 72,
-      "y": 2,
+      "x": 85,
+      "y": 0,
       "elevation": 0,
       "var": "VAR_LITTLEROOT_TOWN_STATE",
       "var_value": "1",

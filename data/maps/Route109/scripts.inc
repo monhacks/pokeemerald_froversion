@@ -382,13 +382,20 @@ Route109_EventScript_David:: @ 81EEA3D
 	end
 
 Route109_EventScript_Alice:: @ 81EEA54
+	cleartrainerflag TRAINER_ALICE
 	trainerbattle_single TRAINER_ALICE, Route109_Text_AliceIntro, Route109_Text_AliceDefeated
 	msgbox Route109_Text_AlicePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Huey:: @ 81EEA6B
+	msgbox Route109_Text_HueyIntro, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route109_EventScript_HueyEnd
 	trainerbattle_single TRAINER_HUEY, Route109_Text_HueyIntro, Route109_Text_HueyDefeated
 	msgbox Route109_Text_HueyPostBattle, MSGBOX_AUTOCLOSE
+Route109_EventScript_HueyEnd:
+	release
+	closemessage
 	end
 
 Route109_EventScript_Edmond:: @ 81EEA82

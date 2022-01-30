@@ -266,12 +266,17 @@ Route110_EventScript_AbigailRematch:: @ 81EF58B
 	end
 
 Route110_EventScript_Isabel:: @ 81EF5A2
+	msgbox Route110_Text_IsabelIntro, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq  Route110_EventScript_IsabelEnd
 	trainerbattle_single TRAINER_ISABEL_1, Route110_Text_IsabelIntro, Route110_Text_IsabelDefeated
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route110_EventScript_IsabelRematch
 	msgbox Route110_Text_IsabelPostBattle, MSGBOX_DEFAULT
+Route110_EventScript_IsabelEnd:
 	release
+	closemessage
 	end
 
 Route110_EventScript_IsabelRegisterMatchCallAfterBattle:: @ 81EF5CE

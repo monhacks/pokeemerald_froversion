@@ -33,3 +33,17 @@ FroNormalLeader_DefeatText:
 
 FroNormalLeader_DefeatedText:
 	.string "I'm chad and you won!$"
+
+EventScript_WarpScriptA::
+	lock
+	//goto_if_unset FLAG_GENERATOR_ACTIVATED EventScript_WarpScriptAEnd
+	msgbox FroNormalLeader_DefeatedText, MSGBOX_DEFAULT
+	warp MAP_BUG_D, 255, 20, 46
+EventScript_WarpScriptAEnd:
+	end
+
+EventScript_WarpScriptB::
+	goto_if_unset FLAG_GENERATOR_ACTIVATED EventScript_WarpScriptBEnd
+	warp MAP_BUG_D, 255, 20, 70
+EventScript_WarpScriptBEnd:
+	end

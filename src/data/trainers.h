@@ -1290,10 +1290,10 @@ const struct Trainer gTrainers[] = {
     [TRAINER_WENDY] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
+        .trainerClass = TRAINER_CLASS_EXPERT,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_COOLTRAINER_F,
-        .trainerName = _("WENDY"),
+        .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
+        .trainerName = _("Janus"),
         .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_SETUP_FIRST_TURN,
@@ -4240,10 +4240,10 @@ const struct Trainer gTrainers[] = {
     [TRAINER_ISABEL_1] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM,
-        .trainerClass = TRAINER_CLASS_POKEFAN,
+        .trainerClass = TRAINER_CLASS_EXPERT,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_TWINS,
-        .trainerPic = TRAINER_PIC_POKEFAN_F,
-        .trainerName = _("ISABEL"),
+        .trainerPic = TRAINER_PIC_OLD_COUPLE,
+        .trainerName = _("Cedric"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
@@ -4491,6 +4491,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_JOSH] =
     {
+
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_SAILOR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -7308,16 +7309,16 @@ const struct Trainer gTrainers[] = {
     [TRAINER_BRENDAN_ROUTE_110_MUDKIP] =
     {
         .hasCustomTransition = TRUE,
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_BOBBY,
+        .partyFlags = 0,
+        .trainerClass = TRAINER_CLASS_EXPERT,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_LASS,
-        .trainerName = _("Bobby"),
+        .trainerName = _("Tyche"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
         .partySize = ARRAY_COUNT(sParty_BrendanRoute110Mudkip),
-        .party = {.ItemCustomMoves = sParty_BrendanRoute110Mudkip},
+        .party = {.NoItemDefaultMoves = sParty_BrendanRoute110Mudkip},
     },
 
     [TRAINER_BRENDAN_ROUTE_119_MUDKIP] =
@@ -8356,10 +8357,10 @@ const struct Trainer gTrainers[] = {
     [TRAINER_ISABELLA] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TRIATHLETE,
+        .trainerClass = TRAINER_CLASS_EXPERT,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SWIMMER,
-        .trainerPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
-        .trainerName = _("ISABELLA"),
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Lass"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,

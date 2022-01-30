@@ -1199,21 +1199,27 @@ static const struct TrainerMonItemCustomMoves sParty_Jody[] = {
 static const struct TrainerMonNoItemCustomMoves sParty_Wendy[] = {
     {
     .iv = 100,
-    .lvl = 29,
+    .lvl = 24,
     .species = SPECIES_MAWILE,
     .moves = {MOVE_BATON_PASS, MOVE_FEINT_ATTACK, MOVE_FAKE_TEARS, MOVE_BITE}
     },
     {
     .iv = 100,
-    .lvl = 29,
+    .lvl = 24,
     .species = SPECIES_ROSELIA,
     .moves = {MOVE_MEGA_DRAIN, MOVE_MAGICAL_LEAF, MOVE_GRASS_WHISTLE, MOVE_LEECH_SEED}
     },
     {
     .iv = 100,
-    .lvl = 29,
+    .lvl = 24,
     .species = SPECIES_PELIPPER,
     .moves = {MOVE_FLY, MOVE_WATER_GUN, MOVE_MIST, MOVE_PROTECT}
+    },
+    {
+    .iv = 100,
+    .lvl = 24,
+    .species = SPECIES_KANGASKHAN,
+    .moves = {MOVE_RETURN, MOVE_SHADOW_BALL, MOVE_REST, MOVE_MAGNITUDE}
     }
 };
 
@@ -4175,17 +4181,40 @@ static const struct TrainerMonItemDefaultMoves sParty_Bethany[] = {
 
 static const struct TrainerMonItemDefaultMoves sParty_Isabel1[] = {
     {
-    .iv = 0,
-    .lvl = 18,
-    .species = SPECIES_PIKACHU,
-    .heldItem = ITEM_ORAN_BERRY
+    .iv = 10,
+    .lvl = 35,
+    .species = SPECIES_WALLOCK,
     },
     {
-    .iv = 0,
-    .lvl = 17,
-    .species = SPECIES_PIKACHU,
-    .heldItem = ITEM_ORAN_BERRY
-    }
+    .iv = 10,
+    .lvl = 35,
+    .species = SPECIES_KOPISPAR,
+    },
+    {
+    .iv = 10,
+    .lvl = 35,
+    .species = SPECIES_BUCCANITE,
+    },
+    {
+    .iv = 10,
+    .lvl = 35,
+    .species = SPECIES_BANDITHUG,
+    },
+    {
+    .iv = 10,
+    .lvl = 35,
+    .species = SPECIES_MORPHLO,
+    },
+    {
+    .iv = 10,
+    .lvl = 35,
+    .species = SPECIES_HUNTORYPS,
+    },
+    {
+    .iv = 10,
+    .lvl = 18,
+    .species = SPECIES_MARILL,
+    },
 };
 
 static const struct TrainerMonItemDefaultMoves sParty_Isabel2[] = {
@@ -6760,17 +6789,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jazmyn[] = {
     },
     {
     .iv = 0,
-    .lvl = 18,
+    .lvl = 16,
     .species = SPECIES_HAUNTER,
     },
     {
     .iv = 0,
-    .lvl = 19,
+    .lvl = 18,
     .species = SPECIES_BULBASAUR,
     },
     {
     .iv = 0,
-    .lvl = 18,
+    .lvl = 14,
     .species = SPECIES_VAYPING,
     }
 };
@@ -7012,30 +7041,24 @@ static const struct TrainerMonItemCustomMoves sParty_WasulaSummitCaveFlobra[] = 
     
 };
 
-static const struct TrainerMonItemCustomMoves sParty_BrendanRoute110Mudkip[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute110Mudkip[] = {
     {
     .abilityNum = 2,
     .iv = 150,
-    .lvl = 24,
-    .species = SPECIES_SABLEYE,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_RECOVER, MOVE_FOUL_PLAY, MOVE_WILL_O_WISP, MOVE_TAUNT}
+    .lvl = 20,
+    .species = SPECIES_MEOWTH,
     },
     {
     .abilityNum = 0,
     .iv = 150,
     .lvl = 24,
-    .species = SPECIES_MORPHLO,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_COIL, MOVE_WATER_PULSE, MOVE_QUICK_ATTACK, MOVE_NONE}
+    .species = SPECIES_PERSIAN,
     },
     {
     //.abilityNum = 0
     .iv = 150,
     .lvl = 24,
-    .species = SPECIES_DUMBELLION,
-    .heldItem = ITEM_FLAME_ORB,
-    .moves = {MOVE_TACKLE, MOVE_BULK_UP, MOVE_METAL_CLAW, MOVE_ASSURANCE}
+    .species = SPECIES_CHANSEY,
     }
 };
 
@@ -13263,7 +13286,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChadPoisonLeader[] = {
     .abilityNum = 2,
     .heldItem = ITEM_BLACK_SLUDGE,
     .iv = 255,
-    .lvl = 21,
+    .lvl = 20,
     .species = SPECIES_VAYPING,
     .moves = {MOVE_THUNDER_SHOCK, MOVE_SMOG, MOVE_SMOKESCREEN, MOVE_SPIKES},
     },
@@ -13271,7 +13294,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChadPoisonLeader[] = {
     .abilityNum = 2,
     .heldItem = ITEM_LEFTOVERS,
     .iv = 255,
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_MUK,
     .moves = {MOVE_TOXIC, MOVE_HARDEN, MOVE_MUD_BOMB, MOVE_PROTECT},
     },
@@ -13279,7 +13302,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChadPoisonLeader[] = {
     .abilityNum = 1,
     .heldItem = ITEM_POISON_CAMOUFLAGE,
     .iv = 255,
-    .lvl = 22,
+    .lvl = 20,
     .species = SPECIES_CHAD_BUG_1,
     .moves = {MOVE_FOCUS_ENERGY, MOVE_PIN_MISSILE, MOVE_FURY_ATTACK, MOVE_PROTECT},
     },
@@ -13287,7 +13310,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChadPoisonLeader[] = {
     .heldItem = ITEM_LEFTOVERS,
     .abilityNum = 0,
     .iv = 255,
-    .lvl = 21,
+    .lvl = 20,
     .species = SPECIES_GLOOM,
     .moves = {MOVE_ABSORB, MOVE_ACID, MOVE_BULLET_SEED, MOVE_MEGA_DRAIN},
     },
@@ -13295,7 +13318,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChadPoisonLeader[] = {
     .heldItem = ITEM_LEFTOVERS,
     .abilityNum = 0,
     .iv = 255,
-    .lvl = 21,
+    .lvl = 20,
     .species = SPECIES_ARBOK,
     .moves = {MOVE_BITE, MOVE_ACID, MOVE_SCREECH, MOVE_TOXIC},
     },
@@ -13303,7 +13326,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChadPoisonLeader[] = {
     .heldItem = ITEM_LEFTOVERS,
     .abilityNum = 0,
     .iv = 255,
-    .lvl = 23,
+    .lvl = 20,
     .species = SPECIES_HAUNTER,
     .moves = {MOVE_SHADOW_PUNCH, MOVE_TOXIC, MOVE_HYPNOSIS, MOVE_DREAM_EATER},
     },

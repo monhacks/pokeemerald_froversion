@@ -66,6 +66,7 @@ LancelotPath_EventScript_James::
 	end
 
 LancelotPath_EventScript_Haley::
+	cleartrainerflag TRAINER_HAILEY,
 	trainerbattle_single TRAINER_HALEY_1, Route104_Text_HaleyIntro, Route104_Text_HaleyDefeat
 	msgbox Route104_Text_HaleyPostBattle, MSGBOX_DEFAULT
 	release

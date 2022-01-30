@@ -66,6 +66,7 @@ RustboroCity_Gym_EventScript_JoshSearching:
 	end
 
 RustboroCity_Gym_EventScript_Tommy:: @ 8212FFA
+	cleartrainerflag TRAINER_TOMMY,
 	trainerbattle_single TRAINER_TOMMY, RustboroCity_Gym_Text_TommyIntro, RustboroCity_Gym_Text_TommyDefeat
 	msgbox RustboroCity_Gym_Text_TommyPostBattle, MSGBOX_AUTOCLOSE
 	end

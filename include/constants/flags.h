@@ -56,7 +56,7 @@
 #define FLAG_DEFEATED_STEEL    0x2C // Unused Flag
 #define FLAG_HUBROOM_JOHN    0x2D // Unused Flag
 #define FLAG_JOHN_DIALOUGE_COMPLETE    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
+#define FLAG_GENERATOR_ACTIVATED    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag

@@ -839,7 +839,7 @@ Route109_Text_AlicePostBattle: @ 829720F
 	.string "Cheeks are the most prone to burning!$"
 
 Route109_Text_HueyIntro: @ 8297235
-	.string "Hey Nike, Glad you made it\n"
+	.string "Bud: Hey Nike, Glad you made it\n"
 	.string "this far! You must have done some\l"
 	.string "good neck stretches!  Just like\l"
 	.string "it's important to stretch out\l"
@@ -1194,7 +1194,7 @@ Route110_Text_IsabelIntro: @ 8298349
 	.string "don't count!"
 
 Route110_Text_IsabelDefeated: @ 8298389
-	.string "Oh, dear, this won't do.$"
+	.string "Maybe you really are the first.$"
 
 Route110_Text_IsabelPostBattle: @ 82983A2
 	.string "Rather than battling, perhaps I should\n"
@@ -1404,18 +1404,22 @@ Route111_Text_DaisukePostBattle: @ 8298F26
 	.string "as yourself.$"
 
 Route111_Text_WiltonIntro: @ 8298F79
-	.string "Show me how much you've toughened\n"
-	.string "your Pokémon.$"
+	.string "Bud: Hey Nike, Glad you made it\n"
+	.string "this far! You must have done some\l"
+	.string "good neck stretches!  Just like\l"
+	.string "it's important to stretch out\l"
+	.string "before you bowl, I like to\l"
+	.string "stretch out my battles.\p"
+	.string "Hmmm/p"
+	.string "How about this if you can beat me\n"
+	.string "without using an attacking move\l"
+	.string "I'll give you a reward?$"
 
 Route111_Text_WiltonDefeat: @ 8298FA9
-	.string "I see, you've toughened them\n"
-	.string "considerably.$"
+	.string "(Sniffle Sniffle)\p"
 
 Route111_Text_WiltonPostBattle: @ 8298FD4
-	.string "Pokémon and Trainers learn much\n"
-	.string "through battling.\p"
-	.string "What's important is to never give up\n"
-	.string "even if you lose.$"
+	.string "(Sniffle Sniffle)\p"
 
 Route111_Text_WiltonRegister: @ 829903D
 	.string "There is much to be learned from\n"
@@ -3405,15 +3409,17 @@ Route121_Text_MarcelPostBattle: @ 829FBA8
 	.string "before entering any CONTEST.$"
 
 Route123_Text_WendyIntro: @ 829FBEB
-	.string "Want to determine how strong you are?\n"
-	.string "I'll be the test!$"
+	.string "How's the normal training\n"
+	.string "going?  prove your worth\l"
+	.string "and I'll open the door$"
 
 Route123_Text_WendyDefeat: @ 829FC23
 	.string "You passed with flying colors!$"
 
 Route123_Text_WendyPostBattle: @ 829FC42
-	.string "To best even me…\n"
-	.string "Your strength is marvelous!$"
+	.string "Be sure to stay healthy\n"
+	.string "a lot of people have been\n"
+	.string "getting jaundice lately...$"
 
 Route123_Text_BraxtonIntro: @ 829FC6F
 	.string "You seem to have a big collection\n"
