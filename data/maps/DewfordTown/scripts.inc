@@ -816,3 +816,8 @@ DewfordTown_Text_YeahDefinitionOfInRightNow: @ 81EA491
 //////Froversion Scripts///////
 //////////////////////////////
 
+
+DewfordTown_EventScript_IntroTest::
+	warpsilent MAP_MARRIOTT_INTRO_FRAME1, 255, 7, 5
+	release
+end

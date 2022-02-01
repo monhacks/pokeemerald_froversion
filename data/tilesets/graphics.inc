@@ -2249,3 +2249,123 @@ gTilesetPalettes_WesternApproachSpringCanyon::
 	.align 2
 gTilesetTiles_WesternApproachSpringCanyon::
 	.incbin "data/tilesets/secondary/westernapproachspringcanyon/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_MarriottStudyingBackground::
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_MarriottStudyingBackground::
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_MarriottIntroFrame2::
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe2/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_MarriottIntroFrame2::
+	.incbin "data/tilesets/secondary/marriottintroframe2/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_MarriottIntroFrame3::
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe3/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_MarriottIntroFrame3::
+	.incbin "data/tilesets/secondary/marriottintroframe3/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_MarriottIntroFrame4::
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe4/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_MarriottIntroFrame4::
+	.incbin "data/tilesets/secondary/marriottintroframe4/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_MarriottIntroFrame5::
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe5/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_MarriottIntroFrame5::
+	.incbin "data/tilesets/secondary/marriottintroframe5/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_MarriottIntroFrame6::
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/marriottintroframe6/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_MarriottIntroFrame6::
+	.incbin "data/tilesets/secondary/marriottintroframe6/tiles.4bpp.lz"

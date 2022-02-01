@@ -114,7 +114,7 @@
 #define B_CRASH_IF_TARGET_IMMUNE    GEN_6 // In Gen4+, The user of Jump Kick or Hi Jump Kick will "keep going and crash" if it attacks a target that is immune to the move.
 
 // Ability settings
-#define B_ABILITY_WEATHER           GEN_6 // In Gen6+, ability-induced weather lasts 5 turns. Before, it lasted until the battle ended or until it was changed by a move.
+#define B_ABILITY_WEATHER           GEN_5 // In Gen6+, ability-induced weather lasts 5 turns. Before, it lasted until the battle ended or until it was changed by a move.
 #define B_GALE_WINGS                GEN_6 // In Gen7+ requires full HP to trigger.
 #define B_STANCE_CHANGE_FAIL        GEN_7 // In Gen7+, Stance Change fails if the Pokémon is unable to use a move because of confusion, paralysis, etc. In Gen6, it doesn't.
 #define B_GHOSTS_ESCAPE             GEN_6 // In Gen6+, ghosts can escape even when blocked by abilities such as Shadow Tag.

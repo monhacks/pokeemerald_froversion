@@ -740,3 +740,45 @@ gMetatiles_WesternApproachSpringCanyon::
 	.align 1
 gMetatileAttributes_WesternApproachSpringCanyon::
 	.incbin "data/tilesets/secondary/westernapproachspringcanyon/metatile_attributes.bin"
+	.align 1
+gMetatiles_MarriottStudyingBackground::
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_MarriottStudyingBackground::
+	.incbin "data/tilesets/secondary/marriottstudyingbackground/metatile_attributes.bin"
+	.align 1
+gMetatiles_MarriottIntroFrame2::
+	.incbin "data/tilesets/secondary/marriottintroframe2/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_MarriottIntroFrame2::
+	.incbin "data/tilesets/secondary/marriottintroframe2/metatile_attributes.bin"
+	.align 1
+gMetatiles_MarriottIntroFrame3::
+	.incbin "data/tilesets/secondary/marriottintroframe3/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_MarriottIntroFrame3::
+	.incbin "data/tilesets/secondary/marriottintroframe3/metatile_attributes.bin"
+	.align 1
+gMetatiles_MarriottIntroFrame4::
+	.incbin "data/tilesets/secondary/marriottintroframe4/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_MarriottIntroFrame4::
+	.incbin "data/tilesets/secondary/marriottintroframe4/metatile_attributes.bin"
+	.align 1
+gMetatiles_MarriottIntroFrame5::
+	.incbin "data/tilesets/secondary/marriottintroframe5/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_MarriottIntroFrame5::
+	.incbin "data/tilesets/secondary/marriottintroframe5/metatile_attributes.bin"
+	.align 1
+gMetatiles_MarriottIntroFrame6::
+	.incbin "data/tilesets/secondary/marriottintroframe6/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_MarriottIntroFrame6::
+	.incbin "data/tilesets/secondary/marriottintroframe6/metatile_attributes.bin"

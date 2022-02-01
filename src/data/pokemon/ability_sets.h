@@ -76,7 +76,8 @@ static const struct AbilitySetter sMagnemiteAbilitySet[] =
 };
 
 static const struct AbilitySetter sSandshrewAbilitySet[] = 
-{
+{   
+    {ABILITY_ABYSSAL, 1},
     {ABILITY_SAND_RUSH, 1},
     {ABILITY_SAND_FORCE, 25},
     {ABILITY_SAND_VEIL, 55},

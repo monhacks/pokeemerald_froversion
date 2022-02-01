@@ -5510,6 +5510,66 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/WesternApproachStillRuins2/border.bin",
       "blockdata_filepath": "data/layouts/WesternApproachStillRuins2/map.bin"
+    },
+    {
+      "id": "LAYOUT_MARRIOTT_INTRO_FRAME1",
+      "name": "MarriotIntroFrame1_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MarriottStudyingBackground",
+      "border_filepath": "data/layouts/MarriottIntroFrame1/border.bin",
+      "blockdata_filepath": "data/layouts/MarriottIntroFrame1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MARRIOTT_INTRO_FRAME2",
+      "name": "MarriottIntroFrame2_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MarriottIntroFrame2",
+      "border_filepath": "data/layouts/MarriottIntroFrame2/border.bin",
+      "blockdata_filepath": "data/layouts/MarriottIntroFrame2/map.bin"
+    },
+    {
+      "id": "LAYOUT_MARRIOTT_INTRO_FRAME3",
+      "name": "MarriottIntroFrame3_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MarriottIntroFrame3",
+      "border_filepath": "data/layouts/MarriottIntroFrame3/border.bin",
+      "blockdata_filepath": "data/layouts/MarriottIntroFrame3/map.bin"
+    },
+    {
+      "id": "LAYOUT_MARRIOTT_INTRO_FRAME4",
+      "name": "MarriottIntroFrame4_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MarriottIntroFrame4",
+      "border_filepath": "data/layouts/MarriottIntroFrame4/border.bin",
+      "blockdata_filepath": "data/layouts/MarriottIntroFrame4/map.bin"
+    },
+    {
+      "id": "LAYOUT_MARRIOTT_INTRO_FRAME5",
+      "name": "MarriottIntroFrame5_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MarriottIntroFrame5",
+      "border_filepath": "data/layouts/MarriottIntroFrame5/border.bin",
+      "blockdata_filepath": "data/layouts/MarriottIntroFrame5/map.bin"
+    },
+    {
+      "id": "LAYOUT_MARRIOTT_INTRO_FRAME6",
+      "name": "MarriottIntroFrame6_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MarriottIntroFrame6",
+      "border_filepath": "data/layouts/MarriottIntroFrame6/border.bin",
+      "blockdata_filepath": "data/layouts/MarriottIntroFrame6/map.bin"
     }
   ]
 }

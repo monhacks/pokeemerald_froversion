@@ -49,13 +49,16 @@ BattleFrontier_Lounge6_EventScript_TradeCompleted:: @ 8265083
 	end
 
 BattleFrontier_Lounge6_Text_WouldYouLikeToTrade: @ 826508D
+	.string "Since you've defeated us,\n"
+	.string "I have a special Pokémon I\l"
+	.string "would be willing to trade.\p"
 	.string "My Pokémon is a {STR_VAR_2}.\n"
 	.string "Do you know it?\l"
 	.string "It's quite cute and rather nice.\p"
 	.string "This little one, I could trade with\n"
 	.string "pride!\p"
 	.string "Would you like to trade me a {STR_VAR_1}\n"
-	.string "for my {STR_VAR_2}?$"
+	.string "Rodgers for my {STR_VAR_2}?$"
 
 BattleFrontier_Lounge6_Text_PromiseIllBeGoodToIt: @ 8265128
 	.string "Oh, it's adorable!\n"
@@ -76,5 +79,5 @@ BattleFrontier_Lounge6_Text_WellThatsFineToo: @ 82651CB
 
 BattleFrontier_Lounge6_Text_SkittySoMuchCuterThanImagined: @ 826520E
 	.string "Giggle!\n"
-	.string "A SKITTY is so much cuter than I had\l"
+	.string "An Aron is so much cuter than I had\l"
 	.string "imagined. I'm delighted!$"

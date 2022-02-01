@@ -1116,3 +1116,69 @@ gTileset_WesternApproachSpringCanyon::
 	.4byte gMetatiles_WesternApproachSpringCanyon
 	.4byte gMetatileAttributes_WesternApproachSpringCanyon
 	.4byte NULL
+
+	.align 2
+gTileset_MarriottStudyingBackground::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_MarriottStudyingBackground
+	.4byte gTilesetPalettes_MarriottStudyingBackground
+	.4byte gMetatiles_MarriottStudyingBackground
+	.4byte gMetatileAttributes_MarriottStudyingBackground
+	.4byte NULL
+
+	.align 2
+gTileset_MarriottIntroFrame2::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_MarriottIntroFrame2
+	.4byte gTilesetPalettes_MarriottIntroFrame2
+	.4byte gMetatiles_MarriottIntroFrame2
+	.4byte gMetatileAttributes_MarriottIntroFrame2
+	.4byte NULL
+
+	.align 2
+gTileset_MarriottIntroFrame3::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_MarriottIntroFrame3
+	.4byte gTilesetPalettes_MarriottIntroFrame3
+	.4byte gMetatiles_MarriottIntroFrame3
+	.4byte gMetatileAttributes_MarriottIntroFrame3
+	.4byte NULL
+
+	.align 2
+gTileset_MarriottIntroFrame4::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_MarriottIntroFrame4
+	.4byte gTilesetPalettes_MarriottIntroFrame4
+	.4byte gMetatiles_MarriottIntroFrame4
+	.4byte gMetatileAttributes_MarriottIntroFrame4
+	.4byte NULL
+
+	.align 2
+gTileset_MarriottIntroFrame5::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_MarriottIntroFrame5
+	.4byte gTilesetPalettes_MarriottIntroFrame5
+	.4byte gMetatiles_MarriottIntroFrame5
+	.4byte gMetatileAttributes_MarriottIntroFrame5
+	.4byte NULL
+
+	.align 2
+gTileset_MarriottIntroFrame6::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_MarriottIntroFrame6
+	.4byte gTilesetPalettes_MarriottIntroFrame6
+	.4byte gMetatiles_MarriottIntroFrame6
+	.4byte gMetatileAttributes_MarriottIntroFrame6
+	.4byte NULL

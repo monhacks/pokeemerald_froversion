@@ -1606,6 +1606,8 @@ u32 GetTotalAccuracy(u32 battlerAtk, u32 battlerDef, u32 move)
 
     if (defAbility == ABILITY_SAND_VEIL && WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SANDSTORM_ANY)
         calc = (calc * 80) / 100; // 1.2 sand veil loss
+    if (defAbility == ABILITY_ABYSSAL && WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SANDSTORM_ANY)
+        calc = (calc * 80) / 100; // 1.2 sand veil loss
     else if (defAbility == ABILITY_SNOW_CLOAK && WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_HAIL_ANY)
         calc = (calc * 80) / 100; // 1.2 snow cloak loss
     else if (defAbility == ABILITY_TANGLED_FEET && gBattleMons[battlerDef].status2 & STATUS2_CONFUSION)
@@ -10162,6 +10164,7 @@ static void Cmd_weatherdamage(void)
                 && ability != ABILITY_SAND_FORCE
                 && ability != ABILITY_SAND_RUSH
                 && ability != ABILITY_OVERCOAT
+                && ability != ABILITY_ABYSSAL
                 && !(gStatuses3[gBattlerAttacker] & (STATUS3_UNDERGROUND | STATUS3_UNDERWATER))
                 && GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_SAFETY_GOOGLES)
             {

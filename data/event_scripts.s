@@ -1285,3 +1285,15 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/WesternApproachStillRuins/scripts.inc"
 
 	.include "data/maps/WesternApproachStillRuins2/scripts.inc"
+
+	.include "data/maps/MarriottIntroFrame1/scripts.inc"
+
+	.include "data/maps/MarriottIntroFrame2/scripts.inc"
+
+	.include "data/maps/MarriottIntroFrame3/scripts.inc"
+
+	.include "data/maps/MarriottIntroFrame4/scripts.inc"
+
+	.include "data/maps/MarriottIntroFrame5/scripts.inc"
+
+	.include "data/maps/MarriottIntroFrame6/scripts.inc"

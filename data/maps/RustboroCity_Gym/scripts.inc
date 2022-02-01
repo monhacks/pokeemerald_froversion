@@ -2,6 +2,7 @@ RustboroCity_Gym_MapScripts:: @ 8212F30
 	.byte 0
 
 RustboroCity_Gym_EventScript_Roxanne:: @ 8212F31
+	goto_if_defeated TRAINER_ROXANNE_1 BattleFrontier_Lounge6_EventScript_Trader
 	setvar VAR_MUGSHOT_ID, MUGSHOT_CHADANDMARK
 	setflag FLAG_BATTLE_POISON_FIELD
 	setflag FLAG_SYS_NO_BAG_USE
