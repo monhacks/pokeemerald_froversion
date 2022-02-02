@@ -5087,7 +5087,7 @@
       "width": 45,
       "height": 45,
       "primary_tileset": "gTileset_NiagaraWoodsPrimary",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_NiagaraVillage",
       "border_filepath": "data/layouts/NewMap1/border.bin",
       "blockdata_filepath": "data/layouts/NewMap1/map.bin"
     },
