@@ -7,7 +7,13 @@ VerdanturfTown_MapScripts:: @ 81EB566
 VerdanturfTown_OnTransition: @ 81EB56C
 	setflag FLAG_VISITED_VERDANTURF_TOWN
 	setvar VAR_CONTEST_HALL_STATE, 0
+	call_if_set FLAG_SYS_GAME_CLEAR, VerdanturfTown_EventScript_ShowInGameTraderAtHouse
 	end
+
+VerdanturfTown_EventScript_ShowInGameTraderAtHouse:
+	clearflag FLAG_HIDE_VERDANTURF_TRADER
+	showobjectat 3, MAP_VERDANTURF_TOWN_HOUSE
+	return
 
 VerdanturfTown_EventScript_Twin:: @ 81EB575
 	lock

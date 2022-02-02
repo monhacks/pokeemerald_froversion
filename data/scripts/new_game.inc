@@ -275,5 +275,6 @@ EventScript_ResetAllMapFlags:: @ 82715DE
 	setflag FLAG_HIDE_SKY_PILLAR_WALLACE
 	setflag FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT
 	setflag FLAG_HIDE_BOBBY_HOUSE_BOBBY
+	setflag FLAG_HIDE_VERDANTURF_TRADER
 	call EventScript_ResetAllBerries
 	end

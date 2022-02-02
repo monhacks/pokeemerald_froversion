@@ -728,7 +728,7 @@
 #define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag
 #define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
 #define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
-#define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
+#define FLAG_VERDANTURF_TRADE_DONE  0x2B2 // Traded Cloclock for chansey in verdanturf and recived key item
 #define FLAG_RECEIVED_WALMORE_POTION  0x2B3 // Received potion in walmore town
 #define FLAG_RECEIVED_FRATT_HOUSE_ITEM                    0x2B4 // Received Special Item after beating challenge
 #define FLAG_MATT_INTRO    0x2B5 // Spoke To Matt at homestead north
@@ -1277,7 +1277,7 @@
 #define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
 #define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
 #define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
-#define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
+#define FLAG_HIDE_VERDANTURF_TRADER                                          0x4D0 // Hide Verdanturf Trader until postgame
 #define FLAG_RECEIVED_LEFT_LEG                                           0x4D1 // Recieved Key Item
 #define FLAG_RECEIVED_BOBBYS_EGG                                           0x4D2 // Post game bobby gave egg
 #define FLAG_HIDE_BOBBY_HOUSE_BOBBY                                           0x4D3 // Unhide Bobby at endgame

@@ -240,7 +240,7 @@
 #define TRAINER_WILLIAM                     236
 #define TRAINER_JOSHUA                      237
 #define TRAINER_CAMERON_1                   238
-#define TRAINER_CAMERON_2                   239
+#define TRAINER_ISIAH_NALLS                   239
 #define TRAINER_CAMERON_3                   240
 #define TRAINER_CAMERON_4                   241
 #define TRAINER_CAMERON_5                   242

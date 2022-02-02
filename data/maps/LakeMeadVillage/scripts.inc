@@ -378,6 +378,7 @@ Script_LakeMeadVillage_NPC_Boy1Dialouge2:
 	end
 	
 Script_LakeMeadVillage_NPC_Isiah::
+	goto_if_set FLAG_SYS_GAME_CLEAR, Script_LakeMeadVillage_IsiahBattle
 	compare VAR_LITTLEROOT_TOWN_STATE, 2
 	goto_if_lt Script_LakeMeadVillage_NPC_IsiahBeforeRecievedPoke
 	goto_if_ge Script_LakeMeadVillage_NPC_IsiahAfterRecievedPoke
@@ -392,7 +393,66 @@ Script_LakeMeadVillage_NPC_IsiahBeforeRecievedPoke:
 	msgbox T_LakeMeadVillage_Isiah_ProfIsOut, MSGBOX_NPC
 	end
 	
-	
+Script_LakeMeadVillage_IsiahBattle:
+	lock
+	faceplayer
+	goto_if_defeated TRAINER_ISIAH_NALLS, Script_LakeMeadVillage_IsiahPostBattle
+	msgbox T_LakeMeadVillage_Isiah_WoahYoureChampion, MSGBOX_DEFAULT
+	msgbox T_LakeMeadVillage_Isiah_HowAboutABattle, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq Script_LakeMeadVillage_StartIsiahBattle
+	msgbox T_LakeMeadVillage_Isiah_ComeBackWhenReady, MSGBOX_DEFAULT
+	release
+end
+
+Script_LakeMeadVillage_StartIsiahBattle:
+	trainerbattle_no_intro TRAINER_ISIAH_NALLS, LakeMeadVillage_Isiah_Text_Defeat
+	goto Script_LakeMeadVillage_IsiahDefeated
+	end
+
+Script_LakeMeadVillage_IsiahDefeated:
+	msgbox T_LakeMeadVillage_Isiah_WowYouWonHaveThese
+	giveitem ITEM_LEFT_LEG_OF_THE_FORBIDDEN_ONE, 1
+	goto Script_LakeMeadVillage_IsiahPostBattle
+	release
+end
+
+Script_LakeMeadVillage_IsiahPostBattle:
+	msgbox T_LakeMeadVillage_Isiah_YouAreAStrongChampion, MSGBOX_DEFAULT
+	release
+end
+
+T_LakeMeadVillage_Isiah_WoahYoureChampion:
+	.string "Look at how far you've come\n"
+	.string "Frito!\p"
+	.string "Champion of the Niagara Region!\p"
+	.string "That's awesome, I'm so happy for\n"
+	.string "you buddy!$"
+
+T_LakeMeadVillage_Isiah_HowAboutABattle:
+	.string "How about a friendly battle with your\n"
+	.string "best bud, me!?$"
+
+T_LakeMeadVillage_Isiah_ComeBackWhenReady:
+	.string "Scared, huh? That's okay, chicken!$"
+
+LakeMeadVillage_Isiah_Text_Defeat:
+	.string "Phew lad! No wonder you are champion!$"
+
+T_LakeMeadVillage_Isiah_WowYouWonHaveThese:
+	.string "Oh man, please take it easy on me\n"
+	.string "pal!\p"
+	.string "Here, take your Yu-Gi-Oh cards back!$"
+
+T_LakeMeadVillage_Isiah_YouAreAStrongChampion:
+	.string "You really are the strongest\n"
+	.string "trainer I've ever seen.\p"
+	.string "I'll leave my life of crime behind.\n"
+	.string "No more stealing Yu-Gi-Oh cards\l"
+	.string "for me, just please don't hurt\l"
+	.string "me Mr. Champion Ferlito!$"
+
+
 Script_LakeMeadVillage_IsiahBeforeRecievedPokeDesserChecked:
 	checkitem ITEM_POTION, 1
 	compare VAR_RESULT, 1

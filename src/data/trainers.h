@@ -3065,7 +3065,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Cameron1},
     },
 
-    [TRAINER_CAMERON_2] =
+    [TRAINER_ISIAH_NALLS] =
     {
         .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_PSYCHIC,
