@@ -373,6 +373,8 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectWarriorsSacrifice
 	.4byte BattleScript_EffectRevive
 	.4byte BattleScript_EffectPlasmaBlade
+        .4byte NULL @ BattleScript_EffectDarkTether
+        .4byte BattleScript_EffectOHKOSide
 
 BattleScript_EffectRevive::
 	attackcanceler
@@ -2988,7 +2990,7 @@ BattleScript_EffectOHKO::
 	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
 	typecalc
 	jumpifmovehadnoeffect BattleScript_HitFromAtkAnimation
-	tryKO BattleScript_KOFail
+	tryKO BattleScript_KOFail, canmiss=TRUE
 	trysetdestinybondtohappen
 	goto BattleScript_HitFromAtkAnimation
 BattleScript_KOFail::
@@ -8648,3 +8650,13 @@ BattleScript_TypeWeatherActivates2_Hail::
 	playanimation BS_BATTLER_0, B_ANIM_HAIL_CONTINUES, NULL
 	call BattleScript_WeatherFormChanges
 	end2
+
+BattleScript_EffectOHKOSide::
+	attackcanceler
+	attackstring
+	ppreduce
+	typecalc
+	jumpifmovehadnoeffect BattleScript_HitFromAtkAnimation
+	tryKO BattleScript_KOFail, canmiss=FALSE
+	trysetdestinybondtohappen
+	goto BattleScript_HitFromAtkAnimation

@@ -795,9 +795,10 @@
 	.byte 0x92
 	.endm
 
-	.macro tryKO param0:req
+	.macro tryKO param0:req, canmiss:req
 	.byte 0x93
 	.4byte \param0
+	.byte \canmiss
 	.endm
 
 	.macro damagetohalftargethp
