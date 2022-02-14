@@ -65,9 +65,7 @@ Debug_Script_1::
 	end
 
 Debug_Script_2::
-	givemon SPECIES_RIPTORYPS, 100, ITEM_ACRO_BIKE
-	setvar VAR_STARTER_MON, 2
-	end
+	clearflag FLAG_SYS_GAME_CLEAR
 	end
 
 Debug_Script_3::

@@ -8,7 +8,7 @@ NiagaraVillage_OnLoad: @ 822D989
 
 NiagaraVillage_EventScript_RevealBlackForest:: @ 822D993
 	setmetatile 23, 6, 0x025, 1
-	setmetatile 24, 6, 0x025, 1
+	setmetatile 24, 6, 0x026, 1
 	setmetatile 23, 7, 0x018, 0
 	setmetatile 24, 7, 0x018, 0
 	setmetatile 23, 8, 0x08F, 0

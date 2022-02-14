@@ -493,6 +493,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return EventScript_TrainerHillTimer;
     if (MetatileBehavior_IsRockClimbable(metatileBehavior) == TRUE && !IsRockClimbActive())
         return EventScript_UseRockClimb;
+    if (MetatileBehavior_IsBadMushroom(metatileBehavior) == TRUE)
+        return EventScript_IsBadMushroom;
 
     height = position->height;
     if (height == MapGridGetZCoordAt(position->x, position->y))

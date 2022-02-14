@@ -123,3 +123,57 @@ Eventscript_Porygon_AccessHallOfFame:: @ 8271E54
 	waitstate
 	goto Eventscript_Porygon_AccessPC
 	end
+
+	///BAD MUSHROOM//
+
+EventScript_IsBadMushroom:: @ 8271D92
+	lockall
+	msgbox Text_BadMushroom, MSGBOX_DEFAULT
+		random 10
+	switch VAR_RESULT
+		case 5, EventScript_BlackForestWildPokemonEncounter
+	releaseall
+end
+
+EventScript_BlackForestWildPokemonEncounter:
+		random 5
+	switch VAR_RESULT
+		case 0, Eventscript_SetWildBattleAriados
+		case 1, Eventscript_SetWildBattleEscarataco
+		case 2, Eventscript_SetWildBattleShedinja
+		case 3, Eventscript_SetWildBattleNinjask
+		case 4, Eventscript_SetWildBattleScyther
+end
+
+Eventscript_SetWildBattleAriados:
+	setwildbattle SPECIES_ARIADOS, 50, ITEM_NONE
+dowildbattle
+releaseall
+end
+
+Eventscript_SetWildBattleEscarataco:
+	setwildbattle SPECIES_ESCARATACO, 50, ITEM_NONE
+dowildbattle
+releaseall
+end
+
+Eventscript_SetWildBattleShedinja:
+	setwildbattle SPECIES_SHEDINJA, 50, ITEM_NONE
+dowildbattle
+releaseall
+end
+
+Eventscript_SetWildBattleScyther:
+	setwildbattle SPECIES_SCYTHER, 50, ITEM_NONE
+dowildbattle
+releaseall
+end
+
+Eventscript_SetWildBattleNinjask:
+	setwildbattle SPECIES_NINJASK, 50, ITEM_NONE
+dowildbattle
+releaseall
+end
+
+Text_BadMushroom:
+	.string "This mushroom is no good...$"

@@ -130,7 +130,7 @@
 #define MB_UNUSED_7E 0x7E
 #define MB_ROUTE110_BRIDGE 0x7F
 #define MB_COUNTER 0x80
-#define MB_UNUSED_81 0x81
+#define MB_BAD_MUSHROOM 0x81
 #define MB_UNUSED_82 0x82
 #define MB_PC 0x83
 #define MB_CABLE_BOX_RESULTS_1 0x84

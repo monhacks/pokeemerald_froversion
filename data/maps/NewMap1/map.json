@@ -33,14 +33,14 @@
     },
     {
       "x": 10,
-      "y": 36,
+      "y": 35,
       "elevation": 0,
       "dest_map": "MAP_NIAGARA_VILLAGE",
       "dest_warp_id": 8
     },
     {
       "x": 11,
-      "y": 36,
+      "y": 35,
       "elevation": 0,
       "dest_map": "MAP_NIAGARA_VILLAGE",
       "dest_warp_id": 9
