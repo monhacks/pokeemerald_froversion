@@ -110,6 +110,20 @@
       "elevation": 0,
       "dest_map": "MAP_NIAGARA_VILLAGE_HOUSE3",
       "dest_warp_id": 0
+    },
+    {
+      "x": 23,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_MAP1",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 24,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_MAP1",
+      "dest_warp_id": 3
     }
   ],
   "coord_events": [

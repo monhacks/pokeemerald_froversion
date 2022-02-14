@@ -5087,7 +5087,7 @@
       "width": 45,
       "height": 45,
       "primary_tileset": "gTileset_NiagaraWoodsPrimary",
-      "secondary_tileset": "gTileset_NiagaraVillage",
+      "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
       "border_filepath": "data/layouts/NewMap1/border.bin",
       "blockdata_filepath": "data/layouts/NewMap1/map.bin"
     },
@@ -5570,6 +5570,16 @@
       "secondary_tileset": "gTileset_MarriottIntroFrame6",
       "border_filepath": "data/layouts/MarriottIntroFrame6/border.bin",
       "blockdata_filepath": "data/layouts/MarriottIntroFrame6/map.bin"
+    },
+    {
+      "id": "LAYOUT_BLACK_FOREST1",
+      "name": "BlackForest1_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
+      "border_filepath": "data/layouts/BlackForest1/border.bin",
+      "blockdata_filepath": "data/layouts/BlackForest1/map.bin"
     }
   ]
 }
