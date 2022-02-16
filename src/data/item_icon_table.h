@@ -636,6 +636,7 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_DRAGONS_ORB] = {gItemIcon_AirBalloon, gItemIconPalette_AirBalloon},
     [ITEM_NIKITA] = {gItemIcon_Leftovers, gItemIconPalette_Leftovers},
     [ITEM_AKU_BERRY] = {gItemIcon_SitrusBerry, gItemIconPalette_SitrusBerry},
+    [ITEM_SPELLBOOK]  = {gItemIcon_LeftLegOfTheForbiddenOne, gItemIconPalette_LeftLegOfTheForbiddenOne},
     [ITEM_LEFT_LEG_OF_THE_FORBIDDEN_ONE] = {gItemIcon_LeftLegOfTheForbiddenOne, gItemIconPalette_LeftLegOfTheForbiddenOne},
 
 };

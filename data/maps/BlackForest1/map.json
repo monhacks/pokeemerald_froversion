@@ -30,6 +30,20 @@
       "elevation": 0,
       "dest_map": "MAP_NEW_MAP1",
       "dest_warp_id": 1
+    },
+    {
+      "x": 40,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_BLACK_FOREST2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 41,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_BLACK_FOREST2",
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [

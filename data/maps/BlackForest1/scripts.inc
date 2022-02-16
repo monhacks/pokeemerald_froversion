@@ -71,14 +71,20 @@ BlackForest1_EventScript_WildBattleSpecialGastlyLocationCheck4::
 end
 
 BlackForest1_EventScript_WildBattleSpecialGastly:
-	goto_if_set FLAG_TEMP_1, EventScript_IsBadMushroom
+	goto_if_set FLAG_RECEIVED_SPELLBOOK, EventScript_IsBadMushroom
 	msgbox BlackForest1_Text_WildGastlyBattle, MSGBOX_DEFAULT
-	setwildbattle SPECIES_GASTLY, 50, ITEM_MAGO_BERRY
+	setwildbattle SPECIES_GASTLY, 50, ITEM_NONE
 	dowildbattle
-	setflag FLAG_TEMP_1
+	msgbox BlackForest1_Text_WildGastlyDroppedThis, MSGBOX_DEFAULT
+	giveitem ITEM_SPELLBOOK, 1
+	setflag FLAG_RECEIVED_SPELLBOOK
 	release
 end
 
 BlackForest1_Text_WildGastlyBattle:
 	.string "There's something strange about this\n"
 	.string  "mushroom...$"
+
+BlackForest1_Text_WildGastlyDroppedThis:
+	.string "It looks like the Pokémon dropped\n"
+	.string "something.$"

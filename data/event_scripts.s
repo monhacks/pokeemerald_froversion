@@ -1299,3 +1299,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/MarriottIntroFrame6/scripts.inc"
 
 	.include "data/maps/BlackForest1/scripts.inc"
+
+	.include "data/maps/BlackForest2/scripts.inc"

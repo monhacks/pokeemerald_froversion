@@ -3039,3 +3039,8 @@ static const u8 sLeftLegDesc[] = _(
     "A card of the Left\n"
     "Leg of the\n"
     "Forbidden One");
+
+static const u8 sSpellbookDesc[] = _(
+    "A Spellbook belonging\n"
+    "to the Witch of\n"
+    "The Black Forest");

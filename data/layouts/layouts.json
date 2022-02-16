@@ -5580,6 +5580,16 @@
       "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
       "border_filepath": "data/layouts/BlackForest1/border.bin",
       "blockdata_filepath": "data/layouts/BlackForest1/map.bin"
+    },
+    {
+      "id": "LAYOUT_BLACK_FOREST2",
+      "name": "BlackForest2_Layout",
+      "width": 35,
+      "height": 28,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
+      "border_filepath": "data/layouts/BlackForest2/border.bin",
+      "blockdata_filepath": "data/layouts/BlackForest2/map.bin"
     }
   ]
 }

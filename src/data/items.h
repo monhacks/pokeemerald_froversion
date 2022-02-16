@@ -7776,4 +7776,16 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+    [ITEM_SPELLBOOK] =
+    {
+        .name = _("Spellbook"),
+        .itemId = ITEM_SPELLBOOK,
+        .price = 0,
+        .description = sSpellbookDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };
