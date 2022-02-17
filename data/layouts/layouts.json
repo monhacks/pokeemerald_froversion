@@ -5590,6 +5590,16 @@
       "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
       "border_filepath": "data/layouts/BlackForest2/border.bin",
       "blockdata_filepath": "data/layouts/BlackForest2/map.bin"
+    },
+    {
+      "id": "LAYOUT_BLACK_FOREST_WITCHES_HOUSE",
+      "name": "BlackForest_WitchesHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BlackForest_WitchesHouse/border.bin",
+      "blockdata_filepath": "data/layouts/BlackForest_WitchesHouse/map.bin"
     }
   ]
 }

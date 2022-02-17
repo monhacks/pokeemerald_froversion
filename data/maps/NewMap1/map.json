@@ -44,6 +44,13 @@
       "elevation": 0,
       "dest_map": "MAP_NIAGARA_VILLAGE",
       "dest_warp_id": 9
+    },
+    {
+      "x": 29,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_BLACK_FOREST_WITCHES_HOUSE",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [
