@@ -6752,7 +6752,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_CONFUSE_HIT,
         .power = 90,
-        .type = TYPE_NORMAL,
+        .type = TYPE_GRASS,
         .accuracy = 85,
         .pp = 20,
         .secondaryEffectChance = 20,

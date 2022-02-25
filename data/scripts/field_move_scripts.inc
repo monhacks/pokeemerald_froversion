@@ -398,14 +398,14 @@ EventScript_EndRockClimb::
 	end
 	
 Text_WantToRockClimb:
-    .string "The cliff is steep.\n"
-    .string "Would you like to use Rock Climb?$"
+    .string "The vines are thorny\n"
+    .string "Would you like to use Creeper Climb?$"
     
 Text_MonUsedRockClimb:
-    .string "{STR_VAR_1} used Rock Climb!$"
+    .string "{STR_VAR_1} used Creeper Climb!$"
     
 Text_CantRockClimb:
-    .string "The cliff is steep.\n"
+    .string "The vines are thorny\n"
     .string "A Pokémon may be able to climb it.$"
 
 EventScript_DisableAutoRun::

@@ -782,3 +782,17 @@ gMetatiles_MarriottIntroFrame6::
 	.align 1
 gMetatileAttributes_MarriottIntroFrame6::
 	.incbin "data/tilesets/secondary/marriottintroframe6/metatile_attributes.bin"
+	.align 1
+gMetatiles_DekuTreePrimary::
+	.incbin "data/tilesets/primary/dekutreeprimary/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_DekuTreePrimary::
+	.incbin "data/tilesets/primary/dekutreeprimary/metatile_attributes.bin"
+	.align 1
+gMetatiles_DekuTreeEntrance::
+	.incbin "data/tilesets/secondary/dekutreeentrance/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_DekuTreeEntrance::
+	.incbin "data/tilesets/secondary/dekutreeentrance/metatile_attributes.bin"

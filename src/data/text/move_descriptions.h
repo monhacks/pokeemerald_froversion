@@ -1710,7 +1710,7 @@ static const u8 sFLASH_CANNONDescription[] = _(
     "that may lower Sp. Def.");
 
 static const u8 sROCK_CLIMBDescription[] = _(
-    "A charging attack that may\n"
+    "An ascending attack that may\n"
     "confuse the foe.");
 
 static const u8 sDEFOGDescription[] = _(

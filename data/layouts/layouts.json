@@ -5600,6 +5600,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/BlackForest_WitchesHouse/border.bin",
       "blockdata_filepath": "data/layouts/BlackForest_WitchesHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP3",
+      "name": "NewMap3_Layout",
+      "width": 23,
+      "height": 20,
+      "primary_tileset": "gTileset_DekuTreePrimary",
+      "secondary_tileset": "gTileset_DekuTreeEntrance",
+      "border_filepath": "data/layouts/NewMap3/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap3/map.bin"
     }
   ]
 }

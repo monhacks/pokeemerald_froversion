@@ -1303,3 +1303,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/BlackForest2/scripts.inc"
 
 	.include "data/maps/BlackForest_WitchesHouse/scripts.inc"
+
+	.include "data/maps/NewMap3/scripts.inc"

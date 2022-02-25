@@ -1182,3 +1182,25 @@ gTileset_MarriottIntroFrame6::
 	.4byte gMetatiles_MarriottIntroFrame6
 	.4byte gMetatileAttributes_MarriottIntroFrame6
 	.4byte NULL
+
+	.align 2
+gTileset_DekuTreePrimary::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_DekuTreePrimary
+	.4byte gTilesetPalettes_DekuTreePrimary
+	.4byte gMetatiles_DekuTreePrimary
+	.4byte gMetatileAttributes_DekuTreePrimary
+	.4byte NULL
+
+	.align 2
+gTileset_DekuTreeEntrance::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_DekuTreeEntrance
+	.4byte gTilesetPalettes_DekuTreeEntrance
+	.4byte gMetatiles_DekuTreeEntrance
+	.4byte gMetatileAttributes_DekuTreeEntrance
+	.4byte NULL

@@ -709,9 +709,10 @@
 #define MAP_BLACK_FOREST1                          (19 | (33 << 8))
 #define MAP_BLACK_FOREST2                          (20 | (33 << 8))
 #define MAP_BLACK_FOREST_WITCHES_HOUSE             (21 | (33 << 8))
+#define MAP_NEW_MAP3                               (22 | (33 << 8))
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {129, 10, 10, 10, 8, 9, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 22, 0};
+// static const u8 MAP_GROUP_COUNT[] = {129, 10, 10, 10, 8, 9, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 23, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

@@ -2369,3 +2369,43 @@ gTilesetPalettes_MarriottIntroFrame6::
 	.align 2
 gTilesetTiles_MarriottIntroFrame6::
 	.incbin "data/tilesets/secondary/marriottintroframe6/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_DekuTreePrimary::
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/dekutreeprimary/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_DekuTreePrimary::
+	.incbin "data/tilesets/primary/dekutreeprimary/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_DekuTreeEntrance::
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/dekutreeentrance/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_DekuTreeEntrance::
+	.incbin "data/tilesets/secondary/dekutreeentrance/tiles.4bpp.lz"

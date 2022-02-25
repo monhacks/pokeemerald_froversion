@@ -1296,7 +1296,7 @@ static const struct SpriteFrameImage sPicTable_RockClimbBlob[] = {
 
 const struct SpriteTemplate gFieldEffectObjectTemplate_RockClimbBlob = {
     .tileTag = 0xFFFF,
-    .paletteTag = 0xFFFF,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BRENDAN,
     .oam = &gObjectEventBaseOam_32x32,
     .anims = sAnimTable_SurfBlob,
     .images = sPicTable_RockClimbBlob,
