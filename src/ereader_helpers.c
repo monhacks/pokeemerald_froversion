@@ -15,6 +15,8 @@
 #include "constants/moves.h"
 #include "constants/items.h"
 
+STATIC_ASSERT(sizeof(struct TrHillTag) <= SECTOR_DATA_SIZE, TrainerHillChallengeFreeSpace);
+
 struct Unknown030012C8
 {
     u8 unk0[8];

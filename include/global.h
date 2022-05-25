@@ -132,6 +132,10 @@
 #define DEX_FLAGS_NO (ROUND_BITS_TO_BYTES(NUM_SPECIES))
 #define NUM_FLAG_BYTES (ROUND_BITS_TO_BYTES(FLAGS_COUNT))
 
+// This produces an error at compile-time if expr is zero.
+// It looks like file.c:line: size of array `id' is negative
+#define STATIC_ASSERT(expr, id) typedef char id[(expr) ? 1 : -1];
+
 struct Coords8
 {
     s8 x;
