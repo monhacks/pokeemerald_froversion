@@ -11633,5 +11633,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_SHEER_FORCE_BOOST,
         .split = SPLIT_PHYSICAL,
     },
+    [MOVE_OHKO_SIDE] =
+    {
+        .effect = EFFECT_OHKO_SIDE,
+        .power = 1,
+        .type = TYPE_NORMAL,
+        .accuracy = 50,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
+        .split = SPLIT_PHYSICAL,
+    },
 };
 

@@ -10086,6 +10086,10 @@ static void Cmd_tryKO(void)
         {
             lands = TRUE;
         }
+        else if (T1_READ_8(gBattlescriptCurrInstr + 5) == FALSE)
+        {
+          lands = TRUE;
+        }
         else
         {
             u16 odds = gBattleMoves[gCurrentMove].accuracy + (gBattleMons[gBattlerAttacker].level - gBattleMons[gBattlerTarget].level);
@@ -10111,7 +10115,7 @@ static void Cmd_tryKO(void)
                 gBattleMoveDamage = gBattleMons[gBattlerTarget].hp;
                 gMoveResultFlags |= MOVE_RESULT_ONE_HIT_KO;
             }
-            gBattlescriptCurrInstr += 5;
+            gBattlescriptCurrInstr += 6;
         }
         else
         {

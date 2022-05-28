@@ -287,6 +287,15 @@ void HandleAction_UseMove(void)
             gBattlerTarget = GetBattlerAtPosition(GetBattlerPosition(gBattlerTarget) ^ BIT_FLANK);
         }
     }
+    else if (gBattleMoves[gCurrentMove].effect == EFFECT_OHKO_SIDE)
+    {
+        if (Random() & 1)
+            gBattlerTarget = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
+        else
+            gBattlerTarget = GetBattlerAtPosition(B_POSITION_PLAYER_LEFT);
+        if (gAbsentBattlerFlags & gBitTable[gBattlerTarget])
+            gBattlerTarget = GetBattlerAtPosition(GetBattlerPosition(gBattlerTarget) ^ BIT_FLANK);
+    }
     else if (gBattleMoves[gChosenMove].target == MOVE_TARGET_ALLY)
     {
         if (IsBattlerAlive(BATTLE_PARTNER(gBattlerAttacker)))
@@ -3870,6 +3879,7 @@ static u8 ForewarnChooseMove(u32 battler)
                 switch (gBattleMoves[data[count].moveId].effect)
                 {
                 case EFFECT_OHKO:
+                case EFFECT_OHKO_SIDE:
                     data[count].power = 150;
                     break;
                 case EFFECT_COUNTER:
@@ -6913,7 +6923,13 @@ u8 GetMoveTarget(u16 move, u8 setTarget)
     case MOVE_TARGET_BOTH:
     case MOVE_TARGET_FOES_AND_ALLY:
     case MOVE_TARGET_OPPONENTS_FIELD:
-        targetBattler = GetBattlerAtPosition((GetBattlerPosition(gBattlerAttacker) & BIT_SIDE) ^ BIT_SIDE);
+        i = (GetBattlerPosition(gBattlerAttacker) & BIT_SIDE) ^ BIT_SIDE;
+        if (gBattleMoves[move].effect == EFFECT_OHKO_SIDE
+         && Random() % 2 == 0)
+        {
+            i ^= BIT_SIDE;
+        }
+        targetBattler = GetBattlerAtPosition(i);
         if (!IsBattlerAlive(targetBattler))
             targetBattler ^= BIT_FLANK;
         break;
