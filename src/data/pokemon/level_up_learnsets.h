@@ -9134,6 +9134,7 @@ static const struct LevelUpMove sWarklockLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 55, MOVE_DAZZLING_GLEAM),
 	LEVEL_UP_MOVE( 59, MOVE_PSYCHIC),
 	LEVEL_UP_MOVE( 62, MOVE_TEETER_DANCE),
+    LEVEL_UP_MOVE( 67, MOVE_OHKO_SIDE),
 	LEVEL_UP_END
 };
 static const struct LevelUpMove sCloclockLevelUpLearnset[] = {
@@ -9158,6 +9159,7 @@ static const struct LevelUpMove sCloclockLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 52, MOVE_DAZZLING_GLEAM),
 	LEVEL_UP_MOVE( 56, MOVE_PSYCHIC),
 	LEVEL_UP_MOVE( 60, MOVE_TEETER_DANCE),
+    LEVEL_UP_MOVE( 67, MOVE_OHKO_SIDE),
 	LEVEL_UP_END
 };
 static const struct LevelUpMove sSpirettLevelUpLearnset[] = {

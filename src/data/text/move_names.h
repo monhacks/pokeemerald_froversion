@@ -763,5 +763,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_WARRIORS_SACRIFICE] = _("WarriorsSac"),
     [MOVE_REVIVE] = _("Revive"),
     [MOVE_PLASMA_BLADE] = _("PlasmaBlade"),
-    [MOVE_OHKO_SIDE] = _("OHKOSide"),
+    [MOVE_OHKO_SIDE] = _("TwistOfFate"),
 };
