@@ -3716,6 +3716,42 @@ static void HandleEndTurn_ContinueBattle(void)
     }
 }
 
+const u16 gShadowCharizardPhysicalAttackMoves[] =
+    {
+        MOVE_SHADOW_CLAW,
+        MOVE_FLAME_CHARGE,
+        MOVE_DUAL_WINGBEAT,
+        MOVE_OUTRAGE,
+        0xFFFF
+    };
+
+const u16 gShadowCharizardHinderStatusMoves[] =
+    {
+        MOVE_SMOKESCREEN,
+        MOVE_SCARY_FACE,
+        MOVE_WILL_O_WISP,
+        MOVE_OBSTRUCT,
+        0xFFFF
+    };
+
+const u16 gShadowCharizardSpecialAttackMoves[] =
+    {
+        MOVE_FIRE_BLAST,
+        MOVE_DRAGON_PULSE,
+        MOVE_FOCUS_BLAST,
+        MOVE_FIERY_WRATH,
+        0xFFFF
+    };
+
+const u16 gShadowCharizardBoostStatusMoves[] =
+    {
+        MOVE_DRAGON_DANCE,
+        MOVE_SUNNY_DAY,
+        MOVE_NASTY_PLOT,
+        MOVE_FEATHER_DANCE,
+        0xFFFF
+    };
+
 void BattleTurnPassed(void)
 {
     s32 i;
@@ -3781,6 +3817,14 @@ void BattleTurnPassed(void)
         BattleScriptExecute(BattleScript_ArenaTurnBeginning);
     else if (ShouldDoTrainerSlide(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), gTrainerBattleOpponent_A, TRAINER_SLIDE_LAST_LOW_HP))
         BattleScriptExecute(BattleScript_TrainerSlideMsgEnd2);
+    
+    if (gTrainerBattleOpponent_A == TRAINER_WATTSON_1)
+    {
+      gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = gShadowCharizardPhysicalAttackMoves[Random() % 4];
+      gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = gShadowCharizardHinderStatusMoves[Random() % 4];
+      gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = gShadowCharizardSpecialAttackMoves[Random() % 4];
+      gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = gShadowCharizardBoostStatusMoves[Random() % 4];
+    }
 }
 
 u8 IsRunningFromBattleImpossible(void)
@@ -4484,8 +4528,10 @@ const u16 gSlashingMoves[] =
     const u16 gPhasingMoves[] =
     {
         MOVE_DRAGON_TAIL,
+        
         0xFFFF
     };
+
 
     const u16 gRuthlashLine[] =
     {

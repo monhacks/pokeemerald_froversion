@@ -1204,3 +1204,14 @@ gTileset_DekuTreeEntrance::
 	.4byte gMetatiles_DekuTreeEntrance
 	.4byte gMetatileAttributes_DekuTreeEntrance
 	.4byte NULL
+
+	.align 2
+gTileset_CinnibarIsland_Primary::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_CinnibarIsland_Primary
+	.4byte gTilesetPalettes_CinnibarIsland_Primary
+	.4byte gMetatiles_CinnibarIsland_Primary
+	.4byte gMetatileAttributes_CinnibarIsland_Primary
+	.4byte NULL

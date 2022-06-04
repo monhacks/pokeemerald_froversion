@@ -5610,6 +5610,16 @@
       "secondary_tileset": "gTileset_DekuTreeEntrance",
       "border_filepath": "data/layouts/NewMap3/border.bin",
       "blockdata_filepath": "data/layouts/NewMap3/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNIBAR_ISLAND",
+      "name": "CinnibarIsland_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_CinnibarIsland_Primary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/CinnibarIsland/border.bin",
+      "blockdata_filepath": "data/layouts/CinnibarIsland/map.bin"
     }
   ]
 }

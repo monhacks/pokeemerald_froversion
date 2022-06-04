@@ -796,3 +796,10 @@ gMetatiles_DekuTreeEntrance::
 	.align 1
 gMetatileAttributes_DekuTreeEntrance::
 	.incbin "data/tilesets/secondary/dekutreeentrance/metatile_attributes.bin"
+	.align 1
+gMetatiles_CinnibarIsland_Primary::
+	.incbin "data/tilesets/primary/cinnibarisland_primary/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_CinnibarIsland_Primary::
+	.incbin "data/tilesets/primary/cinnibarisland_primary/metatile_attributes.bin"

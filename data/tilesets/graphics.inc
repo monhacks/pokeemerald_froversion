@@ -2409,3 +2409,23 @@ gTilesetPalettes_DekuTreeEntrance::
 	.align 2
 gTilesetTiles_DekuTreeEntrance::
 	.incbin "data/tilesets/secondary/dekutreeentrance/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CinnibarIsland_Primary::
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/cinnibarisland_primary/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CinnibarIsland_Primary::
+	.incbin "data/tilesets/primary/cinnibarisland_primary/tiles.4bpp.lz"
