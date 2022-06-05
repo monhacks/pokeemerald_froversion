@@ -5614,8 +5614,8 @@
     {
       "id": "LAYOUT_CINNIBAR_ISLAND",
       "name": "CinnibarIsland_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 50,
+      "height": 50,
       "primary_tileset": "gTileset_CinnibarIsland_Primary",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/CinnibarIsland/border.bin",
