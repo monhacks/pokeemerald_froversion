@@ -2429,3 +2429,23 @@ gTilesetPalettes_CinnibarIsland_Primary::
 	.align 2
 gTilesetTiles_CinnibarIsland_Primary::
 	.incbin "data/tilesets/primary/cinnibarisland_primary/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CinnibarIsland_Secondary::
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CinnibarIsland_Secondary::
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/tiles.4bpp.lz"

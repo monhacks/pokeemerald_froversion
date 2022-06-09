@@ -803,3 +803,10 @@ gMetatiles_CinnibarIsland_Primary::
 	.align 1
 gMetatileAttributes_CinnibarIsland_Primary::
 	.incbin "data/tilesets/primary/cinnibarisland_primary/metatile_attributes.bin"
+	.align 1
+gMetatiles_CinnibarIsland_Secondary::
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_CinnibarIsland_Secondary::
+	.incbin "data/tilesets/secondary/cinnibarisland_secondary/metatile_attributes.bin"

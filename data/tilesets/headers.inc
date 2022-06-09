@@ -1215,3 +1215,14 @@ gTileset_CinnibarIsland_Primary::
 	.4byte gMetatiles_CinnibarIsland_Primary
 	.4byte gMetatileAttributes_CinnibarIsland_Primary
 	.4byte NULL
+
+	.align 2
+gTileset_CinnibarIsland_Secondary::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_CinnibarIsland_Secondary
+	.4byte gTilesetPalettes_CinnibarIsland_Secondary
+	.4byte gMetatiles_CinnibarIsland_Secondary
+	.4byte gMetatileAttributes_CinnibarIsland_Secondary
+	.4byte NULL

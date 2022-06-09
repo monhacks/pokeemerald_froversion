@@ -5617,7 +5617,7 @@
       "width": 50,
       "height": 50,
       "primary_tileset": "gTileset_CinnibarIsland_Primary",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_CinnibarIsland_Secondary",
       "border_filepath": "data/layouts/CinnibarIsland/border.bin",
       "blockdata_filepath": "data/layouts/CinnibarIsland/map.bin"
     }
