@@ -168,6 +168,8 @@
 #define MAP_RAINTREE_ISLAND_GYM_FIRE_ROOM  (8 | (3 << 8))
 #define MAP_RAINTREE_ISLAND_GYM_ENTRANCE   (9 | (3 << 8))
 #define MAP_CINNIBAR_ISLAND                (10 | (3 << 8))
+#define MAP_MOUNT_CINNABAR_1F              (11 | (3 << 8))
+#define MAP_MOUNT_CINNABAR_1F_EAST         (12 | (3 << 8))
 
 // Map Group 4
 #define MAP_LAVARIDGE_TOWN_HERB_SHOP         (0 | (4 << 8))

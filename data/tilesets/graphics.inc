@@ -2449,3 +2449,23 @@ gTilesetPalettes_CinnibarIsland_Secondary::
 	.align 2
 gTilesetTiles_CinnibarIsland_Secondary::
 	.incbin "data/tilesets/secondary/cinnibarisland_secondary/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_MountCinnabar_Primary::
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/mountcinnabar_primary/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_MountCinnabar_Primary::
+	.incbin "data/tilesets/primary/mountcinnabar_primary/tiles.4bpp.lz"

@@ -202,7 +202,9 @@
     "RaintreeIsland_Gym",
     "RaintreeIsland_Gym_FireRoom",
     "RaintreeIsland_Gym_Entrance",
-    "CinnibarIsland"
+    "CinnibarIsland",
+    "MountCinnabar_1F",
+    "MountCinnabar_1F_East"
   ],
   "gMapGroup4": [
     "LavaridgeTown_HerbShop",
