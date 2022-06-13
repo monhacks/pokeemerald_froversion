@@ -165,8 +165,7 @@
     "WesternApproachLostSpringsCanyonRightBorder",
     "WesternApproachLostSpringCanyonTrail1Connection",
     "WesternApproachStillRuins",
-    "WesternApproachStillRuins2",
-    "MountCinnabar_1F_West"
+    "WesternApproachStillRuins2"
   ],
   "gMapGroup1": [
     "LittlerootTown_BrendansHouse_1F",
@@ -205,7 +204,8 @@
     "RaintreeIsland_Gym_Entrance",
     "CinnibarIsland",
     "MountCinnabar_1F",
-    "MountCinnabar_1F_East"
+    "MountCinnabar_1F_East",
+    "MountCinnabar_1F_West"
   ],
   "gMapGroup4": [
     "LavaridgeTown_HerbShop",
