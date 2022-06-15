@@ -174,6 +174,7 @@
 #define MAP_MOUNT_CINNABAR_1F_NORTH        (14 | (3 << 8))
 #define MAP_MOUNT_CINNABAR_1F_NORTH_WEST   (15 | (3 << 8))
 #define MAP_MOUNT_CINNABAR_2F              (16 | (3 << 8))
+#define MAP_CINNABAR_ISLAND_NCC            (17 | (3 << 8))
 
 // Map Group 4
 #define MAP_LAVARIDGE_TOWN_HERB_SHOP         (0 | (4 << 8))
