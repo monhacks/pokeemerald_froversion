@@ -1236,4 +1236,4 @@ gTileset_MountCinnabar_Primary::
 	.4byte gTilesetPalettes_MountCinnabar_Primary
 	.4byte gMetatiles_MountCinnabar_Primary
 	.4byte gMetatileAttributes_MountCinnabar_Primary
-	.4byte NULL
+	.4byte InitTilesetAnim_MountCinnabar_Primary
