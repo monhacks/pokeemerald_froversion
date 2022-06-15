@@ -5680,6 +5680,8 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/MountCinnabar_1F_NorthWest/border.bin",
       "blockdata_filepath": "data/layouts/MountCinnabar_1F_NorthWest/map.bin"
+    },
+    {
       "id": "LAYOUT_CINNABAR_ISLAND_NCC",
       "name": "CinnabarIslandNCC_Layout",
       "width": 30,
