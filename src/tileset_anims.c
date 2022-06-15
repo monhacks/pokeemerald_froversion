@@ -1394,7 +1394,7 @@ static void QueueAnimTiles_BattlePyramid_StatueShadow(u16 timer)
 
 static void QueueAnimTiles_MountCinnabar_Lava(u16 timer)
 {
-    u16 i = timer % 8;
+    u16 i = timer % 24;
     AppendTilesetAnimToBuffer(gTilesetAnims_MountCinnabar_Lava[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(122)), 0x80);
 }
 
