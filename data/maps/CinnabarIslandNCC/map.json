@@ -17,7 +17,55 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 14,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_CINNIBAR_ISLAND",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 15,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_CINNIBAR_ISLAND",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 14,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_NCC",
+      "dest_warp_id": 4
+    },
+    {
+      "x": 15,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_NCC",
+      "dest_warp_id": 5
+    },
+    {
+      "x": 14,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_NCC",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 15,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_NCC",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 18,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND_NCC",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
