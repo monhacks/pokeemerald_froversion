@@ -956,14 +956,15 @@ static void VBlankCB_Intro(void)
 
 static void MainCB2_Intro(void)
 {
-    RunTasks();
-    AnimateSprites();
-    BuildOamBuffer();
-    UpdatePaletteFade();
-    if (gMain.newKeys && !gPaletteFade.active)
-        SetMainCallback2(MainCB2_EndIntro);
-    else if (gIntroFrameCounter != -1)
-        gIntroFrameCounter++;
+    SetMainCallback2(MainCB2_EndIntro);
+    // RunTasks();
+    // AnimateSprites();
+    // BuildOamBuffer();
+    // UpdatePaletteFade();
+    // if (gMain.newKeys && !gPaletteFade.active)
+    //     SetMainCallback2(MainCB2_EndIntro);
+    // else if (gIntroFrameCounter != -1)
+    //     gIntroFrameCounter++;
 }
 
 static void MainCB2_EndIntro(void)
