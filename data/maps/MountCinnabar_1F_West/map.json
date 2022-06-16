@@ -17,7 +17,20 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 16,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_MOUNT_CINNABAR_1F_NORTH_WEST",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 41,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_MOUNT_CINNABAR_1F",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
