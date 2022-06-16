@@ -209,7 +209,8 @@
     "MountCinnabar_1F_North",
     "MountCinnabar_1F_NorthWest",
     "MountCinnabar_2F",
-    "CinnabarIslandNCC"
+    "CinnabarIslandNCC",
+    "MountCinnabar_2F_South"
   ],
   "gMapGroup4": [
     "LavaridgeTown_HerbShop",
