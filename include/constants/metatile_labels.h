@@ -108,8 +108,10 @@
 #define METATILE_BrendansMaysHouse_MovingBox_Open    0x270
 
 // gTileset_Building
-#define METATILE_Building_PC_Off  0x004
-#define METATILE_Building_PC_On   0x005
+#define METATILE_Building_ElevatorBarrier    0x022
+#define METATILE_Building_ElevatorFloorBeam  0x008
+#define METATILE_Building_PC_Off             0x004
+#define METATILE_Building_PC_On              0x005
 
 // gTileset_Cave
 #define METATILE_Cave_EntranceCover                      0x229
@@ -150,6 +152,7 @@
 
 // gTileset_Facility
 #define METATILE_Facility_DataPad                       0x3E4
+#define METATILE_Facility_ElevatorFloor                 0x228
 #define METATILE_Facility_NewMauvilleDoor_Closed_Tile0  0x314
 #define METATILE_Facility_NewMauvilleDoor_Closed_Tile1  0x315
 #define METATILE_Facility_NewMauvilleDoor_Closed_Tile2  0x316
