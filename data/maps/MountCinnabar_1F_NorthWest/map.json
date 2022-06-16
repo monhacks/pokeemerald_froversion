@@ -98,14 +98,14 @@
       "x": 14,
       "y": 23,
       "elevation": 0,
-      "dest_map": "MAP_MOUNT_CINNABAR_1F_NORTH_WEST",
+      "dest_map": "MAP_MOUNT_CINNABAR_1F_WEST",
       "dest_warp_id": 0
     },
     {
       "x": 15,
       "y": 23,
       "elevation": 0,
-      "dest_map": "MAP_MOUNT_CINNABAR_1F_NORTH_WEST",
+      "dest_map": "MAP_MOUNT_CINNABAR_1F_WEST",
       "dest_warp_id": 0
     }
   ],
