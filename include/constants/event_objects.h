@@ -270,7 +270,7 @@
 #define OBJ_EVENT_GFX_KOSTIW                     266
 #define OBJ_EVENT_GFX_MATT                       267
 #define OBJ_EVENT_GFX_CHANSEY                    268
-#define OBJ_EVENT_GFX_PORYGON                   269
+#define OBJ_EVENT_GFX_PORYGON                    269
 
 #define NUM_OBJ_EVENT_GFX                        270
 
