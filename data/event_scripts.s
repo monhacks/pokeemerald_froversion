@@ -1323,3 +1323,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/CinnabarIslandNCC/scripts.inc"
 
 	.include "data/maps/MountCinnabar_2F_South/scripts.inc"
+
+	.include "data/maps/MountCinnabar_3F_Entrance/scripts.inc"
