@@ -211,7 +211,11 @@
     "MountCinnabar_2F",
     "CinnabarIslandNCC",
     "MountCinnabar_2F_South",
-    "MountCinnabar_3F_Entrance"
+    "MountCinnabar_3F_Entrance",
+    "CinnabarIslandHouse1",
+    "CinnabarIslandHouse2",
+    "CinnabarIslandPokecenter",
+    "CinnabarIslandWarehouse"
   ],
   "gMapGroup4": [
     "LavaridgeTown_HerbShop",

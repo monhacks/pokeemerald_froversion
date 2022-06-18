@@ -5710,6 +5710,46 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/MountCinnabar_3F_Entrance/border.bin",
       "blockdata_filepath": "data/layouts/MountCinnabar_3F_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_HOUSE1",
+      "name": "CinnabarIslandHouse1_Layout",
+      "width": 11,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonSchool",
+      "border_filepath": "data/layouts/CinnabarIslandHouse1/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIslandHouse1/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_HOUSE2",
+      "name": "CinnabarIslandHouse2_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/CinnabarIslandHouse2/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIslandHouse2/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_POKECENTER",
+      "name": "CinnabarIslandPokecenter_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/CinnabarIslandPokecenter/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIslandPokecenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_WAREHOUSE",
+      "name": "CinnabarIslandWarehouse_Layout",
+      "width": 22,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BikeShop",
+      "border_filepath": "data/layouts/CinnabarIslandWarehouse/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIslandWarehouse/map.bin"
     }
   ]
 }
