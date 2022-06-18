@@ -5,7 +5,7 @@
 // DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/map_groups.json
 //
 
-// Map Group 0
+// gMapGroup0
 #define MAP_PETALBURG_CITY                                       (0 | (0 << 8))
 #define MAP_SLATEPORT_CITY                                       (1 | (0 << 8))
 #define MAP_MAUVILLE_CITY                                        (2 | (0 << 8))
@@ -727,6 +727,9 @@
 
 #define MAP_GROUPS_COUNT 34
 
+<<<<<<< HEAD
 // static const u8 MAP_GROUP_COUNT[] = {129, 10, 10, 24, 8, 9, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 23, 0};
 
+=======
+>>>>>>> 0086f91db517e6a92f3a246a0922131d532ed800
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H
