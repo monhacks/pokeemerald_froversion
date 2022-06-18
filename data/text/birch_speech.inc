@@ -1,9 +1,10 @@
 gText_Birch_Welcome:: @ 82C897B
-	.string "Breaking News!\p"
-	.string "Here at channel 4 we're tuning in \nwith President Trump. He has an\limportant announcment to make!\p"
-	.string "Hi there. Im President Trump. I am\npleased to announce that I have\ldiscovered the worlds first Pokémon\p"
-	.string "That's right, creatures we thought \n"
-	.string "were just part of a game are \lactually real!\p"
+	.string "Ahoy Matey!\p"
+	.string "It sure is good to see you made it to\n" 
+	.string "Cinnabar Island without much trouble.\p"
+	.string "I'm Peter. I work for the\n"
+	.string "Natical Communication Center, in the\l"
+	.string "Research and Development department.\p"
 	.string "$"
 
 gText_Birch_Pokemon:: @ 82C89FB
@@ -41,21 +42,30 @@ gText_Birch_BoyOrGirl:: @ 82C8BDD
 	.string "Or are you a girl?$"
 
 gText_Birch_WhatsYourName:: @ 82C8BFF
-	.string "All right.\n"
-	.string "What's your name?$"
+	.string "I'm sorry, I never got your name.$"
 
 gText_Birch_SoItsPlayer:: @ 82C8C1C
 	.string "So it's {PLAYER}{KUN}?$"
+	
 
 gText_Birch_YourePlayer:: @ 82C8C2A
-	.string "And that's what I gave them!\p"
-	.string "$"
+	.string "Nice to meet you {PLAYER}{KUN}!\p"
 
 gText_Birch_AreYouReady:: @ 82C8C7A
-	.string "I have no doubt we will use\n"
-	.string "this to help make America great\l"
-	.string "again.\p"
-	.string "Take courage, and leap into the\n"
-	.string "world of Pokémon with your fellow\l"
-	.string "Americans!\p"
-	.string "$"
+	.string "We've been waiting for your arrival.\n"
+	.string "The shipment you're carrying contains\l"
+	.string "some components that are essential to\l"
+	.string "advance our research. Thank you for\l"
+	.string "bringing them with such haste.\p"
+	.string "It must have been a long day at sea\n"
+	.string "for you, coming all the way from\l"
+	.string "Plaglaci Town, but if I could ask\l"
+	.string "small favor of you before you\l"
+	.string "settle down for the night?\p"
+	.string "Would you mind dropping the\n"
+	.string "components with our receptionist at\l"
+	.string "the Nautical Communication Center?\p"
+	.string "Oh you will? Thank you so much!\p"
+	.string "I hope you enjoy your stay on\n"
+	.string "Cinnabar Island. There are plenty\l"
+	.string "of sights to see!$"
