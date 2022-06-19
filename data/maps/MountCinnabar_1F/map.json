@@ -37,6 +37,20 @@
       "elevation": 0,
       "dest_map": "MAP_MOUNT_CINNABAR_1F_EAST",
       "dest_warp_id": 0
+    },
+    {
+      "x": 11,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_CINNIBAR_ISLAND",
+      "dest_warp_id": 6
+    },
+    {
+      "x": 12,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_CINNIBAR_ISLAND",
+      "dest_warp_id": 6
     }
   ],
   "coord_events": [
