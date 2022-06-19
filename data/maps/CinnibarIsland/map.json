@@ -16,7 +16,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_TRUCK",
-      "x": 62,
+      "x": 61,
       "y": 55,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -107,10 +107,10 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
-      "x": 53,
-      "y": 52,
+      "x": 64,
+      "y": 55,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_DOWN_RIGHT_LEFT",
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_DOWN_LEFT_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
