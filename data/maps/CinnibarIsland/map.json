@@ -107,8 +107,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
-      "x": 64,
-      "y": 55,
+      "x": 53,
+      "y": 52,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_DOWN_RIGHT_LEFT",
       "movement_range_x": 0,
