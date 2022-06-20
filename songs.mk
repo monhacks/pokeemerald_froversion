@@ -1329,3 +1329,6 @@ $(MID_SUBDIR)/mus_fv_western_approach.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_fv_sand_caves.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G018 -V080
+
+$(MID_SUBDIR)/mus_fv_cinnabar_island_remix.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G106 -V079

@@ -2,7 +2,7 @@
   "id": "MAP_CINNIBAR_ISLAND",
   "name": "CinnibarIsland",
   "layout": "LAYOUT_CINNIBAR_ISLAND",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_FV_CINNABAR_ISLAND_REMIX",
   "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
