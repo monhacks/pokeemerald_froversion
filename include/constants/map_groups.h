@@ -185,6 +185,7 @@
 #define MAP_CINNABAR_ISLAND_HOUSE2         (21 | (3 << 8))
 #define MAP_CINNABAR_ISLAND_POKECENTER     (22 | (3 << 8))
 #define MAP_CINNABAR_ISLAND_WAREHOUSE      (23 | (3 << 8))
+#define MAP_MOUNT_CINNABAR_3F_EAST         (24 | (3 << 8))
 
 // gMapGroup4
 #define MAP_LAVARIDGE_TOWN_HERB_SHOP         (0 | (4 << 8))
