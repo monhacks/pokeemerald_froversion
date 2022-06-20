@@ -9000,7 +9000,7 @@ static const struct LevelUpMove sRabatoastLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 53, MOVE_ENCORE),
 	LEVEL_UP_END
 };
-static const struct LevelUpMove sFiller_12LevelUpLearnset[] = {
+static const struct LevelUpMove sShadow_CharizardLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };

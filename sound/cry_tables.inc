@@ -442,7 +442,7 @@ cry Cry_Filler_8
 cry Cry_Filler_9
 cry Cry_Frentoad
 cry Cry_Rabatoast
-cry Cry_Filler_12
+cry Cry_Shadow_Charizard
 cry Cry_Filler_13
 cry Cry_Filler_14
 cry Cry_Filler_15
@@ -918,7 +918,7 @@ cry2 Cry_Filler_8
 cry2 Cry_Filler_9
 cry2 Cry_Frentoad
 cry2 Cry_Rabatoast
-cry2 Cry_Filler_12
+cry2 Cry_Shadow_Charizard
 cry2 Cry_Filler_13
 cry2 Cry_Filler_14
 cry2 Cry_Filler_15

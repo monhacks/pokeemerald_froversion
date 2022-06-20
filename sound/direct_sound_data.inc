@@ -2334,8 +2334,8 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
     Cry_Rabatoast::
 	.incbin "sound/direct_sound_samples/cries/rabatoast.bin"
 .align 2
-    Cry_Filler_12::
-	.incbin "sound/direct_sound_samples/cries/filler_12.bin"
+    Cry_Shadow_Charizard::
+	.incbin "sound/direct_sound_samples/cries/shadow_charizard.bin"
 .align 2
     Cry_Filler_13::
 	.incbin "sound/direct_sound_samples/cries/filler_13.bin"

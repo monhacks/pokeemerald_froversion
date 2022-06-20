@@ -5127,10 +5127,10 @@ static const union AnimCmd sAnim_RABATOAST_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_12_1[] = 
+static const union AnimCmd sAnim_SHADOW_CHARIZARD_1[] = 
 {
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_FRAME(1, 40),
+    ANIMCMD_FRAME(0, 5),
     ANIMCMD_END,
 };
 static const union AnimCmd sAnim_FILLER_13_1[] = 
@@ -7674,9 +7674,9 @@ static const union AnimCmd *const sAnims_RABATOAST[] ={
     sAnim_GeneralFrame0,
     sAnim_RABATOAST_1,
 };
-static const union AnimCmd *const sAnims_FILLER_12[] ={
+static const union AnimCmd *const sAnims_SHADOW_CHARIZARD[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_12_1,
+    sAnim_SHADOW_CHARIZARD_1,
 };
 static const union AnimCmd *const sAnims_FILLER_13[] ={
     sAnim_GeneralFrame0,
@@ -8305,7 +8305,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(FILLER_9),
     ANIM_CMD(FRENTOAD),
     ANIM_CMD(RABATOAST),
-    ANIM_CMD(FILLER_12),
+    ANIM_CMD(SHADOW_CHARIZARD),
     ANIM_CMD(FILLER_13),
     ANIM_CMD(FILLER_14),
     ANIM_CMD(FILLER_15),

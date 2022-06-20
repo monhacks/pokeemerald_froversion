@@ -2576,7 +2576,7 @@ const u8 gRabatoastPokedexText[] = _(
     "against those who try to eat it.\n"
     "It shoots melted butter into foes\n"
     "leaving them cooked.");
-const u8 gFiller_12PokedexText[] = _(
+const u8 gShadow_CharizardPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"
