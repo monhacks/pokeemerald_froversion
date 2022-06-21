@@ -1,2 +1,94 @@
 CinnibarIsland_MapScripts::
 	.byte 0
+
+@--------------------------------------------------------------------------------
+@------------------------------------Events--------------------------------------
+@--------------------------------------------------------------------------------
+
+CinnabarIsland_EventScript_ManUnloadingShip::
+	msgbox CinnabarIsland_Text_ManUnloadingShip, MSGBOX_NPC
+	end
+
+CinnabarIsland_EventScript_ManNextToBoxes::
+	msgbox CinnabarIsland_Text_ManNextToBoxes1, MSGBOX_DEFAULT
+	applymovement 2, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement 2, Common_Movement_FacePlayer
+	msgbox CinnabarIsland_Text_ManNextToBoxes2
+	closemessage
+	applymovement 2, Common_Movement_FaceOriginalDirection
+	end
+
+CinnabarIsland_EventScript_ManMovingBoxes::
+	msgbox CinnabarIsland_Text_ManMovingBoxes, MSGBOX_NPC
+	end
+
+CinnabarIsland_EventScript_Sailor::
+	msgbox CinnabarIsland_Text_Sailor, MSGBOX_NPC
+	end
+
+CinnabarIsland_EventScript_Scientist::
+	msgbox CinnabarIsland_Text_Scientist, MSGBOX_NPC
+	end
+
+CinnabarIsland_EventScript_Fisherman::
+	msgbox CinnabarIsland_Text_Fisherman, MSGBOX_NPC
+	end
+
+CinnabarIsland_EventScript_Guy::
+	msgbox CinnabarIsland_Text_Guy, MSGBOX_NPC
+	end
+
+@--------------------------------------------------------------------------------
+@-------------------------------------Text---------------------------------------
+@--------------------------------------------------------------------------------
+
+CinnabarIsland_Text_ManUnloadingShip:
+	.string "No time for talking!\n"
+	.string "I need to unload those boxes!$"
+
+CinnabarIsland_Text_ManNextToBoxes1:
+	.string "Those stupid boxes with their\n"
+	.string "stupid corners and stupid brown color\p"
+	.string "...$"
+
+CinnabarIsland_Text_ManNextToBoxes2:
+	.string "Oh hello, as you can see i am working. As\n"
+	.string "I love my job and those boxes you don't\p"
+	.string "need to tell anyone anything you might\n"
+	.string "have heard.$"
+
+CinnabarIsland_Text_Sailor:
+	.string "I still can't believe my old captain\n"
+	.string "got seasick on a regular basis.\p"
+	.string "I suppose you're off to tell them their\n"
+	.string "delivery arrived?$"
+
+CinnabarIsland_Text_Guy:
+	.string "I came here for the Gym all the way from\n"
+	.string "Plaglaci Town. Do you know where this\p"
+	.string "is? No? Well no wonder, there is no\n"
+	.string "dock where you could land with your ship.$"
+
+CinnabarIsland_Text_Scientist:
+	.string "I am glad I have the brains. If I lift\n"
+	.string "one of those crates I would hurt myself.\p"
+	.string "Also it's quite entertaining to mess\n"
+	.string "with those smooth brains.$"
+
+CinnabarIsland_Text_Fisherman:
+	.string "Ahoy! That's what you guys say, isn't\n"
+	.string "it? Being on the wild untamed sea all\p"
+	.string "the time sounds like a dream to me.\n"
+	.string "All day fishing at the best spots.$"
+	
+CinnabarIsland_Text_ManMovingBoxes:
+	.string "Do you want to help me or just distract\n"
+	.string "me? Those boxes don't move themselves.\p"
+	.string "Please move aside and let me finish my\n"
+	.string "work!$"
+
+@--------------------------------------------------------------------------------
+@-----------------------------------Movement-------------------------------------
+@--------------------------------------------------------------------------------
+
