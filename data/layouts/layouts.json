@@ -5760,6 +5760,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/MountCinnabar_3F_East/border.bin",
       "blockdata_filepath": "data/layouts/MountCinnabar_3F_East/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOUNT_CINNABAR_3F_WEST",
+      "name": "MountCinnabar_3F_West_Layout",
+      "width": 45,
+      "height": 25,
+      "primary_tileset": "gTileset_MountCinnabar_Primary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/MountCinnabar_3F_West/border.bin",
+      "blockdata_filepath": "data/layouts/MountCinnabar_3F_West/map.bin"
     }
   ]
 }
