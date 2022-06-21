@@ -3820,10 +3820,21 @@ void BattleTurnPassed(void)
     
     if (gTrainerBattleOpponent_A == TRAINER_WATTSON_1)
     {
-      gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = gShadowCharizardPhysicalAttackMoves[Random() % 4];
-      gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = gShadowCharizardHinderStatusMoves[Random() % 4];
-      gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = gShadowCharizardSpecialAttackMoves[Random() % 4];
-      gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = gShadowCharizardBoostStatusMoves[Random() % 4];
+        for (i = 0; i < NUM_BATTLE_STATS; i++)
+            if (gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 9)
+            {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SPECTRAL_THIEF;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_SPECTRAL_THIEF;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_SPECTRAL_THIEF;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_SPECTRAL_THIEF;
+            }
+        else
+            {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = gShadowCharizardPhysicalAttackMoves[Random() % 4];
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = gShadowCharizardHinderStatusMoves[Random() % 4];
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = gShadowCharizardSpecialAttackMoves[Random() % 4];
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = gShadowCharizardBoostStatusMoves[Random() % 4];
+            }
     }
 }
 
