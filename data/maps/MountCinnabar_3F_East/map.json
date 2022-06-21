@@ -42,7 +42,27 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 9,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_MOUNT_CINNABAR_3F_ENTRANCE",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 31,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_MOUNT_CINNABAR_3F_EAST",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 32,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_MOUNT_CINNABAR_3F_EAST",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 
