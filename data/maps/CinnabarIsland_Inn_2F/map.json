@@ -26,7 +26,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "2",
+      "script": "CinnabarIsland_Inn_2F_WouldYouLikeToSleep"
+    }
   ],
   "bg_events": [
 

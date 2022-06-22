@@ -13,7 +13,8 @@ CinnabarIsland_Inn_EventScript_InnReceptionist::
 		applymovement LOCALID_INN_RECEPTIONIST, Common_Movement_FacePlayer
 		waitmovement LOCALID_INN_RECEPTIONIST
 		compare VAR_ROUTE101_STATE, 2
-		goto_if_ge CinnabarIsland_Inn_EventScript_AlreadyCheckedIn
+		goto_if_eq CinnabarIsland_Inn_EventScript_AlreadyCheckedIn
+		goto_if_gt CinnabarIsland_Inn_ItSeemsSomethingHasHappened
 		goto_if_set FLAG_GAVE_NCC_PACKAGE, CinnabarIsland_Inn_EventScript_CheckIn
 		msgbox CinnabarIsland_Inn_Text_WeAreStillCleaningRoom, MSGBOX_DEFAULT
 		applymovement LOCALID_INN_RECEPTIONIST, Common_Movement_FaceOriginalDirection
@@ -44,6 +45,7 @@ CinnabarIsland_Inn_EventScript_CompleteCheckIn::
 		removemoney 500, 0
 		msgbox CinnabarIsland_Inn_Text_ThankYouForStayingWithUs, MSGBOX_DEFAULT
 		setvar VAR_ROUTE101_STATE, 2
+		hidemoneybox
 	releaseall
 	end
 
@@ -55,6 +57,13 @@ CinnabarIsland_Inn_EventScript_NotEnoughMoney:: @ 822EF76
 
 CinnabarIsland_Inn_EventScript_AlreadyCheckedIn::
 		msgbox CinnabarIsland_Inn_Text_ThankYouForStayingWithUs, MSGBOX_DEFAULT
+	releaseall
+	end
+
+CinnabarIsland_Inn_ItSeemsSomethingHasHappened:
+		msgbox CinnabarIsland_Inn_Text_SomethingHappened, MSGBOX_DEFAULT
+		applymovement LOCALID_INN_RECEPTIONIST, Common_Movement_FaceOriginalDirection
+		waitmovement LOCALID_INN_RECEPTIONIST
 	releaseall
 	end
 
@@ -108,3 +117,9 @@ CinnabarIsland_Inn_Text_YouveNotGotTheMoney: @ 822FE5E
 CinnabarIsland_Inn_Text_YouCantGoUpThere:
 	.string "Hey! You can't go up there right\n"
 	.string "now.$"
+
+CinnabarIsland_Inn_Text_SomethingHappened:
+	.string "I've been hearing complaints about\n"
+	.string "boat vandals damaging boats overnight.\p"
+	.string "I would go check on your ship if I were\n"
+	.string "you.$"
