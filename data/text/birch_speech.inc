@@ -60,7 +60,7 @@ gText_Birch_AreYouReady:: @ 82C8C7A
 	.string "It must have been a long day at sea\n"
 	.string "for you, coming all the way from\l"
 	.string "Plaglaci Town, but if I could ask\l"
-	.string "small favor of you before you\l"
+	.string "a small favor of you before you\l"
 	.string "settle down for the night?\p"
 	.string "Would you mind dropping the\n"
 	.string "components with our receptionist at\l"

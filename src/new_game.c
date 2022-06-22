@@ -45,6 +45,7 @@
 #include "berry_powder.h"
 #include "mevent.h"
 #include "union_room_chat.h"
+#include "event_objects.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 
@@ -128,7 +129,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    SetWarpDestination(MAP_GROUP(LAKE_MEAD_VILLAGE_FROS_HOUSE_1F), MAP_NUM(LAKE_MEAD_VILLAGE_FROS_HOUSE_1F), -1, 4, 5);
+    SetWarpDestination(MAP_GROUP(CINNIBAR_ISLAND), MAP_NUM(CINNIBAR_ISLAND), -1, 63, 52);
     WarpIntoMap();
 }
 
