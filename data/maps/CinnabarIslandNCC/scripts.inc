@@ -66,3 +66,4 @@ CinnabarIslandNCC_Text_EnjoyYourStay:
 CinnabarIslandNCC_Text_IllLetYouGetSettled:	
 	.string "I'll let you go get settled\n"
 	.string "into your room then!$"
+	

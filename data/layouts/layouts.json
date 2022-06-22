@@ -5780,6 +5780,26 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/MountCinnabar_2F_West/border.bin",
       "blockdata_filepath": "data/layouts/MountCinnabar_2F_West/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_INN",
+      "name": "CinnabarIsland_Inn_Layout",
+      "width": 18,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/CinnabarIsland_Inn/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_Inn/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_INN_2F",
+      "name": "CinnabarIsland_Inn_2F_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/CinnabarIsland_Inn_2F/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_Inn_2F/map.bin"
     }
   ]
 }

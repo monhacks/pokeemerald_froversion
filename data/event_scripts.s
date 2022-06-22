@@ -1339,3 +1339,7 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/MountCinnabar_3F_West/scripts.inc"
 
 	.include "data/maps/MountCinnabar_2F_West/scripts.inc"
+
+	.include "data/maps/CinnabarIsland_Inn/scripts.inc"
+
+	.include "data/maps/CinnabarIsland_Inn_2F/scripts.inc"

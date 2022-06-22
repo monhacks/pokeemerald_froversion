@@ -125,8 +125,8 @@
       "x": 38,
       "y": 44,
       "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND_POKECENTER",
-      "dest_warp_id": 0
+      "dest_map": "MAP_CINNABAR_ISLAND_INN",
+      "dest_warp_id": 1
     },
     {
       "x": 33,
