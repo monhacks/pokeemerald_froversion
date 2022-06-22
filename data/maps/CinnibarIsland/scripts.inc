@@ -1,9 +1,22 @@
 CinnibarIsland_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, CinnabarIsland_OnFrame
 	.byte 0
+
+CinnabarIsland_OnFrame: @ 8238C4F
+	map_script_2 VAR_ROUTE101_STATE, 0, CinnabarIsland_NewGameEvents
+	.2byte 0
 
 @--------------------------------------------------------------------------------
 @------------------------------------Events--------------------------------------
 @--------------------------------------------------------------------------------
+
+CinnabarIsland_NewGameEvents::
+	lock
+		giveitem ITEM_NCC_PACKAGE, 1
+		setvar VAR_ROUTE101_STATE, 1
+		release
+	end
+
 
 CinnabarIsland_EventScript_ManUnloadingShip::
 	msgbox CinnabarIsland_Text_ManUnloadingShip, MSGBOX_NPC
@@ -11,12 +24,12 @@ CinnabarIsland_EventScript_ManUnloadingShip::
 
 CinnabarIsland_EventScript_ManNextToBoxes::
 	msgbox CinnabarIsland_Text_ManNextToBoxes1, MSGBOX_DEFAULT
-	applymovement 2, Common_Movement_ExclamationMark
+	applymovement 1, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement 2, Common_Movement_FacePlayer
+	applymovement 1, Common_Movement_FacePlayer
 	msgbox CinnabarIsland_Text_ManNextToBoxes2
 	closemessage
-	applymovement 2, Common_Movement_FaceOriginalDirection
+	applymovement 1, Common_Movement_FaceOriginalDirection
 	end
 
 CinnabarIsland_EventScript_ManMovingBoxes::

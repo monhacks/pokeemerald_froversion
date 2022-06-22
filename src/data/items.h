@@ -7788,4 +7788,16 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+    
+    [ITEM_NCC_PACKAGE] =
+    {
+        .name = _("NCC Package"),
+        .itemId = ITEM_NCC_PACKAGE,
+        .price = 0,
+        .description = sNCCPackageDesc,
+        .importance = 2,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };

@@ -128,7 +128,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    SetWarpDestination(MAP_GROUP(LAKE_MEAD_VILLAGE_FROS_HOUSE_1F), MAP_NUM(LAKE_MEAD_VILLAGE_FROS_HOUSE_1F), -1, 4, 5);
+    SetWarpDestination(MAP_GROUP(CINNIBAR_ISLAND), MAP_NUM(CINNIBAR_ISLAND), -1, 62, 53);
     WarpIntoMap();
 }
 

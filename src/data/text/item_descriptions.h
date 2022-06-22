@@ -3044,3 +3044,10 @@ static const u8 sSpellbookDesc[] = _(
     "A Spellbook belonging\n"
     "to the Witch of\n"
     "The Black Forest");
+
+    // MAGM6 Items
+
+static const u8 sNCCPackageDesc[] = _(
+    "A package containing\n"
+    "important parts for\n"
+    "The NCC");

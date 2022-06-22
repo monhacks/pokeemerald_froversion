@@ -1276,7 +1276,7 @@
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
 #define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
 #define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
-#define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
+#define FLAG_GAVE_NCC_PACKAGE                                           0x4CF // Unused Flag
 #define FLAG_HIDE_VERDANTURF_TRADER                                          0x4D0 // Hide Verdanturf Trader until postgame
 #define FLAG_RECEIVED_LEFT_LEG                                           0x4D1 // Recieved Key Item
 #define FLAG_RECEIVED_BOBBYS_EGG                                           0x4D2 // Post game bobby gave egg
