@@ -40,15 +40,15 @@
       "x": 8,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_CINNIBAR_ISLAND",
-      "dest_warp_id": 2
+      "dest_map": "MAP_NONE",
+      "dest_warp_id": 127
     },
     {
       "x": 9,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_CINNIBAR_ISLAND",
-      "dest_warp_id": 2
+      "dest_map": "MAP_NONE",
+      "dest_warp_id": 127
     }
   ],
   "coord_events": [
@@ -59,7 +59,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "CinnabarIsland_Inn_EventScript_StairsBlockedTrigger"
+      "script": "CinnabarIsland_Inn_EventScript_StairsTrigger"
     }
   ],
   "bg_events": [

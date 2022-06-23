@@ -1,8 +1,19 @@
 .set LOCALID_INN_RECEPTIONIST, 1
 
 CinnabarIsland_Inn_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, CinnabarIsland_Inn_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, CinnabarIsland_Inn_OnLoad
 	.byte 0
 
+CinnabarIsland_Inn_OnFrame:
+	map_script_2 VAR_ROUTE101_STATE, 3, CinnabarIsland_Inn_EventScript_ReceptionistCallsPlayerOverToDesk
+	.2byte 0
+
+CinnabarIsland_Inn_OnLoad:
+	compare VAR_ROUTE101_STATE, 3
+	call_if_ge CinnabarIsland_Inn_EventScript_SetDynamicWarpPostSleep
+	call_if_lt CinnabarIsland_Inn_EventScript_SetDynamicWarpPreSleep
+	end
 
 @--------------------------------------------------------------------------------
 @------------------------------------Events--------------------------------------
@@ -67,8 +78,10 @@ CinnabarIsland_Inn_ItSeemsSomethingHasHappened:
 	releaseall
 	end
 
-CinnabarIsland_Inn_EventScript_StairsBlockedTrigger::
+CinnabarIsland_Inn_EventScript_StairsTrigger::
 	lockall
+		compare VAR_ROUTE101_STATE, 3
+		goto_if_eq CinnabarIsland_Inn_EventScript_ReceptionistCallsPlayerOverToDesk
 		compare VAR_ROUTE101_STATE, 2
 		goto_if_lt CinnabarIsland_Inn_EventScript_StopPlayerFromGoingUpstairs
 	releaseall
@@ -77,6 +90,7 @@ CinnabarIsland_Inn_EventScript_StairsBlockedTrigger::
 CinnabarIsland_Inn_EventScript_StopPlayerFromGoingUpstairs:
 		applymovement LOCALID_INN_RECEPTIONIST, Common_Movement_FacePlayer
 		waitmovement LOCALID_INN_RECEPTIONIST
+		playse SE_PIN
 		applymovement LOCALID_INN_RECEPTIONIST, Common_Movement_ExclamationMark
 		waitmovement LOCALID_INN_RECEPTIONIST
 		msgbox CinnabarIsland_Inn_Text_YouCantGoUpThere, MSGBOX_DEFAULT
@@ -87,6 +101,41 @@ CinnabarIsland_Inn_EventScript_StopPlayerFromGoingUpstairs:
 	releaseall
 	end
 
+CinnabarIsland_Inn_EventScript_ReceptionistCallsPlayerOverToDesk::
+	lockall
+		applymovement LOCALID_INN_RECEPTIONIST, Common_Movement_FacePlayer
+		waitmovement LOCALID_INN_RECEPTIONIST
+		playse SE_PIN
+		applymovement LOCALID_INN_RECEPTIONIST, Common_Movement_ExclamationMark
+		waitmovement LOCALID_INN_RECEPTIONIST
+		msgbox CinnabarIsland_Inn_Text_ComeOverHere, MSGBOX_DEFAULT
+		applymovement OBJ_EVENT_ID_PLAYER, CinnabarIsland_Inn_Movement_PlayerMovesToDesk
+		waitmovement OBJ_EVENT_ID_PLAYER
+		msgbox CinnabarIsland_Inn_Text_SomethingHappened
+		applymovement LOCALID_INN_RECEPTIONIST, Common_Movement_FaceOriginalDirection
+		waitmovement LOCALID_INN_RECEPTIONIST
+		setvar VAR_ROUTE101_STATE, 4
+	releaseall
+	end
+
+CinnabarIsland_Inn_EventScript_SetDynamicWarpPreSleep:
+	setdynamicwarp MAP_CINNIBAR_ISLAND, 255, 38, 44
+end
+
+CinnabarIsland_Inn_EventScript_SetDynamicWarpPostSleep:
+	setdynamicwarp MAP_VICTORY_ROAD_1F, 255, 15, 40
+end
+
+@--------------------------------------------------------------------------------
+@-----------------------------------Movement-------------------------------------
+@--------------------------------------------------------------------------------
+
+CinnabarIsland_Inn_Movement_PlayerMovesToDesk:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+step_end
 
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------
@@ -118,8 +167,16 @@ CinnabarIsland_Inn_Text_YouCantGoUpThere:
 	.string "Hey! You can't go up there right\n"
 	.string "now.$"
 
+CinnabarIsland_Inn_Text_ComeOverHere:
+	.string "Good morning {PLAYER}!\p"
+	.string "Please step over to my desk,\n"
+	.string "I have some news I think you\l"
+	.string "should hear.$"
+
 CinnabarIsland_Inn_Text_SomethingHappened:
-	.string "I've been hearing complaints about\n"
-	.string "boat vandals damaging boats overnight.\p"
+	.string "I just wanted to give you a heads\n"
+	.string "up that word around the Island this\l"
+	.string "morning is that vandals were damaging\l"
+	.string "boats overnight.\p"
 	.string "I would go check on your ship if I were\n"
 	.string "you.$"
