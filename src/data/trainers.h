@@ -3450,15 +3450,19 @@ const struct Trainer gTrainers[] = {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
-        .trainerClass = TRAINER_CLASS_LEADER,
+        .trainerClass = TRAINER_CLASS_WES,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_WES_THOMPSON,
-        .trainerName = _("Wesss"),
+        // .trainerPic = TRAINER_PIC_WES_THOMPSON,
+        .trainerPic = TRAINER_PIC_JERETT, //MAGM6 Trainer
+        .trainerName = _("Blaine"),
         .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
-        .partySize = ARRAY_COUNT(sParty_Brawly1),
-        .party = {.ItemCustomMoves = sParty_Brawly1},
+        .partySize = ARRAY_COUNT(sParty_Brawly1MAGM6),
+        .party = {.ItemCustomMoves = sParty_Brawly1MAGM6},
+        // // Froversion Party Below
+        // .partySize = ARRAY_COUNT(sParty_Brawly1),
+        // .party = {.ItemCustomMoves = sParty_Brawly1},
     },
 
     [TRAINER_WATTSON_1] =
@@ -5689,8 +5693,11 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Jocelyn),
-        .party = {.NoItemDefaultMoves = sParty_Jocelyn},
+        .partySize = ARRAY_COUNT(sParty_JocelynMAGM6),
+        .party = {.NoItemDefaultMoves = sParty_JocelynMAGM6},
+        // // Froversion Party Below
+        // .partySize = ARRAY_COUNT(sParty_Jocelyn),
+        // .party = {.NoItemDefaultMoves = sParty_Jocelyn},
     },
 
     [TRAINER_LAURA] =
@@ -5703,8 +5710,11 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Laura),
-        .party = {.NoItemDefaultMoves = sParty_Laura},
+        .partySize = ARRAY_COUNT(sParty_LauraMAGM6), 
+        .party = {.NoItemDefaultMoves = sParty_LauraMAGM6},
+        // Froversion Trainer Below
+        // .partySize = ARRAY_COUNT(sParty_Laura), 
+        // .party = {.NoItemDefaultMoves = sParty_Laura},
     },
 
     [TRAINER_CYNDY_1] =
@@ -7765,8 +7775,11 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Brenden),
-        .party = {.NoItemDefaultMoves = sParty_Brenden},
+        .partySize = ARRAY_COUNT(sParty_BrendenMAGM6),
+        .party = {.NoItemDefaultMoves = sParty_BrendenMAGM6},
+        // Froversion Party Below
+        // .partySize = ARRAY_COUNT(sParty_Brenden),
+        // .party = {.NoItemDefaultMoves = sParty_Brenden},
     },
 
     [TRAINER_LILITH] =
@@ -7779,8 +7792,11 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Lilith),
-        .party = {.NoItemDefaultMoves = sParty_Lilith},
+        .partySize = ARRAY_COUNT(sParty_LilithMAGM6),
+        .party = {.NoItemDefaultMoves = sParty_LilithMAGM6},
+        // Froversion Party Below
+        // .partySize = ARRAY_COUNT(sParty_Lilith),
+        // .party = {.NoItemDefaultMoves = sParty_Lilith},
     },
 
     [TRAINER_CRISTIAN] =
@@ -7793,8 +7809,11 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Cristian),
-        .party = {.NoItemDefaultMoves = sParty_Cristian},
+        .partySize = ARRAY_COUNT(sParty_CristianMAGM6),
+        .party = {.NoItemDefaultMoves = sParty_CristianMAGM6},
+        // // Froversion Party Below
+        // .partySize = ARRAY_COUNT(sParty_Cristian),
+        // .party = {.NoItemDefaultMoves = sParty_Cristian},
     },
 
     [TRAINER_SYLVIA] =

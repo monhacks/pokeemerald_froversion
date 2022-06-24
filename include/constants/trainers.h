@@ -402,6 +402,8 @@
 #define TRAINER_CLASS_GENTLEMAN_2      0x50
 #define TRAINER_CLASS_GENTLEMAN_3     0x51
 #define TRAINER_CLASS_GENTLEMAN_4     0x52
+#define TRAINER_CLASS_WES               0x53
+
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

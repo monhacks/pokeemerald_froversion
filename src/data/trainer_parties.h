@@ -14584,3 +14584,93 @@ static const struct TrainerMonItemCustomMoves sParty_Gentleman2TrainersHallChamp
     .evs = {126, 0, 126, 0, 0, 150},
     },
 };
+
+//////////////////////////////////////////////////
+//////////////////MAGM6 Parties//////////////////
+/////////////////////////////////////////////////
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LauraMAGM6[] = {
+    {
+    .iv = 255,
+    .lvl = 42,
+    .species = SPECIES_GLALIE,
+    .abilityNum = 1
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LilithMAGM6[] = {
+    {
+    .iv = 150,
+    .lvl = 44,
+    .species = SPECIES_ARCANINE,
+    .abilityNum = 0
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_CristianMAGM6[] = {
+    {
+    .iv = 200,
+    .lvl = 44,
+    .species = SPECIES_MAGMAR,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_BrendenMAGM6[] = {
+    {
+    .iv = 255,
+    .lvl = 43,
+    .species = SPECIES_SNEASEL,
+    .abilityNum = 1
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_JocelynMAGM6[] = {
+    {
+    .iv = 255,
+    .lvl = 42,
+    .species = SPECIES_GLALIE,
+    .abilityNum = 1
+    },
+    {
+    .iv = 255,
+    .lvl = 44,
+    .species = SPECIES_JYNX,
+    .abilityNum = 1
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Brawly1MAGM6[] = {
+    {
+    .iv = 225,
+    .lvl = 45,
+    .species = SPECIES_HOUNDOOM,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_DARK_PULSE, MOVE_NASTY_PLOT, MOVE_OVERHEAT, MOVE_PROTECT},
+    .abilityNum = 3
+    },
+    {
+    .iv = 125,
+    .lvl = 46,
+    .species = SPECIES_SNEASEL,
+    .heldItem = ITEM_OCCA_BERRY,
+    .moves = {MOVE_FAKE_OUT, MOVE_FOUL_PLAY, MOVE_MEGA_KICK, MOVE_SWORDS_DANCE},
+    .abilityNum = 2
+    },
+    {
+    .iv = 100,
+    .lvl = 45,
+    .species = SPECIES_CAMERUPT,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_EARTHQUAKE, MOVE_PROTECT, MOVE_ERUPTION, MOVE_ROCK_SLIDE},
+    .abilityNum = 1,
+    .nickname = gText_WesRamNickname
+    },
+    {
+    .iv = 125,
+    .lvl = 46,
+    .species = SPECIES_DEWGONG,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_BLIZZARD, MOVE_SURF, MOVE_TOXIC, MOVE_AURORA_VEIL},
+    .abilityNum = 2
+    },
+};

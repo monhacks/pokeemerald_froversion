@@ -1332,3 +1332,6 @@ $(MID_SUBDIR)/mus_fv_sand_caves.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_fv_cinnabar_island_remix.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G106 -V079
+
+$(MID_SUBDIR)/mus_fv_raintree_island_gym_ice_2.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G083 -V090
