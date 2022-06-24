@@ -20,36 +20,39 @@ end
 
 CinnabarIslandHouse1_EventScript_Student1::
 	msgbox CinnabarIslandHouse1_Text_Student1, MSGBOX_DEFAULT
+	closemessage
 	end
 
 CinnabarIslandHouse1_EventScript_Student2::
-	msgbox CinnabarIslandHouse1_Text_Student2, MSGBOX_DEFAULT
+	msgbox CinnabarIslandHouse1_Text_Student2, MSGBOX_NPC
 	end
 
 CinnabarIslandHouse1_EventScript_Student3::
-	msgbox CinnabarIslandHouse1_Text_Student3, MSGBOX_DEFAULT
+	msgbox CinnabarIslandHouse1_Text_Student3, MSGBOX_NPC
 	end
 
 CinnabarIslandHouse1_EventScript_Student4::
-	msgbox CinnabarIslandHouse1_Text_Student4, MSGBOX_DEFAULT
+	msgbox CinnabarIslandHouse1_Text_Student4, MSGBOX_NPC
 	end
 
 CinnabarIslandHouse1_EventScript_Student5::
 	msgbox CinnabarIslandHouse1_Text_Student5_1, MSGBOX_DEFAULT
 	closemessage
 	msgbox CinnabarIslandHouse1_Text_Student5_2, MSGBOX_NPC
+	closemessage
 	end
 
 CinnabarIslandHouse1_EventScript_Student6::
-	msgbox CinnabarIslandHouse1_Text_Student6, MSGBOX_DEFAULT
+	msgbox CinnabarIslandHouse1_Text_Student6, MSGBOX_NPC
 	end
 
 CinnabarIslandHouse1_EventScript_Student7::
-	msgbox CinnabarIslandHouse1_Text_Student7, MSGBOX_DEFAULT
+	msgbox CinnabarIslandHouse1_Text_Student7, MSGBOX_NPC
 	end
 
 CinnabarIslandHouse1_EventScript_Teacher::
 	msgbox CinnabarIslandHouse1_Text_Teacher, MSGBOX_DEFAULT
+	closemessage
 	end
 
 @--------------------------------------------------------------------------------
