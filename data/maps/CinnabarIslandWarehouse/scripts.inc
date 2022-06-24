@@ -47,7 +47,7 @@ CinnabarIslandWarehouse_Text_Worker2:
 	.string "Oops... I hope this label reading\n"
 	.string "'fragile' was applied to the wrong box.\p"
 
-	.string "Otherwise someone will have a bad day"
+	.string "Otherwise someone will have a bad day\n"
 	.string "unboxing this.$"
 
 CinnabarIslandWarehouse_Text_Sengo:
