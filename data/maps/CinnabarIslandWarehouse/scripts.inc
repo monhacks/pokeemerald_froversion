@@ -40,7 +40,7 @@ CinnabarIslandWarehouse_Text_Worker1:
 	.string "I swear to Arceus if one of those\n"
 	.string "boxes lands on any part of my body\p"
 
-	.string "i quit! They should supply is with"
+	.string "i quit! They should supply us with\n"
 	.string "way better equipment!$"
 
 CinnabarIslandWarehouse_Text_Worker2:
