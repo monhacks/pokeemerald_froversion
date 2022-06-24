@@ -15,3 +15,34 @@ end
 CinnabarIsland_House_2_EventScript_SetDynamicWarpPostSleep:
 	setdynamicwarp MAP_CINNABAR_ISLAND_POST_SHIP_WRECK, 255, 46, 45
 end
+
+@--------------------------------------------------------------------------------
+@------------------------------------Events--------------------------------------
+@--------------------------------------------------------------------------------
+
+CinnabarIsland_House2_Man::
+	msgbox CinnabarIslandHouse2_Text_Man, MSGBOX_DEFAULT
+end
+
+CinnabarIsland_House2_Woman::
+	msgbox CinnabarIslandHouse2_Text_Woman, MSGBOX_NPC
+end
+
+@--------------------------------------------------------------------------------
+@-------------------------------------Text---------------------------------------
+@--------------------------------------------------------------------------------
+@'''''''''''[______________________________________]
+
+-CinnabarIslandHouse2_Text_Man:
+	.string "ZZZzzz... November November Charlie\n"
+	.string "...please standby... ZZZzzz...\p"
+
+	.string "...not allowed... ZZZzzz...\n"
+	.string "...basement elevator...ZZzzz...$"
+
+CinnabarIslandHouse2_Text_Woman:
+	.string "My husband works the night shift at\n"
+	.string "the NCC. He always tells me how\p"
+
+	.string "important his work is. Without him\n"
+	.string "there would be chaos at night.$"
