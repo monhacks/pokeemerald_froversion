@@ -123,7 +123,7 @@ CinnabarIsland_Inn_EventScript_SetDynamicWarpPreSleep:
 end
 
 CinnabarIsland_Inn_EventScript_SetDynamicWarpPostSleep:
-	setdynamicwarp MAP_VICTORY_ROAD_1F, 255, 15, 40
+	setdynamicwarp MAP_CINNABAR_ISLAND_POST_SHIP_WRECK, 255, 38, 44
 end
 
 @--------------------------------------------------------------------------------

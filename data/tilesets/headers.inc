@@ -1237,3 +1237,14 @@ gTileset_MountCinnabar_Primary::
 	.4byte gMetatiles_MountCinnabar_Primary
 	.4byte gMetatileAttributes_MountCinnabar_Primary
 	.4byte InitTilesetAnim_MountCinnabar_Primary
+
+	.align 2
+gTileset_CinnabarIsland_Secondary_PostShipwreck::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_CinnabarIsland_Secondary_PostShipwreck
+	.4byte gTilesetPalettes_CinnabarIsland_Secondary_PostShipwreck
+	.4byte gMetatiles_CinnabarIsland_Secondary_PostShipwreck
+	.4byte gMetatileAttributes_CinnabarIsland_Secondary_PostShipwreck
+	.4byte NULL

@@ -5800,6 +5800,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/CinnabarIsland_Inn_2F/border.bin",
       "blockdata_filepath": "data/layouts/CinnabarIsland_Inn_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_POST_SHIP_WRECK",
+      "name": "CinnabarIsland_PostShipWreck_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_CinnibarIsland_Primary",
+      "secondary_tileset": "gTileset_CinnabarIsland_Secondary_PostShipwreck",
+      "border_filepath": "data/layouts/CinnabarIsland_PostShipWreck/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_PostShipWreck/map.bin"
     }
   ]
 }
