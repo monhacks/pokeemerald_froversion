@@ -14649,28 +14649,36 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1MAGM6[] = {
     .abilityNum = 3
     },
     {
-    .iv = 125,
+    .iv = 255,
     .lvl = 46,
     .species = SPECIES_SNEASEL,
     .heldItem = ITEM_OCCA_BERRY,
-    .moves = {MOVE_FAKE_OUT, MOVE_FOUL_PLAY, MOVE_MEGA_KICK, MOVE_SWORDS_DANCE},
-    .abilityNum = 2
+    .moves = {MOVE_FAKE_OUT, MOVE_FOUL_PLAY, MOVE_ICICLE_CRASH, MOVE_SWORDS_DANCE},
+    .abilityNum = 0
     },
     {
     .iv = 100,
     .lvl = 45,
     .species = SPECIES_CAMERUPT,
-    .heldItem = ITEM_SITRUS_BERRY,
+    .heldItem = ITEM_FOCUS_SASH,
     .moves = {MOVE_EARTHQUAKE, MOVE_PROTECT, MOVE_ERUPTION, MOVE_ROCK_SLIDE},
-    .abilityNum = 1,
+    .abilityNum = 4,
     .nickname = gText_WesRamNickname
     },
     {
     .iv = 125,
     .lvl = 46,
     .species = SPECIES_DEWGONG,
-    .heldItem = ITEM_LEFTOVERS,
+    .heldItem = ITEM_WEAKNESS_POLICY,
     .moves = {MOVE_BLIZZARD, MOVE_SURF, MOVE_TOXIC, MOVE_AURORA_VEIL},
     .abilityNum = 2
+    },
+    {
+    .iv = 225,
+    .lvl = 46,
+    .species = SPECIES_BLAZIKEN,
+    .heldItem = ITEM_ICE_CAMOUFLAGE,
+    .moves = {MOVE_SWORDS_DANCE, MOVE_BLAZE_KICK, MOVE_CLOSE_COMBAT, MOVE_AURORA_VEIL},
+    .abilityNum = 0
     },
 };

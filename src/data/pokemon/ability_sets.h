@@ -563,6 +563,7 @@ static const struct AbilitySetter sNumelAbilitySet[] =
     {ABILITY_SOLID_ROCK, 13},
     {ABILITY_ANGER_POINT, 20},
     {ABILITY_SHEER_FORCE, 28},
+    {ABILITY_UNBURDEN, 38},
     ABILITY_SET_END
 };
 
@@ -1137,6 +1138,14 @@ static const struct AbilitySetter sCloclockAbilitySet[] =
     ABILITY_SET_END
 };
 
+//MAGM6 Abilities
+
+static const struct AbilitySetter sBlazikenAbilitySet[] = 
+{
+    {ABILITY_SPEED_BOOST, 1},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
@@ -1338,6 +1347,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_SABLIZZARD] = sSablizzardAbilitySet,
     [SPECIES_CLOCLOCK] = sCloclockAbilitySet,
     [SPECIES_WARKLOCK] = sCloclockAbilitySet,
+    [SPECIES_BLAZIKEN] = sBlazikenAbilitySet,
     
 
 

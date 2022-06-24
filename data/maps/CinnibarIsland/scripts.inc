@@ -55,6 +55,10 @@ CinnabarIsland_EventScript_Guy::
 	msgbox CinnabarIsland_Text_Guy, MSGBOX_NPC
 	end
 
+CinnabarIsland_EventScript_VolcanoGuy::
+	msgbox CinnabarIsland_Text_VolcanoGuy, MSGBOX_NPC
+	end
+
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------
 @--------------------------------------------------------------------------------
@@ -104,6 +108,10 @@ CinnabarIsland_Text_ManMovingBoxes:
 	.string "Please move aside and let me finish my\n"
 	.string "work!$"
 
+CinnabarIsland_Text_VolcanoGuy:
+	.string "This volcano isn't safe for the\n"
+	.string "Public. Please head back towards\l"
+	.string "southern end of the Island.$"
 @--------------------------------------------------------------------------------
 @-----------------------------------Movement-------------------------------------
 @--------------------------------------------------------------------------------
