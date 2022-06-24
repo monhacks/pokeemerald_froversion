@@ -4179,6 +4179,8 @@ static const u16 *const sCounters[NUM_SPECIES] =
         SPECIES_NEVAWOK,
         SPECIES_WOKAGIN,
         SPECIES_PILOSWINE,
+        //MAGM6 COUNTERS//
+        SPECIES_BLAZIKEN,
         SPECIES_NONE,
     },
 
@@ -5827,4 +5829,50 @@ static const u16 *const sCounters[NUM_SPECIES] =
         SPECIES_NONE,
     },
 
+
+///////////MAGM6 COUNTERS/////////
+    [SPECIES_BLAZIKEN] = (u16[])
+    {
+        SPECIES_RASCALOOT,
+        SPECIES_BANDITHUG,
+        SPECIES_BUTTERFREE,
+        SPECIES_BEEDRILL,
+        SPECIES_CHAD_BUG_1,
+        SPECIES_CHAD_BUG_2,
+        SPECIES_SKIPLOOM,
+        SPECIES_JUMPLUFF,
+        SPECIES_ODDISH,
+        SPECIES_GLOOM,
+        SPECIES_VILEPLUME,
+        SPECIES_ESCARATACO,
+        SPECIES_ARIADOS,
+        SPECIES_SNOUMESE,
+        SPECIES_SNOUBAUL,
+        SPECIES_MAGNEMITE,
+        SPECIES_MAGNETON,
+        SPECIES_TANGELA,
+        SPECIES_SABLIZZARD,
+        SPECIES_SCYTHER,
+        SPECIES_SCIZOR,
+        SPECIES_JYNX,
+        SPECIES_BILLFALO,
+        SPECIES_SNEASEL,
+        SPECIES_SNORUNT,
+        SPECIES_GLALIE,
+        SPECIES_NINJASK,
+        SPECIES_SHEDINJA,
+        SPECIES_DUMBELLION,
+        SPECIES_BARBELLION,
+        SPECIES_SKARMORY,
+        SPECIES_NONE,
+    },
+
+    [SPECIES_KINGLER] = (u16[])
+    {
+        //MAGM6 COUNTERS//
+        SPECIES_BLAZIKEN,
+        SPECIES_CAMERUPT,
+        SPECIES_HOUNDOOM,
+        SPECIES_NONE,
+    },
 };
