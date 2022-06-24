@@ -19,7 +19,7 @@ CinnabarIsland_House_1_EventScript_SetDynamicWarpPostSleep:
 end
 
 CinnabarIslandHouse1_EventScript_Man::
-	msgbox CinnabarIslandHouse1_Text_Man, MSGBOX_NPC
+	msgbox CinnabarIslandHouse1_Text_Man, MSGBOX_DEFAULT
 	end
 
 CinnabarIslandHouse1_EventScript_Woman::
