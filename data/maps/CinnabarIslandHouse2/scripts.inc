@@ -20,11 +20,11 @@ end
 @------------------------------------Events--------------------------------------
 @--------------------------------------------------------------------------------
 
-CinnabarIsland_House2_Man::
+CinnabarIslandHouse2_EventScript_Man::
 	msgbox CinnabarIslandHouse2_Text_Man, MSGBOX_DEFAULT
 end
 
-CinnabarIsland_House2_Woman::
+CinnabarIslandHouse2_EventScript_Woman::
 	msgbox CinnabarIslandHouse2_Text_Woman, MSGBOX_NPC
 end
 
