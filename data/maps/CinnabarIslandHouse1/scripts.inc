@@ -41,7 +41,7 @@ CinnabarIslandHouse1_Text_Woman:
 
 CinnabarIslandHouse1_Text_Man:
 	.string "ZZZzzz... November November Charlie\n"
-	.string "...please standby... ZZZzzz...\p$"
+	.string "...please standby... ZZZzzz...\p"
 
 	.string "...not allowed... ZZZzzz...\n"
 	.string "...basement elevator...ZZzzz...$"
