@@ -85,15 +85,15 @@
       "x": 2,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_CINNIBAR_ISLAND",
-      "dest_warp_id": 5
+      "dest_map": "MAP_NONE",
+      "dest_warp_id": 127
     },
     {
       "x": 3,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_CINNIBAR_ISLAND",
-      "dest_warp_id": 5
+      "dest_map": "MAP_NONE",
+      "dest_warp_id": 127
     }
   ],
   "coord_events": [

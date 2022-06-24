@@ -1,2 +1,17 @@
 CinnabarIslandWarehouse_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, CinnabarIslandWarehouse_OnLoad
 	.byte 0
+
+CinnabarIslandWarehouse_OnLoad:
+	compare VAR_ROUTE101_STATE, 3
+	call_if_ge CinnabarIslandWarehouse_EventScript_SetDynamicWarpPostSleep
+	call_if_lt CinnabarIslandWarehouse_EventScript_SetDynamicWarpPreSleep
+	end
+
+CinnabarIslandWarehouse_EventScript_SetDynamicWarpPreSleep:
+	setdynamicwarp MAP_CINNIBAR_ISLAND, 255, 64, 42
+end
+
+CinnabarIslandWarehouse_EventScript_SetDynamicWarpPostSleep:
+	setdynamicwarp MAP_CINNABAR_ISLAND_POST_SHIP_WRECK, 255, 64, 42
+end

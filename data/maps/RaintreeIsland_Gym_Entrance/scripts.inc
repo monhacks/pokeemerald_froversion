@@ -10,13 +10,27 @@
 RaintreeIsland_Gym_Entrance_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, RaintreeIsland_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	map_script MAP_SCRIPT_ON_LOAD, RaintreeIsland_PokemonCenter_1F_OnLoad
 	.byte 0
 
 RaintreeIsland_PokemonCenter_1F_OnTransition: @ 81FC52E
 	setrespawn HEAL_LOCATION_RAINTREE_ISLAND
 	call Common_EventScript_UpdateBrineyLocation
 	end
+RaintreeIsland_PokemonCenter_1F_OnLoad:
+	compare VAR_ROUTE101_STATE, 3
+	call_if_ge RaintreeIsland_PokemonCenter_1F_EventScript_SetDynamicWarpPostSleep
+	call_if_lt RaintreeIsland_PokemonCenter_1F_EventScript_SetDynamicWarpPreSleep
+end
 
+
+RaintreeIsland_PokemonCenter_1F_EventScript_SetDynamicWarpPreSleep:
+	setdynamicwarp MAP_CINNIBAR_ISLAND, 255, 25, 47
+end
+
+RaintreeIsland_PokemonCenter_1F_EventScript_SetDynamicWarpPostSleep:
+	setdynamicwarp MAP_CINNABAR_ISLAND_POST_SHIP_WRECK, 255, 25, 47
+end
 
 ////////////////////////////////////
 //////////Scripts//////////////////
