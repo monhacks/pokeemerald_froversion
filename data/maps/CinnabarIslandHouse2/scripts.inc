@@ -22,6 +22,7 @@ end
 
 CinnabarIslandHouse2_EventScript_Man::
 	msgbox CinnabarIslandHouse2_Text_Man, MSGBOX_DEFAULT
+	closemessage
 end
 
 CinnabarIslandHouse2_EventScript_Woman::
@@ -33,7 +34,7 @@ end
 @--------------------------------------------------------------------------------
 @'''''''''''[______________________________________]
 
--CinnabarIslandHouse2_Text_Man:
+CinnabarIslandHouse2_Text_Man:
 	.string "ZZZzzz... November November Charlie\n"
 	.string "...please standby... ZZZzzz...\p"
 
