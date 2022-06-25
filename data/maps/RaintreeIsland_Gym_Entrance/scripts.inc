@@ -180,7 +180,7 @@ Text_Chad:
 Text_Mike:
 	.string "I traveled all the way from\n"
 	.string "Homestead Town.\p"
-	.string "Now that they Pandemic is\n"
+	.string "Now that the Pandemic is\n"
 	.string "slowing down they are allowing\l"
 	.string "people in and out!$"
 
