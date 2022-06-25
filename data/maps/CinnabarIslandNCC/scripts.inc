@@ -56,50 +56,52 @@ CinnabarIslandNCC_Receptionist_IllLetYouGetSettled:
 
 CinnabarIslandNCC_EventScript_ElevatorUp::
 playse SE_TRUCK_MOVE
-	setmetatile 22, 15, METATILE_Building_ElevatorFloorFence, 0
-	setmetatile 23, 15, METATILE_Building_ElevatorFloorFence, 0
-	setmetatile 24, 15, METATILE_Building_ElevatorFloorFence, 0
+	setmetatile 22, 15, METATILE_Building_ElevatorFloorFence, 1
+	setmetatile 23, 15, METATILE_Building_ElevatorFloorFence, 1
+	setmetatile 24, 15, METATILE_Building_ElevatorFloorFence, 1
 
-	setmetatile 22, 16, METATILE_Building_ElevatorFloorBeam, 1
-	setmetatile 23, 16, METATILE_Building_ElevatorFloorBeam, 1
-	setmetatile 24, 16, METATILE_Building_ElevatorFloorBeam, 1
+	setmetatile 22, 16, METATILE_Building_ElevatorFloorBeam, 0
+	setmetatile 23, 16, METATILE_Building_ElevatorFloorBeam, 0
+	setmetatile 24, 16, METATILE_Building_ElevatorFloorBeam, 0
 
-	setmetatile 22, 17, METATILE_Facility_ElevatorFloor, 1
-	setmetatile 23, 17, METATILE_Facility_ElevatorFloor, 1
-	setmetatile 24, 17, METATILE_Facility_ElevatorFloor, 1
+	setmetatile 22, 17, METATILE_Facility_ElevatorFloor, 0
+	setmetatile 23, 17, METATILE_Facility_ElevatorFloor, 0
+	setmetatile 24, 17, METATILE_Facility_ElevatorFloor, 0
 
-	setmetatile 22, 18, METATILE_Facility_ElevatorFloor, 1
-	setmetatile 23, 18, METATILE_Facility_ElevatorFloor, 1
-	setmetatile 24, 18, METATILE_Facility_ElevatorFloor, 1	
+	setmetatile 22, 18, METATILE_Facility_ElevatorFloor, 0
+	setmetatile 23, 18, METATILE_Facility_ElevatorFloor, 0
+	setmetatile 24, 18, METATILE_Facility_ElevatorFloor, 0	
 	
-	setmetatile 22, 19, METATILE_Facility_TiledFloor, 1
-	setmetatile 23, 19, METATILE_Facility_TiledFloor, 1
-	setmetatile 24, 19, METATILE_Facility_TiledFloor, 1
+	setmetatile 22, 19, METATILE_Facility_TiledFloor, 0
+	setmetatile 23, 19, METATILE_Facility_TiledFloor, 0
+	setmetatile 24, 19, METATILE_Facility_TiledFloor, 0
 	special DrawWholeMapView
+	playse SE_TRUCK_STOP
 end
 
 CinnabarIslandNCC_EventScript_ElevatorDown::
 playse SE_TRUCK_MOVE
-	setmetatile 22, 15, 0x01B, 0
-	setmetatile 23, 15, 0x01B, 0
-	setmetatile 24, 15, 0x01B, 0
+	setmetatile 22, 15, 0x01B, 1
+	setmetatile 23, 15, 0x01B, 1
+	setmetatile 24, 15, 0x01B, 1
 
-	setmetatile 22, 16, 0x01C, 1
-	setmetatile 23, 16, 0x01C, 1
-	setmetatile 24, 16, 0x01C, 1
+	setmetatile 22, 16, 0x01C, 0
+	setmetatile 23, 16, 0x01C, 0
+	setmetatile 24, 16, 0x01C, 0
 
-	setmetatile 22, 17, 0x012, 1
-	setmetatile 23, 17, 0x012, 1
-	setmetatile 24, 17, 0x012, 1
+	setmetatile 22, 17, 0x012, 0
+	setmetatile 23, 17, 0x012, 0
+	setmetatile 24, 17, 0x012, 0
 
-	setmetatile 22, 18, METATILE_Building_ElevatorBarrier, 1
-	setmetatile 23, 18, METATILE_Building_ElevatorBarrier, 1
-	setmetatile 24, 18, METATILE_Building_ElevatorBarrier, 1	
+	setmetatile 22, 18, METATILE_Building_ElevatorBarrier, 0
+	setmetatile 23, 18, METATILE_Building_ElevatorBarrier, 0
+	setmetatile 24, 18, METATILE_Building_ElevatorBarrier, 0	
 	
-	setmetatile 22, 19, 0x014, 1
-	setmetatile 23, 19, 0x014, 1
-	setmetatile 24, 19, 0x014, 1
+	setmetatile 22, 19, 0x014, 0
+	setmetatile 23, 19, 0x014, 0
+	setmetatile 24, 19, 0x014, 0
 	special DrawWholeMapView
+	playse SE_TRUCK_STOP	
 end
 
 @--------------------------------------------------------------------------------
