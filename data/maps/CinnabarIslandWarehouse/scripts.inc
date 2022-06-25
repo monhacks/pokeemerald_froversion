@@ -40,14 +40,14 @@ CinnabarIslandWarehouse_Text_Worker1:
 	.string "I swear to Arceus if one of those\n"
 	.string "boxes lands on any part of my body\p"
 
-	.string "i quit! They should supply is with"
+	.string "i quit! They should supply us with\n"
 	.string "way better equipment!$"
 
 CinnabarIslandWarehouse_Text_Worker2:
 	.string "Oops... I hope this label reading\n"
 	.string "'fragile' was applied to the wrong box.\p"
 
-	.string "Otherwise someone will have a bad day"
+	.string "Otherwise someone will have a bad day\n"
 	.string "unboxing this.$"
 
 CinnabarIslandWarehouse_Text_Sengo:
