@@ -93,16 +93,16 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
       "x": 64,
-      "y": 55,
+      "y": 53,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_DOWN_LEFT_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "CinnabarIsland_EventScript_ManUnloadingShip",
+      "script": "CinnabarIsland_PostShipwreck_EventScript_Sailor2",
       "flag": "0"
     },
     {
@@ -171,7 +171,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 57,
+      "y": 54,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "4",
+      "script": "CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage"
+    }
   ],
   "bg_events": [
 
