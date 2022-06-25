@@ -275,6 +275,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kostiw;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Matt;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chansey;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Porygon;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Primeape1;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Primeape3;
 
 
 
@@ -549,6 +551,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MATT] =             &gObjectEventGraphicsInfo_Matt,
     [OBJ_EVENT_GFX_CHANSEY] =             &gObjectEventGraphicsInfo_Chansey,
     [OBJ_EVENT_GFX_PORYGON] =             &gObjectEventGraphicsInfo_Porygon,
+    [OBJ_EVENT_GFX_PRIMEAPE_1] =                 &gObjectEventGraphicsInfo_Primeape1,
+    [OBJ_EVENT_GFX_PRIMEAPE_3] =                 &gObjectEventGraphicsInfo_Primeape3,
 
 
 };

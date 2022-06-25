@@ -616,6 +616,38 @@ void StartRegiBattle(void)
     TryUpdateGymLeaderRematchFromWild();
 }
 
+void StartPrimeapeBattle(void)
+{
+    u8 transitionId;
+    u16 species;
+
+    ScriptContext2_Enable();
+    gMain.savedCallback = CB2_EndScriptedWildBattle;
+    gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_REGI;
+
+    species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
+    switch (species)
+    {
+    case SPECIES_REGIROCK:
+        transitionId = B_TRANSITION_REGIROCK;
+        break;
+    case SPECIES_REGICE:
+        transitionId = B_TRANSITION_REGICE;
+        break;
+    case SPECIES_REGISTEEL:
+        transitionId = B_TRANSITION_REGISTEEL;
+        break;
+    default:
+        transitionId = B_TRANSITION_GRID_SQUARES;
+        break;
+    }
+    CreateBattleStartTask(transitionId, MUS_VS_REGI);
+    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
+    IncrementGameStat(GAME_STAT_WILD_BATTLES);
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
+}
+
 static void CB2_EndWildBattle(void)
 {
     CpuFill16(0, (void*)(BG_PLTT), BG_PLTT_SIZE);

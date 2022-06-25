@@ -2545,3 +2545,26 @@ const struct SpriteFrameImage gObjectEventPicTable_Porygon[] = {
     overworld_frame(gObjectEventPic_Porygon, 2, 2, 2),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_PrimeapeFront[] = {
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 1),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_PrimeapeSide[] = {
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Primeape, 4, 4, 3),
+};

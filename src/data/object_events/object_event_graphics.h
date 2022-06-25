@@ -450,3 +450,7 @@ const u16 gObjectEventPal_Chansey[] = INCBIN_U16("graphics/object_events/palette
 
 const u32 gObjectEventPic_Porygon[] = INCBIN_U32("graphics/object_events/pics/pokemon/porygon.4bpp");
 const u16 gObjectEventPal_Porygon[] = INCBIN_U16("graphics/object_events/palettes/porygon.gbapal");
+
+
+const u32 gObjectEventPic_Primeape[] = INCBIN_U32("graphics/object_events/pics/pokemon/primeape.4bpp");
+const u16 gObjectEventPal_Primeape[] = INCBIN_U16("graphics/object_events/palettes/primeape.gbapal");
