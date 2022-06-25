@@ -1281,7 +1281,8 @@ void PrepareStringBattle(u16 stringId, u8 battler)
 
     // Check Defiant and Competitive stat raise whenever a stat is lowered.
     else if ((stringId == STRINGID_PKMNSSTATCHANGED4 || stringId == STRINGID_PKMNCUTSATTACKWITH)
-              && ((GetBattlerAbility(gBattlerTarget) == ABILITY_DEFIANT && gBattleMons[gBattlerTarget].statStages[STAT_ATK] != 12)
+              && ((GetBattlerAbility(gBattlerTarget) == ABILITY_DEFIANT && gBattleMons[gBattlerTarget].statStages[STAT_ATK] != 12) ||
+              (GetBattlerAbility(gBattlerTarget) == ABILITY_SHADOW_PRIMEAPE && gBattleMons[gBattlerTarget].statStages[STAT_ATK] != 12)
                  || (GetBattlerAbility(gBattlerTarget) == ABILITY_COMPETITIVE && gBattleMons[gBattlerTarget].statStages[STAT_SPATK] != 12))
               && gSpecialStatuses[gBattlerTarget].changedStatsBattlerId != BATTLE_PARTNER(gBattlerTarget)
               && gSpecialStatuses[gBattlerTarget].changedStatsBattlerId != gBattlerTarget)
@@ -1289,7 +1290,7 @@ void PrepareStringBattle(u16 stringId, u8 battler)
         gBattlerAbility = gBattlerTarget;
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_DefiantActivates;
-        if (GetBattlerAbility(gBattlerTarget) == ABILITY_DEFIANT)
+        if ((GetBattlerAbility(gBattlerTarget) == ABILITY_DEFIANT) || (GetBattlerAbility(gBattlerTarget) == ABILITY_SHADOW_PRIMEAPE))
             SET_STATCHANGER(STAT_ATK, 2, FALSE);
         else
             SET_STATCHANGER(STAT_SPATK, 2, FALSE);

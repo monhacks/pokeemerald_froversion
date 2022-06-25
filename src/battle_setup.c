@@ -623,7 +623,10 @@ void StartPrimeapeBattle(void)
     u16 species;
     s32 newDef = 250;
     s32 newSpDef = 250;
-    s32 move1 = MOVE_CROSS_POISON;
+    s32 move1 = MOVE_POWER_UP_PUNCH;
+    s32 move2 = MOVE_NIGHT_SLASH;
+    s32 move3 = MOVE_TORMENT;
+    s32 move4 = MOVE_POWER_TRIP;
     s32 type = TYPE_DARK;
 
     ScriptContext2_Enable();
