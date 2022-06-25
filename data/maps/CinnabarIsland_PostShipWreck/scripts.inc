@@ -48,6 +48,7 @@ CinnabarIsland_EventScript_StoneForRockSmash::
 	goto_if_set FLAG_BADGE03_GET, CinnabarIsland_EventScript_DStoneForRockSmash
 	giveitem ITEM_HM06_ROCK_SMASH, 1
 	setflag FLAG_BADGE03_GET
+	warp MAP_MOUNT_CINNABAR_SUMMIT, 255, 19, 12
 	goto CinnabarIsland_EventScript_DStoneForRockSmash
 
 CinnabarIsland_EventScript_DStoneForRockSmash::
