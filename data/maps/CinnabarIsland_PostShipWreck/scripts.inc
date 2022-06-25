@@ -44,7 +44,9 @@ CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage::
 	end
 		
 
-
+CinnabarIsland_EventScript_StoneForRockSmash::
+	giveitem ITEM_HM06_ROCK_SMASH ITEM_HM06, 1
+end
 
 CinnabarIsland_PostShipwreck_EventScript_Sailor::
 	msgbox CinnabarIsland_PostShipwreck_Text_Sailor, MSGBOX_NPC
