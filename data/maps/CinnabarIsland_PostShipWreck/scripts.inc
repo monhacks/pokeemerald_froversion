@@ -45,7 +45,12 @@ CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage::
 		
 
 CinnabarIsland_EventScript_StoneForRockSmash::
+	goto_if_set FLAG_BADGE03_GET, CinnabarIsland_EventScript_DStoneForRockSmash
 	giveitem ITEM_HM06_ROCK_SMASH, 1
+	setflag FLAG_BADGE03_GET
+	goto CinnabarIsland_EventScript_DStoneForRockSmash
+
+CinnabarIsland_EventScript_DStoneForRockSmash::
 end
 
 CinnabarIsland_PostShipwreck_EventScript_Sailor::
