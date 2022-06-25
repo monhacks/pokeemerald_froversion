@@ -56,25 +56,25 @@ CinnabarIslandNCC_Receptionist_IllLetYouGetSettled:
 
 CinnabarIslandNCC_EventScript_ElevatorUp::
 playse SE_TRUCK_MOVE
-	setmetatile 22, 15, ElevatorFloorFence, 0
-	setmetatile 23, 15, ElevatorFloorFence, 0
-	setmetatile 24, 15, ElevatorFloorFence, 0
+	setmetatile 22, 15, METATILE_ElevatorFloorFence, 0
+	setmetatile 23, 15, METATILE_ElevatorFloorFence, 0
+	setmetatile 24, 15, METATILE_ElevatorFloorFence, 0
 
-	setmetatile 22, 16, ElevatorFloorBeam, 1
-	setmetatile 23, 16, ElevatorFloorBeam, 1
-	setmetatile 24, 16, ElevatorFloorBeam, 1
+	setmetatile 22, 16, METATILE_ElevatorFloorBeam, 1
+	setmetatile 23, 16, METATILE_ElevatorFloorBeam, 1
+	setmetatile 24, 16, METATILE_ElevatorFloorBeam, 1
 
-	setmetatile 22, 17, ElevatorFloor, 1
-	setmetatile 23, 17, ElevatorFloor, 1
-	setmetatile 24, 17, ElevatorFloor, 1
+	setmetatile 22, 17, METATILE_ElevatorFloor, 1
+	setmetatile 23, 17, METATILE_ElevatorFloor, 1
+	setmetatile 24, 17, METATILE_ElevatorFloor, 1
 
-	setmetatile 22, 18, ElevatorFloor, 1
-	setmetatile 23, 18, ElevatorFloor, 1
-	setmetatile 24, 18, ElevatorFloor, 1	
+	setmetatile 22, 18, METATILE_ElevatorFloor, 1
+	setmetatile 23, 18, METATILE_ElevatorFloor, 1
+	setmetatile 24, 18, METATILE_ElevatorFloor, 1	
 	
-	setmetatile 22, 19, TiledFloor, 1
-	setmetatile 23, 19, TiledFloor, 1
-	setmetatile 24, 19, TiledFloor, 1
+	setmetatile 22, 19, METATILE_TiledFloor, 1
+	setmetatile 23, 19, METATILE_TiledFloor, 1
+	setmetatile 24, 19, METATILE_TiledFloor, 1
 	special DrawWholeMapView
 end
 
@@ -92,9 +92,9 @@ playse SE_TRUCK_MOVE
 	setmetatile 23, 17, 0x012, 1
 	setmetatile 24, 17, 0x012, 1
 
-	setmetatile 22, 18, ElevatorBarrier, 1
-	setmetatile 23, 18, ElevatorBarrier, 1
-	setmetatile 24, 18, ElevatorBarrier, 1	
+	setmetatile 22, 18, METATILE_ElevatorBarrier, 1
+	setmetatile 23, 18, METATILE_ElevatorBarrier, 1
+	setmetatile 24, 18, METATILE_ElevatorBarrier, 1	
 	
 	setmetatile 22, 19, 0x014, 1
 	setmetatile 23, 19, 0x014, 1
