@@ -21,6 +21,11 @@ end
 @------------------------------------Events--------------------------------------
 @--------------------------------------------------------------------------------
 
+CinnabarIslandNCC_NotAllowedUpstairs::
+	msgbox CinnabarIslandNCC_Text_NotAllowedUpstairs
+	closemessage
+end
+
 CinnabarIslandNCC_Receptionist::
 	lockall
 		faceplayer
@@ -28,7 +33,7 @@ CinnabarIslandNCC_Receptionist::
 		compare VAR_ROUTE101_STATE, 1
 		goto_if_eq CinnabarIslandNCC_Receptionist_GivePackage
 	releaseall
-	end
+end
 
 
 CinnabarIslandNCC_Receptionist_GivePackage:
@@ -81,4 +86,6 @@ CinnabarIslandNCC_Text_EnjoyYourStay:
 CinnabarIslandNCC_Text_IllLetYouGetSettled:	
 	.string "I'll let you go get settled\n"
 	.string "into your room then!$"
-	
+
+CinnabarIslandNCC_Text_NotAllowedUpstairs:
+	.string "It says 'Employees only!'$"	
