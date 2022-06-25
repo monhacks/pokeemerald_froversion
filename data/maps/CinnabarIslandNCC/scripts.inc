@@ -55,6 +55,7 @@ CinnabarIslandNCC_Receptionist_IllLetYouGetSettled:
 	end
 
 CinnabarIslandNCC_EventScript_ElevatorUp::
+playse SE_TRUCK_MOVE
 	setmetatile 22, 15, ElevatorFloorFence, 0
 	setmetatile 23, 15, ElevatorFloorFence, 0
 	setmetatile 24, 15, ElevatorFloorFence, 0
@@ -78,6 +79,7 @@ CinnabarIslandNCC_EventScript_ElevatorUp::
 end
 
 CinnabarIslandNCC_EventScript_ElevatorDown::
+playse SE_TRUCK_MOVE
 	setmetatile 22, 15, 0x01B, 0
 	setmetatile 23, 15, 0x01B, 0
 	setmetatile 24, 15, 0x01B, 0
@@ -97,6 +99,7 @@ CinnabarIslandNCC_EventScript_ElevatorDown::
 	setmetatile 22, 19, 0x014, 1
 	setmetatile 23, 19, 0x014, 1
 	setmetatile 24, 19, 0x014, 1
+	special DrawWholeMapView
 end
 
 @--------------------------------------------------------------------------------
