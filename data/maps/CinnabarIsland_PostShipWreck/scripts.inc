@@ -45,7 +45,7 @@ CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage::
 		
 
 CinnabarIsland_EventScript_StoneForRockSmash::
-	giveitem ITEM_HM06_ROCK_SMASH ITEM_HM06, 1
+	giveitem ITEM_HM06_ROCK_SMASH, 1
 end
 
 CinnabarIsland_PostShipwreck_EventScript_Sailor::
