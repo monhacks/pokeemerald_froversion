@@ -390,8 +390,8 @@ const u32 gMonShinyPalette_Mankey[] = INCBIN_U32("graphics/pokemon/mankey/shiny.
 const u8 gMonIcon_Mankey[] = INCBIN_U8("graphics/pokemon/mankey/icon.4bpp");
 const u8 gMonFootprint_Mankey[] = INCBIN_U8("graphics/pokemon/mankey/footprint.1bpp");
 
-const u32 gMonStillFrontPic_Primeape[] = INCBIN_U32("graphics/pokemon/primeape/front.4bpp.lz");
-const u32 gMonPalette_Primeape[] = INCBIN_U32("graphics/pokemon/primeape/normal.gbapal.lz");
+const u32 gMonStillFrontPic_Primeape[] = INCBIN_U32("graphics/pokemon/primeape/shadow.4bpp.lz");
+const u32 gMonPalette_Primeape[] = INCBIN_U32("graphics/pokemon/primeape/shadow.gbapal.lz");
 const u32 gMonBackPic_Primeape[] = INCBIN_U32("graphics/pokemon/primeape/back.4bpp.lz");
 const u32 gMonShinyPalette_Primeape[] = INCBIN_U32("graphics/pokemon/primeape/shiny.gbapal.lz");
 const u8 gMonIcon_Primeape[] = INCBIN_U8("graphics/pokemon/primeape/icon.4bpp");

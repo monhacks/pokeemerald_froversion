@@ -614,12 +614,17 @@ void StartRegiBattle(void)
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
     IncrementDailyWildBattles();
     TryUpdateGymLeaderRematchFromWild();
+    
 }
 
 void StartPrimeapeBattle(void)
 {
     u8 transitionId;
     u16 species;
+    s32 newDef = 250;
+    s32 newSpDef = 250;
+    s32 move1 = MOVE_CROSS_POISON;
+    s32 type = TYPE_DARK;
 
     ScriptContext2_Enable();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
@@ -642,6 +647,9 @@ void StartPrimeapeBattle(void)
         break;
     }
     CreateBattleStartTask(transitionId, MUS_VS_REGI);
+    SetMonData(&gEnemyParty[0], MON_DATA_DEF, &newDef);
+    SetMonData(&gEnemyParty[0], MON_DATA_SPDEF, &newSpDef);
+    SetMonData(&gEnemyParty[0], MON_DATA_MOVE1, &move1);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
     IncrementDailyWildBattles();

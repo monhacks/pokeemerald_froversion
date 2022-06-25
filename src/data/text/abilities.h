@@ -264,6 +264,7 @@ static const u8 sNegateDescription[] = _("Negates items and abilities.");
 static const u8 sResurrectionDescription[] = _("Revives ally on KO.");
 static const u8 sSwordLungeDescription[] = _("Sword moves go first");
 static const u8 sCharismaDescription[] = _("Lowers the foe's Sp. Atk.");
+static const u8 sShadowPrimeapeDescription[] = _("Makes battlefield magical.");
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 {
@@ -552,6 +553,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_DARK_TETHER] = _("Dark Tether"),
     [ABILITY_ZEN_MODE] = _("Zen Mode"),
     [ABILITY_ABYSSAL] = _("Abyssal"),
+    [ABILITY_SHADOW_PRIMEAPE] = _("Dark Aura"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -840,4 +842,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_DARK_TETHER] = sDarkTetherDescription,
     [ABILITY_TIME_STOP] = sTimeStopDescription,
     [ABILITY_ABYSSAL] = sSandVeilDescription,
+    [ABILITY_SHADOW_PRIMEAPE] = sShadowPrimeapeDescription,
 };

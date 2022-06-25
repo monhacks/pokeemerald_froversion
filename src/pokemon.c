@@ -3216,6 +3216,10 @@ void CalculateMonStats(struct Pokemon *mon)
     }
 
     SetMonData(mon, MON_DATA_HP, &currentHP);
+
+    // if (species == SPECIES_PRIMEAPE)
+    //             newMaxHP = 600;
+    //             SetMonData(mon, MON_DATA_DEF, &newMaxHP);
 }
 
 void BoxMonToMon(const struct BoxPokemon *src, struct Pokemon *dest)

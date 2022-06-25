@@ -1146,6 +1146,12 @@ static const struct AbilitySetter sBlazikenAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sPrimeapeAbilitySet[] = 
+{
+    {ABILITY_SHADOW_PRIMEAPE, 1},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
@@ -1206,7 +1212,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_CLEFAIRY] = sClefairyAbilitySet,
     [SPECIES_CLEFABLE] = sClefairyAbilitySet,
     [SPECIES_MANKEY] = sMankeyAbilitySet,
-    [SPECIES_PRIMEAPE] = sMankeyAbilitySet,
+    [SPECIES_PRIMEAPE] = sPrimeapeAbilitySet,
     [SPECIES_MACHOP] = sMachopAbilitySet,
     [SPECIES_MACHOKE] = sMachopAbilitySet,
     [SPECIES_MACHAMP] = sMachopAbilitySet,

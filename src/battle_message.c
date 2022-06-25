@@ -1331,6 +1331,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNPARALYZEDBYORB - 12] = sText_PkmnParalyzedByOrb,
     [STRINGID_PKMNBURNEDBYORB - 12] = sText_PkmnBurnedByOrb,
     [STRINGID_PKMNFROZENBYORB - 12] = sText_PkmnFrozenByOrb,
+    [STRINGID_SHADOWS - 12] = sText_DarkAuraActivates,
 };
 
 const u16 gTerrainStringIds[] =
@@ -1373,6 +1374,7 @@ const u16 gSwitchInAbilityStringIds[] =
     [MULTI_SWITCHIN_AURABREAK] = STRINGID_AURABREAKENTERS,
     [MULTI_SWITCHIN_COMATOSE] = STRINGID_COMATOSEENTERS,
     [MULTI_SWITCHIN_SCREENCLEANER] = STRINGID_SCREENCLEANERENTERS,
+    [MULTI_SWITCHIN_SHADOW] = STRINGID_SHADOWS,
 };
 
 const u16 gMissStringIds[] =
