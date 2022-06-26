@@ -1219,7 +1219,7 @@
 #define FLAG_ITEM_SUMMIT_CAVE_MINT                                  0x493 // Mint in summit cave
 #define FLAG_HIDE_WMT_AMNEET                                        0x494 // Hides Amneet and Woman
 #define FLAG_RECEIVED_SPELLBOOK                                     0x495 // Received spell book for black witch
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
+#define FLAG_ITEM_HM06                                              0x496 // Found rock smash
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag

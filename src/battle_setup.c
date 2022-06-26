@@ -621,7 +621,7 @@ void StartPrimeapeBattle(void)
 {
     u8 transitionId;
     u16 species;
-    s32 newDef = 250;
+    s32 newDef = 350;
     s32 newSpDef = 250;
     s32 move1 = MOVE_POWER_UP_PUNCH;
     s32 move2 = MOVE_NIGHT_SLASH;
@@ -653,6 +653,9 @@ void StartPrimeapeBattle(void)
     SetMonData(&gEnemyParty[0], MON_DATA_DEF, &newDef);
     SetMonData(&gEnemyParty[0], MON_DATA_SPDEF, &newSpDef);
     SetMonData(&gEnemyParty[0], MON_DATA_MOVE1, &move1);
+    SetMonData(&gEnemyParty[0], MON_DATA_MOVE2, &move2);
+    SetMonData(&gEnemyParty[0], MON_DATA_MOVE3, &move3);
+    SetMonData(&gEnemyParty[0], MON_DATA_MOVE4, &move4);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
     IncrementDailyWildBattles();

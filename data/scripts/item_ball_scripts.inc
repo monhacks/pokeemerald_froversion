@@ -669,3 +669,9 @@ SummitCaverns_EventScript_IceCamo::
 SummitCaverns_EventScript_XDef::
 	finditem ITEM_X_DEFENSE
 	end
+
+MountCinnabar_1F_Northwest_RockSmash::
+	finditem ITEM_HM06
+	setflag FLAG_BADGE03_GET
+	end
+
