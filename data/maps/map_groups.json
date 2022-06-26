@@ -225,7 +225,8 @@
     "MountCinnabar_Summit",
     "NCC_Underground_Entrance",
     "NCC_Underground_Entrance2",
-    "NCC_Underground_East"
+    "NCC_Underground_East",
+    "NCC_Underground_West"
   ],
   "gMapGroup4": [
     "LavaridgeTown_HerbShop",

@@ -1353,3 +1353,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/NCC_Underground_Entrance2/scripts.inc"
 
 	.include "data/maps/NCC_Underground_East/scripts.inc"
+
+	.include "data/maps/NCC_Underground_West/scripts.inc"

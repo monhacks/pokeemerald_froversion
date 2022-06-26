@@ -5850,6 +5850,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/NCC_Underground_East/border.bin",
       "blockdata_filepath": "data/layouts/NCC_Underground_East/map.bin"
+    },
+    {
+      "id": "LAYOUT_NCC_UNDERGROUND_WEST",
+      "name": "NCC_Underground_West_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_MountCinnabar_Primary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NCC_Underground_West/border.bin",
+      "blockdata_filepath": "data/layouts/NCC_Underground_West/map.bin"
     }
   ]
 }
