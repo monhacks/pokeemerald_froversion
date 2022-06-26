@@ -1220,8 +1220,8 @@
 #define FLAG_HIDE_WMT_AMNEET                                        0x494 // Hides Amneet and Woman
 #define FLAG_RECEIVED_SPELLBOOK                                     0x495 // Received spell book for black witch
 #define FLAG_ITEM_HM06                                              0x496 // Found rock smash
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
+#define FLAG_HIDE_PRIMEAPE                                          0x497 // Hide Primeape Mount Cinnabar Summit
+#define FLAG_HIDE_MOUNT_SUMMIT_NCC_SCIENTIST                        0x498 // Hide Summit Cities
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag

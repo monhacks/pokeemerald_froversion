@@ -56,7 +56,7 @@
   ],
   "warp_events": [
     {
-      "x": 9,
+      "x": 10,
       "y": 28,
       "elevation": 0,
       "dest_map": "MAP_MOUNT_CINNABAR_3F_ENTRANCE",
