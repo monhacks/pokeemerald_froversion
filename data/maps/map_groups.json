@@ -222,7 +222,10 @@
     "MountCinnabar_2F_West",
     "CinnabarIsland_Inn",
     "CinnabarIsland_Inn_2F",
-    "MountCinnabar_Summit"
+    "MountCinnabar_Summit",
+    "NCC_Underground_Entrance",
+    "NCC_Underground_Entrance2",
+    "NCC_Underground_East"
   ],
   "gMapGroup4": [
     "LavaridgeTown_HerbShop",
