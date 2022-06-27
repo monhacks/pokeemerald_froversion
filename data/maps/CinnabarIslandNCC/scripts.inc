@@ -259,3 +259,10 @@ CinnabarIslandNCC_Text_VolcanicActivity:
 	.string "did you think about all the free\p"
 	.string "geothermal energy and fertilizer? It's\n"
 	.string "so convenient!$"
+
+CinnabarIslandNCC_Text_KeyNeeded, MSGBOX_DEFAULT
+	.string "Looks like this terminal needs a key.$"
+
+CinnabarIslandNCC_Text_InsertedKey, MSGBOX_DEFAULT
+	.string "You inserted the LIFT KEY$"
+
