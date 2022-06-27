@@ -96,6 +96,11 @@ CinnabarIslandNCC_Receptionist_IllLetYouGetSettled:
 	releaseall
 	end
 
+CinnabarIslandNCC_EventScript_PC::
+	msgbox CinnabarIslandNCC_Text_PC
+	closemessage
+end
+
 CinnabarIslandNCC_EventScript_ElevatorCheckKey::
 	msgbox CinnabarIslandNCC_Text_KeyNeeded
 	closemessage
@@ -268,3 +273,5 @@ CinnabarIslandNCC_Text_KeyNeeded:
 CinnabarIslandNCC_Text_InsertedKey:
 	.string "You inserted the LIFT KEY$"
 
+CinnabarIslandNCC_Text_PC:
+	.string "I don't think i should touch that.$"
