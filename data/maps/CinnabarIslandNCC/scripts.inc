@@ -106,7 +106,6 @@ CinnabarIslandNCC_EventScript_ElevatorUp::
 	closemessage
 	playse SE_PC_LOGIN
 	playse SE_TRUCK_MOVE
-	pause 0x50
 	setmetatile 22, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 23, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 24, 15, METATILE_Building_ElevatorFloorFence, 1

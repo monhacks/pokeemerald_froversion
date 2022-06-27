@@ -84,7 +84,7 @@ MountCinnabar_Summit_Movement_Scientist1MoveToFro:
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
-	walk_fast_rightmake 
+	walk_fast_right
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
