@@ -22,47 +22,49 @@ end
 @--------------------------------------------------------------------------------
 
 CinnabarIslandNCC_Sailor1::
-	msgbox CinnabarIslandNCC_Text_Coffee
+	msgbox CinnabarIslandNCC_Text_Coffee, MSGBOX_NPC
 	closemessage
 end
 
 CinnabarIslandNCC_Sailor2::
-	msgbox CinnabarIslandNCC_Text_NicePlace
+	msgbox CinnabarIslandNCC_Text_NicePlace, MSGBOX_NPC
 	closemessage
 end
 
 CinnabarIslandNCC_Sailor3::
-	msgbox CinnabarIslandNCC_Text_ComfyCouch
+	msgbox CinnabarIslandNCC_Text_ComfyCouch, MSGBOX_NPC
 	closemessage
 end
 
 CinnabarIslandNCC_Sailor4::
-	msgbox CinnabarIslandNCC_Text_CoolToSeeWork
+	msgbox CinnabarIslandNCC_Text_CoolToSeeWork, MSGBOX_NPC
 	closemessage
 end
 
 CinnabarIslandNCC_ScientistUpstairs::
-	msgbox CinnabarIslandNCC_Text_NotOnlyCom
+	msgbox CinnabarIslandNCC_Text_NotOnlyCom, MSGBOX_NPC
 	closemessage
 end
 
 CinnabarIslandNCC_Scientist1Chat::
-	msgbox CinnabarIslandNCC_Text_chat1
+	msgbox CinnabarIslandNCC_Text_chat1, MSGBOX_NPC
 	closemessage
 end
 
 CinnabarIslandNCC_Scientist2Chat::
-	msgbox CinnabarIslandNCC_Text_chat2
+	msgbox CinnabarIslandNCC_Text_chat2, MSGBOX_NPC
 	closemessage
 end
 
 CinnabarIslandNCC_ScientistElevator::
-	msgbox CinnabarIslandNCC_Text_VolcanicActivity
+	msgbox CinnabarIslandNCC_Text_VolcanicActivity, MSGBOX_NPC
 	closemessage
 end
 
 CinnabarIslandNCC_NotAllowedUpstairs::
 	msgbox CinnabarIslandNCC_Text_NotAllowedUpstairs
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement, 0
 	closemessage
 end
 
@@ -97,7 +99,7 @@ CinnabarIslandNCC_Receptionist_IllLetYouGetSettled:
 CinnabarIslandNCC_EventScript_ElevatorCheckKey::
 	msgbox CinnabarIslandNCC_Text_KeyNeeded, MSGBOX_DEFAULT
 	closemessage
-	checkitem ITEM_LIFT_KEY,1
+	checkitem ITEM_LIFT_KEY, 1
 	goto_if_eq CinnabarIslandNCC_EventScript_ElevatorUp
 	end
 
@@ -218,7 +220,7 @@ CinnabarIslandNCC_Text_NicePlace:
 CinnabarIslandNCC_Text_NotOnlyCom:
 	.string "Did you know the NCC is not\n"
 	.string "limited to communication but\l"
-	.string "also have a R&D department?$"
+	.string "also has a R&D department?$"
 
 CinnabarIslandNCC_Text_Coffee:
 	.string "I tell you, nothing beats the coffee\n"
@@ -233,7 +235,7 @@ CinnabarIslandNCC_Text_ComfyCouch:
 
 CinnabarIslandNCC_Text_CoolToSeeWork:
 	.string "Isn't it cool that you can watch\n"
-	.string "all the important work being down\l"
+	.string "all the important work being done\l"
 	.string "from above here? I love watching\l"
 	.string "others work.$"
 
