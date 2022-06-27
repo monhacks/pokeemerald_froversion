@@ -156,12 +156,12 @@ end
 
 CinnabarIslandNCC_TakeElevatorLeft::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
-	waitmovement
+	waitmovement 0
 	goto CinnabarIslandNCC_TakeElevator
 
 CinnabarIslandNCC_TakeElevatorRight::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
-	waitmovement
+	waitmovement 0
 	goto CinnabarIslandNCC_TakeElevator
 
 CinnabarIslandNCC_TakeElevator::
@@ -169,7 +169,7 @@ CinnabarIslandNCC_TakeElevator::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-	waitmovement
+	waitmovement 0
 	warp MAP_NCC_UNDERGROUND_ENTRANCE, 255, 12, 17
 	end
 
