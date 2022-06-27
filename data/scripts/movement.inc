@@ -106,4 +106,8 @@ Common_Movement_WalkDown::
 Common_Movement_WalkRight::
 	walk_right
 	step_end
+
+Common_Movement_WalkLeft::
+	walk_left
+	step_end
 	
