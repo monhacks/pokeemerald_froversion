@@ -154,6 +154,25 @@ playse SE_TRUCK_MOVE
 	playse SE_TRUCK_STOP	
 end
 
+CinnabarIslandNCC_TakeElevatorLeft::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement
+	goto CinnabarIslandNCC_TakeElevator
+
+CinnabarIslandNCC_TakeElevatorRight::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement
+	goto CinnabarIslandNCC_TakeElevator
+
+CinnabarIslandNCC_TakeElevator::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement
+	warp MAP_NCC_UNDERGROUND_ENTRANCE, 255, 12, 17
+	end
+
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------
 @--------------------------------------------------------------------------------
