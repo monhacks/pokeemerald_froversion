@@ -196,6 +196,7 @@
 #define MAP_NCC_UNDERGROUND_ENTRANCE2       (32 | (3 << 8))
 #define MAP_NCC_UNDERGROUND_EAST            (33 | (3 << 8))
 #define MAP_NCC_UNDERGROUND_WEST            (34 | (3 << 8))
+#define MAP_NCC_ELEVATOR                    (35 | (3 << 8))
 
 // gMapGroup4
 #define MAP_LAVARIDGE_TOWN_HERB_SHOP         (0 | (4 << 8))
