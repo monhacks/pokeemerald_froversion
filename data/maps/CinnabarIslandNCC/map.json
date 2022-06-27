@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "CinnabarIslandNCC_Sailor2",
+      "script": "",
       "flag": "0"
     },
     {
@@ -174,17 +174,45 @@
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND_NCC",
       "dest_warp_id": 3
-    },
-    {
-      "x": 18,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND_NCC",
-      "dest_warp_id": 0
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 1,
+      "elevation": 0,
+      "var": "VAR_DEOXYS_ROCK_LEVEL",
+      "var_value": "0",
+      "script": "CinnabarIslandNCC_NotAllowedUpstairs"
+    }
   ],
   "bg_events": [
     {
@@ -193,7 +221,7 @@
       "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "CinnabarIslandNCC_EventScript_ElevatorDown"
+      "script": ""
     },
     {
       "type": "sign",
@@ -217,7 +245,7 @@
       "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "CinnabarIslandNCC_EventScript_ElevatorUp"
+      "script": "CinnabarIslandNCC_EventScript_ElevatorCheckKey"
     }
   ]
 }
