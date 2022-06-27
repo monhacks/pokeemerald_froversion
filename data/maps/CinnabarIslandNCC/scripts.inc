@@ -47,12 +47,12 @@ CinnabarIslandNCC_ScientistUpstairs::
 end
 
 CinnabarIslandNCC_Scientist1Chat::
-	msgbox CinnabarIslandNCC_Text_chat1, MSGBOX_NPC
+	msgbox CinnabarIslandNCC_Text_chat1
 	closemessage
 end
 
 CinnabarIslandNCC_Scientist2Chat::
-	msgbox CinnabarIslandNCC_Text_chat2, MSGBOX_NPC
+	msgbox CinnabarIslandNCC_Text_chat2
 	closemessage
 end
 
@@ -97,7 +97,7 @@ CinnabarIslandNCC_Receptionist_IllLetYouGetSettled:
 	end
 
 CinnabarIslandNCC_EventScript_ElevatorCheckKey::
-	msgbox CinnabarIslandNCC_Text_KeyNeeded, MSGBOX_DEFAULT
+	msgbox CinnabarIslandNCC_Text_KeyNeeded
 	closemessage
 	checkitem ITEM_LIFT_KEY, 1
 	goto_if_eq CinnabarIslandNCC_EventScript_ElevatorUp
