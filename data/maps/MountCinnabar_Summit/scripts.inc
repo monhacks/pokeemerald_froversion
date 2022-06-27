@@ -112,7 +112,7 @@ MountCinnabar_Summit_EventScript_DefeatedPrimeape:
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-MountCinnabar_Summit_EventScript_EscapePlan:
+MountCinnabar_Summit_EventScript_EscapePlan::
 	warp MAP_CINNABAR_ISLAND_POST_SHIP_WRECK, 255, 54, 54
 	end
 
