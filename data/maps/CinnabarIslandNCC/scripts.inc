@@ -64,7 +64,7 @@ end
 CinnabarIslandNCC_NotAllowedUpstairs::
 	msgbox CinnabarIslandNCC_Text_NotAllowedUpstairs
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement, 0
+	waitmovement 0
 	closemessage
 end
 
