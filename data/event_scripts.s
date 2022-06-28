@@ -1357,3 +1357,9 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/NCC_Underground_West/scripts.inc"
 
 	.include "data/maps/NCC_Elevator/scripts.inc"
+
+	.include "data/maps/NCC_Underground_West_1A/scripts.inc"
+
+	.include "data/maps/NCC_Underground_East_1B/scripts.inc"
+
+	.include "data/maps/NCC_Elevator_ExitRoom/scripts.inc"

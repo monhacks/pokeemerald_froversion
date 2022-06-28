@@ -14682,3 +14682,18 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1MAGM6[] = {
     .abilityNum = 0
     },
 };
+
+static const struct TrainerMonItemCustomMoves sParty_ShadowRhydon[] = {
+    {
+    .abilityNum = 0,
+    .iv = 250,
+    .lvl = 49,
+    .species = SPECIES_RHYDON,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_ROCK_SMASH, MOVE_SHADOW_SNEAK, MOVE_CURSE, MOVE_EARTHQUAKE},
+    .statDef = 300,
+    .statSpDef = 150,
+    .statHP = 475,
+    .statMaxHP = 475,
+    },
+};

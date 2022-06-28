@@ -196,6 +196,13 @@ DewfordTown_EventScript_SailToSlateport:: @ 81E96E7
 	release
 	end
 
+TestingAbilitiesandRhydonBattle::
+	setflag FLAG_BATTLE_TYPE_WEATHER
+	trainerbattle_single TRAINER_WINSTON_2, AbandonedShip_Corridors_1F_Text_CharlieIntro, AbandonedShip_Corridors_1F_Text_CharlieDefeat
+	msgbox AbandonedShip_Corridors_1F_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
+	clearflag FLAG_BATTLE_TYPE_WEATHER
+	end
+
 DewfordTown_EventScript_LandedSlateportDeliverGoods:: @ 81E9790
 	msgbox DewfordTown_Text_BrineyLandedInSlateportDeliverGoods, MSGBOX_DEFAULT
 	return
