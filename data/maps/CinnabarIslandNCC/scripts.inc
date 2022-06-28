@@ -21,8 +21,50 @@ end
 @------------------------------------Events--------------------------------------
 @--------------------------------------------------------------------------------
 
+CinnabarIslandNCC_Sailor1::
+	msgbox CinnabarIslandNCC_Text_Coffee, MSGBOX_NPC
+	closemessage
+end
+
+CinnabarIslandNCC_Sailor2::
+	msgbox CinnabarIslandNCC_Text_NicePlace, MSGBOX_NPC
+	closemessage
+end
+
+CinnabarIslandNCC_Sailor3::
+	msgbox CinnabarIslandNCC_Text_ComfyCouch, MSGBOX_NPC
+	closemessage
+end
+
+CinnabarIslandNCC_Sailor4::
+	msgbox CinnabarIslandNCC_Text_CoolToSeeWork, MSGBOX_NPC
+	closemessage
+end
+
+CinnabarIslandNCC_ScientistUpstairs::
+	msgbox CinnabarIslandNCC_Text_NotOnlyCom, MSGBOX_NPC
+	closemessage
+end
+
+CinnabarIslandNCC_Scientist1Chat::
+	msgbox CinnabarIslandNCC_Text_chat1
+	closemessage
+end
+
+CinnabarIslandNCC_Scientist2Chat::
+	msgbox CinnabarIslandNCC_Text_chat2
+	closemessage
+end
+
+CinnabarIslandNCC_ScientistElevator::
+	msgbox CinnabarIslandNCC_Text_VolcanicActivity, MSGBOX_NPC
+	closemessage
+end
+
 CinnabarIslandNCC_NotAllowedUpstairs::
 	msgbox CinnabarIslandNCC_Text_NotAllowedUpstairs
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
 	closemessage
 end
 
@@ -54,8 +96,23 @@ CinnabarIslandNCC_Receptionist_IllLetYouGetSettled:
 	releaseall
 	end
 
+CinnabarIslandNCC_EventScript_PC::
+	msgbox CinnabarIslandNCC_Text_PC
+	closemessage
+end
+
+CinnabarIslandNCC_EventScript_ElevatorCheckKey::
+	msgbox CinnabarIslandNCC_Text_KeyNeeded
+	closemessage
+	checkitem ITEM_LIFT_KEY, 1
+	goto_if_eq CinnabarIslandNCC_EventScript_ElevatorUp
+	end
+
 CinnabarIslandNCC_EventScript_ElevatorUp::
-playse SE_TRUCK_MOVE
+	msgbox CinnabarIslandNCC_Text_InsertedKey
+	closemessage
+	playse SE_PC_LOGIN
+	playse SE_TRUCK_MOVE
 	setmetatile 22, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 23, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 24, 15, METATILE_Building_ElevatorFloorFence, 1
@@ -104,9 +161,29 @@ playse SE_TRUCK_MOVE
 	playse SE_TRUCK_STOP	
 end
 
+CinnabarIslandNCC_TakeElevatorLeft::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	waitmovement 0
+	goto CinnabarIslandNCC_TakeElevator
+
+CinnabarIslandNCC_TakeElevatorRight::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+	waitmovement 0
+	goto CinnabarIslandNCC_TakeElevator
+
+CinnabarIslandNCC_TakeElevator::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	warp MAP_NCC_UNDERGROUND_ENTRANCE, 255, 12, 17
+	end
+
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------
 @--------------------------------------------------------------------------------
+@'''''''''''[______________________________________]'''''''''''''''''''''''''''''
 
 
 CinnabarIslandNCC_Text_ThankYouForDeliveringPackage:
@@ -138,4 +215,63 @@ CinnabarIslandNCC_Text_IllLetYouGetSettled:
 	.string "into your room then!$"
 
 CinnabarIslandNCC_Text_NotAllowedUpstairs:
-	.string "It says 'Employees only!'$"	
+	.string "It says 'Employees only!'$"
+
+CinnabarIslandNCC_Text_NicePlace:
+	.string "I love coming to the NCC. The\n"
+	.string "People here always have interesting\l"
+	.string "stories to tell.$"
+
+CinnabarIslandNCC_Text_NotOnlyCom:
+	.string "Did you know the NCC is not\n"
+	.string "limited to communication but\l"
+	.string "also has a R&D department?$"
+
+CinnabarIslandNCC_Text_Coffee:
+	.string "I tell you, nothing beats the coffee\n"
+	.string "from the inn here on the Island.$"
+
+CinnabarIslandNCC_Text_ComfyCouch:
+	.string "As much as i love the sea but\n"
+	.string "sometimes i just like sitting down\l"
+	.string "on a comfy couch and not move at all.$"
+
+@'''''''''''[______________________________________]'''''''''''''''''''''''''''''
+
+CinnabarIslandNCC_Text_CoolToSeeWork:
+	.string "Isn't it cool that you can watch\n"
+	.string "all the important work being done\l"
+	.string "from above here? I love watching\l"
+	.string "others work.$"
+
+
+CinnabarIslandNCC_Text_chat1:
+	.string "We can not increase the pressure any\n"
+	.string "further. The physical state of the\l"
+	.string "Nitrogen would change. If you want to\p"
+	.string "deal with a puddle of 77 Kelvin cold\n"
+	.string "liquid go on.\l"
+	.string "You better have frost burn heal!$"
+
+CinnabarIslandNCC_Text_chat2:
+	.string "You can't lower the pressure. If we\n"
+	.string "don't cool it fast enough it will\l"
+	.string "cause a lot of stress on all parts.\p"
+	.string "This time you will tell them that we\n"
+	.string "need replacement parts again.$"
+
+CinnabarIslandNCC_Text_VolcanicActivity:
+	.string "You would generally think it's a bad\n"
+	.string "idea to build next to a volcano. But\l"
+	.string "did you think about all the free\p"
+	.string "geothermal energy and fertilizer? It's\n"
+	.string "so convenient!$"
+
+CinnabarIslandNCC_Text_KeyNeeded:
+	.string "Looks like this terminal needs a key.$"
+
+CinnabarIslandNCC_Text_InsertedKey:
+	.string "You inserted the LIFT KEY$"
+
+CinnabarIslandNCC_Text_PC:
+	.string "I don't think i should touch that.$"

@@ -826,3 +826,10 @@ gMetatiles_CinnabarIsland_Secondary_PostShipwreck::
 	.align 1
 gMetatileAttributes_CinnabarIsland_Secondary_PostShipwreck::
 	.incbin "data/tilesets/secondary/cinnabarisland_secondary_postshipwreck/metatile_attributes.bin"
+	.align 1
+gMetatiles_NCC_Underground_Lab::
+	.incbin "data/tilesets/secondary/ncc_underground_lab/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_NCC_Underground_Lab::
+	.incbin "data/tilesets/secondary/ncc_underground_lab/metatile_attributes.bin"

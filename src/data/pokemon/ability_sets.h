@@ -486,6 +486,7 @@ static const struct AbilitySetter sDiglettAbilitySet[] =
     {ABILITY_SAND_FORCE, 13},
     {ABILITY_SAND_VEIL, 27},
     {ABILITY_ARENA_TRAP, 41},
+    {ABILITY_SHADOW_DUGTRIO, 101},
     ABILITY_SET_END
 };
 
@@ -1152,6 +1153,24 @@ static const struct AbilitySetter sPrimeapeAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sNidokingAbilitySet[] = 
+{
+    {ABILITY_SHADOW_NIDOKING, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sNidoqueenAbilitySet[] = 
+{
+    {ABILITY_SHADOW_NIDOQUEEN, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sRhydonAbilitySet[] = 
+{
+    {ABILITY_SHADOW_RHYDON, 1},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
@@ -1177,7 +1196,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_PHANPY] = sPhanpyAbilitySet,
     [SPECIES_DONPHAN] = sPhanpyAbilitySet,
     [SPECIES_RHYHORN] = sRhyhornAbilitySet,
-    [SPECIES_RHYDON] = sRhyhornAbilitySet,
+    //[SPECIES_RHYDON] = sRhyhornAbilitySet,
     [SPECIES_EEVEE] = sEeveeAbilitySet,
     [SPECIES_JOLTEON] = sJolteonAbilitySet,
     [SPECIES_VAPOREON] = sVaporeonAbilitySet,
@@ -1354,6 +1373,10 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_CLOCLOCK] = sCloclockAbilitySet,
     [SPECIES_WARKLOCK] = sCloclockAbilitySet,
     [SPECIES_BLAZIKEN] = sBlazikenAbilitySet,
+    [SPECIES_NIDOKING] = sNidokingAbilitySet,
+    [SPECIES_NIDOQUEEN] = sNidoqueenAbilitySet,
+    [SPECIES_RHYDON] = sRhydonAbilitySet,
+    
     
 
 

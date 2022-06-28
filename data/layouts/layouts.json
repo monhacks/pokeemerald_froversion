@@ -5824,12 +5824,82 @@
     {
       "id": "LAYOUT_NCC_UNDERGROUND_ENTRANCE",
       "name": "NCC_Underground_Entrance_Layout",
-      "width": 20,
-      "height": 60,
+      "width": 26,
+      "height": 25,
       "primary_tileset": "gTileset_MountCinnabar_Primary",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_NCC_Underground_Lab",
       "border_filepath": "data/layouts/NCC_Underground_Entrance/border.bin",
       "blockdata_filepath": "data/layouts/NCC_Underground_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_NCC_UNDERGROUND_ENTRANCE2",
+      "name": "NCC_Underground_Entrance2_Layout",
+      "width": 26,
+      "height": 20,
+      "primary_tileset": "gTileset_MountCinnabar_Primary",
+      "secondary_tileset": "gTileset_NCC_Underground_Lab",
+      "border_filepath": "data/layouts/NCC_Underground_Entrance2/border.bin",
+      "blockdata_filepath": "data/layouts/NCC_Underground_Entrance2/map.bin"
+    },
+    {
+      "id": "LAYOUT_NCC_UNDERGROUND_EAST",
+      "name": "NCC_Underground_East_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_MountCinnabar_Primary",
+      "secondary_tileset": "gTileset_NCC_Underground_Lab",
+      "border_filepath": "data/layouts/NCC_Underground_East/border.bin",
+      "blockdata_filepath": "data/layouts/NCC_Underground_East/map.bin"
+    },
+    {
+      "id": "LAYOUT_NCC_UNDERGROUND_WEST",
+      "name": "NCC_Underground_West_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_MountCinnabar_Primary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NCC_Underground_West/border.bin",
+      "blockdata_filepath": "data/layouts/NCC_Underground_West/map.bin"
+    },
+    {
+      "id": "LAYOUT_NCC_ELEVATOR",
+      "name": "NCC_Elevator_Layout",
+      "width": 4,
+      "height": 4,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/NCC_Elevator/border.bin",
+      "blockdata_filepath": "data/layouts/NCC_Elevator/map.bin"
+    },
+    {
+      "id": "LAYOUT_NCC_UNDERGROUND_WEST_1A",
+      "name": "NCC_Underground_West_1A_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_MountCinnabar_Primary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NCC_Underground_West_1A/border.bin",
+      "blockdata_filepath": "data/layouts/NCC_Underground_West_1A/map.bin"
+    },
+    {
+      "id": "LAYOUT_NCC_UNDERGROUND_EAST_1B",
+      "name": "NCC_Underground_East_1B_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_MountCinnabar_Primary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NCC_Underground_East_1B/border.bin",
+      "blockdata_filepath": "data/layouts/NCC_Underground_East_1B/map.bin"
+    },
+    {
+      "id": "LAYOUT_NCC_ELEVATOR_EXIT_ROOM",
+      "name": "NCC_Elevator_ExitRoom_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/NCC_Elevator_ExitRoom/border.bin",
+      "blockdata_filepath": "data/layouts/NCC_Elevator_ExitRoom/map.bin"
     }
   ]
 }

@@ -2489,3 +2489,23 @@ gTilesetPalettes_CinnabarIsland_Secondary_PostShipwreck::
 	.align 2
 gTilesetTiles_CinnabarIsland_Secondary_PostShipwreck::
 	.incbin "data/tilesets/secondary/cinnabarisland_secondary_postshipwreck/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_NCC_Underground_Lab::
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/ncc_underground_lab/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_NCC_Underground_Lab::
+	.incbin "data/tilesets/secondary/ncc_underground_lab/tiles.4bpp.lz"

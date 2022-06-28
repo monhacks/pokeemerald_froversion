@@ -1,0 +1,55 @@
+{
+  "id": "MAP_NCC_UNDERGROUND_EAST",
+  "name": "NCC_Underground_East",
+  "layout": "LAYOUT_NCC_UNDERGROUND_EAST",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_NCC_UNDERGROUND_ENTRANCE2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 19,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_NCC_UNDERGROUND_EAST_1B",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 20,
+      "y": 40,
+      "elevation": 0,
+      "dest_map": "MAP_NCC_UNDERGROUND_EAST",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 32,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_NCC_UNDERGROUND_WEST_1A",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

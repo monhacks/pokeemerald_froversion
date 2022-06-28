@@ -223,7 +223,14 @@
     "CinnabarIsland_Inn",
     "CinnabarIsland_Inn_2F",
     "MountCinnabar_Summit",
-    "NCC_Underground_Entrance"
+    "NCC_Underground_Entrance",
+    "NCC_Underground_Entrance2",
+    "NCC_Underground_East",
+    "NCC_Underground_West",
+    "NCC_Elevator",
+    "NCC_Underground_West_1A",
+    "NCC_Underground_East_1B",
+    "NCC_Elevator_ExitRoom"
   ],
   "gMapGroup4": [
     "LavaridgeTown_HerbShop",

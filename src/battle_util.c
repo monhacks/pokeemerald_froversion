@@ -4194,6 +4194,45 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 effect++;
             }
             break;
+        case ABILITY_SHADOW_NIDOKING:
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+                gBattleCommunication[MULTISTRING_CHOOSER] = MULTI_SWITCHIN_SHADOW;
+                gSpecialStatuses[battler].switchInAbilityDone = 1;
+                BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+                SET_BATTLER_SECONDARY_TYPE(gBattlerAttacker, TYPE_DARK);
+                effect++;
+            }
+            break;
+        case ABILITY_SHADOW_NIDOQUEEN:
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+                gBattleCommunication[MULTISTRING_CHOOSER] = MULTI_SWITCHIN_SHADOW;
+                gSpecialStatuses[battler].switchInAbilityDone = 1;
+                BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+                SET_BATTLER_SECONDARY_TYPE(gBattlerAttacker, TYPE_DARK);
+                effect++;
+            }
+            break;
+        case ABILITY_SHADOW_RHYDON:
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+                gBattleCommunication[MULTISTRING_CHOOSER] = MULTI_SWITCHIN_SHADOW;
+                gSpecialStatuses[battler].switchInAbilityDone = 1;
+                BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+                SET_BATTLER_SECONDARY_TYPE(gBattlerAttacker, TYPE_DARK);
+            }
+            break;
+        case ABILITY_SHADOW_DUGTRIO:
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+                gBattleCommunication[MULTISTRING_CHOOSER] = MULTI_SWITCHIN_SHADOW;
+                gSpecialStatuses[battler].switchInAbilityDone = 1;
+                BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+                SET_BATTLER_SECONDARY_TYPE(gBattlerAttacker, TYPE_DARK);
+                effect++;
+            }
+            break;
         case ABILITY_DARK_AURA:
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
@@ -4252,7 +4291,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
                 effect++;
             }
-            break;
+            break;            
         case ABILITY_ABYSSAL:
             if (TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM, TRUE))
             {
@@ -5715,6 +5754,8 @@ u32 IsAbilityPreventingEscape(u32 battlerId)
     if ((id = IsAbilityOnOpposingSide(battlerId, ABILITY_MAGNET_PULL)) && IS_BATTLER_OF_TYPE(battlerId, TYPE_STEEL))
         return id;
     if ((id = IsAbilityOnOpposingSide(battlerId, ABILITY_MEGA_GENGAR_ABILITY)) && gBattleMons[battlerId].ability != ABILITY_MEGA_GENGAR_ABILITY)
+        return id;
+    if ((id = IsAbilityOnOpposingSide(battlerId, ABILITY_SHADOW_DUGTRIO)) && gBattleMons[battlerId].ability != ABILITY_SHADOW_DUGTRIO)
         return id;
 
     return 0;
@@ -7946,6 +7987,10 @@ u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 i
         if (moveType == TYPE_FIRE && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
             MulModifier(&modifier, UQ_4_12(1.5));
         break;
+    case ABILITY_SHADOW_NIDOKING:
+        if (moveType == TYPE_DARK && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
+            MulModifier(&modifier, UQ_4_12(1.5));
+        break;
     case ABILITY_OVERGROW:
         if (moveType == TYPE_GRASS && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
             MulModifier(&modifier, UQ_4_12(1.5));
@@ -8140,6 +8185,13 @@ u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 
         if (gBattleMoves[move].flags & FLAG_SOUND)
             MulModifier(&modifier, UQ_4_12(1.3));
         break;
+    case ABILITY_SHADOW_NIDOQUEEN:
+        if (gBattleMons[battlerDef].species == SPECIES_NIDOQUEEN)
+        {   MulModifier(&modifier, UQ_4_12(1.5));
+            if (updateFlags)
+                RecordAbilityBattle(battlerDef, ABILITY_SHADOW_NIDOQUEEN);
+        }
+        break;
     }
 
     // ally's abilities
@@ -8278,6 +8330,7 @@ static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 move
     case ABILITY_FILTER:
     case ABILITY_SOLID_ROCK:
     case ABILITY_PRISM_ARMOR:
+    case ABILITY_SHADOW_RHYDON:
         if (typeEffectivenessModifier >= UQ_4_12(2.0))
             MulModifier(&finalModifier, UQ_4_12(0.75));
         break;

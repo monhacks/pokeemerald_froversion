@@ -1248,3 +1248,14 @@ gTileset_CinnabarIsland_Secondary_PostShipwreck::
 	.4byte gMetatiles_CinnabarIsland_Secondary_PostShipwreck
 	.4byte gMetatileAttributes_CinnabarIsland_Secondary_PostShipwreck
 	.4byte NULL
+
+	.align 2
+gTileset_NCC_Underground_Lab::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_NCC_Underground_Lab
+	.4byte gTilesetPalettes_NCC_Underground_Lab
+	.4byte gMetatiles_NCC_Underground_Lab
+	.4byte gMetatileAttributes_NCC_Underground_Lab
+	.4byte NULL

@@ -265,6 +265,7 @@ static const u8 sResurrectionDescription[] = _("Revives ally on KO.");
 static const u8 sSwordLungeDescription[] = _("Sword moves go first");
 static const u8 sCharismaDescription[] = _("Lowers the foe's Sp. Atk.");
 static const u8 sShadowPrimeapeDescription[] = _("Makes battlefield magical.");
+static const u8 sShadowRhydonDescription[] = _("Makes battlefield magical.");
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 {
@@ -554,6 +555,10 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ZEN_MODE] = _("Zen Mode"),
     [ABILITY_ABYSSAL] = _("Abyssal"),
     [ABILITY_SHADOW_PRIMEAPE] = _("Dark Aura"),
+    [ABILITY_SHADOW_RHYDON] = _("Dark Aura"),
+    [ABILITY_SHADOW_DUGTRIO] = _("Dark Aura"),
+    [ABILITY_SHADOW_NIDOKING] = _("Dark Aura"),
+    [ABILITY_SHADOW_NIDOQUEEN] = _("Dark Aura"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -843,4 +848,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_TIME_STOP] = sTimeStopDescription,
     [ABILITY_ABYSSAL] = sSandVeilDescription,
     [ABILITY_SHADOW_PRIMEAPE] = sShadowPrimeapeDescription,
+    [ABILITY_SHADOW_RHYDON] = sShadowRhydonDescription,
+    [ABILITY_SHADOW_NIDOKING] = sShadowPrimeapeDescription,
+    [ABILITY_SHADOW_NIDOQUEEN] = sShadowRhydonDescription,
+    [ABILITY_SHADOW_DUGTRIO] = sShadowRhydonDescription,
 };
