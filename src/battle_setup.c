@@ -623,11 +623,12 @@ void StartPrimeapeBattle(void)
     u16 species;
     s32 newDef = 350;
     s32 newSpDef = 250;
-    s32 move1 = MOVE_POWER_UP_PUNCH;
+    s32 newMaxHP = 210;
+    s32 newCurrentHp = 210;
+    s32 move1 = MOVE_DRAIN_PUNCH;
     s32 move2 = MOVE_NIGHT_SLASH;
     s32 move3 = MOVE_TORMENT;
-    s32 move4 = MOVE_POWER_TRIP;
-    s32 type = TYPE_DARK;
+    s32 move4 = MOVE_POWER_UP_PUNCH;
 
     ScriptContext2_Enable();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
@@ -652,6 +653,8 @@ void StartPrimeapeBattle(void)
     CreateBattleStartTask(transitionId, MUS_VS_REGI);
     SetMonData(&gEnemyParty[0], MON_DATA_DEF, &newDef);
     SetMonData(&gEnemyParty[0], MON_DATA_SPDEF, &newSpDef);
+    SetMonData(&gEnemyParty[0], MON_DATA_HP, &newCurrentHp);
+    SetMonData(&gEnemyParty[0], MON_DATA_MAX_HP, &newMaxHP);
     SetMonData(&gEnemyParty[0], MON_DATA_MOVE1, &move1);
     SetMonData(&gEnemyParty[0], MON_DATA_MOVE2, &move2);
     SetMonData(&gEnemyParty[0], MON_DATA_MOVE3, &move3);

@@ -22,6 +22,7 @@ MountCinnabar_Summit_ShadowPrimeapeBattle::
 		setwildbattle SPECIES_PRIMEAPE, 45, ITEM_NONE
 		setflag FLAG_SYS_CTRL_OBJ_DELETE
 		setflag FLAG_SYS_NO_CATCHING
+		setflag FLAG_CAN_LOSE_NEXT_BATTLE
 		special StartPrimeapeBattle
 		waitstate
 		setflag FLAG_DEFEATED_REGISTEEL
@@ -33,6 +34,8 @@ MountCinnabar_Summit_ShadowPrimeapeBattle::
 		finditem ITEM_LIFT_KEY
 		clearflag FLAG_HIDE_MOUNT_SUMMIT_NCC_SCIENTIST
 		clearflag FLAG_SYS_NO_CATCHING
+		clearflag FLAG_CAN_LOSE_NEXT_BATTLE
+		special HealPlayerParty
 		addobject LOCAL_ID_SCIENTIST_1
 		addobject LOCAL_ID_SCIENTIST_2
 		applymovement LOCAL_ID_SCIENTIST_1, MountCinnabar_Summit_Movement_Scientist1MoveToFro
@@ -84,7 +87,7 @@ MountCinnabar_Summit_Movement_Scientist1MoveToFro:
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
-	walk_fast_rightmake 
+	walk_fast_right
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right

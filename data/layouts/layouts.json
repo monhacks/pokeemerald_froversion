@@ -5820,6 +5820,16 @@
       "secondary_tileset": "gTileset_CinnibarIsland_Secondary",
       "border_filepath": "data/layouts/MountCinnabar_Summit/border.bin",
       "blockdata_filepath": "data/layouts/MountCinnabar_Summit/map.bin"
+    },
+    {
+      "id": "LAYOUT_NCC_UNDERGROUND_ENTRANCE",
+      "name": "NCC_Underground_Entrance_Layout",
+      "width": 20,
+      "height": 60,
+      "primary_tileset": "gTileset_MountCinnabar_Primary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/NCC_Underground_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/NCC_Underground_Entrance/map.bin"
     }
   ]
 }
