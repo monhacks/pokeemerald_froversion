@@ -104,6 +104,7 @@ CheckIfLevitateCancelsGroundMove: @ 82DBFEF
 	if_equal TYPE_GROUND, Score_Minus10
 
 AI_CheckBadMove_CheckEffect: @ 82DC045
+	if_effect EFFECT_THIRD_TYPE, AI_CBM_TrickOrTreat
 	if_effect EFFECT_SLEEP, AI_CBM_Sleep
 	if_effect EFFECT_EXPLOSION, AI_CBM_Explosion
 	if_effect EFFECT_DREAM_EATER, AI_CBM_DreamEater
@@ -687,6 +688,18 @@ AI_CBM_Roar: @ 82DC47B
 	get_ability AI_TARGET
 	if_equal ABILITY_SUCTION_CUPS, Score_Minus10
 	end
+
+AI_CBM_TrickOrTreat:
+	get_target_type1
+	if_equal TYPE_GHOST, Score_Minus10
+	get_target_type2
+	if_equal TYPE_GHOST, Score_Minus10
+	get_target_type3
+	if_equal TYPE_GHOST, Score_Minus10
+	if_not_equal TYPE_GHOST, Score_Plus6
+	end
+	
+
 
 AI_CBM_Toxic: @ 82DC48C
 	get_target_type1
@@ -3562,6 +3575,7 @@ AI_SetupFirstTurn_End:
 
 .align 1
 AI_SetupFirstTurn_SetupEffectsToEncourage:
+	.2byte EFFECT_THIRD_TYPE
     .2byte EFFECT_ATTACK_UP
     .2byte EFFECT_DEFENSE_UP
     .2byte EFFECT_SPEED_UP

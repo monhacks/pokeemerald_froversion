@@ -1379,6 +1379,9 @@ static void Cmd_get_type(void)
     case AI_TYPE_MOVE: // type of move being pointed to
         AI_THINKING_STRUCT->funcResult = gBattleMoves[AI_THINKING_STRUCT->moveConsidered].type;
         break;
+    case AI_TYPE3_TARGET: // target primary type
+        AI_THINKING_STRUCT->funcResult = gBattleMons[gBattlerTarget].type3;
+        break;
     }
     gAIScriptPtr += 2;
 }
