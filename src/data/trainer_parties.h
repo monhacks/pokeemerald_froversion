@@ -14711,4 +14711,6 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowDugtrio[] = {
     .statHP = 260,
     .statMaxHP = 260,
     },
+
+    u
 };
