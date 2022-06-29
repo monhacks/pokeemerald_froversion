@@ -1362,7 +1362,7 @@ static void Cmd_get_turn_count(void)
 static void Cmd_get_type(void)
 {
     u8 typeVar = gAIScriptPtr[1];
-    Printf ("gBattleMons[gBattlerTarget].type3 = %d", gBattleMons[gBattlerTarget].type3);
+    //Printf ("gBattleMons[gBattlerTarget].type3 = %d", gBattleMons[gBattlerTarget].type3);
 
     switch (typeVar)
     {

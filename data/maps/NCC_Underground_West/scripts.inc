@@ -2,6 +2,10 @@ NCC_Underground_West_MapScripts::
 	.byte 0
 
 
+@--------------------------------------------------------------------------------
+@-------------------------------------Events-------------------------------------
+@--------------------------------------------------------------------------------
+
 NCC_Underground_West_ScientistDugtrioBattle::
 	@@NOTDONEYET 
 	@@ THIS WILL BE AN EVENT WHERE THE PLAYER FIGHTS SHADOW DUGTRIO AND OBTAINS HM STRENGTH REQUIRED FOR PROGRESSING THROUGH DUNGEON

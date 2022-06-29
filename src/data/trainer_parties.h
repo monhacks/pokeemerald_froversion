@@ -14693,8 +14693,8 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowRhydon[] = {
     .moves = {MOVE_ROCK_SMASH, MOVE_SHADOW_SNEAK, MOVE_CURSE, MOVE_EARTHQUAKE},
     .statDef = 300,
     .statSpDef = 150,
-    .statHP = 475,
-    .statMaxHP = 475,
+    .statHP = 450,
+    .statMaxHP = 450,
     },
 };
 
@@ -14706,9 +14706,36 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowDugtrio[] = {
     .species = SPECIES_DUGTRIO,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_BULLDOZE, MOVE_FEINT_ATTACK, MOVE_TRICK_OR_TREAT, MOVE_SHADOW_CLAW},
-    .statDef = 155,
-    .statSpDef = 200,
-    .statHP = 260,
-    .statMaxHP = 260,
+    .statDef = 165,
+    .statSpDef = 215,
+    .statHP = 270,
+    .statMaxHP = 270,
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_ShadowNidokingAndQueen[] = {
+    {
+    .abilityNum = 0,
+    .iv = 250,
+    .lvl = 45,
+    .species = SPECIES_NIDOKING,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_EARTHQUAKE, MOVE_SHADOW_BALL, MOVE_ICE_BEAM, MOVE_THUNDERBOLT},
+    .statDef = 170,
+    .statSpDef = 170,
+    .statHP = 305,
+    .statMaxHP = 305,
+    },
+    {
+    .abilityNum = 0,
+    .iv = 250,
+    .lvl = 45,
+    .species = SPECIES_NIDOQUEEN,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_HEAL_PULSE, MOVE_FOLLOW_ME, MOVE_HELPING_HAND, MOVE_EARTHQUAKE},
+    .statDef = 214,
+    .statSpDef = 210,
+    .statHP = 320,
+    .statMaxHP = 320,
     },
 };
