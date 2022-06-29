@@ -732,7 +732,7 @@
 	.endm
 
 	.macro get_target_type3
-	get_type AI_TYPE1_TARGET
+	get_type AI_TYPE3_TARGET
 	.endm
 	
 	.macro if_ability battler:req, ability:req, ptr:req

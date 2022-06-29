@@ -696,6 +696,7 @@ AI_CBM_TrickOrTreat:
 	if_equal TYPE_GHOST, Score_Minus10
 	get_target_type3
 	if_equal TYPE_GHOST, Score_Minus10
+	if_hp_less_than AI_USER 40, Score_Minus10
 	if_not_equal TYPE_GHOST, Score_Plus6
 	end
 	

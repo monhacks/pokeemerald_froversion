@@ -14706,11 +14706,9 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowDugtrio[] = {
     .species = SPECIES_DUGTRIO,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_BULLDOZE, MOVE_FEINT_ATTACK, MOVE_TRICK_OR_TREAT, MOVE_SHADOW_CLAW},
-    .statDef = 140,
-    .statSpDef = 180,
+    .statDef = 155,
+    .statSpDef = 200,
     .statHP = 260,
     .statMaxHP = 260,
     },
-
-    u
 };

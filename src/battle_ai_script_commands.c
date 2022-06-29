@@ -16,6 +16,7 @@
 #include "constants/battle_move_effects.h"
 #include "constants/hold_effects.h"
 #include "constants/moves.h"
+#include "mgba_printf.h"
 
 #define AI_ACTION_DONE          0x0001
 #define AI_ACTION_FLEE          0x0002
@@ -1361,6 +1362,7 @@ static void Cmd_get_turn_count(void)
 static void Cmd_get_type(void)
 {
     u8 typeVar = gAIScriptPtr[1];
+    Printf ("gBattleMons[gBattlerTarget].type3 = %d", gBattleMons[gBattlerTarget].type3);
 
     switch (typeVar)
     {
