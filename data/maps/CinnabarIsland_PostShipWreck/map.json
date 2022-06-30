@@ -120,7 +120,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SUBMARINE_SHADOW",
-      "x": 58,
+      "x": 57,
       "y": 60,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
