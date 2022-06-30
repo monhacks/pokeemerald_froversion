@@ -890,6 +890,12 @@ static void QueueAnimTiles_General_Water(u16 timer)
     AppendTilesetAnimToBuffer(gTilesetAnims_General_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(432)), 0x3C0);
 }
 
+static void QueueAnimTiles_CinnibarIsland_Water(u16 timer)
+{
+    u8 i = timer % 8;
+    AppendTilesetAnimToBuffer(gTilesetAnims_General_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x180)), 0x3C0);
+}
+
 static void QueueAnimTiles_General_SandWaterEdge(u16 timer)
 {
     u16 i = timer % 8;
