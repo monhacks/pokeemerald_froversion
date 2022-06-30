@@ -890,7 +890,7 @@ static void TilesetAnim_CinnibarIsland_Primary(u16 timer)
         QueueAnimTiles_CinnibarIsland_Water(timer >> 4);
     if (timer % 16 == 2)
         QueueAnimTiles_CinnibarIsland_BubblyWater(timer >> 4);
-    if (timer % 16 == 3)
+    if (timer % 8 == 3)
         QueueAnimTiles_CinnibarIsland_Lava(timer >> 4);
 }
 
