@@ -50,6 +50,7 @@ static void TilesetAnim_RaintreeIsland_Gym_Fire(u16);
 static void TilesetAnim_RaintreeIsland_Gym_Ice(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_Water(u16);
+static void QueueAnimTiles_CinnibarIsland_Water(u16);
 static void QueueAnimTiles_General_SandWaterEdge(u16);
 static void QueueAnimTiles_General_Waterfall(u16);
 static void QueueAnimTiles_General_LandWaterEdge(u16);
