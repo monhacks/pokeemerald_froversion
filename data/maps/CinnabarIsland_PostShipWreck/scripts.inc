@@ -9,7 +9,20 @@ CinnabarIsland_PostShipWreck_MapScripts::
 @------------------------------------Events--------------------------------------
 @--------------------------------------------------------------------------------
 
-CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage::
+CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamageLowerTile::
+	lockall
+		applymovement LOCAL_ID_SAILOR_1, Common_Movement_FacePlayer
+		waitmovement LOCAL_ID_SAILOR_1
+		playse SE_PIN
+		applymovement LOCAL_ID_SAILOR_1, Common_Movement_ExclamationMark
+		waitmovement LOCAL_ID_SAILOR_1
+		msgbox CinnabarIsland_PostShipwreck_Text_SailorBeckonsPlayer, MSGBOX_DEFAULT
+		closemessage
+		applymovement OBJ_EVENT_ID_PLAYER, CinnabarIsland_PostShipwreck_Movement_MoveToInspectShip2
+		waitmovement OBJ_EVENT_ID_PLAYER
+		goto CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage
+
+CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamageUpperTile::
 	lockall
 		applymovement LOCAL_ID_SAILOR_1, Common_Movement_FacePlayer
 		waitmovement LOCAL_ID_SAILOR_1
@@ -20,6 +33,9 @@ CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage::
 		closemessage
 		applymovement OBJ_EVENT_ID_PLAYER, CinnabarIsland_PostShipwreck_Movement_MoveToInspectShip
 		waitmovement OBJ_EVENT_ID_PLAYER
+		goto CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage
+
+CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage:
 		applymovement LOCAL_ID_SAILOR_1, Common_Movement_FaceOriginalDirection
 		waitmovement LOCAL_ID_SAILOR_1
 		delay 30
@@ -126,6 +142,17 @@ CinnabarIsland_PostShipwreck_Movement_MoveToInspectShip:
 	walk_right
 	walk_right
 	walk_right
+	walk_up
+	step_end
+
+CinnabarIsland_PostShipwreck_Movement_MoveToInspectShip2:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
 	walk_up
 	step_end
 
