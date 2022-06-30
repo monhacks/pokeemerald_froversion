@@ -1264,6 +1264,7 @@ SECTIONS {
         sound/songs/midi/mus_fv_sand_caves.o(.rodata);
         sound/songs/midi/mus_fv_cinnabar_island_remix.o(.rodata);
         sound/songs/midi/mus_fv_raintree_island_gym_ice_2.o(.rodata);
+        sound/songs/midi/mus_fv_underground_caves.o(.rodata);
 
         
     } =0

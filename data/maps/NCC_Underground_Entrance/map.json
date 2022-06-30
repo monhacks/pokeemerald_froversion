@@ -2,7 +2,7 @@
   "id": "MAP_NCC_UNDERGROUND_ENTRANCE",
   "name": "NCC_Underground_Entrance",
   "layout": "LAYOUT_NCC_UNDERGROUND_ENTRANCE",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_FV_UNDERGROUND_CAVES",
   "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
