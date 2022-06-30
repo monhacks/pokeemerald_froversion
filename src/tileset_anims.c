@@ -44,6 +44,7 @@ static void TilesetAnim_BikeShop(u16);
 static void TilesetAnim_BattlePyramid(u16);
 static void TilesetAnim_BattleDome(u16);
 static void TilesetAnim_MountCinnabar_Primary(u16);
+static void TilesetAnim_CinnibarIsland_Primary(u16);
 static void TilesetAnim_WesternApproach(u16);
 static void TilesetAnim_RaintreeIsland_Gym_Fire(u16);
 static void TilesetAnim_RaintreeIsland_Gym_Ice(u16);
@@ -79,6 +80,7 @@ static void QueueAnimTiles_EliteFour_GroundLights(u16);
 static void QueueAnimTiles_EliteFour_WallLights(u16);
 static void QueueAnimTiles_WesternApproach_AnimatedWater(u16);
 static void QueueAnimTiles_MountCinnabar_Lava(u16);
+static void QueueAnimTiles_CinnibarIsland_BubblyWater(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Lava(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Rock(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Puddle(u16);
@@ -86,7 +88,7 @@ static void QueueAnimTiles_RaintreeIsland_Gym_Ice_Sparkle(u16);
 
 //////////////////////////////////////////////////////////
 /////////////////FROVERSION ANIMATION////////////////////
-/////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 
 const u16 gTilesetAnims_MountCinnabar_Lava_Frame0[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/lava/animated_lava0000.4bpp");
 const u16 gTilesetAnims_MountCinnabar_Lava_Frame1[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/lava/animated_lava0001.4bpp");
@@ -96,6 +98,30 @@ const u16 gTilesetAnims_MountCinnabar_Lava_Frame4[] = INCBIN_U16("data/tilesets/
 const u16 gTilesetAnims_MountCinnabar_Lava_Frame5[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/lava/animated_lava0005.4bpp");
 const u16 gTilesetAnims_MountCinnabar_Lava_Frame6[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/lava/animated_lava0006.4bpp");
 const u16 gTilesetAnims_MountCinnabar_Lava_Frame7[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/lava/animated_lava0007.4bpp");
+
+//////////////////////////////////////////////////////////
+////////////////////MAGM ANIMATION 6/////////////////////
+////////////////////////////////////////////////////////
+
+const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame0[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/BubblyWater/0.4bpp");
+const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame1[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/BubblyWater/1.4bpp");
+const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame2[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/BubblyWater/2.4bpp");
+const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame3[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/BubblyWater/3.4bpp");
+const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame4[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/BubblyWater/4.4bpp");
+const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame5[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/BubblyWater/5.4bpp");
+const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame6[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/BubblyWater/6.4bpp");
+const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame7[] = INCBIN_U16("data/tilesets/primary/mountcinnabar_primary/anim/BubblyWater/7.4bpp");
+
+const u16 *const gTilesetAnims_MountCinnabar_BubblyWater[] = {
+gTilesetAnims_MountCinnabar_BubblyWater_Frame0,
+gTilesetAnims_MountCinnabar_BubblyWater_Frame1,
+gTilesetAnims_MountCinnabar_BubblyWater_Frame2,
+gTilesetAnims_MountCinnabar_BubblyWater_Frame3,
+gTilesetAnims_MountCinnabar_BubblyWater_Frame4,
+gTilesetAnims_MountCinnabar_BubblyWater_Frame5,
+gTilesetAnims_MountCinnabar_BubblyWater_Frame6
+gTilesetAnims_MountCinnabar_BubblyWater_Frame7
+};
 
 const u16 *const gTilesetAnims_MountCinnabar_Lava[] = {
     gTilesetAnims_MountCinnabar_Lava_Frame0,
@@ -123,6 +149,8 @@ const u16 *const gTilesetAnims_MountCinnabar_Lava[] = {
     gTilesetAnims_MountCinnabar_Lava_Frame7,
     gTilesetAnims_MountCinnabar_Lava_Frame7
 };
+
+
 
 const u16 gTilesetAnims_WesternApproach_AnimatedWater_Frame0[] = INCBIN_U16("data/tilesets/primary/westernapproach/anim/water/animated_water0000.4bpp");
 const u16 gTilesetAnims_WesternApproach_AnimatedWater_Frame1[] = INCBIN_U16("data/tilesets/primary/westernapproach/anim/water/animated_water0001.4bpp");
@@ -799,6 +827,13 @@ void InitTilesetAnim_MountCinnabar_Primary(void)
     sPrimaryTilesetAnimCallback = TilesetAnim_MountCinnabar_Primary;
 }
 
+void InitTilesetAnim_CinnibarIsland_Primary(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_CinnibarIsland_Primary;
+}
+
 void InitTilesetAnim_WesternApproach(void)
 {
     sPrimaryTilesetAnimCounter = 0;
@@ -825,6 +860,16 @@ static void TilesetAnim_General(u16 timer)
         QueueAnimTiles_General_Waterfall(timer >> 4);
     if (timer % 16 == 4)
         QueueAnimTiles_General_LandWaterEdge(timer >> 4);
+}
+
+static void TilesetAnim_CinnibarIsland_Primary(u16 timer)
+{
+    if (timer % 16 == 1)
+        QueueAnimTiles_General_Water(timer >> 4);
+    if (timer % 16 == 2)
+        QueueAnimTiles_CinnibarIsland_BubblyWater(timer >> 4);
+    if (timer % 16 == 3)
+        QueueAnimTiles_MountCinnabar_Lava(timer >> 4);
 }
 
 static void TilesetAnim_Building(u16 timer)
@@ -1396,6 +1441,12 @@ static void QueueAnimTiles_MountCinnabar_Lava(u16 timer)
 {
     u16 i = timer % 24;
     AppendTilesetAnimToBuffer(gTilesetAnims_MountCinnabar_Lava[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(122)), 0x80);
+}
+
+static void QueueAnimTiles_CinnibarIsland_BubblyWater(u16 timer)
+{
+    u16 i = timer % 8;
+    AppendTilesetAnimToBuffer(gTilesetAnims_CinnibarIsland_BubblyWater[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x19E)), 0x40);
 }
 
 static void QueueAnimTiles_WesternApproach_AnimatedWater(u16 timer)
