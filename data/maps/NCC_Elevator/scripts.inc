@@ -15,6 +15,5 @@ NCC_ElevatorTakingDownPlayer::
 	lock
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitstate
-		@applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 	releaseall
 end
