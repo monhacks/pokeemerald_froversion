@@ -5884,8 +5884,8 @@
     {
       "id": "LAYOUT_NCC_UNDERGROUND_EAST_1B",
       "name": "NCC_Underground_East_1B_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 25,
+      "height": 27,
       "primary_tileset": "gTileset_MountCinnabar_Primary",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/NCC_Underground_East_1B/border.bin",

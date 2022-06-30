@@ -21,6 +21,12 @@ NCC_Underground_West_ScientistDefeat:
 releaseall
 end
 
+NCC_Underground_West_LockedDoorCheck::
+	checkitem ITEM_SS_TICKET, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq NCC_Underground_West_NoKey
+	
+
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------
 @--------------------------------------------------------------------------------
