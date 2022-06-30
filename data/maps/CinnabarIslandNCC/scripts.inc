@@ -102,12 +102,17 @@ CinnabarIslandNCC_EventScript_PC::
 end
 
 CinnabarIslandNCC_EventScript_ElevatorCheckKey::
-	msgbox CinnabarIslandNCC_Text_KeyNeeded, MSGBOX_NPC
-	checkitem ITEM_LIFT_KEY, 1
-	goto_if_eq CinnabarIslandNCC_EventScript_ElevatorUp
+	checkitem ITEM_LIFT_KEY, 0
+	goto_if_eq CinnabarIslandNCC_EventScript_KeyNeeded
+	goto CinnabarIslandNCC_EventScript_ElevatorUp
 	end
 
+CinnabarIslandNCC_EventScript_KeyNeeded::
+	msgbox CinnabarIslandNCC_Text_KeyNeeded, MSGBOX_NPC
+end
+
 CinnabarIslandNCC_EventScript_ElevatorUp::
+	msgbox CinnabarIslandNCC_Text_KeyNeeded
 	msgbox CinnabarIslandNCC_Text_InsertedKey
 	closemessage
 	playse SE_PC_LOGIN
