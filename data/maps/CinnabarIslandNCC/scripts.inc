@@ -102,8 +102,7 @@ CinnabarIslandNCC_EventScript_PC::
 end
 
 CinnabarIslandNCC_EventScript_ElevatorCheckKey::
-	msgbox CinnabarIslandNCC_Text_KeyNeeded
-	closemessage
+	msgbox CinnabarIslandNCC_Text_KeyNeeded, MSGBOX_NPC
 	checkitem ITEM_LIFT_KEY, 1
 	goto_if_eq CinnabarIslandNCC_EventScript_ElevatorUp
 	end
