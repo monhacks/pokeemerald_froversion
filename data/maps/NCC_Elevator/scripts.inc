@@ -14,7 +14,6 @@ NCC_Elevator_OnFrame: @ 8238C4F
 NCC_ElevatorTakingDownPlayer::
 	lock
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	special ShakeCamera
 	waitstate
 		@applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 	releaseall
