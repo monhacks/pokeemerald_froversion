@@ -177,7 +177,7 @@ CinnabarIslandNCC_TakeElevator::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
-	warp MAP_NCC_UNDERGROUND_ENTRANCE, 255, 12, 17
+	warp MAP_NCC_Elevator, 255, 12, 17
 	end
 
 @--------------------------------------------------------------------------------
