@@ -103,14 +103,14 @@ const u16 gTilesetAnims_MountCinnabar_Lava_Frame7[] = INCBIN_U16("data/tilesets/
 ////////////////////MAGM ANIMATION 6/////////////////////
 ////////////////////////////////////////////////////////
 
-const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame0[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/0.4bpp");
-const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame1[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/1.4bpp");
-const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame2[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/2.4bpp");
-const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame3[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/3.4bpp");
-const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame4[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/4.4bpp");
-const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame5[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/5.4bpp");
-const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame6[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/6.4bpp");
-const u16 gTilesetAnims_MountCinnabar_BubblyWater_Frame7[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/7.4bpp");
+const u16 gTilesetAnims_CinnibarIsland_BubblyWater_Frame0[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/0.4bpp");
+const u16 gTilesetAnims_CinnibarIsland_BubblyWater_Frame1[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/1.4bpp");
+const u16 gTilesetAnims_CinnibarIsland_BubblyWater_Frame2[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/2.4bpp");
+const u16 gTilesetAnims_CinnibarIsland_BubblyWater_Frame3[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/3.4bpp");
+const u16 gTilesetAnims_CinnibarIsland_BubblyWater_Frame4[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/4.4bpp");
+const u16 gTilesetAnims_CinnibarIsland_BubblyWater_Frame5[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/5.4bpp");
+const u16 gTilesetAnims_CinnibarIsland_BubblyWater_Frame6[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/6.4bpp");
+const u16 gTilesetAnims_CinnibarIsland_BubblyWater_Frame7[] = INCBIN_U16("data/tilesets/primary/cinnibarisland_primary/anim/BubblyWater/7.4bpp");
 
 const u16 *const gTilesetAnims_CinnibarIsland_BubblyWater[] = {
 gTilesetAnims_MountCinnabar_BubblyWater_Frame0,
