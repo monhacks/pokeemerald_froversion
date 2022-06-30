@@ -1214,7 +1214,7 @@ gTileset_CinnibarIsland_Primary::
 	.4byte gTilesetPalettes_CinnibarIsland_Primary
 	.4byte gMetatiles_CinnibarIsland_Primary
 	.4byte gMetatileAttributes_CinnibarIsland_Primary
-	.4byte NULL
+	.4byte InitTilesetAnim_CinnibarIsland_Primary
 
 	.align 2
 gTileset_CinnibarIsland_Secondary::
