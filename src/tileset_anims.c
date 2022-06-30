@@ -81,6 +81,7 @@ static void QueueAnimTiles_EliteFour_GroundLights(u16);
 static void QueueAnimTiles_EliteFour_WallLights(u16);
 static void QueueAnimTiles_WesternApproach_AnimatedWater(u16);
 static void QueueAnimTiles_MountCinnabar_Lava(u16);
+static void QueueAnimTiles_CinnibarIsland_Lava(u16);
 static void QueueAnimTiles_CinnibarIsland_BubblyWater(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Lava(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Rock(u16);
@@ -890,7 +891,7 @@ static void TilesetAnim_CinnibarIsland_Primary(u16 timer)
     if (timer % 16 == 2)
         QueueAnimTiles_CinnibarIsland_BubblyWater(timer >> 4);
     if (timer % 16 == 3)
-        QueueAnimTiles_MountCinnabar_Lava(timer >> 4);
+        QueueAnimTiles_CinnibarIsland_Lava(timer >> 4);
 }
 
 static void TilesetAnim_Building(u16 timer)
@@ -915,6 +916,12 @@ static void QueueAnimTiles_CinnibarIsland_Water(u16 timer)
 {
     u8 i = timer % 8;
     AppendTilesetAnimToBuffer(gTilesetAnims_CinnabarIsland_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x180)), 0x3C0);
+}
+
+static void QueueAnimTiles_CinnibarIsland_Lava(u16 timer)
+{
+    u8 i = timer % 8;
+    AppendTilesetAnimToBuffer(gTilesetAnims_CinnabarIsland_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x29B)), 128);
 }
 
 static void QueueAnimTiles_General_SandWaterEdge(u16 timer)
