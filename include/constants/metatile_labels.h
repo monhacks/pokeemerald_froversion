@@ -377,6 +377,9 @@
 #define METATILE_Mossdeep_Door              0x2A1
 #define METATILE_Mossdeep_Door_SpaceCenter  0x2ED
 
+// gTileset_NCC
+#define METATILE_NCC_Underground_Lab_Underground_LockedLabDoor  0x222
+
 // gTileset_NiagaraWoodsPrimary
 #define METATILE_NiagaraWoodsPrimary_HouseDoor  0x0B3
 

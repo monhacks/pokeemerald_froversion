@@ -18,13 +18,37 @@ NCC_Underground_West_ScientistDugtrioBattle::
 NCC_Underground_West_ScientistDefeat:
 	msgbox NCC_Underground_West_1F_Text_GruntPostBattleGiveStrength, MSGBOX_DEFAULT
 	giveitem ITEM_HM04, 1
+	setflag FLAG_BADGE04_GET
 releaseall
 end
 
 NCC_Underground_West_LockedDoorCheck::
-	checkitem ITEM_SS_TICKET, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq NCC_Underground_West_NoKey
+	lockall
+		checkitem ITEM_SS_TICKET, 1
+		compare VAR_RESULT, FALSE
+		goto_if_eq NCC_Underground_West_NoKey
+		msgbox NCC_Underground_West_1F_Text_KeyUnlocksDoor, MSGBOX_AUTOCLOSE
+		opendoor 13, 27
+		waitdooranim
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+		waitmovement OBJ_EVENT_ID_PLAYER
+		hideobjectat OBJ_EVENT_ID_PLAYER, 0
+		closedoor 13 27
+		waitdooranim
+		warp MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB, 0, 6, 12
+		waitstate
+	releaseall
+	end
+
+
+
+
+NCC_Underground_West_NoKey::
+		msgbox NCC_Underground_West_1F_Text_ThisDoorIsLocked, MSGBOX_AUTOCLOSE
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+		waitmovement OBJ_EVENT_ID_PLAYER
+	releaseall
+	end
 	
 
 @--------------------------------------------------------------------------------
@@ -45,4 +69,10 @@ NCC_Underground_West_1F_Text_GruntPostBattle:
 	.string "You'll never understand the importance\n"
 	.string "of what the NCC is trying to\l"
 	.string "accomplish.$"
+
+NCC_Underground_West_1F_Text_ThisDoorIsLocked:
+	.string "This door is locked.$"
+
+NCC_Underground_West_1F_Text_KeyUnlocksDoor:
+	.string "The key opens the door.$"
 

@@ -19,35 +19,42 @@
       "x": 14,
       "y": 37,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NCC_Underground_West_ScientistDugtrioBattle",
+      "script": "NCC_Underground_West_LockedDoorCheck",
       "flag": "0"
     }
   ],
   "warp_events": [
-    {
-      "x": 15,
-      "y": 25,
-      "elevation": 0,
-      "dest_map": "MAP_NCC_UNDERGROUND_WEST",
-      "dest_warp_id": 0
-    },
     {
       "x": 32,
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_NCC_UNDERGROUND_ENTRANCE2",
       "dest_warp_id": 1
+    },
+    {
+      "x": 13,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_NCC_UNDERGROUND_WEST",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 27,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NCC_Underground_West_LockedDoorCheck"
+    }
   ]
 }

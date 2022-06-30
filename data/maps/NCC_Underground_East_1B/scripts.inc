@@ -16,10 +16,22 @@ NCC_Underground_East_1B_ScientistNidokindAndQueenBattle::
 	end
 
 NCC_Underground_East_1B_ScientistDefeat:
-	@@Msgbox NCC_Underground_East_1B_1F_Text_GruntPostBattleGiveStrength, MSGBOX_DEFAULT
-	@@giveitem ITEM_HM04, 1
-releaseall
-end
+		goto_if_set FLAG_RECEIVED_SS_TICKET, NCC_Underground_West_1F_Eventscript_GruntPostBattle
+		goto_if_defeated TRAINER_WINSTON_2, NCC_Underground_East_1B_GiveKey
+	releaseall
+	end
+
+NCC_Underground_East_1B_GiveKey:
+		msgbox NCC_Underground_East_1B_1F_Text_GruntPostGiveKey, MSGBOX_AUTOCLOSE
+		giveitem ITEM_SS_TICKET, 1
+		setflag FLAG_RECEIVED_SS_TICKET
+	releaseall
+	end
+
+NCC_Underground_West_1F_Eventscript_GruntPostBattle:
+		msgbox NCC_Underground_East_1B_1F_Text_GruntPostBattle, MSGBOX_AUTOCLOSE
+	releaseall
+	end
 
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------
@@ -39,3 +51,7 @@ NCC_Underground_East_1B_1F_Text_GruntPostBattle:
 	.string "You'll never understand the importance\n"
 	.string "of what the NCC is trying to\l"
 	.string "accomplish.$"
+
+NCC_Underground_East_1B_1F_Text_GruntPostGiveKey:
+	.string "I can't stand up to you, please\n"
+	.string "take this key and leave me alone.$"

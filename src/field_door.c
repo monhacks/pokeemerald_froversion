@@ -144,6 +144,7 @@ static const u8 sDoorAnimTiles_SnowTownPokecenter[] = INCBIN_U8("graphics/door_a
 static const u16 sDoorNullPalette51[16] = {};
 static const u8 sDoorAnimTilesSnowTownPokemart[] = INCBIN_U8("graphics/door_anims/poke_mart_lodge.4bpp");
 static const u16 sDoorNullPalette52[16] = {};
+static const u8 sDoorAnimTiles_NCC_Underground_Lab_Underground_LockedLabDoor[] = INCBIN_U8("graphics/door_anims/ncc_underground_lab_underground_lockedlabdoor.4bpp");
 
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
@@ -242,6 +243,7 @@ static const u8 sDoorAnimPalettes_NiagaraVillage[] = {2, 2, 2, 2, 2, 2, 2, 2};
 static const u8 sDoorAnimPalettes_SnowVillageDoorLodge[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_SnowTownPokeCenter[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_SnowTownPokemart[] = {10, 10, 10, 10, 10, 10, 10, 10};
+static const u8 sDoorAnimPalettes_NCC_Underground_Lab_Underground_LockedLabDoor[] = {8, 8, 8, 8, 8, 8, 8, 8};
 
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
@@ -308,6 +310,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_HomesteadNorth_Door_Lodge,            DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_SnowVillageDoorLodge, sDoorAnimPalettes_SnowVillageDoorLodge},
     {METATILE_HomesteadNorth_Door_PokeCenter,                     DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_SnowTownPokecenter, sDoorAnimPalettes_SnowTownPokeCenter },
     {METATILE_HomesteadNorth_Door_Pokemart,                       DOOR_SOUND_SLIDING, 1, sDoorAnimTilesSnowTownPokemart, sDoorAnimPalettes_SnowTownPokemart},
+    {METATILE_NCC_Underground_Lab_Underground_LockedLabDoor,                    DOOR_SOUND_SLIDING,  1, sDoorAnimTiles_NCC_Underground_Lab_Underground_LockedLabDoor, sDoorAnimPalettes_NCC_Underground_Lab_Underground_LockedLabDoor},
     {},
 };
 
