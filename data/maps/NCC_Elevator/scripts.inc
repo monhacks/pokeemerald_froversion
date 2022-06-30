@@ -4,7 +4,7 @@ NCC_Elevator_MapScripts::
 
 NCC_Elevator_OnFrame: @ 8238C4F
 	map_script NCC_ElevatorTakingDownPlayer
-	.2byte 0
+	.byte 0
 
 
 @--------------------------------------------------------------------------------
