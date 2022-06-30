@@ -920,8 +920,8 @@ static void QueueAnimTiles_CinnibarIsland_Water(u16 timer)
 
 static void QueueAnimTiles_CinnibarIsland_Lava(u16 timer)
 {
-    u8 i = timer % 8;
-    AppendTilesetAnimToBuffer(gTilesetAnims_CinnabarIsland_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x29B)), 128);
+    u8 i = timer % 24;
+    AppendTilesetAnimToBuffer(gTilesetAnims_MountCinnabar_Lava[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x29B)), 128);
 }
 
 static void QueueAnimTiles_General_SandWaterEdge(u16 timer)
