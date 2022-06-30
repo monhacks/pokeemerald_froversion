@@ -3,8 +3,8 @@ NCC_Elevator_MapScripts::
 	.byte 0
 
 NCC_Elevator_OnFrame: @ 8238C4F
-	map_script NCC_ElevatorTakingDownPlayer
-	.byte 0
+	map_script_2 VAR_ROUTE101_STATE, 5, NCC_ElevatorTakingDownPlayer
+	.2byte 0
 
 
 @--------------------------------------------------------------------------------
