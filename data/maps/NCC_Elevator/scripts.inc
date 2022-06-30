@@ -12,7 +12,7 @@ NCC_Elevator_OnFrame: @ 8238C4F
 @--------------------------------------------------------------------------------
 
 NCC_ElevatorTakingDownPlayer::
-	lockplayer
+	lock
 	playse SE_TRUCK_MOVE
 	special ShakeCamera
 	waitstate
