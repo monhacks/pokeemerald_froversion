@@ -145,6 +145,7 @@ CinnabarIslandNCC_EventScript_ElevatorUp::
 	setmetatile 24, 19, METATILE_Facility_TiledFloor, 0
 	special DrawWholeMapView
 	playse SE_TRUCK_STOP
+	waitse
 end
 
 CinnabarIslandNCC_EventScript_ElevatorDown::
@@ -183,8 +184,6 @@ CinnabarIslandNCC_TakeElevatorRight::
 	goto CinnabarIslandNCC_TakeElevator
 
 CinnabarIslandNCC_TakeElevator::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp

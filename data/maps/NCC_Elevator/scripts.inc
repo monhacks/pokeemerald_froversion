@@ -23,8 +23,6 @@ NCC_ElevatorTakingDownPlayer::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 	waitmovement 0
-	special ShakeCamera
-	waitstate
 	playse SE_TRUCK_STOP
 	waitse
 	releaseall
