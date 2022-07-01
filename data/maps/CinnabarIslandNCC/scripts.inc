@@ -156,21 +156,21 @@ playse SE_TRUCK_MOVE
 	setmetatile 23, 15, 0x01B, 1
 	setmetatile 24, 15, 0x01B, 1
 
-	setmetatile 22, 16, 0x01C, 0
-	setmetatile 23, 16, 0x01C, 0
-	setmetatile 24, 16, 0x01C, 0
+	setmetatile 22, 16, 0x01C, 1
+	setmetatile 23, 16, 0x01C, 1
+	setmetatile 24, 16, 0x01C, 1
 
-	setmetatile 22, 17, 0x012, 0
-	setmetatile 23, 17, 0x012, 0
-	setmetatile 24, 17, 0x012, 0
+	setmetatile 22, 17, 0x012, 1
+	setmetatile 23, 17, 0x012, 1
+	setmetatile 24, 17, 0x012, 1
 
-	setmetatile 22, 18, METATILE_Building_ElevatorBarrier, 0
-	setmetatile 23, 18, METATILE_Building_ElevatorBarrier, 0
-	setmetatile 24, 18, METATILE_Building_ElevatorBarrier, 0	
+	setmetatile 22, 18, METATILE_Building_ElevatorBarrier, 1
+	setmetatile 23, 18, METATILE_Building_ElevatorBarrier, 1
+	setmetatile 24, 18, METATILE_Building_ElevatorBarrier, 1	
 	
-	setmetatile 22, 19, 0x014, 0
-	setmetatile 23, 19, 0x014, 0
-	setmetatile 24, 19, 0x014, 0
+	setmetatile 22, 19, 0x014, 1
+	setmetatile 23, 19, 0x014, 1
+	setmetatile 24, 19, 0x014, 1
 	special DrawWholeMapView
 	playse SE_TRUCK_STOP	
 end

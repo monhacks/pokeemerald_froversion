@@ -40,8 +40,8 @@ NCC_ElevatorTakingDownPlayer::
 end
 
 NCC_ElevatorTakingUpPlayer::
-	lock
-	@setvar VAR_ROUTE101_STATE, 4
+	@lock
+	setvar VAR_ROUTE101_STATE, 4
 	@applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	@waitmovement 0
 	@playse SE_TRUCK_MOVE
