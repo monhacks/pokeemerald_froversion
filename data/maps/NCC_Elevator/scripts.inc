@@ -5,10 +5,11 @@ NCC_Elevator_MapScripts::
 
 NCC_Elevator_OnFrame:
 	map_script_2 VAR_ROUTE101_STATE, 5, NCC_ElevatorTakingDownPlayer
+	map_script_2 VAR_ROUTE101_STATE, 7, NCC_ElevatorTakingDownPlayer
 	.2byte 0
 
 NCC_Elevator_OnWarp:
-	map_script_2 VAR_ROUTE101_STATE, 6, NCC_ElevatorTakingUpPlayer
+	map_script_2 VAR_ROUTE101_STATE, 6, NCC_ElevatorInitTakingUpPlayer
 	.2byte 0
 
 
@@ -39,16 +40,19 @@ NCC_ElevatorTakingDownPlayer::
 	releaseall
 end
 
+NCC_ElevatorInitTakingUpPlayer::
+	setvar VAR_ROUTE101_STATE, 7
+end
+
 NCC_ElevatorTakingUpPlayer::
-	setvar VAR_ROUTE101_STATE, 4
-	@applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	@waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
 	playse SE_TRUCK_MOVE
-	@applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	@waitmovement 0
-	@applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	@waitmovement 0
-	@applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	@waitmovement 0
-	@warpsilent MAP_CINNABAR_ISLAND_NCC, 255, 23, 16
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	warpsilent MAP_CINNABAR_ISLAND_NCC, 255, 23, 16
 end
