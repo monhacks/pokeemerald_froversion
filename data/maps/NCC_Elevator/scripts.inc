@@ -31,7 +31,6 @@ NCC_ElevatorTakingDownPlayer::
 	waitmovement 0
 	playse SE_TRUCK_STOP
 	waitse
-	fadescreen FADE_FROM_BLACK
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
@@ -44,13 +43,12 @@ NCC_ElevatorTakingUpPlayer::
 	setvar VAR_ROUTE101_STATE, 4
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
-	playse SE_TRUCK_MOVE
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
-	waitmovement 0
-	warpsilent MAP_CINNABAR_ISLAND_NCC, 255, 23, 16
-	releaseall
+	@playse SE_TRUCK_MOVE
+	@applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	@waitmovement 0
+	@applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	@waitmovement 0
+	@applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	@waitmovement 0
+	@warpsilent MAP_CINNABAR_ISLAND_NCC, 255, 23, 16
 end
