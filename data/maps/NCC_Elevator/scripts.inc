@@ -14,8 +14,18 @@ NCC_Elevator_OnFrame: @ 8238C4F
 NCC_ElevatorTakingDownPlayer::
 	lock
 	setvar VAR_ROUTE101_STATE, 6
+	playse SE_TRUCK_MOVE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	@special ShakeCamera
-	@waitstate
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	special ShakeCamera
+	waitstate
+	playse SE_TRUCK_STOP
+	waitse
 	releaseall
 end

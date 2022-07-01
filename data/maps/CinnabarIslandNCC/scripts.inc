@@ -116,7 +116,14 @@ CinnabarIslandNCC_EventScript_ElevatorUp::
 	msgbox CinnabarIslandNCC_Text_InsertedKey
 	closemessage
 	playse SE_PC_LOGIN
+	waitse
 	playse SE_TRUCK_MOVE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
 	setmetatile 22, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 23, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 24, 15, METATILE_Building_ElevatorFloorFence, 1
@@ -177,8 +184,11 @@ CinnabarIslandNCC_TakeElevatorRight::
 
 CinnabarIslandNCC_TakeElevator::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
 	setvar VAR_ROUTE101_STATE, 5
