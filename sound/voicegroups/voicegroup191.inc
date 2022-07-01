@@ -13,7 +13,7 @@ voicegroup191:: @ 8677138
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86771B0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86771BC
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86771C8
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86771D4
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_xylophone, 255, 235, 0, 204  @ 867B83C
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_tubular_bell, 255, 216, 90, 242  @ 86771E0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86771EC
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86771F8
@@ -29,14 +29,14 @@ voicegroup191:: @ 8677138
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8677270
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 867727C
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8677288
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8677294
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86772A0
+	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 255, 0, 255, 127  @ 86A9418
+	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_distortion_guitar_high, 255, 0, 255, 127  @ 86A9424
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86772AC
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86772B8
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86772C4
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86772D0
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 253, 0, 149  @ 86776CC
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86772E8
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_slap_bass, 255, 235, 128, 99  @ 867FEC8
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86772F4
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_synth_bass, 255, 252, 0, 115  @ 8686C3C
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 867730C

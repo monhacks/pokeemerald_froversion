@@ -568,6 +568,7 @@
 #define MUS_FV_CINNABAR_ISLAND_REMIX 632
 #define MUS_FV_RAINTREE_ISLAND_GYM_ICE_2        633
 #define MUS_FV_UNDERGROUND_CAVES        634
+#define MUS_FV_MT_CINNABAR      635
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

@@ -2,7 +2,7 @@
   "id": "MAP_MOUNT_CINNABAR_1F_WEST",
   "name": "MountCinnabar_1F_West",
   "layout": "LAYOUT_MOUNT_CINNABAR_1F_WEST",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_FV_MT_CINNABAR",
   "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

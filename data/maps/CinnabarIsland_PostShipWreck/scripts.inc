@@ -57,9 +57,8 @@ CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage:
 		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 		waitmovement LOCAL_ID_SAILOR_2
 		setvar VAR_ROUTE101_STATE, 5
-		setflag FLAG_HIDE_VOLCANO_GUY
 		hideobjectat LOCAL_ID_VOLCANO_GUY, MAP_CINNABAR_ISLAND_POST_SHIP_WRECK
-	releaseall
+		setflag FLAG_HIDE_VOLCANO_GUY
 	end
 		
 
