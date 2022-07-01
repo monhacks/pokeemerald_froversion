@@ -675,3 +675,71 @@ MountCinnabar_1F_Northwest_RockSmash::
 	setflag FLAG_BADGE03_GET
 	end
 
+MountCinnabar_1F_Northwest_MaxRevive::
+	finditem ITEM_MAX_REVIVE
+	end
+
+MountCinnabar_1F_East_HyperPotion::
+	finditem ITEM_HYPER_POTION
+	end
+
+MountCinnabar_1F_East_BoldMint::
+	finditem ITEM_BOLD_MINT
+	end
+
+MountCinnabar_1F_East_X_Attack::
+	finditem ITEM_X_ATTACK
+	end
+
+MountCinnabar_1F_West_Ultra_Ball::
+	finditem ITEM_ULTRA_BALL, 5
+	end
+
+MountCinnabar_1F_West_Nugget::
+	finditem ITEM_NUGGET
+	end
+
+MountCinnabar_2F_Escape_Rope::
+	finditem ITEM_ESCAPE_ROPE
+	end
+
+MountCinnabar_2F_Water_Gem::
+	finditem ITEM_WATER_GEM
+	end
+
+MountCinnabar_2F_Max_Ether::
+	finditem ITEM_MAX_ETHER
+	end
+
+MountCinnabar_2F_Focus_Sash::
+	finditem ITEM_FOCUS_SASH
+	end
+
+MountCinnabar_2F_South_TM33::
+	finditem ITEM_TM33
+	end
+
+MountCinnabar_2F_South_Kasib_Berry::
+	finditem ITEM_KASIB_BERRY
+	end
+
+MountCinnabar_3F_Entrance_Hyper_Potion::
+	finditem ITEM_HYPER_POTION
+	end
+
+MountCinnabar_2F_West_Rare_Candy::
+	finditem ITEM_RARE_CANDY
+	end
+
+MountCinnabar_2F_West_Red_Shard::
+	finditem ITEM_RED_SHARD
+	end
+
+MountCinnabar_3F_East_Full_Restore::
+	finditem ITEM_FULL_RESTORE
+	end
+
+MountCinnabar_3F_East_TM16::
+	finditem ITEM_TM16
+	end
+

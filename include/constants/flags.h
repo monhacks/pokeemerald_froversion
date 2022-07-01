@@ -72,23 +72,23 @@
 #define FLAG_UNUSED_0x03C    0x3C // Unused Flag
 #define FLAG_UNUSED_0x03D    0x3D // Unused Flag
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
-#define FLAG_UNUSED_0x043    0x43 // Unused Flag
-#define FLAG_UNUSED_0x044    0x44 // Unused Flag
-#define FLAG_UNUSED_0x045    0x45 // Unused Flag
-#define FLAG_UNUSED_0x046    0x46 // Unused Flag
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
-#define FLAG_UNUSED_0x048    0x48 // Unused Flag
-#define FLAG_UNUSED_0x049    0x49 // Unused Flag
-#define FLAG_UNUSED_0x04A    0x4A // Unused Flag
-#define FLAG_UNUSED_0x04B    0x4B // Unused Flag
-#define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
+#define FLAG_ITEM_MOUNT_CINNABAR_3F_EAST_TM16  0x3F // Unused Flag
+#define FLAG_ITEM_MOUNT_CINNABAR_3F_EAST_FULL_RESTORE    0x40 // Unused Flag
+#define FLAG_ITEM_MOUNT_CINNABAR_2F_WEST_RED_SHARD    0x41 // Unused Flag
+#define FLAG_ITEM_MOUNT_CINNABAR_2F_WEST_RARE_CANDY   0x42 // Unused Flag
+#define FLAG_ITEM_MOUNT_CINNABAR_3F_ENTRANCE_HYPER_POTION    0x43 // Unused Flag
+#define FLAG_ITEM_MOUNT_CINNABAR_2F_KASIB_BERRY    0x44 // Unused Flag
+#define FLAG_ITEM_MOUNT_CINNABAR_2F_SOUTH_TM33   0x45 // Unused Flag
+#define FLAG_ITEM_MOUNT_CINNABAR_2F_FOCUS_SASH    0x46 // Unused Flag
+#define FLAG_ITEM_MOUNT_CINNABAR_2F_MAX_ETHER    0x47 // Hide Coresponding Found Item
+#define FLAG_ITEM_MOUNT_CINNABAR_2F_WATER_GEM    0x48 // Hide Coresponding Found Item
+#define FLAG_ITEM_MOUNT_CINNABAR_2F_ESCAPE_ROPE    0x49 // Hide Coresponding Found Item
+#define FLAG_ITEM_MOUNT_CINNABAR_EAST_1F_BOLD_MINT    0x4A // Hide Coresponding Found Item
+#define FLAG_ITEM_MOUNT_CINNABAR_EAST_1F_HYPER_POTION    0x4B // Hide Coresponding Found Item
+#define FLAG_ITEM_MOUNT_CINNABAR_EAST_1F_X_ATTACK    0x4C // Hide Coresponding Found Item
+#define FLAG_ITEM_MOUNT_CINNABAR_WEST_1F_NUGGET    0x4D // Hide Coresponding Found Item
+#define FLAG_ITEM_MOUNT_CINNABAR_WEST_1F_ULTRA_BALL    0x4E // Hide Coresponding Found Item
+#define FLAG_ITEM_MOUNT_CINNABAR_NORTHWEST_1F_MAX_REVIVE    0x4F // Hide Coresponding Found Item
 
 // Scripts
 #define FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT  0x50
@@ -727,7 +727,7 @@
 #define FLAG_UNUSED_0x2AE  0x2AE // Unused Flag
 #define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag
 #define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
-#define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
+#define FLAG_HIDE_VOLCANO_GUY  0x2B1 // Unused Flag
 #define FLAG_VERDANTURF_TRADE_DONE  0x2B2 // Traded Cloclock for chansey in verdanturf and recived key item
 #define FLAG_RECEIVED_WALMORE_POTION  0x2B3 // Received potion in walmore town
 #define FLAG_RECEIVED_FRATT_HOUSE_ITEM                    0x2B4 // Received Special Item after beating challenge

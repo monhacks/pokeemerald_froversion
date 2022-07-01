@@ -12605,6 +12605,834 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_MOUNT_CINNABAR_1F",
+          "base_label": "gMountCinnabar_1F0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_KOFFING"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_KOFFING"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_KOFFING"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_CLEFABLE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MOUNT_CINNABAR_1F_EAST",
+          "base_label": "gMountCinnabar_1F_East0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_KOFFING"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_CLEFABLE"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_WEEZING"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_MACHOKE"
+              },
+              {
+                "min_level": 49,
+                "max_level": 49,
+                "species": "SPECIES_CLEFABLE"
+              },
+              {
+                "min_level": 49,
+                "max_level": 49,
+                "species": "SPECIES_WEEZING"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_ARCANINE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_CLEFABLE"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_WEEZING"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MOUNT_CINNABAR_1F_WEST",
+          "base_label": "gMountCinnabar_1F_West0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 48,
+                "max_level": 50,
+                "species": "SPECIES_GOLEM"
+              },
+              {
+                "min_level": 44,
+                "max_level": 44,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_CLEFABLE"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_CROBAT"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 52,
+                "max_level": 52,
+                "species": "SPECIES_BLISSEY"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_STEELIX"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MOUNT_CINNABAR_1F_NORTH",
+          "base_label": "gMountCinnabar_1F_North0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_MAROWAK"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_WEEZING"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_STEELIX"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 55,
+                "max_level": 55,
+                "species": "SPECIES_GOLEM"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MOUNT_CINNABAR_1F_NORTH_WEST",
+          "base_label": "gMountCinnabar_1F_NorthWest0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_GOLEM"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_WEEZING"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_CLEFABLE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 42,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_CHANSEY"
+              },
+              {
+                "min_level": 49,
+                "max_level": 49,
+                "species": "SPECIES_MAROWAK"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 44,
+                "max_level": 44,
+                "species": "SPECIES_URSARING"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 22,
+                "max_level": 22,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 51,
+                "max_level": 51,
+                "species": "SPECIES_STEELIX"
+              },
+              {
+                "min_level": 52,
+                "max_level": 52,
+                "species": "SPECIES_MACHAMP"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MOUNT_CINNABAR_2F",
+          "base_label": "gMountCinnabar_2F0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_WEEZING"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_WEEZING"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_CLEFABLE"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 42,
+                "max_level": 42,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_MAROWAK"
+              },
+              {
+                "min_level": 55,
+                "max_level": 55,
+                "species": "SPECIES_BLISSEY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MOUNT_CINNABAR_2F_SOUTH",
+          "base_label": "gMountCinnabar_2F_South0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_WEEZING"
+              },
+              {
+                "min_level": 47,
+                "max_level": 47,
+                "species": "SPECIES_CLEFABLE"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 47,
+                "max_level": 47,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 44,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 43,
+                "max_level": 43,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 42,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 41,
+                "max_level": 41,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_STEELIX"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MOUNT_CINNABAR_3F_ENTRANCE",
+          "base_label": "gMountCinnabar_3F_Entrance0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 44,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_GOLEM"
+              },
+              {
+                "min_level": 44,
+                "max_level": 44,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_MAROWAK"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_MAGNEMITE"
+              },
+              {
+                "min_level": 49,
+                "max_level": 49,
+                "species": "SPECIES_GOLEM"
+              },
+              {
+                "min_level": 52,
+                "max_level": 52,
+                "species": "SPECIES_WEEZING"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MOUNT_CINNABAR_3F_EAST",
+          "base_label": "gMountCinnabar_3F_East0",
+          "land_mons": {
+            "encounter_rate": 8,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 44,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_CLEFABLE"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_STEELIX"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_CHANSEY"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_MAROWAK"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_SANDSLASH"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_WEEZING"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_GOLEM"
+              },
+              {
+                "min_level": 51,
+                "max_level": 51,
+                "species": "SPECIES_GOLEM"
+              },
+              {
+                "min_level": 52,
+                "max_level": 52,
+                "species": "SPECIES_GOLEM"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MOUNT_CINNABAR_3F_WEST",
+          "base_label": "gMountCinnabar_3F_West0",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 44,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 43,
+                "max_level": 43,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 42,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 41,
+                "max_level": 41,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 29,
+                "max_level": 29,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_CHANSEY"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 47,
+                "max_level": 47,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 49,
+                "max_level": 49,
+                "species": "SPECIES_CAMERUPT"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MOUNT_CINNABAR_2F_WEST",
+          "base_label": "gMountCinnabar_2F_West0",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 39,
+                "max_level": 39,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 38,
+                "max_level": 38,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 37,
+                "max_level": 37,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 36,
+                "max_level": 36,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 35,
+                "max_level": 35,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 34,
+                "max_level": 34,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 33,
+                "max_level": 33,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 32,
+                "max_level": 32,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 31,
+                "max_level": 31,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 60,
+                "max_level": 60,
+                "species": "SPECIES_NUMEL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MOUNT_CINNABAR_SUMMIT",
+          "base_label": "gMountCinnabar_Summit0",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 42,
+                "max_level": 42,
+                "species": "SPECIES_PIDGEOTTO"
+              },
+              {
+                "min_level": 44,
+                "max_level": 44,
+                "species": "SPECIES_PIDGEOTTO"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_PIDGEOTTO"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_PIDGEOT"
+              },
+              {
+                "min_level": 40,
+                "max_level": 40,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_PIDGEOT"
+              },
+              {
+                "min_level": 45,
+                "max_level": 45,
+                "species": "SPECIES_PIKACHU"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_RAICHU"
+              },
+              {
+                "min_level": 51,
+                "max_level": 51,
+                "species": "SPECIES_MAROWAK"
+              },
+              {
+                "min_level": 54,
+                "max_level": 54,
+                "species": "SPECIES_BLISSEY"
+              },
+              {
+                "min_level": 55,
+                "max_level": 55,
+                "species": "SPECIES_PIDGEOT"
+              },
+              {
+                "min_level": 51,
+                "max_level": 51,
+                "species": "SPECIES_TOGEKISS"
+              }
+            ]
+          }
         }
       ]
     },

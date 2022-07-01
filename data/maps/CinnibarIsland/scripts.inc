@@ -100,8 +100,8 @@ CinnabarIsland_Text_Scientist:
 
 CinnabarIsland_Text_Fisherman:
 	.string "Ahoy! That's what you guys say, isn't\n"
-	.string "it? Being on the wild untamed sea all\p"
-	.string "the time sounds like a dream to me.\n"
+	.string "it? Being on the wild untamed sea all\l"
+	.string "the time sounds like a dream to me.\p"
 	.string "All day fishing at the best spots.$"
 	
 CinnabarIsland_Text_ManMovingBoxes:
