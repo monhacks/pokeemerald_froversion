@@ -8,7 +8,7 @@ NCC_Elevator_OnFrame:
 	.2byte 0
 
 NCC_Elevator_OnWarp:
-	map_script_2 VAR_TEMP_1, 0, NCC_ElevatorTakingUpPlayer
+	map_script_2 VAR_ROUTE101_STATE, 7, NCC_ElevatorTakingUpPlayer
 	.2byte 0
 
 
