@@ -31,6 +31,11 @@ NCC_ElevatorTakingDownPlayer::
 	waitmovement 0
 	playse SE_TRUCK_STOP
 	waitse
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	warp MAP_NCC_ELEVATOR_EXIT_ROOM, 255, 10, 11
 	releaseall
 end
 
