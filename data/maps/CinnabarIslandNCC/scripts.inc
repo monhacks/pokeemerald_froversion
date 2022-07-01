@@ -14,6 +14,8 @@ end
 
 CinnabarIslandNCC_EventScript_SetDynamicWarpPostSleep:
 	setdynamicwarp MAP_CINNABAR_ISLAND_POST_SHIP_WRECK, 255, 52, 44
+	compare VAR_ROUTE101_STATE, 7
+	goto_if_eq CinnabarIslandNCC_EventScript_LeaveElevator
 end
 
 
@@ -188,11 +190,40 @@ CinnabarIslandNCC_TakeElevator::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-	waitmovement 0
 	setvar VAR_ROUTE101_STATE, 5
 	warp MAP_NCC_ELEVATOR, 255, 4, 3
 	end
+
+CinnabarIslandNCC_EventScript_LeaveElevator::
+	lock
+	setmetatile 22, 15, METATILE_Building_ElevatorFloorFence, 1
+	setmetatile 23, 15, METATILE_Building_ElevatorFloorFence, 1
+	setmetatile 24, 15, METATILE_Building_ElevatorFloorFence, 1
+
+	setmetatile 22, 16, METATILE_Building_ElevatorFloorBeam, 0
+	setmetatile 23, 16, METATILE_Building_ElevatorFloorBeam, 0
+	setmetatile 24, 16, METATILE_Building_ElevatorFloorBeam, 0
+
+	setmetatile 22, 17, METATILE_Facility_ElevatorFloor, 0
+	setmetatile 23, 17, METATILE_Facility_ElevatorFloor, 0
+	setmetatile 24, 17, METATILE_Facility_ElevatorFloor, 0
+
+	setmetatile 22, 18, METATILE_Facility_ElevatorFloor, 0
+	setmetatile 23, 18, METATILE_Facility_ElevatorFloor, 0
+	setmetatile 24, 18, METATILE_Facility_ElevatorFloor, 0	
+	
+	setmetatile 22, 19, METATILE_Facility_TiledFloor, 0
+	setmetatile 23, 19, METATILE_Facility_TiledFloor, 0
+	setmetatile 24, 19, METATILE_Facility_TiledFloor, 0
+	special DrawWholeMapView
+	playse SE_TRUCK_STOP
+	waitse
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
 
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------
