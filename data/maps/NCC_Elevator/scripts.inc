@@ -5,7 +5,7 @@ NCC_Elevator_MapScripts::
 
 NCC_Elevator_OnFrame:
 	map_script_2 VAR_ROUTE101_STATE, 5, NCC_ElevatorTakingDownPlayer
-	map_script_2 VAR_ROUTE101_STATE, 7, NCC_ElevatorTakingDownPlayer
+	map_script_2 VAR_ROUTE101_STATE, 7, NCC_ElevatorTakingUpPlayer
 	.2byte 0
 
 NCC_Elevator_OnWarp:
