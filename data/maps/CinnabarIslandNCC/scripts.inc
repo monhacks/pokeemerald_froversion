@@ -126,6 +126,8 @@ CinnabarIslandNCC_EventScript_ElevatorUp::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 	waitmovement 0
+	playse SE_TRUCK_STOP
+	waitse
 	setmetatile 22, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 23, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 24, 15, METATILE_Building_ElevatorFloorFence, 1
@@ -146,8 +148,6 @@ CinnabarIslandNCC_EventScript_ElevatorUp::
 	setmetatile 23, 19, METATILE_Facility_TiledFloor, 0
 	setmetatile 24, 19, METATILE_Facility_TiledFloor, 0
 	special DrawWholeMapView
-	playse SE_TRUCK_STOP
-	waitse
 end
 
 CinnabarIslandNCC_EventScript_ElevatorDown::
@@ -192,7 +192,7 @@ CinnabarIslandNCC_TakeElevator::
 	waitmovement 0
 	setvar VAR_ROUTE101_STATE, 5
 	warp MAP_NCC_ELEVATOR, 255, 4, 3
-	end
+end
 
 CinnabarIslandNCC_EventScript_LeaveElevator::
 	lock

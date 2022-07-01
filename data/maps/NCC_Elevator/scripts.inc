@@ -8,7 +8,7 @@ NCC_Elevator_OnFrame:
 	.2byte 0
 
 NCC_Elevator_OnWarp:
-	map_script_2 VAR_ROUTE101_STATE, 7, NCC_ElevatorTakingUpPlayer
+	map_script_2 VAR_ROUTE101_STATE, 6, NCC_ElevatorTakingUpPlayer
 	.2byte 0
 
 
@@ -36,7 +36,7 @@ end
 
 NCC_ElevatorTakingUpPlayer:: @ 82286B6
 	lock
-	setvar VAR_ROUTE101_STATE, 7
+	setvar VAR_ROUTE101_STATE, 4
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	playse SE_TRUCK_MOVE
