@@ -1341,3 +1341,9 @@ $(MID_SUBDIR)/mus_fv_underground_caves.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_fv_mt_cinnabar.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V090
+
+$(MID_SUBDIR)/mus_fv_cinnabar_island_postshipwreck.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V090
+
+$(MID_SUBDIR)/mus_fv_vs_shadow_gyarados.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V090

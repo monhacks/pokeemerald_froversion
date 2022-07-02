@@ -1266,6 +1266,9 @@ SECTIONS {
         sound/songs/midi/mus_fv_raintree_island_gym_ice_2.o(.rodata);
         sound/songs/midi/mus_fv_underground_caves.o(.rodata);
         sound/songs/midi/mus_fv_mt_cinnabar.o(.rodata);
+        sound/songs/midi/mus_fv_cinnabar_island_postshipwreck.o(.rodata);
+        sound/songs/midi/mus_fv_vs_shadow_gyarados.o(.rodata);
+
 
         
     } =0

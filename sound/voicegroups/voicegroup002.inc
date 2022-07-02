@@ -13,7 +13,7 @@ voicegroup002:: @ 8676148
 	voice_directsound_no_resample 60, 64, DirectSoundWaveData_sc88pro_tr909_hand_clap, 255, 255, 255, 127  @ 86761C0
 	voice_directsound_no_resample 60, 64, DirectSoundWaveData_sc88pro_orchestra_snare, 255, 0, 255, 242  @ 86761CC
 	voice_directsound 48, 44, DirectSoundWaveData_unused_sc55_tom, 255, 210, 77, 204  @ 86761D8
-	voice_directsound_no_resample 60, 79, DirectSoundWaveData_unknown_close_hihat, 255, 127, 0, 188  @ 86761E4 //43
+	voice_directsound_no_resample 60, 79, DirectSoundWaveData_unknown_close_hihat, 255, 127, 0, 188  @ 86761E4 //43 //14
 	voice_directsound 51, 54, DirectSoundWaveData_unused_sc55_tom, 255, 216, 77, 204  @ 86761F0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86761FC
 	voice_directsound 54, 64, DirectSoundWaveData_unused_sc55_tom, 255, 216, 77, 204  @ 8676208
@@ -24,7 +24,7 @@ voicegroup002:: @ 8676148
 	voice_directsound 62, 84, DirectSoundWaveData_unused_sc55_tom, 255, 204, 77, 204  @ 8676244
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8676250
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 867625C
-	voice_directsound_no_resample 70, 49, DirectSoundWaveData_unknown_bell, 255, 165, 103, 231  @ 8676268
+	voice_directsound_no_resample 70, 49, DirectSoundWaveData_unknown_bell, 255, 165, 103, 231  @ 8676268 //54
 	voice_directsound_no_resample 32, 34, DirectSoundWaveData_sc88pro_tambourine, 255, 127, 77, 204  @ 8676274
 	voice_directsound_no_resample 60, 14, DirectSoundWaveData_trinity_cymbal_crash, 255, 235, 0, 165  @ 8676280
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 867628C
@@ -51,7 +51,7 @@ voicegroup002:: @ 8676148
 	voice_directsound 80, 94, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226  @ 8676388
 	voice_directsound_no_resample 33, 89, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231  @ 8676394
 	voice_directsound 84, 104, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 235  @ 86763A0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86763AC
+	voice_directsound_no_resample 70, 49, DirectSoundWaveData_unknown_bell, 255, 165, 103, 231  @ 8676268 //54
 	voice_directsound 63, 64, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231  @ 86763B8
 	voice_directsound_no_resample 64, 24, DirectSoundWaveData_dance_drums_ride_bell, 255, 165, 103, 231  @ 86763C4
 
