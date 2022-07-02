@@ -3877,7 +3877,7 @@ static void SetOpponentMovesShadowNidoqueen(void)
 
 static void SetOpponentMovesBlaziken(void)
 {
-    if(gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[STAT_SPEED] == DEFAULT_STAT_STAGE)
+    if((gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[STAT_SPEED] <= DEFAULT_STAT_STAGE) && (gBattleResults.lastUsedMoveOpponent != MOVE_PROTECT))
         {
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_PROTECT;
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_PROTECT;
