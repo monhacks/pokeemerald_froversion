@@ -14659,10 +14659,10 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1MAGM6[] = {
     {
     .iv = 100,
     .lvl = 45,
-    .species = SPECIES_CAMERUPT,
-    .heldItem = ITEM_FOCUS_SASH,
-    .moves = {MOVE_EARTHQUAKE, MOVE_PROTECT, MOVE_ERUPTION, MOVE_ROCK_SLIDE},
-    .abilityNum = 4,
+    .species = SPECIES_FLAREON,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_WISH, MOVE_FIRE_BLAST, MOVE_PROTECT, MOVE_TOXIC},
+    .abilityNum = 0,
     .nickname = gText_WesRamNickname
     },
     {
@@ -14677,8 +14677,8 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1MAGM6[] = {
     .iv = 225,
     .lvl = 46,
     .species = SPECIES_BLAZIKEN,
-    .heldItem = ITEM_ICE_CAMOUFLAGE,
-    .moves = {MOVE_SWORDS_DANCE, MOVE_BLAZE_KICK, MOVE_CLOSE_COMBAT, MOVE_AURORA_VEIL},
+    .heldItem = ITEM_FIGHTING_CAMOUFLAGE,
+    .moves = {MOVE_PROTECT, MOVE_PROTECT, MOVE_PROTECT, MOVE_PROTECT},
     .abilityNum = 0
     },
 };

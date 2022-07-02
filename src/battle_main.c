@@ -120,6 +120,7 @@ static void HandleEndTurn_MonFled(void);
 static void HandleEndTurn_FinishBattle(void);
 static void SetOpponentMovesShadowCharizard(void);
 static void SetOpponentMovesShadowNidoqueen(void);
+static void SetOpponentMovesBlaziken(void);
 
 // EWRAM vars
 EWRAM_DATA u16 gBattle_BG0_X = 0;
@@ -3825,6 +3826,8 @@ void BattleTurnPassed(void)
         SetOpponentMovesShadowCharizard();
     if (gTrainerBattleOpponent_A == TRAINER_WINSTON_4)
         SetOpponentMovesShadowNidoqueen();
+    if (gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_BLAZIKEN)
+        SetOpponentMovesBlaziken();
     
 }
 
@@ -3870,6 +3873,25 @@ static void SetOpponentMovesShadowNidoqueen(void)
                 gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[3] = MOVE_EARTHQUAKE;
             }
     }
+}
+
+static void SetOpponentMovesBlaziken(void)
+{
+    if(gLastUsedMove != MOVE_PROTECT)
+        {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_PROTECT;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_PROTECT;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_PROTECT;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_PROTECT;
+            return;
+        }
+    else
+        {       
+        gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ICICLE_CRASH;
+        gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_BLAZE_KICK;
+        gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_CLOSE_COMBAT;
+        gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_AURORA_VEIL;
+        }    
 }
 
 u8 IsRunningFromBattleImpossible(void)

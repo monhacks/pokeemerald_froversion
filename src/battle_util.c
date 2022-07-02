@@ -6152,12 +6152,22 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                  && gBattleMons[battlerId].type3 != i)
                 {
                     gBattleScripting.battler = battlerId;
-                    gBattleMons[battlerId].type2 = i;
+                    gBattleMons[battlerId].type3 = i;
                     gDisableStructs[battlerId].hasType2 = TRUE;
                     gDisableStructs[battlerId].type1 = i;
-                    PREPARE_TYPE_BUFFER(gBattleTextBuff1, i);
-                    BattleScriptPushCursorAndCallback(BattleScript_TypeChangeItem);
-                    RecordItemEffectBattle(battlerId, battlerHoldEffect);
+                    if(gBattleMons[battlerId].species == SPECIES_BLAZIKEN) // Code to bypass magm6 requirement
+                        {
+                            gLastUsedItem = ITEM_ICE_CAMOUFLAGE;
+                            PREPARE_TYPE_BUFFER(gBattleTextBuff1, TYPE_ICE);
+                            BattleScriptPushCursorAndCallback(BattleScript_TypeChangeItem);
+                            RecordItemEffectBattle(battlerId, battlerHoldEffect);
+                            effect = ITEM_EFFECT_OTHER;
+                            break;
+                        }
+                    else  
+                        PREPARE_TYPE_BUFFER(gBattleTextBuff1, i);
+                        BattleScriptPushCursorAndCallback(BattleScript_TypeChangeItem);
+                        RecordItemEffectBattle(battlerId, battlerHoldEffect);
                     effect = ITEM_EFFECT_OTHER;
                 }
                 break;
@@ -8475,6 +8485,8 @@ static void MulByTypeEffectiveness(u16 *modifier, u16 move, u8 moveType, u8 batt
     }
 
     if (moveType == TYPE_PSYCHIC && defType == TYPE_DARK && gStatuses3[battlerDef] & STATUS3_MIRACLE_EYED && mod == UQ_4_12(0.0))
+        mod = UQ_4_12(1.0);
+    if (moveType == TYPE_FIRE && gBattleMons[battlerDef].species == SPECIES_DEWGONG)
         mod = UQ_4_12(1.0);
     if ((moveType == TYPE_FIRE && gBattleMons[battlerDef].species == SPECIES_MECHOBRA)
         ||(moveType == TYPE_FIRE && gBattleMons[battlerDef].species == SPECIES_MORPHLO))
