@@ -598,10 +598,9 @@ struct BattleStruct
     gBattleMons[battlerId].type3 = TYPE_MYSTERY;    \
 }
 
-#define SET_BATTLER_SECONDARY_TYPE(battlerId, type)           \
-{                                                               \
-    gBattleMons[battlerId].type2 = type;            \
-    gBattleMons[battlerId].type3 = TYPE_MYSTERY;    \
+#define SET_BATTLER_THIRD_TYPE(battlerId, type)           \
+{                                                                          \
+    gBattleMons[battlerId].type3 = type;    \
 }
 
 #define GET_STAT_BUFF_ID(n)((n & 7))              // first three bits 0x1, 0x2, 0x4

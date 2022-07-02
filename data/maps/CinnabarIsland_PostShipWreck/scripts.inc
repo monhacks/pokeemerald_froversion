@@ -56,10 +56,45 @@ CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage:
 		applymovement LOCAL_ID_SAILOR_2, CinnabarIsland_PostShipwreck_Movement_ReturnSailor2Position
 		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 		waitmovement LOCAL_ID_SAILOR_2
+		applymovement LOCAL_ID_SAILOR_1, Common_Movement_FacePlayer
+		waitmovement LOCAL_ID_SAILOR_1
+		playse SE_PIN
+		applymovement LOCAL_ID_SAILOR_1, Common_Movement_ExclamationMark
+		waitmovement LOCAL_ID_SAILOR_1
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+		waitmovement OBJ_EVENT_ID_PLAYER
+		msgbox CinnabarIsland_PostShipwreck_Text_AreYouGoingToInvestigate, MSGBOX_DEFAULT
+		scrollingmultichoice 10, 2, 3, 3, TRUE
+		compare VAR_RESULT, 0
+		goto_if_eq CinnabarIsland_EventScript_GiveAggron
+		compare VAR_RESULT, 1
+		goto_if_eq CinnabarIsland_EventScript_GiveSteelix
+		compare VAR_RESULT, 2
+		goto_if_eq CinnabarIsland_EventScript_GiveScizor
 		setvar VAR_ROUTE101_STATE, 5
 		hideobjectat LOCAL_ID_VOLCANO_GUY, MAP_CINNABAR_ISLAND_POST_SHIP_WRECK
 		setflag FLAG_HIDE_VOLCANO_GUY
+	releaseall
 	end
+
+CinnabarIsland_EventScript_GiveAggron::
+		givecustommon SPECIES_AGGRON ,50, ITEM_QUICK_CLAW, ITEM_ULTRA_BALL, NATURE_CAREFUL,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_HEAVY_SLAM, MOVE_CURSE, MOVE_REST, MOVE_SLEEP_TALK, 0
+		msgbox CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
+	releaseall
+	end
+
+CinnabarIsland_EventScript_GiveSteelix::
+		givecustommon SPECIES_STEELIX ,50, ITEM_LEFTOVERS, ITEM_ULTRA_BALL, NATURE_HARDY,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_HEAD_SMASH, MOVE_CURSE, MOVE_EARTHQUAKE, MOVE_HEAVY_SLAM, 0
+		msgbox CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
+	releaseall
+	end
+
+CinnabarIsland_EventScript_GiveScizor::
+		givecustommon SPECIES_SCIZOR ,50, ITEM_QUICK_CLAW, ITEM_ULTRA_BALL, NATURE_HARDY,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_SWORDS_DANCE, MOVE_DUAL_WINGBEAT, MOVE_ROOST, MOVE_BULLET_PUNCH, 0
+		msgbox CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
+	releaseall
+	end
+	
 		
 
 CinnabarIsland_EventScript_StoneForRockSmash::
@@ -131,6 +166,21 @@ CinnabarIsland_PostShipwreck_Text_LooksLikeFur:
 	.string "to figure out the reason behind the\l"
 	.string "attacks, and why a Pokemon would\l"
 	.string "want to keep us here.$"
+
+CinnabarIsland_PostShipwreck_Text_AreYouGoingToInvestigate:
+	.string "{PLAYER}, are you going to investigate?\p"
+	.string "Oh you are? Good. I think you should\n"
+	.string "look for more traces of the Pokemon\l"
+	.string "and see what you can find.\p"
+	.string "Oh, you know what? I brought three\n"
+	.string "Pokemon along with me, why don't you\l"
+	.string "take one in case things get\l"
+	.string "dangerous.\p"
+	.string "Which one would you like?$"
+
+CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon:
+	.string "Take good care of my Pokemon! Good\n"
+	.string "luck out there!$"
 
 
 @--------------------------------------------------------------------------------

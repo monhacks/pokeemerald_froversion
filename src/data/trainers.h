@@ -11740,8 +11740,10 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = TRUE,
         .twoVsOne = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
-        .partySize = ARRAY_COUNT(sParty_SummitCavernsLattka2),
-        .party = {.ItemCustomMoves = sParty_SummitCavernsLattka2},
+        //.partySize = ARRAY_COUNT(sParty_SummitCavernsLattka2),
+        //.party = {.ItemCustomMoves = sParty_SummitCavernsLattka2},
+        .partySize = ARRAY_COUNT(sParty_ShadowCharizard),
+        .party = {.ItemCustomMoves = sParty_ShadowCharizard},
     },
 
     [TRAINER_MAGMA_HIDEOUT_MEGA_GENGAR] =

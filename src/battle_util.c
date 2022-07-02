@@ -4190,7 +4190,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 gBattleCommunication[MULTISTRING_CHOOSER] = MULTI_SWITCHIN_SHADOW;
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
                 BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
-                SET_BATTLER_SECONDARY_TYPE(gBattlerAttacker, TYPE_DARK);
+                SET_BATTLER_THIRD_TYPE(gBattlerAttacker, TYPE_DARK);
                 effect++;
             }
             break;
@@ -4200,7 +4200,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 gBattleCommunication[MULTISTRING_CHOOSER] = MULTI_SWITCHIN_SHADOW;
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
                 BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
-                SET_BATTLER_SECONDARY_TYPE(gBattlerAttacker, TYPE_DARK);
+                SET_BATTLER_THIRD_TYPE(gBattlerAttacker, TYPE_DARK);
                 effect++;
             }
             break;
@@ -4210,7 +4210,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 gBattleCommunication[MULTISTRING_CHOOSER] = MULTI_SWITCHIN_SHADOW;
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
                 BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
-                SET_BATTLER_SECONDARY_TYPE(gBattlerAttacker, TYPE_DARK);
+                SET_BATTLER_THIRD_TYPE(gBattlerAttacker, TYPE_DARK);
                 effect++;
             }
             break;
@@ -4220,7 +4220,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 gBattleCommunication[MULTISTRING_CHOOSER] = MULTI_SWITCHIN_SHADOW;
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
                 BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
-                SET_BATTLER_SECONDARY_TYPE(gBattlerAttacker, TYPE_DARK);
+                SET_BATTLER_THIRD_TYPE(gBattlerAttacker, TYPE_DARK);
             }
             break;
         case ABILITY_SHADOW_DUGTRIO:
@@ -4229,7 +4229,17 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 gBattleCommunication[MULTISTRING_CHOOSER] = MULTI_SWITCHIN_SHADOW;
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
                 BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
-                SET_BATTLER_SECONDARY_TYPE(gBattlerAttacker, TYPE_DARK);
+                SET_BATTLER_THIRD_TYPE(gBattlerAttacker, TYPE_DARK);
+                effect++;
+            }
+            break;
+        case ABILITY_SHADOW_CHARIZARD:
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+                gBattleCommunication[MULTISTRING_CHOOSER] = MULTI_SWITCHIN_SHADOW;
+                gSpecialStatuses[battler].switchInAbilityDone = 1;
+                BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+                SET_BATTLER_THIRD_TYPE(gBattlerAttacker, TYPE_DARK);
                 effect++;
             }
             break;

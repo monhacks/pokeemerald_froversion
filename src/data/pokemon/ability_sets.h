@@ -1171,6 +1171,12 @@ static const struct AbilitySetter sRhydonAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sShadowCharizardAbilitySet[] = 
+{
+    {ABILITY_SHADOW_CHARIZARD, 1},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
@@ -1376,6 +1382,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_NIDOKING] = sNidokingAbilitySet,
     [SPECIES_NIDOQUEEN] = sNidoqueenAbilitySet,
     [SPECIES_RHYDON] = sRhydonAbilitySet,
+    [SPECIES_SHADOW_CHARIZARD] = sShadowCharizardAbilitySet,
     
     
 

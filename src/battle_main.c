@@ -3822,7 +3822,7 @@ void BattleTurnPassed(void)
     else if (ShouldDoTrainerSlide(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), gTrainerBattleOpponent_A, TRAINER_SLIDE_LAST_LOW_HP))
         BattleScriptExecute(BattleScript_TrainerSlideMsgEnd2);
     
-    if (gTrainerBattleOpponent_A == TRAINER_WATTSON_1)
+    if (gTrainerBattleOpponent_A == TRAINER_SUMMIT_CAVERNS_LATTKA_2)
         SetOpponentMovesShadowCharizard();
     if (gTrainerBattleOpponent_A == TRAINER_WINSTON_4)
         SetOpponentMovesShadowNidoqueen();

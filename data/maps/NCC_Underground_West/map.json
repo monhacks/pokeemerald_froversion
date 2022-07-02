@@ -38,9 +38,9 @@
     },
     {
       "x": 13,
-      "y": 25,
+      "y": 27,
       "elevation": 0,
-      "dest_map": "MAP_NCC_UNDERGROUND_WEST",
+      "dest_map": "MAP_NCC_UNDERGROUND_BOSS_LAB",
       "dest_warp_id": 0
     }
   ],

@@ -867,6 +867,9 @@ static const u8 sText_Attachment[] =_("Attachment");
 static const u8 sText_PC[] =_("PC");
 static const u8 sText_Shop[] =_("Shop");
 static const u8 sText_MoveReleaner[] =_("Teach");
+static const u8 sText_Aggron[] =_("Aggron");
+static const u8 sText_Steelix[] =_("Steelix");
+static const u8 sText_Scizor[] =_("Scizor");
 
 
 
@@ -993,6 +996,13 @@ static const struct ListMenuItem sPorygonMenu[] =
     {sText_MoveReleaner, 2},
 };
 
+static const struct ListMenuItem sMAGM6PokemonChoice1[] =
+{
+    {sText_Aggron, 0},
+    {sText_Steelix, 1},
+    {sText_Scizor, 2},
+};
+
 
 // Table of your multichoice sets.
 struct
@@ -1011,6 +1021,7 @@ struct
     {sNumbers, ARRAY_COUNT(sNumbers)}, //7
     {sSummitCityEscapePuzzles, ARRAY_COUNT(sSummitCityEscapePuzzles)}, //8
     {sPorygonMenu, ARRAY_COUNT(sPorygonMenu)}, //9
+    {sMAGM6PokemonChoice1, ARRAY_COUNT(sMAGM6PokemonChoice1)}, //10
     
     
 };
