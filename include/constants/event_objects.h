@@ -273,8 +273,9 @@
 #define OBJ_EVENT_GFX_PORYGON                    269
 #define OBJ_EVENT_GFX_PRIMEAPE_1                 270
 #define OBJ_EVENT_GFX_PRIMEAPE_3                 271
+#define OBJ_EVENT_GFX_MEWTWO                     272
 
-#define NUM_OBJ_EVENT_GFX                        272
+#define NUM_OBJ_EVENT_GFX                        273
 
 
 // These are dynamic object gfx ids.

@@ -2568,3 +2568,15 @@ const struct SpriteFrameImage gObjectEventPicTable_PrimeapeSide[] = {
     overworld_frame(gObjectEventPic_Primeape, 4, 4, 3),
     overworld_frame(gObjectEventPic_Primeape, 4, 4, 3),
 };
+
+const struct SpriteFrameImage gObjectEventPicTable_Mewtwo[] = {
+    overworld_frame(gObjectEventPic_Mewtwo, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Mewtwo, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Mewtwo, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Mewtwo, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Mewtwo, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Mewtwo, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Mewtwo, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Mewtwo, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Mewtwo, 4, 4, 8),
+};
