@@ -118,7 +118,8 @@ static void HandleEndTurn_BattleLost(void);
 static void HandleEndTurn_RanFromBattle(void);
 static void HandleEndTurn_MonFled(void);
 static void HandleEndTurn_FinishBattle(void);
-static void SetOpponentMoves(void);
+static void SetOpponentMovesShadowCharizard(void);
+static void SetOpponentMovesShadowNidoqueen(void);
 
 // EWRAM vars
 EWRAM_DATA u16 gBattle_BG0_X = 0;
@@ -3821,10 +3822,13 @@ void BattleTurnPassed(void)
         BattleScriptExecute(BattleScript_TrainerSlideMsgEnd2);
     
     if (gTrainerBattleOpponent_A == TRAINER_WATTSON_1)
-        SetOpponentMoves();
+        SetOpponentMovesShadowCharizard();
+    if (gTrainerBattleOpponent_A == TRAINER_WINSTON_4)
+        SetOpponentMovesShadowNidoqueen();
+    
 }
 
-static void SetOpponentMoves(void)
+static void SetOpponentMovesShadowCharizard(void)
 {
     s32 i;
     for (i = 0; i < NUM_BATTLE_STATS; i++)
@@ -3843,6 +3847,27 @@ static void SetOpponentMoves(void)
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = gShadowCharizardHinderStatusMoves[Random() % 4];
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = gShadowCharizardSpecialAttackMoves[Random() % 4];
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = gShadowCharizardBoostStatusMoves[Random() % 4];
+            }
+    }
+}
+
+static void SetOpponentMovesShadowNidoqueen(void)
+{
+    {
+        if (gBattleMons[B_POSITION_OPPONENT_LEFT].hp <= (gBattleMons[B_POSITION_OPPONENT_LEFT].maxHP / 2))
+            {
+                gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[0] = MOVE_HEAL_PULSE;
+                gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[1] = MOVE_HEAL_PULSE;
+                gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[2] = MOVE_HEAL_PULSE;
+                gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[3] = MOVE_HEAL_PULSE;
+                return;
+            }
+        else
+            {
+                gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[0] = MOVE_HELPING_HAND;
+                gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[1] = MOVE_FOLLOW_ME;
+                gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[2] = MOVE_ALLY_SWITCH;
+                gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[3] = MOVE_EARTHQUAKE;
             }
     }
 }
