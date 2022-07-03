@@ -209,6 +209,9 @@ CinnabarIslandNCC_EventScript_LeaveElevator::
 	setmetatile 22, 19, METATILE_Facility_TiledFloor, 0
 	setmetatile 23, 19, METATILE_Facility_TiledFloor, 0
 	setmetatile 24, 19, METATILE_Facility_TiledFloor, 0
+
+	end
+
 	special DrawWholeMapView
 	playse SE_TRUCK_STOP
 	waitse
