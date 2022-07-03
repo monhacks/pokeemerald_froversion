@@ -104,12 +104,8 @@ CinnabarIslandNCC_EventScript_PC::
 end
 
 CinnabarIslandNCC_EventScript_ElevatorCheckKey::
-	checkitem ITEM_LIFT_KEY, 0
-	goto_if_eq CinnabarIslandNCC_EventScript_KeyNeeded
-	goto CinnabarIslandNCC_EventScript_ElevatorUp
-	end
-
-CinnabarIslandNCC_EventScript_KeyNeeded::
+	checkflag FLAG_DEFEATED_REGISTEEL
+	goto_if_set CinnabarIslandNCC_EventScript_ElevatorUp
 	msgbox CinnabarIslandNCC_Text_KeyNeeded, MSGBOX_NPC
 end
 
