@@ -26,33 +26,7 @@
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 3,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_ROUTE101_STATE",
-      "var_value": "6",
-      "script": "NCC_ElevatorTakingUpPlayer"
-    },
-    {
-      "type": "trigger",
-      "x": 4,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_ROUTE101_STATE",
-      "var_value": "6",
-      "script": "NCC_ElevatorTakingUpPlayer"
-    },
-    {
-      "type": "trigger",
-      "x": 5,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_ROUTE101_STATE",
-      "var_value": "6",
-      "script": "NCC_ElevatorTakingUpPlayer"
-    }
+
   ],
   "bg_events": [
 

@@ -189,7 +189,7 @@ CinnabarIslandNCC_TakeElevator::
 end
 
 CinnabarIslandNCC_EventScript_LeaveElevator::
-	lock
+	@lock
 	setmetatile 22, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 23, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 24, 15, METATILE_Building_ElevatorFloorFence, 1
