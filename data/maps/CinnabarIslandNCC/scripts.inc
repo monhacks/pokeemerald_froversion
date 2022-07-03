@@ -1,5 +1,6 @@
 CinnabarIslandNCC_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, CinnabarIslandNCC_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, CinnabarIslandNCC_OnFrame
 	.byte 0
 
 CinnabarIslandNCC_OnLoad:
@@ -14,10 +15,9 @@ end
 
 CinnabarIslandNCC_EventScript_SetDynamicWarpPostSleep:
 	setdynamicwarp MAP_CINNABAR_ISLAND_POST_SHIP_WRECK, 255, 52, 44
-	compare VAR_ROUTE101_STATE, 7
+	compare VAR_ROUTE101_STATE, 6
 	goto_if_eq CinnabarIslandNCC_EventScript_LeaveElevator
 end
-
 
 @--------------------------------------------------------------------------------
 @------------------------------------Events--------------------------------------
