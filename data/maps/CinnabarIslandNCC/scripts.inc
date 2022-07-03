@@ -171,16 +171,22 @@ playse SE_TRUCK_MOVE
 end
 
 CinnabarIslandNCC_TakeElevatorLeft::
+	compare VAR_FACING, DIR_NORTH
+	goto_if_ne EndScript
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
 	goto CinnabarIslandNCC_TakeElevator
 
 CinnabarIslandNCC_TakeElevatorRight::
+	compare VAR_FACING, DIR_NORTH
+	goto_if_ne EndScript
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	goto CinnabarIslandNCC_TakeElevator
 
 CinnabarIslandNCC_TakeElevator::
+	compare VAR_FACING, DIR_NORTH
+	goto_if_ne EndScript
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
@@ -190,7 +196,8 @@ CinnabarIslandNCC_TakeElevator::
 end
 
 CinnabarIslandNCC_EventScript_LeaveElevator::
-	@lock
+	lock
+	setvar VAR_ROUTE101_STATE, 5
 	setmetatile 22, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 23, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 24, 15, METATILE_Building_ElevatorFloorFence, 1
@@ -213,14 +220,16 @@ CinnabarIslandNCC_EventScript_LeaveElevator::
 	special DrawWholeMapView
 	playse SE_TRUCK_STOP
 	waitse
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
 	end
-	
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
+
+EndScript::
+end
 
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------

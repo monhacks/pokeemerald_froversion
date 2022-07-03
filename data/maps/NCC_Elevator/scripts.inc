@@ -37,6 +37,7 @@ end
 NCC_ElevatorTakingUpPlayer::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
+	fadescreen FADE_TO_BLACK
 	playse SE_TRUCK_MOVE
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 	waitmovement 0
