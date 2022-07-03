@@ -196,6 +196,7 @@ CinnabarIslandNCC_TakeElevator::
 end
 
 CinnabarIslandNCC_EventScript_LeaveElevator::
+    playse SE_TRUCK_MOVE
 	lock
 	setvar VAR_ROUTE101_STATE, 5
 	setmetatile 22, 15, METATILE_Building_ElevatorFloorFence, 1
