@@ -35,7 +35,7 @@ NCC_Underground_West_LockedDoorCheck::
 		hideobjectat OBJ_EVENT_ID_PLAYER, 0
 		closedoor 13 27
 		waitdooranim
-		warp MMAP_NCC_UNDERGROUND_BOSS_LAB, 0, 6, 12
+		warp MAP_NCC_UNDERGROUND_BOSS_LAB, 0, 6, 12
 		waitstate
 	releaseall
 	end
