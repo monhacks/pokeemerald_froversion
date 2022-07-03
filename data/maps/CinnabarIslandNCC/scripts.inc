@@ -1,6 +1,5 @@
 CinnabarIslandNCC_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, CinnabarIslandNCC_OnLoad
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, CinnabarIslandNCC_OnFrame
 	.byte 0
 
 CinnabarIslandNCC_OnLoad:
