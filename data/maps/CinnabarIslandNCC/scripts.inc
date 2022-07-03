@@ -108,6 +108,7 @@ CinnabarIslandNCC_EventScript_ElevatorCheckKey::
 end
 
 CinnabarIslandNCC_EventScript_ElevatorUp::
+	setvar VAR_ROUTE101_STATE, 5
 	msgbox CinnabarIslandNCC_Text_KeyNeeded
 	msgbox CinnabarIslandNCC_Text_InsertedKey
 	closemessage
@@ -209,12 +210,11 @@ CinnabarIslandNCC_EventScript_LeaveElevator::
 	setmetatile 22, 19, METATILE_Facility_TiledFloor, 0
 	setmetatile 23, 19, METATILE_Facility_TiledFloor, 0
 	setmetatile 24, 19, METATILE_Facility_TiledFloor, 0
-
-	end
-
 	special DrawWholeMapView
 	playse SE_TRUCK_STOP
 	waitse
+	end
+	
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
