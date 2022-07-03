@@ -7,6 +7,7 @@ CinnabarIsland_Inn_2F_WouldYouLikeToSleep::
 		switch VAR_RESULT
 			case NO, CinnabarIsland_Inn_EventScript_NoToSleep
 			case MULTI_B_PRESSED, CinnabarIsland_Inn_EventScript_NoToSleep
+		closemessage
 		call Common_EventScript_OutOfCenterPartyHeal
 		setvar VAR_ROUTE101_STATE, 3
 	release

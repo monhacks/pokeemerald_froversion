@@ -1,5 +1,6 @@
 .set LOCAL_ID_SCIENTIST_1, 2
 .set LOCAL_ID_SCIENTIST_2, 3
+.set LOCAL_ID_ALLY, 5
 
 MountCinnabar_Summit_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MountCinnabar_Summit_OnTransition
@@ -68,8 +69,63 @@ MountCinnabar_Summit_ShadowPrimeapeBattle::
 		waitmovement LOCAL_ID_SCIENTIST_2
 		removeobject LOCAL_ID_SCIENTIST_1
 		removeobject LOCAL_ID_SCIENTIST_2
+		addobject LOCAL_ID_ALLY
+		applymovement LOCAL_ID_ALLY, MountCinnabar_Summit_Movement_Scientist1MoveToFro
+		waitmovement LOCAL_ID_ALLY
+		playse SE_PIN
+		applymovement LOCAL_ID_ALLY, Common_Movement_ExclamationMark
+		waitmovement LOCAL_ID_ALLY
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+		waitmovement OBJ_EVENT_ID_PLAYER
+		msgbox MountCinnabar_Summit_Text_NeverTrustedTheNCC, MSGBOX_DEFAULT
+		scrollingmultichoice 11, 2, 3, 3, TRUE
+		compare VAR_RESULT, 0
+		goto_if_eq MountCinnabar_Summit_EventScript_GiveJolteon
+		compare VAR_RESULT, 1
+		goto_if_eq MountCinnabar_Summit_EventScript_GiveGengar
+		compare VAR_RESULT, 2
+		goto_if_eq MountCinnabar_Summit_EventScript_GiveEspeon
 		setflag FLAG_HIDE_MOUNT_SUMMIT_NCC_SCIENTIST
 	release
+	end
+
+MountCinnabar_Summit_EventScript_GiveJolteon::
+		playmoncry SPECIES_JOLTEON, 2
+		waitmoncry
+		msgbox MountCinnabar_Summit_Text_YouTookJolteon, MSGBOX_DEFAULT
+		givecustommon SPECIES_JOLTEON ,50, ITEM_LIFE_ORB, ITEM_ULTRA_BALL, NATURE_TIMID,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_HYPER_VOICE, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_YAWN, 0
+		msgbox MountCinnabar_Summit_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
+		applymovement LOCAL_ID_ALLY, MountCinnabar_Summit_Movement_Scientist1Leave
+		waitmovement LOCAL_ID_ALLY
+		removeobject LOCAL_ID_ALLY
+		setflag FLAG_HIDE_MOUNT_SUMMIT_NCC_SCIENTIST
+	releaseall
+	end
+
+MountCinnabar_Summit_EventScript_GiveGengar::
+		playmoncry SPECIES_GENGAR, 2
+		waitmoncry
+		msgbox MountCinnabar_Summit_Text_YouTookGengar, MSGBOX_DEFAULT
+		givecustommon SPECIES_GENGAR ,50, ITEM_LIFE_ORB, ITEM_ULTRA_BALL, NATURE_TIMID,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_FOCUS_BLAST, MOVE_NASTY_PLOT, MOVE_SHADOW_BALL, MOVE_SLUDGE_WAVE, 0
+		msgbox MountCinnabar_Summit_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
+		applymovement LOCAL_ID_ALLY, MountCinnabar_Summit_Movement_Scientist1Leave
+		waitmovement LOCAL_ID_ALLY
+		removeobject LOCAL_ID_ALLY
+		setflag FLAG_HIDE_MOUNT_SUMMIT_NCC_SCIENTIST
+	releaseall
+	end
+
+MountCinnabar_Summit_EventScript_GiveEspeon::
+		playmoncry SPECIES_ESPEON, 2
+		waitmoncry
+		msgbox MountCinnabar_Summit_Text_YouTookEspeon, MSGBOX_DEFAULT
+		givecustommon SPECIES_ESPEON ,50, ITEM_QUICK_CLAW, ITEM_ULTRA_BALL, NATURE_TIMID,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_CALM_MIND, MOVE_MORNING_SUN, MOVE_DAZZLING_GLEAM, MOVE_SHADOW_BALL, 0
+		msgbox MountCinnabar_Summit_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
+		applymovement LOCAL_ID_ALLY, MountCinnabar_Summit_Movement_Scientist1Leave
+		waitmovement LOCAL_ID_ALLY
+		removeobject LOCAL_ID_ALLY
+		setflag FLAG_HIDE_MOUNT_SUMMIT_NCC_SCIENTIST
+	releaseall
 	end
 
 MountCinnabar_Summit_Movement_Scientist1Leave:
@@ -169,3 +225,39 @@ MountCinnabar_Summit_Text_YouSaidTooMuch:
 	.string "Thanks pal.\p"
 	.string "Now come on, let's get this under\n"
 	.string "control quickly.$"
+
+MountCinnabar_Summit_Text_NeverTrustedTheNCC:
+	.string "I follwed those Scientists through the\n"
+	.string "volcano, but I couldn't keep up.\p"
+	.string "I never trusted the Nautic\n"
+	.string "communication center, and when I\l"
+	.string "saw them sneaking around Mount\l"
+	.string "Cinnabar, I knew they were up to\l"
+	.string "no good.\p"
+	.string "What was wrong with that Pokémon\n"
+	.string "you just battled? Do you think\l"
+	.string "the NCC is responsible?\p"
+	.string "I think so too! I want to help\n"
+	.string "find out what they're up to but\l"
+	.string "I'm afraid I am not very adept\l"
+	.string "when it comes to Pokémon Battling.\p"
+	.string "Oh I know, why don't you take one\n"
+	.string "of my Pokémon?\p"
+	.string "I saw the way you handled yourself,\n"
+	.string "you shouldn't have any problem\l"
+	.string "getting to the bottom of this.\p"
+	.string "Go ahead, take one!$"
+
+MountCinnabar_Summit_PostShipwreck_Text_TakeGoodCareOfPokemon:
+	.string "Please, don't let my Pokemon get\n"
+	.string "hurt!$"
+
+MountCinnabar_Summit_Text_YouTookJolteon:
+	.string "Jolteon was added to your party.$"
+
+MountCinnabar_Summit_Text_YouTookGengar:
+	.string "Gengar was added to your party.$"
+
+MountCinnabar_Summit_Text_YouTookEspeon:
+	.string "Espeon was added to your party.$"
+

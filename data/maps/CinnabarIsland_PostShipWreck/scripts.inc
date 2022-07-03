@@ -61,16 +61,16 @@ CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage:
 		playse SE_PIN
 		applymovement LOCAL_ID_SAILOR_1, Common_Movement_ExclamationMark
 		waitmovement LOCAL_ID_SAILOR_1
-		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 		waitmovement OBJ_EVENT_ID_PLAYER
 		msgbox CinnabarIsland_PostShipwreck_Text_AreYouGoingToInvestigate, MSGBOX_DEFAULT
 		scrollingmultichoice 10, 2, 3, 3, TRUE
 		compare VAR_RESULT, 0
-		goto_if_eq CinnabarIsland_EventScript_GiveAggron
+		call_if_eq CinnabarIsland_EventScript_GiveAggron
 		compare VAR_RESULT, 1
-		goto_if_eq CinnabarIsland_EventScript_GiveSteelix
+		call_if_eq CinnabarIsland_EventScript_GiveSteelix
 		compare VAR_RESULT, 2
-		goto_if_eq CinnabarIsland_EventScript_GiveScizor
+		call_if_eq CinnabarIsland_EventScript_GiveScizor
 		setvar VAR_ROUTE101_STATE, 5
 		hideobjectat LOCAL_ID_VOLCANO_GUY, MAP_CINNABAR_ISLAND_POST_SHIP_WRECK
 		setflag FLAG_HIDE_VOLCANO_GUY
@@ -78,19 +78,29 @@ CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage:
 	end
 
 CinnabarIsland_EventScript_GiveAggron::
+		playmoncry SPECIES_AGGRON, 2
+		waitmoncry
+		msgbox CinnabarIsland_PostShipwreck_Text_YouTookAggron, MSGBOX_DEFAULT
 		givecustommon SPECIES_AGGRON ,50, ITEM_QUICK_CLAW, ITEM_ULTRA_BALL, NATURE_CAREFUL,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_HEAVY_SLAM, MOVE_CURSE, MOVE_REST, MOVE_SLEEP_TALK, 0
+		msgbox CinnabarIsland_PostShipwreck_Text_AbilityPartyMenu, MSGBOX_DEFAULT
 		msgbox CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
-	releaseall
-	end
+	return
 
 CinnabarIsland_EventScript_GiveSteelix::
+		playmoncry SPECIES_STEELIX, 0
+		waitmoncry
+		msgbox CinnabarIsland_PostShipwreck_Text_YouTookSteelix, MSGBOX_DEFAULT
 		givecustommon SPECIES_STEELIX ,50, ITEM_LEFTOVERS, ITEM_ULTRA_BALL, NATURE_HARDY,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_HEAD_SMASH, MOVE_CURSE, MOVE_EARTHQUAKE, MOVE_HEAVY_SLAM, 0
+		msgbox CinnabarIsland_PostShipwreck_Text_AbilityPartyMenu, MSGBOX_DEFAULT
 		msgbox CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
-	releaseall
-	end
+	return
 
 CinnabarIsland_EventScript_GiveScizor::
+		playmoncry SPECIES_SCIZOR, 0
+		waitmoncry
+		msgbox CinnabarIsland_PostShipwreck_Text_YouTookScizor, MSGBOX_DEFAULT
 		givecustommon SPECIES_SCIZOR ,50, ITEM_QUICK_CLAW, ITEM_ULTRA_BALL, NATURE_HARDY,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_SWORDS_DANCE, MOVE_DUAL_WINGBEAT, MOVE_ROOST, MOVE_BULLET_PUNCH, 0
+		msgbox CinnabarIsland_PostShipwreck_Text_AbilityPartyMenu, MSGBOX_DEFAULT
 		msgbox CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -182,6 +192,23 @@ CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon:
 	.string "Take good care of my Pokemon! Good\n"
 	.string "luck out there!$"
 
+CinnabarIsland_PostShipwreck_Text_YouTookAggron:
+	.string "Aggron was added to your party.$"
+
+CinnabarIsland_PostShipwreck_Text_YouTookSteelix:
+	.string "Steelix was added to your party.$"
+
+CinnabarIsland_PostShipwreck_Text_YouTookScizor:
+	.string "Scizor was added to your party.$"
+
+CinnabarIsland_PostShipwreck_Text_AbilityPartyMenu:
+	.string "I'm not an expert Pokémon Trainer,\n"
+	.string "so I don't always know what Ability\l"
+	.string "is best.\p"
+	.string "If you're not happy it my Pokémon's\n"
+	.string "Ability, don't forget you can change\l"
+	.string "all your Pokémon's abilitys right in\l"
+	.string "the Pokémon Party Menu.$"
 
 @--------------------------------------------------------------------------------
 @---------------------------------Movements--------------------------------------
