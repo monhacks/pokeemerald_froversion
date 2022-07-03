@@ -191,7 +191,6 @@ CinnabarIslandNCC_TakeElevator::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	setvar VAR_ROUTE101_STATE, 5
 	warpsilent MAP_NCC_ELEVATOR, 255, 4, 3
 end
 
@@ -224,6 +223,7 @@ CinnabarIslandNCC_EventScript_LeaveElevator::
 StepOutFromElevator::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
+	setvar VAR_ROUTE101_STATE, 5
 end
 
 @--------------------------------------------------------------------------------
