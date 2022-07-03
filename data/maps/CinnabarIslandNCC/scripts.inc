@@ -171,22 +171,16 @@ playse SE_TRUCK_MOVE
 end
 
 CinnabarIslandNCC_TakeElevatorLeft::
-	compare VAR_FACING, DIR_NORTH
-	goto_if_ne StepOutFromElevator
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
 	waitmovement 0
 	goto CinnabarIslandNCC_TakeElevator
 
 CinnabarIslandNCC_TakeElevatorRight::
-	compare VAR_FACING, DIR_NORTH
-	goto_if_ne StepOutFromElevator
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 	waitmovement 0
 	goto CinnabarIslandNCC_TakeElevator
 
 CinnabarIslandNCC_TakeElevator::
-	compare VAR_FACING, DIR_NORTH
-	goto_if_ne StepOutFromElevator
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp

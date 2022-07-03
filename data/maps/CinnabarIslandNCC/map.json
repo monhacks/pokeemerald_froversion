@@ -220,7 +220,7 @@
       "elevation": 0,
       "var": "VAR_ROUTE101_STATE",
       "var_value": "6",
-      "script": "NULL"
+      "script": "StepOutFromElevator"
     },
     {
       "type": "trigger",
@@ -229,7 +229,7 @@
       "elevation": 0,
       "var": "VAR_ROUTE101_STATE",
       "var_value": "6",
-      "script": "NULL"
+      "script": "StepOutFromElevator"
     },
     {
       "type": "trigger",
@@ -238,7 +238,7 @@
       "elevation": 0,
       "var": "VAR_ROUTE101_STATE",
       "var_value": "6",
-      "script": "NULL"
+      "script": "StepOutFromElevator"
     }
   ],
   "bg_events": [
