@@ -46,5 +46,6 @@ NCC_ElevatorTakingUpPlayer::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 	waitmovement 0
 	playse SE_TRUCK_STOP
+	waitse
 	warpsilent MAP_CINNABAR_ISLAND_NCC, 255, 23, 16
 end
