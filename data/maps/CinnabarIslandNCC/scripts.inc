@@ -219,6 +219,8 @@ CinnabarIslandNCC_EventScript_LeaveElevator::
 	setmetatile 24, 19, METATILE_Facility_TiledFloor, 0
 	@ special DrawWholeMapView
 	
+end
+
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
