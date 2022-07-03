@@ -3857,7 +3857,7 @@ static void SetOpponentMovesShadowCharizard(void)
 static void SetOpponentMovesShadowNidoqueen(void)
 {
     {
-        if (gBattleMons[B_POSITION_OPPONENT_LEFT].hp <= (gBattleMons[B_POSITION_OPPONENT_LEFT].maxHP / 2))
+        if (gBattleMons[B_POSITION_OPPONENT_LEFT].hp <= (gBattleMons[B_POSITION_OPPONENT_LEFT].maxHP / 2) && (gBattleMons[B_POSITION_OPPONENT_LEFT].hp > 0))
             {
                 gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[0] = MOVE_HEAL_PULSE;
                 gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[1] = MOVE_HEAL_PULSE;
