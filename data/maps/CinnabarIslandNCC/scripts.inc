@@ -14,10 +14,9 @@ end
 
 CinnabarIslandNCC_EventScript_SetDynamicWarpPostSleep:
 	setdynamicwarp MAP_CINNABAR_ISLAND_POST_SHIP_WRECK, 255, 52, 44
-	compare VAR_ROUTE101_STATE, 7
+	compare VAR_ROUTE101_STATE, 6
 	goto_if_eq CinnabarIslandNCC_EventScript_LeaveElevator
 end
-
 
 @--------------------------------------------------------------------------------
 @------------------------------------Events--------------------------------------
@@ -104,16 +103,12 @@ CinnabarIslandNCC_EventScript_PC::
 end
 
 CinnabarIslandNCC_EventScript_ElevatorCheckKey::
-	checkitem ITEM_LIFT_KEY, 0
-	goto_if_eq CinnabarIslandNCC_EventScript_KeyNeeded
-	goto CinnabarIslandNCC_EventScript_ElevatorUp
-	end
-
-CinnabarIslandNCC_EventScript_KeyNeeded::
+	goto_if_set FLAG_DEFEATED_REGISTEEL, CinnabarIslandNCC_EventScript_ElevatorUp
 	msgbox CinnabarIslandNCC_Text_KeyNeeded, MSGBOX_NPC
 end
 
 CinnabarIslandNCC_EventScript_ElevatorUp::
+	setvar VAR_ROUTE101_STATE, 5
 	msgbox CinnabarIslandNCC_Text_KeyNeeded
 	msgbox CinnabarIslandNCC_Text_InsertedKey
 	closemessage
@@ -190,12 +185,10 @@ CinnabarIslandNCC_TakeElevator::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement 0
-	setvar VAR_ROUTE101_STATE, 5
 	warpsilent MAP_NCC_ELEVATOR, 255, 4, 3
 end
 
 CinnabarIslandNCC_EventScript_LeaveElevator::
-	lock
 	setmetatile 22, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 23, 15, METATILE_Building_ElevatorFloorFence, 1
 	setmetatile 24, 15, METATILE_Building_ElevatorFloorFence, 1
@@ -215,15 +208,16 @@ CinnabarIslandNCC_EventScript_LeaveElevator::
 	setmetatile 22, 19, METATILE_Facility_TiledFloor, 0
 	setmetatile 23, 19, METATILE_Facility_TiledFloor, 0
 	setmetatile 24, 19, METATILE_Facility_TiledFloor, 0
-	special DrawWholeMapView
+
 	playse SE_TRUCK_STOP
 	waitse
+	end
+
+StepOutFromElevator::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-	waitmovement 0
+	setvar VAR_ROUTE101_STATE, 5
+end
 
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------

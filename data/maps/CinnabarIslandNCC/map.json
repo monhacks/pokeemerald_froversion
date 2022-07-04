@@ -182,8 +182,8 @@
       "x": 22,
       "y": 18,
       "elevation": 0,
-      "var": "VAR_DEOXYS_ROCK_LEVEL",
-      "var_value": "0",
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "5",
       "script": "CinnabarIslandNCC_TakeElevatorLeft"
     },
     {
@@ -191,8 +191,8 @@
       "x": 23,
       "y": 18,
       "elevation": 0,
-      "var": "VAR_DEOXYS_ROCK_LEVEL",
-      "var_value": "0",
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "5",
       "script": "CinnabarIslandNCC_TakeElevator"
     },
     {
@@ -200,8 +200,8 @@
       "x": 24,
       "y": 18,
       "elevation": 0,
-      "var": "VAR_DEOXYS_ROCK_LEVEL",
-      "var_value": "0",
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "5",
       "script": "CinnabarIslandNCC_TakeElevatorRight"
     },
     {
@@ -212,6 +212,33 @@
       "var": "VAR_DEOXYS_ROCK_LEVEL",
       "var_value": "0",
       "script": "CinnabarIslandNCC_NotAllowedUpstairs"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "6",
+      "script": "StepOutFromElevator"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "6",
+      "script": "StepOutFromElevator"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "6",
+      "script": "StepOutFromElevator"
     }
   ],
   "bg_events": [
