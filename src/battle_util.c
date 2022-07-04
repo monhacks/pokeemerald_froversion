@@ -83,6 +83,14 @@ const struct BerryBoost gBerryBoosts[] =
     { 0xFFFF },
 };
 
+// Returns the target field of a move, modified by ability
+u8 GetBattleMoveTargetFlags(u16 moveId, u16 ability)
+{
+    if (ability == ABILITY_SHADOW_CHARIZARD && gBattleMoves[moveId].target == MOVE_TARGET_SELECTED)
+        return MOVE_TARGET_FOES_AND_ALLY;
+    return gBattleMoves[moveId].target;
+}
+
 void HandleAction_UseMove(void)
 {
     u32 i, side, moveType, var = 4;
@@ -174,7 +182,7 @@ void HandleAction_UseMove(void)
     // choose target
     side = GetBattlerSide(gBattlerAttacker) ^ BIT_SIDE;
     if (gSideTimers[side].followmeTimer != 0
-        && gBattleMoves[gCurrentMove].target == MOVE_TARGET_SELECTED
+        && GetBattleMoveTargetFlags(gCurrentMove, gBattleMons[gBattlerAttacker].ability) == MOVE_TARGET_SELECTED
         && GetBattlerSide(gBattlerAttacker) != GetBattlerSide(gSideTimers[side].followmeTarget)
         && gBattleMons[gSideTimers[side].followmeTarget].hp != 0
         && (GetBattlerAbility(gBattlerAttacker) != ABILITY_PROPELLER_TAIL
@@ -184,7 +192,7 @@ void HandleAction_UseMove(void)
     }
     else if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
              && gSideTimers[side].followmeTimer == 0
-             && (gBattleMoves[gCurrentMove].power != 0 || gBattleMoves[gCurrentMove].target != MOVE_TARGET_USER)
+             && (gBattleMoves[gCurrentMove].power != 0 || GetBattleMoveTargetFlags(gCurrentMove, gBattleMons[gBattlerAttacker].ability) != MOVE_TARGET_USER)
              && ((gBattleMons[*(gBattleStruct->moveTarget + gBattlerAttacker)].ability != ABILITY_LIGHTNING_ROD && moveType == TYPE_ELECTRIC)
                  || (gBattleMons[*(gBattleStruct->moveTarget + gBattlerAttacker)].ability != ABILITY_STORM_DRAIN && moveType == TYPE_WATER)
                 )
@@ -206,7 +214,7 @@ void HandleAction_UseMove(void)
         }
         if (var == 4)
         {
-            if (gBattleMoves[gChosenMove].target & MOVE_TARGET_RANDOM)
+            if (GetBattleMoveTargetFlags(gChosenMove, gBattleMons[gBattlerAttacker].ability) & MOVE_TARGET_RANDOM)
             {
                 if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
                 {
@@ -223,7 +231,7 @@ void HandleAction_UseMove(void)
                         gBattlerTarget = GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT);
                 }
             }
-            else if (gBattleMoves[gChosenMove].target & MOVE_TARGET_FOES_AND_ALLY)
+            else if (GetBattleMoveTargetFlags(gChosenMove, gBattleMons[gBattlerAttacker].ability) & MOVE_TARGET_FOES_AND_ALLY)
             {
                 for (gBattlerTarget = 0; gBattlerTarget < gBattlersCount; gBattlerTarget++)
                 {
@@ -264,7 +272,7 @@ void HandleAction_UseMove(void)
         }
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE
-             && gBattleMoves[gChosenMove].target & MOVE_TARGET_RANDOM)
+             && GetBattleMoveTargetFlags(gChosenMove, gBattleMons[gBattlerAttacker].ability) & MOVE_TARGET_RANDOM)
     {
         if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
         {
@@ -296,7 +304,7 @@ void HandleAction_UseMove(void)
         if (gAbsentBattlerFlags & gBitTable[gBattlerTarget])
             gBattlerTarget = GetBattlerAtPosition(GetBattlerPosition(gBattlerTarget) ^ BIT_FLANK);
     }
-    else if (gBattleMoves[gChosenMove].target == MOVE_TARGET_ALLY)
+    else if (GetBattleMoveTargetFlags(gChosenMove, gBattleMons[gBattlerAttacker].ability) == MOVE_TARGET_ALLY)
     {
         if (IsBattlerAlive(BATTLE_PARTNER(gBattlerAttacker)))
             gBattlerTarget = BATTLE_PARTNER(gBattlerAttacker);
@@ -304,7 +312,7 @@ void HandleAction_UseMove(void)
             gBattlerTarget = gBattlerAttacker;
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE
-             && gBattleMoves[gChosenMove].target == MOVE_TARGET_FOES_AND_ALLY)
+             && GetBattleMoveTargetFlags(gChosenMove, gBattleMons[gBattlerAttacker].ability) == MOVE_TARGET_FOES_AND_ALLY)
     {
         for (gBattlerTarget = 0; gBattlerTarget < gBattlersCount; gBattlerTarget++)
         {
@@ -6960,7 +6968,7 @@ u8 GetMoveTarget(u16 move, u8 setTarget)
     if (setTarget)
         moveTarget = setTarget - 1;
     else
-        moveTarget = gBattleMoves[move].target;
+        moveTarget = GetBattleMoveTargetFlags(move, gBattleMons[gBattlerAttacker].ability);
 
     switch (moveTarget)
     {
@@ -7307,7 +7315,7 @@ u32 CountBattlerStatIncreases(u8 battlerId, bool32 countEvasionAcc)
 
 u32 GetMoveTargetCount(u16 move, u8 battlerAtk, u8 battlerDef)
 {
-    switch (gBattleMoves[move].target)
+    switch (GetBattleMoveTargetFlags(move, gBattleMons[battlerAtk].ability))
     {
     case MOVE_TARGET_BOTH:
         return IsBattlerAlive(battlerDef)

@@ -3869,7 +3869,7 @@ static void SetOpponentMovesShadowNidoqueen(void)
             {
                 gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[0] = MOVE_HELPING_HAND;
                 gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[1] = MOVE_FOLLOW_ME;
-                gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[2] = MOVE_ALLY_SWITCH;
+                gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[2] = MOVE_SLUDGE_BOMB;
                 gBattleMons[B_POSITION_OPPONENT_RIGHT].moves[3] = MOVE_EARTHQUAKE;
             }
     }

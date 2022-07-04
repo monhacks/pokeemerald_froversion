@@ -2473,7 +2473,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_SHADOW_CHARIZARD] =
     {
         .size = 0x88,
-        .y_offset = 0x00,
+        .y_offset = -4,
     },
     [SPECIES_FILLER_13] =
     {

@@ -38,6 +38,7 @@
 #include "constants/rgb.h"
 #include "constants/battle_move_effects.h"
 #include "event_data.h"
+#include "constants/abilities.h"
 
 extern struct MusicPlayerInfo gMPlayInfo_BGM;
 
@@ -428,7 +429,7 @@ static void HandleInputChooseTarget(void)
         PlaySE(SE_SELECT);
         gSprites[gBattlerSpriteIds[gMultiUsePlayerCursor]].callback = SpriteCb_HideAsMoveTarget;
 
-        if (gBattleMoves[move].target == (MOVE_TARGET_USER | MOVE_TARGET_ALLY))
+        if (GetBattleMoveTargetFlags(move, gBattleMons[gActiveBattler].ability) == (MOVE_TARGET_USER | MOVE_TARGET_ALLY))
         {
             gMultiUsePlayerCursor ^= BIT_FLANK;
         }
@@ -457,7 +458,7 @@ static void HandleInputChooseTarget(void)
                 case B_POSITION_PLAYER_RIGHT:
                     if (gActiveBattler != gMultiUsePlayerCursor)
                         i++;
-                    else if (gBattleMoves[move].target & MOVE_TARGET_USER_OR_SELECTED)
+                    else if (GetBattleMoveTargetFlags(move, gBattleMons[gActiveBattler].ability) & MOVE_TARGET_USER_OR_SELECTED)
                         i++;
                     break;
                 case B_POSITION_OPPONENT_LEFT:
@@ -477,7 +478,7 @@ static void HandleInputChooseTarget(void)
         PlaySE(SE_SELECT);
         gSprites[gBattlerSpriteIds[gMultiUsePlayerCursor]].callback = SpriteCb_HideAsMoveTarget;
 
-        if (gBattleMoves[move].target == (MOVE_TARGET_USER | MOVE_TARGET_ALLY))
+        if (GetBattleMoveTargetFlags(move, gBattleMons[gActiveBattler].ability) == (MOVE_TARGET_USER | MOVE_TARGET_ALLY))
         {
             gMultiUsePlayerCursor ^= BIT_FLANK;
         }
@@ -506,7 +507,7 @@ static void HandleInputChooseTarget(void)
                 case B_POSITION_PLAYER_RIGHT:
                     if (gActiveBattler != gMultiUsePlayerCursor)
                         i++;
-                    else if (gBattleMoves[move].target & MOVE_TARGET_USER_OR_SELECTED)
+                    else if (GetBattleMoveTargetFlags(move, gBattleMons[gActiveBattler].ability) & MOVE_TARGET_USER_OR_SELECTED)
                         i++;
                     break;
                 case B_POSITION_OPPONENT_LEFT:
@@ -597,7 +598,7 @@ static void HandleInputChooseMove(void)
         }
         else
         {
-            moveTarget = gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].target;
+            moveTarget = GetBattleMoveTargetFlags(moveInfo->moves[gMoveSelectionCursor[gActiveBattler]], gBattleMons[gActiveBattler].ability);
         }
 
         if (moveTarget & MOVE_TARGET_USER)

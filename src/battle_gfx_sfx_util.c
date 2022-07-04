@@ -26,6 +26,7 @@
 #include "constants/battle_config.h"
 #include "constants/rgb.h"
 #include "constants/battle_palace.h"
+#include "contants/abilities.h"
 
 extern struct MusicPlayerInfo gMPlayInfo_SE1;
 extern struct MusicPlayerInfo gMPlayInfo_SE2;
@@ -251,7 +252,7 @@ u16 ChooseMoveAndTargetInBattlePalace(void)
     }
     else
     {
-        moveTarget = gBattleMoves[moveInfo->moves[chosenMoveId]].target;
+        moveTarget = GetBattleMoveTargetFlags(moveInfo->moves[gMoveSelectionCursor[gActiveBattler]], gBattleMons[gActiveBattler].ability);
     }
 
     if (moveTarget & MOVE_TARGET_USER)
@@ -275,7 +276,7 @@ u16 ChooseMoveAndTargetInBattlePalace(void)
 
 static u8 GetBattlePalaceMoveGroup(u16 move)
 {
-    switch (gBattleMoves[move].target)
+    switch (GetBattleMoveTargetFlags(move, ABILITY_NONE))
     {
     case MOVE_TARGET_SELECTED:
     case MOVE_TARGET_USER_OR_SELECTED:
