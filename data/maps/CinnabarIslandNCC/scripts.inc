@@ -219,11 +219,23 @@ StepOutFromElevator::
 	setvar VAR_ROUTE101_STATE, 5
 end
 
+FishRandomItem::
+	random 101
+	addvar VAR_RESULT, 211
+	giveitem VAR_RESULT, 1
+	bufferitemname 0, VAR_RESULT
+	msgbox Text_FishedItem, MSGBOX_DEFAULT
+	closemessage
+end
+
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------
 @--------------------------------------------------------------------------------
 @'''''''''''[______________________________________]'''''''''''''''''''''''''''''
 
+Text_FishedItem:
+	.string "Oh!\p"
+	.string "You caught a {STR_VAR_1}!$"
 
 CinnabarIslandNCC_Text_ThankYouForDeliveringPackage:
 	.string "Oh! Are those the parts we've been\n"
