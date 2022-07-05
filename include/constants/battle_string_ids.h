@@ -608,9 +608,11 @@
 #define STRINGID_PKMNBURNEDBYORB 604
 #define STRINGID_PKMNFROZENBYORB 605
 #define STRINGID_SHADOWS         606
+#define STRINGID_HITALLTARGETS        607
+#define STRINGID_CHARIZARDISCHARGING  608 
 
 
-#define BATTLESTRINGS_COUNT     607
+#define BATTLESTRINGS_COUNT     609
 
 //// multichoice message IDs
 // switch in ability message

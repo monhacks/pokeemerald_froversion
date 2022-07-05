@@ -1276,6 +1276,7 @@ static bool32 TryAegiFormChange(void)
 static void Cmd_attackcanceler(void)
 {
     s32 i, moveType;
+    Printf("gBattleStruct->HasBattleScriptExecuted = %d", gBattleStruct->HasBattleScriptExecuted);
 
     if (gBattleOutcome != 0)
     {
@@ -1320,6 +1321,17 @@ static void Cmd_attackcanceler(void)
         gBattlerAbility = gBattlerAttacker;
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_DragonOrbActivates;
+        return;
+    }
+ ///ShadowCharizard  
+    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SHADOW_CHARIZARD
+        && (gBattleResults.battleTurnCounter % 5 == 4)
+        && gBattleStruct->HasBattleScriptExecuted == FALSE)
+    {
+        gBattlerAbility = gBattlerAttacker;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_HitAllTargetsActivates;
+        gBattleStruct->HasBattleScriptExecuted = TRUE;
         return;
     }
 

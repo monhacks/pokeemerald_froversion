@@ -86,7 +86,10 @@ const struct BerryBoost gBerryBoosts[] =
 // Returns the target field of a move, modified by ability
 u8 GetBattleMoveTargetFlags(u16 moveId, u16 ability)
 {
-    if (ability == ABILITY_SHADOW_CHARIZARD && gBattleMoves[moveId].target == MOVE_TARGET_SELECTED)
+    
+    if (ability == ABILITY_SHADOW_CHARIZARD 
+    && gBattleMoves[moveId].target == MOVE_TARGET_SELECTED
+    && (gBattleResults.battleTurnCounter % 5 == 4))
         return MOVE_TARGET_FOES_AND_ALLY;
     return gBattleMoves[moveId].target;
 }
@@ -4618,6 +4621,12 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                         effect++;
                     }  
                 break;
+            case ABILITY_SHADOW_CHARIZARD:
+                if(gBattleResults.battleTurnCounter % 5 == 3)
+                {
+                        BattleScriptPushCursorAndCallback(BattleScript_ShadowCharizardCharging);
+                        effect++;
+                }
             case ABILITY_SHED_SKIN:
                 if ((gBattleMons[battler].status1 & STATUS1_ANY) && (Random() % 3) == 0)
                 {

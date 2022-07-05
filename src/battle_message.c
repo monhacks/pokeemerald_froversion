@@ -734,6 +734,8 @@ static const u8 sText_DragonOrbActivates[] = _("{B_ATK_NAME_WITH_PREFIX}'s Drago
 static const u8 sText_PkmnParalyzedByOrb[] = _("{B_ATK_NAME_WITH_PREFIX} is\nparalyzed by {B_DEF_NAME_WITH_PREFIX}'s \lDragon Orb!");
 static const u8 sText_PkmnBurnedByOrb[] = _("{B_ATK_NAME_WITH_PREFIX} is\nburned by {B_DEF_NAME_WITH_PREFIX}'s \lDragon Orb!");
 static const u8 sText_PkmnFrozenByOrb[] = _("{B_ATK_NAME_WITH_PREFIX} is\nfrozen by {B_DEF_NAME_WITH_PREFIX}'s \lDragon Orb!");
+static const u8 sText_HitAllTargets[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY} allows\nit to target all foes this turn.");
+static const u8 sText_CharizardIsCharging[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY} is\nemanating power.\pIt appears {B_ATK_NAME_WITH_PREFIX} is charging\nfor a powerful attack...");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1332,6 +1334,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNBURNEDBYORB - 12] = sText_PkmnBurnedByOrb,
     [STRINGID_PKMNFROZENBYORB - 12] = sText_PkmnFrozenByOrb,
     [STRINGID_SHADOWS - 12] = sText_DarkAuraActivates,
+    [STRINGID_HITALLTARGETS - 12] = sText_HitAllTargets,
+    [STRINGID_CHARIZARDISCHARGING - 12] = sText_CharizardIsCharging,
 };
 
 const u16 gTerrainStringIds[] =

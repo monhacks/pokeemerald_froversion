@@ -7284,6 +7284,12 @@ BattleScript_RainDishActivates::
 	call BattleScript_AbilityHpHeal
 	end3
 
+BattleScript_ShadowCharizardCharging::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_CHARIZARDISCHARGING
+	waitmessage 0x40
+	end3
+
 BattleScript_MalevolentActivates::
 	call BattleScript_AbilityHpHeal
 	return
@@ -7760,6 +7766,12 @@ BattleScript_ProteanActivates::
 
 BattleScript_DragonOrbActivates::
 	printstring STRINGID_DRAGONORBACTIVATES
+	waitmessage 0x40
+	return
+
+BattleScript_HitAllTargetsActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_HITALLTARGETS
 	waitmessage 0x40
 	return
 

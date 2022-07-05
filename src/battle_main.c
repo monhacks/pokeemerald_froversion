@@ -835,6 +835,7 @@ static void CB2_HandleStartBattle(void)
     playerMultiplayerId = GetMultiplayerId();
     gBattleScripting.multiplayerId = playerMultiplayerId;
     enemyMultiplayerId = playerMultiplayerId ^ BIT_SIDE;
+    
 
     switch (gBattleCommunication[MULTIUSE_STATE])
     {
@@ -3725,7 +3726,7 @@ const u16 gShadowCharizardPhysicalAttackMoves[] =
         MOVE_SHADOW_CLAW,
         MOVE_FLAME_CHARGE,
         MOVE_DUAL_WINGBEAT,
-        MOVE_OUTRAGE,
+        MOVE_DRAGON_CLAW,
         0xFFFF
     };
 
@@ -3799,6 +3800,7 @@ void BattleTurnPassed(void)
     {
         gBattleResults.battleTurnCounter++;
         gBattleStruct->arenaTurnCounter++;
+        gBattleStruct->HasBattleScriptExecuted = FALSE;
     }
 
     for (i = 0; i < gBattlersCount; i++)
@@ -3836,7 +3838,7 @@ static void SetOpponentMovesShadowCharizard(void)
     s32 i;
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {
-        if (gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 9 && gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] < 12)
+        if ((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 9 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 9) && gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] < 12)
             {
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SPECTRAL_THIEF;
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_SPECTRAL_THIEF;
