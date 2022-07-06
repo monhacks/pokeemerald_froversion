@@ -272,8 +272,19 @@ AI_CheckBadMove_CheckEffect: @ 82DC045
 	if_effect EFFECT_SOAK, AI_CBM_Soak
 	if_effect EFFECT_LOCK_ON, AI_CBM_LockOn
 	if_effect EFFECT_DEFENSE_UP_2, AI_CBM_Defense_Up_2
+	if_effect EFFECT_SPECTRAL_THIEF, AI_CBM_SpectralThief
 	end
 	
+AI_CBM_SpectralThief:
+	if_stat_level_more_than AI_TARGET, STAT_ATK, DEFAULT_STAT_STAGE, Score_Plus6
+	if_stat_level_more_than AI_TARGET, STAT_DEF, DEFAULT_STAT_STAGE, Score_Plus6
+	if_stat_level_more_than AI_TARGET, STAT_SPEED, DEFAULT_STAT_STAGE, Score_Plus6
+	if_stat_level_more_than AI_TARGET, STAT_SPATK, DEFAULT_STAT_STAGE, Score_Plus6
+	if_stat_level_more_than AI_TARGET, STAT_SPDEF, DEFAULT_STAT_STAGE, Score_Plus6
+	if_stat_level_more_than AI_TARGET, STAT_ACC, DEFAULT_STAT_STAGE, Score_Plus6
+	if_stat_level_more_than AI_TARGET, STAT_EVASION, DEFAULT_STAT_STAGE, Score_Plus6
+	end
+
 AI_CBM_Defense_Up_2:
 	if_stat_level_equal AI_USER, STAT_DEF, 7, Score_Minus3
 	if_stat_level_equal AI_USER, STAT_DEF, 8, Score_Minus5

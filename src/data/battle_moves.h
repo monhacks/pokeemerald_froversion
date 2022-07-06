@@ -9652,7 +9652,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DARKEST_LARIAT] =
     {
         .effect = EFFECT_HIT,
-        .power = 85,
+        //.power = 85,
+        .power = 130,
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 10,

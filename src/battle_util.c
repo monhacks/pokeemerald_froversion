@@ -4636,6 +4636,12 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     gBattleMons[battler].species = SPECIES_SHADOW_CHARIZARD;
                     gBattleScripting.battler = gActiveBattler;
                     BattleScriptPushCursorAndCallback(BattleScript_AttackerCharizardFormChangeEnd3);
+                    if (TryChangeBattleTerrain(battler, STATUS_FIELD_DARK_TETHER, &gFieldTimers.darkTetherTimer))
+                        {
+                            gFieldTimers.darkTetherTimer = 255;  
+                            BattleScriptPushCursorAndCallback(BattleScript_DarkTetherActivates);
+                            effect++;
+                        }
                     effect++;
                 }
                 break;

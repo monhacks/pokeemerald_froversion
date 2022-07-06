@@ -4810,6 +4810,7 @@ BattleScript_EffectSuperpower:
 	goto BattleScript_EffectHit
 
 BattleScript_EffectCloseCombat:
+	jumpifability BS_ATTACKER, ABILITY_SHADOW_CHARIZARD, BattleScript_EffectHit
 	setmoveeffect MOVE_EFFECT_DEF_SPDEF_DOWN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
 

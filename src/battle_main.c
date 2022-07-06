@@ -3735,7 +3735,7 @@ const u16 gShadowCharizardHinderStatusMoves[] =
         MOVE_SMOKESCREEN,
         MOVE_SCARY_FACE,
         MOVE_WILL_O_WISP,
-        MOVE_OBSTRUCT,
+        MOVE_TAUNT,
         0xFFFF
     };
 
@@ -3838,6 +3838,14 @@ static void SetOpponentMovesShadowCharizard(void)
     s32 i;
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {
+        if(gBattleResults.battleTurnCounter % 5 == 4)
+            {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_BLAST_BURN;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_DRAGON_ASCENT;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_DARKEST_LARIAT;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_SPACIAL_REND;
+                return;
+            }
         if ((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 9 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 9) && gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] < 12)
             {
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SPECTRAL_THIEF;
@@ -4633,6 +4641,7 @@ const u16 gSlashingMoves[] =
         SPECIES_MEGA_DEWGONG,
         SPECIES_INVERTEBRAKE,
         SPECIES_SHADOW_CHARIZARD,
+        SPECIES_CHARIZARD_X,
         SPECIES_PRIMEAPE,
         SPECIES_NIDOKING,
         SPECIES_NIDOQUEEN,
