@@ -45,16 +45,17 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_NCC_UNDERGROUND_STATE",
+      "var_value": "0",
+      "script": "NCC_Underground_West_NoKey"
+    }
   ],
   "bg_events": [
-    {
-      "type": "sign",
-      "x": 13,
-      "y": 27,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NCC_Underground_West_LockedDoorCheck"
-    }
+
   ]
 }

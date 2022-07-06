@@ -249,7 +249,7 @@ CinnabarIslandNCC_Text_NCCExplaination:
 	.string "NCC for short, is Cinnabar Island's\l"
 	.string "leading employer.\p"
 	.string "We do a wide range of things here\n"
-	.string "that not only benefit our home Island,\l"
+	.string "that not only benefit our home island,\l"
 	.string "but all people and Pokémon alike.$"
 
 CinnabarIslandNCC_Text_EnjoyYourStay:
@@ -259,7 +259,7 @@ CinnabarIslandNCC_Text_EnjoyYourStay:
 	.string "Are you sailing again or staying the\n"
 	.string "night?\p"
 	.string "Oh you're staying the night! How\n"
-	.string "Wonderful!$" 
+	.string "wonderful!$" 
 
 CinnabarIslandNCC_Text_IllLetYouGetSettled:	
 	.string "I'll let you go get settled\n"

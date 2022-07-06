@@ -6570,6 +6570,7 @@ u16 GetBattleBGM(void)
             return MUS_FV_MAGEE;
         case TRAINER_CLASS_MARRIOTT:
         case TRAINER_CLASS_GMP:
+        case TRAINER_CLASS_SCIENTIST:
             return MUS_FV_VS_GMP;
         case TRAINER_CLASS_MAGA_LEADER:
         case TRAINER_CLASS_ANTIFA_LEADER:

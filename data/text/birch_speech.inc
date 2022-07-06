@@ -3,7 +3,7 @@ gText_Birch_Welcome:: @ 82C897B
 	.string "It sure is good to see you made it to\n" 
 	.string "Cinnabar Island without much trouble.\p"
 	.string "I'm Peter. I work for the\n"
-	.string "Natical Communication Center, in the\l"
+	.string "Nautical Communication Center, in the\l"
 	.string "Research and Development department.\p"
 	.string "$"
 

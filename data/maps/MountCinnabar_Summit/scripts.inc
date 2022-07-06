@@ -79,14 +79,23 @@ MountCinnabar_Summit_ShadowPrimeapeBattle::
 		waitmovement OBJ_EVENT_ID_PLAYER
 		msgbox MountCinnabar_Summit_Text_NeverTrustedTheNCC, MSGBOX_DEFAULT
 		scrollingmultichoice 11, 2, 3, 3, TRUE
-		compare VAR_RESULT, 0
-		goto_if_eq MountCinnabar_Summit_EventScript_GiveJolteon
-		compare VAR_RESULT, 1
-		goto_if_eq MountCinnabar_Summit_EventScript_GiveGengar
-		compare VAR_RESULT, 2
-		goto_if_eq MountCinnabar_Summit_EventScript_GiveEspeon
+		switch VAR_RESULT
+		case 0, MountCinnabar_Summit_EventScript_GiveJolteon
+		case 1, MountCinnabar_Summit_EventScript_GiveGengar
+		case 2, MountCinnabar_Summit_EventScript_GiveEspeon
+		case MULTI_B_PRESSED, MountCinnabar_Summit_EventScript_ChooseAPokemon
 		setflag FLAG_HIDE_MOUNT_SUMMIT_NCC_SCIENTIST
 	release
+	end
+
+MountCinnabar_Summit_EventScript_ChooseAPokemon::
+	msgbox MountCinnabar_Summit_Text_YouNeedToTakeAPokemon
+	scrollingmultichoice 11, 2, 3, 3, TRUE
+	switch VAR_RESULT
+		case 0, MountCinnabar_Summit_EventScript_GiveJolteon
+		case 1, MountCinnabar_Summit_EventScript_GiveGengar
+		case 2, MountCinnabar_Summit_EventScript_GiveEspeon
+		case MULTI_B_PRESSED, MountCinnabar_Summit_EventScript_ChooseAPokemon
 	end
 
 MountCinnabar_Summit_EventScript_GiveJolteon::
@@ -193,7 +202,7 @@ MountCinnabar_Summit_EventScript_EscapePlan::
 @'''''''''''[______________________________________]''
 			 	
 MountCinnabar_Summit_Text_PrimeapeDroppedSomething:
-	.string "The Primeape Fled.\p"
+	.string "The Primeape fled.\p"
 	.string "It seems to have dropped something in\n"
 	.string "it's haste.$"
 
@@ -209,8 +218,8 @@ MountCinnabar_Summit_Text_HaveYouSeenAnythingStrange:
 	.string "Key anywhere. I don't want to have to\l"
 	.string "tell the Boss I lost it, he will be so\l"
 	.string "mad.\p"
-	.string "But if I can't find it soon I'll need\n"
-	.string "come clean, otherwise I won't be able\l"
+	.string "But if I can't find it soon I'll need to\n"
+	.string "come clean, otherwise I won't be able to\l"
 	.string "do my experiments in the secret\l"
 	.string "underground...$"
 
@@ -261,3 +270,7 @@ MountCinnabar_Summit_Text_YouTookGengar:
 MountCinnabar_Summit_Text_YouTookEspeon:
 	.string "Espeon was added to your party.$"
 
+MountCinnabar_Summit_Text_YouNeedToTakeAPokemon:
+	.string "I insist you take a Pokémon. I want\n"
+	.string "to help in any way I can.\p"
+	.string "Please choose a Pokémon.$"

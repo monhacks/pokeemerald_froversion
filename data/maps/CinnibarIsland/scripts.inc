@@ -27,6 +27,13 @@ CinnabarIsland_EventScript_ManUnloadingShip::
 	msgbox CinnabarIsland_Text_ManUnloadingShip, MSGBOX_NPC
 	end
 
+CinnabarIsland_EventScript_GymClosedToday::
+	lock
+	msgbox CinnabarIsland_Text_GymClosedToday, MSGBOX_NPC
+	release
+	end
+
+
 CinnabarIsland_EventScript_ManNextToBoxes::
 	msgbox CinnabarIsland_Text_ManNextToBoxes1, MSGBOX_DEFAULT
 	applymovement 1, Common_Movement_ExclamationMark
@@ -115,6 +122,16 @@ CinnabarIsland_Text_VolcanoGuy:
 	.string "This volcano isn't safe for the\n"
 	.string "Public. Please head back towards\l"
 	.string "southern end of the Island.$"
+
+CinnabarIsland_Text_GymClosedToday:
+	.string "Sorry buster, the gym is closed today.\p"
+	.string "Not like you stand a chance against\n"
+	.string "Blaine anyway.\p"
+	.string "He's hot like a volcano and cool as a\n"
+	.string "cucumber.\p"
+	.string "Come back tomorrow if you want to get\n"
+	.string "handed a good old fasioned beat down.$"
+
 @--------------------------------------------------------------------------------
 @-----------------------------------Movement-------------------------------------
 @--------------------------------------------------------------------------------

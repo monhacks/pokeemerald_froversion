@@ -14,7 +14,7 @@ RaintreeIsland_Gym_Entrance_MapScripts::
 	.byte 0
 
 RaintreeIsland_PokemonCenter_1F_OnTransition: @ 81FC52E
-	setrespawn HEAL_LOCATION_RAINTREE_ISLAND
+	setrespawn HEAL_LOCATION_CINNABAR_ISLAND_POST_SHIP_WRECK
 	call Common_EventScript_UpdateBrineyLocation
 	end
 RaintreeIsland_PokemonCenter_1F_OnLoad:

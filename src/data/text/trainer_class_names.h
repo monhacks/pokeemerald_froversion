@@ -84,4 +84,5 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_MARRIOTT] = _("Lawyer"),
     [TRAINER_CLASS_WES] = _("Leader"),
     [TRAINER_CLASS_SHADOW_CHARIZARD] = _("Psychic"),
+    [TRAINER_CLASS_SCIENTIST] = _("Scientist"),
 };

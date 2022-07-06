@@ -24,9 +24,12 @@ end
 
 NCC_Underground_West_LockedDoorCheck::
 	lockall
+		compare VAR_NCC_UNDERGROUND_STATE, 0
+		goto_if_eq NCC_Underground_West_NoKey
 		checkitem ITEM_SS_TICKET, 1
 		compare VAR_RESULT, FALSE
 		goto_if_eq NCC_Underground_West_NoKey
+		setvar VAR_NCC_UNDERGROUND_STATE, 15
 		msgbox NCC_Underground_West_1F_Text_KeyUnlocksDoor, MSGBOX_AUTOCLOSE
 		opendoor 13, 27
 		waitdooranim
@@ -44,6 +47,8 @@ NCC_Underground_West_LockedDoorCheck::
 
 
 NCC_Underground_West_NoKey::
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+		waitmovement OBJ_EVENT_ID_PLAYER
 		msgbox NCC_Underground_West_1F_Text_ThisDoorIsLocked, MSGBOX_AUTOCLOSE
 		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 		waitmovement OBJ_EVENT_ID_PLAYER

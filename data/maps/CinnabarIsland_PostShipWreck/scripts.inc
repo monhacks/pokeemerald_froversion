@@ -3,7 +3,12 @@
 .set LOCAL_ID_VOLCANO_GUY, 10
 
 CinnabarIsland_PostShipWreck_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarIsland_PostShipWreck_OnTransition
 	.byte 0
+
+CinnabarIsland_PostShipWreck_OnTransition: @ 81FC52E
+	setrespawn HEAL_LOCATION_CINNABAR_ISLAND_POST_SHIP_WRECK
+	end
 
 
 @--------------------------------------------------------------------------------
@@ -65,17 +70,28 @@ CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage:
 		waitmovement OBJ_EVENT_ID_PLAYER
 		msgbox CinnabarIsland_PostShipwreck_Text_AreYouGoingToInvestigate, MSGBOX_DEFAULT
 		scrollingmultichoice 10, 2, 3, 3, TRUE
-		compare VAR_RESULT, 0
-		call_if_eq CinnabarIsland_EventScript_GiveAggron
-		compare VAR_RESULT, 1
-		call_if_eq CinnabarIsland_EventScript_GiveSteelix
-		compare VAR_RESULT, 2
-		call_if_eq CinnabarIsland_EventScript_GiveScizor
+		switch VAR_RESULT
+			case 0, CinnabarIsland_EventScript_GiveAggron
+			case 1, CinnabarIsland_EventScript_GiveSteelix
+			case 2, CinnabarIsland_EventScript_GiveScizor
+			case MULTI_B_PRESSED, CinnabarIsland_PostShipwreck_Eventscript_YouNeedToTakeAPokemon
 		setvar VAR_ROUTE101_STATE, 5
 		hideobjectat LOCAL_ID_VOLCANO_GUY, MAP_CINNABAR_ISLAND_POST_SHIP_WRECK
 		setflag FLAG_HIDE_VOLCANO_GUY
 	releaseall
 	end
+
+CinnabarIsland_PostShipwreck_Eventscript_YouNeedToTakeAPokemon:
+	msgbox MountCinnabar_Summit_Text_YouNeedToTakeAPokemon, MSGBOX_DEFAULT
+		scrollingmultichoice 10, 2, 3, 3, TRUE
+		switch VAR_RESULT
+			case 0, CinnabarIsland_EventScript_GiveAggron
+			case 1, CinnabarIsland_EventScript_GiveSteelix
+			case 2, CinnabarIsland_EventScript_GiveScizor
+			case MULTI_B_PRESSED, CinnabarIsland_PostShipwreck_Eventscript_YouNeedToTakeAPokemon
+		releaseall
+	end
+
 
 CinnabarIsland_EventScript_GiveAggron::
 		playmoncry SPECIES_AGGRON, 2
@@ -84,7 +100,11 @@ CinnabarIsland_EventScript_GiveAggron::
 		givecustommon SPECIES_AGGRON ,50, ITEM_QUICK_CLAW, ITEM_ULTRA_BALL, NATURE_CAREFUL,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_HEAVY_SLAM, MOVE_CURSE, MOVE_REST, MOVE_SLEEP_TALK, 0
 		msgbox CinnabarIsland_PostShipwreck_Text_AbilityPartyMenu, MSGBOX_DEFAULT
 		msgbox CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
-	return
+		setvar VAR_ROUTE101_STATE, 5
+		hideobjectat LOCAL_ID_VOLCANO_GUY, MAP_CINNABAR_ISLAND_POST_SHIP_WRECK
+		setflag FLAG_HIDE_VOLCANO_GUY
+	releaseall
+	end
 
 CinnabarIsland_EventScript_GiveSteelix::
 		playmoncry SPECIES_STEELIX, 0
@@ -93,7 +113,11 @@ CinnabarIsland_EventScript_GiveSteelix::
 		givecustommon SPECIES_STEELIX ,50, ITEM_LEFTOVERS, ITEM_ULTRA_BALL, NATURE_HARDY,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_HEAD_SMASH, MOVE_CURSE, MOVE_EARTHQUAKE, MOVE_HEAVY_SLAM, 0
 		msgbox CinnabarIsland_PostShipwreck_Text_AbilityPartyMenu, MSGBOX_DEFAULT
 		msgbox CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
-	return
+		setvar VAR_ROUTE101_STATE, 5
+		hideobjectat LOCAL_ID_VOLCANO_GUY, MAP_CINNABAR_ISLAND_POST_SHIP_WRECK
+		setflag FLAG_HIDE_VOLCANO_GUY
+	releaseall
+	end
 
 CinnabarIsland_EventScript_GiveScizor::
 		playmoncry SPECIES_SCIZOR, 0
@@ -102,6 +126,9 @@ CinnabarIsland_EventScript_GiveScizor::
 		givecustommon SPECIES_SCIZOR ,50, ITEM_QUICK_CLAW, ITEM_ULTRA_BALL, NATURE_HARDY,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_SWORDS_DANCE, MOVE_DUAL_WINGBEAT, MOVE_ROOST, MOVE_BULLET_PUNCH, 0
 		msgbox CinnabarIsland_PostShipwreck_Text_AbilityPartyMenu, MSGBOX_DEFAULT
 		msgbox CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
+		setvar VAR_ROUTE101_STATE, 5
+		hideobjectat LOCAL_ID_VOLCANO_GUY, MAP_CINNABAR_ISLAND_POST_SHIP_WRECK
+		setflag FLAG_HIDE_VOLCANO_GUY
 	releaseall
 	end
 	
@@ -153,7 +180,7 @@ CinnabarIsland_PostShipwreck_Text_ThisIsSomeSeriousDamage:
 	.string "to our ship.\p"
 	.string "This is some serious damage. And it's not\n"
 	.string "just our ship...\p"
-	.string "Even the Island residents had their\n"
+	.string "Even the island residents had their\n"
 	.string "ships destroyed.\p"
 	.string "It's almost as if someone is\n"
 	.string "trying to stop everyone from\l"
@@ -167,7 +194,7 @@ CinnabarIsland_PostShipwreck_Text_LooksLikeFur:
 	.string "This looks like fur from a Pokemon,\n"
 	.string "though I can't say which.\p"
 	.string "It looks to me like a Pokemon may\n"
-	.string "be resposible for the damage.\p"
+	.string "be responsible for the damage.\p"
 	.string "However, the attacks don't seem random.\n"
 	.string "If a Pokemon is responsible, that is\l"
 	.string "concerning.\p"
@@ -206,10 +233,17 @@ CinnabarIsland_PostShipwreck_Text_AbilityPartyMenu:
 	.string "I'm not an expert Pokémon Trainer,\n"
 	.string "so I don't always know what Ability\l"
 	.string "is best.\p"
-	.string "If you're not happy it my Pokémon's\n"
+	.string "If you're not happy with my Pokémon's\n"
 	.string "Ability, don't forget you can change\l"
-	.string "all your Pokémon's abilitys right in\l"
+	.string "all your Pokémon's abilities right in\l"
 	.string "the Pokémon Party Menu.$"
+
+CinnabarIsland_PostShipwreck_Text_YouNeedToTakeAPokemon:
+	.string "{PLAYER}, I've been your crew member for\n"
+	.string "5 years now, I think we both know I'm not\l"
+	.string "in good enough shape to go hunting for\l"
+	.string "this Pokémon all over the island.\p"
+	.string "Please, take one of my Pokémon.$"
 
 @--------------------------------------------------------------------------------
 @---------------------------------Movements--------------------------------------

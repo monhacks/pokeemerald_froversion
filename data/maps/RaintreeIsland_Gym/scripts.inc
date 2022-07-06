@@ -79,8 +79,52 @@ EventScript_RaintreeIsland_IceRoom_GymLeaderIce::
 	msgbox RaintreeIsland_Leader_Text_ExplainIceBeam, MSGBOX_DEFAULT
 	giveitem ITEM_TM35, 1
 	msgbox RaintreeIsland_Leader_Text_ExplainFlamethrower, MSGBOX_DEFAULT
+	msgbox RaintreeIsland_Gym_Text_TakeAPokemon, MSGBOX_DEFAULT
+		scrollingmultichoice 12, 2, 3, 3, TRUE
+		switch VAR_RESULT
+		case 0, RaintreeIsland_Gym_EventScript_GiveChansey
+		case 1, RaintreeIsland_Gym_EventScript_GiveUmbreon
+		case 2, RaintreeIsland_Gym_EventScript_GiveMilotic
+		case MULTI_B_PRESSED, RaintreeIsland_Gym_EventScript_ChooseAPokemon
 	goto EventScript_RaintreeIsland_IceRoom_GymLeaderPostBattle
 	release
+	end
+
+RaintreeIsland_Gym_EventScript_ChooseAPokemon::
+	msgbox RaintreeIsland_Gym_Text_YouNeedToTakeAPokemon
+	scrollingmultichoice 12, 2, 3, 3, TRUE
+	switch VAR_RESULT
+		case 0, RaintreeIsland_Gym_EventScript_GiveChansey
+		case 1, RaintreeIsland_Gym_EventScript_GiveUmbreon
+		case 2, RaintreeIsland_Gym_EventScript_GiveMilotic
+		case MULTI_B_PRESSED, RaintreeIsland_Gym_EventScript_ChooseAPokemon
+	end
+
+RaintreeIsland_Gym_EventScript_GiveChansey::
+		playmoncry SPECIES_CHANSEY, 2
+		waitmoncry
+		msgbox RaintreeIsland_Gym_Text_YouTookChansey, MSGBOX_DEFAULT
+		givecustommon SPECIES_JOLTEON ,50, ITEM_EVIOLITE, ITEM_ULTRA_BALL, NATURE_HARDY,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_SOFT_BOILED, MOVE_SEISMIC_TOSS, MOVE_CHARM, MOVE_MINIMIZE, 0
+		goto EventScript_RaintreeIsland_IceRoom_GymLeaderPostBattle
+	releaseall
+	end
+
+RaintreeIsland_Gym_EventScript_GiveUmbreon::
+		playmoncry SPECIES_UMBREON, 2
+		waitmoncry
+		msgbox RaintreeIsland_Gym_Text_YouTookUmbreon, MSGBOX_DEFAULT
+		givecustommon SPECIES_UMBREON ,50, ITEM_SITRUS_BERRY, ITEM_DUSK_BALL, NATURE_RASH,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_CURSE, MOVE_ASSURANCE, MOVE_MOONLIGHT, MOVE_YAWN, 0
+		goto EventScript_RaintreeIsland_IceRoom_GymLeaderPostBattle
+	releaseall
+	end
+
+RaintreeIsland_Gym_EventScript_GiveMilotic::
+		playmoncry SPECIES_MILOTIC, 2
+		waitmoncry
+		msgbox RaintreeIsland_Gym_Text_YouTookUmbreon, MSGBOX_DEFAULT
+		givecustommon SPECIES_MILOTIC ,50, ITEM_SITRUS_BERRY, ITEM_DUSK_BALL, NATURE_RASH,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_MUDDY_WATER, MOVE_ICE_BEAM, MOVE_RECOVER, MOVE_COIL, 0
+		goto EventScript_RaintreeIsland_IceRoom_GymLeaderPostBattle
+	releaseall
 	end
 
 EventScript_RaintreeIsland_IceRoom_GymLeaderPostBattle:
@@ -212,3 +256,30 @@ RaintreeIsland_Leader_Text_PostTM:
 	.string "how to improve. In the future my family\l"
 	.string "will only train Fire Type Pokémon.\p"
 	.string "No more Ice for my son Blaine!$"
+
+RaintreeIsland_Gym_Text_TakeAPokemon:
+	.string "Oh, and one more thing. I'm feeling\n"
+	.string "extra generous. I have some extra\l"
+	.string "Pokémon that I've been looking\l"
+	.string "to find a home for, why don't\l"
+	.string "you choose one?\p"
+	.string "I can sense your love and devotion\n"
+	.string "to your Pokémon, so I'm happy to\l"
+	.string "say I think you would be a fantastic\l"
+	.string "trainer to any one of these Pokémon.\p"
+	.string "Which Pokémon would you like?$"
+
+RaintreeIsland_Gym_Text_YouNeedToTakeAPokemon:
+	.string "These Pokémon are in need of a home.\n"
+	.string "Are you that heartless that you won't\l"
+	.string "Help a Pokémon in need?\p"
+	.string "Don't be unkind, choose a Pokémon.$"
+
+RaintreeIsland_Gym_Text_YouTookChansey:
+	.string "Chansey was added to your party.$"
+
+RaintreeIsland_Gym_Text_YouTookUmbreon:
+	.string "Umbreon was added to your party.$"
+
+RaintreeIsland_Gym_Text_YouTookMilotic:
+	.string "Milotic was added to your party.$"

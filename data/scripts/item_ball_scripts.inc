@@ -692,7 +692,7 @@ MountCinnabar_1F_East_X_Attack::
 	end
 
 MountCinnabar_1F_West_Ultra_Ball::
-	finditem ITEM_ULTRA_BALL, 5
+	finditem ITEM_ESCAPE_ROPE
 	end
 
 MountCinnabar_1F_West_Nugget::

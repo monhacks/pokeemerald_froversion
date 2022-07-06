@@ -41,7 +41,7 @@
       "y": 19,
       "elevation": 0,
       "dest_map": "MAP_NCC_UNDERGROUND_WEST",
-      "dest_warp_id": 0
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [
