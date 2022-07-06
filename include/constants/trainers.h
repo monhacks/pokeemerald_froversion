@@ -144,6 +144,7 @@
 #define TRAINER_PIC_CHAD                  121
 #define TRAINER_PIC_MARK                  122
 #define TRAINER_PIC_MIKE_LYNCH            123
+#define TRAINER_PIC_MEWTWO               124
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1
@@ -403,6 +404,7 @@
 #define TRAINER_CLASS_GENTLEMAN_3     0x51
 #define TRAINER_CLASS_GENTLEMAN_4     0x52
 #define TRAINER_CLASS_WES               0x53
+#define TRAINER_CLASS_SHADOW_CHARIZARD          0x54
 
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music

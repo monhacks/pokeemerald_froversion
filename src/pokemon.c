@@ -6556,6 +6556,8 @@ u16 GetBattleBGM(void)
 
         switch (trainerClass)
         {
+        case TRAINER_CLASS_SHADOW_CHARIZARD:
+            return MUS_FV_SHADOW_CHARIZARD_BATTLE;
         case TRAINER_CLASS_BOBBY:
             return MUS_FV_BOBBY;
         case TRAINER_CLASS_CHARK:

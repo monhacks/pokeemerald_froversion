@@ -323,6 +323,7 @@ const u32 gTrainerFrontPic_AntifaGrunt[] = INCBIN_U32("graphics/trainers/front_p
 const u32 gTrainerFrontPic_Matt[] = INCBIN_U32("graphics/trainers/front_pics/matt_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_Kostiw[] = INCBIN_U32("graphics/trainers/front_pics/kostiw_front_pic.4bpp.lz");
 const u32 gTrainerFrontPic_MikeLynch[] = INCBIN_U32("graphics/trainers/front_pics/mike_lynch_front_pic.4bpp.lz");
+const u32 gTrainerFrontPic_Mewtwo[] = INCBIN_U32("graphics/trainers/front_pics/mewtwo_front_pic.4bpp.lz");
 
 const u32 gTrainerPalette_JohnM[] = INCBIN_U32("graphics/trainers/palettes/johnm.gbapal.lz");
 const u32 gTrainerPalette_Wasula[] = INCBIN_U32("graphics/trainers/palettes/wasula.gbapal.lz");
@@ -351,4 +352,5 @@ const u32 gTrainerPalette_AntifaGrunt[] = INCBIN_U32("graphics/trainers/palettes
 const u32 gTrainerPalette_Matt[] = INCBIN_U32("graphics/trainers/palettes/matt.gbapal.lz");
 const u32 gTrainerPalette_Kostiw[] = INCBIN_U32("graphics/trainers/palettes/kostiw.gbapal.lz");
 const u32 gTrainerPalette_MikeLynch[] = INCBIN_U32("graphics/trainers/palettes/mike_lynch.gbapal.lz");
+const u32 gTrainerPalette_Mewtwo[] = INCBIN_U32("graphics/trainers/palettes/mewtwo.gbapal.lz");
 

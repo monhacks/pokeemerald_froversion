@@ -639,6 +639,7 @@ gSongTable:: @ 86B49F0
 	song mus_fv_mt_cinnabar, 0, 0
 	song mus_fv_cinnabar_island_postshipwreck 0, 0
 	song mus_fv_vs_shadow_gyarados 0, 0
+	song mus_fv_shadow_charizard_battle, 0, 0
 
 	.align 2
 dummy_song_header: @ 86B5D00

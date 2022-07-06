@@ -11732,10 +11732,11 @@ const struct Trainer gTrainers[] = {
     [TRAINER_SUMMIT_CAVERNS_LATTKA_2] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_GMP,
+        //.trainerClass = TRAINER_CLASS_GMP,
+        .trainerClass = TRAINER_CLASS_SHADOW_CHARIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_LATTKA,
-        .trainerName = _("Lattka"),
+        .trainerPic = TRAINER_PIC_MEWTWO,
+        .trainerName = _("Mewtwo"),
         .items = {},
         .doubleBattle = TRUE,
         .twoVsOne = TRUE,
