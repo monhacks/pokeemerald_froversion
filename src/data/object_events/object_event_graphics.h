@@ -458,3 +458,7 @@ const u16 gObjectEventPal_Primeape[] = INCBIN_U16("graphics/object_events/palett
 
 const u32 gObjectEventPic_Mewtwo[] = INCBIN_U32("graphics/object_events/pics/pokemon/mewtwo.4bpp");
 const u16 gObjectEventPal_Mewtwo[] = INCBIN_U16("graphics/object_events/palettes/mewtwo.gbapal");
+
+
+const u32 gObjectEventPic_Boat[] = INCBIN_U32("graphics/object_events/pics/misc/boat.4bpp");
+const u16 gObjectEventPal_Boat[] = INCBIN_U16("graphics/object_events/palettes/boat.gbapal");

@@ -278,7 +278,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Porygon;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Primeape1;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Primeape3;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mewtwo;
-
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Boat;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -555,6 +555,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_PRIMEAPE_1] =                 &gObjectEventGraphicsInfo_Primeape1,
     [OBJ_EVENT_GFX_PRIMEAPE_3] =                 &gObjectEventGraphicsInfo_Primeape3,
     [OBJ_EVENT_GFX_MEWTWO] =                &gObjectEventGraphicsInfo_Mewtwo,
+    [OBJ_EVENT_GFX_BOAT] =                    &gObjectEventGraphicsInfo_Boat,
 
 
 };

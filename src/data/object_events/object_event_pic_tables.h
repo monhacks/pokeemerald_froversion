@@ -2580,3 +2580,7 @@ const struct SpriteFrameImage gObjectEventPicTable_Mewtwo[] = {
     overworld_frame(gObjectEventPic_Mewtwo, 4, 4, 7),
     overworld_frame(gObjectEventPic_Mewtwo, 4, 4, 8),
 };
+
+const struct SpriteFrameImage gObjectEventPicTable_Boat[] = {
+    obj_frame_tiles(gObjectEventPic_Boat),
+};

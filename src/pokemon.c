@@ -3176,7 +3176,7 @@ void CalculateMonStats(struct Pokemon *mon)
     }
     else if (species == SPECIES_SHADOW_CHARIZARD)
     {
-        newMaxHP = 3200;
+        newMaxHP = 2600;
     }
     else if (species == SPECIES_CHARIZARD_X)
     {

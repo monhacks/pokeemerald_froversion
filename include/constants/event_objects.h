@@ -274,8 +274,9 @@
 #define OBJ_EVENT_GFX_PRIMEAPE_1                 270
 #define OBJ_EVENT_GFX_PRIMEAPE_3                 271
 #define OBJ_EVENT_GFX_MEWTWO                     272
+#define OBJ_EVENT_GFX_BOAT                       273
 
-#define NUM_OBJ_EVENT_GFX                        273
+#define NUM_OBJ_EVENT_GFX                        274
 
 
 // These are dynamic object gfx ids.
