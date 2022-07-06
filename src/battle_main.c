@@ -4632,6 +4632,11 @@ const u16 gSlashingMoves[] =
         SPECIES_FILLER_9,
         SPECIES_MEGA_DEWGONG,
         SPECIES_INVERTEBRAKE,
+        SPECIES_SHADOW_CHARIZARD,
+        SPECIES_PRIMEAPE,
+        SPECIES_NIDOKING,
+        SPECIES_NIDOQUEEN,
+        SPECIES_RHYDON,
         0xFFFF
     };
 

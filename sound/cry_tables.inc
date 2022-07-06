@@ -469,7 +469,7 @@ cry Cry_Filler_35
 cry Cry_Filler_36
 cry Cry_Filler_37
 cry Cry_Filler_38
-cry Cry_Filler_39
+cry Cry_Charizard_X
 cry Cry_Warklock
 cry Cry_Cloclock
 cry Cry_Spirett
@@ -945,7 +945,7 @@ cry2 Cry_Filler_35
 cry2 Cry_Filler_36
 cry2 Cry_Filler_37
 cry2 Cry_Filler_38
-cry2 Cry_Filler_39
+cry2 Cry_Charizard_X
 cry2 Cry_Warklock
 cry2 Cry_Cloclock
 cry2 Cry_Spirett

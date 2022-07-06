@@ -6688,9 +6688,26 @@ BattleScript_AttackerFormChange::
 	waitanimation
 	handleformchange BS_ATTACKER, 2 
 	return
+
+BattleScript_AttackerCharizardFormChange::
+	pause 0x5
+	copybyte gBattlerAbility, gBattlerAttacker
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_EMPTYSTRING3
+	waitmessage 0x1
+	handleformchange BS_ATTACKER, 0
+	handleformchange BS_ATTACKER, 1
+	playanimation BS_ATTACKER, B_ANIM_FORM_CHANGE, NULL
+	waitanimation
+	handleformchange BS_ATTACKER, 2
+	return
 	
 BattleScript_AttackerFormChangeEnd3::
 	call BattleScript_AttackerFormChange
+	end3
+
+BattleScript_AttackerCharizardFormChangeEnd3::
+	call BattleScript_AttackerCharizardFormChange
 	end3
 
 BattleScript_BallFetch::

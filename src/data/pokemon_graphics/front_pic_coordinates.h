@@ -2605,7 +2605,7 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_39] =
+    [SPECIES_CHARIZARD_X] =
     {
         .size = 0x88,
         .y_offset = 0x00,

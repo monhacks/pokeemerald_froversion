@@ -1383,6 +1383,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_NIDOQUEEN] = sNidoqueenAbilitySet,
     [SPECIES_RHYDON] = sRhydonAbilitySet,
     [SPECIES_SHADOW_CHARIZARD] = sShadowCharizardAbilitySet,
+    [SPECIES_CHARIZARD_X] = sShadowCharizardAbilitySet,
     
     
 

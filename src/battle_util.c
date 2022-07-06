@@ -89,7 +89,8 @@ u8 GetBattleMoveTargetFlags(u16 moveId, u16 ability)
     
     if (ability == ABILITY_SHADOW_CHARIZARD 
     && gBattleMoves[moveId].target == MOVE_TARGET_SELECTED
-    && (gBattleResults.battleTurnCounter % 5 == 4))
+    && (gBattleResults.battleTurnCounter % 5 == 4)
+    && gBattleMons[gBattlerAttacker].species == SPECIES_SHADOW_CHARIZARD)
         return MOVE_TARGET_FOES_AND_ALLY;
     return gBattleMoves[moveId].target;
 }
@@ -4622,11 +4623,22 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     }  
                 break;
             case ABILITY_SHADOW_CHARIZARD:
-                if(gBattleResults.battleTurnCounter % 5 == 3)
+                if(gBattleResults.battleTurnCounter % 5 == 3
+                && gBattleMons[gBattlerAttacker].species == SPECIES_SHADOW_CHARIZARD)
                 {
                         BattleScriptPushCursorAndCallback(BattleScript_ShadowCharizardCharging);
                         effect++;
                 }
+                if ((gBattleMons[battler].species == SPECIES_CHARIZARD_X|| gBattleMons[battler].species == SPECIES_CHARIZARD_X)
+                    && gBattleMons[battler].hp <= gBattleMons[battler].maxHP / 2)
+                {
+                    gBattleStruct->changedSpecies[gBattlerPartyIndexes[battler]] = gBattleMons[battler].species;
+                    gBattleMons[battler].species = SPECIES_SHADOW_CHARIZARD;
+                    gBattleScripting.battler = gActiveBattler;
+                    BattleScriptPushCursorAndCallback(BattleScript_AttackerCharizardFormChangeEnd3);
+                    effect++;
+                }
+                break;
             case ABILITY_SHED_SKIN:
                 if ((gBattleMons[battler].status1 & STATUS1_ANY) && (Random() % 3) == 0)
                 {

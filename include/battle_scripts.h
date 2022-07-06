@@ -367,6 +367,8 @@ extern const u8 BattleScript_DancerActivates[];
 extern const u8 BattleScript_AftermathDmg[];
 extern const u8 BattleScript_AttackerFormChange[];
 extern const u8 BattleScript_AttackerFormChangeEnd3[];
+extern const u8 BattleScript_AttackerCharizardFormChange[];
+extern const u8 BattleScript_AttackerCharizardFormChangeEnd3[];
 extern const u8 BattleScript_TargetFormChange[];
 extern const u8 BattleScript_AnticipationActivates[];
 extern const u8 BattleScript_SlowStartEnds[];

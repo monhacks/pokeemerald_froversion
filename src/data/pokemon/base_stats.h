@@ -14087,7 +14087,7 @@ const struct BaseStats gBaseStats[] =
     },
 [SPECIES_SHADOW_CHARIZARD] =
     {
-        .baseHP        = 48,
+        .baseHP        = 255,
         .baseAttack    = 130,
         .baseDefense   = 111,
         .baseSpeed     = 100,
@@ -14922,16 +14922,16 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
-[SPECIES_FILLER_39] =
+[SPECIES_CHARIZARD_X] =
     {
-        .baseHP        = 48,
-        .baseAttack    = 51,
-        .baseDefense   = 53,
-        .baseSpeed     = 76,
-        .baseSpAttack  = 41,
-        .baseSpDefense = 41,
-        .type1 = TYPE_GRASS,
-        .type2 = TYPE_GRASS,
+        .baseHP        = 255,
+        .baseAttack    = 75,
+        .baseDefense   = 80,
+        .baseSpeed     = 90,
+        .baseSpAttack  = 85,
+        .baseSpDefense = 80,
+        .type1 = TYPE_FIRE,
+        .type2 = TYPE_DRAGON,
         .catchRate = 45,
         .expYield = 63,
         .evYield_HP        = 0,

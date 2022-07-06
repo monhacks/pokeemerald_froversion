@@ -1326,7 +1326,8 @@ static void Cmd_attackcanceler(void)
  ///ShadowCharizard  
     if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SHADOW_CHARIZARD
         && (gBattleResults.battleTurnCounter % 5 == 4)
-        && gBattleStruct->HasBattleScriptExecuted == FALSE)
+        && gBattleStruct->HasBattleScriptExecuted == FALSE
+        && gBattleMons[gBattlerAttacker].species == SPECIES_SHADOW_CHARIZARD)
     {
         gBattlerAbility = gBattlerAttacker;
         BattleScriptPushCursor();

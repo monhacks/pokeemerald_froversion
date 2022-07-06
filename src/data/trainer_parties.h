@@ -682,7 +682,7 @@ static const struct TrainerMonItemCustomMoves sParty_Dusty5[] = {
     .moves = {MOVE_SLEEP_TALK, MOVE_PSYCHIC, MOVE_ICE_BEAM, MOVE_CALM_MIND},
     .evs = {126, 0, 126, 0, 0, 4},
     },
-    
+
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_GabbyAndTy1[] = {
@@ -2793,7 +2793,7 @@ static const struct TrainerMonItemCustomMoves sParty_Bernie2[] = { //PAM REMTACH
     .evs = {252, 0, 252, 4, 0, 0},
     },
     {
-    .abilityNum = 3,    
+    .abilityNum = 3,
     .iv = 255,
     .lvl = 75,
     .species = SPECIES_PIDGEOT,
@@ -2842,7 +2842,7 @@ static const struct TrainerMonItemCustomMoves sParty_Bernie3[] = { //PAM REMTACH
     .evs = {252, 0, 252, 4, 0, 0},
     },
     {
-    .abilityNum = 3,    
+    .abilityNum = 3,
     .iv = 255,
     .lvl = 80,
     .species = SPECIES_PIDGEOT,
@@ -2891,7 +2891,7 @@ static const struct TrainerMonItemCustomMoves sParty_Bernie4[] = { //PAM REMTACH
     .evs = {252, 0, 252, 4, 0, 0},
     },
     {
-    .abilityNum = 3,    
+    .abilityNum = 3,
     .iv = 255,
     .lvl = 85,
     .species = SPECIES_PIDGEOT,
@@ -3816,7 +3816,7 @@ static const struct TrainerMonItemCustomMoves sParty_Sidney[] = { //PAM
     .evs = {252, 0, 252, 4, 0, 0},
     },
     {
-    .abilityNum = 3,    
+    .abilityNum = 3,
     .iv = 255,
     .lvl = 60,
     .species = SPECIES_PIDGEOT,
@@ -4060,7 +4060,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
 };
 
 static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
-    
+
     {
     .abilityNum = 2,
     .iv = 250,
@@ -4071,9 +4071,9 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     .evs = {126, 0, 126, 0, 0, 4},
     .nickname = gText_MarriottVaporeonNickname
     },
-    
+
     {
-    .abilityNum = 1,    
+    .abilityNum = 1,
     .iv = 200,
     .lvl = 28,
     .species = SPECIES_LANTURN,
@@ -4234,7 +4234,7 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza1[] = {
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_FLAMETHROWER, MOVE_CRUNCH, MOVE_NASTY_PLOT, MOVE_PURSUIT}
     }
-    
+
 };
 
 static const struct TrainerMonItemCustomMoves sParty_Juan1[] = {
@@ -5172,7 +5172,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Ivan[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Claude[] = { 
+static const struct TrainerMonNoItemDefaultMoves sParty_Claude[] = {
     {
     .iv = 0,
     .lvl = 26,
@@ -7486,7 +7486,7 @@ static const struct TrainerMonItemCustomMoves sParty_WasulaSummitCaveFlobra[] = 
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_TACKLE, MOVE_BULK_UP, MOVE_METAL_CLAW, MOVE_ASSURANCE}
     }
-    
+
 };
 
 static const struct TrainerMonItemCustomMoves sParty_BrendanRoute110Mudkip[] = {
@@ -7677,7 +7677,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Mudkip[] = {
     .lvl = 45,
     .species = SPECIES_RUTHLASH,
     }
-    
+
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute103Treecko[] = {
@@ -8730,7 +8730,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_TabithaMtChimney[] = {
     .lvl = 28,
     .species = SPECIES_WARTHAAG,
     .moves = {MOVE_MUD_BOMB, MOVE_TAKE_DOWN, MOVE_CRUNCH, MOVE_WORK_UP},
-    }, 
+    },
     {
     .abilityNum = 1,
     .iv = 150,
@@ -12931,7 +12931,7 @@ static const struct TrainerMonItemCustomMoves sParty_Koji2[] = { //PAM REMTACH
     .evs = {252, 0, 252, 4, 0, 0},
     },
     {
-    .abilityNum = 3,    
+    .abilityNum = 3,
     .iv = 255,
     .lvl = 70,
     .species = SPECIES_PIDGEOT,
@@ -13598,7 +13598,7 @@ static const struct TrainerMonItemCustomMoves sParty_MegaHoundoomMtChimney[] = {
     .statHP = 350,
     .statMaxHP = 350,
     .movePP1 = 99,
-    }, 
+    },
 };
 
 static const struct TrainerMonItemCustomMoves sParty_SummitCavernsLattka1[] = {
@@ -14745,13 +14745,13 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowCharizard[] = {
     .abilityNum = 0,
     .iv = 225,
     .lvl = 50,
-    .species = SPECIES_SHADOW_CHARIZARD,
+    .species = SPECIES_CHARIZARD_X,
     .heldItem = ITEM_RED_CARD,
     .moves = {MOVE_DRAGON_DANCE, MOVE_NASTY_PLOT, MOVE_SUNNY_DAY, MOVE_QUIVER_DANCE},
     //.statDef = 180,
     //.statSpDef = 180,
-    .statHP = 2600,
-    .statMaxHP = 2600,
+    // .statHP = 2600,
+    // .statMaxHP = 2600,
     .movePP1 = 99,
     .movePP2 = 99,
     .movePP3 = 99,
