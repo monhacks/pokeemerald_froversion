@@ -72,11 +72,11 @@ CinnabarIsland_EventScript_Fisherman::
 end
 
 CinnabarIsland_EventScript_PostFisherman::
-	goto_if_set FLAG_HIDE_ROUTE109_MR_BRINEY, CinnabarIsland_EventScript_PostFishermanCaughtSmth
+	goto_if_set FLAG_HIDE_ROUTE_109_MR_BRINEY, CinnabarIsland_EventScript_PostFishermanCaughtSmth
 	msgbox CinnabarIsland_Text_PostFisherman1, MSGBOX_NPC
 	giveitem ITEM_OLD_ROD, 1
 	msgbox CinnabarIsland_Text_PostFisherman2, MSGBOX_NPC
-	setflag FLAG_HIDE_ROUTE109_MR_BRINEY
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
 end
 
 CinnabarIsland_EventScript_PostFishermanCaughtSmth::
