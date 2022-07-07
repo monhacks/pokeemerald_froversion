@@ -5237,7 +5237,6 @@ BattleScript_FaintAttacker::
 	pause 0x40
 	dofaintanimation BS_ATTACKER
 	printstring STRINGID_ATTACKERFAINTED
-	savebattleritem BS_ATTACKER
 	cleareffectsonfaint BS_ATTACKER
 	tryactivatesoulheart
 	tryactivatereceiver BS_ATTACKER
@@ -5251,7 +5250,6 @@ BattleScript_FaintTarget::
 	pause 0x40
 	dofaintanimation BS_TARGET
 	printstring STRINGID_TARGETFAINTED
-	savebattleritem BS_ATTACKER
 	cleareffectsonfaint BS_TARGET
 	tryactivatefellstinger BS_ATTACKER
 	tryactivatesoulheart
