@@ -219,15 +219,6 @@ StepOutFromElevator::
 	setvar VAR_ROUTE101_STATE, 5
 end
 
-FishRandomItem::
-	random 101
-	addvar VAR_RESULT, 211
-	giveitem VAR_RESULT, 1
-	bufferitemname 0, VAR_RESULT
-	msgbox Text_FishedItem, MSGBOX_DEFAULT
-	closemessage
-end
-
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------
 @--------------------------------------------------------------------------------

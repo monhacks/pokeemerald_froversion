@@ -294,8 +294,6 @@ void ItemUseOutOfBattle_Rod(u8 taskId)
 
 static void ItemUseOnFieldCB_Rod(u8 taskId)
 {
-    //ScriptContext1_SetupScript(FishRandomItem);
-    //ScriptContext2_Enable();
     StartFishing(ItemId_GetSecondaryId(gSpecialVar_ItemId));
     DestroyTask(taskId);
 }

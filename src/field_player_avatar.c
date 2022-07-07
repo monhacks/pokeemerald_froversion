@@ -1962,7 +1962,10 @@ static bool8 Fishing_MonOnHook(struct Task *task)
 {
     AlignFishingAnimationFrames();
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
-    AddTextPrinterParameterized2(0, 1, gText_PokemonOnHook, 1, 0, 2, 1, 3);
+    if(FlagGet(FLAG_ITEM_FISHING))
+        AddTextPrinterParameterized2(0, 1, gText_ItemOnHook, 1, 0, 2, 1, 3);
+    else    
+        AddTextPrinterParameterized2(0, 1, gText_PokemonOnHook, 1, 0, 2, 1, 3);
     task->tStep++;
     task->tFrameCounter = 0;
     return FALSE;

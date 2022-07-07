@@ -1572,6 +1572,7 @@ const u8 gText_DiplomaEmpty[] = _("{COLOR RED}{SHADOW LIGHT_RED}"); // Unused
 const u8 gText_Hoenn[] = _("Niagara");
 const u8 gText_OhABite[] = _("Oh! A bite!");
 const u8 gText_PokemonOnHook[] = _("A Pokémon's on the hook!{PAUSE_UNTIL_PRESS}");
+const u8 gText_ItemOnHook[] = _("Something got caught on the hook!{PAUSE_UNTIL_PRESS}");
 const u8 gText_NotEvenANibble[] = _("Not even a nibble…{PAUSE_UNTIL_PRESS}");
 const u8 gText_ItGotAway[] = _("It got away…{PAUSE_UNTIL_PRESS}");
 const u8 gText_FishedItem[] = _("You caught a {STR_VAR_1}{PAUSE_UNTIL_PRESS}");
