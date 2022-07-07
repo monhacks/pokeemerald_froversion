@@ -5387,7 +5387,7 @@ BattleScript_PayDayMoneyAndPickUpItems::
 	pickup
 	end2
 
-BattleScript_ItemDropped:
+BattleScript_ItemDropped::
 	playse SE_BALL_BOUNCE_1
 	printfromtable gItemDroppedStringIds
 	return
