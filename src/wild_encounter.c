@@ -30,6 +30,7 @@
 #include "strings.h"
 #include "window.h"
 #include "menu.h"
+#include "event_scripts.h"
 
 extern const u8 EventScript_RepelWoreOff[];
 
