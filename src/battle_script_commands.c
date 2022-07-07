@@ -8927,7 +8927,7 @@ static void Cmd_various(void)
             u8 i;
             u8 battlers[] = {GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), 
                             GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)};
-            for (i = 0; i < 1 + IsDoubleBattle(); i++)
+            for (i = 0; i < 1 + IsDoubleBattle(gActiveBattler); i++)
             {
                 gLastUsedItem = gBattleResources->battleHistory->heldItems[battlers[i]];
                 gBattleResources->battleHistory->heldItems[battlers[i]] = ITEM_NONE;
@@ -8937,7 +8937,7 @@ static void Cmd_various(void)
                         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ITEM_DROPPED;
                     else
                         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_BAG_IS_FULL;
-                    if (IsDoubleBattle())
+                    if (IsDoubleBattle(gActiveBattler))
                         BattleScriptPushCursor();
                     else
                         BattleScriptPush(gBattlescriptCurrInstr + 3);
