@@ -90,3 +90,11 @@ const u32 gBattleTerrainAnimTilemap_Rayquaza[] = INCBIN_U32("graphics/battle_ter
 const u32 gBattleTerrainTiles_WaterGym[] = INCBIN_U32("graphics/battle_terrain/water_gym/tiles.4bpp.lz");
 const u32 gBattleTerrainPalette_WaterGym[] = INCBIN_U32("graphics/battle_terrain/water_gym/palette.gbapal.lz");
 const u32 gBattleTerrainTilemap_WaterGym[] = INCBIN_U32("graphics/battle_terrain/water_gym/map.bin.lz");
+
+const u32 gBattleTerrainTiles_Volcano[] = INCBIN_U32("graphics/battle_terrain/volcano/tiles.4bpp.lz");
+const u32 gBattleTerrainPalette_Volcano[] = INCBIN_U32("graphics/battle_terrain/volcano/palette.gbapal.lz");
+const u32 gBattleTerrainTilemap_Volcano[] = INCBIN_U32("graphics/battle_terrain/volcano/map.bin.lz");
+
+const u32 gBattleTerrainTiles_MountainTop[] = INCBIN_U32("graphics/battle_terrain/mountain_top/tiles.4bpp.lz");
+const u32 gBattleTerrainPalette_MountainTop[] = INCBIN_U32("graphics/battle_terrain/mountain_top/palette.gbapal.lz");
+const u32 gBattleTerrainTilemap_MountainTop[] = INCBIN_U32("graphics/battle_terrain/mountain_top/map.bin.lz");
