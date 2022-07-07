@@ -371,6 +371,7 @@
 #define BATTLE_TERRAIN_WATER_GYM    10
 #define BATTLE_TERRAIN_VOLCANO      11
 #define BATTLE_TERRAIN_MOUNTAIN_TOP     12
+#define BATTLE_TERRAIN_LAB          13
 
 // Move targets
 #define MOVE_TARGET_SELECTED            0x0

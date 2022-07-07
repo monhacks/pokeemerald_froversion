@@ -3990,6 +3990,10 @@ extern const u32 gBattleTerrainTiles_MountainTop[];
 extern const u32 gBattleTerrainTilemap_MountainTop[];
 extern const u32 gBattleTerrainPalette_MountainTop[];
 
+extern const u32 gBattleTerrainTiles_Lab[];
+extern const u32 gBattleTerrainTilemap_Lab[];
+extern const u32 gBattleTerrainPalette_Lab[];
+
 
 // pokedex
 extern const u32 gPokedexInterface_Gfx[];

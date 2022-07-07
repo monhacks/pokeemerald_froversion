@@ -98,3 +98,7 @@ const u32 gBattleTerrainTilemap_Volcano[] = INCBIN_U32("graphics/battle_terrain/
 const u32 gBattleTerrainTiles_MountainTop[] = INCBIN_U32("graphics/battle_terrain/mountain_top/tiles.4bpp.lz");
 const u32 gBattleTerrainPalette_MountainTop[] = INCBIN_U32("graphics/battle_terrain/mountain_top/palette.gbapal.lz");
 const u32 gBattleTerrainTilemap_MountainTop[] = INCBIN_U32("graphics/battle_terrain/mountain_top/map.bin.lz");
+
+const u32 gBattleTerrainTiles_Lab[] = INCBIN_U32("graphics/battle_terrain/lab/tiles.4bpp.lz");
+const u32 gBattleTerrainPalette_Lab[] = INCBIN_U32("graphics/battle_terrain/lab/palette.gbapal.lz");
+const u32 gBattleTerrainTilemap_Lab[] = INCBIN_U32("graphics/battle_terrain/lab/map.bin.lz");

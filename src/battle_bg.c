@@ -745,6 +745,15 @@ static const struct BattleBackground gBattleTerrainTable[] =
         .entryTilemap = gBattleTerrainAnimTilemap_Building,
         .palette = gBattleTerrainPalette_MountainTop,
     },
+
+    [BATTLE_TERRAIN_LAB] =
+    {
+        .tileset = gBattleTerrainTiles_Lab,
+        .tilemap = gBattleTerrainTilemap_Lab,
+        .entryTileset = gBattleTerrainAnimTiles_Building,
+        .entryTilemap = gBattleTerrainAnimTilemap_Building,
+        .palette = gBattleTerrainPalette_Lab,
+    },
 };
 
 static void sub_8035648(void);
@@ -863,6 +872,13 @@ void DrawMainBattleBackground(void)
                 LZDecompressVram(gBattleTerrainTiles_Stadium, (void*)(BG_CHAR_ADDR(2)));
                 LZDecompressVram(gBattleTerrainTilemap_Stadium, (void*)(BG_SCREEN_ADDR(26)));
                 LoadCompressedPalette(gBattleTerrainPalette_StadiumWallace, 0x20, 0x60);
+                return;
+            }
+            else if (trainerClass == TRAINER_CLASS_SHADOW_CHARIZARD)
+            {
+                LZDecompressVram(gBattleTerrainTiles_Lab, (void*)(BG_CHAR_ADDR(2)));
+                LZDecompressVram(gBattleTerrainTilemap_Lab, (void*)(BG_SCREEN_ADDR(26)));
+                LoadCompressedPalette(gBattleTerrainPalette_Lab, 0x20, 0x60);
                 return;
             }
         }
