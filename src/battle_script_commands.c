@@ -8922,23 +8922,34 @@ static void Cmd_various(void)
         else
             gBattlescriptCurrInstr += 7;
         return;
-    /*
     case VARIOUS_GIVE_DROPPED_ITEMS:
-        gLastUsedItem = gBattleResources->battleHistory->heldItems[gActiveBattler];
-        if (gLastUsedItem 
-            && !(gBattleTypeFlags & (BATTLE_TYPE_TRAINER
+        //gLastUsedItem = gBattleResources->battleHistory->heldItems[gActiveBattler];
+        if (!(gBattleTypeFlags & (BATTLE_TYPE_TRAINER
                                     | BATTLE_TYPE_FIRST_BATTLE
                                     | BATTLE_TYPE_WALLY_TUTORIAL)))
         {
-            if(AddBagItem(gLastUsedItem, 1))
+            if(Random() > 16000)
+            {
+                if(AddBagItem(ITEM_RED_SHARD, 1))
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ITEM_DROPPED;
+                else
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_BAG_IS_FULL;
+                BattleScriptPush(gBattlescriptCurrInstr + 3);
+                gBattlescriptCurrInstr = BattleScript_ItemDropped;
+                return;
+            }
             else
-                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_BAG_IS_FULL;
-            BattleScriptPush(gBattlescriptCurrInstr + 3);
-            gBattlescriptCurrInstr = BattleScript_ItemDropped;
-            return;
+            {
+                if(AddBagItem(ITEM_NUGGET, 1))
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ITEM_DROPPED;
+                else
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_BAG_IS_FULL;
+                BattleScriptPush(gBattlescriptCurrInstr + 3);
+                gBattlescriptCurrInstr = BattleScript_ItemDropped;
+                return;
+            }
+            
         }
-        */
     }
     gBattlescriptCurrInstr += 3;
 }
