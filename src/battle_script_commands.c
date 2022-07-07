@@ -8929,8 +8929,8 @@ static void Cmd_various(void)
                             GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)};
             for (i = 0; i < 1 + IsDoubleBattle(gActiveBattler); i++)
             {
-                gLastUsedItem = gBattleResources->battleHistory->heldItems[battlers[i]];
-                gBattleResources->battleHistory->heldItems[battlers[i]] = ITEM_NONE;
+                gLastUsedItem = gBattleResources->battleHistory->itemsNo[battlers[i]];
+                gBattleResources->battleHistory->itemsNo[battlers[i]] = ITEM_NONE;
                 if (gLastUsedItem && !(gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_FIRST_BATTLE | BATTLE_TYPE_WALLY_TUTORIAL)))
                 {
                     if(AddBagItem(gLastUsedItem, 1))
