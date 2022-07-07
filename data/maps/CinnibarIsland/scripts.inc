@@ -29,6 +29,7 @@ CinnabarIsland_NewGameEvents::
 		setvar VAR_ROUTE101_STATE, 1
 		setflag FLAG_SYS_POKEMON_GET
 		setflag FLAG_ITEM_FISHING
+		clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
 		setrespawn HEAL_LOCATION_CINNIBAR_ISLAND
 	release
 	end
@@ -122,7 +123,7 @@ CinnabarIsland_Text_FishermanAlreadyCaughtSmth:
 	.string "Did you see my glasses?$"
 
 CinnabarIsland_Text_FishermanNoGlasses:
-	.string "No worries! I have a spare pair. So\n"
+	.string "No worries! I have a spare pair. So...\n"
 	.string "where did I put them?$"
 
 CinnabarIsland_Text_ManUnloadingShip:
