@@ -153,10 +153,32 @@ CinnabarIsland_PostShipwreck_EventScript_Sailor2::
 	msgbox CinnabarIsland_PostShipwreck_Text_Sailor2, MSGBOX_NPC
 	end
 
+CinnabarIsland_PostShipwreck_EventScript_Guy::
+msgbox CinnabarIsland_PostShipwreck_Text_Guy_GotUp, MSGBOX_NPC
+end
+
+CinnabarIsland_PostShipwreck_ManAtWarehouse::
+msgbox CinnabarIsland_PostShipwreck_Text_ManAtWarehouse, MSGBOX_NPC
+end
+
+CinnabarIsland_PostShipwreck_Scientist::
+msgbox CinnabarIsland_PostShipwreck_Text_LookingForFur, MSGBOX_NPC
+end
+
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------
 @--------------------------------------------------------------------------------
+@'''''''''''[______________________________________]'''''''''''''''''''''''''''''
 
+CinnabarIsland_PostShipwreck_Text_LookingForFur:
+	.string "There has to be more fur. Where did\n"
+	.string "you go 057? This is really bad...$"
+
+CinnabarIsland_PostShipwreck_Text_ManAtWarehouse:
+	.string "There is a lot of confusion going on\n"
+	.string "this morning. A lot of freight was\l"
+	.string "still on your ship so I guess that's\l"
+	.string "dealt with now.$"		
 
 CinnabarIsland_PostShipwreck_Text_Sailor:
 	.string "Our ship... Who would do\n"
@@ -215,6 +237,14 @@ CinnabarIsland_PostShipwreck_Text_AreYouGoingToInvestigate:
 	.string "take one in case things get\l"
 	.string "dangerous.\p"
 	.string "Which one would you like?$"
+
+CinnabarIsland_PostShipwreck_Text_Guy_GotUp:
+	.string "I got up this night because i heard loud\n"
+	.string "noises outside but the only thing I saw\l"
+	.string "was the lady in the house next to the NCC\l"
+	.string "peeking out of the door and then locking\lab
+	.string "it from the inside. I would actually leave\l"
+	.string "if my boat wasn't on the bottom of the sea.$"
 
 CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon:
 	.string "Take good care of my Pokemon! Good\n"

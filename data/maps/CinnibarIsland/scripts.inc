@@ -110,10 +110,40 @@ CinnabarIsland_EventScript_VolcanoGuy::
 	msgbox CinnabarIsland_Text_VolcanoGuy, MSGBOX_NPC
 end
 
+CinnabarIsland_EventScript_DoorIsLocked::
+	msgbox CinnabarIsland_Text_DoorIsLocked, MSGBOX_NPC
+end
+
+CinnabarIsland_EventScript_NCCSign::
+	msgbox CinnabarIsland_Text_NCC, MSGBOX_NPC
+end
+
+CinnabarIsland_EventScript_TownSign::
+	msgbox CinnabarIsland_Text_TownSign, MSGBOX_NPC
+end
+
+Cinnabar_EventScript_GymSign::
+	msgbox Cinnabar_Text_GymSign, MSGBOX_NPC
+end
+
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------
 @--------------------------------------------------------------------------------
 @'''''''''''[______________________________________]'''''''''''''''''''''''''''''
+
+CinnabarIsland_Text_DoorIsLocked:
+	.string "The door is locked from the inside.$"
+
+CinnabarIsland_Text_NCC:
+	.string "Nautical Communication Center\n"
+	.string "We send waves through oceans and ethers$"
+
+CinnabarIsland_Text_TownSign:
+	.string "Cinnabar Island\n"
+	.string "The place where land and ocean meets$"
+
+Cinnabar_Text_GymSign:
+	.string "Cinnabar Island gym$"
 
 CinnabarIsland_Text_PostFishermanRelaxedNow:
 	.string "But the actual reward is that you are\n"

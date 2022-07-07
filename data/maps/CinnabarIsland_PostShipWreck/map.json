@@ -16,10 +16,10 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
-      "x": 56,
-      "y": 48,
+      "x": 66,
+      "y": 43,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -29,15 +29,15 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
-      "x": 51,
-      "y": 48,
+      "x": 46,
+      "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
+      "movement_range_x": 2,
+      "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "CinnabarIsland_EventScript_Scientist",
+      "script": "CinnabarIsland_PostShipwreck_Scientist",
       "flag": "0"
     },
     {
@@ -55,28 +55,28 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 44,
-      "y": 48,
+      "x": 45,
+      "y": 46,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "CinnabarIsland_EventScript_Guy",
+      "script": "CinnabarIsland_PostShipwreck_EventScript_Guy",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
-      "x": 61,
-      "y": 46,
+      "x": 65,
+      "y": 43,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_UP_DOWN_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
       "movement_range_x": 2,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "CinnabarIsland_EventScript_ManMovingBoxes",
+      "script": "CinnabarIsland_PostShipwreck_ManAtWarehouse",
       "flag": "0"
     },
     {
@@ -154,13 +154,6 @@
       "dest_warp_id": 0
     },
     {
-      "x": 46,
-      "y": 45,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND_HOUSE2",
-      "dest_warp_id": 0
-    },
-    {
       "x": 38,
       "y": 44,
       "elevation": 0,
@@ -224,6 +217,46 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
       "script": "CinnabarIsland_EventScript_StoneForRockSmash"
+    },
+    {
+      "type": "sign",
+      "x": 46,
+      "y": 45,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CinnabarIsland_EventScript_DoorIsLocked"
+    },
+    {
+      "type": "sign",
+      "x": 51,
+      "y": 44,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CinnabarIsland_EventScript_NCCSign"
+    },
+    {
+      "type": "sign",
+      "x": 50,
+      "y": 50,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CinnabarIsland_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 49,
+      "y": 50,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CinnabarIsland_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 27,
+      "y": 48,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Cinnabar_EventScript_GymSign"
     }
   ]
 }
