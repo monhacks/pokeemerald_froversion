@@ -792,6 +792,30 @@ bool8 DoesCurrentMapHaveFishingMons(void)
 void FishingWildEncounter(u8 rod)
 {
     u16 species;
+    int rand;
+    /*if (FlagGet(FLAG_ITEM_FISHING) == TRUE)
+      {
+        rand = Random() % 40;
+        AddBagItem(rand, 1);
+        CopyItemName(rand, gStringVar1);
+        StringExpandPlaceholders(gStringVar4, gText_FishedItem);
+        FillWindowPixelBuffer(0, PIXEL_FILL(1));
+        AddTextPrinterParameterized2(0, 1, gText_FishedItem, 1, 0, 2, 1, 3);
+        ClearDialogWindowAndFrame(0, TRUE);
+      } 
+    else
+    {
+    */
+
+        rand = Random() % 40;
+        AddBagItem(rand, 1);
+        CopyItemName(rand, gStringVar1);
+        StringExpandPlaceholders(gStringVar4, gText_FishedItem);
+        FillWindowPixelBuffer(0, PIXEL_FILL(1));
+        AddTextPrinterParameterized2(0, 1, gText_FishedItem, 1, 0, 2, 1, 3);
+        ClearDialogWindowAndFrame(0, TRUE);
+    return;
+
 
     if (CheckFeebas() == TRUE)
     {
