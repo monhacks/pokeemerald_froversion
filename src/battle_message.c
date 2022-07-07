@@ -434,6 +434,9 @@ static const u8 sText_Accuracy[] = _("accuracy");
 static const u8 sText_Evasiveness[] = _("evasiveness");
 static const u8 sText_RainHealRestoredHPALittle2[] = _("The Rain restored {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s\nHP a little!");
 
+static const u8 sText_PkmnDroppedItem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} dropped\nits {B_LAST_ITEM}!{WAIT_SE}\p");
+static const u8 sText_BagIsFull[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} dropped\n{B_LAST_ITEM}!{WAIT_SE}\pBut your bag is full!\p");
+
 const u8 * const gStatNamesTable[NUM_BATTLE_STATS] =
 {
     gText_HP3, gText_Attack, gText_Defense,
@@ -739,6 +742,8 @@ static const u8 sText_CharizardIsCharging[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_A
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
+    [STRINGID_BAGISFULL - BATTLESTRINGS_TABLE_START] = sText_BagIsFull,
+    [STRINGID_PKMNDROPPEDITEM - BATTLESTRINGS_TABLE_START] = sText_PkmnDroppedItem,
     [STRINGID_UNLOCKABILITY - 12] = sText_UnlockedAbility,
     [STRINGID_ABILITYRAISEDSTATDRASTICALLY - 12] = sText_AbilityRaisedStatDrastically,
     [STRINGID_PKMNSWILLPERISHIN3TURNS - 12] = sText_PkmnsWillPerishIn3Turns,
@@ -1785,6 +1790,13 @@ const u8 *const gRoundsStringTable[DOME_ROUNDS_COUNT] =
     [DOME_SEMIFINAL] = sText_Semifinal,
     [DOME_FINAL]     = sText_Final
 };
+
+const u16 gItemDroppedStringIds[] =
+{
+    [B_MSG_ITEM_DROPPED] = STRINGID_PKMNDROPPEDITEM,
+    [B_MSG_BAG_IS_FULL] = STRINGID_BAGISFULL,
+};
+
 
 const u8 gText_TheGreatNewHope[] = _("The great new hope!\p");
 const u8 gText_WillChampionshipDreamComeTrue[] = _("Will the championship dream come true?!\p");

@@ -610,9 +610,14 @@
 #define STRINGID_SHADOWS         606
 #define STRINGID_HITALLTARGETS        607
 #define STRINGID_CHARIZARDISCHARGING  608 
+#define STRINGID_PKMNDROPPEDITEM                      610
+#define STRINGID_BAGISFULL                            611
 
+#define BATTLESTRINGS_COUNT     611
 
-#define BATTLESTRINGS_COUNT     609
+// gItemDroppedStringIds
+#define B_MSG_ITEM_DROPPED   0
+#define B_MSG_BAG_IS_FULL    1
 
 //// multichoice message IDs
 // switch in ability message

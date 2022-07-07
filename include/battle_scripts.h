@@ -415,5 +415,6 @@ extern const u8 BattleScript_TypeWeatherActivates2_Rain[];
 extern const u8 BattleScript_TypeWeatherActivates2_Sun[];
 extern const u8 BattleScript_TypeWeatherActivates2_Sandstorm[];
 extern const u8 BattleScript_TypeWeatherActivates2_Hail[];
+extern const u8 BattleScript_ItemDropped[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

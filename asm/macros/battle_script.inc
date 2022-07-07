@@ -1951,3 +1951,6 @@
 	1:
 	.endm
 
+	.macro givedroppeditems
+	various BS_FAINTED, VARIOUS_GIVE_DROPPED_ITEMS
+	.endm

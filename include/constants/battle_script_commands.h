@@ -181,6 +181,7 @@
 #define VARIOUS_RESURRECTION                    114
 #define VARIOUS_JUMPIFPLAYER                    115
 #define VARIOUS_TRY_ACTIVATE_MEGA_GENGAR_ABILITY    116
+#define VARIOUS_GIVE_DROPPED_ITEMS                  151
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0
