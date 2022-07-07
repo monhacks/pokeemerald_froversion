@@ -8922,33 +8922,23 @@ static void Cmd_various(void)
         else
             gBattlescriptCurrInstr += 7;
         return;
+    
     case VARIOUS_GIVE_DROPPED_ITEMS:
+        gLastUsedItem = gBattleResources->battleHistory->heldItems[gActiveBattler];
+        if (gLastUsedItem 
+            && !(gBattleTypeFlags & (BATTLE_TYPE_TRAINER
+                                    | BATTLE_TYPE_FIRST_BATTLE
+                                    | BATTLE_TYPE_WALLY_TUTORIAL)))
         {
-            u8 i;
-            u8 battlers[] = {GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), 
-                            GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)};
-            for (i = 0; i < 1 + IsDoubleBattle(gActiveBattler); i++)
-            {
-                gLastUsedItem = gBattleResources->battleHistory->itemsNo[battlers[i]];
-                gBattleResources->battleHistory->itemsNo[battlers[i]] = ITEM_NONE;
-                if (gLastUsedItem && !(gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_FIRST_BATTLE | BATTLE_TYPE_WALLY_TUTORIAL)))
-                {
-                    if(AddBagItem(gLastUsedItem, 1))
-                        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ITEM_DROPPED;
-                    else
-                        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_BAG_IS_FULL;
-                    if (IsDoubleBattle(gActiveBattler))
-                        BattleScriptPushCursor();
-                    else
-                        BattleScriptPush(gBattlescriptCurrInstr + 3);
-                        gBattlescriptCurrInstr = BattleScript_ItemDropped;
-                        return;
-                }
-            }
-            break;
+            if(AddBagItem(gLastUsedItem, 1))
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ITEM_DROPPED;
+            else
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_BAG_IS_FULL;
+            BattleScriptPush(gBattlescriptCurrInstr + 3);
+            gBattlescriptCurrInstr = BattleScript_ItemDropped;
+            return;
         }
     }
-
     gBattlescriptCurrInstr += 3;
 }
 
