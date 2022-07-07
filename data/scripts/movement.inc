@@ -111,3 +111,7 @@ Common_Movement_WalkLeft::
 	walk_left
 	step_end
 	
+Common_Movement_FaceLeftSurprised: @ 82725AE
+	face_left
+	emote_exclamation_mark
+	step_end
