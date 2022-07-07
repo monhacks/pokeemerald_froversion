@@ -1874,7 +1874,7 @@ static bool8 Fishing_CheckForBite(struct Task *task)
     task->tStep++;
     bite = FALSE;
 
-    if (!DoesCurrentMapHaveFishingMons() || !FlagGet(FLAG_ITEM_FISHING))
+    if (!DoesCurrentMapHaveFishingMons() && !FlagGet(FLAG_ITEM_FISHING))
     {
         task->tStep = FISHING_NO_BITE;
     }
