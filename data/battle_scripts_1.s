@@ -5237,6 +5237,7 @@ BattleScript_FaintAttacker::
 	pause 0x40
 	dofaintanimation BS_ATTACKER
 	printstring STRINGID_ATTACKERFAINTED
+	savebattleritem BS_ATTACKER
 	cleareffectsonfaint BS_ATTACKER
 	tryactivatesoulheart
 	tryactivatereceiver BS_ATTACKER
@@ -5250,6 +5251,7 @@ BattleScript_FaintTarget::
 	pause 0x40
 	dofaintanimation BS_TARGET
 	printstring STRINGID_TARGETFAINTED
+	savebattleritem BS_ATTACKER
 	cleareffectsonfaint BS_TARGET
 	tryactivatefellstinger BS_ATTACKER
 	tryactivatesoulheart
@@ -5382,9 +5384,15 @@ BattleScript_LocalBattleWonReward::
 	printstring STRINGID_PLAYERGOTMONEY
 	waitmessage 0x40
 BattleScript_PayDayMoneyAndPickUpItems::
+	givedroppeditems
 	givepaydaymoney
 	pickup
 	end2
+
+BattleScript_ItemDropped:
+	playse SE_BALL_BOUNCE_1
+	printfromtable gItemDroppedStringIds
+	return
 
 BattleScript_LocalBattleLost::
 	jumpifbattletype BATTLE_TYPE_DOME, BattleScript_CheckDomeDrew

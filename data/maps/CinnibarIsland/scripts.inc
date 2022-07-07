@@ -10,6 +10,23 @@ CinnabarIsland_OnFrame: @ 8238C4F
 @------------------------------------Events--------------------------------------
 @--------------------------------------------------------------------------------
 
+FishRandomItem::
+	random 101
+	copyvar VAR_0x8004, VAR_RESULT
+	addvar VAR_0x8004, 211
+	bufferitemname 0, VAR_0x8004
+	msgbox Text_FishedItem, MSGBOX_DEFAULT
+	giveitem VAR_0x8004, 1
+	closemessage
+end
+
+debug_RandomItem1:
+	.string "Random {STR_VAR_1}$"
+debug_RandomItem2:
+	.string "0x8004 {STR_VAR_1}$"
+debug_RandomItem3:
+	.string "ItemID {STR_VAR_1}$"
+
 CinnabarIsland_NewGameEvents::
 	lock
 		giveitem ITEM_NCC_PACKAGE, 1
@@ -18,6 +35,8 @@ CinnabarIsland_NewGameEvents::
                 givecustommon SPECIES_HOUNDOOM, 50, ITEM_SITRUS_BERRY, ITEM_DUSK_BALL, NATURE_TIMID, 1, 56, 0, 0, 88, 100, 12, 16, 16, 16, 16, 16, 16, MOVE_CRUNCH, MOVE_NASTY_PLOT, MOVE_FLAMETHROWER, MOVE_TOXIC, 0
 		setvar VAR_ROUTE101_STATE, 1
 		setflag FLAG_SYS_POKEMON_GET
+		setflag FLAG_ITEM_FISHING
+		clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
 		setrespawn HEAL_LOCATION_CINNIBAR_ISLAND
 	release
 	end
@@ -31,7 +50,7 @@ CinnabarIsland_EventScript_GymClosedToday::
 	lock
 	msgbox CinnabarIsland_Text_GymClosedToday, MSGBOX_NPC
 	release
-	end
+end
 
 
 CinnabarIsland_EventScript_ManNextToBoxes::
@@ -42,36 +61,77 @@ CinnabarIsland_EventScript_ManNextToBoxes::
 	msgbox CinnabarIsland_Text_ManNextToBoxes2
 	closemessage
 	applymovement 1, Common_Movement_FaceOriginalDirection
-	end
+end
 
 CinnabarIsland_EventScript_ManMovingBoxes::
 	msgbox CinnabarIsland_Text_ManMovingBoxes, MSGBOX_NPC
-	end
+end
 
 CinnabarIsland_EventScript_Sailor::
 	msgbox CinnabarIsland_Text_Sailor, MSGBOX_NPC
-	end
+end
 
 CinnabarIsland_EventScript_Scientist::
 	msgbox CinnabarIsland_Text_Scientist, MSGBOX_NPC
-	end
+end
 
 CinnabarIsland_EventScript_Fisherman::
 	msgbox CinnabarIsland_Text_Fisherman, MSGBOX_NPC
-	end
+end
+
+CinnabarIsland_EventScript_PostFisherman::
+	goto_if_set FLAG_HIDE_ROUTE_109_MR_BRINEY, CinnabarIsland_EventScript_PostFishermanCaughtSmth
+	msgbox CinnabarIsland_Text_PostFisherman1, MSGBOX_NPC
+	giveitem ITEM_OLD_ROD, 1
+	msgbox CinnabarIsland_Text_PostFisherman2, MSGBOX_NPC
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
+end
+
+CinnabarIsland_EventScript_PostFishermanCaughtSmth::
+	msgbox CinnabarIsland_Text_FishermanAlreadyCaughtSmth, MSGBOX_NPC
+	checkitem ITEM_BLACK_GLASSES, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq Cinnabarisland_EventScript_PlayerHasGlasses
+	msgbox CinnabarIsland_Text_FishermanNoGlasses, MSGBOX_NPC
+end
+
+
+Cinnabarisland_EventScript_PlayerHasGlasses::
+	msgbox CinnabarIsland_Text_PostFishermanThanks, MSGBOX_NPC
+	giveitem ITEM_TM32, 1
+	msgbox CinnabarIsland_Text_PostFishermanRelaxedNow, MSGBOX_NPC
+end
 
 CinnabarIsland_EventScript_Guy::
 	msgbox CinnabarIsland_Text_Guy, MSGBOX_NPC
-	end
+end
 
 CinnabarIsland_EventScript_VolcanoGuy::
 	msgbox CinnabarIsland_Text_VolcanoGuy, MSGBOX_NPC
-	end
+end
 
 @--------------------------------------------------------------------------------
 @-------------------------------------Text---------------------------------------
 @--------------------------------------------------------------------------------
 @'''''''''''[______________________________________]'''''''''''''''''''''''''''''
+
+CinnabarIsland_Text_PostFishermanRelaxedNow:
+	.string "But the actual reward is that you are\n"
+	.string "much more relaxed now. Maybe I threw\l"
+	.string "them in on purpose to get you to relax?\p"
+	.string "Or maybe a Magikarp just bested me...$"	
+
+CinnabarIsland_Text_PostFishermanThanks:
+	.string "Oh! You found my glasses! Thank you\n"
+	.string "so much! Here, take this.$"
+
+CinnabarIsland_Text_FishermanAlreadyCaughtSmth:
+	.string "Nice to see you again!\n"
+	.string "Did you see my glasses?$"
+
+CinnabarIsland_Text_FishermanNoGlasses:
+	.string "No worries! I have a spare pair. So...\n"
+	.string "where did I put them?$"
 
 CinnabarIsland_Text_ManUnloadingShip:
 	.string "No time for talking!\n"
@@ -111,6 +171,16 @@ CinnabarIsland_Text_Fisherman:
 	.string "it? Being on the wild untamed sea all\l"
 	.string "the time sounds like a dream to me.\p"
 	.string "All day fishing at the best spots.$"
+
+CinnabarIsland_Text_PostFisherman1:
+	.string "Hello again. Oh my Arceus, you look\n"
+	.string "really stressed out! You know what\l"
+	.string "always calms me down? Fishing! You\p"
+	.string "should try it yourself. $"
+
+CinnabarIsland_Text_PostFisherman2:
+	.string "Oh by the way, if you happen to find\n"
+	.string "my glasses please return them to me.$"
 	
 CinnabarIsland_Text_ManMovingBoxes:
 	.string "Do you want to help me or just distract\n"

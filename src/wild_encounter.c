@@ -30,6 +30,7 @@
 #include "strings.h"
 #include "window.h"
 #include "menu.h"
+#include "event_scripts.h"
 
 extern const u8 EventScript_RepelWoreOff[];
 
@@ -799,45 +800,29 @@ void FishingWildEncounter(u8 rod)
 {
     u16 species;
     int rand;
-    /*if (FlagGet(FLAG_ITEM_FISHING) == TRUE)
+    if (FlagGet(FLAG_ITEM_FISHING) == TRUE)
       {
-        rand = Random() % 40;
-        AddBagItem(rand, 1);
-        CopyItemName(rand, gStringVar1);
-        StringExpandPlaceholders(gStringVar4, gText_FishedItem);
-        FillWindowPixelBuffer(0, PIXEL_FILL(1));
-        AddTextPrinterParameterized2(0, 1, gText_FishedItem, 1, 0, 2, 1, 3);
-        ClearDialogWindowAndFrame(0, TRUE);
+        ScriptContext1_SetupScript(FishRandomItem);
+        ScriptContext2_Enable();
       } 
     else
     {
-    */
+        if (CheckFeebas() == TRUE)
+        {
+            u8 level = ChooseWildMonLevel(&gWildFeebasRoute119Data);
 
-        rand = Random() % 40;
-        AddBagItem(rand, 1);
-        CopyItemName(rand, gStringVar1);
-        StringExpandPlaceholders(gStringVar4, gText_FishedItem);
-        FillWindowPixelBuffer(0, PIXEL_FILL(1));
-        AddTextPrinterParameterized2(0, 1, gText_FishedItem, 1, 0, 2, 1, 3);
-        ClearDialogWindowAndFrame(0, TRUE);
-    return;
-
-
-    if (CheckFeebas() == TRUE)
-    {
-        u8 level = ChooseWildMonLevel(&gWildFeebasRoute119Data);
-
-        species = gWildFeebasRoute119Data.species;
-        CreateWildMon(species, level);
-    }
-    else
-    {
-        species = GenerateFishingWildMon(gWildMonHeaders[GetCurrentMapWildMonHeaderId()].fishingMonsInfo, rod);
-    }
-    IncrementGameStat(GAME_STAT_FISHING_CAPTURES);
-    SetPokemonAnglerSpecies(species);
-    gIsFishingEncounter = TRUE;
-    BattleSetup_StartWildBattle();
+            species = gWildFeebasRoute119Data.species;
+            CreateWildMon(species, level);
+        }
+        else
+        {
+            species = GenerateFishingWildMon(gWildMonHeaders[GetCurrentMapWildMonHeaderId()].fishingMonsInfo, rod);
+        }
+        IncrementGameStat(GAME_STAT_FISHING_CAPTURES);
+        SetPokemonAnglerSpecies(species);
+        gIsFishingEncounter = TRUE;
+        BattleSetup_StartWildBattle();
+    }    
 }
 
 u16 GetLocalWildMon(bool8 *isWaterMon)
