@@ -14,9 +14,9 @@ FishRandomItem::
 	random 101
 	setvar VAR_TEMP_1, VAR_RESULT
 	addvar VAR_TEMP_1, 211
-	giveitem VAR_TEMP_1, 1
 	bufferitemname 0, VAR_TEMP_1
 	msgbox Text_FishedItem, MSGBOX_DEFAULT
+	giveitem VAR_TEMP_1, 1
 	closemessage
 end
 
