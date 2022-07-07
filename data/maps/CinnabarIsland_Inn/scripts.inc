@@ -19,6 +19,28 @@ CinnabarIsland_Inn_OnLoad:
 @------------------------------------Events--------------------------------------
 @--------------------------------------------------------------------------------
 
+CinnabarIsland_Inn_EventScript_InnSalesMan::
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart CinnabarIsland_Inn_Pokemart
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+CinnabarIsland_Inn_Pokemart: @ 81FFCD8
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_REVIVE
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_ETHER
+	.2byte ITEM_ELIXIR
+	.2byte ITEM_NONE
+	release
+	end
+
 CinnabarIsland_Inn_EventScript_InnReceptionist::
 	lockall
 		applymovement LOCALID_INN_RECEPTIONIST, Common_Movement_FacePlayer
