@@ -59,6 +59,27 @@ NCC_Underground_BossLab_Mewtwo::
 	release
 	end
 
+NCC_Underground_BossLab_eventscript_Scientist1::
+	msgbox NCC_Underground_BossLab_eventscript_Scientist1, MSGBOX_NPC
+end
+
+NCC_Underground_BossLab_eventscript_Scientist2::
+	msgbox NCC_Underground_BossLab_eventscript_Scientist2, MSGBOX_NPC
+end
+
+NCC_Underground_BossLab_eventscript_Scientist3::
+	msgbox NCC_Underground_BossLab_eventscript_Scientist3, MSGBOX_NPC
+end
+
+NCC_Underground_BossLab_eventscript_Scientist4::
+	msgbox NCC_Underground_BossLab_eventscript_Scientist4, MSGBOX_NPC
+end
+
+@--------------------------------------------------------------------------------
+@-------------------------------------Text---------------------------------------
+@--------------------------------------------------------------------------------
+@'''''''''''[______________________________________]'''''''''''''''''''''''''''''
+
 NCC_Underground_BossLab_Text_DontTouchThat:
 	.string "Hey, you can't touch that!\p"
 	.string "That is our newest experiment the\n"
@@ -132,4 +153,19 @@ NCC_Underground_BossLab_Text_MewtwoPlanReveal:
 	.string "in front of you!$"
 
 
-	
+NCC_Underground_BossLab_Text_Scientist1:
+	.string "Why are you not wearing a lab coat?!\n"
+	.string "We are working with mutagenic material\l"
+	.string "here, leave now!$"
+
+NCC_Underground_BossLab_Text_Scientist2:
+	.string "You grunts are not supposed to be here.\n"
+	.string "Go get me a coffee and get lost!$"
+
+NCC_Underground_BossLab_Text_Scientist3:
+	.string "I have no intent to care about your\n"
+	.string "presence. My work is way to important.$"
+
+NCC_Underground_BossLab_Text_Scientist4:
+	.string "How the hell did you get in here?! If\n"
+	.string "only the security could do their job!$"
