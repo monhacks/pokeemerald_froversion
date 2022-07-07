@@ -707,6 +707,9 @@ u8 BattleSetup_GetTerrainId(void)
     PlayerGetDestCoords(&x, &y);
     tileBehavior = MapGridGetMetatileBehaviorAt(x, y);
 
+    if (MetatileBehavior_IsTallGrass(tileBehavior)
+        && (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MOUNT_CINNABAR_SUMMIT) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MOUNT_CINNABAR_SUMMIT)))
+        return BATTLE_TERRAIN_MOUNTAIN_TOP;
     if (MetatileBehavior_IsTallGrass(tileBehavior))
         return BATTLE_TERRAIN_GRASS;
     if (MetatileBehavior_IsLongGrass(tileBehavior))
@@ -722,6 +725,8 @@ u8 BattleSetup_GetTerrainId(void)
         break;
     case MAP_TYPE_VOLCANO:
         return BATTLE_TERRAIN_VOLCANO;
+    case MAP_TYPE_MOUNTAIN_TOP:
+        return BATTLE_TERRAIN_MOUNTAIN_TOP;
     case MAP_TYPE_UNDERGROUND:
         if (MetatileBehavior_IsIndoorEncounter(tileBehavior))
             return BATTLE_TERRAIN_BUILDING;

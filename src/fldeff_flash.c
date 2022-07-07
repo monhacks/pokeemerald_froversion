@@ -69,6 +69,7 @@ static const struct FlashStruct sTransitionTypes[] =
     {MAP_TYPE_UNKNOWN,     MAP_TYPE_VOLCANO,  TRUE, FALSE, DoEnterCaveTransition},
     {MAP_TYPE_INDOOR,      MAP_TYPE_VOLCANO,  TRUE, FALSE, DoEnterCaveTransition},
     {MAP_TYPE_SECRET_BASE, MAP_TYPE_VOLCANO,  TRUE, FALSE, DoEnterCaveTransition},
+    {MAP_TYPE_MOUNTAIN_TOP, MAP_TYPE_VOLCANO, TRUE, FALSE, DoEnterCaveTransition},
     {MAP_TYPE_VOLCANO, MAP_TYPE_TOWN,        FALSE,  TRUE, DoExitCaveTransition},
     {MAP_TYPE_VOLCANO, MAP_TYPE_CITY,        FALSE,  TRUE, DoExitCaveTransition},
     {MAP_TYPE_VOLCANO, MAP_TYPE_ROUTE,       FALSE,  TRUE, DoExitCaveTransition},
@@ -77,6 +78,7 @@ static const struct FlashStruct sTransitionTypes[] =
     {MAP_TYPE_VOLCANO, MAP_TYPE_UNKNOWN,     FALSE,  TRUE, DoExitCaveTransition},
     {MAP_TYPE_VOLCANO, MAP_TYPE_INDOOR,      FALSE,  TRUE, DoExitCaveTransition},
     {MAP_TYPE_VOLCANO, MAP_TYPE_SECRET_BASE, FALSE,  TRUE, DoExitCaveTransition},
+    {MAP_TYPE_VOLCANO, MAP_TYPE_MOUNTAIN_TOP, FALSE, TRUE, DoExitCaveTransition},
     {},
 };
 

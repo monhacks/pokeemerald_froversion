@@ -3986,6 +3986,10 @@ extern const u32 gBattleTerrainTiles_Volcano[];
 extern const u32 gBattleTerrainTilemap_Volcano[];
 extern const u32 gBattleTerrainPalette_Volcano[];
 
+extern const u32 gBattleTerrainTiles_MountainTop[];
+extern const u32 gBattleTerrainTilemap_MountainTop[];
+extern const u32 gBattleTerrainPalette_MountainTop[];
+
 
 // pokedex
 extern const u32 gPokedexInterface_Gfx[];
