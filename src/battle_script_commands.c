@@ -8922,8 +8922,7 @@ static void Cmd_various(void)
         else
             gBattlescriptCurrInstr += 7;
         return;
-        case VARIOUS_GIVE_DROPPED_ITEMS:
-        {
+    case VARIOUS_GIVE_DROPPED_ITEMS:
         u8 i;
         u8 battlers[] = {GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), 
                          GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)};
@@ -8941,12 +8940,11 @@ static void Cmd_various(void)
                     BattleScriptPushCursor();
                 else
                     BattleScriptPush(gBattlescriptCurrInstr + 3);
-                gBattlescriptCurrInstr = BattleScript_ItemDropped;
-                return;
+                    gBattlescriptCurrInstr = BattleScript_ItemDropped;
+                    return;
             }
         }
         break;
-        }
     }
 
     gBattlescriptCurrInstr += 3;
