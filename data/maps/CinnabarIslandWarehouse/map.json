@@ -2,7 +2,7 @@
   "id": "MAP_CINNABAR_ISLAND_WAREHOUSE",
   "name": "CinnabarIslandWarehouse",
   "layout": "LAYOUT_CINNABAR_ISLAND_WAREHOUSE",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_RG_CINNABAR",
   "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
