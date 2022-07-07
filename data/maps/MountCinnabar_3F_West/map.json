@@ -3,7 +3,7 @@
   "name": "MountCinnabar_3F_West",
   "layout": "LAYOUT_MOUNT_CINNABAR_3F_WEST",
   "music": "MUS_FV_MT_CINNABAR",
-  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "region_map_section": "MAPSEC_RUSTURF_TUNNEL",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_VOLCANO",

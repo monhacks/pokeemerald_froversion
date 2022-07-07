@@ -2,7 +2,7 @@
   "id": "MAP_CINNABAR_ISLAND_NCC",
   "name": "CinnabarIslandNCC",
   "layout": "LAYOUT_CINNABAR_ISLAND_NCC",
-  "music": "MUS_FV_CINNABAR_ISLAND_REMIX",
+  "music": "MUS_OCEANIC_MUSEUM",
   "region_map_section": "MAPSEC_CINNABAR_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -10,7 +10,7 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
