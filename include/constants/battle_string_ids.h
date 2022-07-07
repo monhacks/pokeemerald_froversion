@@ -618,6 +618,7 @@
 // gItemDroppedStringIds
 #define B_MSG_ITEM_DROPPED   0
 #define B_MSG_BAG_IS_FULL    1
+#define B_MSG_EMPTY          2
 
 //// multichoice message IDs
 // switch in ability message

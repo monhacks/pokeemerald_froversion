@@ -8928,25 +8928,41 @@ static void Cmd_various(void)
                                     | BATTLE_TYPE_FIRST_BATTLE
                                     | BATTLE_TYPE_WALLY_TUTORIAL)))
         {
-            if(Random() > 16000)
+            u8 WildPokemonDropChance = Random();
+            Printf("Drop Chance = %d", WildPokemonDropChance);
+            if(WildPokemonDropChance > 128)
             {
                 if(AddBagItem(ITEM_RED_SHARD, 1))
-                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ITEM_DROPPED;
+                    {
+                        gLastUsedItem = ITEM_RED_SHARD;    
+                        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ITEM_DROPPED;
+                    }
                 else
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_BAG_IS_FULL;
-                BattleScriptPush(gBattlescriptCurrInstr + 3);
-                gBattlescriptCurrInstr = BattleScript_ItemDropped;
-                return;
+                    BattleScriptPush(gBattlescriptCurrInstr + 3);
+                    gBattlescriptCurrInstr = BattleScript_ItemDropped;
+                    return;
             }
+            else if(WildPokemonDropChance < 98)
+                {
+                    gLastUsedItem = ITEM_NONE;
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_EMPTY;
+                    BattleScriptPush(gBattlescriptCurrInstr + 3);
+                    gBattlescriptCurrInstr = BattleScript_ItemDropped;
+                    return;
+                }
             else
             {
                 if(AddBagItem(ITEM_NUGGET, 1))
-                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ITEM_DROPPED;
+                    {
+                        gLastUsedItem = ITEM_NUGGET;
+                        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ITEM_DROPPED;
+                    }
                 else
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_BAG_IS_FULL;
-                BattleScriptPush(gBattlescriptCurrInstr + 3);
-                gBattlescriptCurrInstr = BattleScript_ItemDropped;
-                return;
+                    BattleScriptPush(gBattlescriptCurrInstr + 3);
+                    gBattlescriptCurrInstr = BattleScript_ItemDropped;
+                    return;
             }
             
         }

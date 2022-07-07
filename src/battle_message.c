@@ -434,7 +434,7 @@ static const u8 sText_Accuracy[] = _("accuracy");
 static const u8 sText_Evasiveness[] = _("evasiveness");
 static const u8 sText_RainHealRestoredHPALittle2[] = _("The Rain restored {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s\nHP a little!");
 
-static const u8 sText_PkmnDroppedItem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} dropped\nits item!{WAIT_SE}\p");
+static const u8 sText_PkmnDroppedItem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} dropped\nit's {B_LAST_ITEM}!{WAIT_SE}\p");
 static const u8 sText_BagIsFull[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} dropped\n{B_LAST_ITEM}!{WAIT_SE}\pBut your bag is full!\p");
 
 const u8 * const gStatNamesTable[NUM_BATTLE_STATS] =
@@ -1795,6 +1795,7 @@ const u16 gItemDroppedStringIds[] =
 {
     [B_MSG_ITEM_DROPPED] = STRINGID_PKMNDROPPEDITEM,
     [B_MSG_BAG_IS_FULL] = STRINGID_BAGISFULL,
+    [B_MSG_EMPTY] = STRINGID_EMPTYSTRING3,
 };
 
 
