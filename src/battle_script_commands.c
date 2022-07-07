@@ -8922,7 +8922,7 @@ static void Cmd_various(void)
         else
             gBattlescriptCurrInstr += 7;
         return;
-    
+    /*
     case VARIOUS_GIVE_DROPPED_ITEMS:
         gLastUsedItem = gBattleResources->battleHistory->heldItems[gActiveBattler];
         if (gLastUsedItem 
@@ -8938,6 +8938,7 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr = BattleScript_ItemDropped;
             return;
         }
+        */
     }
     gBattlescriptCurrInstr += 3;
 }
