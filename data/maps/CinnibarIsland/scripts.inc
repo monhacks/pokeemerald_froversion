@@ -12,11 +12,11 @@ CinnabarIsland_OnFrame: @ 8238C4F
 
 FishRandomItem::
 	random 101
-	setvar VAR_TEMP_1, VAR_RESULT
-	addvar VAR_TEMP_1, 211
-	bufferitemname 0, VAR_TEMP_1
+	setvar VAR_0x8004, VAR_RESULT
+	addvar VAR_0x8004, 211
+	bufferitemname 0, VAR_0x8004
 	msgbox Text_FishedItem, MSGBOX_DEFAULT
-	giveitem VAR_TEMP_1, 1
+	giveitem VAR_0x8004, 1
 	closemessage
 end
 
