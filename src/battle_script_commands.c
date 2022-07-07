@@ -8923,6 +8923,7 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr += 7;
         return;
     case VARIOUS_GIVE_DROPPED_ITEMS:
+    {
         u8 i;
         u8 battlers[] = {GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), 
                          GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT)};
@@ -8945,6 +8946,7 @@ static void Cmd_various(void)
             }
         }
         break;
+    }
     }
 
     gBattlescriptCurrInstr += 3;
