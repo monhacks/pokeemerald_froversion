@@ -91,7 +91,7 @@ end
 Cinnabarisland_EventScript_PlayerHasGlasses::
 	msgbox CinnabarIsland_Text_PostFishermanThanks, MSGBOX_NPC
 	giveitem ITEM_TM32, 1
-	MSGBOX_NPC CinnabarIsland_Text_PostFishermanRelaxedNow, MSGBOX_NPC
+	msgbox CinnabarIsland_Text_PostFishermanRelaxedNow, MSGBOX_NPC
 end
 
 CinnabarIsland_EventScript_Guy::
