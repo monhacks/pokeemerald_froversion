@@ -8929,7 +8929,6 @@ static void Cmd_various(void)
                                     | BATTLE_TYPE_WALLY_TUTORIAL)))
         {
             u8 WildPokemonDropChance = Random();
-            Printf("Drop Chance = %d", WildPokemonDropChance);
             if(WildPokemonDropChance > 128)
             {
                 if(AddBagItem(ITEM_RED_SHARD, 1))
