@@ -12,13 +12,26 @@ CinnabarIsland_OnFrame: @ 8238C4F
 
 FishRandomItem::
 	random 101
+		buffernumberstring 0, VAR_RESULT
+		msgbox debug_RandomItem1, MSGBOX_NPC
 	setvar VAR_0x8004, VAR_RESULT
+		buffernumberstring 0, VAR_0x8004
+		msgbox debug_RandomItem2, MSGBOX_NPC
 	addvar VAR_0x8004, 211
+		buffernumberstring 0, VAR_0x8004
+		msgbox debug_RandomItem3, MSGBOX_NPC
 	bufferitemname 0, VAR_0x8004
 	msgbox Text_FishedItem, MSGBOX_DEFAULT
 	giveitem VAR_0x8004, 1
 	closemessage
 end
+
+debug_RandomItem1:
+	.string "Random {STR_VAR_1}$"
+debug_RandomItem2:
+	.string "0x8004 {STR_VAR_1}$"
+debug_RandomItem3:
+	.string "ItemID {STR_VAR_1}$"
 
 CinnabarIsland_NewGameEvents::
 	lock
