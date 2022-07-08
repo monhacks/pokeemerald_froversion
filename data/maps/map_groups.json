@@ -231,7 +231,8 @@
     "NCC_Underground_West_1A",
     "NCC_Underground_East_1B",
     "NCC_Elevator_ExitRoom",
-    "NCC_Underground_BossLab"
+    "NCC_Underground_BossLab",
+    "CinnabarIslandHouse1Post"
   ],
   "gMapGroup4": [
     "LavaridgeTown_HerbShop",

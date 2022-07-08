@@ -173,9 +173,9 @@ CinnabarIsland_Text_ManNextToBoxes1:
 	.string "...$"
 
 CinnabarIsland_Text_ManNextToBoxes2:
-	.string "Oh hello, as you can see i am working. As\n"
-	.string "I love my job and those boxes you don't\p"
-	.string "need to tell anyone anything you might\n"
+	.string "Oh hello, as you can see I am working. As\n"
+	.string "I love my job and those boxes you don't\l"
+	.string "need to tell anyone anything you might\l"
 	.string "have heard.$"
 
 CinnabarIsland_Text_Sailor:
@@ -186,14 +186,14 @@ CinnabarIsland_Text_Sailor:
 
 CinnabarIsland_Text_Guy:
 	.string "I came here for the Gym all the way from\n"
-	.string "Plaglaci Town. Do you know where this\p"
-	.string "is? No? Well no wonder, there is no\n"
+	.string "Plaglaci Town. Do you know where this\l"
+	.string "is? No? Well no wonder, there is no\l"
 	.string "dock where you could land with your ship.$"
 
 CinnabarIsland_Text_Scientist:
 	.string "I am glad I have the brains. If I lift\n"
 	.string "one of those crates I would hurt myself.\p"
-	.string "Also it's quite entertaining to mess\n"
+	.string "Also it's quite entertaining to mess\l"
 	.string "with those smooth brains.$"
 
 CinnabarIsland_Text_Fisherman:
@@ -219,9 +219,9 @@ CinnabarIsland_Text_ManMovingBoxes:
 	.string "work!$"
 
 CinnabarIsland_Text_VolcanoGuy:
-	.string "This volcano isn't safe for the\n"
-	.string "Public. Please head back towards\l"
-	.string "southern end of the Island.$"
+	.string "This volcano isn't safe for the public.\n"
+	.string "Please head back towards southern end of\l"
+	.string "the island.$"
 
 CinnabarIsland_Text_GymClosedToday:
 	.string "Sorry buster, the gym is closed today.\p"

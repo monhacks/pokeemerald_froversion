@@ -1365,3 +1365,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/NCC_Elevator_ExitRoom/scripts.inc"
 
 	.include "data/maps/NCC_Underground_BossLab/scripts.inc"
+
+	.include "data/maps/CinnabarIslandHouse1Post/scripts.inc"
