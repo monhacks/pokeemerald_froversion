@@ -26,7 +26,7 @@
 #include "constants/battle_config.h"
 #include "constants/rgb.h"
 #include "constants/battle_palace.h"
-#include "contants/abilities.h"
+#include "constants/abilities.h"
 
 extern struct MusicPlayerInfo gMPlayInfo_SE1;
 extern struct MusicPlayerInfo gMPlayInfo_SE2;
