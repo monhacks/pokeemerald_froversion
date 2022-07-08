@@ -8,6 +8,7 @@ CinnabarIsland_Inn_2F_WouldYouLikeToSleep::
 			case NO, CinnabarIsland_Inn_EventScript_NoToSleep
 			case MULTI_B_PRESSED, CinnabarIsland_Inn_EventScript_NoToSleep
 		closemessage
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 		call Common_EventScript_OutOfCenterPartyHeal
 		setvar VAR_ROUTE101_STATE, 3
 	release
