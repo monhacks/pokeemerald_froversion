@@ -55,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 45,
-      "y": 46,
+      "x": 39,
+      "y": 45,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -164,7 +164,7 @@
       "x": 33,
       "y": 47,
       "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND_HOUSE1",
+      "dest_map": "MAP_CINNABAR_ISLAND_HOUSE1POST",
       "dest_warp_id": 0
     },
     {

@@ -233,7 +233,8 @@
     "NCC_Elevator_ExitRoom",
     "NCC_Underground_BossLab",
     "CreditsMap_Cinnabar",
-    "UnknownCave"
+    "UnknownCave",
+    "CinnabarIslandHouse1Post"
   ],
   "gMapGroup4": [
     "LavaridgeTown_HerbShop",

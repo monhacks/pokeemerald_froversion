@@ -5930,6 +5930,16 @@
       "secondary_tileset": "gTileset_Cave2",
       "border_filepath": "data/layouts/UnknownCave/border.bin",
       "blockdata_filepath": "data/layouts/UnknownCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_ISLAND_HOUSE1POST",
+      "name": "CinnabarIslandHouse1Post_Layout",
+      "width": 11,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonSchool",
+      "border_filepath": "data/layouts/CinnabarIslandHouse1Post/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIslandHouse1Post/map.bin"
     }
   ]
 }

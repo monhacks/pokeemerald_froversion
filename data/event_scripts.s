@@ -1369,3 +1369,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/CreditsMap_Cinnabar/scripts.inc"
 
 	.include "data/maps/UnknownCave/scripts.inc"
+	
+	.include "data/maps/CinnabarIslandHouse1Post/scripts.inc"

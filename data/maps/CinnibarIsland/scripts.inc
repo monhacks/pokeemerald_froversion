@@ -220,9 +220,9 @@ CinnabarIsland_Text_ManMovingBoxes:
 	.string "work!$"
 
 CinnabarIsland_Text_VolcanoGuy:
-	.string "This volcano isn't safe for the\n"
-	.string "Public. Please head back towards\l"
-	.string "southern end of the Island.$"
+	.string "This volcano isn't safe for the public.\n"
+	.string "Please head back towards southern end of\l"
+	.string "the island.$"
 
 CinnabarIsland_Text_GymClosedToday:
 	.string "Sorry buster, the gym is closed today.\p"
