@@ -290,9 +290,9 @@ CinnabarIslandNCC_Text_CoolToSeeWork:
 CinnabarIslandNCC_Text_chat1:
 	.string "We can not increase the pressure any\n"
 	.string "further. The physical state of the\l"
-	.string "Nitrogen would change. If you want to\p"
-	.string "deal with a puddle of 77 Kelvin cold\n"
-	.string "liquid go on.\l"
+	.string "Nitrogen would change. If you want to\l"
+	.string "deal with a puddle of 77 Kelvin cold\l"
+	.string "liquid go on.\p"
 	.string "You better have frost burn heal!$"
 
 CinnabarIslandNCC_Text_chat2:

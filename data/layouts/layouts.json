@@ -5887,7 +5887,7 @@
       "width": 25,
       "height": 27,
       "primary_tileset": "gTileset_MountCinnabar_Primary",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_NCC_Underground_Lab",
       "border_filepath": "data/layouts/NCC_Underground_East_1B/border.bin",
       "blockdata_filepath": "data/layouts/NCC_Underground_East_1B/map.bin"
     },
@@ -5910,6 +5910,26 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/NCC_Underground_BossLab/border.bin",
       "blockdata_filepath": "data/layouts/NCC_Underground_BossLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_CREDITS_MAP_CINNABAR",
+      "name": "CreditsMap_Cinnabar_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_CinnibarIsland_Primary",
+      "secondary_tileset": "gTileset_CinnabarIsland_Secondary_PostShipwreck",
+      "border_filepath": "data/layouts/CreditsMap_Cinnabar/border.bin",
+      "blockdata_filepath": "data/layouts/CreditsMap_Cinnabar/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNKNOWN_CAVE",
+      "name": "UnknownCave_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave2",
+      "border_filepath": "data/layouts/UnknownCave/border.bin",
+      "blockdata_filepath": "data/layouts/UnknownCave/map.bin"
     }
   ]
 }

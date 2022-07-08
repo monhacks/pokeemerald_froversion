@@ -30,6 +30,7 @@ const u16 gTutorMoves[TUTOR_MOVE_COUNT] =
     [TUTOR_MOVE_THUNDER_PUNCH] = MOVE_THUNDER_PUNCH,
     [TUTOR_MOVE_FIRE_PUNCH] = MOVE_FIRE_PUNCH,
     [TUTOR_MOVE_FURY_CUTTER] = MOVE_FURY_CUTTER,
+    [TUTOR_MOVE_HAZE] = MOVE_HAZE,
 };
 
 #define TUTOR(move) (1u << (TUTOR_##move))
@@ -1921,6 +1922,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_VAPOREON]         = (TUTOR(MOVE_BODY_SLAM)
                                 | TUTOR(MOVE_DOUBLE_EDGE)
+                                | TUTOR(MOVE_HAZE)
                                 | TUTOR(MOVE_MIMIC)
                                 | TUTOR(MOVE_SUBSTITUTE)
                                 | TUTOR(MOVE_SNORE)
@@ -2844,6 +2846,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_ESPEON]           = (TUTOR(MOVE_BODY_SLAM)
                                 | TUTOR(MOVE_DOUBLE_EDGE)
+                                | TUTOR(MOVE_HAZE)
                                 | TUTOR(MOVE_MIMIC)
                                 | TUTOR(MOVE_DREAM_EATER)
                                 | TUTOR(MOVE_SUBSTITUTE)
@@ -4389,6 +4392,7 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_MILOTIC]          = (TUTOR(MOVE_BODY_SLAM)
                                 | TUTOR(MOVE_DOUBLE_EDGE)
+                                | TUTOR(MOVE_HAZE)
                                 | TUTOR(MOVE_MIMIC)
                                 | TUTOR(MOVE_SUBSTITUTE)
                                 | TUTOR(MOVE_PSYCH_UP)

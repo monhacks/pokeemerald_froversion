@@ -3840,7 +3840,8 @@ static void SetOpponentMovesShadowCharizard(void)
     s32 i;
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {
-        if(gBattleResults.battleTurnCounter % 5 == 4)
+        if((gBattleResults.battleTurnCounter % 5 == 4)
+            && gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_SHADOW_CHARIZARD)
             {
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_BLAST_BURN;
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_DRAGON_ASCENT;

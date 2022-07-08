@@ -46,8 +46,20 @@ NCC_Underground_BossLab_BossBattleInitiate::
 		waitse
 		removeobject LOCAL_ID_POKE_BALL
 		setflag FLAG_HIDE_LAB_ITEM_BALL
-		trainerbattle_no_intro TRAINER_SUMMIT_CAVERNS_LATTKA_2, SummitCaverns_Text_LattkaDefeat2
-		msgbox SummitCaverns_Text_PostLattkaBattle, MSGBOX_DEFAULT
+		trainerbattle_no_intro TRAINER_SUMMIT_CAVERNS_LATTKA_2, NCC_Underground_BossLab_Text_MewtwoDefeat
+		playbgm MUS_HALL_OF_FAME_ROOM, 0
+		msgbox NCC_Underground_BossLab_Text_MewtwoPostBattle, MSGBOX_DEFAULT
+		fadescreen FADE_TO_BLACK
+		removeobject LOCAL_ID_MEWTWO
+		removeobject LOCAL_ID_SCIENTIST_2
+		removeobject LOCAL_ID_SCIENTIST_3
+		removeobject LOCAL_ID_SCIENTIST_4
+		removeobject LOCAL_ID_SCIENTIST_5
+		setflag FLAG_HIDE_NCC_LAB_MEWTWO
+		setflag FLAG_HIDE_NCC_LAB_SCIENTIST
+		setflag FLAG_SYS_GAME_CLEAR
+		setvar VAR_ROUTE101_STATE, 7
+		warpsilent MAP_CREDITS_MAP_CINNABAR, 255, 42, 12
 	releaseall
 	end
 
@@ -169,3 +181,18 @@ NCC_Underground_BossLab_Text_Scientist3:
 NCC_Underground_BossLab_Text_Scientist4:
 	.string "How the hell did you get in here?! If\n"
 	.string "only the security could do their job!$"
+
+NCC_Underground_BossLab_Text_MewtwoDefeat:
+	.string "No...\p"
+	.string "This can't be...$"
+
+NCC_Underground_BossLab_Text_MewtwoPostBattle:
+	.string "All my time... my research...\p"
+	.string "And you've destroyed it all...\p"
+	.string "You will pay for this. Mark my words.\n"
+	.string "But I have no Pokémon left in battle\l"
+	.string "condition.\p"
+	.string "I am not going to waste my energy and\n"
+	.string "fight you myself...\p"
+	.string "Enjoy your victory, but this isn't\n"
+	.string "over.$"

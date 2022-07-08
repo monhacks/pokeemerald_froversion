@@ -239,10 +239,10 @@ CinnabarIsland_PostShipwreck_Text_AreYouGoingToInvestigate:
 	.string "Which one would you like?$"
 
 CinnabarIsland_PostShipwreck_Text_Guy_GotUp:
-	.string "I got up this night because i heard loud\n"
+	.string "I got up tonight because I heard loud\n"
 	.string "noises outside but the only thing I saw\l"
 	.string "was the lady in the house next to the NCC\l"
-	.string "peeking out of the door and then locking\lab
+	.string "peeking out of the door and then locking\l"
 	.string "it from the inside. I would actually leave\l"
 	.string "if my boat wasn't on the bottom of the sea.$"
 

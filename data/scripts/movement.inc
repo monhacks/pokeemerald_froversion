@@ -115,3 +115,108 @@ Common_Movement_FaceLeftSurprised: @ 82725AE
 	face_left
 	emote_exclamation_mark
 	step_end
+
+Movement_WalkDown51:
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	walk_down
+delay_16
+	step_end

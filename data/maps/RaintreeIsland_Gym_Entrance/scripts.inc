@@ -50,24 +50,28 @@ GymLobby_EventScript_Chad::
 
 GymLobby_EventScript_Mike::
 	lock
+	faceplayer
 	msgbox Text_Mike, MSGBOX_DEFAULT
 	release
 	end
 
 GymLobby_EventScript_John::
 	lock
+	faceplayer
 	msgbox Text_John, MSGBOX_DEFAULT
 	release
 	end
 
 GymLobby_EventScript_GuardFrosty::
 	lock
+	faceplayer
 	msgbox Text_GuardFrosty, MSGBOX_DEFAULT
 	release
 	end
 
 GymLobby_EventScript_GuardHot::
 	lock
+	faceplayer
 	msgbox Text_GuardHot, MSGBOX_DEFAULT
 	release
 	end
@@ -117,7 +121,7 @@ GymLobby_Mart_EventScript_HealingItemsClerk::
 
 .align 2
 GymLobby_HealingItems_Mart_Pokemart:
-	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_SITRUS_BERRY
 	.2byte ITEM_BURN_HEAL
 	.2byte ITEM_ICE_HEAL
 	.2byte ITEM_ANTIDOTE

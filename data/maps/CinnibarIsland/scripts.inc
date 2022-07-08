@@ -140,10 +140,10 @@ CinnabarIsland_Text_NCC:
 
 CinnabarIsland_Text_TownSign:
 	.string "Cinnabar Island\n"
-	.string "The place where land and ocean meets$"
+	.string "The place where land and ocean meet$"
 
 Cinnabar_Text_GymSign:
-	.string "Cinnabar Island gym$"
+	.string "Cinnabar Island Gym$"
 
 CinnabarIsland_Text_PostFishermanRelaxedNow:
 	.string "But the actual reward is that you are\n"
@@ -173,9 +173,9 @@ CinnabarIsland_Text_ManNextToBoxes1:
 	.string "...$"
 
 CinnabarIsland_Text_ManNextToBoxes2:
-	.string "Oh hello, as you can see i am working. As\n"
-	.string "I love my job and those boxes you don't\p"
-	.string "need to tell anyone anything you might\n"
+	.string "Oh hello, as you can see I am working.\n"
+	.string "I love my job and those boxes! Don't\l"
+	.string "tell anyone anything you might\l"
 	.string "have heard.$"
 
 CinnabarIsland_Text_Sailor:
@@ -186,13 +186,14 @@ CinnabarIsland_Text_Sailor:
 
 CinnabarIsland_Text_Guy:
 	.string "I came here for the Gym all the way from\n"
-	.string "Plaglaci Town. Do you know where this\p"
-	.string "is? No? Well no wonder, there is no\n"
+	.string "Homestead. Do you know where this is?\p"
+	.string "No? Well no wonder, there is no\n"
 	.string "dock where you could land with your ship.$"
 
 CinnabarIsland_Text_Scientist:
-	.string "I am glad I have the brains. If I lift\n"
-	.string "one of those crates I would hurt myself.\p"
+	.string "I am glad I have the brains. If I\n"
+	.string "had to lift those crates I would\l"
+	.string "hurt myself.\p"
 	.string "Also it's quite entertaining to mess\n"
 	.string "with those smooth brains.$"
 
