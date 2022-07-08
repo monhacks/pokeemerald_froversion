@@ -19,9 +19,7 @@ CinnabarIslandHouse1Post_EventScript_Student4::
 	end
 
 CinnabarIslandHouse1Post_EventScript_Student5::
-	msgbox CinnabarIslandHouse1Post_Text_Student5_1, MSGBOX_DEFAULT
-	closemessage
-	msgbox CinnabarIslandHouse1Post_Text_Student5_2, MSGBOX_NPC
+	msgbox CinnabarIslandHouse1Post_Text_Student5, MSGBOX_NPC
 	closemessage
 	end
 
