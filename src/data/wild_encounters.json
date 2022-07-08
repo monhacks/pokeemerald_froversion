@@ -13635,7 +13635,7 @@
           "map": "MAP_NCC_UNDERGROUND_EAST",
           "base_label": "gNCC_Underground_East0",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 35,
@@ -13704,7 +13704,7 @@
           "map": "MAP_NCC_UNDERGROUND_WEST",
           "base_label": "gNCC_Underground_West0",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 35,
