@@ -22,7 +22,7 @@ NCC_Underground_West_1A_ScientistDefeat:
 
 NCC_Underground_West_1A_GiveKey:
 		msgbox NCC_Underground_West_1A_1F_Text_GruntPostGiveKey, MSGBOX_AUTOCLOSE
-		giveitem ITEM_SS_TICKET, 1
+		giveitem ITEM_LAB_KEY, 1
 		setflag FLAG_RECEIVED_SS_TICKET
 	releaseall
 	end
@@ -38,18 +38,21 @@ NCC_Underground_West_1A_Eventscript_GruntPostBattle:
 @'''''''''''[______________________________________]'''''''''''''''''''''''''''''
 
 NCC_Underground_West_1A_1F_Text_GruntIntro:
-	.string "What are you doing down here?$"
+	.string "I am tasked with stopping anyone who\n"
+	.string "tries to interfere with our secret\l"
+	.string "operation\p"
+	.string "You'll be sorry you ever messed with\n"
+	.string "me!$"
 
 NCC_Underground_West_1A_1F_Text_GruntDefeat:
-	.string "Damn you won$"
+	.string "Impossible!$"
 
 NCC_Underground_West_1A_1F_Text_GruntPostBattleGiveStrength:
 	.string "Don't hurt me. Take this!$"
 
 NCC_Underground_West_1A_1F_Text_GruntPostBattle:
-	.string "You'll never understand the importance\n"
-	.string "of what the NCC is trying to\l"
-	.string "accomplish.$"
+	.string "The Boss is going to be so mad\n"
+	.string "at me.$"
 
 NCC_Underground_West_1A_1F_Text_GruntPostGiveKey:
 	.string "I can't stand up to you, please\n"

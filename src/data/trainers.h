@@ -1732,11 +1732,9 @@ const struct Trainer gTrainers[] = {
     // },
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .hasCustomTransition = TRUE,
-        .transition = B_TRANSITION_MUGSHOT,
         .trainerClass = TRAINER_CLASS_GMP,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_POKEMANIAC,
+        .trainerPic = TRAINER_PIC_LATTKA,
         .trainerName = _("Slate"),
         .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = TRUE,

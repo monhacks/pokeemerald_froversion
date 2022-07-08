@@ -640,5 +640,6 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_LEFT_LEG_OF_THE_FORBIDDEN_ONE] = {gItemIcon_LeftLegOfTheForbiddenOne, gItemIconPalette_LeftLegOfTheForbiddenOne},
     //MAGM6 Items
     [ITEM_NCC_PACKAGE] = {gItemIcon_OaksParcel, gItemIconPalette_OaksParcel},
+    [ITEM_LAB_KEY] = {gItemIcon_CardKey, gItemIconPalette_CardKey},
 
 };

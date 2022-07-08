@@ -7800,4 +7800,16 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+    [ITEM_LAB_KEY] =
+    {
+        .name = _("Lab Key"),
+        .itemId = ITEM_LAB_KEY,
+        .price = 0,
+        .description = sLabKeyDesc,
+        .importance = 2,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };

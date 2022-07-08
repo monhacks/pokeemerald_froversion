@@ -1863,8 +1863,8 @@ static const u8 sCardKeyDesc[] = _(
 
 static const u8 sLiftKeyDesc[] = _(
     "An elevator key\n"
-    "used in TEAM\n"
-    "ROCKET's HIDEOUT.");
+    "used to access\n"
+    "NCC's lift");
 
 static const u8 sArmorFossilDesc[] = _(
     "A piece of a\n"
@@ -3050,3 +3050,7 @@ static const u8 sNCCPackageDesc[] = _(
     "A package containing\n"
     "important parts for\n"
     "The NCC");
+
+static const u8 sLabKeyDesc[] = _(
+    "A key to the underground\n"
+    "Lab");

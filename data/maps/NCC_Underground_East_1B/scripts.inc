@@ -23,7 +23,7 @@ NCC_Underground_East_1B_ScientistDefeat:
 
 NCC_Underground_East_1B_GiveKey:
 		msgbox NCC_Underground_East_1B_1F_Text_GruntPostGiveKey, MSGBOX_AUTOCLOSE
-		giveitem ITEM_SS_TICKET, 1
+		giveitem ITEM_LAB_KEY, 1
 		setflag FLAG_RECEIVED_SS_TICKET
 	releaseall
 	end
@@ -39,18 +39,19 @@ NCC_Underground_West_1F_Eventscript_GruntPostBattle:
 @'''''''''''[______________________________________]'''''''''''''''''''''''''''''
 
 NCC_Underground_East_1B_1F_Text_GruntIntro:
-	.string "What are you doing down here?$"
+	.string "You shouldn't be messing around\n"
+	.string "here. You could get hurt.$"
 
 NCC_Underground_East_1B_1F_Text_GruntDefeat:
-	.string "Damn you won$"
+	.string "Looks like I'm the one who shouldn't\n"
+	.string "be messing around.$"
 
 NCC_Underground_East_1B_1F_Text_GruntPostBattleGiveStrength:
 	.string "Don't hurt me. Take this!$"
 
 NCC_Underground_East_1B_1F_Text_GruntPostBattle:
-	.string "You'll never understand the importance\n"
-	.string "of what the NCC is trying to\l"
-	.string "accomplish.$"
+	.string "I messed around and found out the\n"
+	.string "meaning of embarassment.$"
 
 NCC_Underground_East_1B_1F_Text_GruntPostGiveKey:
 	.string "I can't stand up to you, please\n"
