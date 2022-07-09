@@ -2592,15 +2592,15 @@ u8 DoBattlerEndTurnEffects(void)
                 && gBattleMons[gActiveBattler].hp != 0)
             {
                 MAGIC_GAURD_CHECK;
-            if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
+                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / (B_BURN_DAMAGE >= GEN_7 ? 16 : 8);
+                if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
                 {
                 gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 24;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
-                    BattleScriptExecute(BattleScript_PoisonTurnDmg);
+                    BattleScriptExecute(BattleScript_BurnTurnDmg);
                     effect++;
                 }
-                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / (B_BURN_DAMAGE >= GEN_7 ? 16 : 8);
                 if (ability == ABILITY_HEATPROOF)
                 {
                     if (gBattleMoveDamage > (gBattleMoveDamage / 2) + 1) // Record ability if the burn takes less damage than it normally would.
