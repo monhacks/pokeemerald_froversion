@@ -46,6 +46,7 @@
 #include "constants/trainers.h"
 #include "constants/weather.h"
 #include "mgba_printf.h"
+#include "m4a.h"
 
 /*
 NOTE: The data and functions in this file up until (but not including) sSoundMovesTable
@@ -2567,7 +2568,7 @@ u8 DoBattlerEndTurnEffects(void)
                 }
                 else if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
                 {
-                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 24;
+                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 32;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     BattleScriptExecute(BattleScript_PoisonTurnDmg);
@@ -2595,7 +2596,7 @@ u8 DoBattlerEndTurnEffects(void)
                 gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / (B_BURN_DAMAGE >= GEN_7 ? 16 : 8);
                 if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
                 {
-                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 24;
+                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 48;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     BattleScriptExecute(BattleScript_BurnTurnDmg);
@@ -4647,6 +4648,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                         {
                             gFieldTimers.darkTetherTimer = 255;  
                             BattleScriptPushCursorAndCallback(BattleScript_DarkTetherActivates);
+                            m4aSongNumStart(MUS_FV_SHADOW_CHARIZARD_TRANSFORM);
                             effect++;
                         }
                     effect++;
@@ -6772,6 +6774,11 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     && GetBattlerAbility(gBattlerAttacker) != ABILITY_MAGIC_GUARD
                     && gBattleStruct->rouletteEffect != 2)
                 {
+                    if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
+                    {
+                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 32;
+                    }
+                else 
                     gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 6;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;

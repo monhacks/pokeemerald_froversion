@@ -572,6 +572,7 @@
 #define MUS_FV_CINNABAR_ISLAND_POSTSHIPWRECK 636
 #define MUS_FV_VS_SHADOW_GYARADOS 637
 #define MUS_FV_SHADOW_CHARIZARD_BATTLE        638
+#define MUS_FV_SHADOW_CHARIZARD_TRANSFORM        639
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

@@ -1350,3 +1350,6 @@ $(MID_SUBDIR)/mus_fv_vs_shadow_gyarados.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_fv_shadow_charizard_battle.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V090	
+
+$(MID_SUBDIR)/mus_fv_shadow_charizard_transform.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G158 -V090	
