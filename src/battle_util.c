@@ -4998,6 +4998,23 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 effect++;
             }
             break;
+        case ABILITY_SHADOW_CHARIZARD:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && TARGET_TURN_DAMAGED
+             && IsBattlerAlive(battler)
+            // Had more than half of hp before, now has less
+             && gBattleStruct->hpBefore[battler] > gBattleMons[battler].maxHP / 4
+             && gBattleMons[battler].hp < gBattleMons[battler].maxHP / 4
+             && (gMultiHitCounter == 0 || gMultiHitCounter == 1)
+             && !((GetBattlerAbility(gBattlerAttacker) == ABILITY_SHEER_FORCE || GetBattlerAbility(gBattlerAttacker) == ABILITY_INVERTEBRAKE_HIDDEN_ABILITY) && gBattleMoves[gCurrentMove].flags & FLAG_SHEER_FORCE_BOOST)
+             && gBattleMons[battler].statStages[STAT_SPATK] != 12
+             && gBattleMons[battler].statStages[STAT_ATK] != 12)
+            {
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_ShadowCharizardBerserkTryAttack;
+                effect++;
+            }
+            break;
         case ABILITY_EMERGENCY_EXIT:
         case ABILITY_WIMP_OUT:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)

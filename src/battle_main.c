@@ -62,6 +62,7 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "cable_club.h"
+#include "mgba_printf.h"
 
 extern struct MusicPlayerInfo gMPlayInfo_SE1;
 extern struct MusicPlayerInfo gMPlayInfo_SE2;
@@ -3838,9 +3839,11 @@ void BattleTurnPassed(void)
 static void SetOpponentMovesShadowCharizard(void)
 {
     s32 i;
-    for (i = 0; i < NUM_BATTLE_STATS; i++)
-    {
-        if((gBattleResults.battleTurnCounter % 5 == 4)
+    u8 shadowCharizardHazeChance = Random() % 256;
+    bool32 hasDrops = FALSE;
+    bool32 hasBigBoosts = FALSE;
+
+    if((gBattleResults.battleTurnCounter % 5 == 4)
             && gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_SHADOW_CHARIZARD)
             {
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_BLAST_BURN;
@@ -3848,13 +3851,31 @@ static void SetOpponentMovesShadowCharizard(void)
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_DARKEST_LARIAT;
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_SPACIAL_REND;
                 return;
-            }
+            }    
+
+    for (i = 0; i < NUM_BATTLE_STATS; i++)
+    {
+        if (gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] < 6)
+                hasDrops = TRUE;
+        if (gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] > 9)
+                hasBigBoosts = TRUE;
+        Printf("Has Drops? = %d", hasDrops);
+        Printf("Has Big Boosts? = %d", hasBigBoosts);
+        Printf("Randomchance = %d", shadowCharizardHazeChance);
         if ((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 9 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 9) && gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] < 12)
             {
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SPECTRAL_THIEF;
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_SPECTRAL_THIEF;
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_SPECTRAL_THIEF;
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_SPECTRAL_THIEF;
+                return;
+            }
+        if (hasDrops && !hasBigBoosts && shadowCharizardHazeChance > 127)
+            {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_HAZE;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_HAZE;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_HAZE;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_HAZE;
                 return;
             }
         else
