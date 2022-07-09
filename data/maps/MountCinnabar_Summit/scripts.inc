@@ -220,7 +220,10 @@ MountCinnabar_Summit_Text_HaveYouSeenAnythingStrange:
 	.string "mad.\p"
 	.string "But if I can't find it soon I'll need to\n"
 	.string "come clean, otherwise I won't be able to\l"
-	.string "do my experiments in the secret\l"
+	.string "use the PC to operate the old mining\l"
+	.string "lift in the NCC.\p"
+	.string "If I can't do that, I won't be able\n"
+	.string "to do my experiments in the secret\l"
 	.string "underground...$"
 
 MountCinnabar_Summit_Text_YouSaidTooMuch:

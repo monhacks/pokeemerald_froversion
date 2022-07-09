@@ -14,6 +14,13 @@ NCC_Underground_BossLab_MapScripts::
 NCC_Underground_BossLab_OnLoad:
 	removeobject LOCAL_ID_MEWTWO
 	setflag FLAG_HIDE_NCC_LAB_MEWTWO
+	compare VAR_ROUTE101_STATE, 7
+	goto_if_lt  NCC_Underground_BossLab_OnLoad_ShowItemBall
+	end
+
+NCC_Underground_BossLab_OnLoad_ShowItemBall:
+	clearflag FLAG_HIDE_LAB_ITEM_BALL
+	addobject LOCAL_ID_POKE_BALL
 	end
 
 NCC_Underground_BossLab_BossBattleInitiate::

@@ -248,7 +248,7 @@
       "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "CinnabarIslandNCC_EventScript_ElevatorDown"
+      "script": "CinnabarIslandNCC_EventScript_PC"
     },
     {
       "type": "sign",
@@ -268,8 +268,8 @@
     },
     {
       "type": "sign",
-      "x": 17,
-      "y": 20,
+      "x": 20,
+      "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "CinnabarIslandNCC_EventScript_ElevatorCheckKey"
