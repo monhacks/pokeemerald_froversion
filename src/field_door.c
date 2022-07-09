@@ -145,6 +145,12 @@ static const u16 sDoorNullPalette51[16] = {};
 static const u8 sDoorAnimTilesSnowTownPokemart[] = INCBIN_U8("graphics/door_anims/poke_mart_lodge.4bpp");
 static const u16 sDoorNullPalette52[16] = {};
 static const u8 sDoorAnimTiles_NCC_Underground_Lab_Underground_LockedLabDoor[] = INCBIN_U8("graphics/door_anims/ncc_underground_lab_underground_lockedlabdoor.4bpp");
+static const u8 sDoorAnimTiles_CinnibarIsland_Secondary_Door_House_2[] = INCBIN_U8("graphics/door_anims/cinnabar_house.4bpp");
+static const u8 sDoorAnimTiles_CinnabarIsland_Secondary_PostShipwreck_Door_House_2[] = INCBIN_U8("graphics/door_anims/cinnabar_house.4bpp");
+static const u8 sDoorAnimTiles_CinnibarIsland_Secondary_Door_Warehouse[] = INCBIN_U8("graphics/door_anims/cinnabar_warehouse.4bpp");
+static const u8 sDoorAnimTiles_CinnibarIsland_Primary_Door_NCC[] = INCBIN_U8("graphics/door_anims/cinnabar_ncc.4bpp");
+static const u8 sDoorAnimTiles_CinnibarIsland_Primary_Gym_Door[] = INCBIN_U8("graphics/door_anims/cinnabar_gym.4bpp");
+static const u8 sDoorAnimTiles_CinnibarIsland_Primary_Inn_Door[] = INCBIN_U8("graphics/door_anims/cinnabar_inn.4bpp");
 
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
@@ -244,6 +250,12 @@ static const u8 sDoorAnimPalettes_SnowVillageDoorLodge[] = {7, 7, 7, 7, 7, 7, 7,
 static const u8 sDoorAnimPalettes_SnowTownPokeCenter[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_SnowTownPokemart[] = {10, 10, 10, 10, 10, 10, 10, 10};
 static const u8 sDoorAnimPalettes_NCC_Underground_Lab_Underground_LockedLabDoor[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_CinnibarIsland_Secondary_Door_House_2[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_CinnabarIsland_Secondary_PostShipwreck_Door_House_2[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_CinnibarIsland_Secondary_Door_Warehouse[] = {8, 8, 8, 8, 8, 8, 8, 8};
+static const u8 sDoorAnimPalettes_CinnibarIsland_Primary_Door_NCC[] = {6, 6, 6, 6, 6, 6, 6, 6};
+static const u8 sDoorAnimPalettes_CinnibarIsland_Primary_Gym_Door[] = {7, 7, 7, 7, 7, 7, 7, 7};
+static const u8 sDoorAnimPalettes_CinnibarIsland_Primary_Inn_Door[] = {10, 10, 10, 10, 10, 10, 10, 10};
 
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
@@ -311,6 +323,13 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_HomesteadNorth_Door_PokeCenter,                     DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_SnowTownPokecenter, sDoorAnimPalettes_SnowTownPokeCenter },
     {METATILE_HomesteadNorth_Door_Pokemart,                       DOOR_SOUND_SLIDING, 1, sDoorAnimTilesSnowTownPokemart, sDoorAnimPalettes_SnowTownPokemart},
     {METATILE_NCC_Underground_Lab_Underground_LockedLabDoor,                    DOOR_SOUND_SLIDING,  1, sDoorAnimTiles_NCC_Underground_Lab_Underground_LockedLabDoor, sDoorAnimPalettes_NCC_Underground_Lab_Underground_LockedLabDoor},
+    {METATILE_CinnibarIsland_Secondary_Door_House_2,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_CinnibarIsland_Secondary_Door_House_2, sDoorAnimPalettes_CinnibarIsland_Secondary_Door_House_2},
+    {METATILE_CinnabarIsland_Secondary_PostShipwreck_Door_House_2,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_CinnabarIsland_Secondary_PostShipwreck_Door_House_2, sDoorAnimPalettes_CinnabarIsland_Secondary_PostShipwreck_Door_House_2},
+    {METATILE_CinnibarIsland_Secondary_Door_Warehouse,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_CinnibarIsland_Secondary_Door_Warehouse, sDoorAnimPalettes_CinnibarIsland_Secondary_Door_Warehouse},
+    {METATILE_CinnabarIsland_Secondary_PostShipwreck_Door_Warehouse,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_CinnibarIsland_Secondary_Door_Warehouse, sDoorAnimPalettes_CinnibarIsland_Secondary_Door_Warehouse},
+    {METATILE_CinnibarIsland_Primary_Door_NCC,                    DOOR_SOUND_SLIDING,  1, sDoorAnimTiles_CinnibarIsland_Primary_Door_NCC, sDoorAnimPalettes_CinnibarIsland_Primary_Door_NCC},
+    {METATILE_CinnibarIsland_Primary_Gym_Door,                    DOOR_SOUND_SLIDING,  1, sDoorAnimTiles_CinnibarIsland_Primary_Gym_Door, sDoorAnimPalettes_CinnibarIsland_Primary_Gym_Door},
+    {METATILE_CinnibarIsland_Primary_Inn_Door,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_CinnibarIsland_Primary_Inn_Door, sDoorAnimPalettes_CinnibarIsland_Primary_Inn_Door},
     {},
 };
 

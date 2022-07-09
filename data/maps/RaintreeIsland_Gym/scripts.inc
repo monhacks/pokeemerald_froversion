@@ -104,7 +104,7 @@ RaintreeIsland_Gym_EventScript_GiveChansey::
 		playmoncry SPECIES_CHANSEY, 2
 		waitmoncry
 		msgbox RaintreeIsland_Gym_Text_YouTookChansey, MSGBOX_DEFAULT
-		givecustommon SPECIES_JOLTEON ,50, ITEM_EVIOLITE, ITEM_ULTRA_BALL, NATURE_HARDY,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_SOFT_BOILED, MOVE_SEISMIC_TOSS, MOVE_CHARM, MOVE_MINIMIZE, 0
+		givecustommon SPECIES_CHANSEY ,50, ITEM_EVIOLITE, ITEM_ULTRA_BALL, NATURE_HARDY,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_SOFT_BOILED, MOVE_SEISMIC_TOSS, MOVE_CHARM, MOVE_MINIMIZE, 0
 		goto EventScript_RaintreeIsland_IceRoom_GymLeaderPostBattle
 	releaseall
 	end

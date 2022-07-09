@@ -56,48 +56,40 @@ CinnabarIslandHouse1_Text_Student2:
 
 CinnabarIslandHouse1_Text_Student3:
 	.string "This reading was titled 'Basic Pokemon\n"
-	.string "anatomy' but this prof is so fixated\p"
-	
-	
+	.string "anatomy' but this prof. is so fixated\p"
 	.string "on the brain. Like, dude, is this\n"
-	.string "neurobiology, am i right?$"
+	.string "neurobiology, am I right?$"
 
 CinnabarIslandHouse1_Text_Student4:
-	.string "Did you know this prof right there has\n"
-	.string "a PhD in Genetics? I bet he cloned\p"
-	
-	
-	.string "himself to not attend this reading.\n"
+	.string "Did you know this prof. right there\n"
+	.string "has a PhD in Genetics? I bet he\l"
+	.string "cloned himself to not attend this\l"
+	.string "reading.\p"
 	.string "Can't blame him to be honest.$"
 
 CinnabarIslandHouse1_Text_Student5_1:
 	.string "'The brain ... central nervous...'$"
 
-	CinnabarIslandHouse1_Text_Student5_2:
+CinnabarIslandHouse1_Text_Student5_2:
 	.string "Could you please stop reading my\n"
 	.string "notes? Just sit down already!$"
 
 CinnabarIslandHouse1_Text_Student6:
 	.string "This reading is so basic it almost\n"
-	.string "hurts. Any good movies lately?$"
+	.string "hurts. Seen any good movies lately?$"
 
 CinnabarIslandHouse1_Text_Student7:
-	.string "When I have my PhD i will build an\n"
+	.string "When I have my PhD I will build an\n"
 	.string "underground lab just because I can.\p"
-	
-	
-	.string "Or I start growing crystals. As a\n"
-	.string "hobby. Maybe I can do both.Hmmm...$"
+	.string "Or start growing crystals. As a\n"
+	.string "hobby. Maybe I can do both. Hmmm...$"
 
 CinnabarIslandHouse1_Text_Teacher:
 	.string "And that's why Oxytocin plays a key\n"
-	.string "role in forming intra and interspecial\p"
-	
-	
-	.string "relationships. Moderating the Oxytocin\n"
-	.string "level thus enables switching between\p"
-
-	.string "a social, obedient state and an\n"
+	.string "role in forming intra and interspecial\l"
+	.string "relationships. Moderating the Oxytocin\l"
+	.string "level thus enables switching between\l"
+	.string "a social, obedient state and an\l"
 	.string "uncontrollable state of aggression.$"	
 
 

@@ -128,6 +128,18 @@
 #define METATILE_Cave_ShoalCave_DirtPile_Large           0x358
 #define METATILE_Cave_ShoalCave_DirtPile_Small           0x35A
 
+// gTileset_CinnabarIsland
+#define METATILE_CinnabarIsland_Secondary_PostShipwreck_Door_House_2    0x2A2
+#define METATILE_CinnabarIsland_Secondary_PostShipwreck_Door_Warehouse  0x2A0
+
+// gTileset_CinnibarIsland
+#define METATILE_CinnibarIsland_Primary_Door_NCC          0x0DA
+#define METATILE_CinnibarIsland_Primary_Gym_Door          0x144
+#define METATILE_CinnibarIsland_Primary_House_Door        0x16C
+#define METATILE_CinnibarIsland_Primary_Inn_Door          0x102
+#define METATILE_CinnibarIsland_Secondary_Door_House_2    0x2A2
+#define METATILE_CinnibarIsland_Secondary_Door_Warehouse  0x2A0
+
 // gTileset_Contest
 #define METATILE_Contest_CounterFlap_Bottom  0x2D9
 #define METATILE_Contest_CounterFlap_Top     0x2D1

@@ -240,11 +240,12 @@ CinnabarIsland_PostShipwreck_Text_AreYouGoingToInvestigate:
 
 CinnabarIsland_PostShipwreck_Text_Guy_GotUp:
 	.string "I got up tonight because I heard loud\n"
-	.string "noises outside but the only thing I saw\l"
-	.string "was the lady in the house next to the NCC\l"
-	.string "peeking out of the door and then locking\l"
-	.string "it from the inside. I would actually leave\l"
-	.string "if my boat wasn't on the bottom of the sea.$"
+	.string "noises outside, but the only thing I\l"
+	.string "saw was the lady in the house next to\l"
+	.string "the NCC locking the door from the\l"
+	.string "inside.\p"
+	.string "I would actually leave if my boat\l"
+	.string "wasn't on the bottom of the sea.$"
 
 CinnabarIsland_PostShipwreck_Text_TakeGoodCareOfPokemon:
 	.string "Take good care of my Pokemon! Good\n"
