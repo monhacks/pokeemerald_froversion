@@ -7840,6 +7840,32 @@ BattleScript_TargetAbilityStatRaiseOnMoveEnd::
 	printstring STRINGID_ABILITYRAISEDSTATDRASTICALLY
 	waitmessage 0x40
 	return
+
+BattleScript_ShadowCharizardBerserkTryAttack::
+    call BattleScript_AbilityPopUp
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	copybyte sSAVED_DMG, gBattlerAttacker
+	copybyte gBattlerAttacker, sBATTLER
+	playstatchangeanimation BS_TARGET, BIT_SPATK | BIT_ATK | BIT_SPEED, STAT_CHANGE_BY_TWO
+	setstatchanger STAT_ATK, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_ShadowCharizardBerserkTrySpAtk
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_ShadowCharizardBerserkTrySpAtk
+	printstring STRINGID_ABILITYRAISEDSTATDRASTICALLY
+	waitmessage 0x40
+BattleScript_ShadowCharizardBerserkTrySpAtk:
+	setstatchanger STAT_SPATK, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_ShadowCharizardBerserkTrySpeed
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_ShadowCharizardBerserkTrySpeed
+	printstring STRINGID_ABILITYRAISEDSTATDRASTICALLY
+	waitmessage 0x40
+BattleScript_ShadowCharizardBerserkTrySpeed:
+	setstatchanger STAT_SPEED, 2, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_BUFF_ALLOW_PTR, BattleScript_ShadowCharizardBerserkEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, 0x2, BattleScript_ShadowCharizardBerserkEnd
+	printstring STRINGID_ABILITYRAISEDSTATDRASTICALLY
+	waitmessage 0x40
+BattleScript_ShadowCharizardBerserkEnd:
+	return
 	
 BattleScript_ScriptingAbilityStatRaise::
 	copybyte gBattlerAbility, sBATTLER
