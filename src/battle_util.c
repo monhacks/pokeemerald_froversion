@@ -4648,7 +4648,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                         {
                             gFieldTimers.darkTetherTimer = 255;  
                             BattleScriptPushCursorAndCallback(BattleScript_DarkTetherActivates);
-                            m4aSongNumStart(MUS_FV_SHADOW_CHARIZARD_TRANSFORM);
+                            m4aSongNumStart(MUS_FV_MEGALOVANIA);
                             effect++;
                         }
                     effect++;

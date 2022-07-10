@@ -99,7 +99,7 @@ end
 GymLobby_BattleItems_Mart_Pokemart:
 	.2byte ITEM_LEFTOVERS
 	.2byte ITEM_FOCUS_SASH
-	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_SITRUS_BERRY
 	.2byte ITEM_QUICK_CLAW
 	.2byte ITEM_FLAME_ORB
 	.2byte ITEM_SAFETY_GOGGLES
@@ -121,13 +121,13 @@ GymLobby_Mart_EventScript_HealingItemsClerk::
 
 .align 2
 GymLobby_HealingItems_Mart_Pokemart:
-	.2byte ITEM_SITRUS_BERRY
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_REVIVE
+	.2byte ITEM_X_ATTACK
+	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_X_SPEED
+	.2byte ITEM_X_SP_ATK
+	.2byte ITEM_X_SP_DEF
+	.2byte ITEM_DIRE_HIT
+	.2byte ITEM_PP_MAX
 	.2byte ITEM_NONE
 	release
 	end

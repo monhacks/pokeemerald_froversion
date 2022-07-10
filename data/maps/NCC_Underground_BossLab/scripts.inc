@@ -19,6 +19,7 @@ NCC_Underground_BossLab_OnLoad:
 	end
 
 NCC_Underground_BossLab_OnLoad_ShowItemBall:
+	special HealPlayerParty
 	clearflag FLAG_HIDE_LAB_ITEM_BALL
 	addobject LOCAL_ID_POKE_BALL
 	end

@@ -1,2 +1,8 @@
 NCC_Underground_Entrance_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, NCC_Underground_Entrance_OnTransition
 	.byte 0
+
+
+NCC_Underground_Entrance_OnTransition: @ 81FC52E
+	setrespawn HEAL_LOCATION_NCC_UNDERGROUND_ENTRANCE2
+	end
