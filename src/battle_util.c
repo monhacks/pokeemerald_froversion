@@ -8045,6 +8045,9 @@ u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 i
         if (stat == STAT_ATK)
             MulModifier(&modifier, UQ_4_12(2.0));
         break;
+    case ABILITY_SHADOW_DUGTRIO:
+        if (stat == STAT_ATK)
+            MulModifier(&modifier, UQ_4_12(1.25));
     case ABILITY_SLOW_START:
         if (gDisableStructs[battlerAtk].slowStartTimer != 0)
             MulModifier(&modifier, UQ_4_12(0.5));

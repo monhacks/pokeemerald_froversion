@@ -80,19 +80,19 @@ NCC_Underground_BossLab_Mewtwo::
 	end
 
 NCC_Underground_BossLab_eventscript_Scientist1::
-	msgbox NCC_Underground_BossLab_eventscript_Scientist1, MSGBOX_NPC
+	msgbox NCC_Underground_BossLab_Text_Scientist1, MSGBOX_NPC
 end
 
 NCC_Underground_BossLab_eventscript_Scientist2::
-	msgbox NCC_Underground_BossLab_eventscript_Scientist2, MSGBOX_NPC
+	msgbox NCC_Underground_BossLab_Text_Scientist2, MSGBOX_NPC
 end
 
 NCC_Underground_BossLab_eventscript_Scientist3::
-	msgbox NCC_Underground_BossLab_eventscript_Scientist3, MSGBOX_NPC
+	msgbox NCC_Underground_BossLab_Text_Scientist3, MSGBOX_NPC
 end
 
 NCC_Underground_BossLab_eventscript_Scientist4::
-	msgbox NCC_Underground_BossLab_eventscript_Scientist4, MSGBOX_NPC
+	msgbox NCC_Underground_BossLab_Text_Scientist4, MSGBOX_NPC
 end
 
 @--------------------------------------------------------------------------------

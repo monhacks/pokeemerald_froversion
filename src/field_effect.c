@@ -260,9 +260,9 @@ extern const struct CompressedSpriteSheet gTrainerFrontPicTable[];
 extern u8 *gFieldEffectScriptPointers[];
 extern const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[];
 
-static const u32 sNewGameBirch_Gfx[] = INCBIN_U32("graphics/birch_speech/trump.4bpp");
+static const u32 sNewGameBirch_Gfx[] = INCBIN_U32("graphics/birch_speech/lattka_front_pic.4bpp");
 static const u32 sUnusedBirchBeauty[] = INCBIN_U32("graphics/unused/intro_birch_beauty.4bpp");
-static const u16 sNewGameBirch_Pal[16] = INCBIN_U16("graphics/birch_speech/trump.gbapal");
+static const u16 sNewGameBirch_Pal[16] = INCBIN_U16("graphics/birch_speech/lattka.gbapal");
 static const u32 sPokeballGlow_Gfx[] = INCBIN_U32("graphics/misc/pokeball_glow.4bpp");
 static const u16 sPokeballGlow_Pal[16] = INCBIN_U16("graphics/field_effects/palettes/pokeball_glow.gbapal");
 static const u32 sPokecenterMonitor0_Gfx[] = INCBIN_U32("graphics/misc/pokecenter_monitor/0.4bpp");
