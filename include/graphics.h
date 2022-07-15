@@ -414,6 +414,7 @@ extern const u32 gMonStillFrontPic_Diglett[];
 extern const u8 gMonIcon_Diglett[];
 extern const u8 gMonFootprint_Diglett[];
 extern const u32 gMonFrontPic_Dugtrio[];
+extern const u32 gMonFrontPic_DugtrioShadow[];
 extern const u32 gMonPalette_Dugtrio[];
 extern const u32 gMonBackPic_Dugtrio[];
 extern const u32 gMonShinyPalette_Dugtrio[];
