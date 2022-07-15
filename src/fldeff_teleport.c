@@ -7,6 +7,7 @@
 #include "task.h"
 #include "follow_me.h"
 #include "constants/field_effects.h"
+#include "mgba_printf.h"
 
 static void FieldCallback_Teleport(void);
 static void StartTeleportFieldEffect(void);
@@ -15,8 +16,8 @@ bool8 SetUpFieldMove_Teleport(void)
 {
     if (!CheckFollowerFlag(FOLLOWER_FLAG_CAN_LEAVE_ROUTE))
         return FALSE;
-
-    if (Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
+    Printf("Value for TryFindTeleportDestination = %d", TryFindTeleportDestination());
+    if (TryFindTeleportDestination() == TRUE)
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Teleport;

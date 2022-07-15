@@ -38,6 +38,9 @@
 #include "constants/maps.h"
 #include "constants/songs.h"
 #include "constants/trainer_hill.h"
+#include "constants/metatile_behaviors.h"
+#include "fieldmap.h"
+#include "mgba_printf.h"
 
 static EWRAM_DATA u8 sWildEncounterImmunitySteps = 0;
 static EWRAM_DATA u16 sPreviousPlayerMetatileBehavior = 0;
@@ -1121,3 +1124,57 @@ static bool8 EnableAutoRun(void)
 
     return TRUE;
 }
+
+bool32 TryFindTeleportDestination(void)
+    {
+    u8 i;
+    u8 playerx = (gSaveBlock1Ptr->pos.x + 7);
+    u8 playery = (gSaveBlock1Ptr->pos.y + 7);
+    u8 teleportDestinationXCoord;
+    u8 teleportDestinationYCoord;
+    
+
+    for (i = 0; i < 8; i++)
+    {
+            switch (GetPlayerFacingDirection())
+        {
+            case DIR_WEST://search up to 8 tiles west
+                if (MapGridGetMetatileBehaviorAt((playerx - i), playery) == MB_MOSSDEEP_GYM_WARP)
+                {
+                    teleportDestinationXCoord = ((playerx - i) - 7);
+                    teleportDestinationYCoord = (playery - 7);
+                    SetDynamicWarpWithCoords(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, -1, teleportDestinationXCoord, teleportDestinationYCoord);
+                    return TRUE;
+                }
+                break;
+            case DIR_EAST://search up to 8 tiles east
+                if (MapGridGetMetatileBehaviorAt((playerx + i), playery) == MB_MOSSDEEP_GYM_WARP)
+                {
+                    teleportDestinationXCoord = ((playerx + i) - 7);
+                    teleportDestinationYCoord = (playery - 7);
+                    SetDynamicWarpWithCoords(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, -1, teleportDestinationXCoord, teleportDestinationYCoord);
+                    return TRUE;
+                }
+                break;
+            case DIR_NORTH: //search up to 8 tiles north
+                if (MapGridGetMetatileBehaviorAt(playerx, (playery - i)) == MB_MOSSDEEP_GYM_WARP)
+                {
+                    teleportDestinationXCoord = (playerx - 7);
+                    teleportDestinationYCoord = ((playery - i) -7);
+                    SetDynamicWarpWithCoords(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, -1, teleportDestinationXCoord, teleportDestinationYCoord);
+                    return TRUE;
+                }
+                break;
+            case DIR_SOUTH: //search up to 8 tiles south
+                if (MapGridGetMetatileBehaviorAt(playerx, (playery + i)) == MB_MOSSDEEP_GYM_WARP)
+                {
+                    teleportDestinationXCoord = (playerx - 7);
+                    teleportDestinationYCoord = ((playery + i) -7);
+                    SetDynamicWarpWithCoords(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, -1, teleportDestinationXCoord, teleportDestinationYCoord);
+                    return TRUE;
+                }
+                break;
+        }
+    }
+    return FALSE;
+    }
