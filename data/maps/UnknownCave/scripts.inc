@@ -9,6 +9,7 @@ UnknownCave_OnFrame: @ 81EBCCB
 Script_UnknownCave_PostGameEvent:
 	lock
 	msgbox UnknownCave_Text_PlayerWokeUpInCave, MSGBOX_DEFAULT
+	setvar VAR_ROUTE101_STATE, 8
 	release
 	end
 

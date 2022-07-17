@@ -756,7 +756,7 @@ static bool8 StartMenuDebugCallback(void)
     HideStartMenuDebug(); // Hide start menu without enabling movement
 
     #if DEBUGGING
-        Debug_ShowMainMenu();
+       // Debug_ShowMainMenu();
     #endif
 
     return TRUE;
