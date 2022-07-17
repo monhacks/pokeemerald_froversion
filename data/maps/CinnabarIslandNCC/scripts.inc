@@ -83,6 +83,7 @@ CinnabarIslandNCC_Receptionist_GivePackage:
 		msgbox CinnabarIslandNCC_Text_ThankYouForDeliveringPackage, MSGBOX_DEFAULT
 		removeitem ITEM_NCC_PACKAGE, 1
 		setflag FLAG_GAVE_NCC_PACKAGE
+		setflag FLAG_SYS_B_DASH
 		msgbox CinnabarIslandNCC_Text_NCCExplaination, MSGBOX_DEFAULT
 	goto CinnabarIslandNCC_Receptionist_EnjoyYourStay
 	
@@ -250,7 +251,12 @@ CinnabarIslandNCC_Text_EnjoyYourStay:
 	.string "Are you sailing again or staying the\n"
 	.string "night?\p"
 	.string "Oh you're staying the night! How\n"
-	.string "wonderful!$" 
+	.string "wonderful!\p"
+	.string "Before I let you go I want to\n"
+	.string "thank you for your trouble.\l"
+	.string "Please, take these Running Shoes!\p"
+	.string "You can put them on by pressing\n"
+	.string "The R Button!$" 
 
 CinnabarIslandNCC_Text_IllLetYouGetSettled:	
 	.string "I'll let you go get settled\n"

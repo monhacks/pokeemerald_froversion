@@ -38,7 +38,7 @@ CinnabarIslandHouse1Post_EventScript_Student7::
 
 CinnabarIslandHouse1Post_Text_Student1:
 	.string "I just woke up from our prof running\n"
-	.string "outside. What the hell did I miss?$"
+	.string "outside. What did I miss?$"
 
 CinnabarIslandHouse1Post_Text_Student2:
 	.string "I can't believe we are stuck on this\n"
@@ -50,7 +50,7 @@ CinnabarIslandHouse1Post_Text_Student3:
 	.string "Maybe he bought his PhD after all.$"
 
 CinnabarIslandHouse1Post_Text_Student4:
-	.string "Wow i think his Oxytocin level just\n"
+	.string "Wow I think his Oxytocin level just\n"
 	.string "made a hole in the floor. Are we\l"
 	.string "really this incompetent?$"
 

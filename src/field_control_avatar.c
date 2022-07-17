@@ -224,6 +224,8 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
 
+    if (input->pressedRButton && EnableAutoRun())
+        return TRUE;
 
 #if DEBUGGING && !DEBUG_MENU
     if (input->input_field_1_2)
@@ -233,8 +235,7 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         return TRUE;
     }
 
-    if (input->pressedRButton && EnableAutoRun())
-        return TRUE;
+    
 
 #endif
 

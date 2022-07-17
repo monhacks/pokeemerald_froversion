@@ -132,7 +132,7 @@ NCC_Underground_BossLab_Text_MewtwoPlanReveal:
 	.string "What they didn't forsee was by doing\n"
 	.string "this they gave me a consciousness\l"
 	.string "that Pokémon genetically lack.\p"
-	.string "I was able to commiunicate with both\n"
+	.string "I was able to commiunicate with Pokémon\n"
 	.string "and humans alike. I was far more powerful\l"
 	.string "than they could have ever anticipated.\p"
 	.string "My telekinetic prowess allowed me to\n"
