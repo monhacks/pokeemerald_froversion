@@ -6774,12 +6774,14 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     && GetBattlerAbility(gBattlerAttacker) != ABILITY_MAGIC_GUARD
                     && gBattleStruct->rouletteEffect != 2)
                 {
-                    if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
+                    if (IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gMegaBosses))
                     {
-                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 32;
+                        gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 32;
                     }
                 else 
-                    gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 6;
+                    {
+                        gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 6;
+                    }
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     effect = ITEM_HP_CHANGE;

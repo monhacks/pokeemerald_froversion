@@ -4670,6 +4670,7 @@ const u16 gSlashingMoves[] =
         SPECIES_NIDOKING,
         SPECIES_NIDOQUEEN,
         SPECIES_RHYDON,
+        SPECIES_DUGTRIO,
         0xFFFF
     };
 
