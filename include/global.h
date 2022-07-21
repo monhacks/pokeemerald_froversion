@@ -10,6 +10,7 @@
 #include "constants/flags.h"
 #include "constants/vars.h"
 #include "constants/species.h"
+#include "mgba_printf.h"
 
 // Prevent cross-jump optimization.
 #define BLOCK_CROSS_JUMP asm("");
@@ -948,6 +949,23 @@ struct MysteryEventStruct
     /*0x344 0x3570*/ u32 unk_344[2][5];
 }; // 0x36C 0x3598
 
+enum
+{
+    PORTAL_ORANGE,
+    PORTAL_BLUE,
+    PORTAL_COUNT
+};
+
+struct Portal
+{
+    bool8 active;
+    u8 direction;
+    s8 mapGroup;
+    s8 mapNum;
+    s16 x;
+    s16 y;
+};
+
 struct SaveBlock1
 {
     /*0x00*/ struct Coords16 pos;
@@ -1039,6 +1057,7 @@ struct SaveBlock1
     // sizeof: 0x3D88
     u8 diaryEntriesFound;
     u8 diaryEntriesOrder[NUM_DIARY_ENTRIES];
+    struct Portal portals[2];
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;

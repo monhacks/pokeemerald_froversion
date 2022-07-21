@@ -68,6 +68,7 @@ static bool8 IsArrowWarpMetatileBehavior(u16, u8);
 static s8 GetWarpEventAtMapPosition(struct MapHeader *, struct MapPosition *);
 static void SetupWarp(struct MapHeader *, s8, struct MapPosition *);
 static bool8 TryDoorWarp(struct MapPosition *, u16, u8);
+static bool8 TryPortalWarp(const struct MapPosition *, u8);
 static s8 GetWarpEventAtPosition(struct MapHeader *, u16, u16, u8);
 static u8 *GetCoordEventScriptAtPosition(struct MapHeader *, u16, u16, u8);
 static struct BgEvent *GetBackgroundEventAtPosition(struct MapHeader *, u16, u16, u8);
@@ -204,6 +205,21 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     }
     if (input->checkStandardWildEncounter && CheckStandardWildEncounter(metatileBehavior) == TRUE)
         return TRUE;
+
+    if (FlagGet(FLAG_SYS_PORTAL_GUN_GET))
+    {
+        if (JOY_NEW(L_BUTTON))
+        {
+            DoCreatePortal(&position, playerDirection, PORTAL_ORANGE);
+            return TRUE;
+        }
+        else if (JOY_NEW(R_BUTTON))
+        {
+            DoCreatePortal(&position, playerDirection, PORTAL_BLUE);
+            return TRUE;
+        }
+    }
+
     if (input->heldDirection && input->dpadDirection == playerDirection)
     {
         if (TryArrowWarp(&position, metatileBehavior, playerDirection) == TRUE)
@@ -217,6 +233,9 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
 
     if (input->heldDirection2 && input->dpadDirection == playerDirection)
     {
+        if (TryPortalWarp(&position, playerDirection) == TRUE)
+            return TRUE;
+
         if (TryDoorWarp(&position, metatileBehavior, playerDirection) == TRUE)
             return TRUE;
     }
@@ -967,6 +986,70 @@ static bool8 TryDoorWarp(struct MapPosition *position, u16 metatileBehavior, u8 
             }
         }
     }
+    return FALSE;
+}
+
+static bool8 TryPortalWarp(const struct MapPosition *position, u8 direction)
+{
+    s32 i;
+    const struct MapConnection *connection;
+    const struct Portal *portals = gSaveBlock1Ptr->portals;
+
+    if (portals[PORTAL_ORANGE].active && portals[PORTAL_BLUE].active)
+    {
+        if ((connection = GetConnectionAtCoords(position->x, position->y)))
+        {
+            const struct MapLayout *connectedLayout = GetMapHeaderFromConnection(connection)->mapLayout;
+            for (i = 0; i < PORTAL_COUNT; i++)
+            {
+                if (direction == portals[i].direction
+                 && connection->mapGroup == portals[i].mapGroup
+                 && connection->mapNum == portals[i].mapNum)
+                {
+                    if (connection->direction == CONNECTION_SOUTH
+                          && position->x == connection->offset + portals[i].x
+                          && position->y == gMapHeader.mapLayout->height + portals[i].y)
+                    {
+                        DoPortalWarp(i, 1 - i);
+                    }
+                    else if (connection->direction == CONNECTION_NORTH
+                          && position->x == connection->offset + portals[i].x
+                          && position->y == -connectedLayout->height + portals[i].y)
+                    {
+                        DoPortalWarp(i, 1 - i);
+                    }
+                    else if (connection->direction == CONNECTION_WEST
+                          && position->x == -connectedLayout->width + portals[i].x
+                          && position->y == connection->offset + portals[i].y)
+                    {
+                        DoPortalWarp(i, 1 - i);
+                    }
+                    else if (connection->direction == CONNECTION_EAST
+                          && position->x == gMapHeader.mapLayout->width + portals[i].x
+                          && position->y == connection->offset + portals[i].y)
+                    {
+                        DoPortalWarp(i, 1 - i);
+                    }
+                }
+            }
+        }
+        else
+        {
+            for (i = 0; i < PORTAL_COUNT; i++)
+            {
+                if (position->x == portals[i].x
+                 && position->y == portals[i].y
+                 && direction == portals[i].direction
+                 && gSaveBlock1Ptr->location.mapGroup == portals[i].mapGroup
+                 && gSaveBlock1Ptr->location.mapNum == portals[i].mapNum)
+                {
+                    DoPortalWarp(i, 1 - i);
+                    return TRUE;
+                }
+            }
+        }
+    }
+
     return FALSE;
 }
 
