@@ -4550,6 +4550,21 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     effect++;
                 }
                 break;
+            case ABILITY_ABYSSAL:
+            gBattleScripting.battler = battler;
+            if (gBattleResults.battleTurnCounter % 5 == 3
+                && TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM, TRUE) )
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
+                goto ABILITY_HEAL_MON_STATUS;
+                effect++;
+            }
+            else if (gBattleResults.battleTurnCounter % 5 == 3)
+            {
+                goto ABILITY_HEAL_MON_STATUS;
+                effect++;
+            }
+            break;
             case ABILITY_VAPOREON_REGENERATOR_RAIN_DISH:
                 if (WEATHER_HAS_EFFECT
                  && (gBattleWeather & WEATHER_RAIN_ANY)

@@ -11,11 +11,12 @@
 #include "fieldmap.h"
 #include "field_control_avatar.h"
 #include "field_effect.h"
-#include "field_effects.h"
+#include "constants/field_effects.h"
 #include "field_player_avatar.h"
 #include "field_poison.h"
 #include "field_screen_effect.h"
 #include "field_specials.h"
+#include "fldeff.h"
 #include "fldeff_misc.h"
 #include "item_menu.h"
 #include "link.h"
@@ -231,10 +232,11 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
 
-    if (input->pressedLButton)
+    if (input->pressedLButton && TryFindTeleportDestination() == TRUE)
         {
-            Printf("Pressed L BUTTON");
-            FldEff_UseTeleport();
+            
+            ScriptContext1_SetupScript(gFieldEffectScript_UseTeleportFromField);
+            return TRUE;
         }
     if (input->pressedRButton && EnableAutoRun())
         return TRUE;

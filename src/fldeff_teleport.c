@@ -9,7 +9,7 @@
 #include "constants/field_effects.h"
 #include "mgba_printf.h"
 
-static void FieldCallback_Teleport(void);
+void FieldCallback_Teleport(void);
 static void StartTeleportFieldEffect(void);
 
 bool8 SetUpFieldMove_Teleport(void)
@@ -26,7 +26,7 @@ bool8 SetUpFieldMove_Teleport(void)
     return FALSE;
 }
 
-static void FieldCallback_Teleport(void)
+void FieldCallback_Teleport(void)
 {
     Overworld_ResetStateAfterTeleport();
     FieldEffectStart(FLDEFF_USE_TELEPORT);

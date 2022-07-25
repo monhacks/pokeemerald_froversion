@@ -584,6 +584,7 @@ extern const u8 SecretBase_EventScript_TreeUseSecretPower[];
 extern const u8 SecretBase_EventScript_ShrubUseSecretPower[];
 extern const u8 FishRandomItem[];
 extern const u8 gFieldEffectScript_UseTeleport[];
+extern const u8 gFieldEffectScript_UseTeleportFromField[];
 
 // trainer hill
 extern const u8 TrainerHill_EventScript_TrainerBattle[];
