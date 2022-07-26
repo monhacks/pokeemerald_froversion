@@ -7314,6 +7314,22 @@ BattleScript_ShadowCharizardCharging::
 	waitmessage 0x40
 	end3
 
+BattleScript_AbyssalDefensiveStance::
+	showabilitypopup BS_ABILITY_BATTLER
+	recordability BS_ABILITY_BATTLER
+	pause 40
+	printstring STRINGID_ABYSSALDEFENSIVESTANCE
+	waitmessage 0x40
+	end3
+
+BattleScript_AbyssalReturnOriginalStance::
+	showabilitypopup BS_ABILITY_BATTLER
+	recordability BS_ABILITY_BATTLER
+	pause 40
+	printstring STRINGID_ABYSSALRETURNORIGINALSTANCE
+	waitmessage 0x40
+	end3
+
 BattleScript_MalevolentActivates::
 	call BattleScript_AbilityHpHeal
 	return

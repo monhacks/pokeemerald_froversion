@@ -55,6 +55,7 @@ match the ROM; this is also why sSoundMovesTable's declaration is in the middle 
 functions instead of at the top of the file with the other declarations.
 */
 
+
 extern const u8 *const gBattleScriptsForMoveEffects[];
 extern const u8 *const gBattlescriptsForBallThrow[];
 extern const u8 *const gBattlescriptsForRunningByItem[];
@@ -4552,19 +4553,32 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 break;
             case ABILITY_ABYSSAL:
             gBattleScripting.battler = battler;
-            if (gBattleResults.battleTurnCounter % 5 == 3
-                && TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM, TRUE) )
-            {
-                BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
-                goto ABILITY_HEAL_MON_STATUS;
-                effect++;
-            }
-            else if (gBattleResults.battleTurnCounter % 5 == 3)
-            {
-                goto ABILITY_HEAL_MON_STATUS;
-                effect++;
-            }
-            break;
+                if(gBattleResults.battleTurnCounter % 3 == 0)
+                {
+                    gChangeAbilityPopUpAbyssal = 1;
+                    BattleScriptPushCursorAndCallback(BattleScript_AbyssalDefensiveStance);
+                    effect++;
+                }
+                if (gBattleResults.battleTurnCounter % 3 == 1)
+                {
+                    PREPARE_ABILITY_BUFFER(gBattleTextBuff1, ABILITY_ROUGH_SKIN);
+                    gChangeAbilityPopUpAbyssal = 1;
+                    BattleScriptPushCursorAndCallback(BattleScript_AbyssalReturnOriginalStance);
+                    effect++;
+                }
+                if (gBattleResults.battleTurnCounter % 3 == 2
+                    && TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM, TRUE) )
+                {
+                    BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
+                    goto ABILITY_HEAL_MON_STATUS;
+                    effect++;
+                }
+                else if (gBattleResults.battleTurnCounter % 3 == 2)
+                {
+                    goto ABILITY_HEAL_MON_STATUS;
+                    effect++;
+                }
+                break;
             case ABILITY_VAPOREON_REGENERATOR_RAIN_DISH:
                 if (WEATHER_HAS_EFFECT
                  && (gBattleWeather & WEATHER_RAIN_ANY)
@@ -5195,6 +5209,24 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 if (gBattleMoveDamage == 0)
                     gBattleMoveDamage = 1;
                 PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_RoughSkinActivates;
+                effect++;
+            }
+            break;
+        case ABILITY_ABYSSAL:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && gBattleMons[gBattlerAttacker].hp != 0
+             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+             && TARGET_TURN_DAMAGED
+             && IsMoveMakingContact(move, gBattlerAttacker)
+             && (gBattleResults.battleTurnCounter % 3 == 1))
+            {
+                gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 12;
+                if (gBattleMoveDamage == 0)
+                    gBattleMoveDamage = 1;
+                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, ABILITY_ROUGH_SKIN);
+                gChangeAbilityPopUpAbyssal = 1;
                 BattleScriptPushCursor();
                 gBattlescriptCurrInstr = BattleScript_RoughSkinActivates;
                 effect++;

@@ -236,6 +236,7 @@ EWRAM_DATA u16 gPartnerSpriteId = 0;
 EWRAM_DATA struct TotemBoost gTotemBoosts[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA bool8 gHasFetchedBall = FALSE;
 EWRAM_DATA u8 gLastUsedBall = 0;
+EWRAM_DATA u8 gChangeAbilityPopUpAbyssal = 0;
 
 // IWRAM common vars
 void (*gPreBattleCallback1)(void);
@@ -3541,7 +3542,7 @@ const u8 *const gTypeWeatherScripts[ENUM_WEATHER_COUNT] =
 static void TryDoEventsBeforeFirstTurn(void)
 {
     s32 i, j;
-
+    gChangeAbilityPopUpAbyssal = 0;
     if (gBattleControllerExecFlags)
         return;
 

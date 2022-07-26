@@ -739,6 +739,8 @@ static const u8 sText_PkmnBurnedByOrb[] = _("{B_ATK_NAME_WITH_PREFIX} is\nburned
 static const u8 sText_PkmnFrozenByOrb[] = _("{B_ATK_NAME_WITH_PREFIX} is\nfrozen by {B_DEF_NAME_WITH_PREFIX}'s \lDragon Orb!");
 static const u8 sText_HitAllTargets[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY} allows\nit to target all foes this turn.");
 static const u8 sText_CharizardIsCharging[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY} is\nemanating power.\pIt appears {B_ATK_NAME_WITH_PREFIX} is charging\nfor a powerful attack...");
+static const u8 sText_AbyssalDefensiveStance[] = _("{B_ATK_NAME_WITH_PREFIX}'s takes a defensive\nposition and hardens it's skin.");
+static const u8 sText_AbyssalReturnOriginalStance[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\nreturns to normal.");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1341,6 +1343,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_SHADOWS - 12] = sText_DarkAuraActivates,
     [STRINGID_HITALLTARGETS - 12] = sText_HitAllTargets,
     [STRINGID_CHARIZARDISCHARGING - 12] = sText_CharizardIsCharging,
+    [STRINGID_ABYSSALDEFENSIVESTANCE - 12] = sText_AbyssalDefensiveStance,
+    [STRINGID_ABYSSALRETURNORIGINALSTANCE - 12] = sText_AbyssalReturnOriginalStance,
 };
 
 const u16 gTerrainStringIds[] =
