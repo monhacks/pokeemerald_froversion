@@ -1195,7 +1195,7 @@ static void CheckAbilityPopupAbyssal(void)
     && gBattleMons[gActiveBattler].species == SPECIES_CHARIZARD_X
     && gChangeAbilityPopUpAbyssal == 1)
     {
-        CreateAbilityPopUp(gActiveBattler, ABILITY_ROUGH_SKIN, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
+        CreateAbilityPopUp(gActiveBattler, gLastUsedAbility, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
         gChangeAbilityPopUpAbyssal = 0;
     }
     else 
