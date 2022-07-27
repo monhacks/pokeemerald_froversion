@@ -11,10 +11,12 @@
 #include "fieldmap.h"
 #include "field_control_avatar.h"
 #include "field_effect.h"
+#include "constants/field_effects.h"
 #include "field_player_avatar.h"
 #include "field_poison.h"
 #include "field_screen_effect.h"
 #include "field_specials.h"
+#include "fldeff.h"
 #include "fldeff_misc.h"
 #include "item_menu.h"
 #include "link.h"
@@ -38,6 +40,9 @@
 #include "constants/maps.h"
 #include "constants/songs.h"
 #include "constants/trainer_hill.h"
+#include "constants/metatile_behaviors.h"
+#include "fieldmap.h"
+#include "mgba_printf.h"
 
 static EWRAM_DATA u8 sWildEncounterImmunitySteps = 0;
 static EWRAM_DATA u16 sPreviousPlayerMetatileBehavior = 0;
@@ -84,6 +89,7 @@ void FieldClearPlayerInput(struct FieldInput *input)
     input->tookStep = FALSE;
     input->pressedBButton = FALSE;
     input->pressedRButton = FALSE;
+    input->pressedLButton = FALSE;
     input->input_field_1_1 = FALSE;
     input->input_field_1_2 = FALSE;
     input->input_field_1_3 = FALSE;
@@ -110,6 +116,8 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                 input->pressedBButton = TRUE;
             if (newKeys & R_BUTTON)
                 input->pressedRButton = TRUE;
+            if (newKeys & L_BUTTON)
+                input->pressedLButton = TRUE;
         }
 
         if (heldKeys & (DPAD_UP | DPAD_DOWN | DPAD_LEFT | DPAD_RIGHT))
@@ -223,6 +231,12 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
 
+    if (input->pressedLButton && TryFindTeleportDestination() == TRUE)
+        {
+            
+            ScriptContext1_SetupScript(gFieldEffectScript_UseTeleportFromField);
+            return TRUE;
+        }
 
 #if DEBUGGING && !DEBUG_MENU
     if (input->input_field_1_2)
@@ -1117,3 +1131,57 @@ bool8 EnableAutoRun(void)
 
     return TRUE;
 }
+
+bool32 TryFindTeleportDestination(void)
+    {
+    u8 i;
+    u8 playerx = (gSaveBlock1Ptr->pos.x + 7);
+    u8 playery = (gSaveBlock1Ptr->pos.y + 7);
+    u8 teleportDestinationXCoord;
+    u8 teleportDestinationYCoord;
+    
+
+    for (i = 0; i < 8; i++)
+    {
+            switch (GetPlayerFacingDirection())
+        {
+            case DIR_WEST://search up to 8 tiles west
+                if (MapGridGetMetatileBehaviorAt((playerx - i), playery) == MB_MOSSDEEP_GYM_WARP)
+                {
+                    teleportDestinationXCoord = ((playerx - i) - 7);
+                    teleportDestinationYCoord = (playery - 7);
+                    SetDynamicWarpWithCoords(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, -1, teleportDestinationXCoord, teleportDestinationYCoord);
+                    return TRUE;
+                }
+                break;
+            case DIR_EAST://search up to 8 tiles east
+                if (MapGridGetMetatileBehaviorAt((playerx + i), playery) == MB_MOSSDEEP_GYM_WARP)
+                {
+                    teleportDestinationXCoord = ((playerx + i) - 7);
+                    teleportDestinationYCoord = (playery - 7);
+                    SetDynamicWarpWithCoords(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, -1, teleportDestinationXCoord, teleportDestinationYCoord);
+                    return TRUE;
+                }
+                break;
+            case DIR_NORTH: //search up to 8 tiles north
+                if (MapGridGetMetatileBehaviorAt(playerx, (playery - i)) == MB_MOSSDEEP_GYM_WARP)
+                {
+                    teleportDestinationXCoord = (playerx - 7);
+                    teleportDestinationYCoord = ((playery - i) -7);
+                    SetDynamicWarpWithCoords(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, -1, teleportDestinationXCoord, teleportDestinationYCoord);
+                    return TRUE;
+                }
+                break;
+            case DIR_SOUTH: //search up to 8 tiles south
+                if (MapGridGetMetatileBehaviorAt(playerx, (playery + i)) == MB_MOSSDEEP_GYM_WARP)
+                {
+                    teleportDestinationXCoord = (playerx - 7);
+                    teleportDestinationYCoord = ((playery + i) -7);
+                    SetDynamicWarpWithCoords(0, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, -1, teleportDestinationXCoord, teleportDestinationYCoord);
+                    return TRUE;
+                }
+                break;
+        }
+    }
+    return FALSE;
+    }

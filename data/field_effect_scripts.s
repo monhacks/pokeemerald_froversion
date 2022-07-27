@@ -332,9 +332,10 @@ gFieldEffectScript_HallOfFameRecord:: @ 82DBCDE
 	field_eff_end
 
 gFieldEffectScript_UseTeleport:: @ 82DBCED
+
 	field_eff_callnative FldEff_UseTeleport
 	field_eff_end
-
+	
 gFieldEffectScript_RayquazaSpotlight:: @ 82DBCF3
 	field_eff_callnative FldEff_RayquazaSpotlight
 	field_eff_end

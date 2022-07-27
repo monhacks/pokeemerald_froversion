@@ -54,6 +54,7 @@
 #define BS_PLAYER2                  13
 #define BS_OPPONENT2                14
 #define BS_ABILITY_BATTLER          15
+#define BS_ABILITY_ROUGH_SKIN       16
 
 // Cmd_accuracycheck
 #define NO_ACC_CALC_CHECK_LOCK_ON 0xFFFF

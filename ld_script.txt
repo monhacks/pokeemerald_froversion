@@ -705,6 +705,7 @@ SECTIONS {
         src/map_preview.o(.rodata);
         src/mugshot.o(.rodata);
         src/mgba_printf.o(.rodata);
+	src/fldeff_teleport.o(.rodata);
     } =0
 
     song_data :
