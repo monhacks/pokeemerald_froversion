@@ -15,6 +15,7 @@
 #include "strings.h"
 #include "gba/m4a_internal.h"
 #include "constants/rgb.h"
+#include "field_control_avatar.h"
 
 // Task data
 enum
@@ -25,6 +26,7 @@ enum
     TD_SOUND,
     TD_BUTTONMODE,
     TD_FRAMETYPE,
+    TD_AUTORUN,
 };
 
 // Menu items
@@ -35,6 +37,7 @@ enum
     MENUITEM_SOUND,
     MENUITEM_BUTTONMODE,
     MENUITEM_FRAMETYPE,
+    MENUITEM_AUTORUN,
     MENUITEM_CANCEL,
     MENUITEM_COUNT,
 };
@@ -52,6 +55,7 @@ enum
 #define YPOS_SOUND        (MENUITEM_SOUND * 16)
 #define YPOS_BUTTONMODE   (MENUITEM_BUTTONMODE * 16)
 #define YPOS_FRAMETYPE    (MENUITEM_FRAMETYPE * 16)
+#define YPOS_AUTORUN      (MENUITEM_AUTORUN * 16)
 
 // this file's functions
 static void Task_OptionMenuFadeIn(u8 taskId);
@@ -71,6 +75,8 @@ static u8   ButtonMode_ProcessInput(u8 selection);
 static void ButtonMode_DrawChoices(u8 selection);
 static void DrawTextOption(void);
 static void DrawOptionMenuTexts(void);
+static u8   Autorun_ProcessInput(u8 selection);
+static void Autorun_DrawChoices(u8 selection);
 static void sub_80BB154(void);
 
 EWRAM_DATA static bool8 sArrowPressed = FALSE;
@@ -86,6 +92,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_SOUND]       = gText_Sound,
     [MENUITEM_BUTTONMODE]  = gText_ButtonMode,
     [MENUITEM_FRAMETYPE]   = gText_Frame,
+    [MENUITEM_AUTORUN]     = gText_Autorun,
     [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
 };
 
@@ -236,6 +243,7 @@ void CB2_InitOptionMenu(void)
         gTasks[taskId].data[TD_SOUND] = gSaveBlock2Ptr->optionsSound;
         gTasks[taskId].data[TD_BUTTONMODE] = gSaveBlock2Ptr->optionsButtonMode;
         gTasks[taskId].data[TD_FRAMETYPE] = gSaveBlock2Ptr->optionsWindowFrameType;
+        gTasks[taskId].data[TD_AUTORUN] = gSaveBlock2Ptr->optionsWindowAutoRun;
 
         TextSpeed_DrawChoices(gTasks[taskId].data[TD_TEXTSPEED]);
         BattleScene_DrawChoices(gTasks[taskId].data[TD_BATTLESCENE]);
@@ -243,6 +251,7 @@ void CB2_InitOptionMenu(void)
         ButtonMode_DrawChoices(gTasks[taskId].data[TD_BUTTONMODE]);
         FrameType_DrawChoices(gTasks[taskId].data[TD_FRAMETYPE]);
         HighlightOptionMenuItem(gTasks[taskId].data[TD_MENUSELECTION]);
+        Autorun_DrawChoices(gTasks[taskId].data[TD_AUTORUN]);
 
         CopyWindowToVram(WIN_OPTIONS, 3);
         gMain.state++;
@@ -330,6 +339,13 @@ static void Task_OptionMenuProcessInput(u8 taskId)
             if (previousOption != gTasks[taskId].data[TD_FRAMETYPE])
                 FrameType_DrawChoices(gTasks[taskId].data[TD_FRAMETYPE]);
             break;
+        case MENUITEM_AUTORUN:
+            previousOption = gTasks[taskId].data[TD_AUTORUN];
+            gTasks[taskId].data[TD_AUTORUN] = Autorun_ProcessInput(gTasks[taskId].data[TD_AUTORUN]);
+
+            if (previousOption != gTasks[taskId].data[TD_AUTORUN])
+                Autorun_DrawChoices(gTasks[taskId].data[TD_AUTORUN]);
+            break;
         default:
             return;
         }
@@ -349,6 +365,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsSound = gTasks[taskId].data[TD_SOUND];
     gSaveBlock2Ptr->optionsButtonMode = gTasks[taskId].data[TD_BUTTONMODE];
     gSaveBlock2Ptr->optionsWindowFrameType = gTasks[taskId].data[TD_FRAMETYPE];
+    gSaveBlock2Ptr->optionsWindowAutoRun = gTasks[taskId].data[TD_AUTORUN];
 
     BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
     gTasks[taskId].func = Task_OptionMenuFadeOut;
@@ -602,6 +619,30 @@ static void DrawOptionMenuTexts(void)
         AddTextPrinterParameterized(WIN_OPTIONS, 1, sOptionMenuItemsNames[i], 8, (i * 16) + 1, TEXT_SPEED_FF, NULL);
     }
     CopyWindowToVram(WIN_OPTIONS, 3);
+}
+
+static u8 Autorun_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
+    {
+        selection ^= 1;
+        sArrowPressed = TRUE;
+        EnableAutoRun();
+    }
+
+    return selection;
+}
+
+static void Autorun_DrawChoices(u8 selection)
+{
+    u8 styles[2];
+
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(gText_AutorunOn, 104, YPOS_AUTORUN, styles[0]);
+    DrawOptionMenuChoice(gText_AutorunOff, GetStringRightAlignXOffset(1, gText_AutorunOff, 198), YPOS_AUTORUN, styles[1]);
 }
 
 static void sub_80BB154(void)

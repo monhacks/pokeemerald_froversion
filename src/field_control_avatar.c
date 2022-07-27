@@ -77,7 +77,6 @@ static bool8 TryStartMiscWalkingScripts(u16);
 static bool8 TryStartStepCountScript(u16);
 static void UpdateHappinessStepCounter(void);
 static bool8 UpdatePoisonStepCounter(void);
-static bool8 EnableAutoRun(void);
 
 void FieldClearPlayerInput(struct FieldInput *input)
 {
@@ -238,8 +237,6 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
             ScriptContext1_SetupScript(gFieldEffectScript_UseTeleportFromField);
             return TRUE;
         }
-    if (input->pressedRButton && EnableAutoRun())
-        return TRUE;
 
 #if DEBUGGING && !DEBUG_MENU
     if (input->input_field_1_2)
@@ -1117,7 +1114,7 @@ int SetCableClubWarp(void)
 
 extern const u8 EventScript_DisableAutoRun[];
 extern const u8 EventScript_EnableAutoRun[];
-static bool8 EnableAutoRun(void)
+bool8 EnableAutoRun(void)
 {
     if (!FlagGet(FLAG_SYS_B_DASH))
         return FALSE;   //auto run unusable until you get running shoes
@@ -1126,12 +1123,10 @@ static bool8 EnableAutoRun(void)
     if (gSaveBlock2Ptr->autoRun)
     {
         gSaveBlock2Ptr->autoRun = FALSE;
-        ScriptContext1_SetupScript(EventScript_DisableAutoRun);
     }
     else
     {
         gSaveBlock2Ptr->autoRun = TRUE;
-        ScriptContext1_SetupScript(EventScript_EnableAutoRun);
     }
 
     return TRUE;
