@@ -627,8 +627,12 @@ static u8 Autorun_ProcessInput(u8 selection)
     {
         selection ^= 1;
         sArrowPressed = TRUE;
-        EnableAutoRun();
     }
+
+    if (selection == 1)
+        gSaveBlock2Ptr->autoRun = FALSE;
+    else
+        gSaveBlock2Ptr->autoRun = TRUE;
 
     return selection;
 }
