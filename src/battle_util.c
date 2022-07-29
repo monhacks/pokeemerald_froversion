@@ -4555,14 +4555,16 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             gBattleScripting.battler = battler;
                 if(gBattleResults.battleTurnCounter % 3 == 0)
                 {
-                    gChangeAbilityPopUpAbyssal = 1;
+                    gLastUsedAbility = ABILITY_ROUGH_SKIN;
+                    gChangeAbilityPopUp = 1;
                     BattleScriptPushCursorAndCallback(BattleScript_AbyssalDefensiveStance);
                     effect++;
                 }
                 if (gBattleResults.battleTurnCounter % 3 == 1)
                 {
                     PREPARE_ABILITY_BUFFER(gBattleTextBuff1, ABILITY_ROUGH_SKIN);
-                    gChangeAbilityPopUpAbyssal = 1;
+                    gLastUsedAbility = ABILITY_ROUGH_SKIN;
+                    gChangeAbilityPopUp = 1;
                     BattleScriptPushCursorAndCallback(BattleScript_AbyssalReturnOriginalStance);
                     effect++;
                 }
@@ -5225,8 +5227,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 12;
                 if (gBattleMoveDamage == 0)
                     gBattleMoveDamage = 1;
-                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, ABILITY_ROUGH_SKIN);
-                gChangeAbilityPopUpAbyssal = 1;
+                gLastUsedAbility = ABILITY_ROUGH_SKIN;
+                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+                gChangeAbilityPopUp = 1;
                 BattleScriptPushCursor();
                 gBattlescriptCurrInstr = BattleScript_RoughSkinActivates;
                 effect++;

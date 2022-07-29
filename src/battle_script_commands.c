@@ -1189,22 +1189,6 @@ static const u8 sBattlePalaceNatureToFlavorTextId[NUM_NATURES] =
     [NATURE_QUIRKY]  = 3,
 };
 
-static void CheckAbilityPopupAbyssal(void)
-{
-    if(gBattleResults.battleTurnCounter % 3 < 2 
-    && gBattleMons[gActiveBattler].species == SPECIES_CHARIZARD_X
-    && gChangeAbilityPopUpAbyssal == 1)
-    {
-        CreateAbilityPopUp(gActiveBattler, ABILITY_ROUGH_SKIN, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
-        gChangeAbilityPopUpAbyssal = 0;
-    }
-    else 
-    {
-        CreateAbilityPopUp(gActiveBattler, gBattleMons[gActiveBattler].ability, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
-    }
-    return;
-}
-
 bool32 IsBattlerProtected(u8 battlerId, u16 move)
 {
     if (!(gBattleMoves[move].flags & FLAG_PROTECT_AFFECTED))
@@ -8508,9 +8492,10 @@ static void Cmd_various(void)
         }
         return;
     case VARIOUS_ABILITY_POPUP:
-        if(gBattleMons[gActiveBattler].ability == ABILITY_ABYSSAL)
+        if(gChangeAbilityPopUp == 1)
         {
-            CheckAbilityPopupAbyssal();
+            CreateAbilityPopUp(gActiveBattler, gLastUsedAbility, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
+            gChangeAbilityPopUp = 0;
         }
         else 
         {

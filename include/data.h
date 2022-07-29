@@ -13,13 +13,26 @@ struct MonCoords
     u8 y_offset;
 };
 
+struct TrainerMonStats
+{
+    u16 statDef;
+    u16 statMaxHP;
+    u16 statSpDef;
+    u16 statHP;
+    u16 movePP1;
+    u16 movePP2;
+    u16 movePP3;
+    u16 movePP4;
+    const u8 *nickname;
+};
+
 struct TrainerMonNoItemDefaultMoves
 {
     u16 iv;
     u8 lvl;
     u16 species;
     u16 abilityNum;
-
+    struct TrainerMonStats stats;
 };
 
 struct TrainerMonItemDefaultMoves
@@ -29,6 +42,7 @@ struct TrainerMonItemDefaultMoves
     u16 species;
     u16 heldItem;
     u16 abilityNum;
+    struct TrainerMonStats stats;
 };
 
 struct TrainerMonNoItemCustomMoves
@@ -38,6 +52,7 @@ struct TrainerMonNoItemCustomMoves
     u16 species;
     u16 moves[MAX_MON_MOVES];
     u16 abilityNum;
+    struct TrainerMonStats stats;
 };
 
 struct TrainerMonItemCustomMoves
@@ -49,15 +64,7 @@ struct TrainerMonItemCustomMoves
     u16 heldItem;
     u16 moves[MAX_MON_MOVES];
     u16 abilityNum;
-    u16 statDef;
-    u16 statMaxHP;
-    u16 statSpDef;
-    u16 statHP;
-    u16 movePP1;
-    u16 movePP2;
-    u16 movePP3;
-    u16 movePP4;
-    const u8 *nickname;
+    struct TrainerMonStats stats;
 };
 
 union TrainerMonPtr

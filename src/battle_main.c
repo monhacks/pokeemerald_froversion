@@ -236,7 +236,7 @@ EWRAM_DATA u16 gPartnerSpriteId = 0;
 EWRAM_DATA struct TotemBoost gTotemBoosts[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA bool8 gHasFetchedBall = FALSE;
 EWRAM_DATA u8 gLastUsedBall = 0;
-EWRAM_DATA u8 gChangeAbilityPopUpAbyssal = 0;
+EWRAM_DATA u8 gChangeAbilityPopUp = 0;
 
 // IWRAM common vars
 void (*gPreBattleCallback1)(void);
@@ -1812,6 +1812,28 @@ static void sub_8038538(struct Sprite *sprite)
     }
 }
 
+static void TrySetCustomMonStats(struct Pokemon *mon, const struct TrainerMonStats *stats)
+    {
+        if (stats->statDef > 0)
+            SetMonData(mon, MON_DATA_DEF, &stats->statDef); 
+        if (stats->statSpDef > 0)
+            SetMonData(mon, MON_DATA_SPDEF, &stats->statSpDef);
+        if (stats->statHP > 0)
+            SetMonData(mon, MON_DATA_HP, &stats->statHP); 
+        if (stats->statMaxHP > 0)
+            SetMonData(mon, MON_DATA_MAX_HP, &stats->statMaxHP);
+        if (stats->movePP1 > 0)
+            SetMonData(mon, MON_DATA_PP1, &stats->movePP1); 
+        if (stats->movePP2 > 0)
+            SetMonData(mon, MON_DATA_PP2, &stats->movePP2);
+        if (stats->movePP3 > 0)
+            SetMonData(mon, MON_DATA_PP3, &stats->movePP3);
+        if (stats->movePP4 > 0)
+            SetMonData(mon, MON_DATA_PP4, &stats->movePP4);  
+        if (stats->nickname != NULL)
+            SetMonData(mon, MON_DATA_NICKNAME, stats->nickname);
+    }
+
 static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 firstTrainer)
 {
     u32 nameHash = 0;
@@ -1915,10 +1937,6 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNum);
-                if (partyData[i].nickname != NULL)
-                    {
-                        SetMonData(&party[i], MON_DATA_NICKNAME, partyData[i].nickname);
-                    }
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
 
                 for (j = 0; j < MAX_MON_MOVES; j++)
@@ -1931,22 +1949,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                     SetMonData(&party[i], MON_DATA_HP_EV + j, &partyData[i].evs[j]);
                 }
                 CalculateMonStats(&party[i]);
-                if (partyData[i].statDef > 0)
-                   SetMonData(&party[i], MON_DATA_DEF, &partyData[i].statDef); 
-                if (partyData[i].statSpDef > 0)
-                   SetMonData(&party[i], MON_DATA_SPDEF, &partyData[i].statSpDef);
-                if (partyData[i].statHP > 0)
-                   SetMonData(&party[i], MON_DATA_HP, &partyData[i].statHP); 
-                if (partyData[i].statMaxHP > 0)
-                   SetMonData(&party[i], MON_DATA_MAX_HP, &partyData[i].statMaxHP);
-                if (partyData[i].movePP1 > 0)
-                   SetMonData(&party[i], MON_DATA_PP1, &partyData[i].movePP1); 
-                if (partyData[i].movePP2 > 0)
-                   SetMonData(&party[i], MON_DATA_PP2, &partyData[i].movePP2);
-                if (partyData[i].movePP3 > 0)
-                   SetMonData(&party[i], MON_DATA_PP3, &partyData[i].movePP3);
-                if (partyData[i].movePP4 > 0)
-                   SetMonData(&party[i], MON_DATA_PP4, &partyData[i].movePP4);  
+                TrySetCustomMonStats(&party[i], &partyData[i].stats);
                 break;
             }
             }
@@ -3542,7 +3545,7 @@ const u8 *const gTypeWeatherScripts[ENUM_WEATHER_COUNT] =
 static void TryDoEventsBeforeFirstTurn(void)
 {
     s32 i, j;
-    gChangeAbilityPopUpAbyssal = 0;
+    gChangeAbilityPopUp = 0;
     if (gBattleControllerExecFlags)
         return;
 
