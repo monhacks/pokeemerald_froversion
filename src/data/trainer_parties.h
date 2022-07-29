@@ -818,7 +818,10 @@ static const struct TrainerMonItemCustomMoves sParty_Lola2[] = {
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_FLARE_BLITZ, MOVE_MEGAHORN, MOVE_ICICLE_CRASH, MOVE_BULK_UP},
     .abilityNum = 2,
-    .nickname = gText_WesRamNickname
+    .stats
+        {
+            .nickname = gText_WesRamNickname
+        },
     }
 };
 
@@ -858,7 +861,10 @@ static const struct TrainerMonItemCustomMoves sParty_Lola4[] = {
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_SUBSTITUTE, MOVE_ACID_ARMOR, MOVE_BATON_PASS, MOVE_WATER_PULSE},
     .evs = {126, 0, 126, 0, 0, 4},
-    .nickname = gText_MarriottVaporeonNickname
+    .stats =
+        {
+        .nickname = gText_MarriottVaporeonNickname
+        },
     },
     {
     .abilityNum = 2,
@@ -4019,7 +4025,10 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_FLAME_CHARGE, MOVE_HORN_ATTACK, MOVE_AURORA_VEIL, MOVE_GROWL},
     .abilityNum = 1,
-    .nickname = gText_WesRamNickname
+    .stats =
+        {
+        .nickname = gText_WesRamNickname,
+        },
     }
 };
 
@@ -4055,7 +4064,10 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_INGRAIN, MOVE_ABSORB, MOVE_LEECH_SEED, MOVE_PIN_MISSILE},
     .abilityNum = 0,
-    .nickname = gText_JordanCactusNickname
+    .stats =
+        {
+        .nickname = gText_JordanCactusNickname
+        },
     }
 };
 
@@ -4069,7 +4081,10 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_SUBSTITUTE, MOVE_ACID_ARMOR, MOVE_BATON_PASS, MOVE_WATER_PULSE},
     .evs = {126, 0, 126, 0, 0, 4},
-    .nickname = gText_MarriottVaporeonNickname
+    .stats =
+        {
+        .nickname = gText_MarriottVaporeonNickname
+        },
     },
 
     {
@@ -13593,11 +13608,17 @@ static const struct TrainerMonItemCustomMoves sParty_MegaHoundoomMtChimney[] = {
     .lvl = 30,
     .species = SPECIES_FILLER_8,
     .moves = {MOVE_FLAMETHROWER, MOVE_CRUNCH, MOVE_GROWL, MOVE_TAIL_WHIP},
-    .statDef = 225,
-    .statSpDef = 225,
-    .statHP = 350,
-    .statMaxHP = 350,
-    .movePP1 = 99,
+    .stats =
+        {
+        .statDef = 225,
+        .statSpDef = 225,
+        .statHP = 350,
+        .statMaxHP = 350,
+        .movePP1 = 99,
+        .movePP2 = 99,
+        .movePP3 = 99,
+        .movePP4 = 99,
+        },
     },
 };
 
@@ -13635,14 +13656,17 @@ static const struct TrainerMonItemCustomMoves sParty_SummitCavernsLattka2[] = {
     .species = SPECIES_MEGA_DEWGONG,
     .heldItem = ITEM_ORAN_BERRY,
     .moves = {MOVE_ICE_BEAM, MOVE_HAIL, MOVE_PSYSHOCK, MOVE_AURA_SPHERE},
-    .statDef = 180,
-    .statSpDef = 180,
-    .statHP = 525,
-    .statMaxHP = 525,
-    .movePP1 = 99,
-    .movePP2 = 99,
-    .movePP3 = 99,
-    .movePP4 = 99,
+    .stats =
+        {
+        .statDef = 180,
+        .statSpDef = 180,
+        .statHP = 525,
+        .statMaxHP = 525,
+        .movePP1 = 99,
+        .movePP2 = 99,
+        .movePP3 = 99,
+        .movePP4 = 99,
+        },
     },
 };
 
@@ -13654,14 +13678,17 @@ static const struct TrainerMonItemCustomMoves sParty_MagmaHideoutMegaGengar[] = 
     .species = SPECIES_FILLER_9,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SHADOW_BALL, MOVE_SLUDGE_WAVE, MOVE_WILL_O_WISP, MOVE_TAUNT},
-    .statDef = 191,
-    .statSpDef = 290,
-    .statHP = 707,
-    .statMaxHP = 707,
-    .movePP1 = 99,
-    .movePP2 = 99,
-    .movePP3 = 99,
-    .movePP4 = 99,
+    .stats =
+        {
+        .statDef = 191,
+        .statSpDef = 290,
+        .statHP = 707,
+        .statMaxHP = 707,
+        .movePP1 = 99,
+        .movePP2 = 99,
+        .movePP3 = 99,
+        .movePP4 = 99,
+        },
     },
 };
 
@@ -13673,14 +13700,17 @@ static const struct TrainerMonItemCustomMoves sParty_ColangeloGraphicsDom[] = {
     .species = SPECIES_INVERTEBRAKE,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SURF, MOVE_BLIZZARD, MOVE_SLUDGE_WAVE, MOVE_CONSTRICT},
-    .statDef = 350,
-    .statSpDef = 350,
-    .statHP = 1725,
-    .statMaxHP = 1725,
-    .movePP1 = 99,
-    .movePP2 = 99,
-    .movePP3 = 99,
-    .movePP4 = 99,
+    .stats =
+        {
+        .statDef = 350,
+        .statSpDef = 350,
+        .statHP = 1725,
+        .statMaxHP = 1725,
+        .movePP1 = 99,
+        .movePP2 = 99,
+        .movePP3 = 99,
+        .movePP4 = 99,
+        },
     },
 };
 
@@ -14663,7 +14693,10 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1MAGM6[] = {
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_WISH, MOVE_FIRE_BLAST, MOVE_PROTECT, MOVE_TOXIC},
     .abilityNum = 0,
-    .nickname = gText_WesRamNickname
+    .stats =
+        {
+        .nickname = gText_WesRamNickname
+        },
     },
     {
     .iv = 125,
@@ -14691,10 +14724,13 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowRhydon[] = {
     .species = SPECIES_RHYDON,
     .heldItem = ITEM_SCOPE_LENS,
     .moves = {MOVE_ROCK_SMASH, MOVE_SHADOW_SNEAK, MOVE_CURSE, MOVE_EARTHQUAKE},
-    .statDef = 300,
-    .statSpDef = 150,
-    .statHP = 450,
-    .statMaxHP = 450,
+    .stats =
+        {
+        .statDef = 300,
+        .statSpDef = 150,
+        .statHP = 450,
+        .statMaxHP = 450,
+        },
     },
 };
 
@@ -14706,10 +14742,13 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowDugtrio[] = {
     .species = SPECIES_DUGTRIO,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_BULLDOZE, MOVE_FEINT_ATTACK, MOVE_TRICK_OR_TREAT, MOVE_SHADOW_CLAW},
-    .statDef = 165,
-    .statSpDef = 215,
-    .statHP = 270,
-    .statMaxHP = 270,
+    .stats = 
+        {
+        .statDef = 165,
+        .statSpDef = 215,
+        .statHP = 270,
+        .statMaxHP = 270,
+        },
     },
 };
 
@@ -14721,10 +14760,13 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowNidokingAndQueen[] = 
     .species = SPECIES_NIDOKING,
     .heldItem = ITEM_LUM_BERRY,
     .moves = {MOVE_EARTHQUAKE, MOVE_SHADOW_BALL, MOVE_ICE_BEAM, MOVE_THUNDERBOLT},
-    .statDef = 170,
-    .statSpDef = 170,
-    .statHP = 305,
-    .statMaxHP = 305,
+    .stats = 
+        {
+        .statDef = 170,
+        .statSpDef = 170,
+        .statHP = 305,
+        .statMaxHP = 305,
+        },
     },
     {
     .abilityNum = 0,
@@ -14733,10 +14775,13 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowNidokingAndQueen[] = 
     .species = SPECIES_NIDOQUEEN,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_HEAL_PULSE, MOVE_FOLLOW_ME, MOVE_HELPING_HAND, MOVE_EARTHQUAKE},
-    .statDef = 214,
-    .statSpDef = 210,
-    .statHP = 320,
-    .statMaxHP = 320,
+    .stats =
+        {
+        .statDef = 214,
+        .statSpDef = 210,
+        .statHP = 320,
+        .statMaxHP = 320,
+        },
     },
 };
 
@@ -14748,13 +14793,17 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowCharizard[] = {
     .species = SPECIES_CHARIZARD_X,
     .heldItem = ITEM_RED_CARD,
     .moves = {MOVE_DRAGON_DANCE, MOVE_NASTY_PLOT, MOVE_SUNNY_DAY, MOVE_QUIVER_DANCE},
-    //.statDef = 180,
-    //.statSpDef = 180,
-    // .statHP = 2600,
-    // .statMaxHP = 2600,
-    .movePP1 = 99,
-    .movePP2 = 99,
-    .movePP3 = 99,
-    .movePP4 = 99,
+    .stats =
+        {
+        //.statDef = 180,
+        //.statSpDef = 180,
+        // .statHP = 2600,
+        // .statMaxHP = 2600,
+        .movePP1 = 99,
+        .movePP2 = 99,
+        .movePP3 = 99,
+        .movePP4 = 99,
+        .nickname = gText_WesRamNickname,
+        },
     },
 };
