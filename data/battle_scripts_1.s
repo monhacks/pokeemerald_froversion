@@ -7993,6 +7993,12 @@ BattleScript_RoughSkinActivates::
 	call BattleScript_AbilityPopUp
 	call BattleScript_HurtAttacker
 	return
+	
+BattleScript_SolidRockActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_ABYSSALSOLIDROCK
+	waitmessage 0x40
+	return
 
 BattleScript_RockyHelmetActivates::
 	@ don't play the animation for a fainted mon

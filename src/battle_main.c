@@ -237,6 +237,8 @@ EWRAM_DATA struct TotemBoost gTotemBoosts[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA bool8 gHasFetchedBall = FALSE;
 EWRAM_DATA u8 gLastUsedBall = 0;
 EWRAM_DATA u8 gChangeAbilityPopUp = 0;
+EWRAM_DATA u16 gNewAbilityPopUp1 = 0;
+EWRAM_DATA u16 gNewAbilityPopUp2 = 0;
 
 // IWRAM common vars
 void (*gPreBattleCallback1)(void);

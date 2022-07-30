@@ -741,6 +741,7 @@ static const u8 sText_HitAllTargets[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABI
 static const u8 sText_CharizardIsCharging[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY} is\nemanating power.\pIt appears {B_ATK_NAME_WITH_PREFIX} is charging\nfor a powerful attack...");
 static const u8 sText_AbyssalDefensiveStance[] = _("{B_ATK_NAME_WITH_PREFIX}'s takes a defensive\nposition and hardens it's skin.");
 static const u8 sText_AbyssalReturnOriginalStance[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\nreturns to normal.");
+static const u8 sText_AbyssalSolidRock[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF2}\nreduces super effective damage.");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1345,6 +1346,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_CHARIZARDISCHARGING - 12] = sText_CharizardIsCharging,
     [STRINGID_ABYSSALDEFENSIVESTANCE - 12] = sText_AbyssalDefensiveStance,
     [STRINGID_ABYSSALRETURNORIGINALSTANCE - 12] = sText_AbyssalReturnOriginalStance,
+    [STRINGID_ABYSSALSOLIDROCK - 12] = sText_AbyssalSolidRock,
 };
 
 const u16 gTerrainStringIds[] =

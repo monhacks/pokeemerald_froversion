@@ -892,5 +892,7 @@ extern u8 gUnknown_03005D7C[MAX_BATTLERS_COUNT];
 extern bool8 gHasFetchedBall;
 extern u8 gLastUsedBall;
 extern u8 gChangeAbilityPopUp;
+extern u16 gNewAbilityPopUp1;
+extern u16 gNewAbilityPopUp2;
 
 #endif // GUARD_BATTLE_H

@@ -4555,7 +4555,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             gBattleScripting.battler = battler;
                 if(gBattleResults.battleTurnCounter % 3 == 0)
                 {
-                    gLastUsedAbility = ABILITY_ROUGH_SKIN;
+                    gNewAbilityPopUp1 = ABILITY_ROUGH_SKIN;
                     gChangeAbilityPopUp = 1;
                     BattleScriptPushCursorAndCallback(BattleScript_AbyssalDefensiveStance);
                     effect++;
@@ -4563,7 +4563,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 if (gBattleResults.battleTurnCounter % 3 == 1)
                 {
                     PREPARE_ABILITY_BUFFER(gBattleTextBuff1, ABILITY_ROUGH_SKIN);
-                    gLastUsedAbility = ABILITY_ROUGH_SKIN;
+                    gNewAbilityPopUp1 = ABILITY_ROUGH_SKIN;
                     gChangeAbilityPopUp = 1;
                     BattleScriptPushCursorAndCallback(BattleScript_AbyssalReturnOriginalStance);
                     effect++;
@@ -4575,7 +4575,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     goto ABILITY_HEAL_MON_STATUS;
                     effect++;
                 }
-                else if (gBattleResults.battleTurnCounter % 3 == 2)
+                else if (gBattleResults.battleTurnCounter % 3 == 2
+                        && gBattleMons[battler].status1 & STATUS1_ANY)
                 {
                     goto ABILITY_HEAL_MON_STATUS;
                     effect++;
@@ -5217,23 +5218,33 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             }
             break;
         case ABILITY_ABYSSAL:
+            if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE
+            && (gBattleResults.battleTurnCounter % 3 == 1))
+                {
+                    gNewAbilityPopUp1 = ABILITY_SOLID_ROCK;
+                    PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gNewAbilityPopUp1);
+                    gChangeAbilityPopUp = 1;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_SolidRockActivates;
+                    effect++;
+                }
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && gBattleMons[gBattlerAttacker].hp != 0
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
              && TARGET_TURN_DAMAGED
              && IsMoveMakingContact(move, gBattlerAttacker)
              && (gBattleResults.battleTurnCounter % 3 == 1))
-            {
-                gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 12;
-                if (gBattleMoveDamage == 0)
-                    gBattleMoveDamage = 1;
-                gLastUsedAbility = ABILITY_ROUGH_SKIN;
-                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
-                gChangeAbilityPopUp = 1;
-                BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_RoughSkinActivates;
-                effect++;
-            }
+                {
+                    gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 8;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    gNewAbilityPopUp2 = ABILITY_ROUGH_SKIN;
+                    PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gNewAbilityPopUp2);
+                    gChangeAbilityPopUp = 2;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_RoughSkinActivates;
+                    effect++;
+                }
             break;
         case ABILITY_AFTERMATH:
             if (!IsAbilityOnField(ABILITY_DAMP)
@@ -8474,6 +8485,11 @@ static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 move
     case ABILITY_SHADOW_RHYDON:
         if (typeEffectivenessModifier >= UQ_4_12(2.0))
             MulModifier(&finalModifier, UQ_4_12(0.75));
+    case ABILITY_ABYSSAL:
+        if (gBattleResults.battleTurnCounter % 3 == 1
+        && typeEffectivenessModifier >= UQ_4_12(2.0))
+            MulModifier(&finalModifier, UQ_4_12(0.5));
+
         break;
     }
 
