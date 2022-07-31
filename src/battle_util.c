@@ -1725,6 +1725,7 @@ enum
     ENDTURN_POISON_FIELD_BATTLERS,
     ENDTURN_RAIN_HEAL,
     ENDTURN_DARK_TETHER,
+    ENDTURN_DRAGON_RAVINE,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -2210,6 +2211,15 @@ u8 DoFieldEndTurnEffects(void)
             if (gFieldStatuses & STATUS_FIELD_DARK_TETHER && --gFieldTimers.darkTetherTimer == 0)
             {
                 gFieldStatuses &= ~(STATUS_FIELD_DARK_TETHER);
+                BattleScriptExecute(BattleScript_DarkTetherEnds);
+                effect++;
+            }
+            gBattleStruct->turnCountersTracker++;
+            break;
+        case ENDTURN_DRAGON_RAVINE:
+            if (gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE && --gFieldTimers.dragonRavineTimer == 0)
+            {
+                gFieldStatuses &= ~(STATUS_FIELD_DRAGON_RAVINE);
                 BattleScriptExecute(BattleScript_DarkTetherEnds);
                 effect++;
             }
@@ -3824,7 +3834,7 @@ static bool32 TryChangeBattleTerrain(u32 battler, u32 statusFlag, u8 *timer)
 {
     if (!(gFieldStatuses & statusFlag))
     {
-        gFieldStatuses &= ~(STATUS_FIELD_MISTY_TERRAIN | STATUS_FIELD_GRASSY_TERRAIN | STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_PSYCHIC_TERRAIN | STATUS_FIELD_DARK_TETHER);
+        gFieldStatuses &= ~(STATUS_FIELD_MISTY_TERRAIN | STATUS_FIELD_GRASSY_TERRAIN | STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_PSYCHIC_TERRAIN | STATUS_FIELD_DARK_TETHER | STATUS_FIELD_DRAGON_RAVINE);
         gFieldStatuses |= statusFlag;
 
         if (GetBattlerHoldEffect(battler, TRUE) == HOLD_EFFECT_TERRAIN_EXTENDER)

@@ -7323,6 +7323,10 @@ static void HandleTerrainMove(u32 moveEffect)
         statusFlag = STATUS_FIELD_DARK_TETHER, timer = &gFieldTimers.darkTetherTimer;
         gBattleCommunication[MULTISTRING_CHOOSER] = 2;
         break;
+    case EFFECT_DRAGON_RAVINE:
+        statusFlag = STATUS_FIELD_DRAGON_RAVINE, timer = &gFieldTimers.dragonRavineTimer;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 2;
+        break;
     }
 
     if (gFieldStatuses & statusFlag || statusFlag == 0)

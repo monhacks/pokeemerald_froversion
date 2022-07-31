@@ -223,6 +223,7 @@ struct FieldTimer
     u8 gravityTimer;
     u8 fairyLockTimer;
     u8 darkTetherTimer;
+    u8 dragonRavineTimer;
 };
 
 struct WishFutureKnock
