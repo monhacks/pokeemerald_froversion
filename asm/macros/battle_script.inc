@@ -1458,6 +1458,10 @@
 	various BS_ATTACKER, VARIOUS_TRY_ACTIVATE_SOULHEART
 	.endm
 
+	.macro tryactivatedragonravine battler:req
+	various \battler, VARIOUS_TRY_ACTIVATE_DRAGON_RAVINE
+	.endm
+
 	.macro tryactivatefellstinger battler:req
 	various \battler, VARIOUS_TRY_ACTIVATE_FELL_STINGER
 	.endm

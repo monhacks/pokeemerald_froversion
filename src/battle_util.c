@@ -4339,6 +4339,12 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
                 effect++;
             }
+            if (TryChangeBattleTerrain(battler, STATUS_FIELD_DRAGON_RAVINE, &gFieldTimers.dragonRavineTimer))
+            {
+                gFieldTimers.dragonRavineTimer = 255;
+                BattleScriptPushCursorAndCallback(BattleScript_DragonRavineActivates);
+                effect++;
+            }
             break;
         case ABILITY_DROUGHT:
             if (TryChangeBattleWeather(battler, ENUM_WEATHER_SUN, TRUE))
@@ -4579,7 +4585,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     effect++;
                 }
                 if (gBattleResults.battleTurnCounter % 3 == 2
-                    && TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM, TRUE) )
+                    && TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM, TRUE) 
+                    && gBattleMons[battler].status1 & STATUS1_ANY)
                 {
                     BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
                     goto ABILITY_HEAL_MON_STATUS;

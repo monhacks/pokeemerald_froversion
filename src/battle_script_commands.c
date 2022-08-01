@@ -3871,7 +3871,6 @@ static void Cmd_getexp(void)
                 else
                     holdEffect = ItemId_GetHoldEffect(item);
             }
-
             calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
 
             if (gSaveBlock2Ptr->expShare) // exp share is turned on
@@ -8071,6 +8070,28 @@ static void Cmd_various(void)
             }
         }
         gBattleStruct->soulheartBattlerId = 0;
+        break;
+    case VARIOUS_TRY_ACTIVATE_DRAGON_RAVINE:
+        while (gBattleStruct->dragonravineBattlerId < gBattlersCount)
+        {
+            gBattleScripting.battler = gBattleStruct->dragonravineBattlerId++;
+            Printf("SpeciesCheck =%d", IS_BATTLER_OF_TYPE (gActiveBattler, TYPE_DRAGON));
+            if (gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE
+                && IsBattlerAlive(gBattleScripting.battler)
+                && IS_BATTLER_OF_TYPE(gBattleScripting.battler, TYPE_DRAGON)
+                && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_DRAGON)
+                && !NoAliveMonsForEitherParty()
+                && gBattleMons[gBattleScripting.battler].statStages[STAT_SPATK] != 12)
+            {
+                gBattleMons[gBattleScripting.battler].statStages[STAT_SPATK]++;
+                SET_STATCHANGER(STAT_SPATK, 1, FALSE);
+                PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_SPATK);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_DragonRavineStatRaise;
+                return;
+            }
+        }
+        gBattleStruct->dragonravineBattlerId = 0;
         break;
     case VARIOUS_TRY_ACTIVATE_FELL_STINGER:
         if (gBattleMoves[gCurrentMove].effect == EFFECT_FELL_STINGER

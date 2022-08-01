@@ -5239,6 +5239,7 @@ BattleScript_FaintAttacker::
 	printstring STRINGID_ATTACKERFAINTED
 	cleareffectsonfaint BS_ATTACKER
 	tryactivatesoulheart
+	tryactivatedragonravine BS_ATTACKER
 	tryactivatereceiver BS_ATTACKER
 	tryactivateresurrection BS_ATTACKER
 	trytrainerslidefirstdownmsg BS_ATTACKER
@@ -5253,6 +5254,7 @@ BattleScript_FaintTarget::
 	cleareffectsonfaint BS_TARGET
 	tryactivatefellstinger BS_ATTACKER
 	tryactivatesoulheart
+	tryactivatedragonravine BS_TARGET
 	tryactivatereceiver BS_TARGET
 	tryactivatemoxie BS_ATTACKER
 	tryactivatebeastboost BS_ATTACKER
@@ -7582,6 +7584,14 @@ BattleScript_DarkTetherActivates::
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 	end3
 
+BattleScript_DragonRavineActivates::
+	pause 0x20
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_DRAGONRAVINEACTIVATESABILITY
+	waitstate
+	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
+	end3
+
 BattleScript_BadDreamsActivates::
 	setbyte gBattlerTarget, 0
 	call BattleScript_AbilityPopUp
@@ -7893,6 +7903,18 @@ BattleScript_ScriptingAbilityStatRaise::
 	playanimation BS_SCRIPTING, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
 	waitanimation
 	printstring STRINGID_ATTACKERABILITYSTATRAISE
+	waitmessage 0x40
+	copybyte gBattlerAttacker, sSAVED_DMG
+	return
+
+BattleScript_DragonRavineStatRaise::
+	copybyte sSAVED_DMG, gBattlerAttacker
+	copybyte gBattlerAttacker, sBATTLER
+	statbuffchange STAT_BUFF_NOT_PROTECT_AFFECTED | MOVE_EFFECT_CERTAIN, NULL
+	setgraphicalstatchangevalues
+	playanimation BS_SCRIPTING, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	waitanimation
+	printstring STRINGID_DRAGONRAVINESTATRAISE
 	waitmessage 0x40
 	copybyte gBattlerAttacker, sSAVED_DMG
 	return

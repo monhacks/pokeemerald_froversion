@@ -742,6 +742,9 @@ static const u8 sText_CharizardIsCharging[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_A
 static const u8 sText_AbyssalDefensiveStance[] = _("{B_ATK_NAME_WITH_PREFIX}'s takes a defensive\nposition and hardens it's skin.");
 static const u8 sText_AbyssalReturnOriginalStance[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\nreturns to normal.");
 static const u8 sText_AbyssalSolidRock[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF2}\nreduces super effective damage.");
+static const u8 sText_DragonRavineActivatesAbility[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nchanges the terrain!");
+static const u8 sText_DragonRavineEnds[] = _("Dragon Ravine Raises {B_DEF_NAME_WITH_PREFIX}'s\n{B_BUFF1}!");
+static const u8 sText_DragonRavineRaisedStat[] = _("Dragon Ravine Raises {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s\n{B_BUFF1}!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1347,6 +1350,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ABYSSALDEFENSIVESTANCE - 12] = sText_AbyssalDefensiveStance,
     [STRINGID_ABYSSALRETURNORIGINALSTANCE - 12] = sText_AbyssalReturnOriginalStance,
     [STRINGID_ABYSSALSOLIDROCK - 12] = sText_AbyssalSolidRock,
+    [STRINGID_DRAGONRAVINEACTIVATESABILITY - 12] = sText_DragonRavineActivatesAbility,
+    [STRINGID_DRAGONRAVINEENDS- 12] = sText_DragonRavineEnds,
+    [STRINGID_DRAGONRAVINESTATRAISE - 12] = sText_DragonRavineRaisedStat,
 };
 
 const u16 gTerrainStringIds[] =
