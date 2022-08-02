@@ -329,6 +329,7 @@ extern const u8 BattleScript_DarkTetherEnds[];
 extern const u8 BattleScript_DragonRavineActivates[];
 extern const u8 BattleScript_DragonRavineEnds[];
 extern const u8 BattleScript_DragonRavineStatRaise[];
+extern const u8 BattleScript_DragonRavineRevive[];
 extern const u8 BattleScript_SpaceShiftActivates[];
 extern const u8 BattleScript_SpectralThiefSteal[];
 extern const u8 BattleScript_StatUpMsg[];

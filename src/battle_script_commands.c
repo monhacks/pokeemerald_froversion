@@ -8933,6 +8933,22 @@ static void Cmd_various(void)
         gBattleStruct->chooseReviveMon = FALSE;
         break;
         }
+    case VARIOUS_DRAGON_RAVINE_REVIVE:
+        {
+            struct Party party = GetBattlerParty(gActiveBattler, FALSE);
+            u32 index = *(gBattleStruct->monToSwitchIntoId + gActiveBattler);
+            struct Pokemon *mon = &party.mons[index];
+            u32 species = GetMonData(mon, MON_DATA_SPECIES);
+            if(gBaseStats[species].type1 == TYPE_DRAGON || gBaseStats[species].type2 == TYPE_DRAGON)
+            {
+                u16 hp = GetMonData(mon, MON_DATA_MAX_HP);
+                BtlController_EmitSetMonData(0, REQUEST_HP_BATTLE, (1 << index), 2, &hp);
+                MarkBattlerForControllerExec(gActiveBattler);
+                GetMonData(mon, MON_DATA_NICKNAME, gBattleTextBuff1);
+                StringGetEnd10(gBattleTextBuff1);
+            }
+            gBattleStruct->chooseReviveMon = FALSE;
+        }
     case VARIOUS_JUMPIFNOOTHERFAINTED:
         if (AnyOtherFainted(gActiveBattler))
             gBattlescriptCurrInstr += 7;

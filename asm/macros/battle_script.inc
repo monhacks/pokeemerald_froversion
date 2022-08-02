@@ -1816,6 +1816,10 @@
 	various \battler, VARIOUS_REVIVE
 	.endm
 
+	.macro dragonravinerevive battler:req
+	various \battler, VARIOUS_DRAGON_RAVINE_REVIVE
+	.endm
+
 	.macro jumpifnootherfainted dest:req
 	various BS_ATTACKER, VARIOUS_JUMPIFNOOTHERFAINTED
 	.4byte \dest

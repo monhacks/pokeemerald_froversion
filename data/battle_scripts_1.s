@@ -373,8 +373,8 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectWarriorsSacrifice
 	.4byte BattleScript_EffectRevive
 	.4byte BattleScript_EffectPlasmaBlade
-        .4byte NULL @ BattleScript_EffectDarkTether
-        .4byte BattleScript_EffectOHKOSide
+    .4byte NULL @ BattleScript_EffectDarkTether
+    .4byte BattleScript_EffectOHKOSide
 
 BattleScript_EffectRevive::
 	attackcanceler
@@ -5862,6 +5862,12 @@ BattleScript_DarkTetherEnds::
 	playanimation BS_ATTACKER, B_ANIM_RESTORE_BG, NULL
 	end2
 
+BattleScript_DragonRavineEnds::
+	printstring STRINGID_DRAGONRAVINEENDS
+	waitmessage 0x40
+	playanimation BS_ATTACKER, B_ANIM_RESTORE_BG, NULL
+	end2
+
 BattleScript_MudSportEnds::
 	printstring STRINGID_MUDSPORTENDS
 	waitmessage 0x40
@@ -7591,6 +7597,24 @@ BattleScript_DragonRavineActivates::
 	waitstate
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 	end3
+
+BattleScript_DragonRavineRevive::
+	attackcanceler
+	jumpifnootherfainted BattleScript_ButItFailedAtkStringPpReduce
+	attackstring
+	ppreduce
+	attackanimation
+	waitanimation
+	openpartyscreen 7, NULL
+	dragonravinerevive BS_ATTACKER
+	waitstate
+	jumpifplayer BS_ATTACKER, BattleScript_DragonRavineReviveEnd
+	printstring STRINGID_BUFF1WASREVIVED
+	waitmessage 0x40
+BattleScript_DragonRavineReviveEnd:
+	waitstate
+	moveendall
+	end
 
 BattleScript_BadDreamsActivates::
 	setbyte gBattlerTarget, 0

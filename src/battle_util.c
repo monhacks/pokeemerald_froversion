@@ -47,6 +47,7 @@
 #include "constants/weather.h"
 #include "mgba_printf.h"
 #include "m4a.h"
+#include "battle_script_commands.h"
 
 /*
 NOTE: The data and functions in this file up until (but not including) sSoundMovesTable
@@ -2216,11 +2217,12 @@ u8 DoFieldEndTurnEffects(void)
             }
             gBattleStruct->turnCountersTracker++;
             break;
-        case ENDTURN_DRAGON_RAVINE:
+        case ENDTURN_DRAGON_RAVINE:         
+            BattleScriptExecute(BattleScript_DragonRavineRevive);
             if (gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE && --gFieldTimers.dragonRavineTimer == 0)
             {
                 gFieldStatuses &= ~(STATUS_FIELD_DRAGON_RAVINE);
-                BattleScriptExecute(BattleScript_DarkTetherEnds);
+                BattleScriptExecute(BattleScript_DragonRavineEnds);
                 effect++;
             }
             gBattleStruct->turnCountersTracker++;
