@@ -7599,12 +7599,8 @@ BattleScript_DragonRavineActivates::
 	end3
 
 BattleScript_DragonRavineRevive::
-	attackcanceler
-	jumpifnootherfainted BattleScript_ButItFailedAtkStringPpReduce
-	attackstring
-	ppreduce
-	attackanimation
-	waitanimation
+	jumpifnootherfainted BattleScript_DragonRavineReviveEnd
+	jumpifnodragonfainted BattleScript_DragonRavineReviveEnd
 	openpartyscreen 7, NULL
 	dragonravinerevive BS_ATTACKER
 	waitstate
@@ -7614,7 +7610,7 @@ BattleScript_DragonRavineRevive::
 BattleScript_DragonRavineReviveEnd:
 	waitstate
 	moveendall
-	end
+	end2
 
 BattleScript_BadDreamsActivates::
 	setbyte gBattlerTarget, 0

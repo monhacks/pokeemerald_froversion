@@ -98,6 +98,28 @@ u8 GetBattleMoveTargetFlags(u16 moveId, u16 ability)
     return gBattleMoves[moveId].target;
 }
 
+bool32 AnyDragonFainted(u32 battlerId)
+{
+    int i;
+    u32 species;
+    struct Party party = GetBattlerParty(gBattleScripting.battler, TRUE);
+    Printf("ANYDRAGONFAINTED Battler = %d", gBattleScripting.battler);
+    for (i = 0; i < party.maxSize; ++i)
+    {
+        if (i == gBattlerPartyIndexes[battlerId])
+            continue;
+        species = GetMonData(&party.mons[i], MON_DATA_SPECIES2);
+        if (species != SPECIES_NONE && species != SPECIES_EGG
+         && GetMonData(&party.mons[i], MON_DATA_HP) == 0
+         && (gBaseStats[species].type1 == TYPE_DRAGON 
+         || gBaseStats[species].type2 == TYPE_DRAGON))
+        {
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
 void HandleAction_UseMove(void)
 {
     u32 i, side, moveType, var = 4;
@@ -2217,8 +2239,17 @@ u8 DoFieldEndTurnEffects(void)
             }
             gBattleStruct->turnCountersTracker++;
             break;
-        case ENDTURN_DRAGON_RAVINE:         
-            BattleScriptExecute(BattleScript_DragonRavineRevive);
+        case ENDTURN_DRAGON_RAVINE:      
+        while (gBattleStruct->dragonravineBattlerId < gBattlersCount)   
+            {
+                gBattleScripting.battler = gBattleStruct->dragonravineBattlerId++;
+                if(AnyDragonFainted(gBattleScripting.battler))
+                {
+                    gBattleStruct->chooseReviveMon = TRUE;
+                    BattleScriptExecute(BattleScript_DragonRavineRevive);
+                    effect++;
+                }
+            }
             if (gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE && --gFieldTimers.dragonRavineTimer == 0)
             {
                 gFieldStatuses &= ~(STATUS_FIELD_DRAGON_RAVINE);

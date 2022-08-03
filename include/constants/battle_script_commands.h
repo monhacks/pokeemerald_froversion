@@ -184,6 +184,7 @@
 #define VARIOUS_TRY_ACTIVATE_MEGA_GENGAR_ABILITY    116
 #define VARIOUS_TRY_ACTIVATE_DRAGON_RAVINE          117
 #define VARIOUS_DRAGON_RAVINE_REVIVE                       118
+#define VARIOUS_JUMPIFNODRAGONFAINTED               119
 #define VARIOUS_GIVE_DROPPED_ITEMS                  151
 
 // Cmd_manipulatedamage

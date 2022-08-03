@@ -14824,7 +14824,25 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowCharizard[] = {
         .movePP2 = 99,
         .movePP3 = 99,
         .movePP4 = 99,
-        .nickname = gText_WesRamNickname,
+        },
+    },
+    {
+    .abilityNum = 0,
+    .iv = 225,
+    .lvl = 50,
+    .species = SPECIES_ALTARIA,
+    .heldItem = ITEM_RED_CARD,
+    .moves = {MOVE_DRAGON_DANCE, MOVE_NASTY_PLOT, MOVE_SUNNY_DAY, MOVE_QUIVER_DANCE},
+    .stats =
+        {
+        //.statDef = 180,
+        //.statSpDef = 180,
+        // .statHP = 2600,
+        // .statMaxHP = 2600,
+        .movePP1 = 99,
+        .movePP2 = 99,
+        .movePP3 = 99,
+        .movePP4 = 99,
         },
     },
 };

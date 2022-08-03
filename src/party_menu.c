@@ -6689,6 +6689,7 @@ static bool8 TryRevivePokemon(void)
     u8 slot = GetCursorSelectionMonId();
     u8 newSlot;
     u8 i;
+    u32 species = GetMonData(&gPlayerParty[slot], MON_DATA_SPECIES);
 
     // In a multi battle, slots 1, 4, and 5 are the partner's pokemon
     if (IsMultiBattle() == TRUE && (slot == 1 || slot == 4 || slot == 5))
@@ -6712,6 +6713,14 @@ static bool8 TryRevivePokemon(void)
         return FALSE;
     }
     if (GetMonData(&gPlayerParty[slot], MON_DATA_HP) != 0)
+    {
+        GetMonNickname(&gPlayerParty[slot], gStringVar1);
+        StringExpandPlaceholders(gStringVar4, gText_PkmnNotFainted);
+        return FALSE;
+    }
+    //Check for dragon type to revive under dragon ravine
+    if((gBaseStats[species].type1 != TYPE_DRAGON && gBaseStats[species].type2 != TYPE_DRAGON)
+        && gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE)
     {
         GetMonNickname(&gPlayerParty[slot], gStringVar1);
         StringExpandPlaceholders(gStringVar4, gText_PkmnNotFainted);

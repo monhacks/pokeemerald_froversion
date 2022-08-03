@@ -7478,13 +7478,7 @@ static u32 GetHighestStatId(u32 battlerId)
     return highestId;
 }
 
-struct Party
-{
-    struct Pokemon *mons;
-    u8 maxSize;
-};
-
-static struct Party GetBattlerParty(u32 battlerId, bool32 checkDoubles)
+struct Party GetBattlerParty(u32 battlerId, bool32 checkDoubles)
 {
     struct Party party;
     if (GetBattlerSide(battlerId) == B_SIDE_PLAYER)
@@ -7522,7 +7516,10 @@ static bool32 AnyOtherFainted(u32 battlerId)
 {
     int i;
     u32 species;
+    
     struct Party party = GetBattlerParty(gActiveBattler, TRUE);
+    Printf("(D)gActiveBattler = %d", gBattleScripting.battler);
+    Printf("(D)BattlerTarget = %d", gBattlerTarget);
     for (i = 0; i < party.maxSize; ++i)
     {
         if (i == gBattlerPartyIndexes[battlerId])
@@ -8934,11 +8931,15 @@ static void Cmd_various(void)
         break;
         }
     case VARIOUS_DRAGON_RAVINE_REVIVE:
+        while (gBattleStruct->dragonravineBattlerId < gBattlersCount)
+            gBattleScripting.battler = gBattleStruct->dragonravineBattlerId++;
         {
             struct Party party = GetBattlerParty(gActiveBattler, FALSE);
             u32 index = *(gBattleStruct->monToSwitchIntoId + gActiveBattler);
             struct Pokemon *mon = &party.mons[index];
             u32 species = GetMonData(mon, MON_DATA_SPECIES);
+            Printf("Type 1 = %d, Type 2 = %d", gBaseStats[species].type1, gBaseStats[species].type2);
+            Printf("DragonCheck = %d", (gBaseStats[species].type1 == TYPE_DRAGON || gBaseStats[species].type2 == TYPE_DRAGON));
             if(gBaseStats[species].type1 == TYPE_DRAGON || gBaseStats[species].type2 == TYPE_DRAGON)
             {
                 u16 hp = GetMonData(mon, MON_DATA_MAX_HP);
@@ -8948,9 +8949,16 @@ static void Cmd_various(void)
                 StringGetEnd10(gBattleTextBuff1);
             }
             gBattleStruct->chooseReviveMon = FALSE;
+            break;
         }
     case VARIOUS_JUMPIFNOOTHERFAINTED:
         if (AnyOtherFainted(gActiveBattler))
+            gBattlescriptCurrInstr += 7;
+        else
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+        return;
+    case VARIOUS_JUMPIFNODRAGONFAINTED:
+        if (AnyDragonFainted(gActiveBattler))
             gBattlescriptCurrInstr += 7;
         else
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
