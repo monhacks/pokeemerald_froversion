@@ -1825,8 +1825,8 @@
 	.4byte \dest
 	.endm
 
-	.macro jumpifnodragonfainted dest:req
-	various BS_ATTACKER, VARIOUS_JUMPIFNODRAGONFAINTED
+	.macro jumpifnodragonfainted battler:req, dest:req
+	various \battler, VARIOUS_JUMPIFNODRAGONFAINTED
 	.4byte \dest
 	.endm
 

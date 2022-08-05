@@ -64,8 +64,6 @@ static int PrintInt(char *dest, int num)
 
     for (i = 0; i < n; ++i)
         dest[i] = buffer[n-i-1];
-    for (; i < m; ++i)
-        dest[i] = ' ';
     return i+j;
 }
 

@@ -7598,16 +7598,28 @@ BattleScript_DragonRavineActivates::
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 	end3
 
-BattleScript_DragonRavineRevive::
-	jumpifnootherfainted BattleScript_DragonRavineReviveEnd
-	jumpifnodragonfainted BattleScript_DragonRavineReviveEnd
+BattleScript_DragonRavineReviveAttacker::
+	jumpifnodragonfainted BS_ATTACKER, BattleScript_DragonRavineReviveAttackerEnd
 	openpartyscreen 7, NULL
 	dragonravinerevive BS_ATTACKER
 	waitstate
-	jumpifplayer BS_ATTACKER, BattleScript_DragonRavineReviveEnd
+	jumpifplayer BS_ATTACKER, BattleScript_DragonRavineReviveAttackerEnd
 	printstring STRINGID_BUFF1WASREVIVED
 	waitmessage 0x40
-BattleScript_DragonRavineReviveEnd:
+BattleScript_DragonRavineReviveAttackerEnd:
+	waitstate
+	moveendall
+	end2
+
+BattleScript_DragonRavineReviveTarget::
+	jumpifnodragonfainted BS_TARGET, BattleScript_DragonRavineReviveTargetEnd
+	openpartyscreen 8, NULL
+	dragonravinerevive BS_TARGET
+	waitstate
+	jumpifplayer BS_TARGET, BattleScript_DragonRavineReviveTargetEnd
+	printstring STRINGID_BUFF1WASREVIVED
+	waitmessage 0x40
+BattleScript_DragonRavineReviveTargetEnd:
 	waitstate
 	moveendall
 	end2

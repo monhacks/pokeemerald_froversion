@@ -3865,9 +3865,9 @@ static void SetOpponentMovesShadowCharizard(void)
                 hasDrops = TRUE;
         if (gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] > 9)
                 hasBigBoosts = TRUE;
-        Printf("Has Drops? = %d", hasDrops);
-        Printf("Has Big Boosts? = %d", hasBigBoosts);
-        Printf("Randomchance = %d", shadowCharizardHazeChance);
+        //Printf("Has Drops? = %d", hasDrops);
+        //Printf("Has Big Boosts? = %d", hasBigBoosts);
+        //Printf("Randomchance = %d", shadowCharizardHazeChance);
         if ((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 9 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 9) && gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] < 12)
             {
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SPECTRAL_THIEF;

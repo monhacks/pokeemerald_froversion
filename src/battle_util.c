@@ -102,18 +102,22 @@ bool32 AnyDragonFainted(u32 battlerId)
 {
     int i;
     u32 species;
-    struct Party party = GetBattlerParty(gBattleScripting.battler, TRUE);
-    Printf("ANYDRAGONFAINTED Battler = %d", gBattleScripting.battler);
+    struct Party party = GetBattlerParty(gActiveBattler, TRUE);
+    // Printf("Battler for party check = %d", gActiveBattler);
     for (i = 0; i < party.maxSize; ++i)
     {
         if (i == gBattlerPartyIndexes[battlerId])
             continue;
+        if (IsDoubleBattle(gActiveBattler) && i == gBattlerPartyIndexes[battlerId ^ BIT_FLANK])
+            continue;
         species = GetMonData(&party.mons[i], MON_DATA_SPECIES2);
+        // Printf("Party Mon = %d", GetMonData(&party.mons[i], MON_DATA_SPECIES2));
         if (species != SPECIES_NONE && species != SPECIES_EGG
          && GetMonData(&party.mons[i], MON_DATA_HP) == 0
          && (gBaseStats[species].type1 == TYPE_DRAGON 
          || gBaseStats[species].type2 == TYPE_DRAGON))
         {
+            Printf("i = %d", i);
             return TRUE;
         }
     }
@@ -1749,6 +1753,7 @@ enum
     ENDTURN_RAIN_HEAL,
     ENDTURN_DARK_TETHER,
     ENDTURN_DRAGON_RAVINE,
+    ENDTURN_DRAGON_RAVINE_REVIVE,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -2240,16 +2245,6 @@ u8 DoFieldEndTurnEffects(void)
             gBattleStruct->turnCountersTracker++;
             break;
         case ENDTURN_DRAGON_RAVINE:      
-        while (gBattleStruct->dragonravineBattlerId < gBattlersCount)   
-            {
-                gBattleScripting.battler = gBattleStruct->dragonravineBattlerId++;
-                if(AnyDragonFainted(gBattleScripting.battler))
-                {
-                    gBattleStruct->chooseReviveMon = TRUE;
-                    BattleScriptExecute(BattleScript_DragonRavineRevive);
-                    effect++;
-                }
-            }
             if (gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE && --gFieldTimers.dragonRavineTimer == 0)
             {
                 gFieldStatuses &= ~(STATUS_FIELD_DRAGON_RAVINE);
@@ -2257,6 +2252,48 @@ u8 DoFieldEndTurnEffects(void)
                 effect++;
             }
             gBattleStruct->turnCountersTracker++;
+            gBattleStruct->turnSideTracker = 0;
+            break;
+        case ENDTURN_DRAGON_RAVINE_REVIVE:
+            //Printf("TurnSideTracker (outofloop) = %d", gBattleStruct->turnSideTracker);
+            if (gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE
+                && gBattleStruct->turnSideTracker < 2)
+                {
+                    
+                    //Printf("TurnSideTracker (inloop) = %d", gBattleStruct->turnSideTracker);
+                    gActiveBattler = gBattleStruct->turnSideTracker;
+                    
+                    Printf("gActiveBattler = %d", gActiveBattler);
+                    gBattleStruct->turnSideTracker++;
+                    Printf("AnyDragonFainted = %d", AnyDragonFainted(gActiveBattler));
+                    if(AnyDragonFainted(gActiveBattler)
+                    && gActiveBattler == 0)
+                        {
+                            gBattleStruct->chooseReviveMon = TRUE;
+                            gBattlerAttacker = gActiveBattler;
+                            Printf("ChooseReviveMon? = %d", gBattleStruct->chooseReviveMon);
+                            Printf("gBattlerAttcker = %d", gActiveBattler);
+                            BattleScriptExecute(BattleScript_DragonRavineReviveAttacker);
+                            Printf("BattlescriptExecuted");
+                            effect++;
+                        }
+                    else if(AnyDragonFainted(gActiveBattler)
+                    && gActiveBattler == 1)
+                        {
+                            gBattleStruct->chooseReviveMon = TRUE;
+                            gBattlerTarget = gActiveBattler;
+                            Printf("ChooseReviveMon? = %d", gBattleStruct->chooseReviveMon);
+                            Printf("gBattlerTarget = %d", gBattlerTarget);
+                            BattleScriptExecute(BattleScript_DragonRavineReviveTarget);
+                            Printf("BattlescriptExecuted");
+                            effect++;
+                        }
+                }
+            else
+                {
+                    gBattleStruct->turnCountersTracker++;
+                    gBattleStruct->turnSideTracker = 0;
+                }
             break;
         case ENDTURN_WATER_SPORT:
             if (gFieldStatuses & STATUS_FIELD_WATERSPORT && --gFieldTimers.waterSportTimer == 0)
@@ -2357,7 +2394,7 @@ u8 DoFieldEndTurnEffects(void)
                  && !(gStatuses3[gActiveBattler] & STATUS3_HEAL_BLOCK)
                  && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_WATER))
                 {
-                    Printf("Executing RainHealScript");
+                    //Printf("Executing RainHealScript");
                     gBattleScripting.battler = gActiveBattler;
                     gBattlescriptCurrInstr = BattleScript_RainHpHeal;
                     BattleScriptExecute(gBattlescriptCurrInstr);
@@ -4657,8 +4694,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
                 {
                 u32 AbilityActivationRoll = 45;//Random() % 100;
-                Printf("Random (Status Check)= %d", AbilityActivationRoll);
-                Printf("Current HP = %d Max HP/3 =%d", gBattleMons[battler].hp, (gBattleMons[battler].maxHP / 3));
+                //Printf("Random (Status Check)= %d", AbilityActivationRoll);
+                //Printf("Current HP = %d Max HP/3 =%d", gBattleMons[battler].hp, (gBattleMons[battler].maxHP / 3));
                 if ((gBattleMons[battler].status1 & STATUS1_ANY)
                     && (AbilityActivationRoll <= 30))
                 {
@@ -4667,7 +4704,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 else if ((gBattleMons[battler].hp <= (gBattleMons[battler].maxHP / 3))
                     && (AbilityActivationRoll >= 70))
                     {
-                    Printf("Random (HP check) = %d", AbilityActivationRoll);
+                    //Printf("Random (HP check) = %d", AbilityActivationRoll);
                     BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
                     gBattleMoveDamage = gBattleMons[battler].maxHP / 18;
                     if (gBattleMoveDamage == 0)
@@ -4679,7 +4716,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 if ((gBattleMons[battler].statStages[j] <= 3)
                     && ((AbilityActivationRoll >= 40) && (AbilityActivationRoll <= 60)))
                     {
-                    Printf("Random (Stat Reset Check) = %d", AbilityActivationRoll);
+                    //Printf("Random (Stat Reset Check) = %d", AbilityActivationRoll);
                     for (j = 0; j < NUM_BATTLE_STATS; j++)
                         gBattleMons[battler].statStages[j] = DEFAULT_STAT_STAGE;
                         BattleScriptPushCursorAndCallback(BattleScript_MotorCloakActivates);
@@ -8737,13 +8774,13 @@ static u16 CalcTypeEffectivenessMultiplierInternal(u16 move, u8 moveType, u8 bat
 
     if (moveType == TYPE_GROUND && !IsBattlerGrounded(battlerDef))
     {
-        Printf ("SpeciesCheckCalcTypeEffectiveness = %d", IsSpeciesOneOf(gBattleMons[battlerDef].species, gLevitateMons));
+        //Printf ("SpeciesCheckCalcTypeEffectiveness = %d", IsSpeciesOneOf(gBattleMons[battlerDef].species, gLevitateMons));
         modifier = UQ_4_12(0.0);
         if ((recordAbilities && GetBattlerAbility(battlerDef) == ABILITY_LEVITATE)
         || (recordAbilities && GetBattlerAbility(battlerDef) == ABILITY_MEGA_GENGAR_ABILITY)
         || IsSpeciesOneOf(gBattleMons[battlerDef].species, gLevitateMons))
         {
-            Printf ("SpeciesCheck = %d", IsSpeciesOneOf(gBattleMons[battlerDef].species, gLevitateMons));
+            //Printf ("SpeciesCheck = %d", IsSpeciesOneOf(gBattleMons[battlerDef].species, gLevitateMons));
             gLastUsedAbility = ABILITY_LEVITATE;
             gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
             gLastLandedMoves[battlerDef] = 0;
@@ -8787,11 +8824,11 @@ u16 CalcPartyMonTypeEffectivenessMultiplier(u16 move, u16 speciesDef, u16 abilit
 {
     u16 modifier = UQ_4_12(1.0);
     u8 moveType = gBattleMoves[move].type;
-    Printf ("SpeciesCheckCalcPartyMonTypeEffectivenessMultiplier = %d", IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gLevitateMons));
+    //Printf ("SpeciesCheckCalcPartyMonTypeEffectivenessMultiplier = %d", IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gLevitateMons));
 
     if (move != MOVE_STRUGGLE && moveType != TYPE_MYSTERY)
     {
-        Printf ("IsSpeciesOneOf = %d", IsSpeciesOneOf(speciesDef, gLevitateMons));
+        //Printf ("IsSpeciesOneOf = %d", IsSpeciesOneOf(speciesDef, gLevitateMons));
         MulByTypeEffectiveness(&modifier, move, moveType, 0, gBaseStats[speciesDef].type1, 0, FALSE);
         if (gBaseStats[speciesDef].type2 != gBaseStats[speciesDef].type1)
             MulByTypeEffectiveness(&modifier, move, moveType, 0, gBaseStats[speciesDef].type2, 0, FALSE);

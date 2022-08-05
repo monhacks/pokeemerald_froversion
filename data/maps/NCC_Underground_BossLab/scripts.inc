@@ -26,6 +26,7 @@ NCC_Underground_BossLab_OnLoad_ShowItemBall:
 
 NCC_Underground_BossLab_BossBattleInitiate::
 	lockall
+		goto NCC_Underground_BossLab_BossBattleStart
 		applymovement LOCAL_ID_SCIENTIST_5, Common_Movement_FaceUp
 		waitmovement LOCAL_ID_SCIENTIST_5
 		applymovement LOCAL_ID_SCIENTIST_5, Common_Movement_ExclamationMark
@@ -54,6 +55,7 @@ NCC_Underground_BossLab_BossBattleInitiate::
 		waitse
 		removeobject LOCAL_ID_POKE_BALL
 		setflag FLAG_HIDE_LAB_ITEM_BALL
+	NCC_Underground_BossLab_BossBattleStart:
 		trainerbattle_no_intro TRAINER_SUMMIT_CAVERNS_LATTKA_2, NCC_Underground_BossLab_Text_MewtwoDefeat
 		playbgm MUS_HALL_OF_FAME_ROOM, 0
 		msgbox NCC_Underground_BossLab_Text_MewtwoPostBattle, MSGBOX_DEFAULT

@@ -76,7 +76,7 @@ static u8 BestCounterMons(struct Pokemon *party, u32 validMons, u32 foeSpecies)
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        Printf("Alive Mons = %d Total Mons = %d", GetEnemyMonCount(TRUE), GetEnemyMonCount(FALSE));
+        //Printf("Alive Mons = %d Total Mons = %d", GetEnemyMonCount(TRUE), GetEnemyMonCount(FALSE));
         if (GetMonAbility(&party[i]) == ABILITY_RESURRECTION && GetEnemyMonCount(TRUE) == GetEnemyMonCount(FALSE))
         {
             scores[i] = -1;
@@ -113,15 +113,15 @@ bool8 ShouldSwitchIfCountered(void)
     
 
 
-    Printf ("start of function");
-    Printf ("playerBattler = %d", playerBattler);
-    Printf ("gActiveBattler = %d, %d", gActiveBattler, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
+    //Printf ("start of function");
+    //Printf ("playerBattler = %d", playerBattler);
+    //Printf ("gActiveBattler = %d, %d", gActiveBattler, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
     if (!(gBattleResources->ai->aiFlags & AI_SCRIPT_COUNTER))
 
     {
         return FALSE;
     }
- Printf ("checking for substitute and HP lower than 50 perecent and dragged out?");
+ //Printf ("checking for substitute and HP lower than 50 perecent and dragged out?");
     if (gBattleMons[gActiveBattler].hp <= gBattleMons[gActiveBattler].maxHP / 2 
     || (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE)
     || IsMoveOneOf (gBattleResults.lastUsedMovePlayer, gPhasingMoves))
@@ -129,13 +129,13 @@ bool8 ShouldSwitchIfCountered(void)
     {
         return FALSE;
     }
- Printf ("Checking if opponent is faster than player");
+ //Printf ("Checking if opponent is faster than player");
     if (GetWhoStrikesFirst(gActiveBattler, GetBattlerAtPosition(B_POSITION_PLAYER_LEFT), TRUE) == 0)
     {
         for (i = 0; i < MAX_MON_MOVES; i++)
         {
             s32 damageCalc = AI_CalcDamage(gBattleMons[gActiveBattler].moves[i], gActiveBattler, playerBattler);
-            Printf("move %d damage: %d PlayerHP: %d", i, (AI_CalcDamage(gBattleMons[gActiveBattler].moves[i], gActiveBattler, playerBattler)), gBattleMons[playerBattler].hp);
+            //Printf("move %d damage: %d PlayerHP: %d", i, (AI_CalcDamage(gBattleMons[gActiveBattler].moves[i], gActiveBattler, playerBattler)), gBattleMons[playerBattler].hp);
             if (AI_CalcDamage(gBattleMons[gActiveBattler].moves[i], gActiveBattler, playerBattler) >= gBattleMons[playerBattler].hp)
                 return FALSE;
         }
@@ -149,13 +149,13 @@ bool8 ShouldSwitchIfCountered(void)
         if (species != SPECIES_NONE && species != SPECIES_EGG && hp > 0)
             aliveMons |= gBitTable[i];
     }
-        Printf("Species = %d", gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
-        Printf ("playerBattler = %d, %d", playerBattler, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
-        Printf ("gActiveBattler = %d", gActiveBattler);
+        //Printf("Species = %d", gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
+        //Printf ("playerBattler = %d, %d", playerBattler, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
+        //Printf ("gActiveBattler = %d", gActiveBattler);
     counters = BestCounterMons(gEnemyParty, aliveMons, gBattleMons[playerBattler = GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
-        Printf("Species = %d", gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
-        Printf ("playerBattler = %d, %d", playerBattler, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
-        Printf ("gActiveBattler = %d", gActiveBattler);
+        //Printf("Species = %d", gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
+        //Printf ("playerBattler = %d, %d", playerBattler, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
+        //Printf ("gActiveBattler = %d", gActiveBattler);
     
     if (!counters)
         return FALSE;
@@ -189,7 +189,7 @@ static u32 GetBestMonCounter(struct Pokemon *party, int firstId, int lastId, u8 
     validMons &= ~invalidMons;
 
     counters = BestCounterMons(party, validMons,  gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
-        Printf("Species = %d", gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
+        //Printf("Species = %d", gBattleMons[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)].species);
 
     if (!counters)
         return PARTY_SIZE;
@@ -623,7 +623,7 @@ static bool8 ShouldSwitch(void)
     if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
     {
         battlerIn1 = gActiveBattler;
-        if (gAbsentBattlerFlags & gBitTable[GetBattlerAtPosition(GetBattlerPosition(gActiveBattler) ^ BIT_FLANK)])
+        if (gAbsentBattlerFlags & gBitTable[GetBattlerAtPosition(GetBattlerPosition(gActiveBattler) ^ BIT_FLANK)] && !gBattleStruct->chooseReviveMon)
             battlerIn2 = gActiveBattler;
         else
             battlerIn2 = GetBattlerAtPosition(GetBattlerPosition(gActiveBattler) ^ BIT_FLANK);
@@ -899,9 +899,11 @@ u8 GetMostSuitableMonToSwitchInto(void)
     if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
     {
         battlerIn1 = gActiveBattler;
-        if (gAbsentBattlerFlags & gBitTable[GetBattlerAtPosition(GetBattlerPosition(gActiveBattler) ^ BIT_FLANK)])
+        if (gAbsentBattlerFlags & gBitTable[GetBattlerAtPosition(GetBattlerPosition(gActiveBattler) ^ BIT_FLANK)] && !gBattleStruct->chooseReviveMon)
+
             battlerIn2 = gActiveBattler;
         else
+            Printf("else battlerIn2 = GetBattlerAtPosition(GetBattlerPosition(gActiveBattler) ^ BIT_FLANK);");
             battlerIn2 = GetBattlerAtPosition(GetBattlerPosition(gActiveBattler) ^ BIT_FLANK);
 
         opposingBattler = BATTLE_OPPOSITE(battlerIn1);
@@ -938,7 +940,10 @@ u8 GetMostSuitableMonToSwitchInto(void)
             || i == *(gBattleStruct->monToSwitchIntoId + battlerIn1)
             || i == *(gBattleStruct->monToSwitchIntoId + battlerIn2)
             || (GetMonAbility(&party[i]) == ABILITY_TRUANT && IsTruantMonVulnerable(gActiveBattler, opposingBattler))) // While not really invalid per say, not really wise to switch into this mon.
+            {
+            Printf("i = %d", i);
             invalidMons |= gBitTable[i];
+            }
         else
             aliveCount++;
     }
@@ -958,6 +963,14 @@ u8 GetMostSuitableMonToSwitchInto(void)
     bestMonId = GetBestMonDmg(party, firstId, lastId, invalidMons, opposingBattler);
     if (bestMonId != PARTY_SIZE)
         return bestMonId;
+
+      // Pick a valid mon if possible.
+    for (i = firstId; i < lastId; i++)
+    {
+        if (invalidMons & gBitTable[i])
+            continue;
+        return i;
+    }
 
     return PARTY_SIZE;
 }

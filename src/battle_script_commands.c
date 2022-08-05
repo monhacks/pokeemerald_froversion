@@ -1276,7 +1276,7 @@ static bool32 TryAegiFormChange(void)
 static void Cmd_attackcanceler(void)
 {
     s32 i, moveType;
-    Printf("gBattleStruct->HasBattleScriptExecuted = %d", gBattleStruct->HasBattleScriptExecuted);
+    //Printf("gBattleStruct->HasBattleScriptExecuted = %d", gBattleStruct->HasBattleScriptExecuted);
 
     if (gBattleOutcome != 0)
     {
@@ -5877,16 +5877,22 @@ static void Cmd_openpartyscreen(void)
     }
     else if (gBattlescriptCurrInstr[1] == 7)
     {
+        Printf("gBattlescriptCurrInstr = %d", gBattlescriptCurrInstr[1]);
         gBattleStruct->chooseReviveMon = TRUE;
         gActiveBattler = gBattlerAttacker;
+        Printf("gActiveBattler = %d", gActiveBattler);
+        Printf("gBattlerAttacker = %d", gBattlerAttacker);
         BtlController_EmitChoosePokemon(0, PARTY_ACTION_REVIVE_MON, 0, ABILITY_NONE, gBattleStruct->field_60[gActiveBattler]);
         MarkBattlerForControllerExec(gActiveBattler);
         gBattlescriptCurrInstr += 6;
     }
     else if (gBattlescriptCurrInstr[1] == 8)
     {
+        Printf("gBattlescriptCurrInstr = %d", gBattlescriptCurrInstr[1]);
         gBattleStruct->chooseReviveMon = TRUE;
         gActiveBattler = gBattlerTarget;
+        Printf("gActiveBattler = %d", gActiveBattler);
+        Printf("gBattlerTarget = %d", gBattlerTarget);
         BtlController_EmitChoosePokemon(0, PARTY_ACTION_REVIVE_MON, 0, ABILITY_NONE, gBattleStruct->field_60[gActiveBattler]);
         MarkBattlerForControllerExec(gActiveBattler);
         gBattlescriptCurrInstr += 6;
@@ -7481,8 +7487,15 @@ static u32 GetHighestStatId(u32 battlerId)
 struct Party GetBattlerParty(u32 battlerId, bool32 checkDoubles)
 {
     struct Party party;
+    
+    // Printf("Function == GetBattlerParty");
+    // Printf("u32 battlerId = %d", battlerId);
+    // Printf("gActiveBattler = %d", gActiveBattler);
+    // Printf("gBattlerAttacker = %d", gBattlerAttacker);
+    // Printf("gBattlerTarget = %d", gBattlerTarget);
     if (GetBattlerSide(battlerId) == B_SIDE_PLAYER)
     {
+        // Printf("Side Player");
         party.mons = gPlayerParty;
         if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && checkDoubles)
         {
@@ -7497,6 +7510,7 @@ struct Party GetBattlerParty(u32 battlerId, bool32 checkDoubles)
     }
     else
     {
+        // Printf("Side Enemy");
         party.mons = gEnemyParty;
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS && checkDoubles)
         {
@@ -7518,8 +7532,8 @@ static bool32 AnyOtherFainted(u32 battlerId)
     u32 species;
     
     struct Party party = GetBattlerParty(gActiveBattler, TRUE);
-    Printf("(D)gActiveBattler = %d", gBattleScripting.battler);
-    Printf("(D)BattlerTarget = %d", gBattlerTarget);
+    //Printf("(D)gActiveBattler = %d", gBattleScripting.battler);
+    //Printf("(D)BattlerTarget = %d", gBattlerTarget);
     for (i = 0; i < party.maxSize; ++i)
     {
         if (i == gBattlerPartyIndexes[battlerId])
@@ -8072,7 +8086,7 @@ static void Cmd_various(void)
         while (gBattleStruct->dragonravineBattlerId < gBattlersCount)
         {
             gBattleScripting.battler = gBattleStruct->dragonravineBattlerId++;
-            Printf("SpeciesCheck =%d", IS_BATTLER_OF_TYPE (gActiveBattler, TYPE_DRAGON));
+            //Printf("SpeciesCheck =%d", IS_BATTLER_OF_TYPE (gActiveBattler, TYPE_DRAGON));
             if (gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE
                 && IsBattlerAlive(gBattleScripting.battler)
                 && IS_BATTLER_OF_TYPE(gBattleScripting.battler, TYPE_DRAGON)
@@ -8931,15 +8945,17 @@ static void Cmd_various(void)
         break;
         }
     case VARIOUS_DRAGON_RAVINE_REVIVE:
-        while (gBattleStruct->dragonravineBattlerId < gBattlersCount)
-            gBattleScripting.battler = gBattleStruct->dragonravineBattlerId++;
         {
             struct Party party = GetBattlerParty(gActiveBattler, FALSE);
             u32 index = *(gBattleStruct->monToSwitchIntoId + gActiveBattler);
             struct Pokemon *mon = &party.mons[index];
-            u32 species = GetMonData(mon, MON_DATA_SPECIES);
-            Printf("Type 1 = %d, Type 2 = %d", gBaseStats[species].type1, gBaseStats[species].type2);
-            Printf("DragonCheck = %d", (gBaseStats[species].type1 == TYPE_DRAGON || gBaseStats[species].type2 == TYPE_DRAGON));
+            u32 species = GetMonData(mon, MON_DATA_SPECIES2);
+            Printf("case VARIOUS_DRAGON_RAVINE_REVIVE:");
+            // Printf("gActiveBattler = %d", gActiveBattler);
+            // Printf("gBattlerAttacker = %d", gBattlerAttacker);
+            // Printf("gBattlerTarget = %d", gBattlerTarget);
+            // Printf("u32 species = %d", GetMonData(mon, MON_DATA_SPECIES2));
+            Printf("u32 index = %d", index);
             if(gBaseStats[species].type1 == TYPE_DRAGON || gBaseStats[species].type2 == TYPE_DRAGON)
             {
                 u16 hp = GetMonData(mon, MON_DATA_MAX_HP);
@@ -8958,6 +8974,10 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
         return;
     case VARIOUS_JUMPIFNODRAGONFAINTED:
+        Printf("Function == case: VARIOUS_JUMPIFNODRAGONFAINED");
+        Printf("gActiveBattler = %d", gActiveBattler);
+        Printf("gBattlerAttacker = %d", gBattlerAttacker);
+        Printf("gBattlerTarget = %d", gBattlerTarget);
         if (AnyDragonFainted(gActiveBattler))
             gBattlescriptCurrInstr += 7;
         else
@@ -9832,7 +9852,7 @@ static void Cmd_setmultihitcounter(void)
         }
         else if(IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gRuthlashLine))
         {
-            Printf ("sRuthLashMultiHitCounter = %d", sRuthlashMultiHitCounter);
+            //Printf ("sRuthLashMultiHitCounter = %d", sRuthlashMultiHitCounter);
             gMultiHitCounter = sRuthlashMultiHitCounter;
         }
         else if (B_MULTI_HIT_CHANCE >= GEN_5)
