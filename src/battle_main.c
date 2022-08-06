@@ -3833,13 +3833,18 @@ void BattleTurnPassed(void)
     else if (ShouldDoTrainerSlide(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), gTrainerBattleOpponent_A, TRAINER_SLIDE_LAST_LOW_HP))
         BattleScriptExecute(BattleScript_TrainerSlideMsgEnd2);
     
-    if (gTrainerBattleOpponent_A == TRAINER_SUMMIT_CAVERNS_LATTKA_2)
+    switch(gTrainerBattleOpponent_A)
+        {
+        case TRAINER_SUMMIT_CAVERNS_LATTKA_2:
         SetOpponentMovesShadowCharizard();
-    if (gTrainerBattleOpponent_A == TRAINER_WINSTON_4)
+        break;
+        case TRAINER_WINSTON_4:
         SetOpponentMovesShadowNidoqueen();
+        break;
+        }
+    
     if (gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_BLAZIKEN)
         SetOpponentMovesBlaziken();
-    
 }
 
 static void SetOpponentMovesShadowCharizard(void)
