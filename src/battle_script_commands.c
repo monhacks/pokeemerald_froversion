@@ -11126,6 +11126,7 @@ static void Cmd_cursetarget(void)
 
 static void Cmd_trysetspikes(void)
 {
+    
     u8 targetSide = GetBattlerSide(gBattlerAttacker) ^ BIT_SIDE;
 
     if (gSideTimers[targetSide].spikesAmount == 3)

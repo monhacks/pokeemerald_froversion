@@ -837,6 +837,7 @@ gBattleAnims_General::
         .4byte General_Darkness                 @ B_ANIM_DARKNESS_CONTINUES
 	.4byte General_Space_Shift              @ B_ANIM_TRICK_ROOM
 	.4byte General_Explosion                @ B_ANIM_EXPLOSION
+	.4byte General_Spikes               @ B_ANIM_SPIKES
 
 	.align 2
 gBattleAnims_Special::
@@ -24635,6 +24636,9 @@ General_Darkness:
 
 General_Explosion:
 	goto Move_EXPLOSION
+
+General_Spikes:
+	goto Move_SPIKES
 
 RainbowEndureEffect:
 	launchtemplate gBlueEndureEnergySpriteTemplate 0x2 0x4 0x0 0xffe8 0x1a 0x2

@@ -7598,7 +7598,10 @@ BattleScript_DragonRavineActivates::
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 	end3
 
+
 BattleScript_DragonRavineReviveAttacker::
+	printstring STRINGID_DRAGONRAVINEREVIVEMESSAGE
+	waitmessage 0x40
 	jumpifnodragonfainted BS_ATTACKER, BattleScript_DragonRavineReviveAttackerEnd
 	openpartyscreen 7, NULL
 	dragonravinerevive BS_ATTACKER
@@ -7612,6 +7615,8 @@ BattleScript_DragonRavineReviveAttackerEnd:
 	end2
 
 BattleScript_DragonRavineReviveTarget::
+	printstring STRINGID_DRAGONRAVINEREVIVEMESSAGE
+	waitmessage 0x40
 	jumpifnodragonfainted BS_TARGET, BattleScript_DragonRavineReviveTargetEnd
 	openpartyscreen 8, NULL
 	dragonravinerevive BS_TARGET
@@ -8046,6 +8051,18 @@ BattleScript_HurtAttacker:
 BattleScript_RoughSkinActivates::
 	call BattleScript_AbilityPopUp
 	call BattleScript_HurtAttacker
+	return
+
+BattleScript_AbyssalSkinActivates::
+	call BattleScript_AbilityPopUp
+	call BattleScript_HurtAttacker
+	swapattackerwithtarget
+	trysetspikes BattleScript_ButItFailedAtkStringPpReduce
+	playanimation BS_TARGET, B_ANIM_SPIKES, NULL
+	waitanimation
+	printstring STRINGID_SPIKESSCATTERED
+	waitmessage 0x40
+	swapattackerwithtarget
 	return
 	
 BattleScript_SolidRockActivates::

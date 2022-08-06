@@ -533,6 +533,7 @@
 #define B_ANIM_DARKNESS_CONTINUES       34
 #define B_ANIM_TRICK_ROOM               35
 #define B_ANIM_EXPLOSION                36
+#define B_ANIM_SPIKES                   37
 
 // special animations table (gBattleAnims_Special)
 #define B_ANIM_LVL_UP                   0

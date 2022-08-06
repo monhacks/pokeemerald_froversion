@@ -2267,7 +2267,8 @@ u8 DoFieldEndTurnEffects(void)
                     gBattleStruct->turnSideTracker++;
                     Printf("AnyDragonFainted = %d", AnyDragonFainted(gActiveBattler));
                     if(AnyDragonFainted(gActiveBattler)
-                    && gActiveBattler == 0)
+                    && gActiveBattler == 0
+                    && gBattleResults.battleTurnCounter % 1 == 0)
                         {
                             gBattleStruct->chooseReviveMon = TRUE;
                             gBattlerAttacker = gActiveBattler;
@@ -2278,7 +2279,8 @@ u8 DoFieldEndTurnEffects(void)
                             effect++;
                         }
                     else if(AnyDragonFainted(gActiveBattler)
-                    && gActiveBattler == 1)
+                    && gActiveBattler == 1
+                    && gBattleResults.battleTurnCounter % 1 == 0)
                         {
                             gBattleStruct->chooseReviveMon = TRUE;
                             gBattlerTarget = gActiveBattler;
@@ -5329,7 +5331,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gNewAbilityPopUp2);
                     gChangeAbilityPopUp = 2;
                     BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_RoughSkinActivates;
+                    gBattlescriptCurrInstr = BattleScript_AbyssalSkinActivates;
                     effect++;
                 }
             break;
