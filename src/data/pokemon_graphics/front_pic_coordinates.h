@@ -2475,17 +2475,17 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = -4,
     },
-    [SPECIES_FILLER_13] =
+    [SPECIES_ABYSSALDRAGONTHIRDEVO] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_14] =
+    [SPECIES_ABYSSALDRAGONSECONDEVO] =
     {
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_15] =
+    [SPECIES_ABYSSALDRAGONFIRSTEVO] =
     {
         .size = 0x88,
         .y_offset = 0x00,

@@ -1744,17 +1744,29 @@ const struct Trainer gTrainers[] = {
     },
 
     [TRAINER_WINSTON_5] =
+    // {
+    //     .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+    //     .trainerClass = TRAINER_CLASS_RICH_BOY,
+    //     .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+    //     .trainerPic = TRAINER_PIC_RICH_BOY,
+    //     .trainerName = _("WINSTON"),
+    //     .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+    //     .doubleBattle = FALSE,
+    //     .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+    //     .partySize = ARRAY_COUNT(sParty_Winston5),
+    //     .party = {.ItemCustomMoves = sParty_Winston5},
+    // },
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_RICH_BOY,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
-        .trainerPic = TRAINER_PIC_RICH_BOY,
-        .trainerName = _("WINSTON"),
-        .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Winston5),
-        .party = {.ItemCustomMoves = sParty_Winston5},
+        .trainerClass = TRAINER_CLASS_GMP,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_LATTKA,
+        .trainerName = _("Sigmic"),
+        .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_AbyssalHighDragon),
+        .party = {.ItemCustomMoves = sParty_AbyssalHighDragon},
     },
 
     [TRAINER_STEVE_1] =

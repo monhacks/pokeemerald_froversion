@@ -2581,17 +2581,17 @@ const u8 gShadow_CharizardPokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_13PokedexText[] = _(
+const u8 gAbyssaldragonthirdevoPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_14PokedexText[] = _(
+const u8 gAbyssaldragonsecondevoPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_15PokedexText[] = _(
+const u8 gAbyssaldragonfirstevoPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"

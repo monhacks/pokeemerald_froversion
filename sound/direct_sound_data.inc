@@ -2337,14 +2337,14 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
     Cry_Shadow_Charizard::
 	.incbin "sound/direct_sound_samples/cries/shadow_charizard.bin"
 .align 2
-    Cry_Filler_13::
-	.incbin "sound/direct_sound_samples/cries/filler_13.bin"
+    Cry_Abyssaldragonthirdevo::
+	.incbin "sound/direct_sound_samples/cries/abyssaldragonthirdevo.bin"
 .align 2
-    Cry_Filler_14::
-	.incbin "sound/direct_sound_samples/cries/filler_14.bin"
+    Cry_Abyssaldragonsecondevo::
+	.incbin "sound/direct_sound_samples/cries/abyssaldragonsecondevo.bin"
 .align 2
-    Cry_Filler_15::
-	.incbin "sound/direct_sound_samples/cries/filler_15.bin"
+    Cry_Abyssaldragonfirstevo::
+	.incbin "sound/direct_sound_samples/cries/abyssaldragonfirstevo.bin"
 .align 2
     Cry_Filler_16::
 	.incbin "sound/direct_sound_samples/cries/filler_16.bin"

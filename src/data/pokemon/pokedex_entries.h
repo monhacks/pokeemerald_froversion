@@ -5241,34 +5241,34 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_13] =
+[NATIONAL_DEX_ABYSSALDRAGONTHIRDEVO] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_13PokedexText,
+        .description = gAbyssaldragonthirdevoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_14] =
+[NATIONAL_DEX_ABYSSALDRAGONSECONDEVO] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_14PokedexText,
+        .description = gAbyssaldragonsecondevoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_15] =
+[NATIONAL_DEX_ABYSSALDRAGONFIRSTEVO] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_15PokedexText,
+        .description = gAbyssaldragonfirstevoPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,

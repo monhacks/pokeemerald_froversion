@@ -5133,19 +5133,19 @@ static const union AnimCmd sAnim_SHADOW_CHARIZARD_1[] =
     ANIMCMD_FRAME(0, 5),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_13_1[] = 
+static const union AnimCmd sAnim_ABYSSALDRAGONTHIRDEVO_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_14_1[] = 
+static const union AnimCmd sAnim_ABYSSALDRAGONSECONDEVO_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_15_1[] = 
+static const union AnimCmd sAnim_ABYSSALDRAGONFIRSTEVO_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
@@ -7678,17 +7678,17 @@ static const union AnimCmd *const sAnims_SHADOW_CHARIZARD[] ={
     sAnim_GeneralFrame0,
     sAnim_SHADOW_CHARIZARD_1,
 };
-static const union AnimCmd *const sAnims_FILLER_13[] ={
+static const union AnimCmd *const sAnims_ABYSSALDRAGONTHIRDEVO[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_13_1,
+    sAnim_ABYSSALDRAGONTHIRDEVO_1,
 };
-static const union AnimCmd *const sAnims_FILLER_14[] ={
+static const union AnimCmd *const sAnims_ABYSSALDRAGONSECONDEVO[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_14_1,
+    sAnim_ABYSSALDRAGONSECONDEVO_1,
 };
-static const union AnimCmd *const sAnims_FILLER_15[] ={
+static const union AnimCmd *const sAnims_ABYSSALDRAGONFIRSTEVO[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_15_1,
+    sAnim_ABYSSALDRAGONFIRSTEVO_1,
 };
 static const union AnimCmd *const sAnims_FILLER_16[] ={
     sAnim_GeneralFrame0,
@@ -8306,9 +8306,9 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(FRENTOAD),
     ANIM_CMD(RABATOAST),
     ANIM_CMD(SHADOW_CHARIZARD),
-    ANIM_CMD(FILLER_13),
-    ANIM_CMD(FILLER_14),
-    ANIM_CMD(FILLER_15),
+    ANIM_CMD(ABYSSALDRAGONTHIRDEVO),
+    ANIM_CMD(ABYSSALDRAGONSECONDEVO),
+    ANIM_CMD(ABYSSALDRAGONFIRSTEVO),
     ANIM_CMD(FILLER_16),
     ANIM_CMD(FILLER_17),
     ANIM_CMD(FILLER_18),

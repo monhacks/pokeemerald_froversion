@@ -56,7 +56,8 @@ NCC_Underground_BossLab_BossBattleInitiate::
 		removeobject LOCAL_ID_POKE_BALL
 		setflag FLAG_HIDE_LAB_ITEM_BALL
 	NCC_Underground_BossLab_BossBattleStart:
-		trainerbattle_no_intro TRAINER_SUMMIT_CAVERNS_LATTKA_2, NCC_Underground_BossLab_Text_MewtwoDefeat
+		@@trainerbattle_no_intro TRAINER_SUMMIT_CAVERNS_LATTKA_2, NCC_Underground_BossLab_Text_MewtwoDefeat
+		trainerbattle_no_intro TRAINER_WINSTON_5, NCC_Underground_BossLab_Text_MewtwoDefeat
 		playbgm MUS_HALL_OF_FAME_ROOM, 0
 		msgbox NCC_Underground_BossLab_Text_MewtwoPostBattle, MSGBOX_DEFAULT
 		fadescreen FADE_TO_BLACK

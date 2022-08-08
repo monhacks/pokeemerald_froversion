@@ -14903,3 +14903,58 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowCharizard[] = {
         },
     },
 };
+static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
+    {
+    .abilityNum = 2,
+    .iv = 250,
+    .lvl = 50,
+    .species = SPECIES_ABYSSALDRAGONTHIRDEVO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_BULLDOZE, MOVE_GROWL, MOVE_LEER, MOVE_NONE},
+    .stats = 
+        {
+        .statHP = 3800,
+        .statMaxHP = 3800,
+        },
+    },
+    {
+    .abilityNum = 1,
+    .iv = 250,
+    .lvl = 25,
+    .species = SPECIES_ABYSSALDRAGONSECONDEVO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SLASH, MOVE_SAND_TOMB, MOVE_CRUNCH, MOVE_NONE},
+    },
+    {
+    .abilityNum = 0,
+    .iv = 250,
+    .lvl = 15,
+    .species = SPECIES_ABYSSALDRAGONFIRSTEVO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_BITE, MOVE_TACKLE, MOVE_NONE},
+    },
+    {
+    .abilityNum = 1,
+    .iv = 250,
+    .lvl = 25,
+    .species = SPECIES_ABYSSALDRAGONSECONDEVO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SLASH, MOVE_SAND_TOMB, MOVE_CRUNCH, MOVE_NONE},
+    },
+    {
+    .abilityNum = 0,
+    .iv = 250,
+    .lvl = 15,
+    .species = SPECIES_ABYSSALDRAGONFIRSTEVO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_BITE, MOVE_TACKLE, MOVE_NONE},
+    },
+    {
+    .abilityNum = 0,
+    .iv = 250,
+    .lvl = 15,
+    .species = SPECIES_ABYSSALDRAGONFIRSTEVO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_BITE, MOVE_TACKLE, MOVE_NONE},
+    },
+};

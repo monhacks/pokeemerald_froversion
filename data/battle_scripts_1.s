@@ -7326,6 +7326,7 @@ BattleScript_AbyssalDefensiveStance::
 	showabilitypopup BS_ABILITY_BATTLER
 	recordability BS_ABILITY_BATTLER
 	pause 40
+	playanimation BS_ATTACKER, B_ANIM_HARDEN, NULL
 	printstring STRINGID_ABYSSALDEFENSIVESTANCE
 	waitmessage 0x40
 	end3

@@ -1530,7 +1530,7 @@ void DrawTerrainTypeBattleBackground(void)
         LoadMoveBg(BG_DARK_TETHER);
         break;\
     case STATUS_FIELD_DRAGON_RAVINE:
-        LoadMoveBg(BG_DARK_TETHER);
+        LoadMoveBg(BG_DRAGON_RAVINE);
         break;
     default:
         DrawMainBattleBackground();

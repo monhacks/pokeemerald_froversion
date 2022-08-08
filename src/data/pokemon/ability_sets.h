@@ -762,6 +762,14 @@ static const struct AbilitySetter sGengarAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sAbyssalDragonAbilitySet[] =
+{
+    {ABILITY_ROUGH_SKIN, 1},
+    {ABILITY_SAND_FORCE, 12},
+    {ABILITY_ABYSSAL, 32},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter sSeelAbilitySet[] =
 {
     {ABILITY_THICK_FAT, 1},
@@ -1385,6 +1393,9 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_SHADOW_CHARIZARD] = sShadowCharizardAbilitySet,
     [SPECIES_CHARIZARD_X] = sShadowCharizardAbilitySet,
     [SPECIES_CHANSEY] = sChanseyAbilitySet,
+    [SPECIES_ABYSSALDRAGONFIRSTEVO] = sAbyssalDragonAbilitySet,
+    [SPECIES_ABYSSALDRAGONSECONDEVO] = sAbyssalDragonAbilitySet,
+    [SPECIES_ABYSSALDRAGONTHIRDEVO] = sAbyssalDragonAbilitySet,
     
     
 

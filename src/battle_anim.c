@@ -2096,6 +2096,7 @@ const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
     [BG_DYNAMAX_CANNON] = {gBattleAnimBgImage_HydroCannon, gBattleAnimBgPalette_DynamaxCannon, gBattleAnimBgTilemap_HydroCannon},
     [BG_AURA_SPHERE] = {gBattleAnimBgImage_FocusBlast, gBattleAnimBgPalette_AuraSphere, gBattleAnimBgTilemap_FocusBlast},
     [BG_DARK_TETHER] = {gBattleAnimBgImage_DarkTether, gBattleAnimBgPalette_DarkTether, gBattleAnimBgTilemap_DarkTether},
+    [BG_DRAGON_RAVINE] = {gBattleAnimBgImage_DragonRavine, gBattleAnimBgPalette_DragonRavine, gBattleAnimBgTilemap_DragonRavine},
 };
 
 static void (* const sScriptCmdTable[])(void) =

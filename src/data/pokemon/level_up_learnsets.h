@@ -9004,15 +9004,15 @@ static const struct LevelUpMove sShadow_CharizardLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };
-static const struct LevelUpMove sFiller_13LevelUpLearnset[] = {
+static const struct LevelUpMove sAbyssaldragonthirdevoLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };
-static const struct LevelUpMove sFiller_14LevelUpLearnset[] = {
+static const struct LevelUpMove sAbyssaldragonsecondevoLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };
-static const struct LevelUpMove sFiller_15LevelUpLearnset[] = {
+static const struct LevelUpMove sAbyssaldragonfirstevoLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };

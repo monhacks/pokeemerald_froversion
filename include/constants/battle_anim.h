@@ -494,6 +494,7 @@
 #define BG_DYNAMAX_CANNON                       76
 #define BG_AURA_SPHERE                          77
 #define BG_DARK_TETHER                          78
+#define BG_DRAGON_RAVINE                          79
 
 // table ids for general animations (gBattleAnims_General)
 #define B_ANIM_CASTFORM_CHANGE          0
@@ -534,6 +535,7 @@
 #define B_ANIM_TRICK_ROOM               35
 #define B_ANIM_EXPLOSION                36
 #define B_ANIM_SPIKES                   37
+#define B_ANIM_HARDEN                   38
 
 // special animations table (gBattleAnims_Special)
 #define B_ANIM_LVL_UP                   0
