@@ -3501,6 +3501,8 @@ AI_CV_MudSport_End:
 AI_CV_Overheat:
 	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_Overheat_ScoreDown1
 	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_Overheat_ScoreDown1
+	if_type_effectiveness AI_EFFECTIVENESS_x2, Score_Plus2
+	if_type_effectiveness AI_EFFECTIVENESS_x4, Score_Plus5
 	if_target_faster AI_CV_Overheat2
 	if_hp_more_than AI_USER, 60, AI_CV_Overheat_End
 	goto AI_CV_Overheat_ScoreDown1

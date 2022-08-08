@@ -375,6 +375,7 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectPlasmaBlade
     .4byte NULL @ BattleScript_EffectDarkTether
     .4byte BattleScript_EffectOHKOSide
+	.4byte BattleScript_EffectDragonRavine
 
 BattleScript_EffectRevive::
 	attackcanceler
@@ -1750,6 +1751,7 @@ BattleScript_EffectMistyTerrain:
 BattleScript_EffectGrassyTerrain:
 BattleScript_EffectElectricTerrain:
 BattleScript_EffectPsychicTerrain:
+BattleScript_EffectDragonRavine:
 	attackcanceler
 	attackstring
 	ppreduce

@@ -747,6 +747,7 @@ static const u8 sText_DragonRavineEnds[] = _("The terrain returned to normal!");
 static const u8 sText_DragonRavineRaisedStat[] = _("Dragon Ravine Raises {B_SCR_ACTIVE_NAME_WITH_PREFIX}'s\n{B_BUFF1}!");
 static const u8 sText_AbyssalSpikesScattered[] = _("Spikes fall from\n{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}.");
 static const u8 sText_DragonRavineReviveMessage[] = _("Dragon Ravine heals a fainted\nDragon-Type Pokemon");
+static const u8 sText_DragonRavineActivates[] = _("Dragon Ravine changes the terrain!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1357,11 +1358,12 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_DRAGONRAVINESTATRAISE - 12] = sText_DragonRavineRaisedStat,
     [STRINGID_ABYSSALSPIKESSCATTERED - 12] = sText_AbyssalSpikesScattered,
     [STRINGID_DRAGONRAVINEREVIVEMESSAGE - 12] = sText_DragonRavineReviveMessage,
+    [STRINGID_DRAGONRAVINEACTIVATES - 12] = sText_DragonRavineActivates,
 };
 
 const u16 gTerrainStringIds[] =
 {
-    STRINGID_TERRAINBECOMESMISTY, STRINGID_TERRAINBECOMESGRASSY, STRINGID_TERRAINBECOMESELECTRIC, STRINGID_TERRAINBECOMESPSYCHIC, STRINGID_DARKTETHERACTIVATES
+    STRINGID_TERRAINBECOMESMISTY, STRINGID_TERRAINBECOMESGRASSY, STRINGID_TERRAINBECOMESELECTRIC, STRINGID_TERRAINBECOMESPSYCHIC, STRINGID_DARKTETHERACTIVATES, STRINGID_DRAGONRAVINEACTIVATES
 };
 
 const u16 gTerrainPreventsStringIds[] =

@@ -783,6 +783,9 @@ gBattleAnims_Moves::
 	.4byte Move_WARRIORS_SACRIFICE
 	.4byte Move_REVIVE
 	.4byte Move_PLASMA_BLADE
+	.4byte Move_OHKO_SIDE
+	.4byte Move_TURF_BLAST
+	.4byte Move_DRAGON_RAVINE
 	.4byte Move_COUNT @ cannot be reached, because last move is Eerie Spell
 
 	.align 2
@@ -3125,6 +3128,15 @@ Move_DEFOG:
 Move_TRICK_ROOM::
 	call InitRoomAnimation
 	fadetobg BG_TRICK_ROOM
+	waitbgfadein
+	delay 0x40
+	restorebg
+	waitbgfadein
+	blendoff
+	end
+Move_DRAGON_RAVINE::
+	call InitRoomAnimation
+	fadetobg BG_DRAGON_RAVINE
 	waitbgfadein
 	delay 0x40
 	restorebg
@@ -23747,6 +23759,13 @@ Move_PLASMA_BLADE:
 	blendoff
 	waitforvisualfinish
 	end
+
+
+Move_OHKO_SIDE:
+	goto Move_DARK_VOID
+
+Move_TURF_BLAST:
+	goto Move_PRECIPICE_BLADES
 
 Move_COUNT:
 	loadspritegfx ANIM_TAG_IMPACT

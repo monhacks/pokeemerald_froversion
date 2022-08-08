@@ -56,6 +56,9 @@ NCC_Underground_BossLab_BossBattleInitiate::
 		removeobject LOCAL_ID_POKE_BALL
 		setflag FLAG_HIDE_LAB_ITEM_BALL
 	NCC_Underground_BossLab_BossBattleStart:
+		msgbox StartBattle, MSGBOX_YESNO
+		compare VAR_RESULT, FALSE
+		goto_if_eq NCC_Underground_BossLab_Release
 		@@trainerbattle_no_intro TRAINER_SUMMIT_CAVERNS_LATTKA_2, NCC_Underground_BossLab_Text_MewtwoDefeat
 		trainerbattle_no_intro TRAINER_WINSTON_5, NCC_Underground_BossLab_Text_MewtwoDefeat
 		playbgm MUS_HALL_OF_FAME_ROOM, 0
@@ -71,6 +74,7 @@ NCC_Underground_BossLab_BossBattleInitiate::
 		setflag FLAG_SYS_GAME_CLEAR
 		setvar VAR_ROUTE101_STATE, 7
 		warpsilent MAP_CREDITS_MAP_CINNABAR, 255, 42, 12
+	NCC_Underground_BossLab_Release:
 	releaseall
 	end
 
@@ -207,3 +211,7 @@ NCC_Underground_BossLab_Text_MewtwoPostBattle:
 	.string "fight you myself...\p"
 	.string "Enjoy your victory, but this isn't\n"
 	.string "over.$"
+
+StartBattle:
+	.string "Are you ready to test this boss\n"
+	.string "battle for Camgotay?$"

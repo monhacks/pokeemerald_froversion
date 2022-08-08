@@ -137,6 +137,7 @@ bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
 u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 isCrit, bool32 updateFlags);
 u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 isCrit, bool32 updateFlags);
+bool32 TryChangeBattleTerrain(u32 battler, u32 statusFlag, u8 *timer);
 
 
 #endif // GUARD_BATTLE_UTIL_H

@@ -122,6 +122,7 @@ static void HandleEndTurn_FinishBattle(void);
 static void SetOpponentMovesShadowCharizard(void);
 static void SetOpponentMovesShadowNidoqueen(void);
 static void SetOpponentMovesBlaziken(void);
+static void SetOpponentMovesAbyssalHighDragon(void);
 
 // EWRAM vars
 EWRAM_DATA u16 gBattle_BG0_X = 0;
@@ -3841,6 +3842,9 @@ void BattleTurnPassed(void)
         case TRAINER_WINSTON_4:
         SetOpponentMovesShadowNidoqueen();
         break;
+        case TRAINER_WINSTON_5:
+        SetOpponentMovesAbyssalHighDragon();
+        break;
         }
     
     if (gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_BLAZIKEN)
@@ -3937,6 +3941,24 @@ static void SetOpponentMovesBlaziken(void)
         gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_CLOSE_COMBAT;
         gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_AURORA_VEIL;
         }    
+}
+
+static void SetOpponentMovesAbyssalHighDragon(void)
+{
+    if((gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[STAT_SPATK] >= 8))
+        {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DRACO_METEOR;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TURF_BLAST;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_OVERHEAT;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_NONE;
+        }
+    else if(gFieldStatuses &= ~STATUS_FIELD_DRAGON_RAVINE)
+        {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DRAGON_RAVINE;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_DRAGON_RAVINE;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_DRAGON_RAVINE;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_DRAGON_RAVINE;
+        }
 }
 
 u8 IsRunningFromBattleImpossible(void)

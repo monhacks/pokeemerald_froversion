@@ -129,7 +129,23 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    SetWarpDestination(MAP_GROUP(CINNIBAR_ISLAND), MAP_NUM(CINNIBAR_ISLAND), -1, 62, 53);
+    u16 i;
+    AddBagItem(ITEM_HYPER_POTION, 10);
+    AddBagItem(ITEM_REVIVE, 20);
+    AddBagItem(ITEM_MAX_REVIVE, 10);
+    AddBagItem(ITEM_SUPER_POTION, 20);
+    AddBagItem(ITEM_X_ATTACK, 7);
+    AddBagItem(ITEM_X_SP_ATK, 7);
+    AddBagItem(ITEM_X_SP_DEF, 7);
+    AddBagItem(ITEM_X_DEFENSE, 7);
+    AddBagItem(ITEM_DIRE_HIT, 7);
+    AddBagItem(ITEM_FULL_RESTORE, 5);
+    for (i = ITEM_TM01; i <= ITEM_TM50; i++)
+        {
+            if(!CheckBagHasItem(i, 1))
+            AddBagItem(i, 1);
+        }
+    SetWarpDestination(MAP_GROUP(UNKNOWN_CAVE), MAP_NUM(UNKNOWN_CAVE), -1, 9, 8);
     WarpIntoMap();
 }
 
