@@ -3995,9 +3995,6 @@ extern const u32 gBattleTerrainTiles_Lab[];
 extern const u32 gBattleTerrainTilemap_Lab[];
 extern const u32 gBattleTerrainPalette_Lab[];
 
-extern const u32 gBattleTerrainTiles_DragonRavine[];
-extern const u32 gBattleTerrainTilemap_DragonRavine[];
-extern const u32 gBattleTerrainPalette_DragoneRavine[];
 
 
 // pokedex

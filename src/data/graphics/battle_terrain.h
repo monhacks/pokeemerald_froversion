@@ -103,7 +103,3 @@ const u32 gBattleTerrainTiles_Lab[] = INCBIN_U32("graphics/battle_terrain/lab/ti
 const u32 gBattleTerrainPalette_Lab[] = INCBIN_U32("graphics/battle_terrain/lab/palette.gbapal.lz");
 const u32 gBattleTerrainTilemap_Lab[] = INCBIN_U32("graphics/battle_terrain/lab/map.bin.lz");
 
-
-const u32 gBattleTerrainTiles_DragonRavine[] = INCBIN_U32("graphics/battle_terrain/dragon_ravine/tiles.4bpp.lz");
-const u32 gBattleTerrainPalette_DragonRavine[] = INCBIN_U32("graphics/battle_terrain/dragon_ravine/palette.gbapal.lz");
-const u32 gBattleTerrainTilemap_DragonRavine[] = INCBIN_U32("graphics/battle_terrain/dragon_ravine/map.bin.lz");
