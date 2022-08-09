@@ -748,6 +748,7 @@ static const u8 sText_DragonRavineRaisedStat[] = _("Dragon Ravine Raises {B_SCR_
 static const u8 sText_AbyssalSpikesScattered[] = _("Spikes fall from\n{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}.");
 static const u8 sText_DragonRavineReviveMessage[] = _("Dragon Ravine heals a fainted\nDragon-Type Pokemon");
 static const u8 sText_DragonRavineActivates[] = _("Dragon Ravine changes the terrain!");
+static const u8 sText_PkmnsXCuredYProblem2[] = _("{B_BUFF2}'s {B_SCR_ACTIVE_ABILITY}\ncured its {B_BUFF1} problem!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1359,6 +1360,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ABYSSALSPIKESSCATTERED - 12] = sText_AbyssalSpikesScattered,
     [STRINGID_DRAGONRAVINEREVIVEMESSAGE - 12] = sText_DragonRavineReviveMessage,
     [STRINGID_DRAGONRAVINEACTIVATES - 12] = sText_DragonRavineActivates,
+    [STRINGID_PKMNSXCUREDYPROBLEM2 - 12] = sText_PkmnsXCuredYProblem2,
 };
 
 const u16 gTerrainStringIds[] =
@@ -3245,6 +3247,17 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 toCpy = gAbilityNames[sBattlerAbilities[gBattlerTarget]];
                 break;
             case B_TXT_SCR_ACTIVE_ABILITY: // scripting active ability
+                if(gChangeTxtScrAbility2 == TRUE)
+                {
+                    toCpy = gAbilityNames[gNewTxtScrAbility2];
+                    gChangeTxtScrAbility2 = FALSE;
+                }
+                else if(gChangeTxtScrAbility1 == 1)
+                {
+                    toCpy = gAbilityNames[gNewTxtScrAbility1];
+                    gChangeTxtScrAbility1 = FALSE;
+                }
+                else 
                 toCpy = gAbilityNames[sBattlerAbilities[gBattleScripting.battler]];
                 break;
             case B_TXT_EFF_ABILITY: // effect battlerId ability

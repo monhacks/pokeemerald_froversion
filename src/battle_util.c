@@ -2244,7 +2244,8 @@ u8 DoFieldEndTurnEffects(void)
             }
             gBattleStruct->turnCountersTracker++;
             break;
-        case ENDTURN_DRAGON_RAVINE:      
+        case ENDTURN_DRAGON_RAVINE:
+            Printf("gFieldTimers.dragonRavineTimer = %d", gFieldTimers.dragonRavineTimer);  
             if (gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE && --gFieldTimers.dragonRavineTimer == 0)
             {
                 gFieldStatuses &= ~(STATUS_FIELD_DRAGON_RAVINE);
@@ -4408,11 +4409,20 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
         case ABILITY_ABYSSAL:
             if (TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM, TRUE))
             {
+                gChangeAbilityPopUp = 1;
+                gChangeTxtScrAbility1 = 1;
+                gNewAbilityPopUp1 = ABILITY_SAND_STREAM;
+                gNewTxtScrAbility1 = ABILITY_SAND_STREAM;
                 BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
                 effect++;
             }
             if (TryChangeBattleTerrain(battler, STATUS_FIELD_DRAGON_RAVINE, &gFieldTimers.dragonRavineTimer))
             {
+                
+                gChangeAbilityPopUp = 2;
+                gChangeTxtScrAbility2 = 1;
+                gNewAbilityPopUp2 = ABILITY_DRAGON_RAVINE;
+                gNewTxtScrAbility2 = ABILITY_DRAGON_RAVINE;
                 gFieldTimers.dragonRavineTimer = 255;
                 BattleScriptPushCursorAndCallback(BattleScript_DragonRavineActivates);
                 effect++;
@@ -4657,17 +4667,41 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     effect++;
                 }
                 if (gBattleResults.battleTurnCounter % 3 == 2
-                    && TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM, TRUE) 
-                    && gBattleMons[battler].status1 & STATUS1_ANY)
-                {
-                    BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
-                    goto ABILITY_HEAL_MON_STATUS;
-                    effect++;
-                }
-                else if (gBattleResults.battleTurnCounter % 3 == 2
                         && gBattleMons[battler].status1 & STATUS1_ANY)
                 {
-                    goto ABILITY_HEAL_MON_STATUS;
+                    gChangeAbilityPopUp = 1;
+                    gChangeTxtScrAbility1 = TRUE;
+                    gNewAbilityPopUp1 = ABILITY_SAND_SOOTHE;
+                    gNewTxtScrAbility1 = ABILITY_SAND_SOOTHE;
+                    if (gBattleMons[battler].status1 & (STATUS1_POISON | STATUS1_TOXIC_POISON))
+                        StringCopy(gBattleTextBuff1, gStatusConditionString_PoisonJpn);
+                    if (gBattleMons[battler].status1 & STATUS1_SLEEP)
+                        StringCopy(gBattleTextBuff1, gStatusConditionString_SleepJpn);
+                    if (gBattleMons[battler].status1 & STATUS1_PARALYSIS)
+                        StringCopy(gBattleTextBuff1, gStatusConditionString_ParalysisJpn);
+                    if (gBattleMons[battler].status1 & STATUS1_BURN)
+                        StringCopy(gBattleTextBuff1, gStatusConditionString_BurnJpn);
+                    if (gBattleMons[battler].status1 & STATUS1_FREEZE)
+                        StringCopy(gBattleTextBuff1, gStatusConditionString_IceJpn);
+
+                    gBattleMons[battler].status1 = 0;
+                    gBattleMons[battler].status2 &= ~(STATUS2_NIGHTMARE);
+                    gBattleScripting.battler = gActiveBattler = battler;
+                    PREPARE_SPECIES_BUFFER(gBattleTextBuff2, gBattleMons[gActiveBattler].species);
+                    BattleScriptPushCursorAndCallback(BattleScript_AbyssalHealActivates);
+                    BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[battler].status1);
+                    MarkBattlerForControllerExec(gActiveBattler);
+                    effect++;
+                }
+                if (gBattleResults.battleTurnCounter % 3 == 2
+                    && TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM, TRUE) )
+                {
+                    Printf("gBattleScripting.battler (sandstream) = %d", gBattleMons[battler].species);
+                    gChangeAbilityPopUp = 2;
+                    gChangeTxtScrAbility2 = TRUE;
+                    gNewAbilityPopUp2 = ABILITY_SAND_STREAM;
+                    gNewTxtScrAbility2 = ABILITY_SAND_STREAM;
+                    BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
                     effect++;
                 }
                 break;

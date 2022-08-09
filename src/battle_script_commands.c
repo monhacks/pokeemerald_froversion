@@ -10321,7 +10321,14 @@ static void Cmd_weatherdamage(void)
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_HEAL_BLOCK))
             {
                 gBattlerAbility = gBattlerAttacker;
-                gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 16;
+                if (IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gMegaBosses))
+                    {
+                    gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 32;
+                    }
+                    else
+                    {
+                    gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 16;
+                    }
                 if (gBattleMoveDamage == 0)
                     gBattleMoveDamage = 1;
                 gBattleMoveDamage *= -1;
@@ -10333,7 +10340,14 @@ static void Cmd_weatherdamage(void)
                 && !(gStatuses3[gBattlerAttacker] & (STATUS3_UNDERGROUND | STATUS3_UNDERWATER))
                 && GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_SAFETY_GOOGLES)
             {
-                gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 16;
+                if (IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gMegaBosses))
+                    {
+                    gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 32;
+                    }
+                    else
+                    {
+                    gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 16;
+                    }
                 if (gBattleMoveDamage == 0)
                     gBattleMoveDamage = 1;
             }

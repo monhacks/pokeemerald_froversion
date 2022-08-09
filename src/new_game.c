@@ -140,6 +140,14 @@ static void WarpToTruck(void)
     AddBagItem(ITEM_X_DEFENSE, 7);
     AddBagItem(ITEM_DIRE_HIT, 7);
     AddBagItem(ITEM_FULL_RESTORE, 5);
+    AddBagItem(ITEM_LEFTOVERS, 5);
+    AddBagItem(ITEM_SITRUS_BERRY, 5);
+    AddBagItem(ITEM_WEAKNESS_POLICY, 1);
+    AddBagItem(ITEM_ASSAULT_VEST, 1);
+    AddBagItem(ITEM_DRAGON_CAMOUFLAGE, 1);
+    AddBagItem(ITEM_LIFE_ORB, 1);
+    AddBagItem(ITEM_CHOICE_BAND, 1);
+    AddBagItem(ITEM_CHOICE_SPECS, 1);
     for (i = ITEM_TM01; i <= ITEM_TM50; i++)
         {
             if(!CheckBagHasItem(i, 1))

@@ -560,6 +560,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SHADOW_NIDOKING] = _("Dark Aura"),
     [ABILITY_SHADOW_NIDOQUEEN] = _("Dark Aura"),
     [ABILITY_SHADOW_CHARIZARD] = _("Dark Aura"),
+    [ABILITY_DRAGON_RAVINE] = _("DragnRavine"),
+    [ABILITY_SAND_SOOTHE] = _("Sand Soothe"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =

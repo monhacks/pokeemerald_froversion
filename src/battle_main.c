@@ -240,6 +240,10 @@ EWRAM_DATA u8 gLastUsedBall = 0;
 EWRAM_DATA u8 gChangeAbilityPopUp = 0;
 EWRAM_DATA u16 gNewAbilityPopUp1 = 0;
 EWRAM_DATA u16 gNewAbilityPopUp2 = 0;
+EWRAM_DATA u8 gChangeTxtScrAbility1 = 0;
+EWRAM_DATA u8 gChangeTxtScrAbility2 = 0;
+EWRAM_DATA u16 gNewTxtScrAbility1 = 0;
+EWRAM_DATA u16 gNewTxtScrAbility2 = 0;
 
 // IWRAM common vars
 void (*gPreBattleCallback1)(void);
@@ -3772,6 +3776,7 @@ const u16 gAbyssalHighDragonPhysicalAttackMoves[] =
         MOVE_BULLDOZE,
         MOVE_WING_ATTACK,
         MOVE_SAND_TOMB,
+        MOVE_CRUNCH,
         0xFFFF
     };
 
@@ -3779,7 +3784,8 @@ const u16 gAbyssalHighDragonSpecialAttackMoves[] =
     {
         MOVE_FLAMETHROWER,
         MOVE_DRAGON_BREATH,
-        MOVE_MUD_SHOT,
+        MOVE_MUD_BOMB,
+        MOVE_DARK_PULSE,
         0xFFFF
     };
 
@@ -3979,67 +3985,74 @@ static void SetOpponentMovesAbyssalHighDragon(void)
 {
     u8 i;
     u8 abyssalHighDragonFieldSetChance = Random() % 256;
+    u8 abyssalHighDragonPosition;
+    
+    if(gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
+            abyssalHighDragonPosition = B_POSITION_OPPONENT_LEFT;
+    if(gBattleMons[B_POSITION_OPPONENT_RIGHT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
+            abyssalHighDragonPosition = B_POSITION_OPPONENT_RIGHT;
+    
 
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {
         if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 12 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 12))
             {
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ROAR;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_NONE;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_NONE;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
+            gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
             return;
         }
         else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 10 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 10)
         && abyssalHighDragonFieldSetChance >= 129)
             {
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ROAR;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_NONE;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_NONE;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
+            gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
             return;
         }
         else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 8 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 8)
         && abyssalHighDragonFieldSetChance >= 218)
             {
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ROAR;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_NONE;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_NONE;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
+            gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
             return;
             }
         else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE)
         && abyssalHighDragonFieldSetChance >= 82)
             {
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ROAR;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_NONE;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_NONE;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
+            gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
             return;
             }
-        else if((gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[STAT_SPATK] >= 8))
+        else if((gBattleMons[abyssalHighDragonPosition].statStages[STAT_SPATK] >= 8))
         {
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DRACO_METEOR;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TURF_BLAST;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_OVERHEAT;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_DRACO_METEOR;
+            gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_TURF_BLAST;
+            gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_OVERHEAT;
+            gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
             return;
         }
-        else if(gFieldStatuses &= ~STATUS_FIELD_DRAGON_RAVINE
+        else if(!(gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE)
             && abyssalHighDragonFieldSetChance >= 193)
         {
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DRAGON_RAVINE;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_DRAGON_RAVINE;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_DRAGON_RAVINE;
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_DRAGON_RAVINE;
+            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_DRAGON_RAVINE;
+            gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_DRAGON_RAVINE;
+            gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_DRAGON_RAVINE;
+            gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_DRAGON_RAVINE;
             return;
         }
         else
         {
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = gAbyssalHighDragonPhysicalAttackMoves[Random() % 3];
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = gAbyssalHighDragonHinderStatusMoves[Random() % 4];
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = gAbyssalHighDragonSpecialAttackMoves[Random() % 3];
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = gAbyssalHighDragonBoostStatusMoves[Random() % 2];
+            gBattleMons[abyssalHighDragonPosition].moves[0] = gAbyssalHighDragonPhysicalAttackMoves[Random() % 4];
+            gBattleMons[abyssalHighDragonPosition].moves[1] = gAbyssalHighDragonHinderStatusMoves[Random() % 4];
+            gBattleMons[abyssalHighDragonPosition].moves[2] = gAbyssalHighDragonSpecialAttackMoves[Random() % 4];
+            gBattleMons[abyssalHighDragonPosition].moves[3] = gAbyssalHighDragonBoostStatusMoves[Random() % 2];
         }
     }
 }
@@ -4787,6 +4800,7 @@ const u16 gSlashingMoves[] =
         SPECIES_NIDOQUEEN,
         SPECIES_RHYDON,
         SPECIES_DUGTRIO,
+        SPECIES_ABYSSALDRAGONTHIRDEVO,
         0xFFFF
     };
 

@@ -7401,6 +7401,12 @@ BattleScript_ShedSkinActivates::
 	waitmessage 0x40
 	updatestatusicon BS_ATTACKER
 	end3
+BattleScript_AbyssalHealActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_PKMNSXCUREDYPROBLEM2
+	waitmessage 0x40
+	updatestatusicon BS_ATTACKER
+	end3
 
 BattleScript_WeatherFormChanges::
 	setbyte sBATTLER, 0x0

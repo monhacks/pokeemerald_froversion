@@ -698,13 +698,6 @@ AI_CBM_Roar: @ 82DC47B
 	if_equal 0, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_SUCTION_CUPS, Score_Minus10
-	if_stat_level_more_than AI_TARGET, STAT_ATK, DEFAULT_STAT_STAGE, Score_Plus6Return
-	if_stat_level_more_than AI_TARGET, STAT_DEF, DEFAULT_STAT_STAGE, Score_Plus6Return
-	if_stat_level_more_than AI_TARGET, STAT_SPEED, DEFAULT_STAT_STAGE, Score_Plus6Return
-	if_stat_level_more_than AI_TARGET, STAT_SPATK, DEFAULT_STAT_STAGE, Score_Plus6Return
-	if_stat_level_more_than AI_TARGET, STAT_SPDEF, DEFAULT_STAT_STAGE, Score_Plus6Return
-	if_stat_level_more_than AI_TARGET, STAT_ACC, DEFAULT_STAT_STAGE, Score_Plus15Return
-	if_stat_level_more_than AI_TARGET, STAT_EVASION, DEFAULT_STAT_STAGE, Score_Plus6Return
 	end
 
 AI_CBM_TrickOrTreat:
@@ -1938,6 +1931,37 @@ AI_CV_Roar:
 AI_CV_Roar2:
 	if_random_less_than 128, AI_CV_Roar_End
 	score +2
+	if_stat_level_more_than AI_TARGET, STAT_DEF, 8, AI_CV_Roar3
+	if_stat_level_more_than AI_TARGET, STAT_SPATK, 8, AI_CV_Roar3
+	if_stat_level_more_than AI_TARGET, STAT_SPDEF, 8, AI_CV_Roar3
+	if_stat_level_more_than AI_TARGET, STAT_EVASION, 8, AI_CV_Roar3
+	goto AI_CV_Roar_End
+
+AI_CV_Roar3:
+	if_random_less_than 128, AI_CV_Roar_End
+	score +2
+	if_stat_level_more_than AI_TARGET, STAT_SPATK, 8, AI_CV_Roar4
+	if_stat_level_more_than AI_TARGET, STAT_SPDEF, 8, AI_CV_Roar4
+	if_stat_level_more_than AI_TARGET, STAT_EVASION, 8, AI_CV_Roar4
+	goto AI_CV_Roar_End
+
+AI_CV_Roar4:
+	if_random_less_than 128, AI_CV_Roar_End
+	score +2
+	if_stat_level_more_than AI_TARGET, STAT_SPDEF, 8, AI_CV_Roar5
+	if_stat_level_more_than AI_TARGET, STAT_EVASION, 8, AI_CV_Roar5
+	goto AI_CV_Roar_End
+
+AI_CV_Roar5:
+	if_random_less_than 128, AI_CV_Roar_End
+	score +2
+	if_stat_level_more_than AI_TARGET, STAT_EVASION, 8, AI_CV_Roar6
+	goto AI_CV_Roar_End
+
+AI_CV_Roar6:
+	if_random_less_than 128, AI_CV_Roar_End
+	score +2
+	goto AI_CV_Roar_End
 
 AI_CV_Roar_End:
 	end

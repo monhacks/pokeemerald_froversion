@@ -897,5 +897,9 @@ extern u8 gLastUsedBall;
 extern u8 gChangeAbilityPopUp;
 extern u16 gNewAbilityPopUp1;
 extern u16 gNewAbilityPopUp2;
+extern u8 gChangeTxtScrAbility1;
+extern u8 gChangeTxtScrAbility2;
+extern u16 gNewTxtScrAbility1;
+extern u16 gNewTxtScrAbility2;
 
 #endif // GUARD_BATTLE_H

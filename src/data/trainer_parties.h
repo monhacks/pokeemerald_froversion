@@ -14920,23 +14920,31 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
     {
     .abilityNum = 1,
     .iv = 250,
-    .lvl = 25,
+    .lvl = 40,
     .species = SPECIES_ABYSSALDRAGONSECONDEVO,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SLASH, MOVE_SAND_TOMB, MOVE_CRUNCH, MOVE_NONE},
+    .stats =
+        {
+        .nickname = gText_WesRamNickname,
+        },
     },
     {
     .abilityNum = 0,
     .iv = 250,
-    .lvl = 15,
+    .lvl = 30,
     .species = SPECIES_ABYSSALDRAGONFIRSTEVO,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SELF_DESTRUCT, MOVE_BITE, MOVE_TACKLE, MOVE_NONE},
+    .stats =
+        {
+        .nickname = gText_JordanCactusNickname
+        },
     },
     {
     .abilityNum = 1,
     .iv = 250,
-    .lvl = 25,
+    .lvl = 40,
     .species = SPECIES_ABYSSALDRAGONSECONDEVO,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SLASH, MOVE_SAND_TOMB, MOVE_CRUNCH, MOVE_NONE},
@@ -14944,15 +14952,19 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
     {
     .abilityNum = 0,
     .iv = 250,
-    .lvl = 15,
+    .lvl = 30,
     .species = SPECIES_ABYSSALDRAGONFIRSTEVO,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SELF_DESTRUCT, MOVE_BITE, MOVE_TACKLE, MOVE_NONE},
+    .stats =
+        {
+        .nickname = gText_MarriottVaporeonNickname
+        },
     },
     {
     .abilityNum = 0,
     .iv = 250,
-    .lvl = 15,
+    .lvl = 30,
     .species = SPECIES_ABYSSALDRAGONFIRSTEVO,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SELF_DESTRUCT, MOVE_BITE, MOVE_TACKLE, MOVE_NONE},
