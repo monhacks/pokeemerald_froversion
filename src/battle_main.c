@@ -3767,21 +3767,35 @@ const u16 gShadowCharizardBoostStatusMoves[] =
         0xFFFF
     };
 
-const u16 gAbyssalDragonAttackMoves[] =
+const u16 gAbyssalHighDragonPhysicalAttackMoves[] =
     {
         MOVE_BULLDOZE,
-        MOVE_FLAMETHROWER,
+        MOVE_WING_ATTACK,
         MOVE_SAND_TOMB,
-        MOVE_DRAGON_PULSE,
         0xFFFF
     };
 
-const u16 gAbyssalDragonDefenseMoves[] =
+const u16 gAbyssalHighDragonSpecialAttackMoves[] =
     {
-        MOVE_GROWL,
-        MOVE_SCREECH,
-        MOVE_SAND_TOMB,
-        MOVE_DRAGON_PULSE,
+        MOVE_FLAMETHROWER,
+        MOVE_DRAGON_BREATH,
+        MOVE_MUD_SHOT,
+        0xFFFF
+    };
+
+const u16 gAbyssalHighDragonHinderStatusMoves[] =
+    {
+        MOVE_NOBLE_ROAR,
+        MOVE_SAND_ATTACK,
+        MOVE_SCARY_FACE,
+        MOVE_LEER,
+        0xFFFF
+    };
+
+const u16 gAbyssalHighDragonBoostStatusMoves[] =
+    {
+        MOVE_HONE_CLAWS,
+        MOVE_TAILWIND,
         0xFFFF
     };
 
@@ -3963,9 +3977,47 @@ static void SetOpponentMovesBlaziken(void)
 
 static void SetOpponentMovesAbyssalHighDragon(void)
 {
+    u8 i;
     u8 abyssalHighDragonFieldSetChance = Random() % 256;
 
-    if((gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[STAT_SPATK] >= 8))
+    for (i = 0; i < NUM_BATTLE_STATS; i++)
+    {
+        if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 12 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 12))
+            {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ROAR;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_NONE;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_NONE;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_NONE;
+            return;
+        }
+        else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 10 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 10)
+        && abyssalHighDragonFieldSetChance >= 129)
+            {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ROAR;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_NONE;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_NONE;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_NONE;
+            return;
+        }
+        else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 8 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 8)
+        && abyssalHighDragonFieldSetChance >= 218)
+            {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ROAR;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_NONE;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_NONE;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_NONE;
+            return;
+            }
+        else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE)
+        && abyssalHighDragonFieldSetChance >= 82)
+            {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ROAR;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_NONE;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_NONE;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_NONE;
+            return;
+            }
+        else if((gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[STAT_SPATK] >= 8))
         {
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DRACO_METEOR;
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TURF_BLAST;
@@ -3973,7 +4025,7 @@ static void SetOpponentMovesAbyssalHighDragon(void)
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_NONE;
             return;
         }
-    else if(gFieldStatuses &= ~STATUS_FIELD_DRAGON_RAVINE
+        else if(gFieldStatuses &= ~STATUS_FIELD_DRAGON_RAVINE
             && abyssalHighDragonFieldSetChance >= 193)
         {
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DRAGON_RAVINE;
@@ -3982,13 +4034,14 @@ static void SetOpponentMovesAbyssalHighDragon(void)
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_DRAGON_RAVINE;
             return;
         }
-    else
+        else
         {
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = gShadowCharizardPhysicalAttackMoves[Random() % 4];
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = gShadowCharizardHinderStatusMoves[Random() % 4];
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = gShadowCharizardSpecialAttackMoves[Random() % 4];
-            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = gShadowCharizardBoostStatusMoves[Random() % 4];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = gAbyssalHighDragonPhysicalAttackMoves[Random() % 3];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = gAbyssalHighDragonHinderStatusMoves[Random() % 4];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = gAbyssalHighDragonSpecialAttackMoves[Random() % 3];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = gAbyssalHighDragonBoostStatusMoves[Random() % 2];
         }
+    }
 }
 
 u8 IsRunningFromBattleImpossible(void)

@@ -698,6 +698,13 @@ AI_CBM_Roar: @ 82DC47B
 	if_equal 0, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_SUCTION_CUPS, Score_Minus10
+	if_stat_level_more_than AI_TARGET, STAT_ATK, DEFAULT_STAT_STAGE, Score_Plus6Return
+	if_stat_level_more_than AI_TARGET, STAT_DEF, DEFAULT_STAT_STAGE, Score_Plus6Return
+	if_stat_level_more_than AI_TARGET, STAT_SPEED, DEFAULT_STAT_STAGE, Score_Plus6Return
+	if_stat_level_more_than AI_TARGET, STAT_SPATK, DEFAULT_STAT_STAGE, Score_Plus6Return
+	if_stat_level_more_than AI_TARGET, STAT_SPDEF, DEFAULT_STAT_STAGE, Score_Plus6Return
+	if_stat_level_more_than AI_TARGET, STAT_ACC, DEFAULT_STAT_STAGE, Score_Plus15Return
+	if_stat_level_more_than AI_TARGET, STAT_EVASION, DEFAULT_STAT_STAGE, Score_Plus6Return
 	end
 
 AI_CBM_TrickOrTreat:
