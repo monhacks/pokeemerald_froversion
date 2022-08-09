@@ -3767,6 +3767,24 @@ const u16 gShadowCharizardBoostStatusMoves[] =
         0xFFFF
     };
 
+const u16 gAbyssalDragonAttackMoves[] =
+    {
+        MOVE_BULLDOZE,
+        MOVE_FLAMETHROWER,
+        MOVE_SAND_TOMB,
+        MOVE_DRAGON_PULSE,
+        0xFFFF
+    };
+
+const u16 gAbyssalDragonDefenseMoves[] =
+    {
+        MOVE_GROWL,
+        MOVE_SCREECH,
+        MOVE_SAND_TOMB,
+        MOVE_DRAGON_PULSE,
+        0xFFFF
+    };
+
 void BattleTurnPassed(void)
 {
     s32 i;
@@ -3945,19 +3963,31 @@ static void SetOpponentMovesBlaziken(void)
 
 static void SetOpponentMovesAbyssalHighDragon(void)
 {
+    u8 abyssalHighDragonFieldSetChance = Random() % 256;
+
     if((gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[STAT_SPATK] >= 8))
         {
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DRACO_METEOR;
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TURF_BLAST;
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_OVERHEAT;
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_NONE;
+            return;
         }
-    else if(gFieldStatuses &= ~STATUS_FIELD_DRAGON_RAVINE)
+    else if(gFieldStatuses &= ~STATUS_FIELD_DRAGON_RAVINE
+            && abyssalHighDragonFieldSetChance >= 193)
         {
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DRAGON_RAVINE;
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_DRAGON_RAVINE;
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_DRAGON_RAVINE;
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_DRAGON_RAVINE;
+            return;
+        }
+    else
+        {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = gShadowCharizardPhysicalAttackMoves[Random() % 4];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = gShadowCharizardHinderStatusMoves[Random() % 4];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = gShadowCharizardSpecialAttackMoves[Random() % 4];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = gShadowCharizardBoostStatusMoves[Random() % 4];
         }
 }
 
