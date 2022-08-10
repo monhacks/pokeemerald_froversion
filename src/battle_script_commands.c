@@ -12035,7 +12035,10 @@ static void Cmd_setyawn(void)
 
 static void Cmd_setdamagetohealthdifference(void)
 {
-    if (gBattleMons[gBattlerTarget].hp <= gBattleMons[gBattlerAttacker].hp)
+    Printf("gBattlerTarget = %d", gBattlerTarget);
+    Printf("IsSpeciesOneOf(gBattleMons[gBattlerTarget].species, gMegaBosses) = %d", IsSpeciesOneOf(gBattleMons[gBattlerTarget].species, gMegaBosses));
+    if (gBattleMons[gBattlerTarget].hp <= gBattleMons[gBattlerAttacker].hp
+        || IsSpeciesOneOf(gBattleMons[gBattlerTarget].species, gMegaBosses))
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     }
@@ -12093,6 +12096,7 @@ static void Cmd_tryswapabilities(void) // skill swap
     case ABILITY_MEGA_HOUNDOOM_ABILITY:
     case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
     case ABILITY_MEGA_DEWGONG_ABILITY:
+    case ABILITY_ABYSSAL:
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
         return;
     }
@@ -12106,6 +12110,7 @@ static void Cmd_tryswapabilities(void) // skill swap
     case ABILITY_MEGA_HOUNDOOM_ABILITY:
     case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
     case ABILITY_MEGA_DEWGONG_ABILITY:
+    case ABILITY_ABYSSAL:
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
         return;
     }

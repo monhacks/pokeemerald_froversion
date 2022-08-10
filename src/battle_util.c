@@ -2623,7 +2623,14 @@ u8 DoBattlerEndTurnEffects(void)
                 }
                 else
                 {
-                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
+                    if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
+                    {
+                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 32;
+                    }
+                    else
+                    {
+                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
+                    }
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     BattleScriptExecute(BattleScript_PoisonTurnDmg);
@@ -2745,7 +2752,9 @@ u8 DoBattlerEndTurnEffects(void)
                     gBattleScripting.animArg2 = gBattleStruct->wrappedMove[gActiveBattler] >> 8;
                     PREPARE_MOVE_BUFFER(gBattleTextBuff1, gBattleStruct->wrappedMove[gActiveBattler]);
                     gBattlescriptCurrInstr = BattleScript_WrapTurnDmg;
-                    if (GetBattlerHoldEffect(gBattleStruct->wrappedBy[gActiveBattler], TRUE) == HOLD_EFFECT_BINDING_BAND)
+                    if (IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gMegaBosses))
+                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 32;
+                    else if (GetBattlerHoldEffect(gBattleStruct->wrappedBy[gActiveBattler], TRUE) == HOLD_EFFECT_BINDING_BAND)
                         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / ((B_BINDING_DAMAGE >= GEN_6) ? 6 : 8);
                     else
                         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / ((B_BINDING_DAMAGE >= GEN_6) ? 8 : 16);
@@ -5924,6 +5933,8 @@ u32 GetBattlerAbility(u8 battlerId)
         return gBattleMons[battlerId].ability;
     else if (gBattleMons[battlerId].ability == ABILITY_MEGA_DEWGONG_ABILITY)
         return gBattleMons[battlerId].ability;
+    else if (gBattleMons[battlerId].ability == ABILITY_ABYSSAL)
+        return gBattleMons[battlerId].ability;
     else if (gStatuses3[battlerId] & STATUS3_GASTRO_ACID)
         return ABILITY_NONE;
     else if ((((gBattleMons[gBattlerAttacker].ability == ABILITY_MOLD_BREAKER
@@ -6962,7 +6973,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     {
                         gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 32;
                     }
-                else 
+                    else 
                     {
                         gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 6;
                     }
