@@ -28,6 +28,7 @@ bool32 IsShieldsDownProtected(u32 battler);
 u32 IsAbilityStatusProtected(u32 battler);
 struct Party GetBattlerParty(u32 battlerId, bool32 checkDoubles);
 bool32 AnyDragonFainted(u32 battlerId);
+bool32 AnyOtherAlive(u32 battlerId);
 
 extern void (* const gBattleScriptingCommandsTable[])(void);
 extern const u8 gBattlePalaceNatureToMoveGroupLikelihood[NUM_NATURES][4];

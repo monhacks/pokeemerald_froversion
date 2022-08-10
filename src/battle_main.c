@@ -3986,12 +3986,6 @@ static void SetOpponentMovesAbyssalHighDragon(void)
     u8 i;
     u8 abyssalHighDragonFieldSetChance = Random() % 256;
     u8 abyssalHighDragonPosition;
-    u8 monsCount = CountAliveMonsInBattle(BATTLE_ALIVE_ATK_SIDE);
-
-    Printf("Alivemons atkside = %d", CountAliveMonsInBattle(BATTLE_ALIVE_ATK_SIDE));
-    Printf("Alivemons defside = %d", CountAliveMonsInBattle(BATTLE_ALIVE_DEF_SIDE));
-    Printf("Alivemons active = %d", CountAliveMonsInBattle(BATTLE_ALIVE_EXCEPT_ACTIVE));
-    Prtinf(GetMonsStateToDoubles)
     
     if(gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
             abyssalHighDragonPosition = B_POSITION_OPPONENT_LEFT;
@@ -4001,8 +3995,13 @@ static void SetOpponentMovesAbyssalHighDragon(void)
 
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {
+        if (gBattleMons[B_POSITION_PLAYER_LEFT].hp > 0)
+            gActiveBattler = GetBattlerAtPosition(B_POSITION_PLAYER_LEFT);
+        else
+            gActiveBattler = GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT);
+
         if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 12 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 12)
-        && monsCount > 2)
+        && AnyOtherAlive(gActiveBattler) == TRUE)
             {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
             gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
@@ -4012,7 +4011,7 @@ static void SetOpponentMovesAbyssalHighDragon(void)
         }
         else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 10 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 10)
         && abyssalHighDragonFieldSetChance >= 129
-        && monsCount > 2)
+        && AnyOtherAlive(gActiveBattler) == TRUE)
             {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
             gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
@@ -4022,7 +4021,7 @@ static void SetOpponentMovesAbyssalHighDragon(void)
         }
         else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 8 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 8)
         && abyssalHighDragonFieldSetChance >= 218
-        && monsCount > 2)
+        && AnyOtherAlive(gActiveBattler) == TRUE)
             {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
             gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
@@ -4032,7 +4031,7 @@ static void SetOpponentMovesAbyssalHighDragon(void)
             }
         else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE)
         && abyssalHighDragonFieldSetChance >= 82
-        && monsCount > 2)
+        && AnyOtherAlive(gActiveBattler) == TRUE)
             {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
             gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;

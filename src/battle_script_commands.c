@@ -7548,6 +7548,28 @@ static bool32 AnyOtherFainted(u32 battlerId)
     return FALSE;
 }
 
+bool32 AnyOtherAlive(u32 battlerId)
+{
+    int i;
+    u32 species;
+    
+    struct Party party = GetBattlerParty(gActiveBattler, TRUE);
+    //Printf("(D)gActiveBattler = %d", gBattleScripting.battler);
+    //Printf("(D)BattlerTarget = %d", gBattlerTarget);
+    for (i = 0; i < party.maxSize; ++i)
+    {
+        if (i == gBattlerPartyIndexes[battlerId] || i == gBattlerPartyIndexes[battlerId ^ BIT_FLANK])
+            continue;
+        species = GetMonData(&party.mons[i], MON_DATA_SPECIES2);
+        if (species != SPECIES_NONE && species != SPECIES_EGG
+         && GetMonData(&party.mons[i], MON_DATA_HP) > 0)
+        {
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
 static void Cmd_various(void)
 {
     struct Pokemon *mon;
