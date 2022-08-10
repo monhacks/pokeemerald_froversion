@@ -7735,6 +7735,9 @@ static void Cmd_various(void)
         }
         else
         {
+            if (IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gMegaBosses))
+            gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 48;
+            else
             gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
             if (gBattleMoveDamage == 0)
                 gBattleMoveDamage = 1;
