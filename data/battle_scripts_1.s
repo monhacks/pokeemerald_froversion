@@ -2316,10 +2316,19 @@ BattleScript_HitFromAtkAnimation::
 	tryfaintmon BS_TARGET, FALSE, NULL
 	trysteelgymrecharge
 	jumpifmove MOVE_FLY, BattleScript_EffectTailwindFly
+	jumpifmove MOVE_SOARING_DRAGON, BattleScript_EffectSoaringDragonClearStats
 	jumpifmove MOVE_DIVE, BattleScript_EffectBatonPassDive
 BattleScript_MoveEnd::
 	moveendall
 	end
+
+
+BattleScript_EffectSoaringDragonClearStats:
+	normalisebuffs
+	printstring STRINGID_STATCHANGESGONE
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
 
 
 BattleScript_EffectTailwindFly:
@@ -4375,6 +4384,7 @@ BattleScript_EffectSemiInvulnerable::
 	jumpifstatus2 BS_ATTACKER, STATUS2_MULTIPLETURNS, BattleScript_SecondTurnSemiInvulnerable
 	jumpifword CMP_COMMON_BITS, gHitMarker, HITMARKER_NO_ATTACKSTRING, BattleScript_SecondTurnSemiInvulnerable
 	jumpifmove MOVE_FLY, BattleScript_FirstTurnFly
+	jumpifmove MOVE_SOARING_DRAGON, BattleScript_FirstTurnFly
 	jumpifmove MOVE_DIVE, BattleScript_FirstTurnDive
 	jumpifmove MOVE_BOUNCE, BattleScript_FirstTurnBounce
 	jumpifmove MOVE_PHANTOM_FORCE, BattleScript_FirstTurnPhantomForce

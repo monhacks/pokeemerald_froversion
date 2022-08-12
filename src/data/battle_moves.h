@@ -11681,5 +11681,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = 0,
         .split = SPLIT_STATUS,
     },
+    [MOVE_SOARING_DRAGON] =
+    {
+        .effect = EFFECT_SEMI_INVULNERABLE,
+        .power = 100,
+        .type = TYPE_DRAGON,
+        .accuracy = 0,
+        .pp = 30,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED,
+        .split = SPLIT_PHYSICAL,
+    },
 };
 

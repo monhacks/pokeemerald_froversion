@@ -3986,32 +3986,75 @@ static void SetOpponentMovesAbyssalHighDragon(void)
     u8 i;
     u8 abyssalHighDragonFieldSetChance = Random() % 256;
     u8 abyssalHighDragonPosition;
+    u8 abyssalHighDragonRoarChance = Random() % 256;
+    u8 abyssalHighDragonDragonHazeChance = Random() % 256;
+    u8 abyssalHighDragonAccuracy;
+    u8 abyssalHighDragonEvasion;
+    bool32 hasBigDrops = FALSE;
+    bool32 hasBigBoosts = FALSE;
+    bool32 hasSmallAccuracyDrop = FALSE;
+    bool32 hasBigAccuracyDrop = FALSE;
     
     if(gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
             abyssalHighDragonPosition = B_POSITION_OPPONENT_LEFT;
     if(gBattleMons[B_POSITION_OPPONENT_RIGHT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
             abyssalHighDragonPosition = B_POSITION_OPPONENT_RIGHT;
     
-
+    if (gBattleMons[B_POSITION_PLAYER_LEFT].hp > 0)
+        gActiveBattler = GetBattlerAtPosition(B_POSITION_PLAYER_LEFT);
+    else
+        gActiveBattler = GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT);
+    
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {
-        if (gBattleMons[B_POSITION_PLAYER_LEFT].hp > 0)
-            gActiveBattler = GetBattlerAtPosition(B_POSITION_PLAYER_LEFT);
-        else
-            gActiveBattler = GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT);
+        if (gBattleMons[abyssalHighDragonPosition].statStages[i] < 5)
+                hasBigDrops = TRUE;
+        if (gBattleMons[abyssalHighDragonPosition].statStages[i] >= 9)
+                hasBigBoosts = TRUE;
+        if (gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC] < DEFAULT_STAT_STAGE)
+                hasSmallAccuracyDrop = TRUE;
+        if (gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC] < 5)
+                hasBigAccuracyDrop = TRUE;
+        
+        abyssalHighDragonAccuracy = gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC];
+        Printf("gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC]; = %d", gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC]);
+        abyssalHighDragonEvasion = gBattleMons[abyssalHighDragonPosition].statStages[STAT_EVASION];
+        Printf("gBattleMons[abyssalHighDragonPosition].statStages[EVASION]; = %d", gBattleMons[abyssalHighDragonPosition].statStages[STAT_EVASION]);
 
-        if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 12 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 12)
-        && AnyOtherAlive(gActiveBattler) == TRUE)
+        //Setting moves starts here
+        if (hasBigDrops && !hasBigBoosts && abyssalHighDragonDragonHazeChance > 127)
+            {
+            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_SOARING_DRAGON;
+            gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
+            return;
+            }
+        else if((abyssalHighDragonAccuracy <= 5 && abyssalHighDragonEvasion < 7)
+            || (abyssalHighDragonAccuracy <= 4 && abyssalHighDragonEvasion < 8)
+            || (abyssalHighDragonAccuracy <= 3 && abyssalHighDragonEvasion < 9)
+            || (abyssalHighDragonAccuracy <= 2 && abyssalHighDragonEvasion < 10)
+            || (abyssalHighDragonAccuracy <= 1 && abyssalHighDragonEvasion < 11)
+            || (abyssalHighDragonAccuracy <= 0 && abyssalHighDragonEvasion < 12))
+            {
+            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_MINIMIZE;
+            gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
+            return;
+            }
+        else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 12 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 12)
+            && AnyOtherAlive(gActiveBattler) == TRUE)
             {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
             gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
             gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_NONE;
             gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
             return;
-        }
+            }
         else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 10 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 10)
-        && abyssalHighDragonFieldSetChance >= 129
-        && AnyOtherAlive(gActiveBattler) == TRUE)
+            && abyssalHighDragonRoarChance >= 129
+            && AnyOtherAlive(gActiveBattler) == TRUE)
             {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
             gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
@@ -4020,7 +4063,7 @@ static void SetOpponentMovesAbyssalHighDragon(void)
             return;
         }
         else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 8 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 8)
-        && abyssalHighDragonFieldSetChance >= 218
+        && abyssalHighDragonRoarChance >= 218
         && AnyOtherAlive(gActiveBattler) == TRUE)
             {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
@@ -4030,7 +4073,7 @@ static void SetOpponentMovesAbyssalHighDragon(void)
             return;
             }
         else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE)
-        && abyssalHighDragonFieldSetChance >= 82
+        && abyssalHighDragonRoarChance >= 45
         && AnyOtherAlive(gActiveBattler) == TRUE)
             {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
@@ -4048,7 +4091,7 @@ static void SetOpponentMovesAbyssalHighDragon(void)
             return;
         }
         else if(!(gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE)
-            && abyssalHighDragonFieldSetChance >= 193)
+            && abyssalHighDragonFieldSetChance >= 129)
         {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_DRAGON_RAVINE;
             gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_DRAGON_RAVINE;

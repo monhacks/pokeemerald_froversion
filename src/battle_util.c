@@ -2269,7 +2269,7 @@ u8 DoFieldEndTurnEffects(void)
                     Printf("AnyDragonFainted = %d", AnyDragonFainted(gActiveBattler));
                     if(AnyDragonFainted(gActiveBattler)
                     && gActiveBattler == 0
-                    && gBattleResults.battleTurnCounter % 1 == 0)
+                    && gBattleResults.battleTurnCounter % 2 == 0)
                         {
                             gBattleStruct->chooseReviveMon = TRUE;
                             gBattlerAttacker = gActiveBattler;
@@ -2281,7 +2281,7 @@ u8 DoFieldEndTurnEffects(void)
                         }
                     else if(AnyDragonFainted(gActiveBattler)
                     && gActiveBattler == 1
-                    && gBattleResults.battleTurnCounter % 1 == 0)
+                    && gBattleResults.battleTurnCounter % 2 == 0)
                         {
                             gBattleStruct->chooseReviveMon = TRUE;
                             gBattlerTarget = gActiveBattler;

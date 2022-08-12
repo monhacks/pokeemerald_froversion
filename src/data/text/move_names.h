@@ -766,4 +766,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_OHKO_SIDE] = _("TwistOfFate"),
     [MOVE_TURF_BLAST] = _("Turf Blast"),
     [MOVE_DRAGON_RAVINE] = _("DragonRavine"),
+    [MOVE_SOARING_DRAGON] = _("SoaringDragn"),
 };

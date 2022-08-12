@@ -9835,10 +9835,18 @@ static void Cmd_normalisebuffs(void) // haze
 
     for (i = 0; i < gBattlersCount; i++)
     {
-        gDisableStructs[i].stockpileDef = 0;
-        gDisableStructs[i].stockpileSpDef = 0;
-        for (j = 0; j < NUM_BATTLE_STATS; j++)
+        if(gBattleMons[gBattlerAttacker].ability == ABILITY_ABYSSAL)
+        {
+            for (j = 0; j < NUM_BATTLE_STATS; j++)
+            gBattleMons[gBattlerAttacker].statStages[j] = DEFAULT_STAT_STAGE;
+        }
+        else
+        {
+            gDisableStructs[i].stockpileDef = 0;
+            gDisableStructs[i].stockpileSpDef = 0;
+            for (j = 0; j < NUM_BATTLE_STATS; j++)
             gBattleMons[i].statStages[j] = DEFAULT_STAT_STAGE;
+        }
     }
 
     gBattlescriptCurrInstr++;

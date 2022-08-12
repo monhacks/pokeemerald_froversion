@@ -786,6 +786,7 @@ gBattleAnims_Moves::
 	.4byte Move_OHKO_SIDE
 	.4byte Move_TURF_BLAST
 	.4byte Move_DRAGON_RAVINE
+	.4byte Move_SOARING_DRAGON
 	.4byte Move_COUNT @ cannot be reached, because last move is Eerie Spell
 
 	.align 2
@@ -20090,7 +20091,40 @@ FlyUnleash:
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
+	createvisualtask AnimTask_BlendColorCycle, 2, 4, 2, 2, 0, 12, RGB_WHITE
+	delay 10
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 15, 1
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+	blendoff
 	goto FlyEnd
+
+Move_SOARING_DRAGON:
+	loadspritegfx ANIM_TAG_ROUND_SHADOW
+	loadspritegfx ANIM_TAG_IMPACT
+	choosetwoturnanim SoaringDragonSetUp, SoaringDragonUnleash
+SoaringDragonEnd:
+	waitforvisualfinish
+	end
+
+SoaringDragonSetUp:
+	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_ATTACKER
+	createsprite gFlyBallUpSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 13, 336
+	goto SoaringDragonEnd
+
+SoaringDragonUnleash:
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
+	createsprite gFlyBallAttackSpriteTemplate, ANIM_ATTACKER, 2, 20, FALSE
+	delay 20
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 0
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 6, 0, 8, 1
+	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	goto SoaringDragonEnd
 
 Move_BOUNCE:
 	loadspritegfx ANIM_TAG_ROUND_SHADOW
