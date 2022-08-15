@@ -3987,13 +3987,20 @@ static void SetOpponentMovesAbyssalHighDragon(void)
     u8 abyssalHighDragonFieldSetChance = Random() % 256;
     u8 abyssalHighDragonPosition;
     u8 abyssalHighDragonRoarChance = Random() % 256;
-    u8 abyssalHighDragonDragonHazeChance = Random() % 256;
+    u8 abyssalHighDragonSoaringDragonChance = Random() % 256;
+    u8 abyssalHighDragonSoaringDragonThreshold;
     u8 abyssalHighDragonAccuracy;
     u8 abyssalHighDragonEvasion;
+    u8 abyssalHighDragonAttack;
+    u8 abyssalHighDragonDefense;
+    u8 abyssalHighDragonSpeed;
+    u8 abyssalHighDragonSpecialAttack;
+    u8 abyssalHighDragonSpecialDefense;
     bool32 hasBigDrops = FALSE;
     bool32 hasBigBoosts = FALSE;
     bool32 hasSmallAccuracyDrop = FALSE;
     bool32 hasBigAccuracyDrop = FALSE;
+    u8 abyssalDragonStatTotal;
     
     if(gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
             abyssalHighDragonPosition = B_POSITION_OPPONENT_LEFT;
@@ -4016,13 +4023,36 @@ static void SetOpponentMovesAbyssalHighDragon(void)
         if (gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC] < 5)
                 hasBigAccuracyDrop = TRUE;
         
+        
         abyssalHighDragonAccuracy = gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC];
-        Printf("gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC]; = %d", gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC]);
         abyssalHighDragonEvasion = gBattleMons[abyssalHighDragonPosition].statStages[STAT_EVASION];
-        Printf("gBattleMons[abyssalHighDragonPosition].statStages[EVASION]; = %d", gBattleMons[abyssalHighDragonPosition].statStages[STAT_EVASION]);
+        abyssalHighDragonAttack = gBattleMons[abyssalHighDragonPosition].statStages[STAT_ATK];
+        abyssalHighDragonDefense = gBattleMons[abyssalHighDragonPosition].statStages[STAT_DEF];
+        abyssalHighDragonSpecialAttack = gBattleMons[abyssalHighDragonPosition].statStages[STAT_SPATK];
+        abyssalHighDragonSpecialDefense = gBattleMons[abyssalHighDragonPosition].statStages[STAT_SPDEF];
+        abyssalHighDragonSpeed = gBattleMons[abyssalHighDragonPosition].statStages[STAT_SPEED];
+
+        abyssalDragonStatTotal = (abyssalHighDragonAccuracy
+                                 + abyssalHighDragonEvasion 
+                                 + abyssalHighDragonAttack
+                                 + abyssalHighDragonDefense
+                                 + abyssalHighDragonSpecialAttack
+                                 + abyssalHighDragonSpecialDefense
+                                 + abyssalHighDragonSpeed);
+
+        if(abyssalDragonStatTotal >= 42) // Boosts and Drops are equal
+            abyssalHighDragonSoaringDragonThreshold = 0; //will not use
+        else if(abyssalDragonStatTotal >= 40) // -2 
+            abyssalHighDragonSoaringDragonThreshold = 64; //25% chance to use 
+        else if(abyssalDragonStatTotal >= 38) // -4
+            abyssalHighDragonSoaringDragonThreshold = 128; //50% chance to use
+        else if(abyssalDragonStatTotal >= 36) //-6
+            abyssalHighDragonSoaringDragonThreshold = 192; // 75% chance to use
+        else if(abyssalDragonStatTotal < 36) // more than 6 drops
+            abyssalHighDragonSoaringDragonThreshold = 255; // 100%
 
         //Setting moves starts here
-        if (hasBigDrops && !hasBigBoosts && abyssalHighDragonDragonHazeChance > 127)
+        if (abyssalHighDragonSoaringDragonChance <= abyssalHighDragonSoaringDragonThreshold)
             {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_NONE;
             gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
@@ -4030,12 +4060,7 @@ static void SetOpponentMovesAbyssalHighDragon(void)
             gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
             return;
             }
-        else if((abyssalHighDragonAccuracy <= 5 && abyssalHighDragonEvasion < 7)
-            || (abyssalHighDragonAccuracy <= 4 && abyssalHighDragonEvasion < 8)
-            || (abyssalHighDragonAccuracy <= 3 && abyssalHighDragonEvasion < 9)
-            || (abyssalHighDragonAccuracy <= 2 && abyssalHighDragonEvasion < 10)
-            || (abyssalHighDragonAccuracy <= 1 && abyssalHighDragonEvasion < 11)
-            || (abyssalHighDragonAccuracy <= 0 && abyssalHighDragonEvasion < 12))
+        else if((abyssalHighDragonAccuracy + abyssalHighDragonEvasion) < 12)
             {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_NONE;
             gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_MINIMIZE;

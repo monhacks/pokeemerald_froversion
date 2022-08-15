@@ -20100,31 +20100,7 @@ FlyUnleash:
 	goto FlyEnd
 
 Move_SOARING_DRAGON:
-	loadspritegfx ANIM_TAG_ROUND_SHADOW
-	loadspritegfx ANIM_TAG_IMPACT
-	choosetwoturnanim SoaringDragonSetUp, SoaringDragonUnleash
-SoaringDragonEnd:
-	waitforvisualfinish
-	end
-
-SoaringDragonSetUp:
-	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_ATTACKER
-	createsprite gFlyBallUpSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 13, 336
-	goto SoaringDragonEnd
-
-SoaringDragonUnleash:
-	monbg ANIM_DEF_PARTNER
-	setalpha 12, 8
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_ATTACKER
-	createsprite gFlyBallAttackSpriteTemplate, ANIM_ATTACKER, 2, 20, FALSE
-	delay 20
-	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 0
-	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 6, 0, 8, 1
-	playsewithpan SE_M_RAZOR_WIND, SOUND_PAN_TARGET
-	waitforvisualfinish
-	clearmonbg ANIM_DEF_PARTNER
-	blendoff
-	goto SoaringDragonEnd
+	goto Move_FLY
 
 Move_BOUNCE:
 	loadspritegfx ANIM_TAG_ROUND_SHADOW
