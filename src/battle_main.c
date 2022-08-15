@@ -3795,6 +3795,7 @@ const u16 gAbyssalHighDragonHinderStatusMoves[] =
         MOVE_SAND_ATTACK,
         MOVE_SCARY_FACE,
         MOVE_LEER,
+        MOVE_FAKE_TEARS,
         0xFFFF
     };
 
@@ -3996,10 +3997,6 @@ static void SetOpponentMovesAbyssalHighDragon(void)
     u8 abyssalHighDragonSpeed;
     u8 abyssalHighDragonSpecialAttack;
     u8 abyssalHighDragonSpecialDefense;
-    bool32 hasBigDrops = FALSE;
-    bool32 hasBigBoosts = FALSE;
-    bool32 hasSmallAccuracyDrop = FALSE;
-    bool32 hasBigAccuracyDrop = FALSE;
     u8 abyssalDragonStatTotal;
     
     if(gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
@@ -4014,16 +4011,6 @@ static void SetOpponentMovesAbyssalHighDragon(void)
     
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {
-        if (gBattleMons[abyssalHighDragonPosition].statStages[i] < 5)
-                hasBigDrops = TRUE;
-        if (gBattleMons[abyssalHighDragonPosition].statStages[i] >= 9)
-                hasBigBoosts = TRUE;
-        if (gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC] < DEFAULT_STAT_STAGE)
-                hasSmallAccuracyDrop = TRUE;
-        if (gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC] < 5)
-                hasBigAccuracyDrop = TRUE;
-        
-        
         abyssalHighDragonAccuracy = gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC];
         abyssalHighDragonEvasion = gBattleMons[abyssalHighDragonPosition].statStages[STAT_EVASION];
         abyssalHighDragonAttack = gBattleMons[abyssalHighDragonPosition].statStages[STAT_ATK];
@@ -4127,7 +4114,7 @@ static void SetOpponentMovesAbyssalHighDragon(void)
         else
         {
             gBattleMons[abyssalHighDragonPosition].moves[0] = gAbyssalHighDragonPhysicalAttackMoves[Random() % 4];
-            gBattleMons[abyssalHighDragonPosition].moves[1] = gAbyssalHighDragonHinderStatusMoves[Random() % 4];
+            gBattleMons[abyssalHighDragonPosition].moves[1] = gAbyssalHighDragonHinderStatusMoves[Random() % 5];
             gBattleMons[abyssalHighDragonPosition].moves[2] = gAbyssalHighDragonSpecialAttackMoves[Random() % 4];
             gBattleMons[abyssalHighDragonPosition].moves[3] = gAbyssalHighDragonBoostStatusMoves[Random() % 2];
         }

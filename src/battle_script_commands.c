@@ -7330,7 +7330,7 @@ static void HandleTerrainMove(u32 moveEffect)
         break;
     case EFFECT_DRAGON_RAVINE:
         statusFlag = STATUS_FIELD_DRAGON_RAVINE, timer = &gFieldTimers.dragonRavineTimer;
-        gBattleCommunication[MULTISTRING_CHOOSER] = 5;
+        gBattleCommunication[MULTISTRING_CHOOSER] = 6;
         break;
     }
 
