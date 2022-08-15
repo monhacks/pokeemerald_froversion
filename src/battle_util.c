@@ -2257,7 +2257,7 @@ u8 DoFieldEndTurnEffects(void)
             break;
         case ENDTURN_DRAGON_RAVINE_REVIVE:
             //Printf("TurnSideTracker (outofloop) = %d", gBattleStruct->turnSideTracker);
-            Printf("gFieldTimers.gFieldTimers.dragonRavineTimer % 2 = %d", gFieldTimers.gFieldTimers.dragonRavineTimer % 2);
+            Printf("gFieldTimers.dragonRavineTimer % 2 = %d", gFieldTimers.dragonRavineTimer % 2);
             if (gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE
                 && gBattleStruct->turnSideTracker < 2)
                 {

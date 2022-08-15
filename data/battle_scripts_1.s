@@ -2325,7 +2325,7 @@ BattleScript_MoveEnd::
 
 BattleScript_EffectSoaringDragonClearStats:
 	normalisebuffs
-	printstring STRINGID_STATCHANGESGONE
+	printstring STRINGID_SOARINGDRAGONSTATRESET
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 
