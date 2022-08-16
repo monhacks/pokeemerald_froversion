@@ -14911,11 +14911,11 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
     .species = SPECIES_ABYSSALDRAGONTHIRDEVO,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_BULLDOZE, MOVE_GROWL, MOVE_LEER, MOVE_NONE},
-    .evs = {0, 120, 0, 0, 120, 0},
+    .evs = {0, 180, 0, 0, 180, 0},
     .stats = 
         {
-        .statHP = 3300,
-        .statMaxHP = 3300,
+        .statHP = 3000,
+        .statMaxHP = 3000,
         },
     },
     {
