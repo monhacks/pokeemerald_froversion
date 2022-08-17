@@ -3984,21 +3984,20 @@ static void SetOpponentMovesBlaziken(void)
 
 static void SetOpponentMovesAbyssalHighDragon(void)
 {
-    u8 i;
+    s32 i;
     u8 abyssalHighDragonFieldSetChance = Random() % 256;
     u8 abyssalHighDragonPosition;
     u8 abyssalHighDragonRoarChance = Random() % 256;
+    u8 abyssalHighDragonRoarThreshold;
     u8 abyssalHighDragonSoaringDragonChance = Random() % 256;
     u8 abyssalHighDragonSoaringDragonThreshold;
-    u8 abyssalHighDragonAccuracy;
-    u8 abyssalHighDragonEvasion;
-    u8 abyssalHighDragonAttack;
-    u8 abyssalHighDragonDefense;
-    u8 abyssalHighDragonSpeed;
-    u8 abyssalHighDragonSpecialAttack;
-    u8 abyssalHighDragonSpecialDefense;
-    u8 abyssalDragonStatTotal;
+    s32 abyssalHighDragonAccuracy = 0;
+    s32 abyssalHighDragonEvasion = 0;
+    s32 abyssalHighDragonStatTotal = 0;
+    s32 playerLeftStatTotal = 0;
+    s32 playerRightStatTotal = 0;
     u8 abyssalDragonUseMinimize = FALSE;
+    s32 j;
     
     if(gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
             abyssalHighDragonPosition = B_POSITION_OPPONENT_LEFT;
@@ -4009,33 +4008,42 @@ static void SetOpponentMovesAbyssalHighDragon(void)
         gActiveBattler = GetBattlerAtPosition(B_POSITION_PLAYER_LEFT);
     else
         gActiveBattler = GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT);
+
+    
+    abyssalHighDragonEvasion = gBattleMons[abyssalHighDragonPosition].statStages[STAT_EVASION] - DEFAULT_STAT_STAGE;
+    abyssalHighDragonAccuracy = gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC] - DEFAULT_STAT_STAGE;
+    if((abyssalHighDragonAccuracy + abyssalHighDragonEvasion) < 0) //Checks to see if Accuracy stat + Evasion stat is lower than default when combined.
+            abyssalDragonUseMinimize = TRUE;  
+
+    for (j = 0; j < NUM_BATTLE_STATS; j++)
+        {
+            abyssalHighDragonStatTotal += gBattleMons[abyssalHighDragonPosition].statStages[j] - DEFAULT_STAT_STAGE;
+            playerLeftStatTotal += gBattleMons[B_POSITION_PLAYER_LEFT].statStages[j] - DEFAULT_STAT_STAGE;
+            playerRightStatTotal += gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[j] - DEFAULT_STAT_STAGE;
+        }
+
+    
+    if(abyssalHighDragonStatTotal > 0)
+        abyssalHighDragonStatTotal = 0;
+    if(playerLeftStatTotal < 0)
+        playerLeftStatTotal = 0;
+    if(playerRightStatTotal < 0)
+        playerRightStatTotal = 0;
+
+    if(abyssalHighDragonStatTotal <= -8)
+        abyssalHighDragonSoaringDragonThreshold = 255;
+    else
+        abyssalHighDragonSoaringDragonThreshold = ((abyssalHighDragonStatTotal) * -32);
+    
+    if(playerLeftStatTotal >= 8 || playerRightStatTotal >= 8)
+        abyssalHighDragonRoarThreshold = 255;
+    else if(playerLeftStatTotal > playerRightStatTotal)
+        abyssalHighDragonRoarThreshold = ((playerLeftStatTotal) * 32);
+    else
+        abyssalHighDragonRoarThreshold = ((playerRightStatTotal) * 32);
     
     for (i = 0; i < NUM_BATTLE_STATS; i++)
-    {
-        abyssalHighDragonAccuracy = gBattleMons[abyssalHighDragonPosition].statStages[STAT_ACC];
-        abyssalHighDragonEvasion = gBattleMons[abyssalHighDragonPosition].statStages[STAT_EVASION];
-        abyssalHighDragonAttack = gBattleMons[abyssalHighDragonPosition].statStages[STAT_ATK];
-        abyssalHighDragonDefense = gBattleMons[abyssalHighDragonPosition].statStages[STAT_DEF];
-        abyssalHighDragonSpecialAttack = gBattleMons[abyssalHighDragonPosition].statStages[STAT_SPATK];
-        abyssalHighDragonSpecialDefense = gBattleMons[abyssalHighDragonPosition].statStages[STAT_SPDEF];
-        abyssalHighDragonSpeed = gBattleMons[abyssalHighDragonPosition].statStages[STAT_SPEED];
-
-        abyssalDragonStatTotal = (abyssalHighDragonAccuracy
-                                 + abyssalHighDragonEvasion 
-                                 + abyssalHighDragonAttack
-                                 + abyssalHighDragonDefense
-                                 + abyssalHighDragonSpecialAttack
-                                 + abyssalHighDragonSpecialDefense
-                                 + abyssalHighDragonSpeed);
-
-        if(abyssalDragonStatTotal <= 34)
-            abyssalHighDragonSoaringDragonThreshold = 255;
-        else
-            abyssalHighDragonSoaringDragonThreshold = ((abyssalDragonStatTotal - 42) * -32);
-        
-        if((abyssalHighDragonAccuracy + abyssalHighDragonEvasion) < 12) //Checks to see if Accuracy stat + Evasion stat is lower than default when combined.
-            abyssalDragonUseMinimize = TRUE;          
-
+    {        
         //Setting moves starts here
         if (abyssalHighDragonSoaringDragonChance <= abyssalHighDragonSoaringDragonThreshold)
             {
@@ -4053,28 +4061,8 @@ static void SetOpponentMovesAbyssalHighDragon(void)
             gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
             return;
             }
-        else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 12 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 12)
+        else if((abyssalHighDragonRoarChance <= abyssalHighDragonRoarThreshold)
             && AnyOtherAlive(gActiveBattler) == TRUE)
-            {
-            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
-            gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
-            gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_NONE;
-            gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
-            return;
-            }
-        else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 10 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 10)
-            && abyssalHighDragonRoarChance >= 129
-            && AnyOtherAlive(gActiveBattler) == TRUE)
-            {
-            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
-            gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
-            gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_NONE;
-            gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
-            return;
-        }
-        else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 8 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 8)
-        && abyssalHighDragonRoarChance >= 218
-        && AnyOtherAlive(gActiveBattler) == TRUE)
             {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
             gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
@@ -4083,7 +4071,6 @@ static void SetOpponentMovesAbyssalHighDragon(void)
             return;
             }
         else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE)
-        && abyssalHighDragonRoarChance >= 45
         && AnyOtherAlive(gActiveBattler) == TRUE)
             {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
