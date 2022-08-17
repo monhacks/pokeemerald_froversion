@@ -27,6 +27,7 @@ enum
     TD_BUTTONMODE,
     TD_FRAMETYPE,
     TD_AUTORUN,
+    TD_DIFFICULTY,
 };
 
 // Menu items
@@ -38,6 +39,7 @@ enum
     MENUITEM_BUTTONMODE,
     MENUITEM_FRAMETYPE,
     MENUITEM_AUTORUN,
+    MENUITEM_DIFFICULTY,
     MENUITEM_CANCEL,
     MENUITEM_COUNT,
 };
@@ -56,6 +58,7 @@ enum
 #define YPOS_BUTTONMODE   (MENUITEM_BUTTONMODE * 16)
 #define YPOS_FRAMETYPE    (MENUITEM_FRAMETYPE * 16)
 #define YPOS_AUTORUN      (MENUITEM_AUTORUN * 16)
+#define YPOS_DIFFICULTY   (MENUITEM_DIFFICULTY * 16)
 
 // this file's functions
 static void Task_OptionMenuFadeIn(u8 taskId);
@@ -77,6 +80,8 @@ static void DrawTextOption(void);
 static void DrawOptionMenuTexts(void);
 static u8   Autorun_ProcessInput(u8 selection);
 static void Autorun_DrawChoices(u8 selection);
+static void Difficulty_DrawChoices(u8 selection);
+static u8 Difficulty_ProcessInput(u8 selection);
 static void sub_80BB154(void);
 
 EWRAM_DATA static bool8 sArrowPressed = FALSE;
@@ -93,6 +98,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_BUTTONMODE]  = gText_ButtonMode,
     [MENUITEM_FRAMETYPE]   = gText_Frame,
     [MENUITEM_AUTORUN]     = gText_Autorun,
+    [MENUITEM_DIFFICULTY]  = gText_Difficulty,
     [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
 };
 
@@ -244,6 +250,7 @@ void CB2_InitOptionMenu(void)
         gTasks[taskId].data[TD_BUTTONMODE] = gSaveBlock2Ptr->optionsButtonMode;
         gTasks[taskId].data[TD_FRAMETYPE] = gSaveBlock2Ptr->optionsWindowFrameType;
         gTasks[taskId].data[TD_AUTORUN] = gSaveBlock2Ptr->optionsWindowAutoRun;
+        gTasks[taskId].data[TD_DIFFICULTY] = gSaveBlock2Ptr->optionsWindowDifficulty;
 
         TextSpeed_DrawChoices(gTasks[taskId].data[TD_TEXTSPEED]);
         BattleScene_DrawChoices(gTasks[taskId].data[TD_BATTLESCENE]);
@@ -252,6 +259,7 @@ void CB2_InitOptionMenu(void)
         FrameType_DrawChoices(gTasks[taskId].data[TD_FRAMETYPE]);
         HighlightOptionMenuItem(gTasks[taskId].data[TD_MENUSELECTION]);
         Autorun_DrawChoices(gTasks[taskId].data[TD_AUTORUN]);
+        Difficulty_DrawChoices(gTasks[taskId].data[TD_DIFFICULTY]);
 
         CopyWindowToVram(WIN_OPTIONS, 3);
         gMain.state++;
@@ -346,6 +354,13 @@ static void Task_OptionMenuProcessInput(u8 taskId)
             if (previousOption != gTasks[taskId].data[TD_AUTORUN])
                 Autorun_DrawChoices(gTasks[taskId].data[TD_AUTORUN]);
             break;
+        case MENUITEM_DIFFICULTY:
+            previousOption = gTasks[taskId].data[TD_DIFFICULTY];
+            gTasks[taskId].data[TD_DIFFICULTY] = Difficulty_ProcessInput(gTasks[taskId].data[TD_DIFFICULTY]);
+
+            if (previousOption != gTasks[taskId].data[TD_DIFFICULTY])
+                Difficulty_DrawChoices(gTasks[taskId].data[TD_DIFFICULTY]);
+            break;
         default:
             return;
         }
@@ -366,6 +381,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsButtonMode = gTasks[taskId].data[TD_BUTTONMODE];
     gSaveBlock2Ptr->optionsWindowFrameType = gTasks[taskId].data[TD_FRAMETYPE];
     gSaveBlock2Ptr->optionsWindowAutoRun = gTasks[taskId].data[TD_AUTORUN];
+    gSaveBlock2Ptr->optionsWindowDifficulty = gTasks[taskId].data[TD_DIFFICULTY];
 
     BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
     gTasks[taskId].func = Task_OptionMenuFadeOut;
@@ -647,6 +663,52 @@ static void Autorun_DrawChoices(u8 selection)
 
     DrawOptionMenuChoice(gText_AutorunOn, 104, YPOS_AUTORUN, styles[0]);
     DrawOptionMenuChoice(gText_AutorunOff, GetStringRightAlignXOffset(1, gText_AutorunOff, 198), YPOS_AUTORUN, styles[1]);
+}
+
+static u8 Difficulty_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_RIGHT))
+    {
+        if (selection <= 1)
+            selection++;
+        else
+            selection = 0;
+
+        sArrowPressed = TRUE;
+    }
+    if (JOY_NEW(DPAD_LEFT))
+    {
+        if (selection != 0)
+            selection--;
+        else
+            selection = 2;
+
+        sArrowPressed = TRUE;
+    }
+    return selection;
+}
+
+static void Difficulty_DrawChoices(u8 selection)
+{
+    u8 styles[3];
+    s32 widthSlow, widthMid, widthFast, xMid;
+
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[2] = 0;
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(gText_TextSpeedSlow, 104, YPOS_DIFFICULTY, styles[0]);
+
+    widthSlow = GetStringWidth(1, gText_TextSpeedSlow, 0);
+    widthMid = GetStringWidth(1, gText_TextSpeedMid, 0);
+    widthFast = GetStringWidth(1, gText_TextSpeedFast, 0);
+
+    widthMid -= 94;
+    xMid = (widthSlow - widthMid - widthFast) / 2 + 104;
+    DrawOptionMenuChoice(gText_TextSpeedMid, xMid, YPOS_DIFFICULTY, styles[1]);
+
+    DrawOptionMenuChoice(gText_TextSpeedFast, GetStringRightAlignXOffset(1, gText_TextSpeedFast, 198), YPOS_DIFFICULTY, styles[2]);
 }
 
 static void sub_80BB154(void)
