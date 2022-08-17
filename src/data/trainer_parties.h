@@ -14916,6 +14916,10 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
         {
         .statHP = 3000,
         .statMaxHP = 3000,
+        .movePP1 = 255,
+        .movePP2 = 255,        
+        .movePP3 = 255,
+        .movePP4 = 255,
         },
     },
     {
