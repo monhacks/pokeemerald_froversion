@@ -40,7 +40,7 @@ enum
     MENUITEM_FRAMETYPE,
     MENUITEM_AUTORUN,
     MENUITEM_DIFFICULTY,
-    MENUITEM_CANCEL,
+//    MENUITEM_CANCEL,
     MENUITEM_COUNT,
 };
 
@@ -99,7 +99,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_FRAMETYPE]   = gText_Frame,
     [MENUITEM_AUTORUN]     = gText_Autorun,
     [MENUITEM_DIFFICULTY]  = gText_Difficulty,
-    [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
+//    [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
 };
 
 static const struct WindowTemplate sOptionMenuWinTemplates[] =
@@ -281,12 +281,12 @@ static void Task_OptionMenuFadeIn(u8 taskId)
 
 static void Task_OptionMenuProcessInput(u8 taskId)
 {
-    if (JOY_NEW(A_BUTTON))
-    {
-        if (gTasks[taskId].data[TD_MENUSELECTION] == MENUITEM_CANCEL)
-            gTasks[taskId].func = Task_OptionMenuSave;
-    }
-    else if (JOY_NEW(B_BUTTON))
+    // if (JOY_NEW(A_BUTTON))
+    // {
+    //     if (gTasks[taskId].data[TD_MENUSELECTION] == MENUITEM_CANCEL)
+    //         gTasks[taskId].func = Task_OptionMenuSave;
+    // }
+    if (JOY_NEW(B_BUTTON))
     {
         gTasks[taskId].func = Task_OptionMenuSave;
     }
@@ -295,12 +295,12 @@ static void Task_OptionMenuProcessInput(u8 taskId)
         if (gTasks[taskId].data[TD_MENUSELECTION] > 0)
             gTasks[taskId].data[TD_MENUSELECTION]--;
         else
-            gTasks[taskId].data[TD_MENUSELECTION] = MENUITEM_CANCEL;
+            gTasks[taskId].data[TD_MENUSELECTION] = MENUITEM_DIFFICULTY;
         HighlightOptionMenuItem(gTasks[taskId].data[TD_MENUSELECTION]);
     }
     else if (JOY_NEW(DPAD_DOWN))
     {
-        if (gTasks[taskId].data[TD_MENUSELECTION] < MENUITEM_CANCEL)
+        if (gTasks[taskId].data[TD_MENUSELECTION] < MENUITEM_DIFFICULTY)
             gTasks[taskId].data[TD_MENUSELECTION]++;
         else
             gTasks[taskId].data[TD_MENUSELECTION] = 0;
@@ -691,24 +691,24 @@ static u8 Difficulty_ProcessInput(u8 selection)
 static void Difficulty_DrawChoices(u8 selection)
 {
     u8 styles[3];
-    s32 widthSlow, widthMid, widthFast, xMid;
+    s32 widthEasy, widthNormal, widthHard, xMid;
 
     styles[0] = 0;
     styles[1] = 0;
     styles[2] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_TextSpeedSlow, 104, YPOS_DIFFICULTY, styles[0]);
+    DrawOptionMenuChoice(gText_TextSpeedEasy, 104, YPOS_DIFFICULTY, styles[0]);
 
-    widthSlow = GetStringWidth(1, gText_TextSpeedSlow, 0);
-    widthMid = GetStringWidth(1, gText_TextSpeedMid, 0);
-    widthFast = GetStringWidth(1, gText_TextSpeedFast, 0);
+    widthEasy = GetStringWidth(1, gText_TextSpeedEasy, 0);
+    widthNormal = GetStringWidth(1, gText_TextSpeedNormal, 0);
+    widthHard = GetStringWidth(1, gText_TextSpeedHard, 0);
 
-    widthMid -= 94;
-    xMid = (widthSlow - widthMid - widthFast) / 2 + 104;
-    DrawOptionMenuChoice(gText_TextSpeedMid, xMid, YPOS_DIFFICULTY, styles[1]);
+    widthNormal -= 94;
+    xMid = (widthEasy - widthNormal - widthHard) / 2 + 104;
+    DrawOptionMenuChoice(gText_TextSpeedNormal, xMid, YPOS_DIFFICULTY, styles[1]);
 
-    DrawOptionMenuChoice(gText_TextSpeedFast, GetStringRightAlignXOffset(1, gText_TextSpeedFast, 198), YPOS_DIFFICULTY, styles[2]);
+    DrawOptionMenuChoice(gText_TextSpeedHard, GetStringRightAlignXOffset(1, gText_TextSpeedHard, 198), YPOS_DIFFICULTY, styles[2]);
 }
 
 static void sub_80BB154(void)

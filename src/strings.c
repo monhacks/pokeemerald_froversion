@@ -1585,6 +1585,9 @@ const u8 gText_Autorun[] = _("Auto Run");
 const u8 gText_AutorunOn[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}On");
 const u8 gText_AutorunOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Off");
 const u8 gText_Difficulty[] = _("Difficulty");
+const u8 gText_TextSpeedEasy[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Easy");
+const u8 gText_TextSpeedNormal[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Normal");
+const u8 gText_TextSpeedHard[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Hard");
 
 // Easy chat group names
 const u8 gEasyChatGroupName_Pokemon[] = _("Pokémon");

@@ -321,6 +321,9 @@ extern const u8 gText_Autorun[];
 extern const u8 gText_AutorunOff[];
 extern const u8 gText_AutorunOn[];
 extern const u8 gText_Difficulty[];
+extern const u8 gText_TextSpeedEasy[];
+extern const u8 gText_TextSpeedNormal[];
+extern const u8 gText_TextSpeedHard[];
 
 
 extern const u8 gText_MaleSymbol[];
