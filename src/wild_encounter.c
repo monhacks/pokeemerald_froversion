@@ -235,10 +235,15 @@ static u8 ChooseWildMonIndex_Fishing(u8 rod)
 
 static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon)
 {
+    s32 i;
     u8 min;
     u8 max;
     u8 range;
     u8 rand;
+    u16 dynamicLevel = 0;
+    static const u8 minDynamicLevel = 3;
+    static const u8 maxDynamicLevel = 98;
+    u8 levelDifference = Random() % 2;
 
     // Make sure minimum level is less than maximum level
     if (wildPokemon->maxLevel >= wildPokemon->minLevel)
@@ -268,7 +273,26 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon)
         }
     }
 
+    for(i = 0; i < PARTY_SIZE; i++)
+        {
+            if(GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)
+                {
+                    if( i != 0) dynamicLevel /= i;
+                    break;
+                }
+            dynamicLevel += GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+        }
+    if(i == PARTY_SIZE)
+        dynamicLevel /=i;
+    if(dynamicLevel < minDynamicLevel)
+        dynamicLevel = minDynamicLevel;
+    if(dynamicLevel > maxDynamicLevel)
+        dynamicLevel = maxDynamicLevel;
+
+    if((min + rand) > dynamicLevel)
     return min + rand;
+    else
+    return (dynamicLevel - 10) + Random () % 5;
 }
 
 static u16 GetCurrentMapWildMonHeaderId(void)

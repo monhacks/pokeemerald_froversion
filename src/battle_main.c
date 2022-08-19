@@ -1848,6 +1848,27 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     u8 fixedIV;
     s32 i, j;
     u8 monsCount;
+    u16 dynamicLevel = 0;
+    static const u8 minDynamicLevel = 3;
+    static const u8 maxDynamicLevel = 98;
+    u8 levelDifference = Random() % 2;
+
+    for(i = 0; i < PARTY_SIZE; i++)
+        {
+            if(GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)
+                {
+                    if( i != 0) dynamicLevel /= i;
+                    break;
+                }
+            dynamicLevel += GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+        }
+    if(i == PARTY_SIZE)
+        dynamicLevel /=i;
+    if(dynamicLevel < minDynamicLevel)
+        dynamicLevel = minDynamicLevel;
+    if(dynamicLevel > maxDynamicLevel)
+        dynamicLevel = maxDynamicLevel;
+
 
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
@@ -1895,7 +1916,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
-                CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                if(partyData[i].lvl > dynamicLevel)
+                    CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                else   
+                    CreateMon(&party[i], partyData[i].species, (dynamicLevel - Random() % 3), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNum);
                 break;
             }
@@ -1908,7 +1932,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
-                CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                if(partyData[i].lvl > dynamicLevel)
+                    CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                else   
+                    CreateMon(&party[i], partyData[i].species, (dynamicLevel - Random() % 3), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNum);
 
                 for (j = 0; j < MAX_MON_MOVES; j++)
@@ -1927,7 +1954,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
-                CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                if(partyData[i].lvl > dynamicLevel)
+                    CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                else   
+                    CreateMon(&party[i], partyData[i].species, (dynamicLevel - Random() % 3), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNum);
 
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
@@ -1942,7 +1972,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
-                CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                if(partyData[i].lvl > dynamicLevel)
+                    CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                else   
+                    CreateMon(&party[i], partyData[i].species, (dynamicLevel - Random() % 3), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNum);
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
 
