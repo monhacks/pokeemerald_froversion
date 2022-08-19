@@ -585,6 +585,13 @@ AI_CBM_DreamEater: @ 82DC330
 
 AI_CBM_BellyDrum: @ 82DC341
 	if_hp_less_than AI_USER, 51, Score_Minus10
+	if_ability AI_USER, ABILITY_UNBURDEN, AI_CBM_BellyDrum2
+AI_CBM_BellyDrum2:
+	if_stat_level_equal AI_USER, STAT_ATK, 12, Score_Minus10
+	if_has_move_with_effect AI_USER, EFFECT_BATON_PASS, AI_Ret
+	if_has_no_physical_move AI_USER, Score_Minus10
+	score +10
+	end
 
 AI_CBM_AttackUp: @ 82DC348
 	if_stat_level_equal AI_USER, STAT_ATK, 12, Score_Minus10
@@ -2955,10 +2962,16 @@ AI_CV_SunnyDay_End:
 
 AI_CV_BellyDrum:
 	if_hp_less_than AI_USER, 90, AI_CV_BellyDrum_ScoreDown2
+	if_ability AI_USER, ABILITY_UNBURDEN, AI_CV_BellyDrum_ScoreUp5
 	goto AI_CV_BellyDrum_End
 
 AI_CV_BellyDrum_ScoreDown2:
 	score -2
+	if_ability AI_USER, ABILITY_UNBURDEN, AI_CV_BellyDrum_ScoreUp5
+	goto AI_CV_BellyDrum_End
+
+AI_CV_BellyDrum_ScoreUp5:
+	score +5
 
 AI_CV_BellyDrum_End:
 	end

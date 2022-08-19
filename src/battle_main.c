@@ -3782,7 +3782,7 @@ const u16 gAbyssalHighDragonPhysicalAttackMoves[] =
 
 const u16 gAbyssalHighDragonSpecialAttackMoves[] =
     {
-        MOVE_FLAMETHROWER,
+        MOVE_LAVA_PLUME,
         MOVE_DRAGON_BREATH,
         MOVE_MUD_BOMB,
         MOVE_DARK_PULSE,
@@ -3804,6 +3804,7 @@ const u16 gAbyssalHighDragonBoostStatusMoves[] =
         MOVE_HONE_CLAWS,
         MOVE_TAILWIND,
         MOVE_NASTY_PLOT,
+        MOVE_DRAGON_DANCE,
         0xFFFF
     };
 
@@ -4103,7 +4104,7 @@ static void SetOpponentMovesAbyssalHighDragon(void)
             gBattleMons[abyssalHighDragonPosition].moves[0] = gAbyssalHighDragonPhysicalAttackMoves[Random() % 4];
             gBattleMons[abyssalHighDragonPosition].moves[1] = gAbyssalHighDragonHinderStatusMoves[Random() % 5];
             gBattleMons[abyssalHighDragonPosition].moves[2] = gAbyssalHighDragonSpecialAttackMoves[Random() % 4];
-            gBattleMons[abyssalHighDragonPosition].moves[3] = gAbyssalHighDragonBoostStatusMoves[Random() % 3];
+            gBattleMons[abyssalHighDragonPosition].moves[3] = gAbyssalHighDragonBoostStatusMoves[Random() % 4];
         }
     }
 }

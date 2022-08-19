@@ -14910,12 +14910,12 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
     .lvl = 50,
     .species = SPECIES_ABYSSALDRAGONTHIRDEVO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_BULLDOZE, MOVE_GROWL, MOVE_LEER, MOVE_NONE},
-    .evs = {0, 180, 0, 0, 180, 0},
+    .moves = {MOVE_LAVA_PLUME, MOVE_BULLDOZE, MOVE_DRAGON_DANCE, MOVE_NONE},
+    .evs = {0, 220, 0, 0, 220, 0},
     .stats = 
         {
-        .statHP = 3000,
-        .statMaxHP = 3000,
+        .statHP = 3050,
+        .statMaxHP = 3050,
         .movePP1 = 255,
         .movePP2 = 255,        
         .movePP3 = 255,
@@ -14925,7 +14925,7 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
     {
     .abilityNum = 1,
     .iv = 250,
-    .lvl = 40,
+    .lvl = 45,
     .species = SPECIES_ABYSSALDRAGONSECONDEVO,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SLASH, MOVE_SAND_TOMB, MOVE_CRUNCH, MOVE_FIRE_FANG},
@@ -14938,10 +14938,10 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
     {
     .abilityNum = 0,
     .iv = 250,
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_ABYSSALDRAGONFIRSTEVO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SELF_DESTRUCT, MOVE_BITE, MOVE_TACKLE, MOVE_GLARE},
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_BITE, MOVE_SAND_TOMB, MOVE_GLARE},
     .evs = {0, 60, 0, 0, 60, 0},
     .stats =
         {
@@ -14951,7 +14951,7 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
     {
     .abilityNum = 1,
     .iv = 250,
-    .lvl = 40,
+    .lvl = 45,
     .species = SPECIES_ABYSSALDRAGONSECONDEVO,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_DRAGON_CLAW, MOVE_SAND_TOMB, MOVE_CRUNCH, MOVE_NONE},
@@ -14960,10 +14960,10 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
     {
     .abilityNum = 0,
     .iv = 250,
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_ABYSSALDRAGONFIRSTEVO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SELF_DESTRUCT, MOVE_BITE, MOVE_HEADBUTT, MOVE_NONE},
+    .moves = {MOVE_SELF_DESTRUCT, MOVE_BITE, MOVE_SAND_TOMB, MOVE_ROLLOUT},
     .evs = {0, 60, 0, 0, 60, 0},
     .stats =
         {
@@ -14971,12 +14971,12 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
         },
     },
     {
-    .abilityNum = 0,
+    .abilityNum = 3,
     .iv = 250,
-    .lvl = 30,
+    .lvl = 40,
     .species = SPECIES_ABYSSALDRAGONFIRSTEVO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SELF_DESTRUCT, MOVE_BITE, MOVE_TACKLE, MOVE_NONE},
+    .moves = {MOVE_EXPLOSION, MOVE_BITE, MOVE_NONE, MOVE_BELLY_DRUM},
     .evs = {0, 60, 0, 0, 60, 0},
     },
 };

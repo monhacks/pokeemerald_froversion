@@ -767,6 +767,7 @@ static const struct AbilitySetter sAbyssalDragonAbilitySet[] =
     {ABILITY_ROUGH_SKIN, 1},
     {ABILITY_SAND_FORCE, 12},
     {ABILITY_ABYSSAL, 32},
+    {ABILITY_UNBURDEN, 33},
     ABILITY_SET_END
 };
 
