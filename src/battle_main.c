@@ -244,11 +244,6 @@ EWRAM_DATA u8 gChangeTxtScrAbility1 = 0;
 EWRAM_DATA u8 gChangeTxtScrAbility2 = 0;
 EWRAM_DATA u16 gNewTxtScrAbility1 = 0;
 EWRAM_DATA u16 gNewTxtScrAbility2 = 0;
-
-
-EWRAM_DATA u8 easyDifficulty = TRUE;
-EWRAM_DATA u8 normalDifficulty = FALSE;
-EWRAM_DATA u8 hardDifficulty = FALSE;
 EWRAM_DATA s32 difficultyModification = 0;
 
 // IWRAM common vars
@@ -1876,17 +1871,19 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     static const u8 minDynamicLevel = 3;
     static const u8 maxDynamicLevel = 98;
     u8 levelDifference = Random() % 2;
-    normalDifficulty = TRUE;
 
-    Printf("easy = %d", easyDifficulty);
-    Printf("med = %d", normalDifficulty);
-    Printf("hard = %d", hardDifficulty);
-    if(easyDifficulty)
+    switch (gSaveBlock2Ptr->optionsWindowDifficulty)
+    {
+    case OPTIONS_DIFFICULTY_EASY:
         difficultyModification = 90;
-    if(normalDifficulty)
+        break;
+    case OPTIONS_DIFFICULTY_NORMAL:
         difficultyModification = 100;
-    if(hardDifficulty)
+        break;
+    case OPTIONS_TEXT_SPEED_FAST:
         difficultyModification = 110;
+        break;
+    }
 
     Printf("difmod = %d", difficultyModification);
 
