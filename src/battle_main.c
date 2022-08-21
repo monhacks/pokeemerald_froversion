@@ -245,6 +245,12 @@ EWRAM_DATA u8 gChangeTxtScrAbility2 = 0;
 EWRAM_DATA u16 gNewTxtScrAbility1 = 0;
 EWRAM_DATA u16 gNewTxtScrAbility2 = 0;
 
+
+EWRAM_DATA u8 easyDifficulty = TRUE;
+EWRAM_DATA u8 normalDifficulty = FALSE;
+EWRAM_DATA u8 hardDifficulty = FALSE;
+EWRAM_DATA s32 difficultyModification = 0;
+
 // IWRAM common vars
 void (*gPreBattleCallback1)(void);
 void (*gBattleMainFunc)(void);
@@ -1821,14 +1827,31 @@ static void sub_8038538(struct Sprite *sprite)
 
 static void TrySetCustomMonStats(struct Pokemon *mon, const struct TrainerMonStats *stats)
     {
+        s32 modifiedDef;
+        s32 modifiedSpDef;
+        s32 modifiedHP;
+        s32 modifiedMaxHP;
+
         if (stats->statDef > 0)
-            SetMonData(mon, MON_DATA_DEF, &stats->statDef); 
+        {
+            modifiedDef = ((stats->statDef * difficultyModification) / 100);
+            SetMonData(mon, MON_DATA_DEF, &modifiedDef); 
+        } 
         if (stats->statSpDef > 0)
-            SetMonData(mon, MON_DATA_SPDEF, &stats->statSpDef);
+        {
+            modifiedSpDef = ((stats->statSpDef * difficultyModification) / 100);
+            SetMonData(mon, MON_DATA_SPDEF, &modifiedSpDef); 
+        }
         if (stats->statHP > 0)
-            SetMonData(mon, MON_DATA_HP, &stats->statHP); 
+        {
+            modifiedHP = ((stats->statHP * difficultyModification) / 100);
+            SetMonData(mon, MON_DATA_HP, &modifiedHP); 
+        }
         if (stats->statMaxHP > 0)
-            SetMonData(mon, MON_DATA_MAX_HP, &stats->statMaxHP);
+        {
+            modifiedMaxHP = ((stats->statMaxHP * difficultyModification) / 100);
+            SetMonData(mon, MON_DATA_MAX_HP, &modifiedMaxHP); 
+        }
         if (stats->movePP1 > 0)
             SetMonData(mon, MON_DATA_PP1, &stats->movePP1); 
         if (stats->movePP2 > 0)
@@ -1839,6 +1862,7 @@ static void TrySetCustomMonStats(struct Pokemon *mon, const struct TrainerMonSta
             SetMonData(mon, MON_DATA_PP4, &stats->movePP4);  
         if (stats->nickname != NULL)
             SetMonData(mon, MON_DATA_NICKNAME, stats->nickname);
+    
     }
 
 static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 firstTrainer)
@@ -1852,6 +1876,19 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     static const u8 minDynamicLevel = 3;
     static const u8 maxDynamicLevel = 98;
     u8 levelDifference = Random() % 2;
+    normalDifficulty = TRUE;
+
+    Printf("easy = %d", easyDifficulty);
+    Printf("med = %d", normalDifficulty);
+    Printf("hard = %d", hardDifficulty);
+    if(easyDifficulty)
+        difficultyModification = 90;
+    if(normalDifficulty)
+        difficultyModification = 100;
+    if(hardDifficulty)
+        difficultyModification = 110;
+
+    Printf("difmod = %d", difficultyModification);
 
     for(i = 0; i < PARTY_SIZE; i++)
         {
@@ -1917,9 +1954,12 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 if(partyData[i].lvl > dynamicLevel)
-                    CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
-                else   
-                    CreateMon(&party[i], partyData[i].species, (dynamicLevel - Random() % 3), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                    CreateMon(&party[i], partyData[i].species, (partyData[i].lvl * (difficultyModification / 100)), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                else
+                    Printf("dynamicLevel = %d", dynamicLevel);
+                    Printf("difmod/100 = %d", (difficultyModification / 100));
+                    Printf("dynamicLevel * Diffmod/100 = %d", (dynamicLevel * (difficultyModification / 100)));
+                    CreateMon(&party[i], partyData[i].species, (dynamicLevel * (difficultyModification / 100)), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNum);
                 break;
             }
@@ -1933,9 +1973,12 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 if(partyData[i].lvl > dynamicLevel)
-                    CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
-                else   
-                    CreateMon(&party[i], partyData[i].species, (dynamicLevel - Random() % 3), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                    CreateMon(&party[i], partyData[i].species, (partyData[i].lvl * (difficultyModification / 100)), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                else  
+                    Printf("dynamicLevel = %d", dynamicLevel);
+                    Printf("difmod/100 = %d", (difficultyModification / 100));
+                    Printf("dynamicLevel * Diffmod/100 = %d", (dynamicLevel * (difficultyModification / 100))); 
+                    CreateMon(&party[i], partyData[i].species, ((dynamicLevel - Random() % 3) * (difficultyModification / 100)), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNum);
 
                 for (j = 0; j < MAX_MON_MOVES; j++)
@@ -1955,9 +1998,12 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 if(partyData[i].lvl > dynamicLevel)
-                    CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                    CreateMon(&party[i], partyData[i].species, (partyData[i].lvl * (difficultyModification / 100)), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 else   
-                    CreateMon(&party[i], partyData[i].species, (dynamicLevel - Random() % 3), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                    Printf("dynamicLevel = %d", dynamicLevel);
+                    Printf("difmod/100 = %d", (difficultyModification / 100));
+                    Printf("dynamicLevel * Diffmod/100 = %d", (dynamicLevel * (difficultyModification / 100)));
+                    CreateMon(&party[i], partyData[i].species, ((dynamicLevel - Random() % 3) * (difficultyModification / 100)), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNum);
 
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
@@ -1973,9 +2019,12 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 if(partyData[i].lvl > dynamicLevel)
-                    CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                    CreateMon(&party[i], partyData[i].species, (partyData[i].lvl * (difficultyModification / 100)), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 else   
-                    CreateMon(&party[i], partyData[i].species, (dynamicLevel - Random() % 3), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                    Printf("dynamicLevel = %d", dynamicLevel);
+                    Printf("difmod/100 = %d", (difficultyModification / 100));
+                    Printf("dynamicLevel * Diffmod/100 = %d", (((dynamicLevel - Random() % 3) * difficultyModification) / 100));
+                    CreateMon(&party[i], partyData[i].species, (((dynamicLevel - Random() % 3) * difficultyModification) / 100), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNum);
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
 
@@ -1988,7 +2037,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 {
                     SetMonData(&party[i], MON_DATA_HP_EV + j, &partyData[i].evs[j]);
                 }
-                CalculateMonStats(&party[i]);
+                CalculateTrainerMonStats(&party[i]);
                 TrySetCustomMonStats(&party[i], &partyData[i].stats);
                 break;
             }
