@@ -325,6 +325,7 @@ extern const u8 gText_Difficulty[];
 extern const u8 gText_DifficultyEasy[];
 extern const u8 gText_DifficultyNormal[];
 extern const u8 gText_DifficultyHard[];
+extern const u8 gText_WildEncounters[];
 extern const u8 gText_UnitSystemMetric[];   //tx_optionsPlus
 extern const u8 gText_UnitSystemImperial[]; //tx_optionsPlus
 

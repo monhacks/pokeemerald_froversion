@@ -1591,6 +1591,7 @@ const u8 gText_Difficulty[] = _("Difficulty");
 const u8 gText_DifficultyEasy[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Easy");
 const u8 gText_DifficultyNormal[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Normal");
 const u8 gText_DifficultyHard[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Hard");
+const u8 gText_WildEncounters[] = _("Encounters");
 
 // Easy chat group names
 const u8 gEasyChatGroupName_Pokemon[] = _("Pokémon");

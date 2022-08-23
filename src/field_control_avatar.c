@@ -774,6 +774,8 @@ static bool8 CheckStandardWildEncounter(u16 metatileBehavior)
 {
     if (FlagGet(FLAG_SYS_NO_ENCOUNTER)) //DEBUG
         return FALSE;//
+    if (gSaveBlock2Ptr->optionsWindowWildEncounters == 1) //Checks for option menu wild encounters on or off
+        return FALSE;
 
     if (sWildEncounterImmunitySteps < 4)
     {

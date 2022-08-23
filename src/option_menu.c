@@ -32,6 +32,7 @@ enum
     MENUITEM_FRAMETYPE,
     MENUITEM_AUTORUN,
     MENUITEM_DIFFICULTY,
+    MENUITEM_WILD_ENCOUNTERS,
     MENUITEM_CANCEL,
     MENUITEM_COUNT,
 };
@@ -69,6 +70,7 @@ static void DrawChoices_FrameType(int selection, int y);
 static void DrawChoices_Options_Four(const u8 *const *const strings, int selection, int y);
 static void DrawChoices_Autorun(int selection, int y);
 static void DrawChoices_Difficulty(int selection, int y);
+static void DrawChoices_WildEncounters(int selection, int y);
 static void DrawTextOption(void);
 static void DrawOptionMenuTexts(void);
 static void DrawBgWindowFrames(void);
@@ -99,6 +101,7 @@ struct
     [MENUITEM_FRAMETYPE]    = {DrawChoices_FrameType,   ProcessInput_FrameType},
     [MENUITEM_AUTORUN]      = {DrawChoices_Autorun,     ProcessInput_Autorun},
     [MENUITEM_DIFFICULTY]   = {DrawChoices_Difficulty,  ProcessInput_Options_Three},
+    [MENUITEM_WILD_ENCOUNTERS]   = {DrawChoices_WildEncounters,  ProcessInput_Options_Two},
     [MENUITEM_CANCEL]       = {NULL, NULL},
 };
 
@@ -126,6 +129,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_FRAMETYPE]   = gText_Frame,
     [MENUITEM_AUTORUN]     = gText_Autorun,
     [MENUITEM_DIFFICULTY]  = gText_Difficulty,
+    [MENUITEM_WILD_ENCOUNTERS]  = gText_WildEncounters,
     [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
 };
 
@@ -285,6 +289,7 @@ void CB2_InitOptionMenu(void)
         sOptions->sel[MENUITEM_FRAMETYPE]   = gSaveBlock2Ptr->optionsWindowFrameType;
         sOptions->sel[MENUITEM_AUTORUN]     = gSaveBlock2Ptr->optionsWindowAutoRun;
         sOptions->sel[MENUITEM_DIFFICULTY]  = gSaveBlock2Ptr->optionsWindowDifficulty;
+        sOptions->sel[MENUITEM_WILD_ENCOUNTERS]  = gSaveBlock2Ptr->optionsWindowWildEncounters;
 
         for (i = 0; i < 7; i++)
             DrawChoices(i, i * Y_DIFF);
@@ -446,6 +451,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsWindowFrameType  = sOptions->sel[MENUITEM_FRAMETYPE];
     gSaveBlock2Ptr->optionsWindowAutoRun      = sOptions->sel[MENUITEM_AUTORUN];
     gSaveBlock2Ptr->optionsWindowDifficulty  = sOptions->sel[MENUITEM_DIFFICULTY];
+    gSaveBlock2Ptr->optionsWindowWildEncounters  = sOptions->sel[MENUITEM_WILD_ENCOUNTERS];
 
     BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
     gTasks[taskId].func = Task_OptionMenuFadeOut;
@@ -767,6 +773,16 @@ static void DrawChoices_Difficulty(int selection, int y)
     DrawOptionMenuChoice(gText_DifficultyEasy, 104, y, styles[0]);
     DrawOptionMenuChoice(gText_DifficultyNormal, xMid, y, styles[1]);
     DrawOptionMenuChoice(gText_DifficultyHard, GetStringRightAlignXOffset(1, gText_DifficultyHard, 198), y, styles[2]);
+}
+
+static void DrawChoices_WildEncounters(int selection, int y)
+{
+    u8 styles[2] = {0};
+
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(gText_BattleSceneOn, 104, y, styles[0]);
+    DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(1, gText_BattleSceneOff, 198), y, styles[1]);
 }
 
 static void DrawTextOption(void)
