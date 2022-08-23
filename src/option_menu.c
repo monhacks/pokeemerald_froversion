@@ -16,6 +16,7 @@
 #include "strings.h"
 #include "gba/m4a_internal.h"
 #include "constants/rgb.h"
+#include "mgba_printf.h"
 
 // Menu items
 enum
@@ -115,6 +116,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
     [MENUITEM_TEXTSPEED]   = gText_TextSpeed,
     [MENUITEM_BATTLESCENE] = gText_BattleScene,
+    [MENUITEM_BATTLESTYLE] = gText_BattleStyle,
     [MENUITEM_SOUND]       = gText_Sound,
     [MENUITEM_BUTTONMODE]  = gText_ButtonMode,
     [MENUITEM_HP_BAR]      = sText_HpBar,
@@ -441,6 +443,8 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsExpBarSpeed      = sOptions->sel[MENUITEM_EXP_BAR];
     gSaveBlock2Ptr->optionsUnitSystem       = sOptions->sel[MENUITEM_UNIT_SYSTEM];
     gSaveBlock2Ptr->optionsWindowFrameType  = sOptions->sel[MENUITEM_FRAMETYPE];
+    gSaveBlock2Ptr->optionsWindowAutoRun      = sOptions->sel[MENUITEM_UNIT_SYSTEM];
+    gSaveBlock2Ptr->optionsWindowDifficulty  = sOptions->sel[MENUITEM_FRAMETYPE];
 
     BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
     gTasks[taskId].func = Task_OptionMenuFadeOut;
@@ -495,8 +499,9 @@ static int ProcessInput_Options_Two(int selection)
 {
     if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
         selection ^= 1;
-
+    Printf("selection = %d", selection);
     return selection;
+    
 }
 
 static int ProcessInput_Options_Three(int selection)
@@ -722,6 +727,15 @@ static void DrawChoices_FrameType(int selection, int y)
 
     DrawOptionMenuChoice(gText_FrameType, 104, y, 0);
     DrawOptionMenuChoice(text, 128, y, 1);
+}
+
+static int ProcessInput_Autorun(int selection)
+{
+    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
+    {
+        selection ^= 1;
+    }
+    return selection;
 }
 
 static void DrawChoices_Autorun(int selection, int y)

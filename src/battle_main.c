@@ -1872,6 +1872,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     static const u8 maxDynamicLevel = 98;
     u8 levelDifference = Random() % 2;
 
+    Printf("gSaveBlock2Ptr->optionsWindowDifficulty = %d", gSaveBlock2Ptr->optionsWindowDifficulty);
+
     switch (gSaveBlock2Ptr->optionsWindowDifficulty)
     {
     case OPTIONS_DIFFICULTY_EASY:
