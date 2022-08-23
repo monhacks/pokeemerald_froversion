@@ -573,7 +573,7 @@ static void DrawChoices_TextSpeed(int selection, int y)
     DrawChoices_Options_Four(sTextSpeedStrings, selection, y);
 }
 
-static void DrawChoices_BattleScene(int selection, int y)
+static void DrawChoices_BattleStyle(int selection, int y)
 {
     u8 styles[2] = {0};
 
@@ -593,7 +593,7 @@ static int ProcessInput_BattleStyle(int selection)
     return selection;
 }
 
-static void DrawChoices_BattleStyle(int selection, int y)
+static void DrawChoices_BattleScene(int selection, int y)
 {
     u8 styles[2] = {0};
 
