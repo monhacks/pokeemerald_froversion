@@ -78,8 +78,6 @@ static int ProcessInput_Options_Two(int selection);
 static int ProcessInput_Options_Three(int selection);
 static int ProcessInput_Options_Four(int selection);
 static int ProcessInput_Options_Eleven(int selection);
-static int ProcessInput_Autorun(int selection, int y);
-static int ProcessInput_Difficulty(int selection, int y);
 static void DrawBgWindowFrames(void);
 
 struct
@@ -97,8 +95,8 @@ struct
     [MENUITEM_EXP_BAR]      = {DrawChoices_HpBar,       ProcessInput_Options_Eleven},
     [MENUITEM_UNIT_SYSTEM]  = {DrawChoices_UnitSystem,  ProcessInput_Options_Two},
     [MENUITEM_FRAMETYPE]    = {DrawChoices_FrameType,   ProcessInput_FrameType},
-    [MENUITEM_AUTORUN]      = {DrawChoices_Autorun,     ProcessInput_Autorun},
-    [MENUITEM_DIFFICULTY]   = {DrawChoices_Difficulty,  ProcessInput_Difficulty},
+    [MENUITEM_AUTORUN]      = {DrawChoices_Autorun,     ProcessInput_Options_Two},
+    [MENUITEM_DIFFICULTY]   = {DrawChoices_Difficulty,  ProcessInput_Options_Three},
     [MENUITEM_CANCEL]       = {NULL, NULL},
 };
 
@@ -724,6 +722,27 @@ static void DrawChoices_FrameType(int selection, int y)
 
     DrawOptionMenuChoice(gText_FrameType, 104, y, 0);
     DrawOptionMenuChoice(text, 128, y, 1);
+}
+
+static void DrawChoices_Autorun(int selection, int y)
+{
+    u8 styles[2] = {0};
+
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(gText_AutorunOn, 104, y, styles[0]);
+    DrawOptionMenuChoice(gText_AutorunOff, GetStringRightAlignXOffset(1, gText_AutorunOff, 198), y, styles[1]);
+}
+
+static void DrawChoices_Difficulty(int selection, int y)
+{
+    u8 styles[3] = {0};
+    int xMid = GetMiddleX(gText_DifficultyEasy, gText_DifficultyNormal, gText_DifficultyHard);
+
+    styles[selection] = 1;
+    DrawOptionMenuChoice(gText_DifficultyEasy, 104, y, styles[0]);
+    DrawOptionMenuChoice(gText_DifficultyNormal, xMid, y, styles[1]);
+    DrawOptionMenuChoice(gText_DifficultyHard, GetStringRightAlignXOffset(1, gText_DifficultyHard, 198), y, styles[2]);
 }
 
 static void DrawTextOption(void)
