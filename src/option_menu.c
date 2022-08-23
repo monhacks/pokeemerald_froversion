@@ -79,6 +79,7 @@ static int ProcessInput_Options_Two(int selection);
 static int ProcessInput_Options_Three(int selection);
 static int ProcessInput_Options_Four(int selection);
 static int ProcessInput_Options_Eleven(int selection);
+static int ProcessInput_Autorun(int selection);
 static void DrawBgWindowFrames(void);
 
 struct
@@ -96,7 +97,7 @@ struct
     [MENUITEM_EXP_BAR]      = {DrawChoices_HpBar,       ProcessInput_Options_Eleven},
     [MENUITEM_UNIT_SYSTEM]  = {DrawChoices_UnitSystem,  ProcessInput_Options_Two},
     [MENUITEM_FRAMETYPE]    = {DrawChoices_FrameType,   ProcessInput_FrameType},
-    [MENUITEM_AUTORUN]      = {DrawChoices_Autorun,     ProcessInput_Options_Two},
+    [MENUITEM_AUTORUN]      = {DrawChoices_Autorun,     ProcessInput_Autorun},
     [MENUITEM_DIFFICULTY]   = {DrawChoices_Difficulty,  ProcessInput_Options_Three},
     [MENUITEM_CANCEL]       = {NULL, NULL},
 };
@@ -443,8 +444,8 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsExpBarSpeed      = sOptions->sel[MENUITEM_EXP_BAR];
     gSaveBlock2Ptr->optionsUnitSystem       = sOptions->sel[MENUITEM_UNIT_SYSTEM];
     gSaveBlock2Ptr->optionsWindowFrameType  = sOptions->sel[MENUITEM_FRAMETYPE];
-    gSaveBlock2Ptr->optionsWindowAutoRun      = sOptions->sel[MENUITEM_UNIT_SYSTEM];
-    gSaveBlock2Ptr->optionsWindowDifficulty  = sOptions->sel[MENUITEM_FRAMETYPE];
+    gSaveBlock2Ptr->optionsWindowAutoRun      = sOptions->sel[MENUITEM_AUTORUN];
+    gSaveBlock2Ptr->optionsWindowDifficulty  = sOptions->sel[MENUITEM_DIFFICULTY];
 
     BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_BLACK);
     gTasks[taskId].func = Task_OptionMenuFadeOut;
@@ -735,6 +736,15 @@ static int ProcessInput_Autorun(int selection)
     {
         selection ^= 1;
     }
+
+    if (selection == 1)
+        gSaveBlock2Ptr->autoRun = FALSE;
+    else
+        gSaveBlock2Ptr->autoRun = TRUE;
+
+    
+    Printf("selection = %d", selection);
+    Printf("gSaveBlock2Ptr->autoRun = %d", gSaveBlock2Ptr->autoRun);
     return selection;
 }
 
