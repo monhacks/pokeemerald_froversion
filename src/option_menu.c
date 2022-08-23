@@ -78,6 +78,9 @@ static int ProcessInput_Options_Two(int selection);
 static int ProcessInput_Options_Three(int selection);
 static int ProcessInput_Options_Four(int selection);
 static int ProcessInput_Options_Eleven(int selection);
+static int ProcessInput_Autorun(int selection, int y);
+static int ProcessInput_Difficulty(int selection, int y);
+static void DrawBgWindowFrames(void);
 
 struct
 {
@@ -263,7 +266,7 @@ void CB2_InitOptionMenu(void)
         DrawOptionMenuTexts();
         gMain.state++;
     case 9:
-        sub_80BB154();
+        DrawBgWindowFrames();
         gMain.state++;
         break;
     case 10:
@@ -280,7 +283,7 @@ void CB2_InitOptionMenu(void)
         sOptions->sel[MENUITEM_UNIT_SYSTEM] = gSaveBlock2Ptr->optionsUnitSystem;
         sOptions->sel[MENUITEM_FRAMETYPE]   = gSaveBlock2Ptr->optionsWindowFrameType;
         sOptions->sel[MENUITEM_AUTORUN]     = gSaveBlock2Ptr->optionsWindowAutoRun;
-        sOptions->sel[MENUITEM_FRAMETYPE]   = gSaveBlock2Ptr->optionsWindowDifficulty;
+        sOptions->sel[MENUITEM_DIFFICULTY]  = gSaveBlock2Ptr->optionsWindowDifficulty;
 
         for (i = 0; i < 7; i++)
             DrawChoices(i, i * Y_DIFF);
@@ -312,7 +315,7 @@ static void ScrollMenu(int direction)
     FillWindowPixelRect(WIN_OPTIONS, PIXEL_FILL(1), 0, Y_DIFF * pos, 26 * 8, Y_DIFF);
     // Print
     DrawChoices(menuItem, pos * Y_DIFF);
-    AddTextPrinterParameterized(WIN_OPTIONS, 1, sOptionMenuItemsNames[menuItem], 8, (pos * Y_DIFF) + 1, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(WIN_OPTIONS, 1, sOptionMenuItemsNames[menuItem], 8, (pos * Y_DIFF) + 1, TEXT_SPEED_FF, NULL);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_GFX);
 }
 static void ScrollAll(int direction) // to bottom or top
@@ -344,7 +347,7 @@ static void ScrollAll(int direction) // to bottom or top
         else // From bottom to top
             menuItem = i, pos = i;
         DrawChoices(menuItem, pos * Y_DIFF);
-        AddTextPrinterParameterized(WIN_OPTIONS, 1, sOptionMenuItemsNames[menuItem], 8, (pos * Y_DIFF) + 1, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(WIN_OPTIONS, 1, sOptionMenuItemsNames[menuItem], 8, (pos * Y_DIFF) + 1, TEXT_SPEED_FF, NULL);
     }
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_GFX);
 }
@@ -529,7 +532,7 @@ static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style)
     }
 
     dst[i] = EOS;
-    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, dst, x, y + 1, 0x00, NULL);
+    AddTextPrinterParameterized(WIN_OPTIONS, 1, dst, x, y + 1, 0x00, NULL);
 }
 
 static void DrawChoices_Options_Four(const u8 *const *const strings, int selection, int y)
@@ -567,7 +570,7 @@ static void DrawChoices_BattleScene(int selection, int y)
     styles[selection] = 1;
 
     DrawOptionMenuChoice(gText_BattleStyleShift, 104, y, styles[0]);
-    DrawOptionMenuChoice(gText_BattleStyleSet, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleStyleSet, 198), y, styles[1]);
+    DrawOptionMenuChoice(gText_BattleStyleSet, GetStringRightAlignXOffset(1, gText_BattleStyleSet, 198), y, styles[1]);
 }
 
 static int ProcessInput_BattleStyle(int selection)
@@ -589,7 +592,7 @@ static void DrawChoices_BattleStyle(int selection, int y)
     styles[selection] = 1;
 
     DrawOptionMenuChoice(gText_BattleSceneOn, 104, y, styles[0]);
-    DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleSceneOff, 198), y, styles[1]);
+    DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(1, gText_BattleSceneOff, 198), y, styles[1]);
 }
 
 static int ProcessInput_Sound(int selection)
@@ -610,7 +613,7 @@ static void DrawChoices_Sound(int selection, int y)
     styles[selection] = 1;
 
     DrawOptionMenuChoice(gText_SoundMono, 104, y, styles[0]);
-    DrawOptionMenuChoice(gText_SoundStereo, GetStringRightAlignXOffset(FONT_NORMAL, gText_SoundStereo, 198), y, styles[1]);
+    DrawOptionMenuChoice(gText_SoundStereo, GetStringRightAlignXOffset(1, gText_SoundStereo, 198), y, styles[1]);
 }
 
 static int ButtonMode_ProcessInput(int selection)
@@ -726,7 +729,7 @@ static void DrawChoices_FrameType(int selection, int y)
 static void DrawTextOption(void)
 {
     FillWindowPixelBuffer(WIN_TEXT_OPTION, PIXEL_FILL(1));
-    AddTextPrinterParameterized(WIN_TEXT_OPTION, FONT_NORMAL, gText_Option, 8, 1, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(WIN_TEXT_OPTION, 1, gText_Option, 8, 1, TEXT_SPEED_FF, NULL);
     CopyWindowToVram(WIN_TEXT_OPTION, COPYWIN_FULL);
 }
 
@@ -736,7 +739,7 @@ static void DrawOptionMenuTexts(void)
 
     FillWindowPixelBuffer(WIN_OPTIONS, PIXEL_FILL(1));
     for (i = 0; i < MENUITEM_COUNT; i++)
-        AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, sOptionMenuItemsNames[i], 8, (i * Y_DIFF) + 1, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(WIN_OPTIONS, 1, sOptionMenuItemsNames[i], 8, (i * Y_DIFF) + 1, TEXT_SPEED_FF, NULL);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
 }
 

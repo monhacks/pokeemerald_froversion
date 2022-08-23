@@ -15,6 +15,14 @@ enum
     WINDOW_TILE_DATA
 };
 
+// Mode for CopyWindowToVram, CopyWindowRectToVram and CopyWindowToVram8Bit
+enum {
+    COPYWIN_NONE,
+    COPYWIN_MAP,
+    COPYWIN_GFX,
+    COPYWIN_FULL,
+};
+
 struct WindowTemplate
 {
     u8 bg;
