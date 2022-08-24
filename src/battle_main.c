@@ -4067,7 +4067,7 @@ static void SetOpponentMovesBlaziken(void)
 
 static void SetOpponentMovesAbyssalHighDragon(void)
 {
-    s32 i, j, r, abyssalHighDragonPosition, abyssalHighDragonRoarThreshold, abyssalHighDragonSoaringDragonThreshold;
+    s32 i, j, r, abyssalHighDragonPosition, abyssalHighDragonRoarThreshold, abyssalHighDragonSoaringDragonThreshold, abyssalDragonDragonRavineThreshold, abyssalDragonStatTotalDifficultyThreshold, statusMoveThreshold;
     s32 abyssalHighDragonAccuracy = 0;
     s32 abyssalHighDragonEvasion = 0;
     s32 abyssalHighDragonStatTotal = 0;
@@ -4077,6 +4077,7 @@ static void SetOpponentMovesAbyssalHighDragon(void)
     u8 abyssalHighDragonRoarChance = Random() % 256;
     u8 abyssalHighDragonSoaringDragonChance = Random() % 256;
     u8 abyssalDragonUseMinimize = FALSE;
+    u8 useStatusMove = FALSE;
     
     if(gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
             abyssalHighDragonPosition = B_POSITION_OPPONENT_LEFT;
@@ -4102,8 +4103,6 @@ static void SetOpponentMovesAbyssalHighDragon(void)
         }
 
     
-    if(abyssalHighDragonStatTotal > 0)
-        abyssalHighDragonStatTotal = 0;
     if(playerLeftStatTotal < 0)
         playerLeftStatTotal = 0;
     if(playerRightStatTotal < 0)
@@ -4113,29 +4112,33 @@ static void SetOpponentMovesAbyssalHighDragon(void)
     {
     case OPTIONS_DIFFICULTY_EASY:
         r = 16;
+        abyssalDragonDragonRavineThreshold = 64;
+        statusMoveThreshold = 32;
+        abyssalDragonStatTotalDifficultyThreshold = 3;
         break;
     case OPTIONS_DIFFICULTY_NORMAL:
         r = 32;
+        abyssalDragonDragonRavineThreshold = 127;
+        statusMoveThreshold = 96;
+        abyssalDragonStatTotalDifficultyThreshold = 6;
         break;
     case OPTIONS_DIFFICULTY_HARD:
         r = 64;
+        abyssalDragonDragonRavineThreshold = 192;
+        statusMoveThreshold = 192;
+        abyssalDragonStatTotalDifficultyThreshold = 12;
         break;
     }
-
-    Printf("r = %d", r);
-    Printf("abyssalHighDragonStatTotal = %d", abyssalHighDragonStatTotal);
-
-
-    abyssalHighDragonSoaringDragonThreshold = ((abyssalHighDragonStatTotal) * -r);
+    
+    if(abyssalHighDragonStatTotal > 0)
+        abyssalHighDragonSoaringDragonThreshold = 0;
+    else
+        abyssalHighDragonSoaringDragonThreshold = ((abyssalHighDragonStatTotal) * -r);    
     
     if(playerLeftStatTotal > playerRightStatTotal)
         abyssalHighDragonRoarThreshold = ((playerLeftStatTotal) * r);
     else
         abyssalHighDragonRoarThreshold = ((playerRightStatTotal) * r);
-        
-    
-    Printf("abyssalHighDragonSoaringDragonThreshold, = %d", abyssalHighDragonSoaringDragonThreshold);
-    Printf("abyssalHighDragonRoarThreshold, = %d", abyssalHighDragonRoarThreshold);
 
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {        
@@ -4184,12 +4187,22 @@ static void SetOpponentMovesAbyssalHighDragon(void)
             return;
         }
         else if(!(gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE)
-            && abyssalHighDragonFieldSetChance >= 129)
+            && abyssalHighDragonFieldSetChance <= abyssalDragonDragonRavineThreshold)
         {
             gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_DRAGON_RAVINE;
             gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_DRAGON_RAVINE;
             gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_DRAGON_RAVINE;
             gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_DRAGON_RAVINE;
+            return;
+        }
+        else if((gBattleMons[abyssalHighDragonPosition].hp > (gBattleMons[abyssalHighDragonPosition].maxHP / 20))
+        && (Random() % 256 <= statusMoveThreshold)
+        && abyssalHighDragonStatTotal < abyssalDragonStatTotalDifficultyThreshold)
+        {
+            gBattleMons[abyssalHighDragonPosition].moves[0] = gAbyssalHighDragonBoostStatusMoves[Random() % 4];
+            gBattleMons[abyssalHighDragonPosition].moves[1] = gAbyssalHighDragonBoostStatusMoves[Random() % 4];
+            gBattleMons[abyssalHighDragonPosition].moves[2] = gAbyssalHighDragonHinderStatusMoves[Random() % 5];
+            gBattleMons[abyssalHighDragonPosition].moves[3] = gAbyssalHighDragonHinderStatusMoves[Random() % 5];
             return;
         }
         else
