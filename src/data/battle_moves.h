@@ -11694,5 +11694,17 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED,
         .split = SPLIT_PHYSICAL,
     },
+    [MOVE_BUG_SUBSTITUTE] =
+    {
+        .effect = EFFECT_BUG_SUBSTITUTE,
+        .power = 0,
+        .type = TYPE_BUG,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .flags = FLAG_SNATCH_AFFECTED,
+        .split = SPLIT_STATUS,
+    },
 };
-

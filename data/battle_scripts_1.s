@@ -376,6 +376,7 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
     .4byte NULL @ BattleScript_EffectDarkTether
     .4byte BattleScript_EffectOHKOSide
 	.4byte BattleScript_EffectDragonRavine
+	.4byte BattleScript_EffectBugSubstitute
 
 BattleScript_EffectRevive::
 	attackcanceler
@@ -3446,6 +3447,32 @@ BattleScript_SubstituteString::
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 BattleScript_AlreadyHasSubstitute::
+	setalreadystatusedmoveattempt BS_ATTACKER
+	pause 0x20
+	printstring STRINGID_PKMNHASSUBSTITUTE
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectBugSubstitute::
+	attackcanceler
+	ppreduce
+	attackstring
+	waitstate
+	jumpifstatus2 BS_ATTACKER, STATUS2_SUBSTITUTE, BattleScript_AlreadyHasBugSubstitute
+	setsubstitute
+	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, 0x1, BattleScript_BugSubstituteAnim
+	pause 0x20
+	goto BattleScript_BugSubstituteString
+BattleScript_BugSubstituteAnim::
+	attackanimation
+	waitanimation
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+BattleScript_BugSubstituteString::
+	printfromtable gSubsituteUsedStringIds
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+BattleScript_AlreadyHasBugSubstitute::
 	setalreadystatusedmoveattempt BS_ATTACKER
 	pause 0x20
 	printstring STRINGID_PKMNHASSUBSTITUTE

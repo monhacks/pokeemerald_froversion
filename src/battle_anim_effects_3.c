@@ -4806,6 +4806,47 @@ void AnimTask_MonToSubstitute(u8 taskId)
     }
 }
 
+void AnimTask_MonToBugSubstitute(u8 taskId)
+{
+    int i;
+    u8 spriteId = GetAnimBattlerSpriteId(ANIM_ATTACKER);
+
+    if (gTasks[taskId].data[0] == 0)
+    {
+        PrepareBattlerSpriteForRotScale(spriteId, ST_OAM_OBJ_NORMAL);
+        gTasks[taskId].data[1] = 0x100;
+        gTasks[taskId].data[2] = 0x100;
+        gTasks[taskId].data[0]++;
+    }
+    else if (gTasks[taskId].data[0] == 1)
+    {
+        gTasks[taskId].data[1] += 0x60;
+        gTasks[taskId].data[2] -= 0xD;
+        SetSpriteRotScale(spriteId, gTasks[taskId].data[1], gTasks[taskId].data[2], 0);
+        if (++gTasks[taskId].data[3] == 9)
+        {
+            gTasks[taskId].data[3] = 0;
+            ResetSpriteRotScale(spriteId);
+            gSprites[spriteId].invisible = TRUE;
+            gTasks[taskId].data[0]++;
+        }
+    }
+    else
+    {
+        LoadBattleMonGfxAndAnimate(gBattleAnimAttacker, 0, spriteId);
+        if (IsContest())
+        {
+            gSprites[gBattlerSpriteIds[gBattleAnimAttacker]].affineAnims = gUnknown_082FF6C0;
+            StartSpriteAffineAnim(&gSprites[gBattlerSpriteIds[gBattleAnimAttacker]], 0);
+        }
+
+        for (i = 0; i < 16; i++)
+            gTasks[taskId].data[i] = 0;
+
+        gTasks[taskId].func = AnimTask_MonToSubstituteDoll;
+    }
+}
+
 static void AnimTask_MonToSubstituteDoll(u8 taskId)
 {
     u8 spriteId = GetAnimBattlerSpriteId(ANIM_ATTACKER);

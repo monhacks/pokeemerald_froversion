@@ -787,6 +787,7 @@ gBattleAnims_Moves::
 	.4byte Move_TURF_BLAST
 	.4byte Move_DRAGON_RAVINE
 	.4byte Move_SOARING_DRAGON
+	.4byte Move_BUG_SUBSTITUTE
 	.4byte Move_COUNT @ cannot be reached, because last move is Eerie Spell
 
 	.align 2
@@ -22470,6 +22471,11 @@ Move_POISON_FANG:
 Move_SUBSTITUTE:
 	playsewithpan SE_M_ATTRACT, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_MonToSubstitute, 2
+	end
+
+Move_BUG_SUBSTITUTE:
+	playsewithpan SE_M_ATTRACT, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_MonToBugSubstitute, 2
 	end
 
 Move_FRENZY_PLANT:

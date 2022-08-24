@@ -1882,7 +1882,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     case OPTIONS_DIFFICULTY_NORMAL:
         difficultyModification = 100;
         break;
-    case OPTIONS_TEXT_SPEED_FAST:
+    case OPTIONS_DIFFICULTY_HARD:
         difficultyModification = 110;
         break;
     }
@@ -4067,20 +4067,16 @@ static void SetOpponentMovesBlaziken(void)
 
 static void SetOpponentMovesAbyssalHighDragon(void)
 {
-    s32 i;
-    u8 abyssalHighDragonFieldSetChance = Random() % 256;
-    u8 abyssalHighDragonPosition;
-    u8 abyssalHighDragonRoarChance = Random() % 256;
-    u8 abyssalHighDragonRoarThreshold;
-    u8 abyssalHighDragonSoaringDragonChance = Random() % 256;
-    u8 abyssalHighDragonSoaringDragonThreshold;
+    s32 i, j, r, abyssalHighDragonPosition, abyssalHighDragonRoarThreshold, abyssalHighDragonSoaringDragonThreshold;
     s32 abyssalHighDragonAccuracy = 0;
     s32 abyssalHighDragonEvasion = 0;
     s32 abyssalHighDragonStatTotal = 0;
     s32 playerLeftStatTotal = 0;
     s32 playerRightStatTotal = 0;
+    u8 abyssalHighDragonFieldSetChance = Random() % 256;
+    u8 abyssalHighDragonRoarChance = Random() % 256;
+    u8 abyssalHighDragonSoaringDragonChance = Random() % 256;
     u8 abyssalDragonUseMinimize = FALSE;
-    s32 j;
     
     if(gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
             abyssalHighDragonPosition = B_POSITION_OPPONENT_LEFT;
@@ -4113,18 +4109,34 @@ static void SetOpponentMovesAbyssalHighDragon(void)
     if(playerRightStatTotal < 0)
         playerRightStatTotal = 0;
 
-    if(abyssalHighDragonStatTotal <= -8)
-        abyssalHighDragonSoaringDragonThreshold = 255;
-    else
-        abyssalHighDragonSoaringDragonThreshold = ((abyssalHighDragonStatTotal) * -32);
+    switch (gSaveBlock2Ptr->optionsWindowDifficulty)
+    {
+    case OPTIONS_DIFFICULTY_EASY:
+        r = 16;
+        break;
+    case OPTIONS_DIFFICULTY_NORMAL:
+        r = 32;
+        break;
+    case OPTIONS_DIFFICULTY_HARD:
+        r = 64;
+        break;
+    }
+
+    Printf("r = %d", r);
+    Printf("abyssalHighDragonStatTotal = %d", abyssalHighDragonStatTotal);
+
+
+    abyssalHighDragonSoaringDragonThreshold = ((abyssalHighDragonStatTotal) * -r);
     
-    if(playerLeftStatTotal >= 8 || playerRightStatTotal >= 8)
-        abyssalHighDragonRoarThreshold = 255;
-    else if(playerLeftStatTotal > playerRightStatTotal)
-        abyssalHighDragonRoarThreshold = ((playerLeftStatTotal) * 32);
+    if(playerLeftStatTotal > playerRightStatTotal)
+        abyssalHighDragonRoarThreshold = ((playerLeftStatTotal) * r);
     else
-        abyssalHighDragonRoarThreshold = ((playerRightStatTotal) * 32);
+        abyssalHighDragonRoarThreshold = ((playerRightStatTotal) * r);
+        
     
+    Printf("abyssalHighDragonSoaringDragonThreshold, = %d", abyssalHighDragonSoaringDragonThreshold);
+    Printf("abyssalHighDragonRoarThreshold, = %d", abyssalHighDragonRoarThreshold);
+
     for (i = 0; i < NUM_BATTLE_STATS; i++)
     {        
         //Setting moves starts here
