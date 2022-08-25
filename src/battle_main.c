@@ -3973,6 +3973,16 @@ void BattleTurnPassed(void)
         SetOpponentMovesBlaziken();
 }
 
+bool32 IsMoveOneOf(u16 move, const u16 *moves)
+{
+    for (; *moves !=0xFFFF; moves ++)
+        {
+        if (*moves == move)
+            return TRUE;
+        }
+        return FALSE;
+}
+
 static void SetOpponentMovesShadowCharizard(void)
 {
     s32 i;
@@ -4078,6 +4088,9 @@ static void SetOpponentMovesAbyssalHighDragon(void)
     u8 abyssalHighDragonSoaringDragonChance = Random() % 256;
     u8 abyssalDragonUseMinimize = FALSE;
     u8 useStatusMove = FALSE;
+
+    Printf("gBattleResults.lastUsedMoveOpponent = %d", gBattleResults.lastUsedMoveOpponent);
+    Printf("IsMoveOneOf(gBattleResults.lastUsedMoveOpponent, gAbyssalHighDragonHinderStatusMoves) = %d", IsMoveOneOf(gBattleResults.lastUsedMoveOpponent, gAbyssalHighDragonHinderStatusMoves));
     
     if(gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
             abyssalHighDragonPosition = B_POSITION_OPPONENT_LEFT;
@@ -4129,7 +4142,7 @@ static void SetOpponentMovesAbyssalHighDragon(void)
         abyssalDragonStatTotalDifficultyThreshold = 12;
         break;
     }
-    
+
     if(abyssalHighDragonStatTotal > 0)
         abyssalHighDragonSoaringDragonThreshold = 0;
     else
@@ -4163,10 +4176,10 @@ static void SetOpponentMovesAbyssalHighDragon(void)
         else if((abyssalHighDragonRoarChance <= abyssalHighDragonRoarThreshold)
             && AnyOtherAlive(gActiveBattler) == TRUE)
             {
-            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_ROAR;
+            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_NONE;
             gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_NONE;
             gBattleMons[abyssalHighDragonPosition].moves[2] = MOVE_NONE;
-            gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_NONE;
+            gBattleMons[abyssalHighDragonPosition].moves[3] = MOVE_ROAR;
             return;
             }
         else if((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE)
@@ -4197,10 +4210,11 @@ static void SetOpponentMovesAbyssalHighDragon(void)
         }
         else if((gBattleMons[abyssalHighDragonPosition].hp > (gBattleMons[abyssalHighDragonPosition].maxHP / 20))
         && (Random() % 256 <= statusMoveThreshold)
-        && abyssalHighDragonStatTotal < abyssalDragonStatTotalDifficultyThreshold)
+        && abyssalHighDragonStatTotal < abyssalDragonStatTotalDifficultyThreshold
+        && gBattleResults.battleTurnCounter % 2 != 1)
         {
-            gBattleMons[abyssalHighDragonPosition].moves[0] = gAbyssalHighDragonBoostStatusMoves[Random() % 4];
-            gBattleMons[abyssalHighDragonPosition].moves[1] = gAbyssalHighDragonBoostStatusMoves[Random() % 4];
+            gBattleMons[abyssalHighDragonPosition].moves[0] = MOVE_NASTY_PLOT;
+            gBattleMons[abyssalHighDragonPosition].moves[1] = MOVE_SWORDS_DANCE;
             gBattleMons[abyssalHighDragonPosition].moves[2] = gAbyssalHighDragonHinderStatusMoves[Random() % 5];
             gBattleMons[abyssalHighDragonPosition].moves[3] = gAbyssalHighDragonHinderStatusMoves[Random() % 5];
             return;
@@ -4867,15 +4881,6 @@ s8 GetChosenMovePriority(u32 battlerId)
     return GetMovePriority(battlerId, move);
 }
 
-bool32 IsMoveOneOf(u16 move, const u16 *moves)
-{
-    for (; *moves !=0xFFFF; moves ++)
-        {
-        if (*moves == move)
-            return TRUE;
-        }
-        return FALSE;
-}
 
 bool32 IsSpeciesOneOf(u16 specie, const u16 *species)
 {

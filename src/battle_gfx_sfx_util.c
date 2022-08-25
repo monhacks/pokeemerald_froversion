@@ -941,11 +941,26 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
             position = GetBattlerPosition(battlerId);
 
         if (IsContest())
-            LZDecompressVram(gSubstituteDollBackGfx, gMonSpritesGfxPtr->sprites.ptr[position]);
+            {
+                if(IS_BATTLER_OF_TYPE(battlerId, TYPE_BUG))
+                LZDecompressVram(gMonBackPic_Weedle, gMonSpritesGfxPtr->sprites.ptr[position]);
+                else
+                LZDecompressVram(gSubstituteDollBackGfx, gMonSpritesGfxPtr->sprites.ptr[position]);
+            }
         else if (GetBattlerSide(battlerId) != B_SIDE_PLAYER)
-            LZDecompressVram(gSubstituteDollFrontGfx, gMonSpritesGfxPtr->sprites.ptr[position]);
+            {
+                if(IS_BATTLER_OF_TYPE(battlerId, TYPE_BUG)) 
+                LZDecompressVram(gMonFrontPic_Weedle, gMonSpritesGfxPtr->sprites.ptr[position]);
+                else
+                LZDecompressVram(gSubstituteDollFrontGfx, gMonSpritesGfxPtr->sprites.ptr[position]);
+            }
         else
-            LZDecompressVram(gSubstituteDollBackGfx, gMonSpritesGfxPtr->sprites.ptr[position]);
+            {
+                if(IS_BATTLER_OF_TYPE(battlerId, TYPE_BUG))
+                LZDecompressVram(gMonBackPic_Weedle, gMonSpritesGfxPtr->sprites.ptr[position]);
+                else
+                LZDecompressVram(gSubstituteDollBackGfx, gMonSpritesGfxPtr->sprites.ptr[position]);
+            }
 
         for (i = 1; i < 4; i++)
         {
@@ -953,6 +968,9 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
         }
 
         palOffset = (battlerId * 16) + 0x100;
+        if(IS_BATTLER_OF_TYPE(battlerId, TYPE_BUG))
+        LoadCompressedPalette(gMonPalette_Weedle, palOffset, 32);
+        else
         LoadCompressedPalette(gSubstituteDollPal, palOffset, 32);
     }
     else
@@ -980,7 +998,8 @@ void LoadBattleMonGfxAndAnimate(u8 battlerId, bool8 loadMonSprite, u8 spriteId)
 
 void TrySetBehindSubstituteSpriteBit(u8 battlerId, u16 move)
 {
-    if (move == MOVE_SUBSTITUTE)
+    if (move == MOVE_SUBSTITUTE
+    || move == MOVE_BUG_SUBSTITUTE)
         gBattleSpritesDataPtr->battlerData[battlerId].behindSubstitute = 1;
 }
 

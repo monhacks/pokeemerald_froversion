@@ -22475,7 +22475,7 @@ Move_SUBSTITUTE:
 
 Move_BUG_SUBSTITUTE:
 	playsewithpan SE_M_ATTRACT, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_MonToBugSubstitute, 2
+	createvisualtask AnimTask_MonToSubstitute, 2
 	end
 
 Move_FRENZY_PLANT:

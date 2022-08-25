@@ -11696,7 +11696,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
     [MOVE_BUG_SUBSTITUTE] =
     {
-        .effect = EFFECT_BUG_SUBSTITUTE,
+        .effect = EFFECT_SUBSTITUTE,
         .power = 0,
         .type = TYPE_BUG,
         .accuracy = 0,
