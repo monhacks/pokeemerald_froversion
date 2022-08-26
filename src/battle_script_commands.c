@@ -8111,6 +8111,7 @@ static void Cmd_various(void)
         while (gBattleStruct->dragonravineBattlerId < gBattlersCount)
         {
             gBattleScripting.battler = gBattleStruct->dragonravineBattlerId++;
+            Printf("gBattleScripting.battler = %d", gBattleScripting.battler);
             //Printf("SpeciesCheck =%d", IS_BATTLER_OF_TYPE (gActiveBattler, TYPE_DRAGON));
             if (gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE
                 && IsBattlerAlive(gBattleScripting.battler)
@@ -9021,6 +9022,7 @@ static void Cmd_various(void)
         return;
     case VARIOUS_SETSUBSTITUTETYPE:
         gBattleSpritesDataPtr->battlerData[gBattlerAttacker].substituteType = TYPE_BUG;
+        gBattleSpritesDataPtr->battlerData[gBattlerAttacker].bugSubstituteTimer = 6;
         break;
     case VARIOUS_GIVE_DROPPED_ITEMS:
         //gLastUsedItem = gBattleResources->battleHistory->heldItems[gActiveBattler];
@@ -10558,7 +10560,7 @@ static void Cmd_setsubstitute(void)
 
         gBattleMons[gBattlerAttacker].status2 |= STATUS2_SUBSTITUTE;
         gBattleMons[gBattlerAttacker].status2 &= ~(STATUS2_WRAPPED);
-        gDisableStructs[gBattlerAttacker].substituteHP = gBattleMoveDamage;
+        gDisableStructs[gBattlerAttacker].substituteHP = gBattleMoveDamage * 20;
         gBattleCommunication[MULTISTRING_CHOOSER] = 0;
         gHitMarker |= HITMARKER_IGNORE_SUBSTITUTE;
     }

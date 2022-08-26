@@ -48,6 +48,7 @@
 #include "mgba_printf.h"
 #include "m4a.h"
 #include "battle_script_commands.h"
+#include "daycare.h"
 
 /*
 NOTE: The data and functions in this file up until (but not including) sSoundMovesTable
@@ -1754,6 +1755,7 @@ enum
     ENDTURN_DARK_TETHER,
     ENDTURN_DRAGON_RAVINE,
     ENDTURN_DRAGON_RAVINE_REVIVE,
+    ENDTURN_BUG_SUBSTITUTE,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -1772,6 +1774,7 @@ u8 DoFieldEndTurnEffects(void)
     {
         s32 i;
         u8 side;
+        u16 species, eggSpecies;
 
         switch (gBattleStruct->turnCountersTracker)
         {
@@ -2245,7 +2248,6 @@ u8 DoFieldEndTurnEffects(void)
             gBattleStruct->turnCountersTracker++;
             break;
         case ENDTURN_DRAGON_RAVINE:
-            Printf("gFieldTimers.dragonRavineTimer = %d", gFieldTimers.dragonRavineTimer);  
             if (gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE && --gFieldTimers.dragonRavineTimer == 0)
             {
                 gFieldStatuses &= ~(STATUS_FIELD_DRAGON_RAVINE);
@@ -2256,28 +2258,18 @@ u8 DoFieldEndTurnEffects(void)
             gBattleStruct->turnSideTracker = 0;
             break;
         case ENDTURN_DRAGON_RAVINE_REVIVE:
-            //Printf("TurnSideTracker (outofloop) = %d", gBattleStruct->turnSideTracker);
-            Printf("gFieldTimers.dragonRavineTimer % 2 = %d", gFieldTimers.dragonRavineTimer % 2);
             if (gFieldStatuses & STATUS_FIELD_DRAGON_RAVINE
                 && gBattleStruct->turnSideTracker < 2)
                 {
-                    
-                    //Printf("TurnSideTracker (inloop) = %d", gBattleStruct->turnSideTracker);
                     gActiveBattler = gBattleStruct->turnSideTracker;
-                    
-                    Printf("gActiveBattler = %d", gActiveBattler);
                     gBattleStruct->turnSideTracker++;
-                    Printf("AnyDragonFainted = %d", AnyDragonFainted(gActiveBattler));
                     if(AnyDragonFainted(gActiveBattler)
                     && gActiveBattler == 0
                     && gFieldTimers.dragonRavineTimer % 3 == 1)
                         {
                             gBattleStruct->chooseReviveMon = TRUE;
                             gBattlerAttacker = gActiveBattler;
-                            Printf("ChooseReviveMon? = %d", gBattleStruct->chooseReviveMon);
-                            Printf("gBattlerAttcker = %d", gActiveBattler);
                             BattleScriptExecute(BattleScript_DragonRavineReviveAttacker);
-                            Printf("BattlescriptExecuted");
                             effect++;
                         }
                     else if(AnyDragonFainted(gActiveBattler)
@@ -2286,10 +2278,7 @@ u8 DoFieldEndTurnEffects(void)
                         {
                             gBattleStruct->chooseReviveMon = TRUE;
                             gBattlerTarget = gActiveBattler;
-                            Printf("ChooseReviveMon? = %d", gBattleStruct->chooseReviveMon);
-                            Printf("gBattlerTarget = %d", gBattlerTarget);
                             BattleScriptExecute(BattleScript_DragonRavineReviveTarget);
-                            Printf("BattlescriptExecuted");
                             effect++;
                         }
                 }
@@ -2299,6 +2288,29 @@ u8 DoFieldEndTurnEffects(void)
                     gBattleStruct->turnSideTracker = 0;
                 }
             break;
+        case ENDTURN_BUG_SUBSTITUTE:
+            while (gBattleStruct->bugSubstituteBattlerId < gBattlersCount)
+        {
+            gBattleScripting.battler = gBattleStruct->bugSubstituteBattlerId++;
+            if (gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].substituteType  == TYPE_BUG
+            && gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer == 4)
+            {
+                const struct Evolution *evolution = &gEvolutionTable[eggSpecies][0];
+                species = gBattleMons[gBattleScripting.battler].species;
+                eggSpecies = GetEggSpecies(species);
+                if (evolution->method != 0
+                && evolution->method != EVO_MEGA_EVOLUTION
+                && evolution->method != EVO_MOVE_MEGA_EVOLUTION)
+                    eggSpecies = evolution->targetSpecies;
+                    BattleScriptExecute(BattleScript_WaterSportEnds);
+                effect++;
+            }
+            if(gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer > 0)
+            gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer--;
+        }
+        gBattleStruct->turnCountersTracker++;
+        gBattleStruct->bugSubstituteBattlerId = 0;
+        break;
         case ENDTURN_WATER_SPORT:
             if (gFieldStatuses & STATUS_FIELD_WATERSPORT && --gFieldTimers.waterSportTimer == 0)
             {

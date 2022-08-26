@@ -557,6 +557,7 @@ struct BattleStruct
     s8 aiFinalScore[MAX_BATTLERS_COUNT][MAX_BATTLERS_COUNT][MAX_MON_MOVES]; // AI, target, moves to make debugging easier
     u8 soulheartBattlerId;
     u8 dragonravineBattlerId;
+    u8 bugSubstituteBattlerId;
     u8 friskedBattler; // Frisk needs to identify 2 battlers in double battles.
     bool8 friskedAbility; // If identifies two mons, show the ability pop-up only once.
     u8 sameMoveTurns[MAX_BATTLERS_COUNT]; // For Metronome, number of times the same moves has been SUCCESFULLY used.
@@ -667,6 +668,7 @@ struct BattleSpriteInfo
     u16 hpNumbersNoBars:1; // 0x10
     u16 transformSpecies;
     u16 substituteType;
+    u16 bugSubstituteTimer;
 };
 
 struct BattleAnimationInfo

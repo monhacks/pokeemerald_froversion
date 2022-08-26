@@ -1035,6 +1035,7 @@ void TrySetBehindSubstituteSpriteBit(u8 battlerId, u16 move)
 void ClearBehindSubstituteBit(u8 battlerId)
 {
     gBattleSpritesDataPtr->battlerData[battlerId].behindSubstitute = 0;
+    gBattleSpritesDataPtr->battlerData[battlerId].bugSubstituteTimer = 0;
 }
 
 void HandleLowHpMusicChange(struct Pokemon *mon, u8 battlerId)
