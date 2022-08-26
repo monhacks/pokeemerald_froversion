@@ -666,6 +666,7 @@ struct BattleSpriteInfo
     u16 flag_x8:1; // 0x8
     u16 hpNumbersNoBars:1; // 0x10
     u16 transformSpecies;
+    u16 substituteType;
 };
 
 struct BattleAnimationInfo
@@ -903,5 +904,6 @@ extern u8 gChangeTxtScrAbility2;
 extern u16 gNewTxtScrAbility1;
 extern u16 gNewTxtScrAbility2;
 extern s32 difficultyModification;
+
 
 #endif // GUARD_BATTLE_H

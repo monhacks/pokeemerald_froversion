@@ -8975,12 +8975,6 @@ static void Cmd_various(void)
             u32 index = *(gBattleStruct->monToSwitchIntoId + gActiveBattler);
             struct Pokemon *mon = &party.mons[index];
             u32 species = GetMonData(mon, MON_DATA_SPECIES2);
-            Printf("case VARIOUS_DRAGON_RAVINE_REVIVE:");
-            // Printf("gActiveBattler = %d", gActiveBattler);
-            // Printf("gBattlerAttacker = %d", gBattlerAttacker);
-            // Printf("gBattlerTarget = %d", gBattlerTarget);
-            // Printf("u32 species = %d", GetMonData(mon, MON_DATA_SPECIES2));
-            Printf("u32 index = %d", index);
             if(gBaseStats[species].type1 == TYPE_DRAGON || gBaseStats[species].type2 == TYPE_DRAGON)
             {
                 u16 hp = GetMonData(mon, MON_DATA_MAX_HP);
@@ -8999,10 +8993,6 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
         return;
     case VARIOUS_JUMPIFNODRAGONFAINTED:
-        Printf("Function == case: VARIOUS_JUMPIFNODRAGONFAINED");
-        Printf("gActiveBattler = %d", gActiveBattler);
-        Printf("gBattlerAttacker = %d", gBattlerAttacker);
-        Printf("gBattlerTarget = %d", gBattlerTarget);
         if (AnyDragonFainted(gActiveBattler))
             gBattlescriptCurrInstr += 7;
         else
@@ -9029,6 +9019,9 @@ static void Cmd_various(void)
         else
             gBattlescriptCurrInstr += 7;
         return;
+    case VARIOUS_SETSUBSTITUTETYPE:
+        gBattleSpritesDataPtr->battlerData[gBattlerAttacker].substituteType = TYPE_BUG;
+        break;
     case VARIOUS_GIVE_DROPPED_ITEMS:
         //gLastUsedItem = gBattleResources->battleHistory->heldItems[gActiveBattler];
         if (!(gBattleTypeFlags & (BATTLE_TYPE_TRAINER

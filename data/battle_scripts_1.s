@@ -3459,6 +3459,8 @@ BattleScript_EffectBugSubstitute::
 	attackstring
 	waitstate
 	jumpifstatus2 BS_ATTACKER, STATUS2_SUBSTITUTE, BattleScript_AlreadyHasBugSubstitute
+	dmgtocurrattackerhp
+	setsubstitutetype
 	setsubstitute
 	jumpifbyte CMP_NOT_EQUAL, cMULTISTRING_CHOOSER, 0x1, BattleScript_BugSubstituteAnim
 	pause 0x20

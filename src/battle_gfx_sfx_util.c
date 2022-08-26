@@ -27,6 +27,8 @@
 #include "constants/rgb.h"
 #include "constants/battle_palace.h"
 #include "constants/abilities.h"
+#include "mgba_printf.h"
+#include "daycare.h"
 
 extern struct MusicPlayerInfo gMPlayInfo_SE1;
 extern struct MusicPlayerInfo gMPlayInfo_SE2;
@@ -931,7 +933,15 @@ void HandleSpeciesGfxDataChange(u8 battlerAtk, u8 battlerDef, bool8 notTransform
 
 void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
 {
-    s32 i, position, palOffset;
+    s32 i, position, palOffset, newSubstituteGfx, newSubstitutePalette;
+    u16 species, eggSpecies;
+    u32 personality, otId;
+
+    species = gBattleMons[battlerId].species;
+    eggSpecies = GetEggSpecies(species);
+    personality = gBattleMons[battlerId].species;
+    otId = gBattleMons[battlerId].otId;
+
 
     if (!loadMonSprite)
     {
@@ -942,22 +952,38 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
 
         if (IsContest())
             {
-                if(IS_BATTLER_OF_TYPE(battlerId, TYPE_BUG))
-                LZDecompressVram(gMonBackPic_Weedle, gMonSpritesGfxPtr->sprites.ptr[position]);
+                if(gBattleSpritesDataPtr->battlerData[battlerId].substituteType == TYPE_BUG
+                    && species != eggSpecies)
+                {
+                    HandleLoadSpecialPokePic(&gMonBackPicTable[eggSpecies],
+                                    gMonSpritesGfxPtr->sprites.ptr[position],
+                                    eggSpecies, personality);
+                }
                 else
                 LZDecompressVram(gSubstituteDollBackGfx, gMonSpritesGfxPtr->sprites.ptr[position]);
             }
         else if (GetBattlerSide(battlerId) != B_SIDE_PLAYER)
             {
-                if(IS_BATTLER_OF_TYPE(battlerId, TYPE_BUG)) 
-                LZDecompressVram(gMonFrontPic_Weedle, gMonSpritesGfxPtr->sprites.ptr[position]);
+                if(gBattleSpritesDataPtr->battlerData[battlerId].substituteType == TYPE_BUG
+                    && species != eggSpecies) 
+                {
+                    HandleLoadSpecialPokePic(&gMonFrontPicTable[eggSpecies],
+                                    gMonSpritesGfxPtr->sprites.ptr[position],
+                                    eggSpecies, personality);
+                }
                 else
                 LZDecompressVram(gSubstituteDollFrontGfx, gMonSpritesGfxPtr->sprites.ptr[position]);
             }
         else
             {
-                if(IS_BATTLER_OF_TYPE(battlerId, TYPE_BUG))
-                LZDecompressVram(gMonBackPic_Weedle, gMonSpritesGfxPtr->sprites.ptr[position]);
+                if(gBattleSpritesDataPtr->battlerData[battlerId].substituteType == TYPE_BUG
+                    && species != eggSpecies)
+                {
+                    //newSubstituteGfx = gMonBackPicTable[GetEggSpecies(battlerId)];
+                    HandleLoadSpecialPokePic(&gMonBackPicTable[eggSpecies],
+                                    gMonSpritesGfxPtr->sprites.ptr[position],
+                                    eggSpecies, personality);
+                }
                 else
                 LZDecompressVram(gSubstituteDollBackGfx, gMonSpritesGfxPtr->sprites.ptr[position]);
             }
@@ -968,8 +994,11 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
         }
 
         palOffset = (battlerId * 16) + 0x100;
-        if(IS_BATTLER_OF_TYPE(battlerId, TYPE_BUG))
-        LoadCompressedPalette(gMonPalette_Weedle, palOffset, 32);
+        if(gBattleSpritesDataPtr->battlerData[battlerId].substituteType == TYPE_BUG
+                    && species != eggSpecies)
+            {
+            LoadCompressedPalette(GetMonSpritePalFromSpeciesAndPersonality(eggSpecies, otId, personality), palOffset, 32);
+            }
         else
         LoadCompressedPalette(gSubstituteDollPal, palOffset, 32);
     }

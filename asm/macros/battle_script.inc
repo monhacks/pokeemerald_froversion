@@ -1839,6 +1839,10 @@
 	.4byte \dest
 	.endm
 
+	.macro setsubstitutetype
+	various BS_ATTACKER, VARIOUS_SETSUBSTITUTETYPE
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER \stat | \stages << 3 | \down << 7
