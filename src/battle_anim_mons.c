@@ -16,6 +16,7 @@
 #include "trig.h"
 #include "util.h"
 #include "constants/battle_anim.h"
+#include "daycare.h"
 
 extern const struct OamData gOamData_AffineNormal_ObjNormal_64x64;
 
@@ -109,7 +110,7 @@ static const struct SpriteSheet sUnknown_08525FC0[] =
 u8 GetBattlerSpriteCoord(u8 battlerId, u8 coordType)
 {
     u8 retVal;
-    u16 species;
+    u16 species, eggSpecies;
     struct Pokemon *mon, *illusionMon;
     struct BattleSpriteInfo *spriteInfo;
 
@@ -154,10 +155,25 @@ u8 GetBattlerSpriteCoord(u8 battlerId, u8 coordType)
             else
                 species = spriteInfo[battlerId].transformSpecies;
         }
+
+        eggSpecies = GetEggSpecies(species);
+
         if (coordType == BATTLER_COORD_Y_PIC_OFFSET)
-            retVal = GetBattlerSpriteFinal_Y(battlerId, species, TRUE);
+            {
+                if(gBattleSpritesDataPtr->battlerData[battlerId].substituteType == TYPE_BUG
+                && species != eggSpecies)
+                retVal = GetBattlerSpriteFinal_Y(battlerId, eggSpecies, TRUE);
+                else
+                retVal = GetBattlerSpriteFinal_Y(battlerId, species, TRUE);
+            }
         else
-            retVal = GetBattlerSpriteFinal_Y(battlerId, species, FALSE);
+            {
+                if(gBattleSpritesDataPtr->battlerData[battlerId].substituteType == TYPE_BUG
+                && species != eggSpecies)
+                retVal = GetBattlerSpriteFinal_Y(battlerId, eggSpecies, FALSE);
+                else
+                retVal = GetBattlerSpriteFinal_Y(battlerId, species, FALSE);
+            }
         break;
     }
 
@@ -326,11 +342,27 @@ u8 GetBattlerSpriteDefault_Y(u8 battlerId)
 
 u8 GetSubstituteSpriteDefault_Y(u8 battlerId)
 {
-    u16 y;
+    u16 y, species, eggSpecies;
+
+    species = gBattleMons[battlerId].species;
+    eggSpecies = GetEggSpecies(species);
+
     if (GetBattlerSide(battlerId) != B_SIDE_PLAYER)
-        y = GetBattlerSpriteCoord(battlerId, BATTLER_COORD_Y) + 16;
+    {
+        if(gBattleSpritesDataPtr->battlerData[battlerId].substituteType == TYPE_BUG
+        && species != eggSpecies) 
+            y = GetBattlerSpriteCoord(battlerId, BATTLER_COORD_Y_PIC_OFFSET_DEFAULT);
+        else
+            y = GetBattlerSpriteCoord(battlerId, BATTLER_COORD_Y) + 16;
+    }
     else
-        y = GetBattlerSpriteCoord(battlerId, BATTLER_COORD_Y) + 17;
+    {
+        if(gBattleSpritesDataPtr->battlerData[battlerId].substituteType == TYPE_BUG
+        && species != eggSpecies) 
+            y = GetBattlerSpriteCoord(battlerId, BATTLER_COORD_Y_PIC_OFFSET_DEFAULT);
+        else
+            y = GetBattlerSpriteCoord(battlerId, BATTLER_COORD_Y) + 17;
+    }
     return y;
 }
 
