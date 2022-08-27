@@ -1774,7 +1774,7 @@ u8 DoFieldEndTurnEffects(void)
     {
         s32 i;
         u8 side;
-        u16 species, eggSpecies;
+        u16 species, eggSpecies, subSpecies;
 
         switch (gBattleStruct->turnCountersTracker)
         {
@@ -2292,21 +2292,33 @@ u8 DoFieldEndTurnEffects(void)
             while (gBattleStruct->bugSubstituteBattlerId < gBattlersCount)
         {
             gBattleScripting.battler = gBattleStruct->bugSubstituteBattlerId++;
+            species = gBattleMons[gBattleScripting.battler].species;
+            Printf("species = %d", species);
+            eggSpecies = GetEggSpecies(species);
+            Printf("eggspecies = %d", eggSpecies);
             if (gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].substituteType  == TYPE_BUG
-            && gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer == 4)
+            && (gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer == 4
+            || gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer == 1))
             {
                 const struct Evolution *evolution = &gEvolutionTable[eggSpecies][0];
-                species = gBattleMons[gBattleScripting.battler].species;
-                eggSpecies = GetEggSpecies(species);
                 if (evolution->method != 0
                 && evolution->method != EVO_MEGA_EVOLUTION
                 && evolution->method != EVO_MOVE_MEGA_EVOLUTION)
-                    eggSpecies = evolution->targetSpecies;
-                    BattleScriptExecute(BattleScript_WaterSportEnds);
-                effect++;
-            }
+                    {   
+                        if(gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer > 0)
+                            gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer--;
+                        gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
+                        subSpecies = evolution->targetSpecies;
+                        Printf("gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer = %d", gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer);
+                        Printf("subSpecies = %d", subSpecies);
+                        Printf("gBattleScripting.battler = %d", gBattleScripting.battler);
+                        BattleScriptExecute(BattleScript_BugSubstituteAnim2);
+                        effect++;
+                        break;
+                    }
+            };
             if(gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer > 0)
-            gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer--;
+                gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer--;
         }
         gBattleStruct->turnCountersTracker++;
         gBattleStruct->bugSubstituteBattlerId = 0;

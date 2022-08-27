@@ -489,6 +489,7 @@ static bool8 ShouldAnimBeDoneRegardlessOfSubsitute(u8 animId)
     switch (animId)
     {
     case B_ANIM_SUBSTITUTE_FADE:
+    case B_ANIM_SUBSTITUTE_APPEAR:
     case B_ANIM_RAIN_CONTINUES:
     case B_ANIM_SUN_CONTINUES:
     case B_ANIM_SANDSTORM_CONTINUES:
@@ -934,14 +935,37 @@ void HandleSpeciesGfxDataChange(u8 battlerAtk, u8 battlerDef, bool8 notTransform
 void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
 {
     s32 i, position, palOffset, newSubstituteGfx, newSubstitutePalette;
-    u16 species, eggSpecies;
+    u16 species, eggSpecies, subSpecies;
     u32 personality, otId;
-
-    species = gBattleMons[battlerId].species;
-    eggSpecies = GetEggSpecies(species);
+    
+    species = gBattleMons[battlerId].species; //Beedrill
+    Printf("species = %d", species);
+    eggSpecies = GetEggSpecies(species); //weedle
+    Printf("eggSpecies = %d", eggSpecies);
     personality = gBattleMons[battlerId].species;
     otId = gBattleMons[battlerId].otId;
+    
+    if(gBattleSpritesDataPtr->battlerData[battlerId].bugSubstituteEvolveCount == 0)
+        subSpecies = eggSpecies; //set to weedle
+    if(gBattleSpritesDataPtr->battlerData[battlerId].bugSubstituteEvolveCount == 1)
+        {
+            const struct Evolution *evolution = &gEvolutionTable[eggSpecies][0];
+            if (evolution->method != 0
+            && evolution->method != EVO_MEGA_EVOLUTION
+            && evolution->method != EVO_MOVE_MEGA_EVOLUTION)
+            subSpecies = evolution->targetSpecies; //set to kakuna
+        }
+    if(gBattleSpritesDataPtr->battlerData[battlerId].bugSubstituteEvolveCount == 2)
+        {
+            const struct Evolution *evolution = &gEvolutionTable[subSpecies][0];
+            if (evolution->method != 0
+            && evolution->method != EVO_MEGA_EVOLUTION
+            && evolution->method != EVO_MOVE_MEGA_EVOLUTION)
+            subSpecies = evolution->targetSpecies; //set to beedrill?
+        }
+    
 
+    Printf("subSpecies = %d", subSpecies);
 
     if (!loadMonSprite)
     {
@@ -955,7 +979,7 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
                 if(gBattleSpritesDataPtr->battlerData[battlerId].substituteType == TYPE_BUG
                     && species != eggSpecies)
                 {
-                    HandleLoadSpecialPokePic(&gMonBackPicTable[eggSpecies],
+                    HandleLoadSpecialPokePic(&gMonBackPicTable[subSpecies],
                                     gMonSpritesGfxPtr->sprites.ptr[position],
                                     eggSpecies, personality);
                 }
@@ -967,7 +991,7 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
                 if(gBattleSpritesDataPtr->battlerData[battlerId].substituteType == TYPE_BUG
                     && species != eggSpecies) 
                 {
-                    HandleLoadSpecialPokePic(&gMonFrontPicTable[eggSpecies],
+                    HandleLoadSpecialPokePic(&gMonFrontPicTable[subSpecies],
                                     gMonSpritesGfxPtr->sprites.ptr[position],
                                     eggSpecies, personality);
                 }
@@ -980,7 +1004,7 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
                     && species != eggSpecies)
                 {
                     //newSubstituteGfx = gMonBackPicTable[GetEggSpecies(battlerId)];
-                    HandleLoadSpecialPokePic(&gMonBackPicTable[eggSpecies],
+                    HandleLoadSpecialPokePic(&gMonBackPicTable[subSpecies],
                                     gMonSpritesGfxPtr->sprites.ptr[position],
                                     eggSpecies, personality);
                 }
@@ -997,7 +1021,7 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
         if(gBattleSpritesDataPtr->battlerData[battlerId].substituteType == TYPE_BUG
                     && species != eggSpecies)
             {
-            LoadCompressedPalette(GetMonSpritePalFromSpeciesAndPersonality(eggSpecies, otId, personality), palOffset, 32);
+            LoadCompressedPalette(GetMonSpritePalFromSpeciesAndPersonality(subSpecies, otId, personality), palOffset, 32);
             }
         else
         LoadCompressedPalette(gSubstituteDollPal, palOffset, 32);

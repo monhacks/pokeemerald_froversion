@@ -9023,6 +9023,7 @@ static void Cmd_various(void)
     case VARIOUS_SETSUBSTITUTETYPE:
         gBattleSpritesDataPtr->battlerData[gBattlerAttacker].substituteType = TYPE_BUG;
         gBattleSpritesDataPtr->battlerData[gBattlerAttacker].bugSubstituteTimer = 6;
+        gBattleSpritesDataPtr->battlerData[gBattlerAttacker].bugSubstituteEvolveCount = 0;
         break;
     case VARIOUS_GIVE_DROPPED_ITEMS:
         //gLastUsedItem = gBattleResources->battleHistory->heldItems[gActiveBattler];
@@ -10560,7 +10561,8 @@ static void Cmd_setsubstitute(void)
 
         gBattleMons[gBattlerAttacker].status2 |= STATUS2_SUBSTITUTE;
         gBattleMons[gBattlerAttacker].status2 &= ~(STATUS2_WRAPPED);
-        gDisableStructs[gBattlerAttacker].substituteHP = gBattleMoveDamage * 20;
+        gDisableStructs[gBattlerAttacker].substituteHP = 1020;
+        Printf("gDisableStructs[gBattlerAttacker].substituteHP = %d",gDisableStructs[gBattlerAttacker].substituteHP);
         gBattleCommunication[MULTISTRING_CHOOSER] = 0;
         gHitMarker |= HITMARKER_IGNORE_SUBSTITUTE;
     }

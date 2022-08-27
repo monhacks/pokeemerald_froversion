@@ -3481,6 +3481,13 @@ BattleScript_AlreadyHasBugSubstitute::
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 
+BattleScript_BugSubstituteAnim2::
+	playanimation BS_SCRIPTING, B_ANIM_SUBSTITUTE_APPEAR, NULL
+	printstring STRINGID_PKMNUPROARKEPTAWAKE
+	waitmessage 0x40
+	end2
+
+
 BattleScript_EffectRecharge::
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE

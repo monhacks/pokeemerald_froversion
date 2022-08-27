@@ -427,5 +427,6 @@ extern const u8 BattleScript_ItemDropped[];
 extern const u8 BattleScript_ShadowCharizardBerserkTryAttack[];
 extern const u8 BattleScript_SolidRockActivates[];
 extern const u8 BattleScript_AbyssalHealActivates[];
+extern const u8 BattleScript_BugSubstituteAnim2[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

@@ -245,6 +245,7 @@ EWRAM_DATA u8 gChangeTxtScrAbility2 = 0;
 EWRAM_DATA u16 gNewTxtScrAbility1 = 0;
 EWRAM_DATA u16 gNewTxtScrAbility2 = 0;
 EWRAM_DATA s32 difficultyModification = 0;
+EWRAM_DATA u16 subSpecies = 0;
 
 // IWRAM common vars
 void (*gPreBattleCallback1)(void);

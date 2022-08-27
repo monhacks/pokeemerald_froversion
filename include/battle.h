@@ -78,7 +78,7 @@ struct DisableStruct
     s8 stockpileSpDef;
     s8 stockpileBeforeDef;
     s8 stockpileBeforeSpDef;
-    u8 substituteHP;
+    u16 substituteHP;
     u8 disableTimer:4;
     u8 disableTimerStartValue:4;
     u8 encoredMovePos;
@@ -669,6 +669,7 @@ struct BattleSpriteInfo
     u16 transformSpecies;
     u16 substituteType;
     u16 bugSubstituteTimer;
+    u16 bugSubstituteEvolveCount;
 };
 
 struct BattleAnimationInfo

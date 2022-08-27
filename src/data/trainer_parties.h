@@ -14908,9 +14908,9 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
     .abilityNum = 2,
     .iv = 250,
     .lvl = 50,
-    .species = SPECIES_ABYSSALDRAGONTHIRDEVO,
+    .species = SPECIES_BUTTERFREE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_LAVA_PLUME, MOVE_BULLDOZE, MOVE_DRAGON_DANCE, MOVE_NONE},
+    .moves = {MOVE_BUG_SUBSTITUTE, MOVE_BUG_SUBSTITUTE, MOVE_BUG_SUBSTITUTE, MOVE_NONE},
     .evs = {0, 220, 0, 0, 220, 0},
     .stats = 
         {
@@ -14926,9 +14926,9 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
     .abilityNum = 1,
     .iv = 250,
     .lvl = 45,
-    .species = SPECIES_ABYSSALDRAGONSECONDEVO,
+    .species = SPECIES_VENOMOTH,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SLASH, MOVE_SAND_TOMB, MOVE_CRUNCH, MOVE_FIRE_FANG},
+    .moves = {MOVE_BUG_SUBSTITUTE, MOVE_BUG_SUBSTITUTE, MOVE_BUG_SUBSTITUTE, MOVE_BUG_SUBSTITUTE},
     .evs = {0, 60, 0, 0, 60, 0},
     .stats =
         {
