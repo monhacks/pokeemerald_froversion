@@ -8164,9 +8164,12 @@ static void Cmd_various(void)
                         {
                             if(gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer > 0)
                             gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer--;
-                        gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
-                        BattleScriptPushCursor();
-                        gBattlescriptCurrInstr = BattleScript_BugSubstituteAnim2;
+                        if(species != eggSpecies)
+                            {
+                            gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
+                            BattleScriptPushCursor();
+                            gBattlescriptCurrInstr = BattleScript_BugSubstituteAnim2;
+                            }
                         return;
                         }
                     }
@@ -10590,7 +10593,16 @@ static void Cmd_transformdataexecution(void)
 
 static void Cmd_setsubstitute(void)
 {
-    u32 hp = gBattleMons[gBattlerAttacker].maxHP / 4;
+    u16 species, eggSpecies;
+    u32 hp;
+    s32 eggSpeciesMaxHP;
+
+    species = gBattleMons[gBattlerAttacker].species;
+    eggSpecies = GetEggSpecies(species);
+    Printf("gBattleMons[gBattlerAttacker].maxHP = %d", gBattleMons[gBattlerAttacker].maxHP);
+    eggSpeciesMaxHP = ((gBattleMons[gBattlerAttacker].maxHP * 80) /100);
+    Printf("eggSpeciesMaxHP = %d", eggSpeciesMaxHP);
+
     if (gBattleMons[gBattlerAttacker].maxHP / 4 == 0)
         hp = 1;
 
@@ -10607,7 +10619,10 @@ static void Cmd_setsubstitute(void)
 
         gBattleMons[gBattlerAttacker].status2 |= STATUS2_SUBSTITUTE;
         gBattleMons[gBattlerAttacker].status2 &= ~(STATUS2_WRAPPED);
-        gDisableStructs[gBattlerAttacker].substituteHP = 1020;
+        if(gBattleSpritesDataPtr->battlerData[gBattlerAttacker].substituteType  == TYPE_BUG)
+        gDisableStructs[gBattlerAttacker].substituteHP = eggSpeciesMaxHP;
+        else
+        gDisableStructs[gBattlerAttacker].substituteHP = gBattleMoveDamage;
         Printf("gDisableStructs[gBattlerAttacker].substituteHP = %d",gDisableStructs[gBattlerAttacker].substituteHP);
         gBattleCommunication[MULTISTRING_CHOOSER] = 0;
         gHitMarker |= HITMARKER_IGNORE_SUBSTITUTE;
