@@ -186,6 +186,7 @@
 #define VARIOUS_DRAGON_RAVINE_REVIVE                118
 #define VARIOUS_JUMPIFNODRAGONFAINTED               119
 #define VARIOUS_SETSUBSTITUTETYPE                   120
+#define VARIOUS_BUG_SUBSTITUTE                      121
 #define VARIOUS_GIVE_DROPPED_ITEMS                  151
 
 // Cmd_manipulatedamage

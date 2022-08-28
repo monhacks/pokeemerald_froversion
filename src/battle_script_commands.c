@@ -57,6 +57,7 @@
 #include "data.h"
 #include "constants/party_menu.h"
 #include "mgba_printf.h"
+#include "daycare.h"
 
 extern struct MusicPlayerInfo gMPlayInfo_BGM;
 
@@ -7576,6 +7577,7 @@ static void Cmd_various(void)
     s32 i, j;
     u8 data[10];
     u32 side, bits;
+    u16 species, eggSpecies, subSpecies;
 
     if (gBattleControllerExecFlags)
         return;
@@ -8129,6 +8131,50 @@ static void Cmd_various(void)
             }
         }
         gBattleStruct->dragonravineBattlerId = 0;
+        break;
+    case VARIOUS_BUG_SUBSTITUTE:
+            while (gBattleStruct->bugSubstituteBattlerId < gBattlersCount)
+        {
+            gBattleScripting.battler = gBattleStruct->bugSubstituteBattlerId++;
+            species = gBattleMons[gBattleScripting.battler].species; //beedrill 15
+            eggSpecies = GetEggSpecies(species); // weedle 13 // difference 2
+
+            if (gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].substituteType  == TYPE_BUG
+            && (gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer == 4
+            || gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer == 1))
+            {
+                if(gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount == 1)
+                    {
+                        if(gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer > 0)
+                            gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer--;
+                        if(species - eggSpecies == 2)
+                            {
+                                gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
+                                BattleScriptPushCursor();
+                                gBattlescriptCurrInstr = BattleScript_BugSubstituteAnim2;
+                                return;
+                            }
+                        return;
+                    }
+                    {   
+                        const struct Evolution *evolution = &gEvolutionTable[eggSpecies][0];
+                        if (evolution->method != 0
+                        && evolution->method != EVO_MEGA_EVOLUTION
+                        && evolution->method != EVO_MOVE_MEGA_EVOLUTION)
+                        {
+                            if(gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer > 0)
+                            gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer--;
+                        gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
+                        BattleScriptPushCursor();
+                        gBattlescriptCurrInstr = BattleScript_BugSubstituteAnim2;
+                        return;
+                        }
+                    }
+            };
+            if(gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer > 0)
+                gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer--;
+        }
+        gBattleStruct->bugSubstituteBattlerId = 0;
         break;
     case VARIOUS_TRY_ACTIVATE_FELL_STINGER:
         if (gBattleMoves[gCurrentMove].effect == EFFECT_FELL_STINGER

@@ -3481,11 +3481,15 @@ BattleScript_AlreadyHasBugSubstitute::
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 
+BattleScript_BugSubstituteEvolveCheck::
+	bugsubstitute BS_SCRIPTING
+	end2
+
 BattleScript_BugSubstituteAnim2::
 	playanimation BS_SCRIPTING, B_ANIM_SUBSTITUTE_APPEAR, NULL
-	printstring STRINGID_PKMNUPROARKEPTAWAKE
+	printstring STRINGID_PKMNBUGSUBSTITUTELEVELEDUP
 	waitmessage 0x40
-	end2
+	return
 
 
 BattleScript_EffectRecharge::

@@ -750,6 +750,7 @@ static const u8 sText_DragonRavineReviveMessage[] = _("Dragon Ravine heals a fai
 static const u8 sText_DragonRavineActivates[] = _("Dragon Ravine changes the terrain!");
 static const u8 sText_PkmnsXCuredYProblem2[] = _("{B_BUFF2}'s {B_SCR_ACTIVE_ABILITY}\ncured its {B_BUFF1} problem!");
 static const u8 sText_SoaringDragonStatReset[] = _("{B_ATK_NAME_WITH_PREFIX} time in the sky\nremoved it's stat changes!");
+static const u8 sText_PkmnBugSubEvolved[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Bugstitute\nevolved!\pIt is now stonger!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1363,6 +1364,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_DRAGONRAVINEACTIVATES - 12] = sText_DragonRavineActivates,
     [STRINGID_PKMNSXCUREDYPROBLEM2 - 12] = sText_PkmnsXCuredYProblem2,
     [STRINGID_SOARINGDRAGONSTATRESET - 12] = sText_SoaringDragonStatReset,
+    [STRINGID_PKMNBUGSUBSTITUTELEVELEDUP - 12] = sText_PkmnBugSubEvolved,
 };
 
 const u16 gTerrainStringIds[] =

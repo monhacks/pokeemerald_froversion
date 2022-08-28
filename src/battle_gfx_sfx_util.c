@@ -939,29 +939,27 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
     u32 personality, otId;
     
     species = gBattleMons[battlerId].species; //Beedrill
-    Printf("species = %d", species);
     eggSpecies = GetEggSpecies(species); //weedle
-    Printf("eggSpecies = %d", eggSpecies);
     personality = gBattleMons[battlerId].species;
     otId = gBattleMons[battlerId].otId;
-    
-    if(gBattleSpritesDataPtr->battlerData[battlerId].bugSubstituteEvolveCount == 0)
-        subSpecies = eggSpecies; //set to weedle
-    if(gBattleSpritesDataPtr->battlerData[battlerId].bugSubstituteEvolveCount == 1)
+    subSpecies = eggSpecies; //set to weedle (stage 1)13
+
+    if(gBattleSpritesDataPtr->battlerData[battlerId].bugSubstituteEvolveCount >= 1)
         {
             const struct Evolution *evolution = &gEvolutionTable[eggSpecies][0];
             if (evolution->method != 0
             && evolution->method != EVO_MEGA_EVOLUTION
             && evolution->method != EVO_MOVE_MEGA_EVOLUTION)
-            subSpecies = evolution->targetSpecies; //set to kakuna
+            subSpecies = evolution->targetSpecies; //set to kakuna (stage 2)
         }
+
     if(gBattleSpritesDataPtr->battlerData[battlerId].bugSubstituteEvolveCount == 2)
         {
             const struct Evolution *evolution = &gEvolutionTable[subSpecies][0];
             if (evolution->method != 0
             && evolution->method != EVO_MEGA_EVOLUTION
             && evolution->method != EVO_MOVE_MEGA_EVOLUTION)
-            subSpecies = evolution->targetSpecies; //set to beedrill?
+            subSpecies = evolution->targetSpecies; //set to beedrill (stage 3) 15 - 13 = 2
         }
     
 

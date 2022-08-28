@@ -1462,6 +1462,10 @@
 	various \battler, VARIOUS_TRY_ACTIVATE_DRAGON_RAVINE
 	.endm
 
+	.macro bugsubstitute battler:req
+	various \battler, VARIOUS_BUG_SUBSTITUTE
+	.endm
+
 	.macro tryactivatefellstinger battler:req
 	various \battler, VARIOUS_TRY_ACTIVATE_FELL_STINGER
 	.endm
