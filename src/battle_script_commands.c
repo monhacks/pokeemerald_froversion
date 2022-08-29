@@ -7578,6 +7578,7 @@ static void Cmd_various(void)
     u8 data[10];
     u32 side, bits;
     u16 species, eggSpecies, subSpecies;
+    s32 SubstituteDef, SubstituteSpDef, eggSpeciesMaxHP;
 
     if (gBattleControllerExecFlags)
         return;
@@ -8150,6 +8151,8 @@ static void Cmd_various(void)
                         if(species - eggSpecies == 2)
                             {
                                 gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
+                                eggSpeciesMaxHP = ((gBattleMons[gBattlerAttacker].maxHP * 105) /100);
+                                gDisableStructs[gBattlerAttacker].substituteHP = eggSpeciesMaxHP;
                                 BattleScriptPushCursor();
                                 gBattlescriptCurrInstr = BattleScript_BugSubstituteAnim2;
                                 return;
@@ -8167,6 +8170,8 @@ static void Cmd_various(void)
                         if(species != eggSpecies)
                             {
                             gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
+                            eggSpeciesMaxHP = ((gBattleMons[gBattlerAttacker].maxHP * 95) /100);
+                            gDisableStructs[gBattlerAttacker].substituteHP = eggSpeciesMaxHP;
                             BattleScriptPushCursor();
                             gBattlescriptCurrInstr = BattleScript_BugSubstituteAnim2;
                             }

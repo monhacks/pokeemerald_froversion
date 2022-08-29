@@ -8513,6 +8513,28 @@ u32 CalcDefenseStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 
     if (IS_BATTLER_OF_TYPE(battlerDef, TYPE_ROCK) && WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SANDSTORM_ANY && !usesDefStat)
         MulModifier(&modifier, UQ_4_12(1.5));
 
+    //bug substitute defense+spdef Boost
+    if(gBattleSpritesDataPtr->battlerData[battlerDef].substituteType == TYPE_BUG
+    && IS_MOVE_PHYSICAL(move))
+        {
+            if(gBattleSpritesDataPtr->battlerData[battlerDef].bugSubstituteEvolveCount == 0)
+                MulModifier(&modifier, UQ_4_12(1.1));
+            if(gBattleSpritesDataPtr->battlerData[battlerDef].bugSubstituteEvolveCount == 1)
+                MulModifier(&modifier, UQ_4_12(1.2));
+            if(gBattleSpritesDataPtr->battlerData[battlerDef].bugSubstituteEvolveCount == 2)
+                MulModifier(&modifier, UQ_4_12(1.3));
+        }
+    if(gBattleSpritesDataPtr->battlerData[battlerDef].substituteType == TYPE_BUG
+    && IS_MOVE_SPECIAL(move))
+        {
+            if(gBattleSpritesDataPtr->battlerData[battlerDef].bugSubstituteEvolveCount == 0)
+                MulModifier(&modifier, UQ_4_12(1.1));
+            if(gBattleSpritesDataPtr->battlerData[battlerDef].bugSubstituteEvolveCount == 1)
+                MulModifier(&modifier, UQ_4_12(1.2));
+            if(gBattleSpritesDataPtr->battlerData[battlerDef].bugSubstituteEvolveCount == 2)
+                MulModifier(&modifier, UQ_4_12(1.3));
+        }
+
     // The defensive stats of a Player's Pokémon are boosted by x1.1 (+10%) if they have the 5th badge and 7th badges.
     // Having the 5th badge boosts physical defense while having the 7th badge boosts special defense.
     // if (ShouldGetStatBadgeBoost(FLAG_BADGE05_GET, battlerDef) && IS_MOVE_PHYSICAL(move))
