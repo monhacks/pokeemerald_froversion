@@ -5940,6 +5940,16 @@
       "secondary_tileset": "gTileset_PokemonSchool",
       "border_filepath": "data/layouts/CinnabarIslandHouse1Post/border.bin",
       "blockdata_filepath": "data/layouts/CinnabarIslandHouse1Post/map.bin"
+    },
+    {
+      "id": "LAYOUT_EVER_GRANDE_CITY_MATTS_ROOM",
+      "name": "EverGrandeCity_MattsRoom_Layout",
+      "width": 19,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_CableClub",
+      "border_filepath": "data/layouts/EverGrandeCity_MattsRoom/border.bin",
+      "blockdata_filepath": "data/layouts/EverGrandeCity_MattsRoom/map.bin"
     }
   ]
 }

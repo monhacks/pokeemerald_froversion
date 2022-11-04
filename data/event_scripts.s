@@ -1371,3 +1371,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/UnknownCave/scripts.inc"
 	
 	.include "data/maps/CinnabarIslandHouse1Post/scripts.inc"
+
+	.include "data/maps/EverGrandeCity_MattsRoom/scripts.inc"

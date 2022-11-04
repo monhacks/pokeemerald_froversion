@@ -1827,16 +1827,20 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_STEVE_2] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_POKEMANIAC,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_POKEMANIAC,
-        .trainerName = _("STEVE"),
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_GMP,
+        // .trainerClass = TRAINER_CLASS_SHADOW_CHARIZARD,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_MEWTWO,
+        .trainerName = _("Mewtwo"),
         .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Steve2),
-        .party = {.NoItemDefaultMoves = sParty_Steve2},
+        .doubleBattle = TRUE,
+        .twoVsOne = TRUE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_SummitCavernsLattka2),
+        .party = {.ItemCustomMoves = sParty_SummitCavernsLattka2},
+        // .partySize = ARRAY_COUNT(sParty_ShadowCharizard),
+        // .party = {.ItemCustomMoves = sParty_ShadowCharizard},
     },
 
     [TRAINER_STEVE_3] =
@@ -11738,19 +11742,19 @@ const struct Trainer gTrainers[] = {
     [TRAINER_SUMMIT_CAVERNS_LATTKA_2] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        //.trainerClass = TRAINER_CLASS_GMP,
-        .trainerClass = TRAINER_CLASS_SHADOW_CHARIZARD,
+        .trainerClass = TRAINER_CLASS_GMP,
+        // .trainerClass = TRAINER_CLASS_SHADOW_CHARIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_MEWTWO,
-        .trainerName = _("Mewtwo"),
+        .trainerPic = TRAINER_PIC_LATTKA,
+        .trainerName = _("Lattka"),
         .items = {},
         .doubleBattle = TRUE,
-        //.twoVsOne = TRUE,
+        .twoVsOne = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
-        //.partySize = ARRAY_COUNT(sParty_SummitCavernsLattka2),
-        //.party = {.ItemCustomMoves = sParty_SummitCavernsLattka2},
-        .partySize = ARRAY_COUNT(sParty_ShadowCharizard),
-        .party = {.ItemCustomMoves = sParty_ShadowCharizard},
+        .partySize = ARRAY_COUNT(sParty_SummitCavernsLattka2),
+        .party = {.ItemCustomMoves = sParty_SummitCavernsLattka2},
+        // .partySize = ARRAY_COUNT(sParty_ShadowCharizard),
+        // .party = {.ItemCustomMoves = sParty_ShadowCharizard},
     },
 
     [TRAINER_MAGMA_HIDEOUT_MEGA_GENGAR] =

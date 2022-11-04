@@ -395,6 +395,7 @@
 #define MAP_EVER_GRANDE_CITY_POKEMON_CENTER_1F (12 | (16 << 8))
 #define MAP_EVER_GRANDE_CITY_POKEMON_CENTER_2F (13 | (16 << 8))
 #define MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_2F (14 | (16 << 8))
+#define MAP_EVER_GRANDE_CITY_MATTS_ROOM        (15 | (16 << 8))
 
 // Map Group 17
 #define MAP_ROUTE104_MR_BRINEYS_HOUSE         (0 | (17 << 8))
@@ -746,6 +747,6 @@
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {129, 10, 10, 43, 8, 9, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 15, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 23, 0};
+// static const u8 MAP_GROUP_COUNT[] = {129, 10, 10, 43, 8, 9, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 16, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 3, 23, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

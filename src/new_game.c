@@ -96,16 +96,11 @@ static void SetDefaultOptions(void)
 {
     gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;
     gSaveBlock2Ptr->optionsWindowFrameType = 0;
-    gSaveBlock2Ptr->optionsWindowAutoRun = 0;
-    gSaveBlock2Ptr->optionsWindowDifficulty = OPTIONS_DIFFICULTY_NORMAL;
-    gSaveBlock2Ptr->optionsWindowWildEncounters = 0;
     gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_MONO;
     gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SHIFT;
     gSaveBlock2Ptr->optionsBattleSceneOff = FALSE;
     gSaveBlock2Ptr->regionMapZoom = FALSE;
-    gSaveBlock2Ptr->optionsUnitSystem = 0;  //tx_optionsPlus
-    gSaveBlock2Ptr->optionsHpBarSpeed = 0;  //tx_optionsPlus
-    gSaveBlock2Ptr->optionsExpBarSpeed = 0; //tx_optionsPlus
+    gSaveBlock2Ptr->optionsWindowDifficulty = OPTIONS_DIFFICULTY_NORMAL;
 }
 
 static void ClearPokedexFlags(void)
@@ -134,31 +129,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    u16 i;
-    AddBagItem(ITEM_HYPER_POTION, 10);
-    AddBagItem(ITEM_REVIVE, 20);
-    AddBagItem(ITEM_MAX_REVIVE, 10);
-    AddBagItem(ITEM_SUPER_POTION, 20);
-    AddBagItem(ITEM_X_ATTACK, 7);
-    AddBagItem(ITEM_X_SP_ATK, 7);
-    AddBagItem(ITEM_X_SP_DEF, 7);
-    AddBagItem(ITEM_X_DEFENSE, 7);
-    AddBagItem(ITEM_DIRE_HIT, 7);
-    AddBagItem(ITEM_FULL_RESTORE, 5);
-    AddBagItem(ITEM_LEFTOVERS, 5);
-    AddBagItem(ITEM_SITRUS_BERRY, 5);
-    AddBagItem(ITEM_WEAKNESS_POLICY, 1);
-    AddBagItem(ITEM_ASSAULT_VEST, 1);
-    AddBagItem(ITEM_DRAGON_CAMOUFLAGE, 1);
-    AddBagItem(ITEM_LIFE_ORB, 1);
-    AddBagItem(ITEM_CHOICE_BAND, 1);
-    AddBagItem(ITEM_CHOICE_SPECS, 1);
-    for (i = ITEM_TM01; i <= ITEM_TM50; i++)
-        {
-            if(!CheckBagHasItem(i, 1))
-            AddBagItem(i, 1);
-        }
-    SetWarpDestination(MAP_GROUP(UNKNOWN_CAVE), MAP_NUM(UNKNOWN_CAVE), -1, 9, 8);
+    SetWarpDestination(MAP_GROUP(LAKE_MEAD_VILLAGE_FROS_HOUSE_1F), MAP_NUM(LAKE_MEAD_VILLAGE_FROS_HOUSE_1F), -1, 4, 5);
     WarpIntoMap();
 }
 

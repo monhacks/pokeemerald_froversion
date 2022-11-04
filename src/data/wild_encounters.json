@@ -948,36 +948,6 @@
               }
             ]
           },
-          "fishing_mons": {
-            "encounter_rate": 30,
-            "mons": [
-              {
-                "min_level": 20,
-                "max_level": 30,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 10,
-                "max_level": 20,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 30,
-                "max_level": 35,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 20,
-                "max_level": 30,
-                "species": "SPECIES_OCTIRE"
-              }
-            ]
-          },
           "rock_smash_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -1005,6 +975,36 @@
                 "min_level": 15,
                 "max_level": 20,
                 "species": "SPECIES_GEODUDE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_OCTIRE"
               }
             ]
           }
@@ -1245,36 +1245,6 @@
               }
             ]
           },
-          "fishing_mons": {
-            "encounter_rate": 30,
-            "mons": [
-              {
-                "min_level": 20,
-                "max_level": 30,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 10,
-                "max_level": 20,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 30,
-                "max_level": 35,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 20,
-                "max_level": 30,
-                "species": "SPECIES_OCTIRE"
-              }
-            ]
-          },
           "rock_smash_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -1302,6 +1272,36 @@
                 "min_level": 15,
                 "max_level": 20,
                 "species": "SPECIES_GEODUDE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_OCTIRE"
               }
             ]
           }
@@ -12209,36 +12209,6 @@
               }
             ]
           },
-          "fishing_mons": {
-            "encounter_rate": 25,
-            "mons": [
-              {
-                "min_level": 15,
-                "max_level": 25,
-                "species": "SPECIES_SEEL"
-              },
-              {
-                "min_level": 15,
-                "max_level": 25,
-                "species": "SPECIES_CHINCHOU"
-              },
-              {
-                "min_level": 15,
-                "max_level": 25,
-                "species": "SPECIES_SEEL"
-              },
-              {
-                "min_level": 15,
-                "max_level": 25,
-                "species": "SPECIES_CHINCHOU"
-              },
-              {
-                "min_level": 15,
-                "max_level": 25,
-                "species": "SPECIES_SEEL"
-              }
-            ]
-          },
           "rock_smash_mons": {
             "encounter_rate": 100,
             "mons": [
@@ -12266,6 +12236,36 @@
                 "min_level": 36,
                 "max_level": 36,
                 "species": "SPECIES_GOLEM"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_CHINCHOU"
+              },
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_CHINCHOU"
+              },
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_SEEL"
               }
             ]
           }
