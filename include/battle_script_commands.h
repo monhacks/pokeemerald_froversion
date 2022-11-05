@@ -29,6 +29,7 @@ u32 IsAbilityStatusProtected(u32 battler);
 struct Party GetBattlerParty(u32 battlerId, bool32 checkDoubles);
 bool32 AnyDragonFainted(u32 battlerId);
 bool32 AnyOtherAlive(u32 battlerId);
+void StealTargetItem(u8 battlerStealer, u8 battlerItem);
 
 extern void (* const gBattleScriptingCommandsTable[])(void);
 extern const u8 gBattlePalaceNatureToMoveGroupLikelihood[NUM_NATURES][4];

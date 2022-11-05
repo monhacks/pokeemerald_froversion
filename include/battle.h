@@ -444,6 +444,12 @@ struct Illusion
     struct Pokemon *mon;
 };
 
+struct StolenItem
+{
+    u16 originalItem:15;
+    u16 stolen:1;
+};
+
 struct BattleStruct
 {
     u8 turnEffectsTracker;
@@ -571,6 +577,7 @@ struct BattleStruct
     u8 poisonFieldSwitchInCounter;
     u16 counterDamage;
     bool8 chooseReviveMon;
+    struct StolenItem itemStolen[PARTY_SIZE];  // Player's team that had items stolen (two bytes per party member)
 };
 
 #define GET_MOVE_TYPE(move, typeArg)                        \

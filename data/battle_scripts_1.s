@@ -8890,3 +8890,8 @@ BattleScript_EffectOHKOSide::
 	tryKO BattleScript_KOFail, canmiss=FALSE
 	trysetdestinybondtohappen
 	goto BattleScript_HitFromAtkAnimation
+
+BattleScript_MagicianActivates::
+	call BattleScript_AbilityPopUp
+	call BattleScript_ItemSteal
+	return
