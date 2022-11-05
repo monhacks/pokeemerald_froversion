@@ -3864,6 +3864,7 @@ static const u16 sWeatherFlagsInfo[][3] =
     [ENUM_WEATHER_SANDSTORM] = {WEATHER_SANDSTORM_TEMPORARY, WEATHER_SANDSTORM_PERMANENT, HOLD_EFFECT_SMOOTH_ROCK},
     [ENUM_WEATHER_HAIL] = {WEATHER_HAIL_TEMPORARY, WEATHER_HAIL_PERMANENT, HOLD_EFFECT_ICY_ROCK},
     [ENUM_WEATHER_HAIL_PERM] = {WEATHER_HAIL_PERMANENT, HOLD_EFFECT_ICY_ROCK},
+    [EMUM_WEATHER_DREAM_FOG] = {WEATHER_DREAM_FOG_ANY, WEATHER_DREAM_FOG_PERMANENT},
 };
 
 bool32 TryChangeBattleWeather(u8 battler, u32 weatherEnumId, u32 viaAbility)
@@ -4444,6 +4445,13 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (TryChangeBattleWeather(battler, ENUM_WEATHER_HAIL, TRUE))
             {
                 BattleScriptPushCursorAndCallback(BattleScript_SnowWarningActivates);
+                effect++;
+            }
+            break;
+        case ABILITY_SLEEPYHEAD:
+            if (TryChangeBattleWeather(battler, EMUM_WEATHER_DREAM_FOG, TRUE))
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_SleepyHeadActivates);
                 effect++;
             }
             break;

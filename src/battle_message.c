@@ -751,6 +751,7 @@ static const u8 sText_DragonRavineActivates[] = _("Dragon Ravine changes the ter
 static const u8 sText_PkmnsXCuredYProblem2[] = _("{B_BUFF2}'s {B_SCR_ACTIVE_ABILITY}\ncured its {B_BUFF1} problem!");
 static const u8 sText_SoaringDragonStatReset[] = _("{B_ATK_NAME_WITH_PREFIX} time in the sky\nremoved it's stat changes!");
 static const u8 sText_PkmnBugSubEvolved[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Bugstitute\nevolved!\pIt is now stonger!");
+static const u8 sText_SleepyHeadFog[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nwhips up a dreamy fog!\n");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1365,6 +1366,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNSXCUREDYPROBLEM2 - 12] = sText_PkmnsXCuredYProblem2,
     [STRINGID_SOARINGDRAGONSTATRESET - 12] = sText_SoaringDragonStatReset,
     [STRINGID_PKMNBUGSUBSTITUTELEVELEDUP - 12] = sText_PkmnBugSubEvolved,
+    [STRINGID_SLEEPYHEADFOG - 12] = sText_SleepyHeadFog,
 };
 
 const u16 gTerrainStringIds[] =

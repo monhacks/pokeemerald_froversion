@@ -26,7 +26,9 @@ EverGrandeCity_MattsRoom_EventScript_EnterMattsRoom:: @ 8229850
 	applymovement LOCALID_MATT Common_Movement_ExclamationMark
 	waitmovement LOCALID_MATT
 	msgbox EverGrandeCity_HallOfFame_Text_SeeIfYouCanBeatMeNow, MSGBOX_DEFAULT
+	//setflag FLAG_BATTLE_DREAM_FOG
 	trainerbattle_no_intro TRAINER_SUMMIT_CAVERNS_LATTKA_2, SummitCaverns_Text_LattkaDefeat2
+	//clearflag FLAG_BATTLE_DREAM_FOG
 	setvar VAR_TEMP_1, 1
 	releaseall
 	end

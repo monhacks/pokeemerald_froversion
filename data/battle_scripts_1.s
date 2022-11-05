@@ -7601,6 +7601,15 @@ BattleScript_SnowWarningActivates::
 	call BattleScript_WeatherFormChanges
 	end3
 
+BattleScript_SleepyHeadActivates::
+	pause 0x20
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_SLEEPYHEADFOG
+	waitstate
+	playanimation BS_BATTLER_0, B_ANIM_DREAM_FOG_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	end3
+
 BattleScript_ElectricSurgeActivates::
 	pause 0x20
 	call BattleScript_AbilityPopUp
@@ -8862,6 +8871,13 @@ BattleScript_TypeWeatherActivates2_Hail::
 	printstring STRINGID_PKMNMADEITHAIL
 	waitmessage 0x20
 	playanimation BS_BATTLER_0, B_ANIM_HAIL_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	end2
+
+BattleScript_TypeWeatherActivates2_DreamFog::
+	printstring STRINGID_DREAMFOGPRESENT
+	waitmessage 0x20
+	playanimation BS_BATTLER_0, B_ANIM_DREAM_FOG_CONTINUES, NULL
 	call BattleScript_WeatherFormChanges
 	end2
 

@@ -3617,6 +3617,7 @@ const u8 *const gTypeWeatherScripts[ENUM_WEATHER_COUNT] =
     [ENUM_WEATHER_SUN] = BattleScript_TypeWeatherActivates2_Sun,
     [ENUM_WEATHER_SANDSTORM] = BattleScript_TypeWeatherActivates2_Sandstorm,
     [ENUM_WEATHER_HAIL] = BattleScript_TypeWeatherActivates2_Hail,
+    [EMUM_WEATHER_DREAM_FOG] = BattleScript_TypeWeatherActivates2_DreamFog,
 };
 
 static void TryDoEventsBeforeFirstTurn(void)

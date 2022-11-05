@@ -562,6 +562,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SHADOW_CHARIZARD] = _("Dark Aura"),
     [ABILITY_DRAGON_RAVINE] = _("DragnRavine"),
     [ABILITY_SAND_SOOTHE] = _("Sand Soothe"),
+    [ABILITY_SLEEPYHEAD] = _("Sleepy Head"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -855,4 +856,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_SHADOW_NIDOKING] = sShadowPrimeapeDescription,
     [ABILITY_SHADOW_NIDOQUEEN] = sShadowRhydonDescription,
     [ABILITY_SHADOW_DUGTRIO] = sShadowRhydonDescription,
+    [ABILITY_SLEEPYHEAD] = sShadowRhydonDescription,
 };
