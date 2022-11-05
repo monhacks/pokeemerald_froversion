@@ -5200,7 +5200,7 @@ static void Cmd_moveend(void)
             gBattleScripting.moveendState++;
             break;
         case MOVEEND_MAGICIAN:
-            if (GetBattlerAbility(gBattlerAttacker) == ABILITY_MAGICIAN
+            if ((GetBattlerAbility(gBattlerAttacker) == ABILITY_MAGICIAN || GetBattlerAbility(gBattlerAttacker) == ABILITY_MATT_BOSS_FIGHT)
               && gCurrentMove != MOVE_FLING && gCurrentMove != MOVE_NATURAL_GIFT
               && gBattleMons[gBattlerAttacker].item == ITEM_NONE
               && gBattleMons[gBattlerTarget].item != ITEM_NONE

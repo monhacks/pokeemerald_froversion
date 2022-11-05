@@ -1083,7 +1083,7 @@ static const struct AbilitySetter sNevawokAbilitySet[] =
 
 static const struct AbilitySetter sMega_DewgongAbilitySet[] =
 {
-    {ABILITY_MAGICIAN, 1},
+    {ABILITY_MATT_BOSS_FIGHT, 1},
     ABILITY_SET_END
 };
 

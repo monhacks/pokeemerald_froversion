@@ -1499,7 +1499,7 @@ u8 TrySetCantSelectMoveBattleScript(void)
         }
     }
 
-    if (gDisableStructs[gActiveBattler].tauntTimer != 0 && gBattleMoves[move].power == 0)
+    if (gDisableStructs[gActiveBattler].tauntTimer != 0 && gBattleMoves[move].power > 0)
     {
         gCurrentMove = move;
         if (gBattleTypeFlags & BATTLE_TYPE_PALACE)
@@ -5782,7 +5782,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
         }
         break;
     case ABILITYEFFECT_SYNCHRONIZE:
-        if (gLastUsedAbility == ABILITY_SYNCHRONIZE && (gHitMarker & HITMARKER_SYNCHRONISE_EFFECT))
+        if ((gLastUsedAbility == ABILITY_SYNCHRONIZE || gLastUsedAbility == ABILITY_MATT_BOSS_FIGHT) && (gHitMarker & HITMARKER_SYNCHRONISE_EFFECT))
         {
             gHitMarker &= ~(HITMARKER_SYNCHRONISE_EFFECT);
 
