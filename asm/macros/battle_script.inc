@@ -1466,6 +1466,11 @@
 	various \battler, VARIOUS_BUG_SUBSTITUTE
 	.endm
 
+	.macro setsneer if_fail:req
+	various BS_TARGET, VARIOUS_TRY_SET_SNEER
+	.word \if_fail
+	.endm
+
 	.macro tryactivatefellstinger battler:req
 	various \battler, VARIOUS_TRY_ACTIVATE_FELL_STINGER
 	.endm
@@ -1975,3 +1980,5 @@
 	.macro givedroppeditems
 	various BS_FAINTED, VARIOUS_GIVE_DROPPED_ITEMS
 	.endm
+
+	

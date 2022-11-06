@@ -13655,7 +13655,8 @@ static const struct TrainerMonItemCustomMoves sParty_SummitCavernsLattka2[] = {
     .lvl = 35,
     .species = SPECIES_MEGA_DEWGONG,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_ICE_BEAM, MOVE_HAIL, MOVE_PSYSHOCK, MOVE_AURA_SPHERE},
+    // .moves = {MOVE_ICE_BEAM, MOVE_HAIL, MOVE_PSYSHOCK, MOVE_AURA_SPHERE},
+    .moves = {MOVE_SNEER, MOVE_SNEER, MOVE_SNEER, MOVE_SNEER},
     .stats =
         {
         .statDef = 180,

@@ -377,6 +377,7 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
     .4byte BattleScript_EffectOHKOSide
 	.4byte BattleScript_EffectDragonRavine
 	.4byte BattleScript_EffectBugSubstitute
+	.4byte BattleScript_EffectSneer
 
 BattleScript_EffectRevive::
 	attackcanceler
@@ -4783,6 +4784,19 @@ BattleScript_EffectTaunt::
 	jumpifability BS_TARGET_SIDE, ABILITY_AROMA_VEIL, BattleScript_AromaVeilProtects
 	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
 	settaunt BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_PKMNFELLFORTAUNT
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
+
+BattleScript_EffectSneer::
+	attackcanceler
+	attackstring
+	ppreduce
+	jumpifability BS_TARGET_SIDE, ABILITY_AROMA_VEIL, BattleScript_AromaVeilProtects
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+	setsneer BattleScript_ButItFailed
 	attackanimation
 	waitanimation
 	printstring STRINGID_PKMNFELLFORTAUNT

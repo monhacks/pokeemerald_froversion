@@ -532,10 +532,12 @@ static void Task_ClearBitWhenSpecialAnimDone(u8 taskId)
 // Great function to include newly added moves that don't have animation yet.
 bool8 IsMoveWithoutAnimation(u16 moveId, u8 animationTurn)
 {
-    if (moveId >= 800)
-        return TRUE;
+    if (moveId == MOVES_COUNT)
+        {Printf("WithoutANim");
+        return TRUE;}
     else
-        return FALSE;
+        {Printf("WithANim");
+        return FALSE;}
 }
 
 bool8 mplay_80342A4(u8 battlerId)

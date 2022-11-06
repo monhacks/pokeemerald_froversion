@@ -112,6 +112,8 @@ struct DisableStruct
     u8 wrapTurns;
     bool8 hasType2;
     u8 type1;
+    u8 sneerTimer:4;
+    u8 sneerTimer2:4;
 };
 
 struct ProtectStruct

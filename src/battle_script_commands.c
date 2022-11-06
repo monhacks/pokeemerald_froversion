@@ -8234,6 +8234,23 @@ static void Cmd_various(void)
         }
         gBattleStruct->bugSubstituteBattlerId = 0;
         break;
+    case VARIOUS_TRY_SET_SNEER:
+    if (gDisableStructs[gBattlerTarget].sneerTimer == 0)
+    {
+        u8 turns = 4;
+        if (GetBattlerTurnOrderNum(gBattlerTarget) > GetBattlerTurnOrderNum(gBattlerAttacker))
+            turns--; // If the target hasn't yet moved this turn, Taunt lasts for only three turns (source: Bulbapedia)
+
+        gDisableStructs[gBattlerTarget].sneerTimer = gDisableStructs[gBattlerTarget].sneerTimer2 = turns;
+        gBattlescriptCurrInstr += 7;
+        return;
+    }
+    else
+    {
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+        return;
+    }
+    break;
     case VARIOUS_TRY_ACTIVATE_FELL_STINGER:
         if (gBattleMoves[gCurrentMove].effect == EFFECT_FELL_STINGER
             && HasAttackerFaintedTarget()

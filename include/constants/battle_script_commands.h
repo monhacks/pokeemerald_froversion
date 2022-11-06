@@ -187,6 +187,7 @@
 #define VARIOUS_JUMPIFNODRAGONFAINTED               119
 #define VARIOUS_SETSUBSTITUTETYPE                   120
 #define VARIOUS_BUG_SUBSTITUTE                      121
+#define VARIOUS_TRY_SET_SNEER                       122
 #define VARIOUS_GIVE_DROPPED_ITEMS                  151
 
 // Cmd_manipulatedamage
