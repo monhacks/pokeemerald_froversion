@@ -4779,6 +4779,42 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     goto ABILITY_HEAL_MON_STATUS;
                 }
                 break;
+            case ABILITY_PSYCHO_SHIFT:
+                {
+                    gBattleScripting.battler = gActiveBattler;
+                    if(!(gBattleMons[B_POSITION_PLAYER_LEFT].status1 & STATUS1_ANY)
+                        && IsBattlerAlive(B_POSITION_PLAYER_LEFT))
+                        gBattlerTarget = B_POSITION_PLAYER_LEFT;
+                    else if(!(gBattleMons[B_POSITION_PLAYER_RIGHT].status1 & STATUS1_ANY)
+                        && IsBattlerAlive(B_POSITION_PLAYER_RIGHT))
+                        gBattlerTarget = B_POSITION_PLAYER_RIGHT;
+                    else
+                        gBattlerTarget = gActiveBattler;
+
+                    Printf("Target= %d", gBattlerTarget);
+                        
+                    if ((gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && !CanBeParalyzed(gBattlerTarget))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && !CanBePoisoned(gActiveBattler, gBattlerTarget))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && !CanBeBurned(gBattlerTarget))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP && !CanSleep(gBattlerTarget)))
+                    {
+                        // fails
+                        BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                        effect++;
+                    }
+                    else
+                    {
+                        // Psycho shift works
+                        
+                        gBattleMons[gBattlerTarget].status1 = gBattleMons[gActiveBattler].status1 & STATUS1_ANY;
+                        gActiveBattler = gBattlerTarget;
+                        BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, sizeof(gBattleMons[gActiveBattler].status1), &gBattleMons[gActiveBattler].status1);
+                        MarkBattlerForControllerExec(gActiveBattler);
+                        BattleScriptPushCursorAndCallback(BattleScript_EffectPsychoShiftCanWorkAbility);
+                        effect++;
+                    }
+                }
+        return;
             case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
                 {
                 u32 AbilityActivationRoll = 45;//Random() % 100;
@@ -6104,6 +6140,104 @@ enum
     ITEM_HP_CHANGE, // 4
     ITEM_STATS_CHANGE, // 5
 };
+
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag)
+{
+    if (!(gFieldStatuses & terrainFlag))
+        return FALSE;
+    else if (gStatuses3[battlerId] & STATUS3_SEMI_INVULNERABLE)
+        return FALSE;
+
+    return IsBattlerGrounded(battlerId);
+}
+
+bool32 CanSleep(u8 battlerId)
+{
+    u16 ability = GetBattlerAbility(battlerId);
+    if (ability == ABILITY_INSOMNIA
+      || ability == ABILITY_VITAL_SPIRIT
+      || ability == ABILITY_COMATOSE
+      || gSideStatuses[GetBattlerSide(battlerId)] & SIDE_STATUS_SAFEGUARD
+      || gBattleMons[battlerId].status1 & STATUS1_ANY
+      || IsAbilityOnSide(battlerId, ABILITY_SWEET_VEIL)
+      || IsAbilityStatusProtected(battlerId)
+      || IsBattlerTerrainAffected(battlerId, STATUS_FIELD_ELECTRIC_TERRAIN | STATUS_FIELD_MISTY_TERRAIN))
+        return FALSE;
+    return TRUE;
+}
+
+bool32 CanBePoisoned(u8 battlerAttacker, u8 battlerTarget)
+{
+    u16 ability = GetBattlerAbility(battlerTarget);
+
+    if (!(CanPoisonType(battlerAttacker, battlerTarget))
+     || gSideStatuses[GetBattlerSide(battlerTarget)] & SIDE_STATUS_SAFEGUARD
+     || gBattleMons[battlerTarget].status1 & STATUS1_ANY
+     || ability == ABILITY_IMMUNITY
+     || ability == ABILITY_COMATOSE
+     || IsAbilityOnSide(battlerTarget, ABILITY_PASTEL_VEIL)
+     || gBattleMons[battlerTarget].status1 & STATUS1_ANY
+     || IsAbilityStatusProtected(battlerTarget)
+     || IsBattlerTerrainAffected(battlerTarget, STATUS_FIELD_MISTY_TERRAIN))
+        return FALSE;
+    return TRUE;
+}
+
+bool32 CanBeBurned(u8 battlerId)
+{
+    u16 ability = GetBattlerAbility(battlerId);
+    if (IS_BATTLER_OF_TYPE(battlerId, TYPE_FIRE)
+      || gSideStatuses[GetBattlerSide(battlerId)] & SIDE_STATUS_SAFEGUARD
+      || gBattleMons[battlerId].status1 & STATUS1_ANY
+      || ability == ABILITY_WATER_VEIL
+      || ability == ABILITY_WATER_BUBBLE
+      || ability == ABILITY_COMATOSE
+      || IsAbilityStatusProtected(battlerId)
+      || IsBattlerTerrainAffected(battlerId, STATUS_FIELD_MISTY_TERRAIN))
+        return FALSE;
+    return TRUE;
+}
+
+bool32 CanBeParalyzed(u8 battlerId)
+{
+    u16 ability = GetBattlerAbility(battlerId);
+    if (
+    #if B_PARALYZE_ELECTRIC >= GEN_6
+        IS_BATTLER_OF_TYPE(battlerId, TYPE_ELECTRIC) ||
+    #endif
+        gSideStatuses[GetBattlerSide(battlerId)] & SIDE_STATUS_SAFEGUARD
+        || ability == ABILITY_LIMBER
+        || ability == ABILITY_COMATOSE
+        || gBattleMons[battlerId].status1 & STATUS1_ANY
+        || IsAbilityStatusProtected(battlerId)
+        || IsBattlerTerrainAffected(battlerId, STATUS_FIELD_MISTY_TERRAIN))
+        return FALSE;
+    return TRUE;
+}
+
+bool32 CanBeFrozen(u8 battlerId)
+{
+    u16 ability = GetBattlerAbility(battlerId);
+    if (IS_BATTLER_OF_TYPE(battlerId, TYPE_ICE)
+      //|| IsBattlerWeatherAffected(battlerId, B_WEATHER_SUN)
+      || gSideStatuses[GetBattlerSide(battlerId)] & SIDE_STATUS_SAFEGUARD
+      || ability == ABILITY_MAGMA_ARMOR
+      || ability == ABILITY_COMATOSE
+      || gBattleMons[battlerId].status1 & STATUS1_ANY
+      || IsAbilityStatusProtected(battlerId)
+      || IsBattlerTerrainAffected(battlerId, STATUS_FIELD_MISTY_TERRAIN))
+        return FALSE;
+    return TRUE;
+}
+
+bool32 CanBeConfused(u8 battlerId)
+{
+    if (GetBattlerAbility(gEffectBattler) == ABILITY_OWN_TEMPO
+      || gBattleMons[gEffectBattler].status2 & STATUS2_CONFUSION
+      || IsBattlerTerrainAffected(battlerId, STATUS_FIELD_MISTY_TERRAIN))
+        return FALSE;
+    return TRUE;
+}
 
 // second argument is 1/X of current hp compared to max hp
 static bool32 HasEnoughHpToEatBerry(u32 battlerId, u32 hpFraction, u32 itemId)

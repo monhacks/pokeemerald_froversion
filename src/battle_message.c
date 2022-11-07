@@ -230,6 +230,7 @@ static const u8 sText_PkmnStatusNormal[] = _("{B_ATK_NAME_WITH_PREFIX}'s status\
 static const u8 sText_PkmnSubjectedToTorment[] = _("{B_DEF_NAME_WITH_PREFIX} was subjected\nto TORMENT!");
 static const u8 sText_PkmnTighteningFocus[] = _("{B_ATK_NAME_WITH_PREFIX} is tightening\nits focus!");
 static const u8 sText_PkmnFellForTaunt[] = _("{B_DEF_NAME_WITH_PREFIX} fell for\nthe Taunt!");
+static const u8 sText_PkmnFellForSneer[] = _("{B_DEF_NAME_WITH_PREFIX} fell for\nthe Sneer!");
 static const u8 sText_PkmnReadyToHelp[] = _("{B_ATK_NAME_WITH_PREFIX} is ready to\nhelp {B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnSwitchedItems[] = _("{B_ATK_NAME_WITH_PREFIX} switched\nitems with its opponent!");
 static const u8 sText_PkmnObtainedX[] = _("{B_ATK_NAME_WITH_PREFIX} obtained\n{B_BUFF1}.");
@@ -1367,6 +1368,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_SOARINGDRAGONSTATRESET - 12] = sText_SoaringDragonStatReset,
     [STRINGID_PKMNBUGSUBSTITUTELEVELEDUP - 12] = sText_PkmnBugSubEvolved,
     [STRINGID_SLEEPYHEADFOG - 12] = sText_SleepyHeadFog,
+    [STRINGID_PKMNFELLFORSNEER - 12] = sText_PkmnFellForSneer,
 };
 
 const u16 gTerrainStringIds[] =

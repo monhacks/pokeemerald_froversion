@@ -1150,7 +1150,7 @@ BattleScript_EffectPsychoShift:
 	ppreduce
 	jumpifstatus BS_ATTACKER, STATUS1_ANY, BattleScript_EffectPsychoShiftCanWork
 	goto BattleScript_ButItFailed
-BattleScript_EffectPsychoShiftCanWork:
+BattleScript_EffectPsychoShiftCanWork::
 	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
 	jumpifsafeguard BattleScript_SafeguardProtected
 	trypsychoshift BattleScript_MoveEnd
@@ -1166,6 +1166,19 @@ BattleScript_EffectPsychoShiftCanWork:
 	waitmessage 0x40
 	updatestatusicon BS_ATTACKER
 	goto BattleScript_MoveEnd
+
+BattleScript_EffectPsychoShiftCanWorkAbility::
+	call BattleScript_AbilityPopUp
+	copybyte gEffectBattler, gBattlerTarget
+	printstring STRINGID_PKMNSWITCHEDATKANDDEF
+	waitmessage 0x40
+	statusanimation BS_TARGET
+	updatestatusicon BS_TARGET
+	curestatus BS_SCRIPTING
+	printstring STRINGID_PKMNSTATUSNORMAL
+	waitmessage 0x40
+	updatestatusicon BS_SCRIPTING
+	end3
 
 BattleScript_EffectSynchronoise:
 	attackcanceler
@@ -4799,7 +4812,7 @@ BattleScript_EffectSneer::
 	setsneer BattleScript_ButItFailed
 	attackanimation
 	waitanimation
-	printstring STRINGID_PKMNFELLFORTAUNT
+	printstring STRINGID_PKMNFELLFORSNEER
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 

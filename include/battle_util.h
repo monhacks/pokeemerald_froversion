@@ -141,4 +141,12 @@ bool32 TryChangeBattleTerrain(u32 battler, u32 statusFlag, u8 *timer);
 bool32 CanStealItem(u8 battlerStealing, u8 battlerItem, u16 item);
 void TrySaveExchangedItem(u8 battlerId, u16 stolenItem);
 
+//Ability Checks
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerAttacker, u8 battlerTarget);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+
 #endif // GUARD_BATTLE_UTIL_H

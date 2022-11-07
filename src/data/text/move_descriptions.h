@@ -2950,6 +2950,11 @@ static const u8 sMagicMirrorDescription[] = _(
     "Reflects SpAtk back at\n"
     "attacker.");
 
+
+static const u8 sSneerDescription[] = _(
+    "Goads the foe into only\n"
+    "using status moves.");
+
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
@@ -3719,4 +3724,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_REVIVE - 1] = sNotDoneYetDescription,
     [MOVE_PLASMA_BLADE - 1] = sNotDoneYetDescription,
     [MOVE_OHKO_SIDE - 1] = sNotDoneYetDescription,
+    [MOVE_SNEER - 1] = sSneerDescription,
 };
