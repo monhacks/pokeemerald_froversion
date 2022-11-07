@@ -154,6 +154,7 @@ extern const u8 BattleScript_SpeedBoostActivates[];
 extern const u8 BattleScript_TraceActivates[];
 extern const u8 BattleScript_TraceActivatesEnd3[];
 extern const u8 BattleScript_RainDishActivates[];
+extern const u8 BattleScript_AbilityGivesHeldItem[];
 extern const u8 BattleScript_ShadowCharizardCharging[];
 extern const u8 BattleScript_AbyssalDefensiveStance[];
 extern const u8 BattleScript_AbyssalReturnOriginalStance[];

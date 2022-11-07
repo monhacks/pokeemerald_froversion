@@ -753,6 +753,8 @@ static const u8 sText_PkmnsXCuredYProblem2[] = _("{B_BUFF2}'s {B_SCR_ACTIVE_ABIL
 static const u8 sText_SoaringDragonStatReset[] = _("{B_ATK_NAME_WITH_PREFIX} time in the sky\nremoved it's stat changes!");
 static const u8 sText_PkmnBugSubEvolved[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Bugstitute\nevolved!\pIt is now stonger!");
 static const u8 sText_SleepyHeadFog[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nwhips up a dreamy fog!\n");
+static const u8 sText_AbilityGivesHeldItem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nconjures a Flame Orb for it to hold");
+
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1369,6 +1371,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNBUGSUBSTITUTELEVELEDUP - 12] = sText_PkmnBugSubEvolved,
     [STRINGID_SLEEPYHEADFOG - 12] = sText_SleepyHeadFog,
     [STRINGID_PKMNFELLFORSNEER - 12] = sText_PkmnFellForSneer,
+    [STRINGID_ABILITYGIVESHELDITEM - 12] = sText_AbilityGivesHeldItem,
 };
 
 const u16 gTerrainStringIds[] =

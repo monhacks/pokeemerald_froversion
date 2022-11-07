@@ -7395,6 +7395,12 @@ BattleScript_RainDishActivates::
 	call BattleScript_AbilityHpHeal
 	end3
 
+BattleScript_AbilityGivesHeldItem::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_ABILITYGIVESHELDITEM
+	waitmessage 0x40
+	end3
+
 BattleScript_ShadowCharizardCharging::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_CHARIZARDISCHARGING

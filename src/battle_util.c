@@ -4782,6 +4782,12 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             case ABILITY_PSYCHO_SHIFT:
                 {
                     gBattleScripting.battler = gActiveBattler;
+                    if(gBattleMons[gBattleScripting.battler].item == ITEM_NONE)
+                        {
+                            gBattleMons[gBattleScripting.battler].item = ITEM_FLAME_ORB;
+                            BattleScriptPushCursorAndCallback(BattleScript_AbilityGivesHeldItem);
+                            effect++;
+                        }
                     if(!(gBattleMons[B_POSITION_PLAYER_LEFT].status1 & STATUS1_ANY)
                         && IsBattlerAlive(B_POSITION_PLAYER_LEFT))
                         gBattlerTarget = B_POSITION_PLAYER_LEFT;
