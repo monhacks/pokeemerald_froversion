@@ -565,6 +565,7 @@ struct BattleStruct
     s8 aiFinalScore[MAX_BATTLERS_COUNT][MAX_BATTLERS_COUNT][MAX_MON_MOVES]; // AI, target, moves to make debugging easier
     u8 soulheartBattlerId;
     u8 dragonravineBattlerId;
+    u8 conjureId;
     u8 bugSubstituteBattlerId;
     u8 friskedBattler; // Frisk needs to identify 2 battlers in double battles.
     bool8 friskedAbility; // If identifies two mons, show the ability pop-up only once.
@@ -911,6 +912,9 @@ extern u8 gLastUsedBall;
 extern u8 gChangeAbilityPopUp;
 extern u16 gNewAbilityPopUp1;
 extern u16 gNewAbilityPopUp2;
+extern u16 gNewAbilityPopUp3;
+extern u16 gNewPositionPopUp1;
+extern u16 gNewNameNewAbility;
 extern u8 gChangeTxtScrAbility1;
 extern u8 gChangeTxtScrAbility2;
 extern u16 gNewTxtScrAbility1;

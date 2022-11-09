@@ -24,10 +24,12 @@ void ClearBattlerAbilityHistory(u8 battlerId);
 void RecordItemEffectBattle(u8 battlerId, u8 itemEffect);
 void ClearBattlerItemEffectHistory(u8 battlerId);
 bool32 IsSpeciesOneOf(u16 specie, const u16 *species);
+bool32 IsItemOneOf(u16 item, const u16 *item1);
 extern const u16 gRuthlashLine[];
 extern const u16 gMechobraLine[];
 extern const u16 gRiptorypsLine[];
 extern const u16 gMegaBosses[];
 extern const u16 gLevitateMons[];
+extern const u16 gSelfInflictingItems[];
 
 #endif // GUARD_BATTLE_AI_SCRIPT_COMMANDS_H

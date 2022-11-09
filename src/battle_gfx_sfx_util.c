@@ -533,11 +533,9 @@ static void Task_ClearBitWhenSpecialAnimDone(u8 taskId)
 bool8 IsMoveWithoutAnimation(u16 moveId, u8 animationTurn)
 {
     if (moveId == MOVES_COUNT)
-        {Printf("WithoutANim");
-        return TRUE;}
+        return TRUE;
     else
-        {Printf("WithANim");
-        return FALSE;}
+        return FALSE;
 }
 
 bool8 mplay_80342A4(u8 battlerId)

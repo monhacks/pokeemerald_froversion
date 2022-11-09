@@ -1773,6 +1773,7 @@ enum
     ENDTURN_DRAGON_RAVINE,
     ENDTURN_DRAGON_RAVINE_REVIVE,
     ENDTURN_BUG_SUBSTITUTE,
+    ENDTURN_CONJURE,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -2310,6 +2311,37 @@ u8 DoFieldEndTurnEffects(void)
                 effect++;
                 gBattleStruct->turnCountersTracker++;
                 gBattleStruct->turnSideTracker = 0;
+                break;
+        case ENDTURN_CONJURE:
+                while (gBattleStruct->conjureId < gBattlersCount)
+                {
+                gBattleScripting.battler = gBattleStruct->conjureId++;
+                gBattlerAbility = gBattleScripting.battler;
+                gActiveBattler = gBattleScripting.battler;
+                if(IsItemOneOf(gBattleMons[gBattleScripting.battler].item, gSelfInflictingItems)
+                    && GetBattlerAbility(gBattleScripting.battler) == ABILITY_PSYCHO_SHIFT
+                    && !(gBattleMons[gBattleScripting.battler].status1 & STATUS1_ANY))
+                        {   
+                            u16 item = gSelfInflictingItems[Random() % 5];
+                            Printf("item = %d", item);
+                            PREPARE_ITEM_BUFFER(gBattleTextBuff1, item);
+                            PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gBattleMons[gBattleScripting.battler].ability);
+                            PREPARE_SPECIES_BUFFER(gBattleTextBuff3, gBattleMons[gBattleScripting.battler].species);
+                            gChangeAbilityPopUp = gNewNameNewAbility;
+                            gNewAbilityPopUp3 = ABILITY_CONJURE;
+                            gNewPositionPopUp1 = gBattleScripting.battler;
+                            gBattleMons[gBattleScripting.battler].item = item;
+                            BattleScriptExecute(BattleScript_AbilityGivesHeldItem);
+                            effect++;
+                        }
+                else if(GetBattlerAbility(gBattleScripting.battler) == ABILITY_PSYCHO_SHIFT)
+                    {
+                        gBattleMons[gBattleScripting.battler].item = ITEM_NONE;
+                        effect++;
+                    }
+                }
+                gBattleStruct->conjureId = 0;
+                gBattleStruct->turnCountersTracker++;
                 break;
         case ENDTURN_WATER_SPORT:
             if (gFieldStatuses & STATUS_FIELD_WATERSPORT && --gFieldTimers.waterSportTimer == 0)
@@ -4781,13 +4813,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 break;
             case ABILITY_PSYCHO_SHIFT:
                 {
+                    s32 i = TRUE;
                     gBattleScripting.battler = gActiveBattler;
-                    if(gBattleMons[gBattleScripting.battler].item == ITEM_NONE)
-                        {
-                            gBattleMons[gBattleScripting.battler].item = ITEM_FLAME_ORB;
-                            BattleScriptPushCursorAndCallback(BattleScript_AbilityGivesHeldItem);
-                            effect++;
-                        }
+
                     if(!(gBattleMons[B_POSITION_PLAYER_LEFT].status1 & STATUS1_ANY)
                         && IsBattlerAlive(B_POSITION_PLAYER_LEFT))
                         gBattlerTarget = B_POSITION_PLAYER_LEFT;
@@ -4795,14 +4823,30 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                         && IsBattlerAlive(B_POSITION_PLAYER_RIGHT))
                         gBattlerTarget = B_POSITION_PLAYER_RIGHT;
                     else
+                        {
                         gBattlerTarget = gActiveBattler;
+                        i = FALSE;
+                        }
 
-                    Printf("Target= %d", gBattlerTarget);
-                        
+                    // Printf("I = %d", i);
+                
+                    // if(i == FALSE)
+                    //     gBattleMons[gBattleScripting.battler].item = ITEM_NONE;
+                    // if(IsItemOneOf(gBattleMons[gBattleScripting.battler].item, gSelfInflictingItems))
+                    //     {   
+                    //         u16 item = gSelfInflictingItems[Random() % 5];
+                    //         PREPARE_ITEM_BUFFER(gBattleTextBuff1, item);
+                    //         gBattleMons[gBattleScripting.battler].item = item;
+                    //         BattleScriptPushCursorAndCallback(BattleScript_AbilityGivesHeldItem);
+                    //         effect++;
+                    //     }
+
+                    // Printf("ITEM = %d",gBattleMons[gBattleScripting.battler].item);
                     if ((gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && !CanBeParalyzed(gBattlerTarget))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && !CanBePoisoned(gActiveBattler, gBattlerTarget))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && !CanBeBurned(gBattlerTarget))
-                    || (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP && !CanSleep(gBattlerTarget)))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP && !CanSleep(gBattlerTarget))
+                    || (!(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)))
                     {
                         // fails
                         BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
@@ -4820,7 +4864,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                         effect++;
                     }
                 }
-        return;
+                break;
             case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
                 {
                 u32 AbilityActivationRoll = 45;//Random() % 100;
@@ -7341,6 +7385,36 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 effect = ITEM_STATUS_CHANGE;
                 gBattleMons[battlerId].status1 = STATUS1_BURN;
                 BattleScriptExecute(BattleScript_FlameOrb);
+                RecordItemEffectBattle(battlerId, battlerHoldEffect);
+            }
+            break;
+        case HOLD_EFFECT_STATIC_ORB:
+            if (!gBattleMons[battlerId].status1
+                && !IS_BATTLER_OF_TYPE(battlerId, TYPE_ELECTRIC)
+                && GetBattlerAbility(battlerId) != ABILITY_LIMBER)
+            {
+                effect = ITEM_STATUS_CHANGE;
+                gBattleMons[battlerId].status1 = STATUS1_PARALYSIS;
+                BattleScriptExecute(BattleScript_StaticOrb);
+                RecordItemEffectBattle(battlerId, battlerHoldEffect);
+            }
+            break;
+        case HOLD_EFFECT_DREAM_ORB:
+            if (!gBattleMons[battlerId].status1
+                && GetBattlerAbility(battlerId) != ABILITY_INSOMNIA)
+            {
+                effect = ITEM_STATUS_CHANGE;
+                gBattleMons[battlerId].status1 = STATUS1_SLEEP;
+                BattleScriptExecute(BattleScript_DreamOrb);
+                RecordItemEffectBattle(battlerId, battlerHoldEffect);
+            }
+            break;
+        case HOLD_EFFECT_FROST_ORB:
+            if (!gBattleMons[battlerId].status1)
+            {
+                effect = ITEM_STATUS_CHANGE;
+                gBattleMons[battlerId].status1 = STATUS1_FREEZE;
+                BattleScriptExecute(BattleScript_FrostOrb);
                 RecordItemEffectBattle(battlerId, battlerHoldEffect);
             }
             break;

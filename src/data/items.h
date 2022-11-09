@@ -7812,4 +7812,43 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+    [ITEM_STATIC_ORB] =
+    {
+        .name = _("Static Orb"),
+        .itemId = ITEM_STATIC_ORB,
+        .price = 200,
+        .holdEffect = HOLD_EFFECT_STATIC_ORB,
+        .description = sStaticOrbDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
+    [ITEM_DREAM_ORB] =
+    {
+        .name = _("Dream Orb"),
+        .itemId = ITEM_DREAM_ORB,
+        .price = 200,
+        .holdEffect = HOLD_EFFECT_DREAM_ORB,
+        .description = sDreamOrbDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+    
+    [ITEM_FROST_ORB] =
+    {
+        .name = _("Frost Orb"),
+        .itemId = ITEM_FROST_ORB,
+        .price = 200,
+        .holdEffect = HOLD_EFFECT_FROST_ORB,
+        .description = sFrostOrbDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
 };

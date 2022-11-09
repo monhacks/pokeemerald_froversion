@@ -8675,7 +8675,12 @@ static void Cmd_various(void)
         }
         return;
     case VARIOUS_ABILITY_POPUP:
-        if(gChangeAbilityPopUp == 2)
+        if(gChangeAbilityPopUp == gNewNameNewAbility)
+        {
+            CreateAbilityPopUp(gNewPositionPopUp1, gNewAbilityPopUp3, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
+            gChangeAbilityPopUp--;
+        }
+        else if(gChangeAbilityPopUp == 2)
         {
             CreateAbilityPopUp(gActiveBattler, gNewAbilityPopUp2, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
             gChangeAbilityPopUp--;

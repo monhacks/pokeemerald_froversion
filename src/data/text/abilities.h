@@ -564,6 +564,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SAND_SOOTHE] = _("Sand Soothe"),
     [ABILITY_SLEEPYHEAD] = _("Sleepy Head"),
     [ABILITY_MATT_BOSS_FIGHT] = _("Placeholder"),
+    [ABILITY_PSYCHO_SHIFT] = _("PsychoShift"),
+    [ABILITY_CONJURE] = _("Conjure"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =

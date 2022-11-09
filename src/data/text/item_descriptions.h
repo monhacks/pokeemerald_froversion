@@ -3054,3 +3054,20 @@ static const u8 sNCCPackageDesc[] = _(
 static const u8 sLabKeyDesc[] = _(
     "A key to the underground\n"
     "Lab");
+
+
+static const u8 sStaticOrbDesc[] = _(
+    "A bizarre orb that\n"
+    "inflicts a paralysis\n"
+    "on holder in battle.");
+
+
+static const u8 sDreamOrbDesc[] = _(
+    "A bizarre orb that\n"
+    "inflicts a sleep on\n"
+    "holder in battle.");
+
+static const u8 sFrostOrbDesc[] = _(
+    "A bizarre orb that\n"
+    "inflicts a freeze on\n"
+    "holder in battle.");

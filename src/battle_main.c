@@ -240,6 +240,9 @@ EWRAM_DATA u8 gLastUsedBall = 0;
 EWRAM_DATA u8 gChangeAbilityPopUp = 0;
 EWRAM_DATA u16 gNewAbilityPopUp1 = 0;
 EWRAM_DATA u16 gNewAbilityPopUp2 = 0;
+EWRAM_DATA u16 gNewAbilityPopUp3 = 0;
+EWRAM_DATA u16 gNewPositionPopUp1 = 0;                
+EWRAM_DATA u16 gNewNameNewAbility = 0;
 EWRAM_DATA u8 gChangeTxtScrAbility1 = 0;
 EWRAM_DATA u8 gChangeTxtScrAbility2 = 0;
 EWRAM_DATA u16 gNewTxtScrAbility1 = 0;
@@ -4882,6 +4885,16 @@ bool32 IsSpeciesOneOf(u16 specie, const u16 *species)
         return FALSE;
 }
 
+bool32 IsItemOneOf(u16 item, const u16 *item1)
+{
+    for (; *item1 !=0xFFFF; item1 ++)
+        {
+        if (*item1 == item)
+            return TRUE;
+        }
+        return FALSE;
+}
+
 const u16 gSlashingMoves[] =
     {
         MOVE_AIR_CUTTER,
@@ -4975,6 +4988,19 @@ const u16 gSlashingMoves[] =
         SPECIES_DRACASTER,
         0xFFFF
     };
+
+//Items Arrays
+
+const u16 gSelfInflictingItems[] =
+{
+    ITEM_TOXIC_ORB,
+    ITEM_FLAME_ORB,
+    ITEM_STATIC_ORB,
+    ITEM_DREAM_ORB,
+    ITEM_FROST_ORB,
+    ITEM_NONE,
+    0xFFFF
+};
 
 
 s8 GetMovePriority(u32 battlerId, u16 move)
