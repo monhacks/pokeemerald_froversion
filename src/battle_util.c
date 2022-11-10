@@ -4854,6 +4854,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     else if ((gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && CanBeParalyzed(B_POSITION_PLAYER_RIGHT))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && CanBePoisoned(gActiveBattler, B_POSITION_PLAYER_RIGHT))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && CanBeBurned(B_POSITION_PLAYER_RIGHT))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP && CanSleep(B_POSITION_PLAYER_RIGHT))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_FREEZE && CanBeFrozen(B_POSITION_PLAYER_RIGHT)))
                         gBattlerTarget = B_POSITION_PLAYER_RIGHT;
                     else
@@ -7406,7 +7407,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             break;
         case HOLD_EFFECT_FLAME_ORB:
             if (!gBattleMons[battlerId].status1
-                && !IS_BATTLER_OF_TYPE(battlerId, TYPE_FIRE)
+                && (!IS_BATTLER_OF_TYPE(battlerId, TYPE_FIRE) || gBattleMons[battlerId].species == SPECIES_CHEETO)
                 && GetBattlerAbility(battlerId) != ABILITY_WATER_VEIL)
             {
                 effect = ITEM_STATUS_CHANGE;
@@ -8589,6 +8590,9 @@ u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 i
     case ABILITY_GUTS:
         if (gBattleMons[battlerAtk].status1 & STATUS1_ANY && stat == STAT_ATK)
             MulModifier(&modifier, UQ_4_12(1.5));
+    case ABILITY_MATT_BOSS_FIGHT:
+        if (gBattleMons[battlerAtk].status1 & STATUS1_BURN && (stat == STAT_ATK || stat == STAT_SPATK))
+            MulModifier(&modifier, UQ_4_12(1.5));
         break;
     }
 
@@ -9141,7 +9145,7 @@ static u16 CalcTypeEffectivenessMultiplierInternal(u16 move, u8 moveType, u8 bat
             RecordAbilityBattle(battlerDef, ABILITY_LEVITATE);
         }
     }
-    if ((GetBattlerAbility(battlerDef) == ABILITY_WONDER_GUARD || GetBattlerAbility(battlerDef) ==  ABILITY_MATT_BOSS_FIGHT) 
+    if ((GetBattlerAbility(battlerDef) == ABILITY_WONDER_GUARD) 
         && modifier <= UQ_4_12(1.0) && gBattleMoves[move].power)
     {
         modifier = UQ_4_12(0.0);
@@ -9193,7 +9197,7 @@ u16 CalcPartyMonTypeEffectivenessMultiplier(u16 move, u16 speciesDef, u16 abilit
             modifier = UQ_4_12(0.0);
         if (moveType == TYPE_GROUND && (IsSpeciesOneOf(speciesDef, gLevitateMons)) && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
             modifier = UQ_4_12(0.0);
-        if ((abilityDef == ABILITY_WONDER_GUARD || abilityDef == ABILITY_MATT_BOSS_FIGHT) && modifier <= UQ_4_12(1.0) && gBattleMoves[move].power)
+        if (abilityDef == ABILITY_WONDER_GUARD && modifier <= UQ_4_12(1.0) && gBattleMoves[move].power)
             modifier = UQ_4_12(0.0);
     }
 
