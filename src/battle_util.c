@@ -1460,6 +1460,11 @@ static bool32 IsBelchPreventingMove(u32 battler, u32 move)
     return !(gBattleStruct->ateBerry[battler & BIT_SIDE] & gBitTable[gBattlerPartyIndexes[battler]]);
 }
 
+static bool32 CanStatus(u32 battlerId)
+{
+  return IsBattlerAlive(battlerId) && !(gBattleMons[battlerId].status1 & STATUS1_ANY);
+}
+
 u8 TrySetCantSelectMoveBattleScript(void)
 {
     u32 limitations = 0;
@@ -2315,10 +2320,14 @@ u8 DoFieldEndTurnEffects(void)
         case ENDTURN_CONJURE:
                 while (gBattleStruct->conjureId < gBattlersCount)
                 {
+                bool32 canStatusLeft = CanStatus(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
+                bool32 canStatusRight = CanStatus(GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT));
+
                 gBattleScripting.battler = gBattleStruct->conjureId++;
                 gBattlerAbility = gBattleScripting.battler;
                 gActiveBattler = gBattleScripting.battler;
-                if(IsItemOneOf(gBattleMons[gBattleScripting.battler].item, gSelfInflictingItems)
+                if((canStatusLeft || canStatusRight)
+                    && IsItemOneOf(gBattleMons[gBattleScripting.battler].item, gSelfInflictingItems)
                     && GetBattlerAbility(gBattleScripting.battler) == ABILITY_PSYCHO_SHIFT
                     && !(gBattleMons[gBattleScripting.battler].status1 & STATUS1_ANY))
                         {   
@@ -4813,44 +4822,49 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 break;
             case ABILITY_PSYCHO_SHIFT:
                 {
-                    s32 i = TRUE;
                     gBattleScripting.battler = gActiveBattler;
 
-                    if(!(gBattleMons[B_POSITION_PLAYER_LEFT].status1 & STATUS1_ANY)
-                        && IsBattlerAlive(B_POSITION_PLAYER_LEFT))
-                        gBattlerTarget = B_POSITION_PLAYER_LEFT;
-                    else if(!(gBattleMons[B_POSITION_PLAYER_RIGHT].status1 & STATUS1_ANY)
-                        && IsBattlerAlive(B_POSITION_PLAYER_RIGHT))
+                    // Printf("Para1 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && CanBeParalyzed(B_POSITION_PLAYER_LEFT)));
+                    // Printf("Pois1 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && CanBePoisoned(gActiveBattler, B_POSITION_PLAYER_LEFT)));
+                    // Printf("Burn1 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && CanBeBurned(B_POSITION_PLAYER_LEFT)));
+                    // Printf("Sleep1 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP && CanSleep(B_POSITION_PLAYER_LEFT)));
+                    // Printf("Para2 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && CanBeParalyzed(B_POSITION_PLAYER_RIGHT)));
+                    // Printf("Pois2 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && CanBePoisoned(gActiveBattler, B_POSITION_PLAYER_RIGHT)));
+                    // Printf("Burn2 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && CanBeBurned(B_POSITION_PLAYER_RIGHT)));
+                    // Printf("Sleep2 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP && CanSleep(B_POSITION_PLAYER_RIGHT)));
+                    if ((gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && CanBeParalyzed(B_POSITION_PLAYER_LEFT))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && CanBePoisoned(gActiveBattler, B_POSITION_PLAYER_LEFT))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && CanBeBurned(B_POSITION_PLAYER_LEFT))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP && CanSleep(B_POSITION_PLAYER_LEFT))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_FREEZE && CanBeFrozen(B_POSITION_PLAYER_LEFT)))
+                            gBattlerTarget = B_POSITION_PLAYER_LEFT;
+                    else if ((gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && CanBeParalyzed(B_POSITION_PLAYER_RIGHT))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && CanBePoisoned(gActiveBattler, B_POSITION_PLAYER_RIGHT))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && CanBeBurned(B_POSITION_PLAYER_RIGHT))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_FREEZE && CanBeFrozen(B_POSITION_PLAYER_RIGHT)))
                         gBattlerTarget = B_POSITION_PLAYER_RIGHT;
                     else
                         {
                         gBattlerTarget = gActiveBattler;
-                        i = FALSE;
                         }
 
-                    // Printf("I = %d", i);
-                
-                    // if(i == FALSE)
-                    //     gBattleMons[gBattleScripting.battler].item = ITEM_NONE;
-                    // if(IsItemOneOf(gBattleMons[gBattleScripting.battler].item, gSelfInflictingItems))
-                    //     {   
-                    //         u16 item = gSelfInflictingItems[Random() % 5];
-                    //         PREPARE_ITEM_BUFFER(gBattleTextBuff1, item);
-                    //         gBattleMons[gBattleScripting.battler].item = item;
-                    //         BattleScriptPushCursorAndCallback(BattleScript_AbilityGivesHeldItem);
-                    //         effect++;
-                    //     }
+                    
+                    Printf("B_POSITION_PLAYER_RIGHT = %d", B_POSITION_PLAYER_RIGHT);
+                    Printf("B_POSITION_PLAYER_LEFT = %d", B_POSITION_PLAYER_LEFT);
+                    Printf("gBattlerTarget = %d", gBattlerTarget);
 
-                    // Printf("ITEM = %d",gBattleMons[gBattleScripting.battler].item);
                     if ((gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && !CanBeParalyzed(gBattlerTarget))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && !CanBePoisoned(gActiveBattler, gBattlerTarget))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && !CanBeBurned(gBattlerTarget))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP && !CanSleep(gBattlerTarget))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_FREEZE && !CanBeFrozen(gBattlerTarget))
                     || (!(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)))
                     {
                         // fails
-                        BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
-                        effect++;
+                        if(gBattleMons[gActiveBattler].status1 & STATUS1_ANY)
+                            goto ABILITY_HEAL_MON_STATUS;
+                        else
+                            effect++;
                     }
                     else
                     {

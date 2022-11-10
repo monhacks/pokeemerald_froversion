@@ -1170,7 +1170,7 @@ BattleScript_EffectPsychoShiftCanWork::
 BattleScript_EffectPsychoShiftCanWorkAbility::
 	call BattleScript_AbilityPopUp
 	copybyte gEffectBattler, gBattlerTarget
-	printstring STRINGID_PKMNSWITCHEDATKANDDEF
+	printfromtable gStatusConditionsStringIds
 	waitmessage 0x40
 	statusanimation BS_TARGET
 	updatestatusicon BS_TARGET
