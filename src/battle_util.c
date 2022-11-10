@@ -860,6 +860,7 @@ static const u8 sAbilitiesAffectedByMoldBreaker[] =
     [ABILITY_QUEENLY_MAJESTY] = 1,
     [ABILITY_WATER_BUBBLE] = 1,
     [ABILITY_ABYSSAL] = 1,
+    [ABILITY_MATT_BOSS_FIGHT] = 1,
 };
 
 static const u8 sAbilitiesNotTraced[ABILITIES_COUNT] =
@@ -2328,7 +2329,7 @@ u8 DoFieldEndTurnEffects(void)
                 gActiveBattler = gBattleScripting.battler;
                 if((canStatusLeft || canStatusRight)
                     && IsItemOneOf(gBattleMons[gBattleScripting.battler].item, gSelfInflictingItems)
-                    && GetBattlerAbility(gBattleScripting.battler) == ABILITY_PSYCHO_SHIFT
+                    && (GetBattlerAbility(gBattleScripting.battler) == ABILITY_PSYCHO_SHIFT || GetBattlerAbility(gBattleScripting.battler) == ABILITY_MATT_BOSS_FIGHT)
                     && !(gBattleMons[gBattleScripting.battler].status1 & STATUS1_ANY))
                         {   
                             u16 item = gSelfInflictingItems[Random() % 5];
@@ -2343,7 +2344,7 @@ u8 DoFieldEndTurnEffects(void)
                             BattleScriptExecute(BattleScript_AbilityGivesHeldItem);
                             effect++;
                         }
-                else if(GetBattlerAbility(gBattleScripting.battler) == ABILITY_PSYCHO_SHIFT)
+                else if(GetBattlerAbility(gBattleScripting.battler) == ABILITY_PSYCHO_SHIFT || GetBattlerAbility(gBattleScripting.battler) == ABILITY_MATT_BOSS_FIGHT)
                     {
                         gBattleMons[gBattleScripting.battler].item = ITEM_NONE;
                         effect++;
@@ -4598,6 +4599,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             }
             break;
         case ABILITY_CHARISMA:
+        case ABILITY_MATT_BOSS_FIGHT:
             if (!(gSpecialStatuses[battler].charismadMon))
             {
                 gBattleResources->flags->flags[battler] |= RESOURCE_FLAG_CHARISMAD;
@@ -4821,6 +4823,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 }
                 break;
             case ABILITY_PSYCHO_SHIFT:
+            case ABILITY_MATT_BOSS_FIGHT:
                 {
                     gBattleScripting.battler = gActiveBattler;
 
@@ -5999,7 +6002,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
     case ABILITYEFFECT_CHARISMA2:
         for (i = 0; i < gBattlersCount; i++)
         {
-            if (gBattleMons[i].ability == ABILITY_CHARISMA && gBattleResources->flags->flags[i] & RESOURCE_FLAG_CHARISMAD)
+            if ((gBattleMons[i].ability == ABILITY_CHARISMA || gBattleMons[i].ability == ABILITY_MATT_BOSS_FIGHT) && gBattleResources->flags->flags[i] & RESOURCE_FLAG_CHARISMAD)
             {
                 gLastUsedAbility = ABILITY_CHARISMA;
                 gBattleResources->flags->flags[i] &= ~(RESOURCE_FLAG_CHARISMAD);
@@ -9138,7 +9141,8 @@ static u16 CalcTypeEffectivenessMultiplierInternal(u16 move, u8 moveType, u8 bat
             RecordAbilityBattle(battlerDef, ABILITY_LEVITATE);
         }
     }
-    if (GetBattlerAbility(battlerDef) == ABILITY_WONDER_GUARD && modifier <= UQ_4_12(1.0) && gBattleMoves[move].power)
+    if ((GetBattlerAbility(battlerDef) == ABILITY_WONDER_GUARD || GetBattlerAbility(battlerDef) ==  ABILITY_MATT_BOSS_FIGHT) 
+        && modifier <= UQ_4_12(1.0) && gBattleMoves[move].power)
     {
         modifier = UQ_4_12(0.0);
         if (recordAbilities)
@@ -9189,7 +9193,7 @@ u16 CalcPartyMonTypeEffectivenessMultiplier(u16 move, u16 speciesDef, u16 abilit
             modifier = UQ_4_12(0.0);
         if (moveType == TYPE_GROUND && (IsSpeciesOneOf(speciesDef, gLevitateMons)) && !(gFieldStatuses & STATUS_FIELD_GRAVITY))
             modifier = UQ_4_12(0.0);
-        if (abilityDef == ABILITY_WONDER_GUARD && modifier <= UQ_4_12(1.0) && gBattleMoves[move].power)
+        if ((abilityDef == ABILITY_WONDER_GUARD || abilityDef == ABILITY_MATT_BOSS_FIGHT) && modifier <= UQ_4_12(1.0) && gBattleMoves[move].power)
             modifier = UQ_4_12(0.0);
     }
 

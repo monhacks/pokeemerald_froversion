@@ -1611,7 +1611,7 @@ u32 GetTotalAccuracy(u32 battlerAtk, u32 battlerDef, u32 move)
 
     if (atkAbility == ABILITY_COMPOUND_EYES)
         calc = (calc * 130) / 100; // 1.3 compound eyes boost
-    else if (atkAbility == ABILITY_VICTORY_STAR)
+    else if (atkAbility == ABILITY_VICTORY_STAR || atkAbility == ABILITY_MATT_BOSS_FIGHT)
         calc = (calc * 110) / 100; // 1.1 victory star boost
     if (IsBattlerAlive(BATTLE_PARTNER(battlerAtk)) && GetBattlerAbility(BATTLE_PARTNER(battlerAtk)) == ABILITY_VICTORY_STAR)
         calc = (calc * 110) / 100; // 1.1 ally's victory star boost
@@ -3373,7 +3373,7 @@ static void Cmd_seteffectwithchance(void)
 {
     u32 percentChance;
 
-    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SERENE_GRACE
+    if ((GetBattlerAbility(gBattlerAttacker) == ABILITY_SERENE_GRACE || GetBattlerAbility(gBattlerAttacker) == ABILITY_MATT_BOSS_FIGHT)
         || IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gRiptorypsLine))
         percentChance = gBattleMoves[gCurrentMove].secondaryEffectChance * 2;
     else
@@ -8093,6 +8093,7 @@ static void Cmd_various(void)
             case ABILITY_SCHOOLING:         case ABILITY_COMATOSE:
             case ABILITY_SHIELDS_DOWN:      case ABILITY_DISGUISE:
             case ABILITY_RKS_SYSTEM:        case ABILITY_TRACE:
+            case ABILITY_MATT_BOSS_FIGHT:
                 break;
             default:
                 gBattleStruct->tracedAbility[gBattlerAbility] = gBattleMons[gActiveBattler].ability; // re-using the variable for trace
@@ -12081,6 +12082,7 @@ static void Cmd_trycopyability(void) // role play
         case ABILITY_NONE:
         case ABILITY_WONDER_GUARD:
         case ABILITY_DISGUISE:
+        case ABILITY_MATT_BOSS_FIGHT:
             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
             break;
         default:
@@ -12244,6 +12246,7 @@ static void Cmd_tryswapabilities(void) // skill swap
     case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
     case ABILITY_MEGA_DEWGONG_ABILITY:
     case ABILITY_ABYSSAL:
+    case ABILITY_MATT_BOSS_FIGHT:
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
         return;
     }
@@ -12258,6 +12261,7 @@ static void Cmd_tryswapabilities(void) // skill swap
     case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
     case ABILITY_MEGA_DEWGONG_ABILITY:
     case ABILITY_ABYSSAL:
+    case ABILITY_MATT_BOSS_FIGHT:
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
         return;
     }
