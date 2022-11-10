@@ -13654,9 +13654,8 @@ static const struct TrainerMonItemCustomMoves sParty_SummitCavernsLattka2[] = {
     .iv = 150,
     .lvl = 35,
     .species = SPECIES_MEGA_DEWGONG,
-    .heldItem = ITEM_NONE,
-    // .moves = {MOVE_ICE_BEAM, MOVE_HAIL, MOVE_PSYSHOCK, MOVE_AURA_SPHERE},
-    .moves = {MOVE_SNEER, MOVE_SNEER, MOVE_SNEER, MOVE_SNEER},
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_ICE_BEAM, MOVE_HAIL, MOVE_PSYSHOCK, MOVE_AURA_SPHERE},
     .stats =
         {
         .statDef = 180,
@@ -14979,5 +14978,27 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
     .heldItem = ITEM_NONE,
     .moves = {MOVE_EXPLOSION, MOVE_BITE, MOVE_NONE, MOVE_BELLY_DRUM},
     .evs = {0, 60, 0, 0, 60, 0},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_MattBossTest[] = {
+    {
+    .abilityNum = 0,
+    .iv = 150,
+    .lvl = 35,
+    .species = SPECIES_FILLER_8,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_ICE_BEAM, MOVE_HAIL, MOVE_PSYSHOCK, MOVE_AURA_SPHERE},
+    .stats =
+        {
+        .statDef = 180,
+        .statSpDef = 180,
+        .statHP = 525,
+        .statMaxHP = 525,
+        .movePP1 = 99,
+        .movePP2 = 99,
+        .movePP3 = 99,
+        .movePP4 = 99,
+        },
     },
 };

@@ -2346,8 +2346,8 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
     Cry_Abyssaldragonfirstevo::
 	.incbin "sound/direct_sound_samples/cries/abyssaldragonfirstevo.bin"
 .align 2
-    Cry_Filler_16::
-	.incbin "sound/direct_sound_samples/cries/filler_16.bin"
+    Cry_Cheeto::
+	.incbin "sound/direct_sound_samples/cries/cheeto.bin"
 .align 2
     Cry_Filler_17::
 	.incbin "sound/direct_sound_samples/cries/filler_17.bin"

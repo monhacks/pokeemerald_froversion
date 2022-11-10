@@ -446,7 +446,7 @@ cry Cry_Shadow_Charizard
 cry Cry_Abyssaldragonthirdevo
 cry Cry_Abyssaldragonsecondevo
 cry Cry_Abyssaldragonfirstevo
-cry Cry_Filler_16
+cry Cry_Cheeto
 cry Cry_Filler_17
 cry Cry_Filler_18
 cry Cry_Filler_19
@@ -922,7 +922,7 @@ cry2 Cry_Shadow_Charizard
 cry2 Cry_Abyssaldragonthirdevo
 cry2 Cry_Abyssaldragonsecondevo
 cry2 Cry_Abyssaldragonfirstevo
-cry2 Cry_Filler_16
+cry2 Cry_Cheeto
 cry2 Cry_Filler_17
 cry2 Cry_Filler_18
 cry2 Cry_Filler_19

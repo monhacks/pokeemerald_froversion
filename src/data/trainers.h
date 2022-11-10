@@ -1825,14 +1825,14 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_GruntMtChimney1},
     },
 
-    [TRAINER_STEVE_2] =
+    [TRAINER_MATT_FINAL_BOSS] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_GMP,
         // .trainerClass = TRAINER_CLASS_SHADOW_CHARIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MEWTWO,
-        .trainerName = _("Mewtwo"),
+        .trainerName = _("BossTest"),
         .items = {},
         .doubleBattle = TRUE,
         .twoVsOne = TRUE,

@@ -4824,14 +4824,24 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 {
                     gBattleScripting.battler = gActiveBattler;
 
-                    // Printf("Para1 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && CanBeParalyzed(B_POSITION_PLAYER_LEFT)));
-                    // Printf("Pois1 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && CanBePoisoned(gActiveBattler, B_POSITION_PLAYER_LEFT)));
-                    // Printf("Burn1 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && CanBeBurned(B_POSITION_PLAYER_LEFT)));
-                    // Printf("Sleep1 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP && CanSleep(B_POSITION_PLAYER_LEFT)));
-                    // Printf("Para2 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && CanBeParalyzed(B_POSITION_PLAYER_RIGHT)));
-                    // Printf("Pois2 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && CanBePoisoned(gActiveBattler, B_POSITION_PLAYER_RIGHT)));
-                    // Printf("Burn2 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && CanBeBurned(B_POSITION_PLAYER_RIGHT)));
-                    // Printf("Sleep2 = %d", (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP && CanSleep(B_POSITION_PLAYER_RIGHT)));
+                    if(gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY)
+                        {
+                            if(gBattleMons[gActiveBattler].status1 & STATUS1_TOXIC_POISON)
+                                gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+                            else
+                                gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+                        }
+                    else if(gBattleMons[gActiveBattler].status1 & STATUS1_BURN)
+                        gBattleCommunication[MULTISTRING_CHOOSER] = 2;
+                    else if(gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS)
+                        gBattleCommunication[MULTISTRING_CHOOSER] = 3;
+                    else if(gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP)
+                        gBattleCommunication[MULTISTRING_CHOOSER] = 4;
+                    else if(gBattleMons[gActiveBattler].status1 & STATUS1_FREEZE)
+                        gBattleCommunication[MULTISTRING_CHOOSER] = 5;
+
+                        
+                    
                     if ((gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && CanBeParalyzed(B_POSITION_PLAYER_LEFT))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && CanBePoisoned(gActiveBattler, B_POSITION_PLAYER_LEFT))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && CanBeBurned(B_POSITION_PLAYER_LEFT))

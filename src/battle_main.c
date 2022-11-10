@@ -3959,6 +3959,7 @@ void BattleTurnPassed(void)
         break;
         case TRAINER_WINSTON_5:
         SetOpponentMovesAbyssalHighDragon();
+        case TRAINER_MATT_FINAL_BOSS:
         break;
         }
     

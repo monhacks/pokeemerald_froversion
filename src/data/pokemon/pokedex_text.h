@@ -2596,7 +2596,7 @@ const u8 gAbyssaldragonfirstevoPokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_16PokedexText[] = _(
+const u8 gCheetoPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"
