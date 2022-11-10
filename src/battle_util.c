@@ -2337,7 +2337,7 @@ u8 DoFieldEndTurnEffects(void)
                             PREPARE_ITEM_BUFFER(gBattleTextBuff1, item);
                             PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gBattleMons[gBattleScripting.battler].ability);
                             PREPARE_SPECIES_BUFFER(gBattleTextBuff3, gBattleMons[gBattleScripting.battler].species);
-                            gChangeAbilityPopUp = gNewNameNewAbility;
+                            gNewNameNewAbility = TRUE;
                             gNewAbilityPopUp3 = ABILITY_CONJURE;
                             gNewPositionPopUp1 = gBattleScripting.battler;
                             gBattleMons[gBattleScripting.battler].item = item;
@@ -4599,6 +4599,12 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             }
             break;
         case ABILITY_CHARISMA:
+            if (!(gSpecialStatuses[battler].charismadMon))
+            {
+                gBattleResources->flags->flags[battler] |= RESOURCE_FLAG_CHARISMAD;
+                gSpecialStatuses[battler].charismadMon = 1;
+            }
+            break;
         case ABILITY_MATT_BOSS_FIGHT:
             if (!(gSpecialStatuses[battler].charismadMon))
             {

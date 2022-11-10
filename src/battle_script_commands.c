@@ -8676,23 +8676,29 @@ static void Cmd_various(void)
         }
         return;
     case VARIOUS_ABILITY_POPUP:
-        if(gChangeAbilityPopUp == gNewNameNewAbility)
+        Printf("gChangeAbilityPopUp = %d", gChangeAbilityPopUp);
+        Printf("gNewNameNewAbility = %d", gNewNameNewAbility);
+        if(gNewNameNewAbility == TRUE)
         {
+            Printf("gActiveBattler1 = %d", gActiveBattler);
             CreateAbilityPopUp(gNewPositionPopUp1, gNewAbilityPopUp3, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
-            gChangeAbilityPopUp--;
+            gNewNameNewAbility == FALSE;
         }
         else if(gChangeAbilityPopUp == 2)
         {
+            Printf("gActiveBattler2 = %d", gActiveBattler);
             CreateAbilityPopUp(gActiveBattler, gNewAbilityPopUp2, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
             gChangeAbilityPopUp--;
         }
         else if(gChangeAbilityPopUp == 1)
         {
+            Printf("gActiveBattler3 = %d", gActiveBattler);
             CreateAbilityPopUp(gActiveBattler, gNewAbilityPopUp1, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
             gChangeAbilityPopUp--;
         }
         else 
-        {
+        {   
+            Printf("gActiveBattler4 = %d", gActiveBattler);
             CreateAbilityPopUp(gActiveBattler, gBattleMons[gActiveBattler].ability, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
         }
         break;
