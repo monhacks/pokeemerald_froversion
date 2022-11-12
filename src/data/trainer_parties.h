@@ -14984,21 +14984,19 @@ static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
 static const struct TrainerMonItemCustomMoves sParty_MattBossTest[] = {
     {
     .abilityNum = 0,
-    .iv = 150,
-    .lvl = 35,
+    .iv = 255,
+    .lvl = 65,
     .species = SPECIES_CHEETO,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SNEER, MOVE_SNEER, MOVE_SNEER, MOVE_SNEER},
     .stats =
         {
-        .statDef = 180,
-        .statSpDef = 180,
-        .statHP = 525,
-        .statMaxHP = 525,
-        .movePP1 = 99,
-        .movePP2 = 99,
-        .movePP3 = 99,
-        .movePP4 = 99,
+        .statHP = 2800,
+        .statMaxHP = 2800,
+        .movePP1 = 255,
+        .movePP2 = 255,
+        .movePP3 = 255,
+        .movePP4 = 255,
         },
     },
 };

@@ -123,6 +123,9 @@ static void SetOpponentMovesShadowCharizard(void);
 static void SetOpponentMovesShadowNidoqueen(void);
 static void SetOpponentMovesBlaziken(void);
 static void SetOpponentMovesAbyssalHighDragon(void);
+static void SetOpponentMovesMattFinalBoss(void);
+static void SetOpponentMovesMattFinalBossAccordingToItem(void);
+static void SetOpponentMovesMattFinalBossAccordingToStatus(void);
 
 // EWRAM vars
 EWRAM_DATA u16 gBattle_BG0_X = 0;
@@ -2012,6 +2015,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
+                Printf("partyData[i].lvl = %d", partyData[i].lvl);
+                Printf("dynamicLevel = %d", dynamicLevel);
                 if(partyData[i].lvl > dynamicLevel)
                     CreateMon(&party[i], partyData[i].species, ((partyData[i].lvl * difficultyModification) / 100), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 else
@@ -3882,6 +3887,42 @@ const u16 gAbyssalHighDragonBoostStatusMoves[] =
         0xFFFF
     };
 
+const u16 gCheetoFairyMoves[] =
+    {
+        MOVE_DRAINING_KISS,
+        MOVE_MOONBLAST,
+        MOVE_MISTY_TERRAIN,
+        MOVE_STRANGE_STEAM,
+        0xFFFF
+    };
+
+const u16 gCheetoPsychicMoves[] =
+    {
+        MOVE_PSYCHIC,
+        MOVE_PSYCHIC_TERRAIN,
+        MOVE_FREEZING_GLARE,
+        MOVE_FUTURE_SIGHT,
+        0xFFFF
+    };
+
+const u16 gCheetoFireMoves[] =
+    {
+        MOVE_FLARE_BLITZ,
+        MOVE_SUNNY_DAY,
+        MOVE_FIRE_FANG,
+        MOVE_SACRED_FIRE,
+        0xFFFF
+    };
+
+const u16 gCheetoMiscMoves[] =
+    {
+        MOVE_SCREECH,
+        MOVE_COPYCAT,
+        MOVE_LIGHT_SCREEN,
+        MOVE_REFLECT,
+        0xFFFF
+    };
+
 void BattleTurnPassed(void)
 {
     s32 i;
@@ -3960,6 +4001,7 @@ void BattleTurnPassed(void)
         case TRAINER_WINSTON_5:
         SetOpponentMovesAbyssalHighDragon();
         case TRAINER_MATT_FINAL_BOSS:
+        SetOpponentMovesMattFinalBoss();
         break;
         }
     
@@ -3975,6 +4017,143 @@ bool32 IsMoveOneOf(u16 move, const u16 *moves)
             return TRUE;
         }
         return FALSE;
+}
+
+
+static void SetOpponentMovesMattFinalBoss(void)
+{
+    s32 i, j;
+    s32 cheetoStatTotal = 0;
+    s32 cheetoDifficultyThreshold;
+    u8 cheetoTopsyTurveyChance = Random() % 256;
+    bool32 playerHasBigBoosts = FALSE;
+
+    for (j = 0; j < NUM_BATTLE_STATS; j++)
+        {
+            cheetoStatTotal += gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[j];
+        }
+    
+  for (i = 0; i < NUM_BATTLE_STATS; i++)
+    {
+    if (gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] > 9 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] > 9 )
+                playerHasBigBoosts = TRUE;
+    }
+
+    switch (gSaveBlock2Ptr->optionsWindowDifficulty)
+    {
+    case OPTIONS_DIFFICULTY_EASY:
+        cheetoDifficultyThreshold = 32; 
+        break;
+    case OPTIONS_DIFFICULTY_NORMAL:
+        cheetoDifficultyThreshold = 36; 
+        break;
+    case OPTIONS_DIFFICULTY_HARD:
+        cheetoDifficultyThreshold = 39; 
+        break;
+    }
+    
+    if(playerHasBigBoosts == TRUE
+        && cheetoTopsyTurveyChance > 125)
+        {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_CLEAR_SMOG;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_CLEAR_SMOG;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_CLEAR_SMOG;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_CLEAR_SMOG;
+            return; 
+        }
+    if((cheetoStatTotal < cheetoDifficultyThreshold)
+        && cheetoTopsyTurveyChance > 125)
+        {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_TOPSY_TURVY;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TOPSY_TURVY;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_TOPSY_TURVY;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_TOPSY_TURVY;
+            return;
+        }
+    else if(gBattleMons[B_POSITION_OPPONENT_LEFT].status1 & STATUS1_ANY)
+        SetOpponentMovesMattFinalBossAccordingToStatus();
+    else if(IsItemOneOf(gBattleMons[B_POSITION_OPPONENT_LEFT].item, gCheetoSecondaryItems))
+        SetOpponentMovesMattFinalBossAccordingToItem();
+    else
+        {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = gCheetoMiscMoves[Random() % 4];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = gCheetoFireMoves[Random() % 4];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = gCheetoFairyMoves[Random() % 4];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = gCheetoPsychicMoves[Random() % 4];
+        }
+
+}
+
+static void SetOpponentMovesMattFinalBossAccordingToStatus(void)
+{
+     if(gBattleMons[B_POSITION_OPPONENT_LEFT].status1 & STATUS1_BURN)
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_FIRE_BLAST;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_FLAMETHROWER;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_FIRE_BLAST;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_FLAMETHROWER;
+                return;
+        }
+        else if(gBattleMons[B_POSITION_OPPONENT_LEFT].status1 & STATUS1_SLEEP)
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SLEEP_TALK;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_LAVA_PLUME;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_DAZZLING_GLEAM;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_PSYCHIC;
+                return;
+        }
+        else
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SNEER;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_FLAME_BURST;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_PLAY_ROUGH;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_ZEN_HEADBUTT;
+        }
+}
+
+static void SetOpponentMovesMattFinalBossAccordingToItem(void)
+{
+
+     if(gBattleMons[B_POSITION_OPPONENT_LEFT].item == ITEM_PSYCHIC_GEM)
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_PSYCHIC;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_PSYCHO_CUT;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_EXTRASENSORY;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_PSYCHIC_FANGS;
+                return;
+        }
+        else if(gBattleMons[B_POSITION_OPPONENT_LEFT].item == ITEM_FAIRY_GEM)
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DAZZLING_GLEAM;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_PLAY_ROUGH;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_MOONBLAST;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_DRAINING_KISS;
+                return;
+        }
+        else if(gBattleMons[B_POSITION_OPPONENT_LEFT].item == ITEM_FIRE_GEM)
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_FIRE_FANG;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_FLAMETHROWER;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_SUNNY_DAY;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_FIRE_SPIN;
+                return;
+        }
+        else if(gBattleMons[B_POSITION_OPPONENT_LEFT].item == ITEM_LIGHT_CLAY)
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_REFLECT;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_LIGHT_SCREEN;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_PSYCHIC_TERRAIN;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_MISTY_TERRAIN;
+                return;
+        }
+        else
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_FLAME_CHARGE;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_PSYBEAM;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_SNEER;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_DRAINING_KISS;
+        }
+        
 }
 
 static void SetOpponentMovesShadowCharizard(void)
@@ -4000,9 +4179,6 @@ static void SetOpponentMovesShadowCharizard(void)
                 hasDrops = TRUE;
         if (gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] > 9)
                 hasBigBoosts = TRUE;
-        //Printf("Has Drops? = %d", hasDrops);
-        //Printf("Has Big Boosts? = %d", hasBigBoosts);
-        //Printf("Randomchance = %d", shadowCharizardHazeChance);
         if ((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 9 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 9) && gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] < 12)
             {
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SPECTRAL_THIEF;
@@ -4083,9 +4259,6 @@ static void SetOpponentMovesAbyssalHighDragon(void)
     u8 abyssalDragonUseMinimize = FALSE;
     u8 useStatusMove = FALSE;
 
-    Printf("gBattleResults.lastUsedMoveOpponent = %d", gBattleResults.lastUsedMoveOpponent);
-    Printf("IsMoveOneOf(gBattleResults.lastUsedMoveOpponent, gAbyssalHighDragonHinderStatusMoves) = %d", IsMoveOneOf(gBattleResults.lastUsedMoveOpponent, gAbyssalHighDragonHinderStatusMoves));
-    
     if(gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
             abyssalHighDragonPosition = B_POSITION_OPPONENT_LEFT;
     if(gBattleMons[B_POSITION_OPPONENT_RIGHT].species == SPECIES_ABYSSALDRAGONTHIRDEVO)
@@ -4999,6 +5172,28 @@ const u16 gSelfInflictingItems[] =
     ITEM_STATIC_ORB,
     ITEM_DREAM_ORB,
     ITEM_FROST_ORB,
+    ITEM_NONE,
+    0xFFFF
+};
+
+const u16 gCheetoSecondaryItems[] =
+{
+    ITEM_ROCKY_HELMET,
+    ITEM_LIFE_ORB,
+    ITEM_ASSAULT_VEST,
+    ITEM_LIGHT_CLAY,
+    ITEM_FAIRY_GEM,
+    ITEM_PSYCHIC_GEM,
+    ITEM_FIRE_GEM,
+    ITEM_NONE,
+    0xFFFF
+};
+
+const u16 gNonStealItems[] =
+{
+    ITEM_AKU_BERRY,
+    ITEM_NIKITA,
+    ITEM_DRAGONS_ORB,
     ITEM_NONE,
     0xFFFF
 };

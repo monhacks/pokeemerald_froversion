@@ -689,6 +689,16 @@
 	.byte \value
 	.4byte \ptr
 	.endm
+
+	.macro if_target_sneered param0:req
+	.byte 0x7A
+	.4byte \param0
+	.endm
+
+	.macro if_target_not_sneered param0:req
+	.byte 0x7B
+	.4byte \param0
+	.endm
 	
 @ useful script macros
 	.macro if_has_physical_move battler:req, ptr:req

@@ -2323,17 +2323,15 @@ u8 DoFieldEndTurnEffects(void)
                 {
                 bool32 canStatusLeft = CanStatus(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
                 bool32 canStatusRight = CanStatus(GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT));
-
+                Printf("gBattleResults.battleTurnCounter = %d",gBattleResults.battleTurnCounter);
                 gBattleScripting.battler = gBattleStruct->conjureId++;
                 gBattlerAbility = gBattleScripting.battler;
                 gActiveBattler = gBattleScripting.battler;
                 if((canStatusLeft || canStatusRight)
-                    && IsItemOneOf(gBattleMons[gBattleScripting.battler].item, gSelfInflictingItems)
                     && (GetBattlerAbility(gBattleScripting.battler) == ABILITY_PSYCHO_SHIFT || GetBattlerAbility(gBattleScripting.battler) == ABILITY_MATT_BOSS_FIGHT)
                     && !(gBattleMons[gBattleScripting.battler].status1 & STATUS1_ANY))
                         {   
                             u16 item = gSelfInflictingItems[Random() % 5];
-                            Printf("item = %d", item);
                             PREPARE_ITEM_BUFFER(gBattleTextBuff1, item);
                             PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gBattleMons[gBattleScripting.battler].ability);
                             PREPARE_SPECIES_BUFFER(gBattleTextBuff3, gBattleMons[gBattleScripting.battler].species);
@@ -2344,10 +2342,40 @@ u8 DoFieldEndTurnEffects(void)
                             BattleScriptExecute(BattleScript_AbilityGivesHeldItem);
                             effect++;
                         }
-                else if(GetBattlerAbility(gBattleScripting.battler) == ABILITY_PSYCHO_SHIFT || GetBattlerAbility(gBattleScripting.battler) == ABILITY_MATT_BOSS_FIGHT)
+                else if((GetBattlerAbility(gBattleScripting.battler) == ABILITY_PSYCHO_SHIFT || GetBattlerAbility(gBattleScripting.battler) == ABILITY_MATT_BOSS_FIGHT)
+                        && IsItemOneOf(gBattleMons[gActiveBattler].item, gCheetoSecondaryItems)
+                        && gBattleResults.battleTurnCounter % 4 == 0)
                     {
-                        gBattleMons[gBattleScripting.battler].item = ITEM_NONE;
+                        u16 item = gCheetoSecondaryItems[Random() % 7];
+                        PREPARE_ITEM_BUFFER(gBattleTextBuff1, item);
+                        PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gBattleMons[gBattleScripting.battler].ability);
+                        PREPARE_SPECIES_BUFFER(gBattleTextBuff3, gBattleMons[gBattleScripting.battler].species);
+                        gNewNameNewAbility = TRUE;
+                        gNewAbilityPopUp3 = ABILITY_CONJURE;
+                        gNewPositionPopUp1 = gBattleScripting.battler;
+                        gBattleMons[gBattleScripting.battler].item = item;
+                        BattleScriptExecute(BattleScript_AbilityGivesHeldItem);
                         effect++;
+                    }
+                else if((GetBattlerAbility(gBattleScripting.battler) == ABILITY_PSYCHO_SHIFT || GetBattlerAbility(gBattleScripting.battler) == ABILITY_MATT_BOSS_FIGHT)
+                        && (!(gBattleMons[gBattleScripting.battler].status1 & STATUS1_ANY) && !(IsItemOneOf(gBattleMons[gActiveBattler].item, gSelfInflictingItems)))
+                        && !((IsItemOneOf(gBattleMons[gActiveBattler].item, gCheetoSecondaryItems))))
+                    {
+                        u16 item = gCheetoSecondaryItems[Random() % 7];
+                        PREPARE_ITEM_BUFFER(gBattleTextBuff1, item);
+                        PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gBattleMons[gBattleScripting.battler].ability);
+                        PREPARE_SPECIES_BUFFER(gBattleTextBuff3, gBattleMons[gBattleScripting.battler].species);
+                        gNewNameNewAbility = TRUE;
+                        gNewAbilityPopUp3 = ABILITY_CONJURE;
+                        gNewPositionPopUp1 = gBattleScripting.battler;
+                        gBattleMons[gBattleScripting.battler].item = item;
+                        BattleScriptExecute(BattleScript_AbilityGivesHeldItem);
+                        effect++;
+                    }
+                else
+                    {
+                       gBattleMons[gBattleScripting.battler].item = ITEM_NONE;
+                       effect++;
                     }
                 }
                 gBattleStruct->conjureId = 0;
@@ -4831,6 +4859,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             case ABILITY_PSYCHO_SHIFT:
             case ABILITY_MATT_BOSS_FIGHT:
                 {
+                    
+                    bool32 canStatusLeft = CanStatus(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
+                    bool32 canStatusRight = CanStatus(GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT));
                     gBattleScripting.battler = gActiveBattler;
 
                     if(gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY)
@@ -4851,17 +4882,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
 
                         
                     
-                    if ((gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && CanBeParalyzed(B_POSITION_PLAYER_LEFT))
+                    if (canStatusLeft 
+                    && ((gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && CanBeParalyzed(B_POSITION_PLAYER_LEFT))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && CanBePoisoned(gActiveBattler, B_POSITION_PLAYER_LEFT))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && CanBeBurned(B_POSITION_PLAYER_LEFT))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP && CanSleep(B_POSITION_PLAYER_LEFT))
-                    || (gBattleMons[gActiveBattler].status1 & STATUS1_FREEZE && CanBeFrozen(B_POSITION_PLAYER_LEFT)))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_FREEZE && CanBeFrozen(B_POSITION_PLAYER_LEFT))))
                             gBattlerTarget = B_POSITION_PLAYER_LEFT;
-                    else if ((gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && CanBeParalyzed(B_POSITION_PLAYER_RIGHT))
+                    else if (canStatusRight
+                    && ((gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && CanBeParalyzed(B_POSITION_PLAYER_RIGHT))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && CanBePoisoned(gActiveBattler, B_POSITION_PLAYER_RIGHT))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && CanBeBurned(B_POSITION_PLAYER_RIGHT))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_SLEEP && CanSleep(B_POSITION_PLAYER_RIGHT))
-                    || (gBattleMons[gActiveBattler].status1 & STATUS1_FREEZE && CanBeFrozen(B_POSITION_PLAYER_RIGHT)))
+                    || (gBattleMons[gActiveBattler].status1 & STATUS1_FREEZE && CanBeFrozen(B_POSITION_PLAYER_RIGHT))))
                         gBattlerTarget = B_POSITION_PLAYER_RIGHT;
                     else
                         {
@@ -4889,7 +4922,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     else
                     {
                         // Psycho shift works
-                        
+                        gChangeAbilityPopUp = 1; 
+                        gNewAbilityPopUp1 = ABILITY_PSYCHO_SHIFT;
                         gBattleMons[gBattlerTarget].status1 = gBattleMons[gActiveBattler].status1 & STATUS1_ANY;
                         gActiveBattler = gBattlerTarget;
                         BtlController_EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, sizeof(gBattleMons[gActiveBattler].status1), &gBattleMons[gActiveBattler].status1);
@@ -9489,6 +9523,8 @@ bool32 CanBattlerGetOrLoseItem(u8 battlerId, u16 itemId)
     else if (species == SPECIES_GENESECT && GetBattlerHoldEffect(battlerId, FALSE) == HOLD_EFFECT_DRIVE)
         return FALSE;
     else if (species == SPECIES_SILVALLY && GetBattlerHoldEffect(battlerId, FALSE) == HOLD_EFFECT_MEMORY)
+        return FALSE;
+    else if (IsItemOneOf(itemId, gNonStealItems))
         return FALSE;
     else
         return TRUE;

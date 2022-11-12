@@ -8680,7 +8680,6 @@ static void Cmd_various(void)
         Printf("gNewNameNewAbility = %d", gNewNameNewAbility);
         if(gNewNameNewAbility == TRUE)
         {
-            Printf("gActiveBattler1 = %d", gActiveBattler);
             CreateAbilityPopUp(gNewPositionPopUp1, gNewAbilityPopUp3, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
             gNewNameNewAbility == FALSE;
         }

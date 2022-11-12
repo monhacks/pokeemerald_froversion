@@ -31,5 +31,7 @@ extern const u16 gRiptorypsLine[];
 extern const u16 gMegaBosses[];
 extern const u16 gLevitateMons[];
 extern const u16 gSelfInflictingItems[];
+extern const u16 gCheetoSecondaryItems[];
+extern const u16 gNonStealItems[];
 
 #endif // GUARD_BATTLE_AI_SCRIPT_COMMANDS_H

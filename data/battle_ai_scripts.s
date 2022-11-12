@@ -273,6 +273,7 @@ AI_CheckBadMove_CheckEffect: @ 82DC045
 	if_effect EFFECT_LOCK_ON, AI_CBM_LockOn
 	if_effect EFFECT_DEFENSE_UP_2, AI_CBM_Defense_Up_2
 	if_effect EFFECT_SPECTRAL_THIEF, AI_CBM_SpectralThief
+	if_effect EFFECT_SNEER, AI_CBM_Sneer
 	end
 	
 AI_CBM_SpectralThief:
@@ -340,6 +341,10 @@ AI_CBM_HealBell_End:
 	
 AI_CBM_Taunt:
 	if_target_taunted Score_Minus10
+	end
+
+AI_CBM_Sneer:
+	if_target_sneered Score_Minus10
 	end
 	
 AI_CBM_Protect:
@@ -2422,6 +2427,7 @@ AI_CV_Counter3:
 	get_move_power_from_result
 	if_equal 0, AI_CV_Counter5
 	if_target_not_taunted AI_CV_Counter4
+	if_target_not_sneered AI_CV_Counter4
 	if_random_less_than 100, AI_CV_Counter4
 	score +1
 
@@ -2435,6 +2441,7 @@ AI_CV_Counter4:
 
 AI_CV_Counter5:
 	if_target_not_taunted AI_CV_Counter6
+	if_target_not_sneered AI_CV_Counter6
 	if_random_less_than 100, AI_CV_Counter6
 	score +1
 
@@ -3025,6 +3032,7 @@ AI_CV_MirrorCoat3:
 	get_move_power_from_result
 	if_equal 0, AI_CV_MirrorCoat5
 	if_target_not_taunted AI_CV_MirrorCoat4
+	if_target_not_sneered AI_CV_MirrorCoat4
 	if_random_less_than 100, AI_CV_MirrorCoat4
 	score +1
 
@@ -3038,6 +3046,7 @@ AI_CV_MirrorCoat4:
 
 AI_CV_MirrorCoat5:
 	if_target_not_taunted AI_CV_MirrorCoat6
+	if_target_not_sneered AI_CV_MirrorCoat6
 	if_random_less_than 100, AI_CV_MirrorCoat6
 	score +1
 
