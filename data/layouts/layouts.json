@@ -5950,6 +5950,36 @@
       "secondary_tileset": "gTileset_CableClub",
       "border_filepath": "data/layouts/EverGrandeCity_MattsRoom/border.bin",
       "blockdata_filepath": "data/layouts/EverGrandeCity_MattsRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAVARIDIGE_TOWN_MARRIOTT_LAYOUT",
+      "name": "LavaridigeTownMarriottLayout_Layout",
+      "width": 21,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/LavaridigeTownMarriottLayout/border.bin",
+      "blockdata_filepath": "data/layouts/LavaridigeTownMarriottLayout/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTERN_APPROACH_STILL_RUINS_EAST",
+      "name": "WesternApproachStillRuinsEast_Layout",
+      "width": 40,
+      "height": 27,
+      "primary_tileset": "gTileset_WesternApproach",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WesternApproachStillRuinsEast/border.bin",
+      "blockdata_filepath": "data/layouts/WesternApproachStillRuinsEast/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTERN_APPROACH_LAST_CONNECTION",
+      "name": "WesternApproachLastConnection_Layout",
+      "width": 69,
+      "height": 47,
+      "primary_tileset": "gTileset_WesternApproach",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/WesternApproachLastConnection/border.bin",
+      "blockdata_filepath": "data/layouts/WesternApproachLastConnection/map.bin"
     }
   ]
 }

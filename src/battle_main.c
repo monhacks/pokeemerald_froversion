@@ -4053,7 +4053,8 @@ static void SetOpponentMovesMattFinalBoss(void)
     }
     
     if(playerHasBigBoosts == TRUE
-        && cheetoTopsyTurveyChance > 125)
+        && cheetoTopsyTurveyChance > 125
+        && !(gBattleMons[B_POSITION_OPPONENT_LEFT].status1) & STATUS1_SLEEP)
         {
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_CLEAR_SMOG;
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_CLEAR_SMOG;
@@ -4062,7 +4063,8 @@ static void SetOpponentMovesMattFinalBoss(void)
             return; 
         }
     if((cheetoStatTotal < cheetoDifficultyThreshold)
-        && cheetoTopsyTurveyChance > 125)
+        && cheetoTopsyTurveyChance > 125
+        && !(gBattleMons[B_POSITION_OPPONENT_LEFT].status1) & STATUS1_SLEEP)
         {
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_TOPSY_TURVY;
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TOPSY_TURVY;
@@ -4103,12 +4105,7 @@ static void SetOpponentMovesMattFinalBossAccordingToStatus(void)
                 return;
         }
         else
-        {
-                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SNEER;
-                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_FLAME_BURST;
-                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_PLAY_ROUGH;
-                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_ZEN_HEADBUTT;
-        }
+        return;
 }
 
 static void SetOpponentMovesMattFinalBossAccordingToItem(void)
@@ -4147,12 +4144,7 @@ static void SetOpponentMovesMattFinalBossAccordingToItem(void)
                 return;
         }
         else
-        {
-                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_FLAME_CHARGE;
-                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_PSYBEAM;
-                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_SNEER;
-                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_DRAINING_KISS;
-        }
+        return;
         
 }
 

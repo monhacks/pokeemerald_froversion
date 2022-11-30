@@ -1373,3 +1373,9 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/CinnabarIslandHouse1Post/scripts.inc"
 
 	.include "data/maps/EverGrandeCity_MattsRoom/scripts.inc"
+
+	.include "data/maps/LavaridigeTownMarriottLayout/scripts.inc"
+
+	.include "data/maps/WesternApproachStillRuinsEast/scripts.inc"
+
+	.include "data/maps/WesternApproachLastConnection/scripts.inc"

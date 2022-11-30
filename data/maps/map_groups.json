@@ -244,7 +244,8 @@
     "LavaridgeTown_Mart",
     "LavaridgeTown_PokemonCenter_1F",
     "LavaridgeTown_PokemonCenter_2F",
-    "GrandIslandGym"
+    "GrandIslandGym",
+    "LavaridigeTownMarriottLayout"
   ],
   "gMapGroup5": [
     "FallarborTown_Mart",
@@ -749,7 +750,9 @@
   "gMapGroup32": [
     "Route119_WeatherInstitute_1F",
     "Route119_WeatherInstitute_2F",
-    "Route119_House"
+    "Route119_House",
+    "WesternApproachStillRuinsEast",
+    "WesternApproachLastConnection"
   ],
   "gMapGroup33": [
     "Route124_DivingTreasureHuntersHouse",

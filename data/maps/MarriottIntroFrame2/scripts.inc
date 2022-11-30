@@ -15,5 +15,17 @@ MarriottIntroFrame2_EventScript_MarriottStudies:
 	release
 end
 
+@--------------------------------------------------------------------------------
+@-------------------------------------Text---------------------------------------
+@--------------------------------------------------------------------------------
+@'''''''''''[______________________________________]'''''''''''''''''''''''''''''
 MarriottIntroFrame2_Text_MarriottStudies:
-	.string "Test Text!$"
+	.string "Everything changed when president\n"
+	.string "Trump, the great American leader\l"
+	.string "discovered the Worlds first Pokemon.$\p"
+	.string "Marriott realized his true calling was\n"
+	.string "to become a Pokemon Trainer and travel\l"
+	.string "the world.\p"
+	.string "Without a second thought he walked out\n"
+	.string "the door and gave up his dream of being\l"
+	.string "a lawyer.$"

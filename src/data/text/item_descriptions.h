@@ -3071,3 +3071,8 @@ static const u8 sFrostOrbDesc[] = _(
     "A bizarre orb that\n"
     "inflicts a freeze on\n"
     "holder in battle.");
+
+static const u8 sFredericSuppliesDesc[] = _(
+    "Supplies found that\n"
+    "belong to someone\n"
+    "named Frederic.");

@@ -32,6 +32,16 @@
       "direction": "up",
       "offset": 0,
       "map": "MAP_WESTERN_APPROACH_STILL_RUINS"
+    },
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1CONNECTION"
+    },
+    {
+      "direction": "left",
+      "offset": -47,
+      "map": "MAP_WESTERN_APPROACH_LAST_CONNECTION"
     }
   ],
   "object_events": [

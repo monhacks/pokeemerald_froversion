@@ -15,5 +15,12 @@ MarriottIntroFrame5_EventScript_MarriottStudies:
 	release
 end
 
+@--------------------------------------------------------------------------------
+@-------------------------------------Text---------------------------------------
+@--------------------------------------------------------------------------------
+@'''''''''''[______________________________________]'''''''''''''''''''''''''''''
 MarriottIntroFrame5_Text_MarriottStudies:
-	.string "Test Text!$"
+	.string "As he traveled the world he got further\n"
+	.string "from his Hometown of Linwood.\p"
+	.string "He eventually came across the Town of\n"
+	.string "Grand Island.$"

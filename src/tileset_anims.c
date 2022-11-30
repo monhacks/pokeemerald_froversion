@@ -1486,7 +1486,7 @@ static void QueueAnimTiles_CinnibarIsland_BubblyWater(u16 timer)
 static void QueueAnimTiles_WesternApproach_AnimatedWater(u16 timer)
 {
     u16 i = timer % 4;
-    AppendTilesetAnimToBuffer(gTilesetAnims_WesternApproach_AnimatedWater[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(122)), 0x80);
+    AppendTilesetAnimToBuffer(gTilesetAnims_WesternApproach_AnimatedWater[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(11)), 0x80);
 }
 
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Lava(u16 timer)

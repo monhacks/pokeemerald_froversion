@@ -31,7 +31,7 @@
     {
       "direction": "left",
       "offset": 0,
-      "map": "MAP_WESTERN_APPROACH_STILL_RUINS2"
+      "map": "MAP_WESTERN_APPROACH_STILL_RUINS_EAST"
     }
   ],
   "object_events": [
@@ -42,15 +42,15 @@
       "x": 21,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_DEWFORD_TOWN",
-      "dest_warp_id": 5
+      "dest_map": "MAP_LAVARIDIGE_TOWN_MARRIOTT_LAYOUT",
+      "dest_warp_id": 1
     },
     {
       "x": 22,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_DEWFORD_TOWN",
-      "dest_warp_id": 5
+      "dest_map": "MAP_LAVARIDIGE_TOWN_MARRIOTT_LAYOUT",
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [

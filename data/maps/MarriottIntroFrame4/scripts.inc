@@ -15,5 +15,11 @@ MarriottIntroFrame4_EventScript_MarriottStudies:
 	release
 end
 
+@--------------------------------------------------------------------------------
+@-------------------------------------Text---------------------------------------
+@--------------------------------------------------------------------------------
+@'''''''''''[______________________________________]'''''''''''''''''''''''''''''
 MarriottIntroFrame4_Text_MarriottStudies:
-	.string "Test Text!$"
+	.string "Marriott and Ottdorble trained and\n"
+	.string "grew stronger together, battling wild\l"
+	.string "Pokemon and trainers alike.$"

@@ -7851,4 +7851,64 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
+
+    [ITEM_FREDERIC_SUPPLIES_1] =
+    {
+        .name = _("Supplies"),
+        .itemId = ITEM_FREDERIC_SUPPLIES_1,
+        .price = 0,
+        .description = sFredericSuppliesDesc,
+        .importance = 2,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_FREDERIC_SUPPLIES_2] =
+    {
+        .name = _("Supplies"),
+        .itemId = ITEM_FREDERIC_SUPPLIES_1,
+        .price = 0,
+        .description = sFredericSuppliesDesc,
+        .importance = 2,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_FREDERIC_SUPPLIES_3] =
+    {
+        .name = _("Supplies"),
+        .itemId = ITEM_FREDERIC_SUPPLIES_1,
+        .price = 0,
+        .description = sFredericSuppliesDesc,
+        .importance = 2,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_FREDERIC_SUPPLIES_4] =
+    {
+        .name = _("Supplies"),
+        .itemId = ITEM_FREDERIC_SUPPLIES_1,
+        .price = 0,
+        .description = sFredericSuppliesDesc,
+        .importance = 2,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_FREDERIC_SUPPLIES_5] =
+    {
+        .name = _("Supplies"),
+        .itemId = ITEM_FREDERIC_SUPPLIES_1,
+        .price = 0,
+        .description = sFredericSuppliesDesc,
+        .importance = 2,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };

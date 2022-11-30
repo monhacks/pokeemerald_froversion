@@ -11,9 +11,21 @@ MarriottIntroFrame6_EventScript_MarriottStudies:
 	delay 16
 	msgbox MarriottIntroFrame6_Text_MarriottStudies, MSGBOX_DEFAULT
 	setvar VAR_TEMP_0, 1
-	warpsilent MAP_DEWFORD_TOWN, 255, 8, 3 
+	warpsilent MAP_LAVARIDIGE_TOWN_MARRIOTT_LAYOUT, 255, 12, 8 
 	release
 end
 
+@--------------------------------------------------------------------------------
+@-------------------------------------Text---------------------------------------
+@--------------------------------------------------------------------------------
+@'''''''''''[______________________________________]'''''''''''''''''''''''''''''
 MarriottIntroFrame6_Text_MarriottStudies:
-	.string "Test Text!$"
+	.string "As he was walking through town he\n"
+	.string "noticed a flyer on the ground.\p"
+	.string "“Grand Island Gym: Now accepting\n"
+	.string "applications for leader position.\p"
+	.string "Responsibilities include facing any\n"
+	.string "challengers that present themselves\l"
+	.string "and determining worthiness of trainer\l"
+	.string "to advance to the Elite Four.\p"
+	.string "Also must keep Gym Tidy”$"

@@ -2,7 +2,7 @@
   "id": "MAP_MARRIOTT_INTRO_FRAME2",
   "name": "MarriottIntroFrame2",
   "layout": "LAYOUT_MARRIOTT_INTRO_FRAME2",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_FV_RAINTREE_ISLAND_GYM_ICE_2",
   "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

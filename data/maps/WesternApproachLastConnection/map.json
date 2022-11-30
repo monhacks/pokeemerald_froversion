@@ -1,9 +1,9 @@
 {
-  "id": "MAP_WESTERN_APPROACH_OPEN_LAND1",
-  "name": "WesternApproachOpenLand1",
-  "layout": "LAYOUT_WESTERN_APPROACH_OPEN_LAND1",
+  "id": "MAP_WESTERN_APPROACH_LAST_CONNECTION",
+  "name": "WesternApproachLastConnection",
+  "layout": "LAYOUT_WESTERN_APPROACH_LAST_CONNECTION",
   "music": "MUS_FV_WESTERN_APPROACH",
-  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
@@ -15,23 +15,23 @@
   "connections": [
     {
       "direction": "right",
-      "offset": 0,
-      "map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1"
+      "offset": 27,
+      "map": "MAP_WESTERN_APPROACH_STILL_RUINS"
     },
     {
       "direction": "down",
       "offset": 0,
-      "map": "MAP_WESTERN_APPROACH_OPEN_LAND2"
+      "map": "MAP_WESTERN_APPROACH_OPEN_LAND1"
     },
     {
       "direction": "right",
-      "offset": 24,
-      "map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1CONNECTION"
+      "offset": 0,
+      "map": "MAP_WESTERN_APPROACH_STILL_RUINS_EAST"
     },
     {
-      "direction": "up",
-      "offset": 0,
-      "map": "MAP_WESTERN_APPROACH_LAST_CONNECTION"
+      "direction": "right",
+      "offset": 47,
+      "map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1"
     }
   ],
   "object_events": [

@@ -2332,11 +2332,11 @@ u8 DoFieldEndTurnEffects(void)
                     && !(gBattleMons[gBattleScripting.battler].status1 & STATUS1_ANY))
                         {   
                             u16 item = gSelfInflictingItems[Random() % 5];
+                            gNewAbilityPopUp3 = ABILITY_CONJURE;
                             PREPARE_ITEM_BUFFER(gBattleTextBuff1, item);
-                            PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gBattleMons[gBattleScripting.battler].ability);
+                            PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gNewAbilityPopUp3);
                             PREPARE_SPECIES_BUFFER(gBattleTextBuff3, gBattleMons[gBattleScripting.battler].species);
                             gNewNameNewAbility = TRUE;
-                            gNewAbilityPopUp3 = ABILITY_CONJURE;
                             gNewPositionPopUp1 = gBattleScripting.battler;
                             gBattleMons[gBattleScripting.battler].item = item;
                             BattleScriptExecute(BattleScript_AbilityGivesHeldItem);
@@ -2347,8 +2347,9 @@ u8 DoFieldEndTurnEffects(void)
                         && gBattleResults.battleTurnCounter % 4 == 0)
                     {
                         u16 item = gCheetoSecondaryItems[Random() % 7];
+                        gNewAbilityPopUp3 = ABILITY_CONJURE;
                         PREPARE_ITEM_BUFFER(gBattleTextBuff1, item);
-                        PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gBattleMons[gBattleScripting.battler].ability);
+                        PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gNewAbilityPopUp3);
                         PREPARE_SPECIES_BUFFER(gBattleTextBuff3, gBattleMons[gBattleScripting.battler].species);
                         gNewNameNewAbility = TRUE;
                         gNewAbilityPopUp3 = ABILITY_CONJURE;
@@ -2362,8 +2363,9 @@ u8 DoFieldEndTurnEffects(void)
                         && !((IsItemOneOf(gBattleMons[gActiveBattler].item, gCheetoSecondaryItems))))
                     {
                         u16 item = gCheetoSecondaryItems[Random() % 7];
+                        gNewAbilityPopUp3 = ABILITY_CONJURE;
                         PREPARE_ITEM_BUFFER(gBattleTextBuff1, item);
-                        PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gBattleMons[gBattleScripting.battler].ability);
+                        PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gNewAbilityPopUp3);
                         PREPARE_SPECIES_BUFFER(gBattleTextBuff3, gBattleMons[gBattleScripting.battler].species);
                         gNewNameNewAbility = TRUE;
                         gNewAbilityPopUp3 = ABILITY_CONJURE;
@@ -4636,6 +4638,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
         case ABILITY_MATT_BOSS_FIGHT:
             if (!(gSpecialStatuses[battler].charismadMon))
             {
+                gChangeAbilityPopUp = 1;
+                gChangeTxtScrAbility1 = 1;
+                gNewAbilityPopUp1 = ABILITY_CHARISMA;
+                gNewTxtScrAbility1 = ABILITY_CHARISMA;
                 gBattleResources->flags->flags[battler] |= RESOURCE_FLAG_CHARISMAD;
                 gSpecialStatuses[battler].charismadMon = 1;
             }
