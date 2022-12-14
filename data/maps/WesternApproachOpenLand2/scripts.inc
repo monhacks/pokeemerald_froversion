@@ -1,2 +1,79 @@
+.set LOCALID_FREDERIC, 2
+
 WesternApproachOpenLand2_MapScripts::
 	.byte 0
+
+WesternApproachOpenLand2_EventScript_FindFredericSupplies::
+	finditem ITEM_FREDERIC_SUPPLIES_4
+	addvar VAR_FREDERIC_STATE, 1
+end
+
+
+WesternApproachOpenLand2_EventScript_FredericQuestAssignment::
+	goto_if_unset FLAG_STARTED_FREDERIC_QUEST, WesternApproachOpenLand2_EventScript_FredericIntro
+	compare VAR_FREDERIC_STATE, 4
+	goto_if_le WesternApproachOpenLand2_EventScript_FredericNeedSupplies
+	compare VAR_FREDERIC_STATE, 9
+	goto_if_le WesternApproachOpenLand2_EventScript_FredericRemoveTraps
+	compare VAR_FREDERIC_STATE, 14
+	goto_if_le WesternApproachOpenLand2_EventScript_FredericFindManuscript
+	compare VAR_FREDERIC_STATE, 19
+	goto_if_le WesternApproachOpenLand2_EventScript_FredericFourthQuest
+	compare VAR_FREDERIC_STATE, 24
+	goto_if_ge WesternApproachOpenLand2_EventScript_FredericGoesToFindDragon
+end
+
+WesternApproachOpenLand2_EventScript_FredericIntro:
+	msgbox WesternApproachOpenLand2_Text_FredericIntro, MSGBOX_DEFAULT
+	setflag FLAG_STARTED_FREDERIC_QUEST
+goto WesternApproachOpenLand2_EventScript_FredericQuestAssignment
+
+WesternApproachOpenLand2_EventScript_FredericNeedSupplies:
+	msgbox WesternApproachOpenLand2_Text_FredericNeedSupplies, MSGBOX_DEFAULT
+	release
+end
+
+WesternApproachOpenLand2_EventScript_FredericRemoveTraps:
+	msgbox WesternApproachOpenLand2_Text_FredericRemoveTraps, MSGBOX_DEFAULT
+	release
+end
+
+WesternApproachOpenLand2_EventScript_FredericFindManuscript:
+	msgbox WesternApproachOpenLand2_Text_FredericFindManuscript, MSGBOX_DEFAULT
+	release
+end
+
+WesternApproachOpenLand2_EventScript_FredericFourthQuest:
+	msgbox WesternApproachOpenLand2_Text_FredericFourthQuest, MSGBOX_DEFAULT
+	release
+end
+
+WesternApproachOpenLand2_EventScript_FredericGoesToFindDragon:
+	msgbox WesternApproachOpenLand2_Text_FredericGoesToFindDragon, MSGBOX_DEFAULT
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_FREDERIC
+	setflag FLAG_HIDE_FREDERIC
+	fadescreen FADE_FROM_BLACK
+	release
+end
+
+WesternApproachOpenLand2_Text_FredericIntro:
+	.string "Hey this is my intro, Frederic.$"
+
+WesternApproachOpenLand2_Text_FredericNeedSupplies:
+	.string "Need Supplies.$"
+
+
+WesternApproachOpenLand2_Text_FredericRemoveTraps:
+	.string "Remove Traps.$"
+
+WesternApproachOpenLand2_Text_FredericFindManuscript:
+	.string "Find Manuscript.$"
+
+WesternApproachOpenLand2_Text_FredericFourthQuest:
+	.string "Fourth Quest.$"
+
+WesternApproachOpenLand2_Text_FredericGoesToFindDragon:
+	.string "I'm going to go see if the lures worked! Bye Bye!$"
+
+

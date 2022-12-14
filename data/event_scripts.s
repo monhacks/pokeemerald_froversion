@@ -1379,3 +1379,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/WesternApproachStillRuinsEast/scripts.inc"
 
 	.include "data/maps/WesternApproachLastConnection/scripts.inc"
+
+	.include "data/maps/WesternApproachCavern1/scripts.inc"
