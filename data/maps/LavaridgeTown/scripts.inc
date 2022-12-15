@@ -16,7 +16,12 @@ LavaridgeTown_OnTransition: @ 81EA4DE
 	call_if_eq LavaridgeTown_EventScript_CheckSetRivalPos
 	compare VAR_LAVARIDGE_TOWN_STATE, 1
 	call_if_eq LavaridgeTown_EventScript_HideMapNamePopup
+	call_if_set FLAG_MARRIOTT_VERSION, LavaridgeTown_EventScript_SetMarriottLayout
 	end
+
+LavaridgeTown_EventScript_SetMarriottLayout:: @ 81E5801
+	setmaplayoutindex LAYOUT_LAVARIDIGE_TOWN_MARRIOTT_LAYOUT
+	return
 
 LavaridgeTown_EventScript_ClearLavaridgeWhiteOut:: @ 81EA514
 	clearflag FLAG_WHITEOUT_TO_LAVARIDGE

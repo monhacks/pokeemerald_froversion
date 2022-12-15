@@ -5955,7 +5955,7 @@
       "id": "LAYOUT_LAVARIDIGE_TOWN_MARRIOTT_LAYOUT",
       "name": "LavaridigeTownMarriottLayout_Layout",
       "width": 21,
-      "height": 25,
+      "height": 28,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/LavaridigeTownMarriottLayout/border.bin",

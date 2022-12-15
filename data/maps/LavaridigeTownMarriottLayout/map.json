@@ -37,12 +37,47 @@
       "elevation": 0,
       "dest_map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON",
       "dest_warp_id": 0
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 15,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_LAVARIDGE_TOWN_MART",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_LAVARIDGE_TOWN_HERB_SHOP",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_LAVARIDGE_TOWN_HOUSE",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LavaridigeTownMarriottLayout_EventScript_GymLeaderSignOnDoor"
+    }
   ]
 }
