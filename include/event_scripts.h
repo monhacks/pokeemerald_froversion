@@ -571,6 +571,7 @@ extern const u8 SecretBase_EventScript_InitDecorations[];
 extern const u8 SecretBase_EventScript_PutAwayDecoration[];
 extern const u8 SecretBase_EventScript_SetDecoration[];
 extern const u8 EventScript_IsBadMushroom[];
+extern const u8 EventScript_IsWesternApproachTrap[];
 
 // Battle Pyramid.
 extern const u8 BattlePyramid_Retire[];

@@ -140,7 +140,7 @@ static const u8 sTileBitAttributes[] =
     [MB_ROUTE110_BRIDGE] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
     [MB_COUNTER] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_BAD_MUSHROOM] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
-    [MB_UNUSED_82] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_WESTERN_APPROACH_TRAP] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_PC] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_CABLE_BOX_RESULTS_1] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_REGION_MAP] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
@@ -624,6 +624,14 @@ bool8 MetatileBehavior_IsPC(u8 metatileBehavior)
 bool8 MetatileBehavior_IsBadMushroom(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_BAD_MUSHROOM)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsWesternApproachTrap(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_WESTERN_APPROACH_TRAP)
         return TRUE;
     else
         return FALSE;

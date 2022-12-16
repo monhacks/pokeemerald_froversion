@@ -5980,6 +5980,26 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/WesternApproachLastConnection/border.bin",
       "blockdata_filepath": "data/layouts/WesternApproachLastConnection/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTERN_APPROACH_CAVERN1",
+      "name": "WesternApproachCavern1_Layout",
+      "width": 46,
+      "height": 54,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/WesternApproachCavern1/border.bin",
+      "blockdata_filepath": "data/layouts/WesternApproachCavern1/map.bin"
+    },
+    {
+      "id": "LAYOUT_WESTERN_APPROACH_CAVERNS2",
+      "name": "WesternApproachCaverns2_Layout",
+      "width": 46,
+      "height": 31,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/WesternApproachCaverns2/border.bin",
+      "blockdata_filepath": "data/layouts/WesternApproachCaverns2/map.bin"
     }
   ]
 }

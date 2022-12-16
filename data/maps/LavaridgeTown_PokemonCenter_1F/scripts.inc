@@ -3,12 +3,37 @@
 LavaridgeTown_PokemonCenter_1F_MapScripts:: @ 81FFAFA
 	map_script MAP_SCRIPT_ON_TRANSITION, LavaridgeTown_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	map_script MAP_SCRIPT_ON_LOAD, LavaridgeTown_PokemonCenter_1F_OnLoad
 	.byte 0
 
 LavaridgeTown_PokemonCenter_1F_OnTransition: @ 81FFB05
-	setrespawn HEAL_LOCATION_LAVARIDGE_TOWN
+	call_if_set FLAG_MARRIOTT_VERSION, LavaridgeTown_PokemonCenter_1F_SetMarriottRespawn
+	call_if_unset FLAG_MARRIOTT_VERSION, LavaridgeTown_PokemonCenter_1F_SetFroRespawn
 	call Common_EventScript_UpdateBrineyLocation
 	end
+
+LavaridgeTown_PokemonCenter_1F_SetMarriottRespawn:
+	setrespawn HEAL_LOCATION_LAVARIDIGE_TOWN_MARRIOTT_LAYOUT
+	return
+
+LavaridgeTown_PokemonCenter_1F_SetFroRespawn:
+	setrespawn HEAL_LOCATION_LAVARIDGE_TOWN
+	return
+
+
+LavaridgeTown_PokemonCenter_1F_OnLoad:
+	call_if_set FLAG_MARRIOTT_VERSION, LavaridgeTown_PokemonCenter_1F_EventScript_SetDynamicWarpMarriottVersion
+	call_if_unset FLAG_MARRIOTT_VERSION, LavaridgeTown_PokemonCenter_1F_EventScript_SetDynamicWarpFroVersion
+end
+
+LavaridgeTown_PokemonCenter_1F_EventScript_SetDynamicWarpMarriottVersion:
+	setdynamicwarp MAP_LAVARIDIGE_TOWN_MARRIOTT_LAYOUT, 255, 9, 6
+end
+
+LavaridgeTown_PokemonCenter_1F_EventScript_SetDynamicWarpFroVersion:
+	setdynamicwarp MAP_LAVARIDGE_TOWN, 255, 9, 6
+end
+
 
 LavaridgeTown_PokemonCenter_1F_EventScript_Nurse:: @ 81FFB0E
 	setvar VAR_0x800B, LOCALID_NURSE

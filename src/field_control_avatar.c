@@ -507,6 +507,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
         return EventScript_UseRockClimb;
     if (MetatileBehavior_IsBadMushroom(metatileBehavior) == TRUE)
         return EventScript_IsBadMushroom;
+    if (MetatileBehavior_IsWesternApproachTrap(metatileBehavior) == TRUE)
+        return EventScript_IsWesternApproachTrap;
 
     height = position->height;
     if (height == MapGridGetZCoordAt(position->x, position->y))

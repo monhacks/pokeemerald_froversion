@@ -25,7 +25,97 @@
     }
   ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
+      "x": 36,
+      "y": 28,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WesternApproachCavern1_EventScript_FindFredericSupplies",
+      "flag": "FLAG_ITEM_ROUTE_104_POKE_BALL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPIN_CUSHION",
+      "x": 44,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_IsWesternApproachTrap",
+      "flag": "FLAG_ITEM_ROUTE_116_POTION"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPIN_CUSHION",
+      "x": 34,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_IsWesternApproachTrap",
+      "flag": "FLAG_ITEM_SUMMIT_CAVERNS_ICE_CAMO"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPIN_CUSHION",
+      "x": 63,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_IsWesternApproachTrap",
+      "flag": "FLAG_ITEM_SUMMIT_CAVERNS_X_DEF"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BALL_CUSHION",
+      "x": 54,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WesternApproachOpenLand2_EventScript_BaitBox",
+      "flag": "FLAG_ITEM_MAGMA_HIDEOUT_1F_RARE_CANDY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 54,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "WesternApproachOpenLand2_EventScript_FredericBattle",
+      "flag": "FLAG_HIDE_FREDERIC_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FLANNERY",
+      "x": 54,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_FLANNERY_WESTERN_APPROACH"
+    }
   ],
   "warp_events": [
 

@@ -7867,7 +7867,7 @@ const struct Item gItems[] =
     [ITEM_FREDERIC_SUPPLIES_2] =
     {
         .name = _("Supplies"),
-        .itemId = ITEM_FREDERIC_SUPPLIES_1,
+        .itemId = ITEM_FREDERIC_SUPPLIES_2,
         .price = 0,
         .description = sFredericSuppliesDesc,
         .importance = 2,
@@ -7879,7 +7879,7 @@ const struct Item gItems[] =
     [ITEM_FREDERIC_SUPPLIES_3] =
     {
         .name = _("Supplies"),
-        .itemId = ITEM_FREDERIC_SUPPLIES_1,
+        .itemId = ITEM_FREDERIC_SUPPLIES_3,
         .price = 0,
         .description = sFredericSuppliesDesc,
         .importance = 2,
@@ -7891,7 +7891,7 @@ const struct Item gItems[] =
     [ITEM_FREDERIC_SUPPLIES_4] =
     {
         .name = _("Supplies"),
-        .itemId = ITEM_FREDERIC_SUPPLIES_1,
+        .itemId = ITEM_FREDERIC_SUPPLIES_4,
         .price = 0,
         .description = sFredericSuppliesDesc,
         .importance = 2,
@@ -7903,11 +7903,35 @@ const struct Item gItems[] =
     [ITEM_FREDERIC_SUPPLIES_5] =
     {
         .name = _("Supplies"),
-        .itemId = ITEM_FREDERIC_SUPPLIES_1,
+        .itemId = ITEM_FREDERIC_SUPPLIES_5,
         .price = 0,
         .description = sFredericSuppliesDesc,
         .importance = 2,
         .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_TRAP] =
+    {
+        .name = _("PokeTrap"),
+        .itemId = ITEM_TRAP,
+        .price = 0,
+        .description = sTrapDesc,
+        .importance = 1,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+        [ITEM_MANUSCRIPT] =
+    {
+        .name = _("Manuscript"),
+        .itemId = ITEM_MANUSCRIPT,
+        .price = 0,
+        .description = sManuscriptDesc,
+        .importance = 1,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },

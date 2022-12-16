@@ -177,3 +177,79 @@ end
 
 Text_BadMushroom:
 	.string "This mushroom is no good...$"
+
+EventScript_IsWesternApproachTrap:: @ 8271D92
+	lockall
+	compare VAR_FREDERIC_STATE, 4
+	goto_if_le EventScript_WesternApproachNoWildPokemonEncounter
+	compare VAR_FREDERIC_STATE, 15
+	goto_if_ge EventScript_WesternApproachTrapDisarmed
+	msgbox Text_WesternApproachTrap, MSGBOX_DEFAULT
+	goto EventScript_WesternApproachWildPokemonEncounter
+	releaseall
+end
+
+EventScript_WesternApproachTrapDisarmed:
+	msgbox Text_TrapDisarmed, MSGBOX_DEFAULT
+	releaseall
+end
+
+EventScript_WesternApproachNoWildPokemonEncounter:
+	msgbox Text_WesternApproachTrapNoPokemon, MSGBOX_DEFAULT
+	releaseall
+end
+
+EventScript_WesternApproachWildPokemonEncounter:
+		random 5
+		addvar VAR_FREDERIC_STATE, 1
+		finditem ITEM_TRAP
+	switch VAR_RESULT
+		case 0, Eventscript_SetWildBattleSandslash
+		case 1, Eventscript_SetWildBattleDugtrio
+		case 2, Eventscript_SetWildBattleGolem
+		case 3, Eventscript_SetWildBattleAzumarill
+		case 4, Eventscript_SetWildBattlePoliwrath
+		releaseall
+end
+
+Eventscript_SetWildBattleSandslash:
+	setwildbattle SPECIES_SANDSLASH, 50, ITEM_NONE
+dowildbattle
+releaseall
+end
+
+Eventscript_SetWildBattleDugtrio:
+	setwildbattle SPECIES_DUGTRIO, 50, ITEM_NONE
+dowildbattle
+releaseall
+end
+
+Eventscript_SetWildBattleGolem:
+	setwildbattle SPECIES_GOLEM, 50, ITEM_NONE
+dowildbattle
+releaseall
+end
+
+Eventscript_SetWildBattleAzumarill:
+	setwildbattle SPECIES_AZUMARILL, 50, ITEM_NONE
+dowildbattle
+releaseall
+end
+
+Eventscript_SetWildBattlePoliwrath:
+	setwildbattle SPECIES_POLIWRATH, 50, ITEM_NONE
+dowildbattle
+releaseall
+end
+
+Text_WesternApproachTrap:
+	.string "It appears there is a Pokémon\n"
+	.string "stuck in the trap.$"
+
+Text_WesternApproachTrapNoPokemon:
+	.string "It appears to be some kind\n"
+	.string "of trap.$"
+
+Text_TrapDisarmed:
+	.string "The trap has been disarmed.$"
+
