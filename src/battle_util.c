@@ -3259,9 +3259,18 @@ bool8 HandleFaintedMonActions(void)
                  && !(gBattleStruct->givenExpMons & gBitTable[gBattlerPartyIndexes[gBattleStruct->faintedActionsBattlerId]])
                  && !(gAbsentBattlerFlags & gBitTable[gBattleStruct->faintedActionsBattlerId]))
                 {
-                    //BattleScriptExecute(BattleScript_GiveExp);
-                    gBattleStruct->faintedActionsState = 2;
-                    return TRUE;
+                    if(B_VERSION_MARRIOTT)
+                    {
+                        //BattleScriptExecute(BattleScript_GiveExp);
+                        gBattleStruct->faintedActionsState = 2;
+                        return TRUE;
+                    }
+                    if(B_VERSION_FRO)
+                    {
+                        BattleScriptExecute(BattleScript_GiveExp);
+                        gBattleStruct->faintedActionsState = 2;
+                        return TRUE;
+                    }
                 }
             } while (++gBattleStruct->faintedActionsBattlerId != gBattlersCount);
             gBattleStruct->faintedActionsState = 3;

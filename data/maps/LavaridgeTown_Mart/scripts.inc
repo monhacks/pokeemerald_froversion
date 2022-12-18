@@ -1,18 +1,37 @@
 LavaridgeTown_Mart_MapScripts:: @ 81FF9CD
+	map_script MAP_SCRIPT_ON_LOAD, LavaridgeTown_Mart_OnLoad
 	.byte 0
+
+
+LavaridgeTown_Mart_OnLoad:
+	call_if_set FLAG_MARRIOTT_VERSION, LavaridgeTown_Mart_EventScript_SetDynamicWarpMarriottVersion
+	call_if_unset FLAG_MARRIOTT_VERSION, LavaridgeTown_Mart_EventScript_SetDynamicWarpFroVersion
+end
+
+LavaridgeTown_Mart_EventScript_SetDynamicWarpMarriottVersion:
+	setdynamicwarp MAP_LAVARIDIGE_TOWN_MARRIOTT_LAYOUT, 255, 15, 5
+end
+
+LavaridgeTown_Mart_EventScript_SetDynamicWarpFroVersion:
+	setdynamicwarp MAP_LAVARIDGE_TOWN, 255, 15, 5
+end
 
 LavaridgeTown_Mart_EventScript_Clerk:: @ 81FF9CE
 	lock
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemart LavaridgeTown_Mart_Pokemart
+	call_if_set FLAG_MARRIOTT_VERSION, LavaridgeTown_Mart_Pokemart_MarriottVersionScript
+	call_if_unset FLAG_MARRIOTT_VERSION, LavaridgeTown_Mart_Pokemart_FroVersionScript
+
+LavaridgeTown_Mart_Pokemart_FroVersionScript:
+	pokemart LavaridgeTown_Mart_Pokemart_FroVersion
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-LavaridgeTown_Mart_Pokemart: @ 81FF9E8
+LavaridgeTown_Mart_Pokemart_FroVersion: @ 81FF9E8
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_ANTIDOTE
@@ -22,6 +41,31 @@ LavaridgeTown_Mart_Pokemart: @ 81FF9E8
 	.2byte ITEM_REVIVE
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_X_SPEED
+	.2byte ITEM_NONE
+	release
+	end
+
+LavaridgeTown_Mart_Pokemart_MarriottVersionScript:
+	pokemart LavaridgeTown_Mart_Pokemart_MarriottVersion
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+LavaridgeTown_Mart_Pokemart_MarriottVersion: @ 81FF9E8
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_LEFTOVERS
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_REVIVE
+	.2byte ITEM_MAX_REVIVE
+	.2byte ITEM_X_SPEED
+	.2byte ITEM_X_ATTACK
+	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_X_SP_ATK
+	.2byte ITEM_X_SP_DEF
 	.2byte ITEM_NONE
 	release
 	end

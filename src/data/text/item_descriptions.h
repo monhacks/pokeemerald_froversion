@@ -3076,3 +3076,14 @@ static const u8 sFredericSuppliesDesc[] = _(
     "Supplies found that\n"
     "belong to someone\n"
     "named Frederic.");
+
+static const u8 sTrapDesc[] = _(
+    "A trap that hopes to\n"
+    "lure a powerful\n"
+    "Pokemon.");
+
+
+static const u8 sManuscriptDesc[] = _(
+    "A manuscript with\n"
+    "details for luring\n"
+    "Pokemon correctly");

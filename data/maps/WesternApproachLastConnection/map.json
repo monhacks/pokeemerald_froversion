@@ -35,7 +35,58 @@
     }
   ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPIN_CUSHION",
+      "x": 18,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_IsWesternApproachTrap",
+      "flag": "FLAG_ITEM_ROUTE_113_HYPER_POTION"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPIN_CUSHION",
+      "x": 14,
+      "y": 42,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_IsWesternApproachTrap",
+      "flag": "FLAG_ITEM_ROUTE_111_ELIXIR"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPIN_CUSHION",
+      "x": 37,
+      "y": 24,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_IsWesternApproachTrap",
+      "flag": "FLAG_ITEM_ROUTE_115_HEAL_POWDER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPIN_CUSHION",
+      "x": 57,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_IsWesternApproachTrap",
+      "flag": "FLAG_UNUSED_0x479"
+    }
   ],
   "warp_events": [
 

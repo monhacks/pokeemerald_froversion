@@ -5181,6 +5181,19 @@ const u16 gCheetoSecondaryItems[] =
     0xFFFF
 };
 
+const u16 gWildPokemonDropItems[] =
+{
+    ITEM_RED_SHARD,
+    ITEM_TINY_MUSHROOM,
+    ITEM_BIG_MUSHROOM,
+    ITEM_HEART_SCALE,
+    ITEM_YELLOW_NECTAR,
+    ITEM_SITRUS_BERRY,
+    ITEM_FIRE_GEM,
+    ITEM_NONE,
+    0xFFFF
+};
+
 const u16 gNonStealItems[] =
 {
     ITEM_AKU_BERRY,

@@ -14,11 +14,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
-      "offset": 0,
-      "map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1"
-    },
-    {
       "direction": "right",
       "offset": -27,
       "map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON"
@@ -32,6 +27,16 @@
       "direction": "left",
       "offset": -27,
       "map": "MAP_WESTERN_APPROACH_LAST_CONNECTION"
+    },
+    {
+      "direction": "down",
+      "offset": -69,
+      "map": "MAP_WESTERN_APPROACH_OPEN_LAND1"
+    },
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1"
     }
   ],
   "object_events": [

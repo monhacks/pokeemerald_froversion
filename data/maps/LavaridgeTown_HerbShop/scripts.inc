@@ -1,20 +1,53 @@
 LavaridgeTown_HerbShop_MapScripts:: @ 81FE4D6
+	map_script MAP_SCRIPT_ON_LOAD, LavaridgeTown_HerbShop_OnLoad
 	.byte 0
+
+LavaridgeTown_HerbShop_OnLoad:
+	call_if_set FLAG_MARRIOTT_VERSION, LavaridgeTown_HerbShop_EventScript_SetDynamicWarpMarriottVersion
+	call_if_unset FLAG_MARRIOTT_VERSION, LavaridgeTown_HerbShop_EventScript_SetDynamicWarpFroVersion
+end
+
+LavaridgeTown_HerbShop_EventScript_SetDynamicWarpMarriottVersion:
+	setdynamicwarp MAP_LAVARIDIGE_TOWN_MARRIOTT_LAYOUT, 255, 12, 15
+end
+
+LavaridgeTown_HerbShop_EventScript_SetDynamicWarpFroVersion:
+	setdynamicwarp MAP_LAVARIDGE_TOWN, 255, 12, 15
+end
 
 LavaridgeTown_HerbShop_EventScript_Clerk:: @ 81FE4D7
 	lock
 	faceplayer
 	message LavaridgeTown_HerbShop_Text_WelcomeToHerbShop
 	waitmessage
-	pokemart LavaridgeTown_HerbShop_Pokemart
+	call_if_set FLAG_MARRIOTT_VERSION, LavaridgeTown_HerbShop_Pokemart_MarriottVersionScript
+	call_if_unset FLAG_MARRIOTT_VERSION, LavaridgeTown_HerbShop_Pokemart_FroVersionScript
+
+LavaridgeTown_HerbShop_Pokemart_MarriottVersionScript:
+	pokemart LavaridgeTown_HerbShop_Pokemart_MarriottVersion
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LavaridgeTown_HerbShop_Pokemart_FroVersionScript:
+	pokemart LavaridgeTown_HerbShop_Pokemart_FroVersion
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-LavaridgeTown_HerbShop_Pokemart: @ 81FE4F0
+LavaridgeTown_HerbShop_Pokemart_FroVersion: @ 81FE4F0
 	.2byte ITEM_ENERGY_POWDER
 	.2byte ITEM_ENERGY_ROOT
+	.2byte ITEM_HEAL_POWDER
+	.2byte ITEM_REVIVAL_HERB
+	.2byte ITEM_NONE
+	release
+	end
+.align 2
+LavaridgeTown_HerbShop_Pokemart_MarriottVersion: @ 81FE4F0
+	.2byte ITEM_ENERGY_ROOT
+	.2byte ITEM_ENERGY_POWDER
 	.2byte ITEM_HEAL_POWDER
 	.2byte ITEM_REVIVAL_HERB
 	.2byte ITEM_NONE

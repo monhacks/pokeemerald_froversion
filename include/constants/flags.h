@@ -46,7 +46,7 @@
 #define FLAG_SYS_NO_TRAINER_SEE     0x22 // Unused Flag //DEBUG
 #define FLAG_SYS_NO_BAG_USE         0x23 // Unused Flag //DEBUG
 #define FLAG_SYS_NO_CATCHING        0x24 // Unused Flag //DEBUG
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
+#define FLAG_MARRIOTT_VERSION    0x25 // Indicates Marriott Version
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
@@ -652,8 +652,8 @@
 
 #define FLAG_STARTED_FREDERIC_QUEST  0x264 // Have Spoken to Frederic
 #define FLAG_HIDE_FREDERIC  0x265 // Hide Frederic in Western Approach
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
+#define FLAG_HIDE_FREDERIC_2  0x266 // Hide Frederic for boss battle
+#define FLAG_HIDE_FLANNERY_WESTERN_APPROACH  0x267 // Unused Flag
 #define FLAG_UNUSED_0x268  0x268 // Unused Flag
 #define FLAG_UNUSED_0x269  0x269 // Unused Flag
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag

@@ -9166,9 +9166,10 @@ static void Cmd_various(void)
             u8 WildPokemonDropChance = Random();
             if(WildPokemonDropChance > 128)
             {
-                if(AddBagItem(ITEM_RED_SHARD, 1))
+                u16 item = gWildPokemonDropItems[Random() % 7];
+                if(AddBagItem(item, 1))
                     {
-                        gLastUsedItem = ITEM_RED_SHARD;    
+                        gLastUsedItem = item;    
                         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_ITEM_DROPPED;
                     }
                 else
