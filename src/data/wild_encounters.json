@@ -12484,28 +12484,28 @@
             "encounter_rate": 32,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CORSOLA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               }
             ]
@@ -12514,63 +12514,63 @@
             "encounter_rate": 8,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               }
             ]
@@ -12579,28 +12579,28 @@
             "encounter_rate": 0,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_NONE"
               }
             ]
@@ -13776,28 +13776,28 @@
             "encounter_rate": 32,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CORSOLA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               }
             ]
@@ -13806,63 +13806,63 @@
             "encounter_rate": 8,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               }
             ]
@@ -13875,28 +13875,28 @@
             "encounter_rate": 32,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_POLIWRATH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CORSOLA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               }
             ]
@@ -13905,63 +13905,63 @@
             "encounter_rate": 8,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               }
             ]
@@ -13974,28 +13974,28 @@
             "encounter_rate": 32,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CORSOLA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               }
             ]
@@ -14004,63 +14004,63 @@
             "encounter_rate": 8,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               }
             ]
@@ -14073,28 +14073,28 @@
             "encounter_rate": 32,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CORSOLA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               }
             ]
@@ -14103,63 +14103,63 @@
             "encounter_rate": 8,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               }
             ]
@@ -14172,28 +14172,28 @@
             "encounter_rate": 32,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CORSOLA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               }
             ]
@@ -14202,63 +14202,63 @@
             "encounter_rate": 8,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               }
             ]
@@ -14271,28 +14271,28 @@
             "encounter_rate": 32,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CORSOLA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               }
             ]
@@ -14301,63 +14301,63 @@
             "encounter_rate": 8,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               }
             ]
@@ -14370,28 +14370,28 @@
             "encounter_rate": 32,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CORSOLA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               }
             ]
@@ -14400,63 +14400,63 @@
             "encounter_rate": 8,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               }
             ]
@@ -14469,28 +14469,28 @@
             "encounter_rate": 32,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CORSOLA"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_VAPOREON"
               }
             ]
@@ -14499,63 +14499,63 @@
             "encounter_rate": 8,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SANDSLASH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_PIDGEOT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               }
             ]
@@ -14568,63 +14568,63 @@
             "encounter_rate": 7,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_DUGTRIO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AGGRON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_GOLEM"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CLEFABLE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CRACKTUSS"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CROBAT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SPIRITOMB"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_GOLEM"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_GOLEM"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_GOLEM"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_GOLEM"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SPIRITOMB"
               }
             ]
@@ -14637,63 +14637,63 @@
             "encounter_rate": 0,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AGGRON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_SPIRITOMB"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_GOLEM"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CROBAT"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AZUMARILL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AGGRON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_AGGRON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_GOLEM"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_GOLEM"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_GOLEM"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 43,
+                "max_level": 50,
                 "species": "SPECIES_CROBAT"
               }
             ]
