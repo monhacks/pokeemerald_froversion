@@ -3881,7 +3881,20 @@ static void Cmd_getexp(void)
     case 1: // calculate experience points to redistribute
         {
             u16 calculatedExp;
-            s32 viaSentIn;
+            s32 viaSentIn, difficultyModification;
+
+            switch (gSaveBlock2Ptr->optionsWindowDifficulty)
+                {
+                case OPTIONS_DIFFICULTY_EASY:
+                    difficultyModification = 90;
+                    break;
+                case OPTIONS_DIFFICULTY_NORMAL:
+                    difficultyModification = 100;
+                    break;
+                case OPTIONS_DIFFICULTY_HARD:
+                    difficultyModification = 110;
+                    break;
+                }
 
             for (viaSentIn = 0, i = 0; i < PARTY_SIZE; i++)
             {
@@ -3897,7 +3910,12 @@ static void Cmd_getexp(void)
                 else
                     holdEffect = ItemId_GetHoldEffect(item);
             }
-            calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
+            if(OPTIONS_DIFFICULTY_EASY)
+                calculatedExp = (gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7) * 2;
+            else if(OPTIONS_DIFFICULTY_NORMAL)
+                calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
+            else if(OPTIONS_DIFFICULTY_HARD)
+                calculatedExp = (gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7) / 2;
 
             if (gSaveBlock2Ptr->expShare) // exp share is turned on
             {

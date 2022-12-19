@@ -245,18 +245,21 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon)
     static const u8 minDynamicLevel = 3;
     static const u8 maxDynamicLevel = 98;
     u8 levelDifference = Random() % 2;
-    s32 difficultyModification;
+    s32 difficultyModification, marriottModifier;
 
     switch (gSaveBlock2Ptr->optionsWindowDifficulty)
     {
     case OPTIONS_DIFFICULTY_EASY:
         difficultyModification = 90;
+        marriottModifier = 5;
         break;
     case OPTIONS_DIFFICULTY_NORMAL:
         difficultyModification = 100;
+        marriottModifier = 5;
         break;
     case OPTIONS_DIFFICULTY_HARD:
         difficultyModification = 110;
+        marriottModifier = 5;
         break;
     }
 
@@ -318,8 +321,10 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon)
     }
     else
     {
-        Printf("dynamicLevel + Random ()  2 = %d", dynamicLevel + Random () % 2);
-        return (((dynamicLevel + Random () % 2) * difficultyModification) / 100);
+        if(B_VERSION_MARRIOTT)
+            return ((((dynamicLevel + Random () % 2) * difficultyModification) / 100) - marriottModifier);
+        else
+            return (((dynamicLevel + Random () % 2) * difficultyModification) / 100);
     }
 }
 

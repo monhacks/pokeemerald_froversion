@@ -244,7 +244,10 @@ void NewGameInitData(void)
     ResetContestLinkResults();
     
     memset(&gSaveBlock2Ptr->itemFlags, 0, sizeof(gSaveBlock2Ptr->itemFlags));
-    gSaveBlock2Ptr->expShare = 0;
+    if(B_VERSION_MARRIOTT)
+        gSaveBlock2Ptr->expShare = 1;
+    else
+        gSaveBlock2Ptr->expShare = 0;
     memset(&gSaveBlock2Ptr->follower, 0, sizeof(gSaveBlock2Ptr->follower));
 }
 

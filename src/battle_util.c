@@ -3261,7 +3261,7 @@ bool8 HandleFaintedMonActions(void)
                 {
                     if(B_VERSION_MARRIOTT)
                     {
-                        //BattleScriptExecute(BattleScript_GiveExp);
+                        BattleScriptExecute(BattleScript_GiveExp);
                         gBattleStruct->faintedActionsState = 2;
                         return TRUE;
                     }
