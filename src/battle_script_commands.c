@@ -3883,19 +3883,6 @@ static void Cmd_getexp(void)
             u16 calculatedExp;
             s32 viaSentIn, difficultyModification;
 
-            switch (gSaveBlock2Ptr->optionsWindowDifficulty)
-                {
-                case OPTIONS_DIFFICULTY_EASY:
-                    difficultyModification = 90;
-                    break;
-                case OPTIONS_DIFFICULTY_NORMAL:
-                    difficultyModification = 100;
-                    break;
-                case OPTIONS_DIFFICULTY_HARD:
-                    difficultyModification = 110;
-                    break;
-                }
-
             for (viaSentIn = 0, i = 0; i < PARTY_SIZE; i++)
             {
                 if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE || GetMonData(&gPlayerParty[i], MON_DATA_HP) == 0)
@@ -3910,13 +3897,19 @@ static void Cmd_getexp(void)
                 else
                     holdEffect = ItemId_GetHoldEffect(item);
             }
-            if(OPTIONS_DIFFICULTY_EASY)
-                calculatedExp = (gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7) * 2;
-            else if(OPTIONS_DIFFICULTY_NORMAL)
-                calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
-            else if(OPTIONS_DIFFICULTY_HARD)
-                calculatedExp = (gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7) / 2;
 
+            switch (gSaveBlock2Ptr->optionsWindowDifficulty)
+                {
+                case OPTIONS_DIFFICULTY_EASY:
+                    calculatedExp = (gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7) * 2;
+                    break;
+                case OPTIONS_DIFFICULTY_NORMAL:
+                    calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
+                    break;
+                case OPTIONS_DIFFICULTY_HARD:
+                    calculatedExp = (gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7) / 2;
+                    break;
+                }
             if (gSaveBlock2Ptr->expShare) // exp share is turned on
             {
                 *exp = calculatedExp / 2 / viaSentIn;
