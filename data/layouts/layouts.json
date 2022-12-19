@@ -5497,7 +5497,7 @@
       "width": 40,
       "height": 20,
       "primary_tileset": "gTileset_WesternApproach",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_WesternApproachSpringCanyon",
       "border_filepath": "data/layouts/WesternApproachStillRuins/border.bin",
       "blockdata_filepath": "data/layouts/WesternApproachStillRuins/map.bin"
     },
@@ -5977,7 +5977,7 @@
       "width": 69,
       "height": 47,
       "primary_tileset": "gTileset_WesternApproach",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_WesternApproachSpringCanyon",
       "border_filepath": "data/layouts/WesternApproachLastConnection/border.bin",
       "blockdata_filepath": "data/layouts/WesternApproachLastConnection/map.bin"
     },

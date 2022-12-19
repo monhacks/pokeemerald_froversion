@@ -2,6 +2,7 @@
 .set LOCALID_FREDERIC2, 6
 
 WesternApproachOpenLand2_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, WesternApproachSandstormCheck_OnTransition
 	.byte 0
 
 WesternApproachOpenLand2_EventScript_FindFredericSupplies::

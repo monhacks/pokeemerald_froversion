@@ -1,6 +1,7 @@
 .set LOCAL_ID_FLANNERY, 1
 
 WesternApproachLostSpringCanyon_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, WesternApproachSandstormCheck_OnTransition
 	.byte 0
 
 ///////////////////////////////
