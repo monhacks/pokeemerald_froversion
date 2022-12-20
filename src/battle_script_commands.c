@@ -559,14 +559,26 @@ static void Cmd_trygetbaddreamstarget(void);
 static void Cmd_tryworryseed(void);
 static void Cmd_metalburstdamagecalculator(void);
 
+//FRO VERSION
+
+// const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
+// {
+//     FLAG_BADGE01_GET, FLAG_BADGE02_GET, FLAG_BADGE03_GET, FLAG_BADGE04_GET,
+//     FLAG_BADGE05_GET, FLAG_BADGE06_GET, FLAG_BADGE07_GET, FLAG_BADGE08_GET,
+//     FLAG_SYS_GAME_CLEAR,
+// };
+
+// const u16 sLevelCaps[NUM_SOFT_CAPS] = { 14, 18, 23, 29, 37, 44, 51, 59, 67 };
+
+// MARRIOTT VERSION
+
 const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
 {
-    FLAG_BADGE01_GET, FLAG_BADGE02_GET, FLAG_BADGE03_GET, FLAG_BADGE04_GET,
-    FLAG_BADGE05_GET, FLAG_BADGE06_GET, FLAG_BADGE07_GET, FLAG_BADGE08_GET,
-    FLAG_SYS_GAME_CLEAR,
+    FLAG_MARRIOTT_VERSION,
 };
 
-const u16 sLevelCaps[NUM_SOFT_CAPS] = { 14, 18, 23, 29, 37, 44, 51, 59, 67 };
+const u16 sLevelCaps[NUM_SOFT_CAPS] = { 100};
+
 const double sLevelCapReduction[7] = { .5, .33, .25, .20, .15, .10, .05 };
 const double sRelativePartyScaling[27] =
 {
@@ -3851,12 +3863,17 @@ static void Cmd_getexp(void)
     u16 item;
     s32 i; // also used as stringId
     u8 holdEffect;
-    s32 sentIn;
+    s32 sentIn, levelDivisorExp;
     s32 viaExpShare = 0;
     u16 *exp = &gBattleStruct->expValue;
 
     gBattlerFainted = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
     sentIn = gSentPokesToOpponent[(gBattlerFainted & 2) >> 1];
+
+    if(B_VERSION_MARRIOTT)
+        levelDivisorExp = 3;
+    if(B_VERSION_FRO)
+        levelDivisorExp = 7;
 
     switch (gBattleScripting.getexpState)
     {
@@ -3901,13 +3918,13 @@ static void Cmd_getexp(void)
             switch (gSaveBlock2Ptr->optionsWindowDifficulty)
                 {
                 case OPTIONS_DIFFICULTY_EASY:
-                    calculatedExp = (gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7) * 2;
+                    calculatedExp = (gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / levelDivisorExp) * 2;
                     break;
                 case OPTIONS_DIFFICULTY_NORMAL:
-                    calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
+                    calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / levelDivisorExp;
                     break;
                 case OPTIONS_DIFFICULTY_HARD:
-                    calculatedExp = (gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7) / 2;
+                    calculatedExp = (gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / levelDivisorExp) / 2;
                     break;
                 }
             if (gSaveBlock2Ptr->expShare) // exp share is turned on

@@ -54,6 +54,7 @@ LavaridgeTown_Mart_Pokemart_MarriottVersionScript:
 	.align 2
 LavaridgeTown_Mart_Pokemart_MarriottVersion: @ 81FF9E8
 	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_HYPER_POTION
 	.2byte ITEM_LEFTOVERS

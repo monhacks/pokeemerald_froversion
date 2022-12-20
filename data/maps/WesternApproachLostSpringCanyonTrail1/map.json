@@ -2,7 +2,7 @@
   "id": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1",
   "name": "WesternApproachLostSpringCanyonTrail1",
   "layout": "LAYOUT_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1",
-  "music": "MUS_FV_SAND_CAVES",
+  "music": "MUS_FV_WESTERN_APPROACH",
   "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

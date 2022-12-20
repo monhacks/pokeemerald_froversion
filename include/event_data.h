@@ -1,7 +1,10 @@
 #ifndef GUARD_EVENT_DATA_H
 #define GUARD_EVENT_DATA_H
+//FRO VERSION
+//#define NUM_SOFT_CAPS 10
 
-#define NUM_SOFT_CAPS 9
+//MARRIOTT VERSION
+#define NUM_SOFT_CAPS 1
 
 void InitEventData(void);
 void ClearTempFieldEventData(void);

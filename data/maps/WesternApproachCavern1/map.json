@@ -2,7 +2,7 @@
   "id": "MAP_WESTERN_APPROACH_CAVERN1",
   "name": "WesternApproachCavern1",
   "layout": "LAYOUT_WESTERN_APPROACH_CAVERN1",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_FV_SAND_CAVES",
   "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -10,7 +10,7 @@
   "allow_cycling": true,
   "allow_escaping": true,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [

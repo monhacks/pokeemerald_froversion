@@ -2017,7 +2017,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 Printf("partyData[i].lvl = %d", partyData[i].lvl);
                 Printf("dynamicLevel = %d", dynamicLevel);
-                if(partyData[i].lvl > dynamicLevel)
+                if(partyData[i].lvl > dynamicLevel
+                || partyData[i].species == SPECIES_ABYSSALDRAGONFIRSTEVO
+                || partyData[i].species == SPECIES_ABYSSALDRAGONSECONDEVO)
                     CreateMon(&party[i], partyData[i].species, ((partyData[i].lvl * difficultyModification) / 100), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 else
                     CreateMon(&party[i], partyData[i].species, (((dynamicLevel - Random() % 3) * difficultyModification) / 100), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);

@@ -1,3 +1,18 @@
 WesternApproachLastConnection_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, WesternApproachSandstormCheck_OnTransition
 	.byte 0
+
+
+WesternApproachLastConnection_EventScript_Tent::
+	lock
+	setrespawn HEAL_LOCATION_WESTERN_APPROACH_LAST_CONNECTION
+	msgbox WesternApproachLostSpringCanyon_Text_RestUpHere, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq WesternApproachLastConnection_EventScript_Rest
+end
+
+WesternApproachLastConnection_EventScript_Rest:: @ 822A941
+	msgbox WesternApproachLostSpringCanyon_Text_TakeYourTimeRestUp, MSGBOX_DEFAULT
+	closemessage
+	call Common_EventScript_OutOfCenterPartyHeal
+end

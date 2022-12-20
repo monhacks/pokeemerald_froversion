@@ -207,7 +207,10 @@ void NewGameInitData(void)
     ResetGabbyAndTy();
     ClearSecretBases();
     ClearBerryTrees();
-    SetMoney(&gSaveBlock1Ptr->money, 3000);
+    if(B_VERSION_MARRIOTT)
+        SetMoney(&gSaveBlock1Ptr->money, 50000);
+    else
+        SetMoney(&gSaveBlock1Ptr->money, 3000);
     SetCoins(0);
     ResetLinkContestBoolean();
     ResetGameStats();
