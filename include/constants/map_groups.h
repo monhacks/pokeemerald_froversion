@@ -147,6 +147,8 @@
 #define MAP_LAKE_MEAD_VILLAGE_NALLS_RESIDENCE_1F  (7 | (1 << 8))
 #define MAP_LAKE_MEAD_VILLAGE_NALLS_RESIDENCE_2F  (8 | (1 << 8))
 #define MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB         (9 | (1 << 8))
+#define MAP_MAGEE_VERSION_HOMESTEAD_TOWN_NORTH    (10 | (1 << 8))
+#define MAP_MAGEE_VERSION_PROTAGONISTS_HOUSE      (11 | (1 << 8))
 
 // Map Group 2
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))
@@ -724,6 +726,7 @@
 #define MAP_WESTERN_APPROACH_LAST_CONNECTION  (4 | (32 << 8))
 #define MAP_WESTERN_APPROACH_CAVERN1          (5 | (32 << 8))
 #define MAP_WESTERN_APPROACH_CAVERNS2         (6 | (32 << 8))
+#define MAP_VERMILLION_CITY                   (7 | (32 << 8))
 
 // Map Group 33
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
@@ -752,6 +755,6 @@
 
 #define MAP_GROUPS_COUNT 34
 
-// static const u8 MAP_GROUP_COUNT[] = {129, 10, 10, 43, 9, 9, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 16, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 7, 23, 0};
+// static const u8 MAP_GROUP_COUNT[] = {129, 12, 10, 43, 9, 9, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 16, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 8, 23, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

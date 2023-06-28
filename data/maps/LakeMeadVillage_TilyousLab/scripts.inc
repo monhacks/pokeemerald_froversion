@@ -59,7 +59,7 @@ turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 end
 
 Script_TilyousLab_MoveBobbyAndTilyou:
-clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+clearflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 clearflag FLAG_HIDE_TILYOUS_LAB_ISIAH
 addobject 2
 addobject 9
@@ -76,7 +76,7 @@ Script_TilyousLab_RemoveTilyouBobbyJohn:
 	removeobject 3
 	removeobject 9
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
 	setflag FLAG_HIDE_TILYOUS_LAB_ISIAH
 	end
@@ -88,7 +88,7 @@ Script_TilyousLab_ShowTilyouBobbyJohn:
 	removeobject 9
 	setflag FLAG_HIDE_TILYOUS_LAB_ISIAH
 	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU
-	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	clearflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
 	setobjectxyperm 1, 6, 11
 	setobjectmovementtype 1, MOVEMENT_TYPE_FACE_UP
@@ -197,7 +197,7 @@ Script_TilyousLab_FroTookRascaloot:
 	applymovement 3, M_TilyousLab_JohnExits
 	waitmovement 3
 	removeobject 2
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 	removeobject 3
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
 	setvar VAR_LITTLEROOT_TOWN_STATE, 4
@@ -258,7 +258,7 @@ Script_TilyousLab_FroTookFlobra:
 	applymovement 3, M_TilyousLab_JohnExits
 	waitmovement 3
 	removeobject 2
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 	removeobject 3
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
 	setvar VAR_LITTLEROOT_TOWN_STATE, 4
@@ -318,7 +318,7 @@ Script_TilyousLab_FroTookEmboryps:
 	applymovement 3, M_TilyousLab_JohnExits
 	waitmovement 3
 	removeobject 2
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 	removeobject 3
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
 	setvar VAR_LITTLEROOT_TOWN_STATE, 4
@@ -348,7 +348,7 @@ applymovement 2, M_TilyousLab_BobbyLeavesAfterSavingIsiah
 waitmovement 2
 setvar VAR_OLDALE_TOWN_STATE, 6
 removeobject 2
-setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 removeobject 9
 setflag FLAG_HIDE_TILYOUS_LAB_ISIAH
 releaseall

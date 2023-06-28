@@ -833,3 +833,17 @@ gMetatiles_NCC_Underground_Lab::
 	.align 1
 gMetatileAttributes_NCC_Underground_Lab::
 	.incbin "data/tilesets/secondary/ncc_underground_lab/metatile_attributes.bin"
+	.align 1
+gMetatiles_VermillionCityPrimary::
+	.incbin "data/tilesets/primary/vermillioncityprimary/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_VermillionCityPrimary::
+	.incbin "data/tilesets/primary/vermillioncityprimary/metatile_attributes.bin"
+	.align 1
+gMetatiles_VermillionCitySecondary::
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_VermillionCitySecondary::
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/metatile_attributes.bin"

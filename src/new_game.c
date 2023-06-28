@@ -136,35 +136,38 @@ static void WarpToTruck(void)
     }
     if(B_VERSION_MAGM6)
     {
-        u16 i;
-        AddBagItem(ITEM_HYPER_POTION, 10);
-        AddBagItem(ITEM_REVIVE, 20);
-        AddBagItem(ITEM_MAX_REVIVE, 10);
-        AddBagItem(ITEM_SUPER_POTION, 20);
-        AddBagItem(ITEM_X_ATTACK, 7);
-        AddBagItem(ITEM_X_SP_ATK, 7);
-        AddBagItem(ITEM_X_SP_DEF, 7);
-        AddBagItem(ITEM_X_DEFENSE, 7);
-        AddBagItem(ITEM_DIRE_HIT, 7);
-        AddBagItem(ITEM_FULL_RESTORE, 5);
-        AddBagItem(ITEM_LEFTOVERS, 5);
-        AddBagItem(ITEM_SITRUS_BERRY, 5);
-        AddBagItem(ITEM_WEAKNESS_POLICY, 1);
-        AddBagItem(ITEM_ASSAULT_VEST, 1);
-        AddBagItem(ITEM_DRAGON_CAMOUFLAGE, 1);
-        AddBagItem(ITEM_LIFE_ORB, 1);
-        AddBagItem(ITEM_CHOICE_BAND, 1);
-        AddBagItem(ITEM_CHOICE_SPECS, 1);
-        for (i = ITEM_TM01; i <= ITEM_TM50; i++)
-            {
-                if(!CheckBagHasItem(i, 1))
-                AddBagItem(i, 1);
-            }
-        SetWarpDestination(MAP_GROUP(UNKNOWN_CAVE), MAP_NUM(UNKNOWN_CAVE), -1, 9, 8);
+        //u16 i;
+        // AddBagItem(ITEM_HYPER_POTION, 10);
+        // AddBagItem(ITEM_REVIVE, 20);
+        // AddBagItem(ITEM_MAX_REVIVE, 10);
+        // AddBagItem(ITEM_SUPER_POTION, 20);
+        // AddBagItem(ITEM_X_ATTACK, 7);
+        // AddBagItem(ITEM_X_SP_ATK, 7);
+        // AddBagItem(ITEM_X_SP_DEF, 7);
+        // AddBagItem(ITEM_X_DEFENSE, 7);
+        // AddBagItem(ITEM_DIRE_HIT, 7);
+        // AddBagItem(ITEM_FULL_RESTORE, 5);
+        // AddBagItem(ITEM_LEFTOVERS, 5);
+        // AddBagItem(ITEM_SITRUS_BERRY, 5);
+        // AddBagItem(ITEM_WEAKNESS_POLICY, 1);
+        // AddBagItem(ITEM_ASSAULT_VEST, 1);
+        // AddBagItem(ITEM_DRAGON_CAMOUFLAGE, 1);
+        // AddBagItem(ITEM_LIFE_ORB, 1);
+        // AddBagItem(ITEM_CHOICE_BAND, 1);
+        // AddBagItem(ITEM_CHOICE_SPECS, 1);
+        // for (i = ITEM_TM01; i <= ITEM_TM50; i++)
+        //     {
+        //         if(!CheckBagHasItem(i, 1))
+        //         AddBagItem(i, 1);
+        //     }
+        SetWarpDestination(MAP_GROUP(CINNIBAR_ISLAND), MAP_NUM(CINNIBAR_ISLAND), -1, 62, 53);
         WarpIntoMap();
     }
     if(B_VERSION_MARRIOTT)
         SetWarpDestination(MAP_GROUP(MARRIOTT_INTRO_FRAME1), MAP_NUM(MARRIOTT_INTRO_FRAME1), -1, 7, 5);
+        WarpIntoMap();
+    if(B_VERSION_MAGEE)
+        SetWarpDestination(MAP_GROUP(MAP_MAGEE_VERSION_PROTAGONISTS_HOUSE), MAP_NUM(MAP_MAGEE_VERSION_PROTAGONISTS_HOUSE), -1, 1, 4);
         WarpIntoMap();
 }
 

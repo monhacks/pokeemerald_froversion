@@ -1,0 +1,390 @@
+{
+  "id": "MAP_MAGEE_VERSION_HOMESTEAD_TOWN_NORTH",
+  "name": "MageeVersionHomesteadTownNorth",
+  "layout": "LAYOUT_MAGEE_VERSION_HOMESTEAD_TOWN_NORTH",
+  "music": "MUS_FV_STILLSNOW",
+  "region_map_section": "MAPSEC_SOOTOPOLIS_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SNOW",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_GLACIA",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 40,
+      "y": 52,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SnowVillage_EventScript_Greeter",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
+      "x": 55,
+      "y": 23,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SnowVillage_EventScript_NormalNPCDialouge1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 34,
+      "y": 35,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SnowVillage_EventScript_BugCatcher",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PIKACHU",
+      "x": 29,
+      "y": 35,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "x": 16,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HomesteadNorth_EventScript_Boy1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MATT",
+      "x": 36,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SnowVillage_EventScript_FinalBattle",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
+      "x": 31,
+      "y": 34,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 5,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SnowVillage_EventScript_Watcher",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AZURILL",
+      "x": 33,
+      "y": 35,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_2",
+      "x": 21,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 3,
+      "movement_range_y": 3,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "HomesteadNorth_EventScript_Boy2",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GAMEBOY_KID",
+      "x": 40,
+      "y": 29,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 5,
+      "movement_range_y": 5,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SnowVillage_EventScript_GameBoyKid",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 28,
+      "y": 35,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SnowVillage_EventScript_Camper",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 37,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_CAVE_OF_ORIGIN_1F",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_HOMESTEAD_CAVERNS_ENTRANCE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 27,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_HOMESTEAD_NORTH_HOUSE2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 47,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_MAP2",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 13,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_HOMESTEAD_NORTH_HOUSE3",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 12,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_MAGEE_VERSION_PROTAGONISTS_HOUSE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 58,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_HOMESTEAD_NORTH_POKECENTER",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 45,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_HOMESTEAD_NORTH_HOUSE1",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_StopPlayerFromLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 38,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_StopPlayerFromLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 37,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_StopPlayerFromLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_StopPlayerFromLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_StopPlayerFromLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_StopPlayerFromLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_Battle"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_Battle"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_Battle"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_Battle"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_Battle"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_Battle"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_Battle"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 36,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_Battle"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "SnowVillage_EventScript_Battle"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 27,
+      "y": 28,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SnowVillage_EventScript_HouseLocked"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SnowVillage_EventScript_HouseLocked"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 35,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SnowVillage_EventScript_HouseLocked"
+    },
+    {
+      "type": "sign",
+      "x": 45,
+      "y": 39,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SnowVillage_EventScript_HouseLocked"
+    }
+  ]
+}

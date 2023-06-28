@@ -2509,3 +2509,43 @@ gTilesetPalettes_NCC_Underground_Lab::
 	.align 2
 gTilesetTiles_NCC_Underground_Lab::
 	.incbin "data/tilesets/secondary/ncc_underground_lab/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_VermillionCityPrimary::
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/vermillioncityprimary/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_VermillionCityPrimary::
+	.incbin "data/tilesets/primary/vermillioncityprimary/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_VermillionCitySecondary::
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_VermillionCitySecondary::
+	.incbin "data/tilesets/secondary/vermillioncitysecondary/tiles.4bpp.lz"

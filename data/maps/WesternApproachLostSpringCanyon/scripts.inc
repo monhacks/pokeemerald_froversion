@@ -28,7 +28,7 @@ WesternApproachLostSpringCanyon_EventScript_Flannery::
 	msgbox WesternApproachLostSpringCanyon_Text_Flannery, MSGBOX_NPC
 	fadescreen FADE_TO_BLACK
 	removeobject LOCAL_ID_FLANNERY
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 	fadescreen FADE_FROM_BLACK
 	releaseall
 end

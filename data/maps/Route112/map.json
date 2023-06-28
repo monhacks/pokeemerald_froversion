@@ -223,7 +223,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY"
+      "flag": "FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY"
     }
   ],
   "warp_events": [

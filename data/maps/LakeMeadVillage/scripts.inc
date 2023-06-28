@@ -44,7 +44,7 @@ map_script_2 VAR_OLDALE_TOWN_STATE, 3, Script_LMV_IsiahCaught
 LakeMeadVillage_OnLoad:
 	removeobject 2
 	setflag FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 	compare VAR_LITTLEROOT_TOWN_STATE, 0
 	goto_if_eq Script_LakeMeadVillage_MoveLittleBoyRemoveIsiah
 	compare VAR_OLDALE_TOWN_STATE, 3
@@ -211,7 +211,7 @@ Script_LMV_SaveIsiahGrunt1::
 lockall
 msgbox T_LMV_StartBattleSequence, MSGBOX_NPC
 msgbox T_LMV_SoldierBattleStart, MSGBOX_NPC
-clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+clearflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 addobject LOCALID_WASULA, MAP_LAKE_MEAD_VILLAGE
 applymovement LOCALID_WASULA, M_LMV_WasulaHelpsFro1
 waitmovement LOCALID_WASULA
@@ -225,7 +225,7 @@ end
 
 Script_LMV_InitiateBobbyBattleFlobra::
 	multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_BRENDAN_ROUTE_119_MUDKIP, TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq Script_LMV_PlayerLoseDoubleBattle
@@ -248,7 +248,7 @@ Script_LMV_InitiateBobbyBattleFlobra::
 
 Script_LMV_InitiateBobbyBattleEmboryps:
 	multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_BRENDAN_ROUTE_119_TORCHIC, TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq Script_LMV_PlayerLoseDoubleBattle
@@ -271,7 +271,7 @@ Script_LMV_InitiateBobbyBattleEmboryps:
 
 Script_LMV_InitiateBobbyBattleRascaloot:
 	multi_fixed_2_vs_1 TRAINER_JOHN_AND_JAY_1, T_LMV_JohnDefeat, TRAINER_BRENDAN_ROUTE_119_TREECKO, TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq Script_LMV_PlayerLoseDoubleBattle
@@ -298,7 +298,7 @@ Script_LMV_SaveIsiahGrunt2::
 lockall
 msgbox T_LMV_StartBattleSequence, MSGBOX_NPC
 msgbox T_LMV_SoldierBattleStart, MSGBOX_NPC
-clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+clearflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 addobject LOCALID_WASULA
 applymovement LOCALID_WASULA, M_LMV_WasulaHelpsFro2
 waitmovement LOCALID_WASULA

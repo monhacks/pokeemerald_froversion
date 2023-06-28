@@ -6000,6 +6000,36 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/WesternApproachCaverns2/border.bin",
       "blockdata_filepath": "data/layouts/WesternApproachCaverns2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILLION_CITY",
+      "name": "VermillionCity_Layout",
+      "width": 75,
+      "height": 59,
+      "primary_tileset": "gTileset_VermillionCityPrimary",
+      "secondary_tileset": "gTileset_VermillionCitySecondary",
+      "border_filepath": "data/layouts/VermillionCity/border.bin",
+      "blockdata_filepath": "data/layouts/VermillionCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGEE_VERSION_HOMESTEAD_TOWN_NORTH",
+      "name": "MageeVersionHomesteadTownNorth_Layout",
+      "width": 70,
+      "height": 60,
+      "primary_tileset": "gTileset_GeneralSnow",
+      "secondary_tileset": "gTileset_HomesteadNorth",
+      "border_filepath": "data/layouts/MageeVersionHomesteadTownNorth/border.bin",
+      "blockdata_filepath": "data/layouts/MageeVersionHomesteadTownNorth/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGEE_VERSION_PROTAGONISTS_HOUSE",
+      "name": "MageeVersionProtagonistsHouse_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/MageeVersionProtagonistsHouse/border.bin",
+      "blockdata_filepath": "data/layouts/MageeVersionProtagonistsHouse/map.bin"
     }
   ]
 }

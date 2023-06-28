@@ -153,7 +153,7 @@ Route112_Text_RouteSignLavaridge: @ 81F2138
 Route112_EventScript_BobbyTrigger1::
 	lock
 	playbgm MUS_ENCOUNTER_MALE, 0
-	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	clearflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 	addobject LOCALID_BOBBY
 	setvar VAR_MUGSHOT_ID, MUGSHOT_WASULA
 	applymovement LOCALID_BOBBY, Movement_Route112_BobbyApproachesFroTrigger1
@@ -170,7 +170,7 @@ Route112_EventScript_BobbyTrigger1::
 Route112_EventScript_BobbyTrigger2::
 	lock
 	playbgm MUS_ENCOUNTER_MALE, 0
-	clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY
+	clearflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 	addobject LOCALID_BOBBY
 	setvar VAR_MUGSHOT_ID, MUGSHOT_WASULA
 	applymovement LOCALID_BOBBY, Movement_Route112_BobbyApproachesFroTrigger2
@@ -246,7 +246,7 @@ EventScript_Route112_BobbyBattleLost:
 	applymovement LOCALID_BOBBY, Movement_Route112_BobbyLeaves
 	waitmovement LOCALID_BOBBY
 	removeobject LOCALID_BOBBY
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY 
+	setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY 
 	setvar VAR_OLDALE_TOWN_STATE, 9
 	release
 	end
@@ -256,7 +256,7 @@ EventScript_Route112_BobbyBattleWon:
 	applymovement LOCALID_BOBBY, Movement_Route112_BobbyLeaves
 	waitmovement LOCALID_BOBBY
 	removeobject LOCALID_BOBBY
-	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY 
+	setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY 
 	setvar VAR_OLDALE_TOWN_STATE, 9
 	release
 	end 

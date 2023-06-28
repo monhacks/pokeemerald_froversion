@@ -1259,3 +1259,25 @@ gTileset_NCC_Underground_Lab::
 	.4byte gMetatiles_NCC_Underground_Lab
 	.4byte gMetatileAttributes_NCC_Underground_Lab
 	.4byte NULL
+
+	.align 2
+gTileset_VermillionCityPrimary::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_VermillionCityPrimary
+	.4byte gTilesetPalettes_VermillionCityPrimary
+	.4byte gMetatiles_VermillionCityPrimary
+	.4byte gMetatileAttributes_VermillionCityPrimary
+	.4byte NULL
+
+	.align 2
+gTileset_VermillionCitySecondary::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_VermillionCitySecondary
+	.4byte gTilesetPalettes_VermillionCitySecondary
+	.4byte gMetatiles_VermillionCitySecondary
+	.4byte gMetatileAttributes_VermillionCitySecondary
+	.4byte NULL

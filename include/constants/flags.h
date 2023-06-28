@@ -1306,7 +1306,7 @@
 #define FLAG_HIDE_NALLS_RESIDENCE_1F_ISIAH                          0x4EA // Hides Isiah in his house until intro sequence is done
 #define FLAG_HIDE_MOM                                               0x4EB // Hides Fros Mom for intro sequence
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN                0x4EC // Hides John in Tilyous Lab
-#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_BOBBY               0x4ED // Hides Bobby in Tilyous Lab
+#define FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY               0x4ED // FROVERSION: Hides Bobby in Tilyous Lab // MAGEE VERSION: Hides Protagonists Secretary
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_ISIAH                           0x4EE // Hides Isiah in Lake Mead
 #define FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU                          0x4EF // Hides Tilyou in Lab in lake mead village
 

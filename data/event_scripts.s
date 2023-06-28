@@ -1383,3 +1383,9 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/WesternApproachCavern1/scripts.inc"
 
 	.include "data/maps/WesternApproachCaverns2/scripts.inc"
+
+	.include "data/maps/VermillionCity/scripts.inc"
+
+	.include "data/maps/MageeVersionHomesteadTownNorth/scripts.inc"
+
+	.include "data/maps/MageeVersionProtagonistsHouse/scripts.inc"

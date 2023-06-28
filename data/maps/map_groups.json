@@ -177,7 +177,9 @@
     "LakeMeadVillage_FrosHouse_Basement",
     "LakeMeadVillage_NallsResidence_1F",
     "LakeMeadVillage_NallsResidence_2F",
-    "LakeMeadVillage_TilyousLab"
+    "LakeMeadVillage_TilyousLab",
+    "MageeVersionHomesteadTownNorth",
+    "MageeVersionProtagonistsHouse"
   ],
   "gMapGroup2": [
     "OldaleTown_House1",
@@ -754,7 +756,8 @@
     "WesternApproachStillRuinsEast",
     "WesternApproachLastConnection",
     "WesternApproachCavern1",
-    "WesternApproachCaverns2"
+    "WesternApproachCaverns2",
+    "VermillionCity"
   ],
   "gMapGroup33": [
     "Route124_DivingTreasureHuntersHouse",
