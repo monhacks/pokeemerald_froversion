@@ -406,6 +406,7 @@
 #define TRAINER_CLASS_WES               0x53
 #define TRAINER_CLASS_SHADOW_CHARIZARD          0x54
 #define TRAINER_CLASS_SCIENTIST            0x55
+#define TRAINER_CLASS_FRO                  0x56
 
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music

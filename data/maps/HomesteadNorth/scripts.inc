@@ -1,5 +1,6 @@
 .set LOCALID_GREETER, 1
 .set LOCALID_SNOWFLAKE_CHAMPION, 6
+.set LOCALID_GREETER_2, 12
 
 HomesteadNorth_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, SnowVillage_OnLoad
@@ -67,6 +68,12 @@ SnowVillage_EventScript_Greeter::
 	release
 end
 
+SnowVillage_EventScript_Greeter2::
+	lockall 
+		msgbox SnowVillage_Text_GreeterStopsFromLeaving_2, MSGBOX_NPC
+	release
+	end
+
 SnowVillage_EventScript_BugCatcher::
 	lockall
 	msgbox SnowVillage_Text_MyPokemonIsStrong, MSGBOX_NPC
@@ -81,6 +88,8 @@ end
 
 SnowVillage_EventScript_GetMaskBeforeEnteringCave::
 lock
+	applymovement LOCALID_GREETER_2, Common_Movement_ExclamationMark
+	waitmovement 0
 	msgbox SnowVillage_Text_CantEnterCaveWithoutMask1, MSGBOX_NPC
 	applymovement OBJ_EVENT_ID_PLAYER, SnowVillage_Movement_CantEnterCave1
 	msgbox SnowVillage_Text_CantEnterCaveWithoutMask2
@@ -279,15 +288,20 @@ SnowVillage_Text_TownIntro:
 	.string "Once you have collected all 12 \nSnowflakes, you can challenge the \lcurrent Gym Leader on the \lBattle rink.$"
 
 SnowVillage_Text_GreeterStopsFromLeaving:
-	.string "Good luck with the Snowflake Challenge!$"
+	.string "Hey, you have a challenger waiting!$"
+
+SnowVillage_Text_GreeterStopsFromLeaving_2:
+	.string "You turn your butt around and do your\n"
+	.string "job like a REAL man!$"
 
 SnowVillage_Text_CantEnterCaveWithoutMask1:
 	.string "Hold it right there partner!$"
 
 SnowVillage_Text_CantEnterCaveWithoutMask2:
-	.string "Are you tryin' to get your Pokemon sick?\p"
-	.string "You can't enter this cave without\na mask to protect your Pokemon from \lcatching Pokerus!\p"
-	.string "Why don't you see if the Pokemart\nhas any left?$"
+	.string "Are you tryin' to get out of your\n"
+	.string "responsibility as a Gym Leader?\p"
+	.string "You turn your butt around and do your\n"
+	.string "job like a REAL man!$"
 
 SnowVillage_Text_DontForgetToPutMaskOn:
 	.string "Looks like you found a Mask!\p"

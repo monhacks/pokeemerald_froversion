@@ -1991,17 +1991,34 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Steve2[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Steve3[] = {
+static const struct TrainerMonItemCustomMoves sParty_MageeVersionFroSnowflakeChallenger[] = {
     {
-    .iv = 20,
-    .lvl = 29,
-    .species = SPECIES_LAIRON,
+    .abilityNum = 3,
+    .iv = 255,
+    .lvl = 55,
+    .species = SPECIES_RUTHLASH,
+    .heldItem = ITEM_AKU_BERRY,
+    .moves = {MOVE_SPINNING_PUNCH, MOVE_BULLET_SEED, MOVE_FURY_SWIPES, MOVE_POWER_UP_PUNCH},
+    .evs = {4, 252, 0, 252, 0, 0},
     },
     {
-    .iv = 20,
-    .lvl = 29,
-    .species = SPECIES_RHYHORN,
-    }
+    .heldItem = ITEM_SITRUS_BERRY,
+    .abilityNum = 2,
+    .iv = 255,
+    .lvl = 55,
+    .species = SPECIES_RABATOAST,
+    .moves = {MOVE_ERUPTION, MOVE_MOONBLAST, MOVE_ENCORE, MOVE_MORNING_SUN},
+    .evs = {252, 0, 252, 0, 0, 4},
+    },
+    
+    {
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 255,
+    .lvl = 63,
+    .species = SPECIES_INVERTEBRAKE,
+    .moves = {MOVE_RECYCLE, MOVE_IRON_DEFENSE, MOVE_WHIRLPOOL, MOVE_MIRROR_SHOT},
+    .evs = {200, 0, 200, 20, 0, 20},
+    },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Steve4[] = {

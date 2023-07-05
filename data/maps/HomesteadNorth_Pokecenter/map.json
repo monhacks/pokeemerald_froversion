@@ -72,15 +72,15 @@
       "x": 7,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_HOMESTEAD_NORTH",
-      "dest_warp_id": 6
+      "dest_map": "MAP_NONE",
+      "dest_warp_id": 127
     },
     {
       "x": 6,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_HOMESTEAD_NORTH",
-      "dest_warp_id": 6
+      "dest_map": "MAP_NONE",
+      "dest_warp_id": 127
     }
   ],
   "coord_events": [

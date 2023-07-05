@@ -538,3 +538,4 @@ gSpecials:: @ 81DBA64
 	def_special SetTotemBoost
 	def_special StartPrimeapeBattle
 	def_special IsSpeciesInParty							@uses gSpecialVar_0x8005 to check against
+	def_special RemovePartyMon								@uses gSpecialVar_0x8004 because it is set by ChoosePartyMon

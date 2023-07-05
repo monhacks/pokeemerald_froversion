@@ -1,5 +1,15 @@
 NewMap2_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, Script_NewMap2_OnLoad
 	.byte 0
+
+Script_NewMap2_OnLoad:
+	goto_if_set FLAG_MAGEE_VERSION, Script_NewMap2_SetDynamicWarpMageeVersion
+	setdynamicwarp MAP_HOMESTEAD_NORTH, 255, 47, 27
+	end
+
+Script_NewMap2_SetDynamicWarpMageeVersion:
+	setdynamicwarp MAP_MAGEE_VERSION_HOMESTEAD_TOWN_NORTH, 255, 47, 27
+	end
 
 
 HomesteadNorth_Mart_EventScript_Clerk:: @ 81FC240

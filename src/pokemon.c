@@ -6655,6 +6655,7 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_WES:
             return MUS_FV_MAGNA_CENTIPEDE;
         case TRAINER_CLASS_MAGEE:
+        case TRAINER_CLASS_FRO:
             return MUS_FV_MAGEE;
         case TRAINER_CLASS_MARRIOTT:
         case TRAINER_CLASS_GMP:

@@ -1843,18 +1843,18 @@ const struct Trainer gTrainers[] = {
         // .party = {.ItemCustomMoves = sParty_ShadowCharizard},
     },
 
-    [TRAINER_STEVE_3] =
+    [TRAINER_MAGEEVERSION_FRO_SNOWFLAKE_CHALLENGER] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_POKEMANIAC,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_POKEMANIAC,
-        .trainerName = _("STEVE"),
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_FRO,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+        .trainerPic = TRAINER_PIC_BRENDAN,
+        .trainerName = _("Fro"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Steve3),
-        .party = {.NoItemDefaultMoves = sParty_Steve3},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_COUNTER,
+        .partySize = ARRAY_COUNT(sParty_MageeVersionFroSnowflakeChallenger),
+        .party = {.ItemCustomMoves = sParty_MageeVersionFroSnowflakeChallenger},
     },
 
     [TRAINER_STEVE_4] =

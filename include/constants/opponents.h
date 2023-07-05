@@ -149,7 +149,7 @@
 #define TRAINER_MARK                        145
 #define TRAINER_GRUNT_MT_CHIMNEY_1          146
 #define TRAINER_MATT_FINAL_BOSS                     147
-#define TRAINER_STEVE_3                     148
+#define TRAINER_MAGEEVERSION_FRO_SNOWFLAKE_CHALLENGER                     148
 #define TRAINER_STEVE_4                     149
 #define TRAINER_STEVE_5                     150
 #define TRAINER_LUIS                        151

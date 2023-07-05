@@ -46,8 +46,8 @@
 #define FLAG_SYS_NO_TRAINER_SEE     0x22 // Unused Flag //DEBUG
 #define FLAG_SYS_NO_BAG_USE         0x23 // Unused Flag //DEBUG
 #define FLAG_SYS_NO_CATCHING        0x24 // Unused Flag //DEBUG
-#define FLAG_MARRIOTT_VERSION    0x25 // Indicates Marriott Version
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_MARRIOTT_VERSION       0x25 // Indicates Marriott Version
+#define FLAG_MAGEE_VERSION          0x26 // Indicates Magee Version
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag

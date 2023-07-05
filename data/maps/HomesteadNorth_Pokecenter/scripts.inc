@@ -1,7 +1,17 @@
 HomesteadNorth_Pokecenter_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, HomesteadNorth_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	map_script MAP_SCRIPT_ON_LOAD, Script_HomesteadNorth_Pokecenter_OnLoad
 	.byte 0
+
+Script_HomesteadNorth_Pokecenter_OnLoad:
+	goto_if_set FLAG_MAGEE_VERSION, Script_HomesteadNorth_Pokecenter_SetDynamicWarpMageeVersion
+	setdynamicwarp MAP_HOMESTEAD_NORTH, 255, 58, 34
+	end
+
+Script_HomesteadNorth_Pokecenter_SetDynamicWarpMageeVersion:
+	setdynamicwarp MAP_MAGEE_VERSION_HOMESTEAD_TOWN_NORTH, 255, 58, 34
+	end
 
 HomesteadNorth_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_HOMESTEAD_NORTH

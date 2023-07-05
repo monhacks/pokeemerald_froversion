@@ -3271,7 +3271,7 @@ bool8 HandleFaintedMonActions(void)
                         gBattleStruct->faintedActionsState = 2;
                         return TRUE;
                     }
-                    if(B_VERSION_MAGM6)
+                    if(B_VERSION_MAGM6 || B_VERSION_MAGEE)
                     {
                         gBattleStruct->faintedActionsState = 2;
                         return TRUE;

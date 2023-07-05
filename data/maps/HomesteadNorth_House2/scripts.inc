@@ -1,5 +1,15 @@
 HomesteadNorth_House2_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, Script_HomesteadNorth_House2_OnLoad
 	.byte 0
+
+Script_HomesteadNorth_House2_OnLoad:
+	goto_if_set FLAG_MAGEE_VERSION, Script_HomesteadNorth_House2_SetDynamicWarpMageeVersion
+	setdynamicwarp MAP_HOMESTEAD_NORTH, 255, 27, 28
+	end
+
+Script_HomesteadNorth_House2_SetDynamicWarpMageeVersion:
+	setdynamicwarp MAP_MAGEE_VERSION_HOMESTEAD_TOWN_NORTH, 255, 27, 28
+	end
 
 HomesteadNorth_EventScript_GameBoyKid::
 	lock
