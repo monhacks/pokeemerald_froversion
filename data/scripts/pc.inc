@@ -1,5 +1,7 @@
 EventScript_PC:: @ 8271D92
 	lockall
+	compare VAR_MAGEE_VERSION, 1
+	goto_if_eq EventScript_PCIsBroke
 	setvar VAR_0x8004, 0
 	special DoPCTurnOnEffect
 	playse SE_PC_ON
@@ -13,6 +15,13 @@ EventScript_PCMainMenu:: @ 8271DAC
 	special ScriptMenu_CreatePCMultichoice
 	waitstate
 	goto EventScript_AccessPC
+	end
+
+EventScript_PCIsBroke::
+	message gText_PCIsBroke
+	waitmessage
+	delay 60	
+	closemessage
 	end
 
 EventScript_AccessPC:: @ 8271DBC

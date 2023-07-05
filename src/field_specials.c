@@ -1496,6 +1496,20 @@ bool8 IsSpeciesInParty(void)
     gSpecialVar_Result = FALSE;
 }
 
+bool8 RemoveAllPartySlots(void)
+{
+    int i;
+    for (i = 0; i < PARTY_SIZE - 1; i++)
+    {
+       u32 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL);
+        if (species == SPECIES_NONE)
+            break;
+        gPlayerParty[i] = gPlayerParty[i + 1];
+        ZeroMonData(&gPlayerParty[i]);
+    }
+
+}
+
 bool8 IsPokerusInParty(void)
 {
     if (!CheckPartyPokerus(gPlayerParty, 0x3f))

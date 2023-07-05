@@ -49,8 +49,9 @@ Script_MageeVersionHomesteadTownNorth_FroBattleLost:
 	applymovement LOCALID_SNOWFLAKE_CHALLENGER, Movement_MageeVersionHomesteadNorth_FroLeaves
 	waitmovement LOCALID_SNOWFLAKE_CHALLENGER
 	//play sad music sound effect
+	special RemoveAllPartySlots
 	fadescreenspeed FADE_TO_BLACK, 24
-	warpsilent MAP_BATTLE_FRONTIER_BATTLE_PIKE_THREE_PATH_ROOM, 255, 6, 10
+	warpsilent MAP_VERMILLION_CITY, 255, 50, 10
 	release
 end
 

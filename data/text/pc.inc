@@ -15,3 +15,6 @@ gText_AccessedPlayersPC:: @ 82726C2
 
 gText_AccessedLanettesPC:: @ 82726D4
 	.string "Accessed LANETTE's PC.$"
+
+gText_PCIsBroke::
+	.string "PC down for maintenance.$"
