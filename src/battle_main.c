@@ -3992,6 +3992,8 @@ void BattleTurnPassed(void)
         BattleScriptExecute(BattleScript_ArenaTurnBeginning);
     else if (ShouldDoTrainerSlide(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), gTrainerBattleOpponent_A, TRAINER_SLIDE_LAST_LOW_HP))
         BattleScriptExecute(BattleScript_TrainerSlideMsgEnd2);
+    else if (ShouldDoTrainerSlide(GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT), gTrainerBattleOpponent_A, TRAINER_SLIDE_FIRST_TURN))
+        BattleScriptExecute(BattleScript_TrainerSlideMsgEnd2);
     
     switch(gTrainerBattleOpponent_A)
         {

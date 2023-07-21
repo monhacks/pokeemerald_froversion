@@ -378,6 +378,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP_ABILITY,
     },
 
     [ITEM_ANTIDOTE] =

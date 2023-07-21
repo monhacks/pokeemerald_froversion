@@ -30,6 +30,7 @@
 #include "constants/trainers.h"
 #include "constants/trainer_hill.h"
 #include "constants/weather.h"
+#include "mgba_printf.h"
 
 struct BattleWindowText
 {
@@ -754,6 +755,7 @@ static const u8 sText_SoaringDragonStatReset[] = _("{B_ATK_NAME_WITH_PREFIX} tim
 static const u8 sText_PkmnBugSubEvolved[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Bugstitute\nevolved!\pIt is now stonger!");
 static const u8 sText_SleepyHeadFog[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nwhips up a dreamy fog!\n");
 static const u8 sText_AbilityGivesHeldItem[] = _("{B_BUFF3}'s {B_BUFF2}\nconjures a {B_BUFF1} for it to hold");
+static const u8 sText_FroTrashTalkMagee[] = _("Fro: {PLAYER}!\pI will exorcise your demons!");
 
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
@@ -1372,6 +1374,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_SLEEPYHEADFOG - 12] = sText_SleepyHeadFog,
     [STRINGID_PKMNFELLFORSNEER - 12] = sText_PkmnFellForSneer,
     [STRINGID_ABILITYGIVESHELDITEM - 12] = sText_AbilityGivesHeldItem,
+    [STRINGID_FROTRASHTALKMAGEE - 12] = sText_FroTrashTalkMagee,
 };
 
 const u16 gTerrainStringIds[] =
@@ -3876,11 +3879,13 @@ struct TrainerSlide
     const u8 *msgLastSwitchIn;
     const u8 *msgLastLowHp;
     const u8 *msgFirstDown;
+    const u8 *msgFirstTurn;
 };
 
 static const struct TrainerSlide sTrainerSlides[] =
 {
     {0x291, sText_AarghAlmostHadIt, sText_BoxIsFull, sText_123Poof},
+    {TRAINER_MAGEEVERSION_FRO_SNOWFLAKE_CHALLENGER, NULL, NULL, NULL, sText_FroTrashTalkMagee}
 };
 
 u32 GetEnemyMonCount(bool32 onlyAlive)
@@ -3916,6 +3921,9 @@ bool32 ShouldDoTrainerSlide(u32 battlerId, u32 trainerId, u32 which)
 
     for (i = 0; i < ARRAY_COUNT(sTrainerSlides); i++)
     {
+        Printf("turn = %d", gBattleResults.battleTurnCounter);
+        Printf("trainerslides = %d", sTrainerSlides[i].msgFirstTurn);
+        
         if (trainerId == sTrainerSlides[i].trainerId)
         {
             gBattleScripting.battler = battlerId;
@@ -3943,6 +3951,13 @@ bool32 ShouldDoTrainerSlide(u32 battlerId, u32 trainerId, u32 which)
                 if (sTrainerSlides[i].msgFirstDown != NULL && GetEnemyMonCount(TRUE) == GetEnemyMonCount(FALSE) - 1)
                 {
                     gBattleStruct->trainerSlideMsg = sTrainerSlides[i].msgFirstDown;
+                    return TRUE;
+                }
+                break;
+            case TRAINER_SLIDE_FIRST_TURN:
+                if (sTrainerSlides[i].msgFirstTurn != NULL && gBattleResults.battleTurnCounter == 1)
+                {
+                    gBattleStruct->trainerSlideMsg = sTrainerSlides[i].msgFirstTurn;
                     return TRUE;
                 }
                 break;

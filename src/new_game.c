@@ -164,13 +164,17 @@ static void WarpToTruck(void)
         WarpIntoMap();
     }
     if(B_VERSION_MARRIOTT)
-        SetWarpDestination(MAP_GROUP(MARRIOTT_INTRO_FRAME1), MAP_NUM(MARRIOTT_INTRO_FRAME1), -1, 7, 5);
-        WarpIntoMap();
+        {
+            SetWarpDestination(MAP_GROUP(MARRIOTT_INTRO_FRAME1), MAP_NUM(MARRIOTT_INTRO_FRAME1), -1, 7, 5);
+            WarpIntoMap();
+        }
     if(B_VERSION_MAGEE)
-        FlagSet(FLAG_MAGEE_VERSION);
-        VarSet(VAR_MAGEE_VERSION, 1);
-        SetWarpDestination(MAP_GROUP(MAGEE_VERSION_PROTAGONISTS_HOUSE), MAP_NUM(MAGEE_VERSION_PROTAGONISTS_HOUSE), -1, 1, 4);
-        WarpIntoMap();
+        {
+            FlagSet(FLAG_MAGEE_VERSION);
+            VarSet(VAR_MAGEE_VERSION, 1);
+            SetWarpDestination(MAP_GROUP(MAGEE_VERSION_PROTAGONISTS_HOUSE), MAP_NUM(MAGEE_VERSION_PROTAGONISTS_HOUSE), -1, 1, 4);
+            WarpIntoMap();
+        }
 }
 
 void Sav2_ClearSetDefault(void)

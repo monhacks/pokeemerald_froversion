@@ -6711,6 +6711,10 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 if (B_BERRIES_INSTANT >= GEN_4)
                     effect = ItemHealHp(battlerId, gLastUsedItem, TRUE, TRUE);
                 break;
+            case HOLD_EFFECT_RESTORE_HP_ABILITY:
+                if (B_BERRIES_INSTANT >= GEN_4 && gBattleMons[battlerId].ability == ABILITY_BIG_PECKS)
+                    effect = ItemHealHp(battlerId, gLastUsedItem, TRUE, FALSE);
+                break;
             case HOLD_EFFECT_AIR_BALLOON:
                 effect = ITEM_EFFECT_OTHER;
                 gBattleScripting.battler = battlerId;
@@ -6784,6 +6788,10 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             case HOLD_EFFECT_RESTORE_PCT_HP:
                 if (B_BERRIES_INSTANT >= GEN_4)
                     effect = ItemHealHp(battlerId, gLastUsedItem, TRUE, TRUE);
+                break;
+            case HOLD_EFFECT_RESTORE_HP_ABILITY:
+                if (!moveTurn && gBattleMons[battlerId].ability == ABILITY_BIG_PECKS)
+                    effect = ItemHealHp(battlerId, gLastUsedItem, TRUE, FALSE);
                 break;
             case HOLD_EFFECT_RESTORE_PP:
                 if (!moveTurn)
@@ -7066,6 +7074,10 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             case HOLD_EFFECT_RESTORE_PCT_HP:
                 if (B_BERRIES_INSTANT >= GEN_4)
                     effect = ItemHealHp(battlerId, gLastUsedItem, FALSE, TRUE);
+                break;
+            case HOLD_EFFECT_RESTORE_HP_ABILITY:
+                if (B_HP_BERRIES >= GEN_4 && gBattleMons[battlerId].ability == ABILITY_BIG_PECKS)
+                    effect = ItemHealHp(battlerId, gLastUsedItem, FALSE, FALSE);
                 break;
             case HOLD_EFFECT_CURE_PAR:
                 if (gBattleMons[battlerId].status1 & STATUS1_PARALYSIS && !UnnerveOn(battlerId, gLastUsedItem))
