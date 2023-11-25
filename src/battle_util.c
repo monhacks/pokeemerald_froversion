@@ -2374,7 +2374,7 @@ u8 DoFieldEndTurnEffects(void)
                         BattleScriptExecute(BattleScript_AbilityGivesHeldItem);
                         effect++;
                     }
-                else
+                else if(GetBattlerAbility(gBattleScripting.battler) == ABILITY_PSYCHO_SHIFT || GetBattlerAbility(gBattleScripting.battler) == ABILITY_MATT_BOSS_FIGHT)
                     {
                        gBattleMons[gBattleScripting.battler].item = ITEM_NONE;
                        effect++;
@@ -6659,7 +6659,10 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CURE_STATUS:
-                if (B_BERRIES_INSTANT >= GEN_4 && (gBattleMons[battlerId].status1 & STATUS1_ANY || gBattleMons[battlerId].status2 & STATUS2_CONFUSION) && !UnnerveOn(battlerId, gLastUsedItem))
+                if ((B_BERRIES_INSTANT >= GEN_4 && (gBattleMons[battlerId].status1 & STATUS1_ANY || gBattleMons[battlerId].status2 & STATUS2_CONFUSION) && !UnnerveOn(battlerId, gLastUsedItem) && !IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems)) 
+                || (B_BERRIES_INSTANT >= GEN_4 && (gBattleMons[battlerId].status1 & STATUS1_ANY || gBattleMons[battlerId].status2 & STATUS2_CONFUSION) && !UnnerveOn(battlerId, gLastUsedItem) && (gBattleMons[battlerId].ability == ABILITY_BIG_PECKS && IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems))))
+
+                
                 {
                     i = 0;
                     if (gBattleMons[battlerId].status1 & STATUS1_PSN_ANY)
@@ -6704,16 +6707,13 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_RESTORE_HP:
-                if (B_BERRIES_INSTANT >= GEN_4)
+                if ((B_BERRIES_INSTANT >= GEN_4 && !IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems))
+                || (B_BERRIES_INSTANT >= GEN_4 && (gBattleMons[battlerId].ability == ABILITY_BIG_PECKS && IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems))))
                     effect = ItemHealHp(battlerId, gLastUsedItem, TRUE, FALSE);
                 break;
             case HOLD_EFFECT_RESTORE_PCT_HP:
                 if (B_BERRIES_INSTANT >= GEN_4)
                     effect = ItemHealHp(battlerId, gLastUsedItem, TRUE, TRUE);
-                break;
-            case HOLD_EFFECT_RESTORE_HP_ABILITY:
-                if (B_BERRIES_INSTANT >= GEN_4 && gBattleMons[battlerId].ability == ABILITY_BIG_PECKS)
-                    effect = ItemHealHp(battlerId, gLastUsedItem, TRUE, FALSE);
                 break;
             case HOLD_EFFECT_AIR_BALLOON:
                 effect = ITEM_EFFECT_OTHER;
@@ -6782,19 +6782,16 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             switch (battlerHoldEffect)
             {
             case HOLD_EFFECT_RESTORE_HP:
-                if (!moveTurn)
+                if ((!moveTurn && !IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems))
+                || (((!moveTurn) && (gBattleMons[battlerId].ability == ABILITY_BIG_PECKS && IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems)))))
                     effect = ItemHealHp(battlerId, gLastUsedItem, TRUE, FALSE);
                 break;
             case HOLD_EFFECT_RESTORE_PCT_HP:
                 if (B_BERRIES_INSTANT >= GEN_4)
                     effect = ItemHealHp(battlerId, gLastUsedItem, TRUE, TRUE);
                 break;
-            case HOLD_EFFECT_RESTORE_HP_ABILITY:
-                if (!moveTurn && gBattleMons[battlerId].ability == ABILITY_BIG_PECKS)
-                    effect = ItemHealHp(battlerId, gLastUsedItem, TRUE, FALSE);
-                break;
             case HOLD_EFFECT_RESTORE_PP:
-                if (!moveTurn)
+                if (!moveTurn || ((!moveTurn && (gBattleMons[battlerId].ability == ABILITY_BIG_PECKS && IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems)))))
                 {
                     struct Pokemon *mon;
                     u8 ppBonuses;
@@ -6987,8 +6984,9 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CURE_STATUS:
-                if ((gBattleMons[battlerId].status1 & STATUS1_ANY || gBattleMons[battlerId].status2 & STATUS2_CONFUSION) && !UnnerveOn(battlerId, gLastUsedItem))
-                {
+                if (((gBattleMons[battlerId].status1 & STATUS1_ANY || gBattleMons[battlerId].status2 & STATUS2_CONFUSION) && !UnnerveOn(battlerId, gLastUsedItem) && !IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems)) 
+                    || ((gBattleMons[battlerId].status1 & STATUS1_ANY || gBattleMons[battlerId].status2 & STATUS2_CONFUSION) && !UnnerveOn(battlerId, gLastUsedItem) && (gBattleMons[battlerId].ability == ABILITY_BIG_PECKS && IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems))))
+                    {
                     i = 0;
                     if (gBattleMons[battlerId].status1 & STATUS1_PSN_ANY)
                     {
@@ -7068,16 +7066,13 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             switch (battlerHoldEffect)
             {
             case HOLD_EFFECT_RESTORE_HP:
-                if (B_HP_BERRIES >= GEN_4)
+                if ((B_HP_BERRIES >= GEN_4 && !IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems))
+                    ||((B_HP_BERRIES >= GEN_4) && (gBattleMons[battlerId].ability == ABILITY_BIG_PECKS && IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems))))
                     effect = ItemHealHp(battlerId, gLastUsedItem, FALSE, FALSE);
                 break;
             case HOLD_EFFECT_RESTORE_PCT_HP:
                 if (B_BERRIES_INSTANT >= GEN_4)
                     effect = ItemHealHp(battlerId, gLastUsedItem, FALSE, TRUE);
-                break;
-            case HOLD_EFFECT_RESTORE_HP_ABILITY:
-                if (B_HP_BERRIES >= GEN_4 && gBattleMons[battlerId].ability == ABILITY_BIG_PECKS)
-                    effect = ItemHealHp(battlerId, gLastUsedItem, FALSE, FALSE);
                 break;
             case HOLD_EFFECT_CURE_PAR:
                 if (gBattleMons[battlerId].status1 & STATUS1_PARALYSIS && !UnnerveOn(battlerId, gLastUsedItem))
@@ -7146,8 +7141,9 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CURE_STATUS:
-                if ((gBattleMons[battlerId].status1 & STATUS1_ANY || gBattleMons[battlerId].status2 & STATUS2_CONFUSION) && !UnnerveOn(battlerId, gLastUsedItem))
-                {
+                if (((gBattleMons[battlerId].status1 & STATUS1_ANY || gBattleMons[battlerId].status2 & STATUS2_CONFUSION) && !UnnerveOn(battlerId, gLastUsedItem) && !IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems)) 
+                    || ((gBattleMons[battlerId].status1 & STATUS1_ANY || gBattleMons[battlerId].status2 & STATUS2_CONFUSION) && !UnnerveOn(battlerId, gLastUsedItem) && (gBattleMons[battlerId].ability == ABILITY_BIG_PECKS && IsItemOneOf(gBattleMons[battlerId].item, gNonOrganicItems))))
+                    {
                     if (gBattleMons[battlerId].status1 & STATUS1_PSN_ANY)
                     {
                         StringCopy(gBattleTextBuff1, gStatusConditionString_PoisonJpn);

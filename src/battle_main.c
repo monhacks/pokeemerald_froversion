@@ -5208,6 +5208,18 @@ const u16 gNonStealItems[] =
     0xFFFF
 };
 
+const u16 gNonOrganicItems[] =
+{
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_HYPER_POTION,
+    ITEM_MAX_POTION,
+    ITEM_FULL_HEAL,
+    ITEM_BURN_HEAL,
+    ITEM_NONE,
+    0xFFFF
+};
+
 
 s8 GetMovePriority(u32 battlerId, u16 move)
 {

@@ -1,10 +1,6 @@
 #ifndef GUARD_CONSTANTS_MAP_GROUPS_H
 #define GUARD_CONSTANTS_MAP_GROUPS_H
 
-//
-// DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/map_groups.json
-//
-
 // Map Group 0
 #define MAP_PETALBURG_CITY                                       (0 | (0 << 8))
 #define MAP_SLATEPORT_CITY                                       (1 | (0 << 8))
@@ -149,6 +145,7 @@
 #define MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB         (9 | (1 << 8))
 #define MAP_MAGEE_VERSION_HOMESTEAD_TOWN_NORTH    (10 | (1 << 8))
 #define MAP_MAGEE_VERSION_PROTAGONISTS_HOUSE      (11 | (1 << 8))
+#define MAP_SANDY_BEACH_TOWN                      (12 | (1 << 8))
 
 // Map Group 2
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))
@@ -754,7 +751,5 @@
 #define MAP_NEW_MAP3                               (22 | (33 << 8))
 
 #define MAP_GROUPS_COUNT 34
-
-// static const u8 MAP_GROUP_COUNT[] = {129, 12, 10, 43, 9, 9, 9, 7, 8, 14, 8, 20, 10, 23, 14, 20, 16, 2, 2, 2, 3, 1, 1, 1, 108, 61, 89, 2, 1, 13, 1, 1, 8, 23, 0};
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

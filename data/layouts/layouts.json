@@ -6030,6 +6030,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/MageeVersionProtagonistsHouse/border.bin",
       "blockdata_filepath": "data/layouts/MageeVersionProtagonistsHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_SANDY_BEACH_TOWN",
+      "name": "SandyBeachTown_Layout",
+      "width": 45,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/SandyBeachTown/border.bin",
+      "blockdata_filepath": "data/layouts/SandyBeachTown/map.bin"
     }
   ]
 }

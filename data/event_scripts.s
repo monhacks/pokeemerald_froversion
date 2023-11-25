@@ -1389,3 +1389,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/MageeVersionHomesteadTownNorth/scripts.inc"
 
 	.include "data/maps/MageeVersionProtagonistsHouse/scripts.inc"
+
+	.include "data/maps/SandyBeachTown/scripts.inc"

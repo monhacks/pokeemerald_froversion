@@ -378,7 +378,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
-        .holdEffect = HOLD_EFFECT_RESTORE_HP_ABILITY,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP,
     },
 
     [ITEM_ANTIDOTE] =
@@ -472,6 +472,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP,
     },
 
     [ITEM_HYPER_POTION] =
@@ -486,6 +487,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP,
     },
 
     [ITEM_SUPER_POTION] =
@@ -500,6 +502,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP,
     },
 
     [ITEM_FULL_HEAL] =
@@ -513,6 +516,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_CURE_STATUS,
     },
 
     [ITEM_REVIVE] =
@@ -553,6 +557,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP,
     },
 
     [ITEM_SODA_POP] =
@@ -567,6 +572,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP,
     },
 
     [ITEM_LEMONADE] =
@@ -581,6 +587,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP,
     },
 
     [ITEM_MOOMOO_MILK] =
@@ -595,6 +602,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP,
     },
 
     [ITEM_ENERGY_POWDER] =
@@ -608,6 +616,8 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP,
+        .holdEffectParam = 50,
     },
 
     [ITEM_ENERGY_ROOT] =
@@ -621,6 +631,8 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP,
+        .holdEffectParam = 200,
     },
 
     [ITEM_HEAL_POWDER] =
@@ -634,6 +646,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_CURE_STATUS,
     },
 
     [ITEM_REVIVAL_HERB] =
@@ -661,6 +674,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_PPRecovery,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_PPRecovery,
+        .holdEffect = HOLD_EFFECT_RESTORE_PP,
     },
 
     [ITEM_MAX_ETHER] =
@@ -675,6 +689,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_PPRecovery,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_PPRecovery,
+        .holdEffect = HOLD_EFFECT_RESTORE_PP,
     },
 
     [ITEM_ELIXIR] =
@@ -689,6 +704,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_PPRecovery,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_PPRecovery,
+        .holdEffect = HOLD_EFFECT_RESTORE_PP,
     },
 
     [ITEM_MAX_ELIXIR] =
@@ -703,6 +719,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_PPRecovery,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_PPRecovery,
+        .holdEffect = HOLD_EFFECT_RESTORE_PP,
     },
 
     [ITEM_LAVA_COOKIE] =
@@ -716,6 +733,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_RESTORE_HP,
     },
 
     [ITEM_BLUE_FLUTE] =
@@ -729,6 +747,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_CURE_SLP,
     },
 
     [ITEM_YELLOW_FLUTE] =
@@ -742,6 +761,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_CURE_CONFUSION,
     },
 
     [ITEM_RED_FLUTE] =
@@ -755,6 +775,7 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
+        //.holdEffect = 
     },
 
     [ITEM_BLACK_FLUTE] =
