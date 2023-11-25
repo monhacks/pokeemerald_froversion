@@ -6,7 +6,7 @@ gCryTable:: @ 869DCF4
 	cry Cry_Charmander  @ 869DD18
 	cry Cry_Charmeleon  @ 869DD24
 	cry Cry_Charizard  @ 869DD30
-	cry Cry_Squirtle  @ 869DD3C
+	cry Cry_Squirtle  @ 869DD3C @BOB
 	cry Cry_Wartortle  @ 869DD48
 	cry Cry_Blastoise  @ 869DD54
 	cry Cry_Caterpie  @ 869DD60
