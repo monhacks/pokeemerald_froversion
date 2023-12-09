@@ -6040,6 +6040,16 @@
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/SandyBeachTown/border.bin",
       "blockdata_filepath": "data/layouts/SandyBeachTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGM8DUNGEON_PUZZLE1",
+      "name": "MAGM8DungeonPuzzle1_Layout",
+      "width": 17,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/MAGM8DungeonPuzzle1/border.bin",
+      "blockdata_filepath": "data/layouts/MAGM8DungeonPuzzle1/map.bin"
     }
   ]
 }

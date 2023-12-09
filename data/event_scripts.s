@@ -1391,3 +1391,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/MageeVersionProtagonistsHouse/scripts.inc"
 
 	.include "data/maps/SandyBeachTown/scripts.inc"
+
+	.include "data/maps/MAGM8DungeonPuzzle1/scripts.inc"
