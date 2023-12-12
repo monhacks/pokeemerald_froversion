@@ -1108,7 +1108,6 @@ const u8 *GetObjectEventScriptPointerPlayerFacing(void)
 int SetCableClubWarp(void)
 {
     struct MapPosition position;
-
     GetPlayerMovementDirection();  //unnecessary
     GetPlayerPosition(&position);
     MapGridGetMetatileBehaviorAt(position.x, position.y);  //unnecessary
@@ -1135,6 +1134,8 @@ bool8 EnableAutoRun(void)
     return TRUE;
 }
 
+
+
 bool32 TryFindTeleportDestination(void)
     {
     u8 i;
@@ -1142,6 +1143,7 @@ bool32 TryFindTeleportDestination(void)
     u8 playery = (gSaveBlock1Ptr->pos.y + 7);
     u8 teleportDestinationXCoord;
     u8 teleportDestinationYCoord;
+    struct ObjectEvent *objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     
 
     for (i = 0; i < 8; i++)
@@ -1149,7 +1151,7 @@ bool32 TryFindTeleportDestination(void)
             switch (GetPlayerFacingDirection())
         {
             case DIR_WEST://search up to 8 tiles west
-                if (MapGridGetMetatileBehaviorAt((playerx - i), playery) == MB_MOSSDEEP_GYM_WARP)
+                if (MetatileBehavior_IsTeleportTarget(MapGridGetMetatileBehaviorAt((playerx - i), playery)) && GetCollisionAtCoords(objectEvent, (playerx - i), playery, GetPlayerFacingDirection()) == COLLISION_NONE)
                 {
                     teleportDestinationXCoord = ((playerx - i) - 7);
                     teleportDestinationYCoord = (playery - 7);
@@ -1158,7 +1160,7 @@ bool32 TryFindTeleportDestination(void)
                 }
                 break;
             case DIR_EAST://search up to 8 tiles east
-                if (MapGridGetMetatileBehaviorAt((playerx + i), playery) == MB_MOSSDEEP_GYM_WARP)
+                if (MetatileBehavior_IsTeleportTarget(MapGridGetMetatileBehaviorAt((playerx + i), playery)) && GetCollisionAtCoords(objectEvent, (playerx + i), playery, GetPlayerFacingDirection()) == COLLISION_NONE)
                 {
                     teleportDestinationXCoord = ((playerx + i) - 7);
                     teleportDestinationYCoord = (playery - 7);
@@ -1167,7 +1169,7 @@ bool32 TryFindTeleportDestination(void)
                 }
                 break;
             case DIR_NORTH: //search up to 8 tiles north
-                if (MapGridGetMetatileBehaviorAt(playerx, (playery - i)) == MB_MOSSDEEP_GYM_WARP)
+                if (MetatileBehavior_IsTeleportTarget(MapGridGetMetatileBehaviorAt(playerx, (playery - i))) && GetCollisionAtCoords(objectEvent, playerx, (playery - i), GetPlayerFacingDirection()) == COLLISION_NONE)
                 {
                     teleportDestinationXCoord = (playerx - 7);
                     teleportDestinationYCoord = ((playery - i) -7);
@@ -1176,7 +1178,7 @@ bool32 TryFindTeleportDestination(void)
                 }
                 break;
             case DIR_SOUTH: //search up to 8 tiles south
-                if (MapGridGetMetatileBehaviorAt(playerx, (playery + i)) == MB_MOSSDEEP_GYM_WARP)
+                if (MetatileBehavior_IsTeleportTarget(MapGridGetMetatileBehaviorAt(playerx, (playery + i))) && GetCollisionAtCoords(objectEvent, playerx, (playery + i), GetPlayerFacingDirection()) == COLLISION_NONE)
                 {
                     teleportDestinationXCoord = (playerx - 7);
                     teleportDestinationYCoord = ((playery + i) -7);

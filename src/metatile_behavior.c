@@ -1596,4 +1596,12 @@ bool8 MetatileBehavior_IsRockStairs(u8 metatileBehavior)
         return FALSE;
 }
 
-
+bool8 MetatileBehavior_IsTeleportTarget(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_AQUA_HIDEOUT_WARP)
+        return TRUE;
+    else if (metatileBehavior == MB_MOSSDEEP_GYM_WARP)
+        return TRUE;
+    else
+        return FALSE;
+}

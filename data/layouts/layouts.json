@@ -6044,12 +6044,22 @@
     {
       "id": "LAYOUT_MAGM8DUNGEON_PUZZLE1",
       "name": "MAGM8DungeonPuzzle1_Layout",
-      "width": 17,
-      "height": 30,
+      "width": 27,
+      "height": 19,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/MAGM8DungeonPuzzle1/border.bin",
       "blockdata_filepath": "data/layouts/MAGM8DungeonPuzzle1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGM8DUNGEON_PUZZLE2",
+      "name": "MAGM8DungeonPuzzle2_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/MAGM8DungeonPuzzle2/border.bin",
+      "blockdata_filepath": "data/layouts/MAGM8DungeonPuzzle2/map.bin"
     }
   ]
 }

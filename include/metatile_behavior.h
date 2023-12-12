@@ -159,4 +159,7 @@ bool8 MetatileBehavior_IsSidewaysStairsRightSideAny(u8 metatileBehavior);
 bool8 MetatileBehavior_IsSidewaysStairsLeftSideAny(u8 metatileBehavior);
 bool8 MetatileBehavior_IsRockClimbable(u8 metatileBehavior);
 
+
+bool8 MetatileBehavior_IsTeleportTarget(u8);
+
 #endif // GUARD_METATILE_BEHAVIOR

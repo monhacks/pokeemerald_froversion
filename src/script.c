@@ -329,6 +329,7 @@ bool8 TryRunOnFrameMapScript(void)
 void TryRunOnWarpIntoMapScript(void)
 {
     u8 *ptr = MapHeaderCheckScriptTable(MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE);
+    FlagClear(FLAG_UNUSED_0x027);
     if (ptr)
         ScriptContext2_RunNewScript(ptr);
 }

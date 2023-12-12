@@ -26,6 +26,7 @@ gFieldEffectScript_UseTeleportFromField:: @ 82DBCED
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_ReleaseUseTeleportFromField
 	dofieldeffect FLDEFF_USE_TELEPORT
+	setflag FLAG_UNUSED_0x027
 EventScript_ReleaseUseTeleportFromField:: @ 8271ED5
 	releaseall
 EventScript_EndUseTeleportFromField:: @ 8271ED6
