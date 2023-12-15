@@ -641,5 +641,7 @@ const u32 *const gItemIconTable[][2] =
     //MAGM6 Items
     [ITEM_NCC_PACKAGE] = {gItemIcon_OaksParcel, gItemIconPalette_OaksParcel},
     [ITEM_LAB_KEY] = {gItemIcon_CardKey, gItemIconPalette_CardKey},
+    //MAGM8 Items
+    [ITEM_POKEPRIMER]  = {gItemIcon_Pokeprimer, gItemIconPalette_Pokeprimer},
 
 };

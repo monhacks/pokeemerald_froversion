@@ -3087,3 +3087,8 @@ static const u8 sManuscriptDesc[] = _(
     "A manuscript with\n"
     "details for luring\n"
     "Pokemon correctly");
+
+static const u8 sPokePrimerDesc[] = _(
+    "A primer\n"
+    "that translates\n"
+    "languages");

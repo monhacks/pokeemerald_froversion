@@ -732,8 +732,11 @@
 #define ITEM_TRAP 625
 #define ITEM_MANUSCRIPT 626
 
+//MAGM8 Items
+#define ITEM_POKEPRIMER 627
 
-#define ITEMS_COUNT 627
+
+#define ITEMS_COUNT 628
 
 
 

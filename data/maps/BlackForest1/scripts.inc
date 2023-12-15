@@ -7,14 +7,20 @@ BlackForest1_OnLoad: @ 822D989
 	end
 
 BlackForest1_SetWildBattleLocation:
-	random 5
-	switch VAR_RESULT
-		case 0, BlackForest1_EventScript_SetWildBattleLocation0
-		case 1, BlackForest1_EventScript_SetWildBattleLocation1
-		case 2, BlackForest1_EventScript_SetWildBattleLocation2
-		case 3, BlackForest1_EventScript_SetWildBattleLocation3
-		case 4, BlackForest1_EventScript_SetWildBattleLocation4
+	setvar VAR_TEMP_1, 3
 	return
+
+///////////////////////////////////
+////////FROVERSION SCRIPT/////////
+/////////////////////////////////
+	//random 5
+	//switch VAR_RESULT
+	//	case 0, BlackForest1_EventScript_SetWildBattleLocation0
+	//	case 1, BlackForest1_EventScript_SetWildBattleLocation1
+	//	case 2, BlackForest1_EventScript_SetWildBattleLocation2
+	//	case 3, BlackForest1_EventScript_SetWildBattleLocation3
+	//	case 4, BlackForest1_EventScript_SetWildBattleLocation4
+	//return
 
 BlackForest1_EventScript_SetWildBattleLocation0:
 	return
@@ -76,10 +82,32 @@ BlackForest1_EventScript_WildBattleSpecialGastly:
 	setwildbattle SPECIES_GASTLY, 50, ITEM_NONE
 	dowildbattle
 	msgbox BlackForest1_Text_WildGastlyDroppedThis, MSGBOX_DEFAULT
-	giveitem ITEM_SPELLBOOK, 1
+	// FROVERSION SCRIPT giveitem ITEM_SPELLBOOK, 1
+	giveitem ITEM_POKEPRIMER, 1
 	setflag FLAG_RECEIVED_SPELLBOOK
 	release
 end
+
+BlackForest1_EventScript_Clue1_LanguageDetermine::
+	lock
+	checkitem ITEM_POKEPRIMER, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq BlackForest1_EventScript_Clue1_English
+	msgbox BlackForest1_Text_Clue1BadLanguage, MSGBOX_DEFAULT
+	release
+end
+
+BlackForest1_EventScript_Clue1_English:
+	msgbox BlackForest1_Text_Clue1English, MSGBOX_DEFAULT
+	release
+end
+
+BlackForest1_Text_Clue1BadLanguage:
+	.string "Dra Tenaldeuh ec Mavd.$"
+
+BlackForest1_Text_Clue1English:
+	.string "The Direction is LEFT.$"
+
 
 BlackForest1_Text_WildGastlyBattle:
 	.string "There's something strange about this\n"

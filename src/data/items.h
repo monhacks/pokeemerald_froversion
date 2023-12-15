@@ -7957,4 +7957,16 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+        [ITEM_POKEPRIMER] =
+    {
+        .name = _("PokePrimer"),
+        .itemId = ITEM_POKEPRIMER,
+        .price = 0,
+        .description = sPokePrimerDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };

@@ -1539,3 +1539,7 @@ const u32 gItemIconPalette_Snowflake[] = INCBIN_U32("graphics/items/icon_palette
 const u32 gItemIcon_LeftLegOfTheForbiddenOne[] = INCBIN_U32("graphics/items/icons/left_leg_of_the_forbidden_one.4bpp.lz");
 const u32 gItemIconPalette_LeftLegOfTheForbiddenOne[] = INCBIN_U32("graphics/items/icon_palettes/left_leg_of_the_forbidden_one.gbapal.lz");
 
+
+const u32 gItemIcon_Pokeprimer[] = INCBIN_U32("graphics/items/icons/pokeprimer.4bpp.lz");
+const u32 gItemIconPalette_Pokeprimer[] = INCBIN_U32("graphics/items/icon_palettes/pokeprimer.gbapal.lz");
+
