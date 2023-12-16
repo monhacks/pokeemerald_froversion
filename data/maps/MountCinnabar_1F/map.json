@@ -42,14 +42,14 @@
       "x": 11,
       "y": 25,
       "elevation": 0,
-      "dest_map": "MAP_NONE",
+      "dest_map": "MAP_DYNAMIC",
       "dest_warp_id": 127
     },
     {
       "x": 12,
       "y": 25,
       "elevation": 0,
-      "dest_map": "MAP_NONE",
+      "dest_map": "MAP_DYNAMIC",
       "dest_warp_id": 127
     }
   ],

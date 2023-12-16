@@ -4,7 +4,7 @@ NewMap1_MapScripts::
 
 NewMap1_OnLoad:
 	goto_if_set FLAG_MAGEE_VERSION, NewMap1_EventScript_SetDynamicWarpMageeVersion
-	goto_if_set FLAG_FRO_VERSION, NewMap1_EventScript_SetDynamicWarpFroVersion
+	goto_if_unset FLAG_MAGEE_VERSION, NewMap1_EventScript_SetDynamicWarpFroVersion
 	end
 
 NewMap1_EventScript_SetDynamicWarpMageeVersion:
@@ -15,13 +15,13 @@ NewMap1_EventScript_SetDynamicWarpFroVersion:
 	setdynamicwarp MAP_NIAGARA_VILLAGE, 255, 24, 9
 end
 
-MAGM8Forest_MainArea_Eventscripts_SouthSign::
+MAGM8Forest_MainArea_EventScripts_SouthSign::
 	lock
 	msgbox MAGM8Forest_MainArea_Text_SouthSign, MSGBOX_SIGN
 	release
 end
 
-MAGM8Forest_MainArea_Eventscripts_NorthSign::
+MAGM8Forest_MainArea_EventScripts_NorthSign::
 	lock
 	msgbox MAGM8Forest_MainArea_Text_NorthSign, MSGBOX_SIGN
 	release
@@ -30,13 +30,6 @@ end
 MAGM8Forest_MainArea_Eventscripts_HouseSign::
 	lock
 	msgbox MAGM8Forest_MainArea_Text_HouseSign, MSGBOX_SIGN
-	release
-end
-
-MAGM8Forest_MainArea_Eventscripts_NorthExitBlocked::
-	lock
-	msgbox MAGM8Forest_MainArea_Text_NorthExitBlocked, MSGBOX_DEFAULT
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
 	release
 end
 
