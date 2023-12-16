@@ -60,70 +60,70 @@
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_ROUTE119",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 16,
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_ROUTE119",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     },
     {
       "x": 37,
       "y": 16,
       "elevation": 0,
       "dest_map": "MAP_HAUNTED_WOODS1",
-      "dest_warp_id": 7
+      "dest_warp_id": "7"
     },
     {
       "x": 37,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_HAUNTED_WOODS1",
-      "dest_warp_id": 8
+      "dest_warp_id": "8"
     },
     {
       "x": 37,
       "y": 18,
       "elevation": 0,
       "dest_map": "MAP_HAUNTED_WOODS1",
-      "dest_warp_id": 9
+      "dest_warp_id": "9"
     },
     {
       "x": 13,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_NIAGARA_VILLAGE_HOUSE1",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 30,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_NIAGARA_VILLAGE_HOUSE2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 23,
       "y": 22,
       "elevation": 0,
       "dest_map": "MAP_NIAGARA_VILLAGE_HOUSE3",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 23,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_NEW_MAP1",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 24,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_NEW_MAP1",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [
