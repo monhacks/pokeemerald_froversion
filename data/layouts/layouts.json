@@ -6060,6 +6060,16 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/MAGM8DungeonPuzzle2/border.bin",
       "blockdata_filepath": "data/layouts/MAGM8DungeonPuzzle2/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGM8FOREST_TOWN",
+      "name": "MAGM8ForestTown_Layout",
+      "width": 45,
+      "height": 37,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
+      "border_filepath": "data/layouts/MAGM8ForestTown/border.bin",
+      "blockdata_filepath": "data/layouts/MAGM8ForestTown/map.bin"
     }
   ]
 }

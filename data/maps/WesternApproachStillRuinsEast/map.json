@@ -51,13 +51,6 @@
 
   ],
   "bg_events": [
-    {
-      "type": "hidden_item",
-      "x": 28,
-      "y": 2,
-      "elevation": 3,
-      "item": "ITEM_CHOICE_BAND",
-      "flag": "FLAG_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08"
-    }
+
   ]
 }

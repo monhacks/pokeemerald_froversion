@@ -47,21 +47,21 @@
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND_INN_2F",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 8,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_NONE",
-      "dest_warp_id": 127
+      "dest_map": "",
+      "dest_warp_id": "127"
     },
     {
       "x": 9,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_NONE",
-      "dest_warp_id": 127
+      "dest_map": "",
+      "dest_warp_id": "127"
     }
   ],
   "coord_events": [

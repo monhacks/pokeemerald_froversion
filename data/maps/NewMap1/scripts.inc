@@ -1,6 +1,19 @@
 NewMap1_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, NewMap1_OnLoad
 	.byte 0
 
+NewMap1_OnLoad:
+	goto_if_set FLAG_MAGEE_VERSION, NewMap1_EventScript_SetDynamicWarpMageeVersion
+	goto_if_set FLAG_FRO_VERSION, NewMap1_EventScript_SetDynamicWarpFroVersion
+	end
+
+NewMap1_EventScript_SetDynamicWarpMageeVersion:
+	setdynamicwarp MAP_MAGM8FOREST_TOWN, 255, 24, 9
+end
+
+NewMap1_EventScript_SetDynamicWarpFroVersion:
+	setdynamicwarp MAP_NIAGARA_VILLAGE, 255, 24, 9
+end
 
 MAGM8Forest_MainArea_Eventscripts_SouthSign::
 	lock

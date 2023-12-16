@@ -60,15 +60,15 @@
       "x": 10,
       "y": 35,
       "elevation": 0,
-      "dest_map": "MAP_NIAGARA_VILLAGE",
-      "dest_warp_id": "8"
+      "dest_map": "",
+      "dest_warp_id": "127"
     },
     {
       "x": 11,
       "y": 35,
       "elevation": 0,
-      "dest_map": "MAP_NIAGARA_VILLAGE",
-      "dest_warp_id": "9"
+      "dest_map": "",
+      "dest_warp_id": "127"
     },
     {
       "x": 29,
