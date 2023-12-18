@@ -876,6 +876,8 @@ static const u8 sText_Espeon[] =_("Espeon");
 static const u8 sText_Chansey[] =_("Chansey");
 static const u8 sText_Umbreon[] =_("Umbreon");
 static const u8 sText_Milotic[] =_("Milotic");
+static const u8 sText_Mushrooms[] =_("Mushrooms");
+static const u8 sText_Town[] =_("Town");
 
 
 
@@ -1023,6 +1025,12 @@ static const struct ListMenuItem sMAGM6PokemonChoice3[] =
     {sText_Milotic, 2},
 };
 
+static const struct ListMenuItem sMAGM8FirstToDoList[] =
+{
+    {sText_Mushrooms, 0}, //get mushrooms to make soup for dinner
+    {sText_Town, 1}, //go to town to get medicine for pokemon
+};
+
 // Table of your multichoice sets.
 struct
 {
@@ -1043,6 +1051,7 @@ struct
     {sMAGM6PokemonChoice1, ARRAY_COUNT(sMAGM6PokemonChoice1)}, //10
     {sMAGM6PokemonChoice2, ARRAY_COUNT(sMAGM6PokemonChoice2)}, //11
     {sMAGM6PokemonChoice3, ARRAY_COUNT(sMAGM6PokemonChoice3)}, //12
+    {sMAGM8FirstToDoList, ARRAY_COUNT(sMAGM8FirstToDoList)}, //13
     
     
 };

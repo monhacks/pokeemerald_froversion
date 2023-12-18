@@ -1,16 +1,6 @@
 #ifndef GUARD_GLOBAL_FIELDMAP_H
 #define GUARD_GLOBAL_FIELDMAP_H
 
-enum
-{
-    CONNECTION_SOUTH = 1,
-    CONNECTION_NORTH,
-    CONNECTION_WEST,
-    CONNECTION_EAST,
-    CONNECTION_DIVE,
-    CONNECTION_EMERGE
-};
-
 typedef void (*TilesetCB)(void);
 
 struct Tileset

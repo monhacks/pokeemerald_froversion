@@ -6070,6 +6070,16 @@
       "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
       "border_filepath": "data/layouts/MAGM8ForestTown/border.bin",
       "blockdata_filepath": "data/layouts/MAGM8ForestTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGM8PROTAGONISTS_HOUSE",
+      "name": "MAGM8ProtagonistsHouse_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/MAGM8ProtagonistsHouse/border.bin",
+      "blockdata_filepath": "data/layouts/MAGM8ProtagonistsHouse/map.bin"
     }
   ]
 }

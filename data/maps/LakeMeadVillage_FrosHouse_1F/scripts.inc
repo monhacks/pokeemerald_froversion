@@ -139,7 +139,7 @@ LakeMeadVillage_FrosHouse_1F_MoveMom2:
 LakeMeadVillage_FrosHouse_1F_MoveMom:
 	setobjectxyperm 2, 8, 2
 	removeobject 2
-	setflag FLAG_HIDE_MOM
+	setflag FLAG_0x4EB
 	end
 
 LakeMead_FrosHouse_1F_SetFroNorth:
@@ -161,7 +161,7 @@ LakeMeadVillage_FrosHouse_1F_Angelina_NPC::
 	lock
 	faceplayer
 	addobject 2
-	clearflag FLAG_HIDE_MOM
+	clearflag FLAG_0x4EB
 	compare VAR_LITTLEROOT_INTRO_STATE, 1
 	goto_if_eq LakeMeadVillage_FrosHouse_1F_WhatHaveYouDone
 	compare VAR_LITTLEROOT_INTRO_STATE, 2

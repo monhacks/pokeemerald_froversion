@@ -60,35 +60,35 @@
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_ROUTE119",
-      "dest_warp_id": "2"
+      "dest_warp_id": "0"
     },
     {
       "x": 16,
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_ROUTE119",
-      "dest_warp_id": "3"
+      "dest_warp_id": "0"
     },
     {
       "x": 37,
       "y": 16,
       "elevation": 0,
       "dest_map": "MAP_HAUNTED_WOODS1",
-      "dest_warp_id": "7"
+      "dest_warp_id": "0"
     },
     {
       "x": 37,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_HAUNTED_WOODS1",
-      "dest_warp_id": "8"
+      "dest_warp_id": "0"
     },
     {
       "x": 37,
       "y": 18,
       "elevation": 0,
       "dest_map": "MAP_HAUNTED_WOODS1",
-      "dest_warp_id": "9"
+      "dest_warp_id": "0"
     },
     {
       "x": 13,
@@ -116,14 +116,14 @@
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_NEW_MAP1",
-      "dest_warp_id": "2"
+      "dest_warp_id": "3"
     },
     {
       "x": 24,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_NEW_MAP1",
-      "dest_warp_id": "3"
+      "dest_warp_id": "4"
     }
   ],
   "coord_events": [

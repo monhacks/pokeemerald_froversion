@@ -1,0 +1,65 @@
+{
+  "id": "MAP_MAGM8PROTAGONISTS_HOUSE",
+  "name": "MAGM8ProtagonistsHouse",
+  "layout": "LAYOUT_MAGM8PROTAGONISTS_HOUSE",
+  "music": "MUS_FV_NIAGARA_WOODS",
+  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_MAP1",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_MAP1",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "MAGM8ProtagonistsHouse_EventScript_PreventPlayerFromLeavingUntilToDoListChecked"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "MAGM8ProtagonistsHouse_EventScript_PreventPlayerFromLeavingUntilToDoListChecked"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MAGM8ProtagonistsHouse_EventScript_ToDoList"
+    }
+  ]
+}
