@@ -48,7 +48,7 @@ voicegroup191:: @ 8677138
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8677354
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_harp, 255, 242, 0, 204  @ 8677360
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_timpani, 255, 246, 0, 226  @ 867736C
-	voice_keysplit voicegroup006, KeySplitTable2  @ 8677378
+	voice_keysplit voicegroup006, KeySplitTable2  @ 8677378 //strings
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8677384
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8677390
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 867739C

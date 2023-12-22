@@ -1356,3 +1356,6 @@ $(MID_SUBDIR)/mus_fv_shadow_charizard_transform.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_fv_megalovania.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G119 -V080 -P1
+
+$(MID_SUBDIR)/mus_fv_magm8_forest.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V090	
