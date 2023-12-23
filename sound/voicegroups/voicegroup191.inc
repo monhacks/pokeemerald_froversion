@@ -73,7 +73,7 @@ voicegroup191:: @ 8677138
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8677480
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 867748C
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8677498
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86774A4
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 127, 231, 127  @ 8677894
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86774B0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86774BC
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86774C8
