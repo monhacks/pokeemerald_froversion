@@ -102,6 +102,12 @@ BlackForest1_EventScript_Clue1_English:
 	release
 end
 
+BlackForest1_EventScript_ProfessorsBag::
+	lock
+	msgbox BlackForest1_Text_ProfessorsJournalEntry1, MSGBOX_DEFAULT
+	release
+end
+
 BlackForest1_Text_Clue1BadLanguage:
 	.string "Dra Tenaldeuh ec Mavd.$"
 
@@ -116,3 +122,10 @@ BlackForest1_Text_WildGastlyBattle:
 BlackForest1_Text_WildGastlyDroppedThis:
 	.string "It looks like the Pokémon dropped\n"
 	.string "something.$"
+
+BlackForest1_Text_ProfessorsJournalEntry1:
+	.string "11/23/1911 - I have made it through\n"
+	.string "the Lost Woods after years and years\l"
+	.string "of research.\p"
+	.string "It is even more magnificent than I\n"
+	.string "imagined.$"

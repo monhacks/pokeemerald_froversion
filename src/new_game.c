@@ -172,7 +172,7 @@ static void WarpToTruck(void)
         {
             FlagSet(FLAG_MAGEE_VERSION);
             VarSet(VAR_MAGEE_VERSION, 1);
-            SetWarpDestination(MAP_GROUP(MAGEE_VERSION_PROTAGONISTS_HOUSE), MAP_NUM(MAGEE_VERSION_PROTAGONISTS_HOUSE), -1, 1, 4);
+            SetWarpDestination(MAP_GROUP(MAGM8PROTAGONISTS_HOUSE), MAP_NUM(MAGM8PROTAGONISTS_HOUSE), -1, 9, 3);
             WarpIntoMap();
         }
 }
