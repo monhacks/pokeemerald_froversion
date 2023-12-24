@@ -4,7 +4,7 @@ voicegroup191:: @ 8677138
 	voice_keysplit voicegroup005, KeySplitTable1  @ 869AC7C
 	voice_directsound 60, 0, DirectSoundWaveData_steinway_b_piano, 128, 204, 51, 242  @ 86A0FD0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 867715C
-	voice_square_2 60, 0, 3, 0, 4, 0, 1  @ 8677168
+	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_detuned_ep1_high, 64, 188, 108, 244  @ 86AB50C
 	voice_square_1 60, 0, 0, 3, 0, 4, 0, 1  @ 8677174
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8677180
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 867718C

@@ -575,6 +575,7 @@
 #define MUS_FV_SHADOW_CHARIZARD_TRANSFORM        639
 #define MUS_FV_MEGALOVANIA        640
 #define MUS_FV_MAGM8_FOREST       641
+#define MUS_FV_HAUNTED       642
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
