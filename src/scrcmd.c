@@ -51,7 +51,7 @@
 #include "constants/event_objects.h"
 
 typedef u16 (*SpecialFunc)(void);
-typedef void (*NativeFunc)(void);
+typedef void (*NativeFunc)(struct ScriptContext *);
 
 EWRAM_DATA const u8 *gUnknown_020375C0 = NULL;
 static EWRAM_DATA u32 gUnknown_020375C4 = 0;
@@ -136,8 +136,22 @@ bool8 ScrCmd_callnative(struct ScriptContext *ctx)
 {
     NativeFunc func = (NativeFunc)ScriptReadWord(ctx);
 
-    func();
+    func(ctx);
     return FALSE;
+}
+
+void Native_FindDiaryEntry(struct ScriptContext *ctx)
+{
+    u32 i;
+    u16 entry = ScriptReadHalfword(ctx);
+    if (entry > NUM_DIARY_ENTRIES)
+        return;
+    for (i = 0; i < gSaveBlock1Ptr->diaryEntriesFound; i++)
+    {
+        if (gSaveBlock1Ptr->diaryEntriesOrder[i] == entry)
+            return;
+    }
+    gSaveBlock1Ptr->diaryEntriesOrder[gSaveBlock1Ptr->diaryEntriesFound++] = entry;
 }
 
 bool8 ScrCmd_waitstate(struct ScriptContext *ctx)

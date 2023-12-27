@@ -3092,3 +3092,8 @@ static const u8 sPokePrimerDesc[] = _(
     "A primer\n"
     "that translates\n"
     "languages");
+
+static const u8 sDiaryDesc[] = _(
+    "A diary\n"
+    "written by an\n"
+    "unknown author.");

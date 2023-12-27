@@ -23,6 +23,7 @@
 #include "item_use.h"
 #include "mail.h"
 #include "main.h"
+#include "malloc.h"
 #include "menu.h"
 #include "menu_helpers.h"
 #include "metatile_behavior.h"
@@ -1190,5 +1191,153 @@ void ItemUseOutOfBattle_Mints(u8 taskId)
     gItemUseCB = ItemUseCB_Mints;
     SetUpItemUseCallback(taskId);
 }
+
+#define tListMenuWindowId data[0]
+#define tListMenuTaskId data[1]
+#define tListMenuArrowTaskId data[2]
+#define tListMenuItems 4
+
+static const u8 sText_OpenedTheDiary[] = _("{PLAYER} opened the diary.\nWhich entry?");
+
+struct DiaryEntry
+{
+    const u8 *title;
+    const u8 *message;
+};
+
+static const u8 sText_DiaryEntryFirst_Title[] = _("First");
+static const u8 sText_DiaryEntryFirst_Message[] = _("First message.");
+static const u8 sText_DiaryEntrySecond_Title[] = _("Second");
+static const u8 sText_DiaryEntrySecond_Message[] = _("Second message.");
+static const u8 sText_DiaryEntryThird_Title[] = _("Third");
+static const u8 sText_DiaryEntryThird_Message[] = _("Third message.");
+
+static const struct DiaryEntry sDiaryEntries[NUM_DIARY_ENTRIES] =
+{
+    [DIARY_ENTRY_FIRST] = { sText_DiaryEntryFirst_Title, sText_DiaryEntryFirst_Message },
+    [DIARY_ENTRY_SECOND] = { sText_DiaryEntrySecond_Title, sText_DiaryEntrySecond_Message },
+    [DIARY_ENTRY_THIRD] = { sText_DiaryEntryThird_Title, sText_DiaryEntryThird_Message },
+};
+
+static void Task_UseDiary4(u8 taskId)
+{
+    if (JOY_NEW(A_BUTTON | B_BUTTON))
+        gTasks[taskId].func = BagMenu_InitListsMenu;
+}
+
+static void UseDiary_Destroy(u8 taskId, bool32 copyToVram)
+{
+    s16 *data = gTasks[taskId].data;
+    if (gSaveBlock1Ptr->diaryEntriesFound >= 2)
+        RemoveScrollIndicatorArrowPair(tListMenuArrowTaskId);
+    DestroyListMenuTask(tListMenuTaskId, NULL, NULL);
+    Free((void *)GetWordTaskArg(taskId, tListMenuItems));
+    ClearStdWindowAndFrameToTransparent(tListMenuWindowId, copyToVram);
+    RemoveWindow(tListMenuWindowId);
+}
+
+static void Task_UseDiary3(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    s32 selected = ListMenu_ProcessInput(tListMenuTaskId);
+    if (selected == LIST_CANCEL)
+    {
+        UseDiary_Destroy(taskId, FALSE);
+        PlaySE(SE_SELECT);
+        gTasks[taskId].func = BagMenu_InitListsMenu;
+    }
+    else if (selected != LIST_NOTHING_CHOSEN)
+    {
+        UseDiary_Destroy(taskId, TRUE);
+        PlaySE(SE_SELECT);
+        DisplayItemMessage(taskId, 1, sDiaryEntries[selected].message, Task_UseDiary4);
+    }
+}
+
+static const struct ScrollArrowsTemplate sDiaryScrollArrowsTemplate = {
+    .firstArrowType = SCROLL_ARROW_UP,
+    .firstX = 188,
+    .firstY = 52,
+    .secondArrowType = SCROLL_ARROW_DOWN,
+    .secondX = 188,
+    .secondY = 108,
+    .fullyUpThreshold = -1,
+    .fullyDownThreshold = -1,
+    .tileTag = 112,
+    .palTag = 112,
+    .palNum = 0,
+};
+
+static void Task_UseDiary2(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    struct WindowTemplate windowTemplate = {};
+    struct ListMenuTemplate listMenuTemplate = {};
+    struct ListMenuItem *items;
+    u32 i;
+
+    windowTemplate.bg = 1;
+    windowTemplate.tilemapLeft = 20;
+    windowTemplate.tilemapTop = 13 - min(3, gSaveBlock1Ptr->diaryEntriesFound + 1) * 2;
+    windowTemplate.width = 7;
+    windowTemplate.height = min(3, gSaveBlock1Ptr->diaryEntriesFound + 1) * 2;
+    windowTemplate.paletteNum = 15;
+    windowTemplate.baseBlock = 0x21D;
+
+    tListMenuWindowId = AddWindow(&windowTemplate);
+    DrawStdFrameWithCustomTileAndPalette(tListMenuWindowId, TRUE, 1, 14);
+
+    listMenuTemplate.items = items = Alloc(sizeof(*items) * (gSaveBlock1Ptr->diaryEntriesFound + 1));
+    SetWordTaskArg(taskId, tListMenuItems, (uintptr_t)items);
+    for (i = 0; i < gSaveBlock1Ptr->diaryEntriesFound; i++)
+    {
+        u32 index = gSaveBlock1Ptr->diaryEntriesOrder[i];
+        items[i].name = sDiaryEntries[index].title;
+        items[i].id = index;
+    }
+    items[i].name = gText_Cancel;
+    items[i].id = LIST_CANCEL;
+    listMenuTemplate.moveCursorFunc = ListMenuDefaultCursorMoveFunc;
+    listMenuTemplate.totalItems = gSaveBlock1Ptr->diaryEntriesFound + 1;
+    listMenuTemplate.maxShowed = 3;
+    listMenuTemplate.windowId = tListMenuWindowId;
+    listMenuTemplate.item_X = 8;
+    listMenuTemplate.cursor_X = 0;
+    listMenuTemplate.upText_Y = 1;
+    listMenuTemplate.cursorPal = TEXT_COLOR_DARK_GREY;
+    listMenuTemplate.fillValue = TEXT_COLOR_WHITE;
+    listMenuTemplate.cursorShadowPal = TEXT_COLOR_LIGHT_GREY;
+    listMenuTemplate.lettersSpacing = 1;
+    listMenuTemplate.itemVerticalPadding = 0;
+    listMenuTemplate.scrollMultiple = LIST_NO_MULTIPLE_SCROLL;
+    listMenuTemplate.fontId = 1;
+    listMenuTemplate.cursorKind = 0;
+    tListMenuTaskId = ListMenuInit(&listMenuTemplate, 0, 0);
+    if (gSaveBlock1Ptr->diaryEntriesFound >= 2)
+        tListMenuArrowTaskId = AddScrollIndicatorArrowPair(&sDiaryScrollArrowsTemplate, NULL);
+
+    gTasks[taskId].func = Task_UseDiary3;
+}
+
+static void Task_UseDiary1(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    if (InBattlePyramid())
+        DisplayItemMessageInBattlePyramid(taskId, gText_DadsAdvice, Task_CloseBattlePyramidBagMessage);
+    else if (tUsingRegisteredKeyItem)
+        DisplayItemMessageOnField(taskId, gText_DadsAdvice, Task_CloseCantUseKeyItemMessage);
+    else
+        DisplayItemMessage(taskId, 1, sText_OpenedTheDiary, Task_UseDiary2);
+}
+
+void ItemUseOutOfBattle_Diary(u8 taskId)
+{
+    gTasks[taskId].func = Task_UseDiary1;
+}
+
+#undef tListMenuWindowId
+#undef tListMenuTaskId
+#undef tListMenuArrowTaskId
+#undef tListMenuItems
 
 #undef tUsingRegisteredKeyItem

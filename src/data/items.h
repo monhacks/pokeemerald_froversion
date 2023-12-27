@@ -7969,4 +7969,16 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+    [ITEM_DIARY] =
+    {
+        .name = _("Diary"),
+        .itemId = ITEM_DIARY,
+        .price = 0,
+        .description = sDiaryDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Diary,
+    }
 };

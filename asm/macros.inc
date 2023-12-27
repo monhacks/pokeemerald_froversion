@@ -155,3 +155,8 @@
 	callnative ScriptMenu_ScrollingMultichoice
 	waitstate
 	.endm
+
+	.macro finddiaryentry entry:req
+	callnative Native_FindDiaryEntry
+	.2byte \entry
+	.endm

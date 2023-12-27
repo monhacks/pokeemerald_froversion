@@ -6,6 +6,7 @@
 #include "config.h" // we need to define config before gba headers as print stuff needs the functions nulled before defines.
 #include "gba/gba.h"
 #include "constants/global.h"
+#include "constants/diary.h"
 #include "constants/flags.h"
 #include "constants/vars.h"
 #include "constants/species.h"
@@ -1036,6 +1037,8 @@ struct SaveBlock1
     /*0x3D64*/ struct SaveTrainerHill trainerHill;
     /*0x3D70*/ struct WaldaPhrase waldaPhrase;
     // sizeof: 0x3D88
+    u8 diaryEntriesFound;
+    u8 diaryEntriesOrder[NUM_DIARY_ENTRIES];
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;
