@@ -74,21 +74,21 @@
       "y": 16,
       "elevation": 0,
       "dest_map": "MAP_HAUNTED_WOODS1",
-      "dest_warp_id": "0"
+      "dest_warp_id": "7"
     },
     {
       "x": 37,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_HAUNTED_WOODS1",
-      "dest_warp_id": "0"
+      "dest_warp_id": "8"
     },
     {
       "x": 37,
       "y": 18,
       "elevation": 0,
       "dest_map": "MAP_HAUNTED_WOODS1",
-      "dest_warp_id": "0"
+      "dest_warp_id": "9"
     },
     {
       "x": 13,

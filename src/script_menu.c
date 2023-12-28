@@ -878,6 +878,14 @@ static const u8 sText_Umbreon[] =_("Umbreon");
 static const u8 sText_Milotic[] =_("Milotic");
 static const u8 sText_Mushrooms[] =_("Mushrooms");
 static const u8 sText_Town[] =_("Town");
+static const u8 sText_11_19_1958[] =_("11/19/1958");
+static const u8 sText_11_27_1958[] =_("11/27/1958");
+static const u8 sText_12_02_1958[] =_("12/02/1958");
+static const u8 sText_12_04_1958[] =_("12/04/1958");
+static const u8 sText_12_07_1958[] =_("12/07/1958");
+static const u8 sText_12_10_1958[] =_("12/10/1958");
+static const u8 sText_12_11_1958[] =_("12/11/1958");
+static const u8 sText_12_12_1958[] =_("12/12/1958");
 
 
 
@@ -1031,6 +1039,24 @@ static const struct ListMenuItem sMAGM8FirstToDoList[] =
     {sText_Town, 1}, //go to town to get medicine for pokemon
 };
 
+static const struct ListMenuItem sMAGM8SecondToDoList[] =
+{
+    {sText_Mushrooms, 0}, //get mushrooms to make soup for dinner
+    {sText_Town, 1}, //go to town to get medicine for pokemon
+};
+
+static const struct ListMenuItem sMAGM8ProfessorsJournalEntries[] =
+{
+    {sText_11_19_1958, 0},
+    {sText_11_27_1958, 1},
+    {sText_12_02_1958, 2},
+    {sText_12_04_1958, 3},
+    {sText_12_07_1958, 4},
+    {sText_12_10_1958, 5},
+    {sText_12_11_1958, 6},
+    {sText_12_12_1958, 7},
+};
+
 // Table of your multichoice sets.
 struct
 {
@@ -1052,6 +1078,8 @@ struct
     {sMAGM6PokemonChoice2, ARRAY_COUNT(sMAGM6PokemonChoice2)}, //11
     {sMAGM6PokemonChoice3, ARRAY_COUNT(sMAGM6PokemonChoice3)}, //12
     {sMAGM8FirstToDoList, ARRAY_COUNT(sMAGM8FirstToDoList)}, //13
+    {sMAGM8SecondToDoList, ARRAY_COUNT(sMAGM8SecondToDoList)}, //14
+    {sMAGM8ProfessorsJournalEntries, ARRAY_COUNT(sMAGM8ProfessorsJournalEntries)}, //15
     
     
 };

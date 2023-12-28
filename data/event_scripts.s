@@ -1065,6 +1065,7 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+	.include "data/scripts/magm8_diary_entries.inc"
 
 	.include "data/maps/LakeMeadVillage/scripts.inc"
 

@@ -1,3 +1,5 @@
+.set LOCALID_SCROLLINGMENU_PROFESSORS_JOURNAL_INITIAL, 15 //references 15 in sScrollingSets located in script_menu.c
+
 BlackForest1_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, BlackForest1_OnLoad
 	.byte 0
@@ -104,9 +106,26 @@ end
 
 BlackForest1_EventScript_ProfessorsBag::
 	lock
+	msgbox BlackForest1_Text_BagContainingProfessorsJournal, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, BlackForest1_EventScript_ProfessorsBagEnd
+	case YES, BlackForest1_EventScript_ReadProfessorsJournal
 	msgbox BlackForest1_Text_ProfessorsJournalEntry1, MSGBOX_DEFAULT
-	release
+		BlackForest1_EventScript_ProfessorsBagEnd:
+		release
 end
+
+BlackForest1_EventScript_ReadProfessorsJournal:
+	closemessage
+	scrollingmultichoice LOCALID_SCROLLINGMENU_PROFESSORS_JOURNAL_INITIAL, 2, 3, 8, TRUE
+release
+end
+
+BlackForest1_Text_BagContainingProfessorsJournal:
+	.string "In the bag there is a book.\p"
+	.string "It is inscriped:“Professor\n"
+	.string "Gooseberry's Journal”\p"
+	.string "Would you like to read it?$"
 
 BlackForest1_Text_Clue1BadLanguage:
 	.string "Dra Tenaldeuh ec Mavd.$"

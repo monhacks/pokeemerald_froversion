@@ -1,4 +1,5 @@
 //FLAG_0x4EB == FLAG_TO_DO_LIST_CHECKED
+.set LOCALID_SCROLLINGMENU_FIRST_TO_DO_LIST, 13
 
 MAGM8ProtagonistsHouse_MapScripts::
 	.byte 0
@@ -29,7 +30,7 @@ MAGM8ProtagonistsHouse_EventScript_ToDoListExit:
 	end
 MAGM8ProtagonistsHouse_EventScript_ShowToDoList:
 			closemessage
-			scrollingmultichoice 13, 2, 3, 2, TRUE
+			scrollingmultichoice LOCALID_SCROLLINGMENU_FIRST_TO_DO_LIST, 2, 3, 2, TRUE
 			switch VAR_RESULT
 				case 0, MAGM8ProtagonistsHouse_EventScript_ToDoListHarvestMushrooms
 				case 1, MAGM8ProtagonistsHouse_EventScript_ToDoListGoToTownForMedicine
