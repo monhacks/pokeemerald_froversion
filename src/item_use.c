@@ -1204,48 +1204,61 @@ static const u8 sText_OpenedTheDiary[] = _("{PLAYER} opened the diary.\nWhich en
 struct DiaryEntry
 {
     const u8 *title;
-    const u8 *message;
+    const u8 *encodedMessage;
+    const u8 *englishMessage;
 };
 
 static const u8 sText_DiaryEntryFirst_Title[] = _("First");
-static const u8 sText_DiaryEntryFirst_Message[] = _("First message.");
+static const u8 sText_DiaryEntryFirst_EncodedMessage[] = _("F--- m------.");
+static const u8 sText_DiaryEntryFirst_EnglishMessage[] = _("First message.");
 static const u8 sText_DiaryEntrySecond_Title[] = _("Second");
-static const u8 sText_DiaryEntrySecond_Message[] = _("Second message.");
+static const u8 sText_DiaryEntrySecond_EncodedMessage[] = _("S---- m------.");
+static const u8 sText_DiaryEntrySecond_EnglishMessage[] = _("Second message.");
 static const u8 sText_DiaryEntryThird_Title[] = _("Third");
-static const u8 sText_DiaryEntryThird_Message[] = _("Third message.");
+static const u8 sText_DiaryEntryThird_EncodedMessage[] = _("T--- m------.");
+static const u8 sText_DiaryEntryThird_EnglishMessage[] = _("Third message.");
 static const u8 sText_DiaryEntryFourth_Title[] = _("Fourth");
-static const u8 sText_DiaryEntryFourth_Message[] = _("Fourth message.");
+static const u8 sText_DiaryEntryFourth_EncodedMessage[] = _("F---- m------.");
+static const u8 sText_DiaryEntryFourth_EnglishMessage[] = _("Fourth message.");
 static const u8 sText_DiaryEntryFifth_Title[] = _("Fifth");
-static const u8 sText_DiaryEntryFifth_Message[] = _("Fifth message.");
+static const u8 sText_DiaryEntryFifth_EncodedMessage[] = _("F--- m------.");
+static const u8 sText_DiaryEntryFifth_EnglishMessage[] = _("Fifth message.");
 static const u8 sText_DiaryEntrySixth_Title[] = _("Sixth");
-static const u8 sText_DiaryEntrySixth_Message[] = _("Sixth message.");
+static const u8 sText_DiaryEntrySixth_EncodedMessage[] = _("S---- m------.");
+static const u8 sText_DiaryEntrySixth_EnglishMessage[] = _("Sixth message.");
 static const u8 sText_DiaryEntrySeventh_Title[] = _("Seventh");
-static const u8 sText_DiaryEntrySeventh_Message[] = _("Seventh message.");
+static const u8 sText_DiaryEntrySeventh_EncodedMessage[] = _("S----- m------.");
+static const u8 sText_DiaryEntrySeventh_EnglishMessage[] = _("Seventh message.");
 static const u8 sText_DiaryEntryEighth_Title[] = _("Eighth");
-static const u8 sText_DiaryEntryEighth_Message[] = _("Eighth message.");
+static const u8 sText_DiaryEntryEighth_EncodedMessage[] = _("E----- m------.");
+static const u8 sText_DiaryEntryEighth_EnglishMessage[] = _("Eighth message.");
 static const u8 sText_DiaryEntryNinth_Title[] = _("Ninth");
-static const u8 sText_DiaryEntryNinth_Message[] = _("Ninth message.");
+static const u8 sText_DiaryEntryNinth_EncodedMessage[] = _("N---- m------.");
+static const u8 sText_DiaryEntryNinth_EnglishMessage[] = _("Ninth message.");
 static const u8 sText_DiaryEntryTenth_Title[] = _("Tenth");
-static const u8 sText_DiaryEntryTenth_Message[] = _("Tenth message.");
+static const u8 sText_DiaryEntryTenth_EncodedMessage[] = _("T---- m------.");
+static const u8 sText_DiaryEntryTenth_EnglishMessage[] = _("Tenth message.");
 static const u8 sText_DiaryEntryEleventh_Title[] = _("Eleventh");
-static const u8 sText_DiaryEntryEleventh_Message[] = _("Eleventh message.");
+static const u8 sText_DiaryEntryEleventh_EncodedMessage[] = _("E------- m------.");
+static const u8 sText_DiaryEntryEleventh_EnglishMessage[] = _("Eleventh message.");
 static const u8 sText_DiaryEntryTwelveth_Title[] = _("Twelveth");
-static const u8 sText_DiaryEntryTwelveth_Message[] = _("Twelveth message.");
+static const u8 sText_DiaryEntryTwelveth_EncodedMessage[] = _("T------- m------.");
+static const u8 sText_DiaryEntryTwelveth_EnglishMessage[] = _("Twelveth message.");
 
 static const struct DiaryEntry sDiaryEntries[NUM_DIARY_ENTRIES] =
 {
-    [DIARY_ENTRY_FIRST] = { sText_DiaryEntryFirst_Title, sText_DiaryEntryFirst_Message },
-    [DIARY_ENTRY_SECOND] = { sText_DiaryEntrySecond_Title, sText_DiaryEntrySecond_Message },
-    [DIARY_ENTRY_THIRD] = { sText_DiaryEntryThird_Title, sText_DiaryEntryThird_Message },
-    [DIARY_ENTRY_FOURTH] = { sText_DiaryEntryFourth_Title, sText_DiaryEntryFourth_Message },
-    [DIARY_ENTRY_FIFTH] = { sText_DiaryEntryFifth_Title, sText_DiaryEntryFifth_Message },
-    [DIARY_ENTRY_SIXTH] = { sText_DiaryEntrySixth_Title, sText_DiaryEntrySixth_Message },
-    [DIARY_ENTRY_SEVENTH] = { sText_DiaryEntrySeventh_Title, sText_DiaryEntrySeventh_Message },
-    [DIARY_ENTRY_EIGHTH] = { sText_DiaryEntryEighth_Title, sText_DiaryEntryEighth_Message },
-    [DIARY_ENTRY_NINTH] = { sText_DiaryEntryNinth_Title, sText_DiaryEntryNinth_Message },
-    [DIARY_ENTRY_TENTH] = { sText_DiaryEntryTenth_Title, sText_DiaryEntryTenth_Message },
-    [DIARY_ENTRY_ELEVENTH] = { sText_DiaryEntryEleventh_Title, sText_DiaryEntryEleventh_Message },
-    [DIARY_ENTRY_TWELVETH] = { sText_DiaryEntryTwelveth_Title, sText_DiaryEntryTwelveth_Message },
+    [DIARY_ENTRY_FIRST] = { sText_DiaryEntryFirst_Title, sText_DiaryEntryFirst_EncodedMessage, sText_DiaryEntryFirst_EnglishMessage },
+    [DIARY_ENTRY_SECOND] = { sText_DiaryEntrySecond_Title, sText_DiaryEntrySecond_EncodedMessage, sText_DiaryEntrySecond_EnglishMessage },
+    [DIARY_ENTRY_THIRD] = { sText_DiaryEntryThird_Title, sText_DiaryEntryThird_EncodedMessage, sText_DiaryEntryThird_EnglishMessage },
+    [DIARY_ENTRY_FOURTH] = { sText_DiaryEntryFourth_Title, sText_DiaryEntryFourth_EncodedMessage, sText_DiaryEntryFourth_EnglishMessage },
+    [DIARY_ENTRY_FIFTH] = { sText_DiaryEntryFifth_Title, sText_DiaryEntryFifth_EncodedMessage, sText_DiaryEntryFifth_EnglishMessage },
+    [DIARY_ENTRY_SIXTH] = { sText_DiaryEntrySixth_Title, sText_DiaryEntrySixth_EncodedMessage, sText_DiaryEntrySixth_EnglishMessage },
+    [DIARY_ENTRY_SEVENTH] = { sText_DiaryEntrySeventh_Title, sText_DiaryEntrySeventh_EncodedMessage, sText_DiaryEntrySeventh_EnglishMessage },
+    [DIARY_ENTRY_EIGHTH] = { sText_DiaryEntryEighth_Title, sText_DiaryEntryEighth_EncodedMessage, sText_DiaryEntryEighth_EnglishMessage },
+    [DIARY_ENTRY_NINTH] = { sText_DiaryEntryNinth_Title, sText_DiaryEntryNinth_EncodedMessage, sText_DiaryEntryNinth_EnglishMessage },
+    [DIARY_ENTRY_TENTH] = { sText_DiaryEntryTenth_Title, sText_DiaryEntryTenth_EncodedMessage, sText_DiaryEntryTenth_EnglishMessage },
+    [DIARY_ENTRY_ELEVENTH] = { sText_DiaryEntryEleventh_Title, sText_DiaryEntryEleventh_EncodedMessage, sText_DiaryEntryEleventh_EnglishMessage },
+    [DIARY_ENTRY_TWELVETH] = { sText_DiaryEntryTwelveth_Title, sText_DiaryEntryTwelveth_EncodedMessage, sText_DiaryEntryTwelveth_EnglishMessage },
 };
 
 static void Task_UseDiary2(u8 taskId);
@@ -1289,7 +1302,10 @@ static void Task_UseDiary3(u8 taskId)
     {
         UseDiary_Destroy(taskId, TRUE);
         PlaySE(SE_SELECT);
-        DisplayItemMessage(taskId, 1, sDiaryEntries[selected].message, Task_UseDiary4);
+        if (FlagGet(FLAG_UNUSED_0x03E))
+            DisplayItemMessage(taskId, 1, sDiaryEntries[selected].englishMessage, Task_UseDiary4);
+        else
+            DisplayItemMessage(taskId, 1, sDiaryEntries[selected].encodedMessage, Task_UseDiary4);
     }
 }
 
