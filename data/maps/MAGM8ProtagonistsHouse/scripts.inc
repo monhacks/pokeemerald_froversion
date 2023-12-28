@@ -2,7 +2,32 @@
 .set LOCALID_SCROLLINGMENU_FIRST_TO_DO_LIST, 13
 
 MAGM8ProtagonistsHouse_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, MAGM8ProtagonistsHouse_OnLoad
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, MAGM8ProtagonistsHouse_OnWarp
 	.byte 0
+
+MAGM8ProtagonistsHouse_OnLoad:
+	compare VAR_ROUTE101_STATE, 1
+	call_if_ge MAGM8ProtagonistsHouse_EventScript_SetDynamicWarpPostInfection
+	call_if_lt MAGM8ProtagonistsHouse_EventScript_SetDynamicWarpPreInfection
+	end
+
+MAGM8ProtagonistsHouse_OnWarp:
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 0, MAGM8ProtagonistsHouse_SetProtagWest
+	.2byte 0
+
+MAGM8ProtagonistsHouse_SetProtagWest:
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	addvar VAR_LITTLEROOT_INTRO_STATE, 1
+	end
+
+MAGM8ProtagonistsHouse_EventScript_SetDynamicWarpPreInfection:
+	setdynamicwarp MAP_MAGM8BLACK_FOREST_PRE_INFECTION, 255, 29, 32
+end
+
+MAGM8ProtagonistsHouse_EventScript_SetDynamicWarpPostInfection:
+	setdynamicwarp MAP_NEW_MAP1, 255, 29, 32
+end
 
 MAGM8ProtagonistsHouse_EventScript_PreventPlayerFromLeavingUntilToDoListChecked::
 	lock

@@ -847,3 +847,10 @@ gMetatiles_VermillionCitySecondary::
 	.align 1
 gMetatileAttributes_VermillionCitySecondary::
 	.incbin "data/tilesets/secondary/vermillioncitysecondary/metatile_attributes.bin"
+	.align 1
+gMetatiles_BlackForestPreInfection::
+	.incbin "data/tilesets/primary/black_forest_pre_infection/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_BlackForestPreInfection::
+	.incbin "data/tilesets/primary/black_forest_pre_infection/metatile_attributes.bin"

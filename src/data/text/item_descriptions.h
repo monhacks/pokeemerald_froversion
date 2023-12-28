@@ -3095,5 +3095,5 @@ static const u8 sPokePrimerDesc[] = _(
 
 static const u8 sDiaryDesc[] = _(
     "A diary\n"
-    "written by an\n"
-    "unknown author.");
+    "written by Professor\n"
+    "Gooseberry.");

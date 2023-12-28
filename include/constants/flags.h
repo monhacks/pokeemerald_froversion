@@ -71,7 +71,7 @@
 #define FLAG_UNUSED_0x03B    0x3B // Unused Flag
 #define FLAG_UNUSED_0x03C    0x3C // Unused Flag
 #define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
+#define FLAG_FOUND_CIPHER    0x3E // Unused Flag
 #define FLAG_ITEM_MOUNT_CINNABAR_3F_EAST_TM16  0x3F // Unused Flag
 #define FLAG_ITEM_MOUNT_CINNABAR_3F_EAST_FULL_RESTORE    0x40 // Unused Flag
 #define FLAG_ITEM_MOUNT_CINNABAR_2F_WEST_RED_SHARD    0x41 // Unused Flag

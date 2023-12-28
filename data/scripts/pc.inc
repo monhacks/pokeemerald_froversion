@@ -137,10 +137,30 @@ Eventscript_Porygon_AccessHallOfFame:: @ 8271E54
 
 EventScript_IsBadMushroom:: @ 8271D92
 	lockall
+	goto_if_unset FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU, EventScript_IsBadMushroom_PreInfection
+	goto_if_set FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU, EventScript_IsBadMushroom_CheckInfectionState
+	releaseall	
+end
+EventScript_BadMushroomDiceRoll:	
 	msgbox Text_BadMushroom, MSGBOX_DEFAULT
 		random 10
 	switch VAR_RESULT
 		case 5, EventScript_BlackForestWildPokemonEncounter
+	releaseall
+end
+EventScript_IsBadMushroom_PreInfection:
+	msgbox Text_PickMushroom, MSGBOX_DEFAULT
+	setflag FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU
+	releaseall
+end
+EventScript_IsBadMushroom_CheckInfectionState:
+	compare VAR_ROUTE101_STATE, 1
+	goto_if_ge EventScript_BadMushroomDiceRoll
+	goto_if_le EventScript_IsBadMushroom_AlreadyPickedMushroom
+	releaseall
+end
+EventScript_IsBadMushroom_AlreadyPickedMushroom:
+	msgbox Text_AlreadyPickedMushroom, MSGBOX_DEFAULT
 	releaseall
 end
 
@@ -155,13 +175,15 @@ EventScript_BlackForestWildPokemonEncounter:
 end
 
 Eventscript_SetWildBattleAriados:
-	setwildbattle SPECIES_ARIADOS, 50, ITEM_NONE
+	//setwildbattle SPECIES_ARIADOS, 50, ITEM_NONE
+	setwildbattle SPECIES_SPINARAK, 50, ITEM_NONE
 dowildbattle
 releaseall
 end
 
 Eventscript_SetWildBattleEscarataco:
-	setwildbattle SPECIES_ESCARATACO, 50, ITEM_NONE
+	//setwildbattle SPECIES_ESCARATACO, 50, ITEM_NONE
+	setwildbattle SPECIES_PARAS, 50, ITEM_NONE
 dowildbattle
 releaseall
 end
@@ -173,7 +195,8 @@ releaseall
 end
 
 Eventscript_SetWildBattleScyther:
-	setwildbattle SPECIES_SCYTHER, 50, ITEM_NONE
+	//setwildbattle SPECIES_SCYTHER, 50, ITEM_NONE
+	setwildbattle SPECIES_CATERPIE, 50, ITEM_NONE
 dowildbattle
 releaseall
 end
@@ -261,4 +284,12 @@ Text_WesternApproachTrapNoPokemon:
 
 Text_TrapDisarmed:
 	.string "The trap has been disarmed.$"
+
+Text_PickMushroom:
+	.string "You picked a mushroom.\n"
+	.string "They are delicious in soup!$"
+
+Text_AlreadyPickedMushroom:
+	.string "Dad's advice...\p"
+	.string "Never take more than you need.$"
 

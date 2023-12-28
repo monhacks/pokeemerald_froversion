@@ -1,4 +1,5 @@
 {
+  "layouts_table_label": "gMapLayouts",
   "group_order": [
     "gMapGroup0",
     "gMapGroup1",
@@ -292,7 +293,8 @@
     "MAGM8DungeonPuzzle1",
     "MAGM8DungeonPuzzle2",
     "MAGM8ForestTown",
-    "MAGM8ProtagonistsHouse"
+    "MAGM8ProtagonistsHouse",
+    "MAGM8BlackForestPreInfection"
   ],
   "gMapGroup9": [
     "SlateportCity_SternsShipyard_1F",

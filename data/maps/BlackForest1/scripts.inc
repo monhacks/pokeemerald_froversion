@@ -90,48 +90,19 @@ BlackForest1_EventScript_WildBattleSpecialGastly:
 	release
 end
 
-BlackForest1_EventScript_Clue1_LanguageDetermine::
-	lock
-	checkitem ITEM_POKEPRIMER, 1
-	compare VAR_RESULT, TRUE
-	goto_if_eq BlackForest1_EventScript_Clue1_English
-	msgbox BlackForest1_Text_Clue1BadLanguage, MSGBOX_DEFAULT
-	release
-end
-
-BlackForest1_EventScript_Clue1_English:
-	msgbox BlackForest1_Text_Clue1English, MSGBOX_DEFAULT
-	release
-end
-
 BlackForest1_EventScript_ProfessorsBag::
 	lock
-	msgbox BlackForest1_Text_BagContainingProfessorsJournal, MSGBOX_YESNO
-	switch VAR_RESULT
-	case NO, BlackForest1_EventScript_ProfessorsBagEnd
-	case YES, BlackForest1_EventScript_ReadProfessorsJournal
-	msgbox BlackForest1_Text_ProfessorsJournalEntry1, MSGBOX_DEFAULT
-		BlackForest1_EventScript_ProfessorsBagEnd:
-		release
-end
-
-BlackForest1_EventScript_ReadProfessorsJournal:
-	closemessage
-	scrollingmultichoice LOCALID_SCROLLINGMENU_PROFESSORS_JOURNAL_INITIAL, 2, 3, 8, TRUE
-release
-end
-
-BlackForest1_Text_BagContainingProfessorsJournal:
-	.string "In the bag there is a book.\p"
-	.string "It is inscriped:“Professor\n"
-	.string "Gooseberry's Journal”\p"
-	.string "Would you like to read it?$"
-
-BlackForest1_Text_Clue1BadLanguage:
-	.string "Dra Tenaldeuh ec Mavd.$"
-
-BlackForest1_Text_Clue1English:
-	.string "The Direction is LEFT.$"
+	finditem ITEM_DIARY,1
+	finddiaryentry DIARY_ENTRY_TWENTIETH
+	finddiaryentry DIARY_ENTRY_NINETEENTH
+	finddiaryentry DIARY_ENTRY_EIGHTEENTH
+	finddiaryentry DIARY_ENTRY_SEVENTEENTH
+	finddiaryentry DIARY_ENTRY_SIXTEENTH
+	finddiaryentry DIARY_ENTRY_FIFTEENTH
+	finddiaryentry DIARY_ENTRY_FOURTEENTH
+	finddiaryentry DIARY_ENTRY_THIRTEENTH
+	release
+	end
 
 
 BlackForest1_Text_WildGastlyBattle:

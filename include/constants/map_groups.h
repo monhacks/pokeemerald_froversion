@@ -263,6 +263,7 @@
 #define MAP_MAGM8DUNGEON_PUZZLE2             (9 | (8 << 8))
 #define MAP_MAGM8FOREST_TOWN                 (10 | (8 << 8))
 #define MAP_MAGM8PROTAGONISTS_HOUSE          (11 | (8 << 8))
+#define MAP_MAGM8BLACK_FOREST_PRE_INFECTION  (12 | (8 << 8))
 
 // gMapGroup9
 #define MAP_SLATEPORT_CITY_STERNS_SHIPYARD_1F      (0 | (9 << 8))

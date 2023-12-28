@@ -1281,3 +1281,14 @@ gTileset_VermillionCitySecondary::
 	.4byte gMetatiles_VermillionCitySecondary
 	.4byte gMetatileAttributes_VermillionCitySecondary
 	.4byte NULL
+
+	.align 2
+gTileset_BlackForestPreInfection::
+	.byte TRUE @ is compressed
+	.byte FALSE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_BlackForestPreInfection
+	.4byte gTilesetPalettes_BlackForestPreInfection
+	.4byte gMetatiles_BlackForestPreInfection
+	.4byte gMetatileAttributes_BlackForestPreInfection
+	.4byte NULL @ animation callback

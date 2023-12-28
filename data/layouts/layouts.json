@@ -6080,6 +6080,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/MAGM8ProtagonistsHouse/border.bin",
       "blockdata_filepath": "data/layouts/MAGM8ProtagonistsHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGM8BLACK_FOREST_PRE_INFECTION",
+      "name": "MAGM8BlackForestPreInfection_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_BlackForestPreInfection",
+      "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
+      "border_filepath": "data/layouts/MAGM8BlackForestPreInfection/border.bin",
+      "blockdata_filepath": "data/layouts/MAGM8BlackForestPreInfection/map.bin"
     }
   ]
 }

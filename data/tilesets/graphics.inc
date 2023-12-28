@@ -2549,3 +2549,23 @@ gTilesetPalettes_VermillionCitySecondary::
 	.align 2
 gTilesetTiles_VermillionCitySecondary::
 	.incbin "data/tilesets/secondary/vermillioncitysecondary/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_BlackForestPreInfection::
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/00.gbapal"
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/01.gbapal"
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/02.gbapal"
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/03.gbapal"
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/04.gbapal"
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/05.gbapal"
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/06.gbapal"
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/07.gbapal"
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/08.gbapal"
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/09.gbapal"
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/10.gbapal"
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/11.gbapal"
+	.incbin "data/tilesets/primary/black_forest_pre_infection/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_BlackForestPreInfection::
+	.incbin "data/tilesets/primary/black_forest_pre_infection/tiles.4bpp.lz"
