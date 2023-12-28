@@ -1,5 +1,18 @@
 MAGM8DiaryEntry_EventScript_DiaryEntryFocusPunch::
 	lock
+    finditem ITEM_DIARY, 1
+    finddiaryentry DIARY_ENTRY_SECOND
+    finddiaryentry DIARY_ENTRY_FIRST
+    finddiaryentry DIARY_ENTRY_THIRD
+    finddiaryentry DIARY_ENTRY_FIFTH
+    finddiaryentry DIARY_ENTRY_EIGHTH
+    finddiaryentry DIARY_ENTRY_TENTH
+    finddiaryentry DIARY_ENTRY_FOURTH
+    finddiaryentry DIARY_ENTRY_SIXTH
+    finddiaryentry DIARY_ENTRY_NINTH
+    finddiaryentry DIARY_ENTRY_SEVENTH
+    finddiaryentry DIARY_ENTRY_TWELVETH
+    finddiaryentry DIARY_ENTRY_ELEVENTH
 	msgbox MAGM8DiaryEntry_Text_FoundDiaryEntry, MSGBOX_YESNO
 		switch VAR_RESULT
 		case NO, MAGM8DiaryEntry_EventScript_DiaryEntryFocusPunch_End

@@ -23,6 +23,7 @@
 #include "item_use.h"
 #include "mail.h"
 #include "main.h"
+#include "malloc.h"
 #include "menu.h"
 #include "menu_helpers.h"
 #include "metatile_behavior.h"
@@ -1190,5 +1191,194 @@ void ItemUseOutOfBattle_Mints(u8 taskId)
     gItemUseCB = ItemUseCB_Mints;
     SetUpItemUseCallback(taskId);
 }
+
+#define tListMenuWindowId data[0]
+#define tListMenuTaskId data[1]
+#define tListMenuArrowTaskId data[2]
+#define tListMenuItems 4
+#define tListMenuScrollOffset data[6]
+#define tListMenuSelectedRow data[7]
+
+static const u8 sText_OpenedTheDiary[] = _("{PLAYER} opened the diary.\nWhich entry?");
+
+struct DiaryEntry
+{
+    const u8 *title;
+    const u8 *message;
+};
+
+static const u8 sText_DiaryEntryFirst_Title[] = _("First");
+static const u8 sText_DiaryEntryFirst_Message[] = _("First message.");
+static const u8 sText_DiaryEntrySecond_Title[] = _("Second");
+static const u8 sText_DiaryEntrySecond_Message[] = _("Second message.");
+static const u8 sText_DiaryEntryThird_Title[] = _("Third");
+static const u8 sText_DiaryEntryThird_Message[] = _("Third message.");
+static const u8 sText_DiaryEntryFourth_Title[] = _("Fourth");
+static const u8 sText_DiaryEntryFourth_Message[] = _("Fourth message.");
+static const u8 sText_DiaryEntryFifth_Title[] = _("Fifth");
+static const u8 sText_DiaryEntryFifth_Message[] = _("Fifth message.");
+static const u8 sText_DiaryEntrySixth_Title[] = _("Sixth");
+static const u8 sText_DiaryEntrySixth_Message[] = _("Sixth message.");
+static const u8 sText_DiaryEntrySeventh_Title[] = _("Seventh");
+static const u8 sText_DiaryEntrySeventh_Message[] = _("Seventh message.");
+static const u8 sText_DiaryEntryEighth_Title[] = _("Eighth");
+static const u8 sText_DiaryEntryEighth_Message[] = _("Eighth message.");
+static const u8 sText_DiaryEntryNinth_Title[] = _("Ninth");
+static const u8 sText_DiaryEntryNinth_Message[] = _("Ninth message.");
+static const u8 sText_DiaryEntryTenth_Title[] = _("Tenth");
+static const u8 sText_DiaryEntryTenth_Message[] = _("Tenth message.");
+static const u8 sText_DiaryEntryEleventh_Title[] = _("Eleventh");
+static const u8 sText_DiaryEntryEleventh_Message[] = _("Eleventh message.");
+static const u8 sText_DiaryEntryTwelveth_Title[] = _("Twelveth");
+static const u8 sText_DiaryEntryTwelveth_Message[] = _("Twelveth message.");
+
+static const struct DiaryEntry sDiaryEntries[NUM_DIARY_ENTRIES] =
+{
+    [DIARY_ENTRY_FIRST] = { sText_DiaryEntryFirst_Title, sText_DiaryEntryFirst_Message },
+    [DIARY_ENTRY_SECOND] = { sText_DiaryEntrySecond_Title, sText_DiaryEntrySecond_Message },
+    [DIARY_ENTRY_THIRD] = { sText_DiaryEntryThird_Title, sText_DiaryEntryThird_Message },
+    [DIARY_ENTRY_FOURTH] = { sText_DiaryEntryFourth_Title, sText_DiaryEntryFourth_Message },
+    [DIARY_ENTRY_FIFTH] = { sText_DiaryEntryFifth_Title, sText_DiaryEntryFifth_Message },
+    [DIARY_ENTRY_SIXTH] = { sText_DiaryEntrySixth_Title, sText_DiaryEntrySixth_Message },
+    [DIARY_ENTRY_SEVENTH] = { sText_DiaryEntrySeventh_Title, sText_DiaryEntrySeventh_Message },
+    [DIARY_ENTRY_EIGHTH] = { sText_DiaryEntryEighth_Title, sText_DiaryEntryEighth_Message },
+    [DIARY_ENTRY_NINTH] = { sText_DiaryEntryNinth_Title, sText_DiaryEntryNinth_Message },
+    [DIARY_ENTRY_TENTH] = { sText_DiaryEntryTenth_Title, sText_DiaryEntryTenth_Message },
+    [DIARY_ENTRY_ELEVENTH] = { sText_DiaryEntryEleventh_Title, sText_DiaryEntryEleventh_Message },
+    [DIARY_ENTRY_TWELVETH] = { sText_DiaryEntryTwelveth_Title, sText_DiaryEntryTwelveth_Message },
+};
+
+static void Task_UseDiary2(u8 taskId);
+
+static void Task_UseDiary4(u8 taskId)
+{
+    if (JOY_NEW(A_BUTTON | B_BUTTON))
+    {
+        extern u8 AddItemMessageWindow(u8);
+        u32 messageWindowId = AddItemMessageWindow(4);
+        FillWindowPixelBuffer(messageWindowId, PIXEL_FILL(1));
+        StringExpandPlaceholders(gStringVar4, sText_OpenedTheDiary);
+        AddTextPrinterParameterized2(messageWindowId, 1, gStringVar4, 0xFF, NULL, TEXT_COLOR_DARK_GREY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GREY);
+        CopyWindowToVram(messageWindowId, 3);
+        gTasks[taskId].func = Task_UseDiary2;
+    }
+}
+
+static void UseDiary_Destroy(u8 taskId, bool32 copyToVram)
+{
+    s16 *data = gTasks[taskId].data;
+    if (gSaveBlock1Ptr->diaryEntriesFound >= 2)
+        RemoveScrollIndicatorArrowPair(tListMenuArrowTaskId);
+    DestroyListMenuTask(tListMenuTaskId, (u16 *)&tListMenuScrollOffset, (u16 *)&tListMenuSelectedRow);
+    Free((void *)GetWordTaskArg(taskId, tListMenuItems));
+    ClearStdWindowAndFrameToTransparent(tListMenuWindowId, copyToVram);
+    RemoveWindow(tListMenuWindowId);
+}
+
+static void Task_UseDiary3(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    s32 selected = ListMenu_ProcessInput(tListMenuTaskId);
+    if (selected == LIST_CANCEL)
+    {
+        UseDiary_Destroy(taskId, FALSE);
+        PlaySE(SE_SELECT);
+        gTasks[taskId].func = BagMenu_InitListsMenu;
+    }
+    else if (selected != LIST_NOTHING_CHOSEN)
+    {
+        UseDiary_Destroy(taskId, TRUE);
+        PlaySE(SE_SELECT);
+        DisplayItemMessage(taskId, 1, sDiaryEntries[selected].message, Task_UseDiary4);
+    }
+}
+
+static const struct ScrollArrowsTemplate sDiaryScrollArrowsTemplate = {
+    .firstArrowType = SCROLL_ARROW_UP,
+    .firstX = 188,
+    .firstY = 52,
+    .secondArrowType = SCROLL_ARROW_DOWN,
+    .secondX = 188,
+    .secondY = 108,
+    .fullyUpThreshold = -1,
+    .fullyDownThreshold = -1,
+    .tileTag = 112,
+    .palTag = 112,
+    .palNum = 0,
+};
+
+static void Task_UseDiary2(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    struct WindowTemplate windowTemplate = {};
+    struct ListMenuTemplate listMenuTemplate = {};
+    struct ListMenuItem *items;
+    u32 i;
+
+    windowTemplate.bg = 1;
+    windowTemplate.tilemapLeft = 20;
+    windowTemplate.tilemapTop = 13 - min(3, gSaveBlock1Ptr->diaryEntriesFound + 1) * 2;
+    windowTemplate.width = 7;
+    windowTemplate.height = min(3, gSaveBlock1Ptr->diaryEntriesFound + 1) * 2;
+    windowTemplate.paletteNum = 15;
+    windowTemplate.baseBlock = 0x21D;
+
+    tListMenuWindowId = AddWindow(&windowTemplate);
+    DrawStdFrameWithCustomTileAndPalette(tListMenuWindowId, TRUE, 1, 14);
+
+    listMenuTemplate.items = items = Alloc(sizeof(*items) * (gSaveBlock1Ptr->diaryEntriesFound + 1));
+    SetWordTaskArg(taskId, tListMenuItems, (uintptr_t)items);
+    for (i = 0; i < gSaveBlock1Ptr->diaryEntriesFound; i++)
+    {
+        u32 index = gSaveBlock1Ptr->diaryEntriesOrder[gSaveBlock1Ptr->diaryEntriesFound - i - 1];
+        items[i].name = sDiaryEntries[index].title;
+        items[i].id = index;
+    }
+    items[i].name = gText_Cancel;
+    items[i].id = LIST_CANCEL;
+    listMenuTemplate.moveCursorFunc = ListMenuDefaultCursorMoveFunc;
+    listMenuTemplate.totalItems = gSaveBlock1Ptr->diaryEntriesFound + 1;
+    listMenuTemplate.maxShowed = 3;
+    listMenuTemplate.windowId = tListMenuWindowId;
+    listMenuTemplate.item_X = 8;
+    listMenuTemplate.cursor_X = 0;
+    listMenuTemplate.upText_Y = 1;
+    listMenuTemplate.cursorPal = TEXT_COLOR_DARK_GREY;
+    listMenuTemplate.fillValue = TEXT_COLOR_WHITE;
+    listMenuTemplate.cursorShadowPal = TEXT_COLOR_LIGHT_GREY;
+    listMenuTemplate.lettersSpacing = 1;
+    listMenuTemplate.itemVerticalPadding = 0;
+    listMenuTemplate.scrollMultiple = LIST_NO_MULTIPLE_SCROLL;
+    listMenuTemplate.fontId = 1;
+    listMenuTemplate.cursorKind = 0;
+    tListMenuTaskId = ListMenuInit(&listMenuTemplate, tListMenuScrollOffset, tListMenuSelectedRow);
+    if (gSaveBlock1Ptr->diaryEntriesFound >= 2)
+        tListMenuArrowTaskId = AddScrollIndicatorArrowPair(&sDiaryScrollArrowsTemplate, NULL);
+
+    gTasks[taskId].func = Task_UseDiary3;
+}
+
+static void Task_UseDiary1(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    if (InBattlePyramid())
+        DisplayItemMessageInBattlePyramid(taskId, gText_DadsAdvice, Task_CloseBattlePyramidBagMessage);
+    else if (tUsingRegisteredKeyItem)
+        DisplayItemMessageOnField(taskId, gText_DadsAdvice, Task_CloseCantUseKeyItemMessage);
+    else
+        DisplayItemMessage(taskId, 1, sText_OpenedTheDiary, Task_UseDiary2);
+}
+
+void ItemUseOutOfBattle_Diary(u8 taskId)
+{
+    gTasks[taskId].func = Task_UseDiary1;
+}
+
+#undef tListMenuWindowId
+#undef tListMenuTaskId
+#undef tListMenuArrowTaskId
+#undef tListMenuItems
+#undef tListMenuScrollOffset
+#undef tListMenuSelectedRow
 
 #undef tUsingRegisteredKeyItem

@@ -643,5 +643,5 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_LAB_KEY] = {gItemIcon_CardKey, gItemIconPalette_CardKey},
     //MAGM8 Items
     [ITEM_POKEPRIMER]  = {gItemIcon_Pokeprimer, gItemIconPalette_Pokeprimer},
-
+    [ITEM_DIARY] = {gItemIcon_Pokeprimer, gItemIconPalette_Pokeprimer},
 };

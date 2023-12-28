@@ -18,6 +18,7 @@
 #include "constants/contest.h"
 #include "constants/daycare.h"
 #include "constants/decorations.h"
+#include "constants/diary.h"
 #include "constants/easy_chat.h"
 #include "constants/event_objects.h"
 #include "constants/event_object_movement.h"

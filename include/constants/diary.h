@@ -1,0 +1,18 @@
+#ifndef GUARD_CONSTANTS_DIARY
+#define GUARD_CONSTANTS_DIARY
+
+#define DIARY_ENTRY_FIRST       0
+#define DIARY_ENTRY_SECOND      1
+#define DIARY_ENTRY_THIRD       2
+#define DIARY_ENTRY_FOURTH      3
+#define DIARY_ENTRY_FIFTH       4
+#define DIARY_ENTRY_SIXTH       5
+#define DIARY_ENTRY_SEVENTH     6
+#define DIARY_ENTRY_EIGHTH      7
+#define DIARY_ENTRY_NINTH       8
+#define DIARY_ENTRY_TENTH       9
+#define DIARY_ENTRY_ELEVENTH    10
+#define DIARY_ENTRY_TWELVETH    11
+#define NUM_DIARY_ENTRIES       12
+
+#endif
