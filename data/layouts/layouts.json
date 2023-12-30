@@ -6100,6 +6100,16 @@
       "secondary_tileset": "gTileset_BlackForesstPreInfectionSecondary",
       "border_filepath": "data/layouts/MAGM8PreInfectionLostWoods/border.bin",
       "blockdata_filepath": "data/layouts/MAGM8PreInfectionLostWoods/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGM8EXTENDED_FOREST",
+      "name": "MAGM8ExtendedForest_Layout",
+      "width": 96,
+      "height": 64,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/MAGM8ExtendedForest/border.bin",
+      "blockdata_filepath": "data/layouts/MAGM8ExtendedForest/map.bin"
     }
   ]
 }
