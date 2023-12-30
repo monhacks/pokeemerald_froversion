@@ -29,6 +29,8 @@ const u8 gWeatherBubbleTiles[] = INCBIN_U8("graphics/weather/bubble.4bpp");
 const u8 gWeatherAshTiles[] = INCBIN_U8("graphics/weather/ash.4bpp");
 const u8 gWeatherRainTiles[] = INCBIN_U8("graphics/weather/rain.4bpp");
 const u8 gWeatherSandstormTiles[] = INCBIN_U8("graphics/weather/sandstorm.4bpp");
+const u8 gWeatherParticle1Tiles[] = INCBIN_U8("graphics/weather/particle0.4bpp");
+const u8 gWeatherParticle2Tiles[] = INCBIN_U8("graphics/weather/particle1.4bpp");
 
 const struct SpritePalette sSpritePalette_Weather0 = {gUnknown_083970E8, 0x1201};
 const struct SpritePalette sCloudsSpritePalette = {gCloudsWeatherPalette, 0x1207};
@@ -902,7 +904,7 @@ static const struct SpriteTemplate sSnowflakeSpriteTemplate =
 
 static bool8 CreateSnowflakeSprite(void)
 {
-    u8 spriteId = CreateSpriteAtEnd(&sSnowflakeSpriteTemplate, 0, 0, 78);
+    u8 spriteId = CreateSpriteAtEnd(&sSnowflakeSpriteTemplate, 255, 255, 78);
     if (spriteId == MAX_SPRITES)
         return FALSE;
 
@@ -983,6 +985,235 @@ static void UpdateSnowflakeSprite(struct Sprite *sprite)
 #undef tWaveDelta
 #undef tWaveIndex
 #undef tSnowflakeId
+#undef tFallCounter
+#undef tFallDuration
+#undef tDeltaY2
+
+
+//------------------------------------------------------------------------------
+// Particle
+//------------------------------------------------------------------------------
+
+static void UpdateParticleSprite(struct Sprite *);
+static bool8 UpdateVisibleParticleSprites(void);
+static bool8 CreateParticleSprite(void);
+static bool8 DestroyParticleSprite(void);
+static void InitParticleSpriteMovement(struct Sprite *);
+
+void Particle_InitVars(void)
+{
+    gWeatherPtr->initStep = 0;
+    gWeatherPtr->weatherGfxLoaded = FALSE;
+    gWeatherPtr->gammaTargetIndex = 3;
+    gWeatherPtr->gammaStepDelay = 20;
+    gWeatherPtr->targetParticleSpriteCount = 16;
+    gWeatherPtr->snowflakeVisibleCounter = 0;
+}
+
+void Particle_InitAll(void)
+{
+    u16 i;
+
+    Particle_InitVars();
+    while (gWeatherPtr->weatherGfxLoaded == FALSE)
+    {
+        Particle_Main();
+        for (i = 0; i < gWeatherPtr->snowflakeSpriteCount; i++)
+            UpdateParticleSprite(gWeatherPtr->sprites.s1.snowflakeSprites[i]);
+    }
+}
+
+void Particle_Main(void)
+{
+    if (gWeatherPtr->initStep == 0 && !UpdateVisibleParticleSprites())
+    {
+        gWeatherPtr->weatherGfxLoaded = TRUE;
+        gWeatherPtr->initStep++;
+    }
+}
+
+bool8 Particle_Finish(void)
+{
+    switch (gWeatherPtr->finishStep)
+    {
+    case 0:
+        gWeatherPtr->targetParticleSpriteCount = 0;
+        gWeatherPtr->snowflakeVisibleCounter = 0;
+        gWeatherPtr->finishStep++;
+        // fall through
+    case 1:
+        if (!UpdateVisibleParticleSprites())
+        {
+            gWeatherPtr->finishStep++;
+            return FALSE;
+        }
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+static bool8 UpdateVisibleParticleSprites(void)
+{
+    if (gWeatherPtr->snowflakeSpriteCount == gWeatherPtr->targetParticleSpriteCount)
+        return FALSE;
+
+    if (++gWeatherPtr->snowflakeVisibleCounter > 36)
+    {
+        gWeatherPtr->snowflakeVisibleCounter = 0;
+        if (gWeatherPtr->snowflakeSpriteCount < gWeatherPtr->targetParticleSpriteCount)
+            CreateParticleSprite();
+        else
+            DestroyParticleSprite();
+    }
+
+    return gWeatherPtr->snowflakeSpriteCount != gWeatherPtr->targetParticleSpriteCount;
+}
+
+static const struct OamData sParticleSpriteOamData =
+{
+    .y = 0,
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .mosaic = 0,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(8x8),
+    .x = 0,
+    .matrixNum = 0,
+    .size = SPRITE_SIZE(8x8),
+    .tileNum = 0,
+    .priority = 1,
+    .paletteNum = 0,
+    .affineParam = 0,
+};
+
+static const struct SpriteFrameImage sParticleSpriteImages[] =
+{
+    {gWeatherParticle1Tiles, sizeof(gWeatherParticle1Tiles)},
+    {gWeatherParticle2Tiles, sizeof(gWeatherParticle2Tiles)},
+};
+
+static const union AnimCmd sParticleAnimCmd0[] =
+{
+    ANIMCMD_FRAME(0, 16),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sParticleAnimCmd1[] =
+{
+    ANIMCMD_FRAME(1, 16),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sParticleAnimCmds[] =
+{
+    sParticleAnimCmd0,
+    sParticleAnimCmd1,
+};
+
+static const struct SpriteTemplate sParticleSpriteTemplate =
+{
+    .tileTag = 0xFFFF,
+    .paletteTag = 0x1200,
+    .oam = &sParticleSpriteOamData,
+    .anims = sParticleAnimCmds,
+    .images = sParticleSpriteImages,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateParticleSprite,
+};
+
+#define tPosY         data[0]
+#define tDeltaY       data[1]
+#define tWaveDelta    data[2]
+#define tWaveIndex    data[3]
+#define tParticleId  data[4]
+#define tFallCounter  data[5]
+#define tFallDuration data[6]
+#define tDeltaY2      data[7]
+
+static bool8 CreateParticleSprite(void)
+{
+    u8 spriteId = CreateSpriteAtEnd(&sParticleSpriteTemplate, 255, 255, 78);
+    if (spriteId == MAX_SPRITES)
+        return FALSE;
+
+    gSprites[spriteId].tParticleId = gWeatherPtr->snowflakeSpriteCount;
+    InitParticleSpriteMovement(&gSprites[spriteId]);
+    gSprites[spriteId].coordOffsetEnabled = TRUE;
+    gWeatherPtr->sprites.s1.snowflakeSprites[gWeatherPtr->snowflakeSpriteCount++] = &gSprites[spriteId];
+    return TRUE;
+}
+
+static bool8 DestroyParticleSprite(void)
+{
+    if (gWeatherPtr->snowflakeSpriteCount)
+    {
+        DestroySprite(gWeatherPtr->sprites.s1.snowflakeSprites[--gWeatherPtr->snowflakeSpriteCount]);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+static void InitParticleSpriteMovement(struct Sprite *sprite)
+{
+    u16 rand;
+    u16 x = ((sprite->tParticleId * 5) & 7) * 30 + (Random() % 30);
+
+    sprite->pos1.y = -3 - (gSpriteCoordOffsetY + sprite->centerToCornerVecY);
+    sprite->pos1.x = x - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
+    sprite->tPosY = sprite->pos1.y * 128;
+    sprite->pos2.x = 0;
+    rand = Random();
+    sprite->tDeltaY = (rand & 3) * 5 + 64;
+    sprite->tDeltaY2 = sprite->tDeltaY;
+    StartSpriteAnim(sprite, (rand & 1) ? 0 : 1);
+    sprite->tWaveIndex = 0;
+    sprite->tWaveDelta = ((rand & 3) == 0) ? 2 : 1;
+    sprite->tFallDuration = (rand & 0x1F) + 210;
+    sprite->tFallCounter = 0;
+}
+
+static void WaitParticleSprite(struct Sprite *sprite)
+{
+    if (gWeatherPtr->unknown_6E2 > 18)
+    {
+        sprite->invisible = FALSE;
+        sprite->callback = UpdateParticleSprite;
+        sprite->pos1.y = 250 - (gSpriteCoordOffsetY + sprite->centerToCornerVecY);
+        sprite->tPosY = sprite->pos1.y * 128;
+        gWeatherPtr->unknown_6E2 = 0;
+    }
+}
+
+static void UpdateParticleSprite(struct Sprite *sprite)
+{
+    s16 x;
+    s16 y;
+
+    sprite->tPosY -= sprite->tDeltaY;
+    sprite->pos1.y = sprite->tPosY >> 7;
+    sprite->tWaveIndex += sprite->tWaveDelta;
+    sprite->tWaveIndex &= 0xFF;
+    sprite->pos2.x = gSineTable[sprite->tWaveIndex] / 64;
+
+    x = (sprite->pos1.x + sprite->centerToCornerVecX + gSpriteCoordOffsetX) & 0x1FF;
+    if (x & 0x100)
+        x |= -0x100;
+
+    if (x < -3)
+        sprite->pos1.x = 242 - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
+    else if (x > 242)
+        sprite->pos1.x = -3 - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
+
+    
+}
+
+#undef tPosY
+#undef tDeltaY
+#undef tWaveDelta
+#undef tWaveIndex
+#undef tParticleId
 #undef tFallCounter
 #undef tFallDuration
 #undef tDeltaY2
@@ -2547,6 +2778,7 @@ static u8 TranslateWeatherNum(u8 weather)
     case WEATHER_ABNORMAL:           return WEATHER_ABNORMAL;
     case WEATHER_ROUTE119_CYCLE:     return sWeatherCycleRoute119[gSaveBlock1Ptr->weatherCycleStage];
     case WEATHER_ROUTE123_CYCLE:     return sWeatherCycleRoute123[gSaveBlock1Ptr->weatherCycleStage];
+    case WEATHER_PARTICLE:           return WEATHER_PARTICLE;
     default:                         return WEATHER_NONE;
     }
 }
