@@ -1292,3 +1292,14 @@ gTileset_BlackForestPreInfection::
 	.4byte gMetatiles_BlackForestPreInfection
 	.4byte gMetatileAttributes_BlackForestPreInfection
 	.4byte NULL @ animation callback
+
+	.align 2
+gTileset_BlackForesstPreInfectionSecondary::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_BlackForesstPreInfectionSecondary
+	.4byte gTilesetPalettes_BlackForesstPreInfectionSecondary
+	.4byte gMetatiles_BlackForesstPreInfectionSecondary
+	.4byte gMetatileAttributes_BlackForesstPreInfectionSecondary
+	.4byte NULL @ animation callback

@@ -6066,8 +6066,8 @@
       "name": "MAGM8ForestTown_Layout",
       "width": 45,
       "height": 37,
-      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
-      "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
+      "primary_tileset": "gTileset_BlackForestPreInfection",
+      "secondary_tileset": "gTileset_BlackForesstPreInfectionSecondary",
       "border_filepath": "data/layouts/MAGM8ForestTown/border.bin",
       "blockdata_filepath": "data/layouts/MAGM8ForestTown/map.bin"
     },
@@ -6090,6 +6090,16 @@
       "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
       "border_filepath": "data/layouts/MAGM8BlackForestPreInfection/border.bin",
       "blockdata_filepath": "data/layouts/MAGM8BlackForestPreInfection/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGM8PRE_INFECTION_LOST_WOODS",
+      "name": "MAGM8PreInfectionLostWoods_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_BlackForestPreInfection",
+      "secondary_tileset": "gTileset_BlackForesstPreInfectionSecondary",
+      "border_filepath": "data/layouts/MAGM8PreInfectionLostWoods/border.bin",
+      "blockdata_filepath": "data/layouts/MAGM8PreInfectionLostWoods/map.bin"
     }
   ]
 }

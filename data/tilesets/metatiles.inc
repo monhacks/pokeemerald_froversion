@@ -854,3 +854,11 @@ gMetatiles_BlackForestPreInfection::
 	.align 1
 gMetatileAttributes_BlackForestPreInfection::
 	.incbin "data/tilesets/primary/black_forest_pre_infection/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_BlackForesstPreInfectionSecondary::
+	.incbin "data/tilesets/secondary/black_foresst_pre_infection_secondary/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_BlackForesstPreInfectionSecondary::
+	.incbin "data/tilesets/secondary/black_foresst_pre_infection_secondary/metatile_attributes.bin"

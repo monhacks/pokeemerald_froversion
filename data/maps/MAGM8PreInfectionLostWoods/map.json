@@ -1,0 +1,97 @@
+{
+  "id": "MAP_MAGM8PRE_INFECTION_LOST_WOODS",
+  "name": "MAGM8PreInfectionLostWoods",
+  "layout": "LAYOUT_MAGM8PRE_INFECTION_LOST_WOODS",
+  "music": "MUS_FV_MAGM8_FOREST",
+  "region_map_section": "MAPSEC_FORTREE_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 17,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8FOREST_TOWN",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 17,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8FOREST_TOWN",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 17,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8FOREST_TOWN",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 22,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8PRE_INFECTION_LOST_WOODS",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 23,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8PRE_INFECTION_LOST_WOODS",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 28,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8PRE_INFECTION_LOST_WOODS",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 28,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8PRE_INFECTION_LOST_WOODS",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 28,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8PRE_INFECTION_LOST_WOODS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8PRE_INFECTION_LOST_WOODS",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 22,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8PRE_INFECTION_LOST_WOODS",
+      "dest_warp_id": "3"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}
