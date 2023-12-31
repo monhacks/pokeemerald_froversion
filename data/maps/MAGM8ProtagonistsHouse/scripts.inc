@@ -72,27 +72,41 @@ MAGM8ProtagonistsHouse_EventScript_ToDoListGoToTownForMedicine:
 		goto MAGM8ProtagonistsHouse_EventScript_ShowToDoList
 
 MAGM8ProtagonistsHouse_EventScript_MakeSoup::
-	lockall	
-		checkitem ITEM_TINY_MUSHROOM, 1
-		compare VAR_RESULT, FALSE
-		goto_if_eq MAGM8ProtagonistsHouse_EventScript_MissingIngredientToMakeSoup
-		msgbox MAGM8ProtagonistsHouse_Text_PrepareSoup, MSGBOX_DEFAULT
-		playse SE_M_CUT
-		waitse
-		playse SE_M_HARDEN
-		waitse
-		playse SE_M_CUT
-		waitse
-		msgbox MAGM8ProtagonistsHouse_Text_SoupReady, MSGBOX_DEFAULT
-		applymovement OBJ_EVENT_ID_PLAYER, MAGM8ProtagonistsHouse_Movement_MoveToTable
-		waitmovement OBJ_EVENT_ID_PLAYER
-		playse SE_M_BITE
-		waitse
-		playse SE_M_BITE
-		waitse
-		msgbox MAGM8ProtagonistsHouse_Text_PlayerFeelsSleepy, MSGBOX_DEFAULT
-		removeitem ITEM_TINY_MUSHROOM, 1
-		setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
+	lockall
+			goto_if_set FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY, MAGM8ProtagonistsHouse_EventScript_AlreadyMadeSoup
+
+			msgbox MAGM8ProtagonistsHouse_Text_WouldYouLikeToMakeSoup, MSGBOX_YESNO
+				switch VAR_RESULT
+				case NO, MAGM8ProtagonistsHouse_EventScript_WouldYouLikeToMakeSoupEnd
+				case YES, MAGM8ProtagonistsHouse_EventScriptWouldYouLikeToMakeSoupYes
+				case NO, MAGM8ProtagonistsHouse_EventScript_WouldYouLikeToMakeSoupEnd
+MAGM8ProtagonistsHouse_EventScriptWouldYouLikeToMakeSoupYes:
+			checkitem ITEM_TINY_MUSHROOM, 1
+			compare VAR_RESULT, FALSE
+			goto_if_eq MAGM8ProtagonistsHouse_EventScript_MissingIngredientToMakeSoup
+			msgbox MAGM8ProtagonistsHouse_Text_PrepareSoup, MSGBOX_DEFAULT
+			playse SE_M_CUT
+			waitse
+			playse SE_M_HARDEN
+			waitse
+			playse SE_M_CUT
+			waitse
+			msgbox MAGM8ProtagonistsHouse_Text_SoupReady, MSGBOX_DEFAULT
+			applymovement OBJ_EVENT_ID_PLAYER, MAGM8ProtagonistsHouse_Movement_MoveToTable
+			waitmovement OBJ_EVENT_ID_PLAYER
+			playse SE_M_BITE
+			waitse
+			playse SE_M_BITE
+			waitse
+			msgbox MAGM8ProtagonistsHouse_Text_PlayerFeelsSleepy, MSGBOX_DEFAULT
+			removeitem ITEM_TINY_MUSHROOM, 1
+			setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
+MAGM8ProtagonistsHouse_EventScript_WouldYouLikeToMakeSoupEnd:
+	releaseall
+end
+
+MAGM8ProtagonistsHouse_EventScript_AlreadyMadeSoup:
+	msgbox MAGM8ProtagonistsHouse_Text_AlreadyMadeSoup, MSGBOX_DEFAULT
 	releaseall
 end
 
@@ -103,7 +117,7 @@ end
 
 MAGM8ProtagonistsHouse_EventScript_SickPokemon::
 	lockall
-	goto_if_set FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN, MAGM8ProtagonistsHouse_EventScript_SickPokemonEnd
+	goto_if_set FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN, MAGM8ProtagonistsHouse_EventScript_SickPokemonAlreadyGivenMedicine
 	msgbox MAGM8ProtagonistsHouse_Text_PokemonIsSick, MSGBOX_NPC
 	msgbox MAGM8ProtagonistsHouse_Text_WouldYouLikeToGiveMedicineToSickPokemon, MSGBOX_YESNO
 	switch VAR_RESULT
@@ -117,6 +131,10 @@ MAGM8ProtagonistsHouse_EventScript_NoMedicineToGiveSickPokemon:
 MAGM8ProtagonistsHouse_EventScript_SickPokemonEnd:
 	releaseall
 end
+MAGM8ProtagonistsHouse_EventScript_SickPokemonAlreadyGivenMedicine:
+	msgbox MAGM8ProtagonistsHouse_Text_SickPokemonAlreadyGivenMedicine, MSGBOX_DEFAULT
+	releaseall
+end
 MAGM8ProtagonistsHouse_EventScript_SickPokemonHeal:
 	checkitem ITEM_MAGM8_HEAL_POWDER, 1
 	compare VAR_RESULT, FALSE
@@ -125,6 +143,7 @@ MAGM8ProtagonistsHouse_EventScript_SickPokemonHeal:
 	playse SE_PIN
 	waitse
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
+	removeitem ITEM_MAGM8_HEAL_POWDER, 1
 release
 end
 
@@ -161,14 +180,30 @@ end
 MAGM8ProtagonistsHouse_EventScript_HaventEatenYet:
 	msgbox MAGM8ProtagonistsHouse_Text_HaventEatenYet, MSGBOX_DEFAULT
 	releaseall
-	end
+end
 
 MAGM8ProtagonistsHouse_EventScript_HaventHealedSickPokemonYet:
 	msgbox MAGM8ProtagonistsHouse_Text_HaventHealedSickPokemonYet, MSGBOX_DEFAULT
 	releaseall
-	end
+end
 
+MAGM8ProtagonistsHouse_EventScript_Fridge::
+	lockall
+		msgbox MAGM8ProtagonistsHouse_Text_Fridge, MSGBOX_DEFAULT
+	releaseall
+end
 
+MAGM8ProtagonistsHouse_EventScript_Sink::
+	lockall
+		msgbox MAGM8ProtagonistsHouse_Text_Sink, MSGBOX_DEFAULT
+	releaseall
+end
+
+MAGM8ProtagonistsHouse_EventScript_Cabinets::
+	lockall
+		msgbox MAGM8ProtagonistsHouse_Text_Cabinets, MSGBOX_DEFAULT
+	releaseall
+end
 
 MAGM8ProtagonistsHouse_Movement_MoveToTable:	
 	walk_right	
@@ -211,12 +246,12 @@ MAGM8ProtagonistsHouse_Text_SoupReady:
 
 MAGM8ProtagonistsHouse_Text_PlayerFeelsSleepy:
 	.string "The soup is all gone.\p"
-	.string "Dads advice... the best nights\n"
+	.string "Dads advice... the best nights sleep\n"
 	.string "is always had after a meal.$"
 
 MAGM8ProtagonistsHouse_Text_CantMakeSoupWithoutMushroom:
 	.string "It isn't possible to make your\n"
-	.string "favorite soup without a big\l"
+	.string "favorite soup without a tiny\l"
 	.string "mushroom.$"
 
 MAGM8ProtagonistsHouse_Text_PokemonIsSick:
@@ -225,7 +260,7 @@ MAGM8ProtagonistsHouse_Text_PokemonIsSick:
 
 MAGM8ProtagonistsHouse_Text_WouldYouLikeToGiveMedicineToSickPokemon:
 	.string "Would you like to give Azumarill\n"
-	.string "the Healing Powder?$"
+	.string "the medicine?$"
 
 MAGM8ProtagonistsHouse_Text_MedicineGiveSickPokemon:
 	.string "Azumarill seems grateful for the\n"
@@ -248,4 +283,39 @@ MAGM8ProtagonistsHouse_Text_HaventEatenYet:
 	.string "Rumble...\n"
 	.string "Rumble...\p"
 	.string "It's impossible to sleep on an\n"
-	.string "empty stomach.$"
+	.string "empty stomach.\p"
+	.string "Better head to the kitchen and\n"
+	.string "make your favorite soup!$"
+
+MAGM8ProtagonistsHouse_Text_WouldYouLikeToMakeSoup:
+	.string "Ingredients to make your favorite\n"
+	.string "soup are set neatly on the counter.\p"
+	.string "Would you like to make soup?$"
+
+MAGM8ProtagonistsHouse_Text_Fridge:
+	.string "The fridge seems emptier than {PLAYER}\n"
+	.string "remembers leaving it.\p"
+	.string "Azumarill's stomach ache might not be\n"
+	.string "a coincidence.$"
+
+MAGM8ProtagonistsHouse_Text_Sink:
+	.string "The sink is spotless. {PLAYER}'s Mom\n"
+	.string "always said to take pride in a clean\l"
+	.string "house.$"
+
+MAGM8ProtagonistsHouse_Text_Cabinets:
+	.string "The cabinets are organized with cups,\n"
+	.string "plates, and silverware of various\l"
+	.string "sizes.$"
+
+MAGM8ProtagonistsHouse_Text_AlreadyMadeSoup:
+	.string "All the ingredients have been used to\n"
+	.string "make soup.\p"
+	.string "{PLAYER} is feeling full.$"
+
+MAGM8ProtagonistsHouse_Text_SickPokemonAlreadyGivenMedicine:
+	.string "Azumarill seems grateful for the.\n"
+	.string "medicine.\p"
+	.string "She just needs a good nights sleep\n"
+	.string "for it to take effect.$"
+

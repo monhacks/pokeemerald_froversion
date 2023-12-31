@@ -141,11 +141,16 @@ EventScript_IsBadMushroom:: @ 8271D92
 	goto_if_set FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU, EventScript_IsBadMushroom_CheckInfectionState
 	releaseall	
 end
-EventScript_BadMushroomDiceRoll:	
+EventScript_BadMushroomDiceRoll:
+	goto_if_unset FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU, EventScript_IsBadMushroom_FirstBattleGuarentee
 	msgbox Text_BadMushroom, MSGBOX_DEFAULT
 		random 10
 	switch VAR_RESULT
 		case 5, EventScript_BlackForestWildPokemonEncounter
+		case 3, EventScript_BlackForestWildPokemonEncounter
+		case 1, EventScript_BlackForestWildPokemonEncounter
+		case 7, EventScript_BlackForestWildPokemonEncounter
+		case 9, EventScript_BlackForestWildPokemonEncounter
 	releaseall
 end
 EventScript_IsBadMushroom_PreInfection:
@@ -165,6 +170,10 @@ EventScript_IsBadMushroom_AlreadyPickedMushroom:
 	releaseall
 end
 
+EventScript_IsBadMushroom_FirstBattleGuarentee:
+	msgbox Text_ItLooksLikeSomethingIsHidingInTheMushroom, MSGBOX_DEFAULT
+	goto Eventscript_SetWildBattleEscarataco
+
 EventScript_BlackForestWildPokemonEncounter:
 		random 5
 	switch VAR_RESULT
@@ -183,16 +192,21 @@ releaseall
 end
 
 Eventscript_SetWildBattleEscarataco:
-	//setwildbattle SPECIES_ESCARATACO, 50, ITEM_NONE
-	setwildbattle SPECIES_PARAS, 50, ITEM_NONE
-dowildbattle
-releaseall
+		//setwildbattle SPECIES_ESCARATACO, 50, ITEM_NONE
+		setwildbattle SPECIES_PARAS, 50, ITEM_NONE
+	dowildbattle
+	goto_if_unset FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU, EventScript_IsBadMushroom_AfterFirstBattle
+	releaseall
+	end
+EventScript_IsBadMushroom_AfterFirstBattle:
+	msgbox Text_LooksLikePokemonLikeToHideInMushrooms, MSGBOX_DEFAULT
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU
+	releaseall
 end
-
 Eventscript_SetWildBattleShedinja:
 	setwildbattle SPECIES_SHEDINJA, 50, ITEM_NONE
-dowildbattle
-releaseall
+	dowildbattle
+	releaseall
 end
 
 Eventscript_SetWildBattleScyther:
@@ -294,3 +308,12 @@ Text_AlreadyPickedMushroom:
 	.string "Dad's advice...\p"
 	.string "Never take more than you need.$"
 
+Text_ItLooksLikeSomethingIsHidingInTheMushroom:
+	.string "Wait!\p"
+	.string "It looks like something is hiding in\n"
+	.string "the mushroom!$"
+
+Text_LooksLikePokemonLikeToHideInMushrooms:
+	.string "It seems these mushrooms are now\n"
+	.string "large enough to hide wild Pokémon.\p"
+	.string "Best to proceed with caution.$"
