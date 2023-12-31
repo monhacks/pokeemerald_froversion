@@ -7980,5 +7980,19 @@ const struct Item gItems[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Diary,
+    },
+
+    [ITEM_MAGM8_HEAL_POWDER] =
+    {
+        .name = _("Heal Powder"),
+        .itemId = ITEM_HEAL_POWDER,
+        .price = 450,
+        .description = sHealPowderDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .battleUsage = ITEM_B_USE_MEDICINE,
+        .battleUseFunc = ItemUseInBattle_Medicine,
+        .holdEffect = HOLD_EFFECT_CURE_STATUS,
     }
 };

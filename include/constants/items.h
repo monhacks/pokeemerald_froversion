@@ -735,9 +735,10 @@
 //MAGM8 Items
 #define ITEM_POKEPRIMER 627
 #define ITEM_DIARY 628
+#define ITEM_MAGM8_HEAL_POWDER 629
 
 
-#define ITEMS_COUNT 629
+#define ITEMS_COUNT 630
 
 
 

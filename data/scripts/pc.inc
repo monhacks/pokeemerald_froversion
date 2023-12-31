@@ -150,6 +150,7 @@ EventScript_BadMushroomDiceRoll:
 end
 EventScript_IsBadMushroom_PreInfection:
 	msgbox Text_PickMushroom, MSGBOX_DEFAULT
+	giveitem ITEM_TINY_MUSHROOM, 1
 	setflag FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU
 	releaseall
 end

@@ -1303,7 +1303,7 @@
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_FLOBRA              0x4E7 // Hides "squirtle" after starter choice made
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_RASCALOOT           0x4E8 // Hides "bulbasaur" after starter choice made
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU              0x4E9 // Hides Tilyou in his lab before you go into wild
-#define FLAG_HIDE_NALLS_RESIDENCE_1F_ISIAH                          0x4EA // Hides Isiah in his house until intro sequence is done
+#define FLAG_HIDE_NALLS_RESIDENCE_1F_ISIAH                          0x4EA // Hides Isiah in his house until intro sequence is done //MAGM8: Hides Azumarill in protags house
 #define FLAG_0x4EB                                                  0x4EB // Froversion: FLAG_HIDE_MOM Hides Fros Mom for intro sequence // MAGM8: FLAG_TO_DO_LIST_CHECKED checks for To do list being checked 
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN                0x4EC // Hides John in Tilyous Lab
 #define FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY               0x4ED // FROVERSION: Hides Bobby in Tilyous Lab // MAGEE VERSION: Hides Protagonists Secretary

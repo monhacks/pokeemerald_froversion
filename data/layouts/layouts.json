@@ -6074,7 +6074,7 @@
     {
       "id": "LAYOUT_MAGM8PROTAGONISTS_HOUSE",
       "name": "MAGM8ProtagonistsHouse_Layout",
-      "width": 11,
+      "width": 15,
       "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
