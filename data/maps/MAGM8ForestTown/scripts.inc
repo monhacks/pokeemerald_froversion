@@ -30,6 +30,13 @@ MAGM8ForestTown_EventScript_PokemartClosed::
 	release
 end
 
+MAGM8ForestTown_EventScript_HouseSign::
+	lockall
+	msgbox MAGM8ForestTown_Text_ProfessorGooseberrysHouse, MSGBOX_SIGN
+	releaseall
+end
+
+
 MAGM8ForestTown_Text_PokemartClosed:
 	.string "The door is locked, but there is a\n"
 	.string "note.\p"
@@ -46,5 +53,7 @@ MAGM8ForestTown_Text_PokemartClosed:
 MAGM8ForestTown_Text_DoorLocked:
 	.string "The door is locked.$"
 
-
-
+MAGM8ForestTown_Text_ProfessorGooseberrysHouse:
+	.string "Home of Professor Gooseberry\p"
+	.string "If I'm not home, I'm out routing\n"
+	.string "the Lost Woods.$"

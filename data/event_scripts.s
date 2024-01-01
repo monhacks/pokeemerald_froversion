@@ -845,7 +845,7 @@ Common_EventScript_PlayerHandedOverTheItem:: @ 82723E4
 @ The below and surf.inc could be split into some text/notices.inc
 gText_PokemartSign:: @ 8272B6A
 	.string "“Selected items for your convenience!”\n"
-	.string "Pokémon MART$"
+	.string "Pokémon Mart$"
 
 gText_PokemonCenterSign:: @ 8272B9E
 	.string "“Rejuvenate your tired partners!”\n"
@@ -1407,3 +1407,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/MAGM8PreInfectionLostWoods/scripts.inc"
 
 	.include "data/maps/MAGM8ExtendedForest/scripts.inc"
+
+	.include "data/maps/MAGM8ForestTownPostInfection/scripts.inc"

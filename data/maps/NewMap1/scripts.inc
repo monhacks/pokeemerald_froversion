@@ -19,12 +19,18 @@ NewMap1_EventScript_SetDynamicWarpForTown::
 
 NewMap1_EventScript_SetDynamicWarpMageeVersion:
 	setdynamicwarp MAP_MAGM8FOREST_TOWN, 255, 24, 9
-	setvar VAR_TEMP_0, 1
+	compare VAR_ROUTE101_STATE, 1
+	goto_if_ge NewMap1_EventScript_SetDynamicWarpMageeVersionPostInfection
+	setvar VAR_TEMP_1, 1
+return
+
+NewMap1_EventScript_SetDynamicWarpMageeVersionPostInfection:
+	setdynamicwarp MAP_MAGM8FOREST_TOWN_POST_INFECTION, 255, 24, 9
+	setvar VAR_TEMP_1, 1
 return
 
 NewMap1_EventScript_SetDynamicWarpFroVersion:
 	setdynamicwarp MAP_NIAGARA_VILLAGE, 255, 24, 9
-	setvar VAR_TEMP_0, 1
 return
 
 NewMap1_EventScripts_SetHouseWarp::

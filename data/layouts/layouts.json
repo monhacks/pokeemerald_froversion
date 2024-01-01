@@ -6110,6 +6110,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/MAGM8ExtendedForest/border.bin",
       "blockdata_filepath": "data/layouts/MAGM8ExtendedForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGM8FOREST_TOWN_POST_INFECTION",
+      "name": "MAGM8ForestTownPostInfection_Layout",
+      "width": 45,
+      "height": 37,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
+      "border_filepath": "data/layouts/MAGM8ForestTownPostInfection/border.bin",
+      "blockdata_filepath": "data/layouts/MAGM8ForestTownPostInfection/map.bin"
     }
   ]
 }
