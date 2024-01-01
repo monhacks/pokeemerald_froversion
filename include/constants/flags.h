@@ -1299,9 +1299,9 @@
 #define FLAG_HIDE_TILYOUS_LAB_ISIAH                                 0x4E3 // Hides Isiah In Tilyous Lab
 #define FLAG_SPOKE_TO_FIRST_MESSENGER                               0x4E4 // Used to stop intro dialouge from triggering for messenger battles
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS                        0x4E5 // Hides all soldiers after team maga battle
-#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS            0x4E6 // Hides "charmander" until after starter choice made
-#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_FLOBRA              0x4E7 // Hides "squirtle" after starter choice made
-#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_RASCALOOT           0x4E8 // Hides "bulbasaur" after starter choice made
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS            0x4E6 // Hides "charmander" until after starter choice made //MAGM8: Marks pokemon joined party
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_FLOBRA              0x4E7 // Hides "squirtle" after starter choice made //Marks ToDo List complete after both prolgue tasks and rewriting tomorrow tasks
+#define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_RASCALOOT           0x4E8 // Hides "bulbasaur" after starter choice made // MAGM8: Reminds player to rewrite todo list after completing tasks in prologue
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU              0x4E9 // Hides Tilyou in his lab before you go into wild //MAGM8: Checks for first wild pokemon battle in mushrooms
 #define FLAG_HIDE_NALLS_RESIDENCE_1F_ISIAH                          0x4EA // Hides Isiah in his house until intro sequence is done //MAGM8: Hides Azumarill in protags house
 #define FLAG_0x4EB                                                  0x4EB // Froversion: FLAG_HIDE_MOM Hides Fros Mom for intro sequence // MAGM8: FLAG_TO_DO_LIST_CHECKED checks for To do list being checked 

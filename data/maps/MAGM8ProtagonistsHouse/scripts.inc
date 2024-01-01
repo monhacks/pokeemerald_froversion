@@ -1,5 +1,7 @@
 //FLAG_0x4EB == FLAG_TO_DO_LIST_CHECKED
 .set LOCALID_SCROLLINGMENU_FIRST_TO_DO_LIST, 13
+.set LOCALID_SCROLLINGMENU_SECOND_TO_DO_LIST, 14
+
 
 MAGM8ProtagonistsHouse_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, MAGM8ProtagonistsHouse_OnLoad
@@ -38,11 +40,30 @@ MAGM8ProtagonistsHouse_EventScript_PreventPlayerFromLeavingUntilToDoListChecked:
 	release
 	end
 		MAGM8ProtagonistsHouse_EventScript_ToDoListHasBeenChecked:
+		compare VAR_ROUTE101_STATE, 1
+		goto_if_eq MAGM8ProtagonistsHouse_EventScript_PreventPlayerFromLeavingUntilPokemonJoinedParty
+	release
+	end
+
+MAGM8ProtagonistsHouse_EventScript_PreventPlayerFromLeavingUntilPokemonJoinedParty::
+	lock
+		goto_if_set FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS, MAGM8ProtagonistsHouse_EventScript_PokemonHasJoinedParty
+		msgbox MAGM8ProtagonistsHouse_Text_AzumarillIsFeelingBetter, MSGBOX_DEFAULT
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+		waitmovement OBJ_EVENT_ID_PLAYER
+	release
+	end
+MAGM8ProtagonistsHouse_EventScript_PokemonHasJoinedParty:
 	release
 	end
 		
 MAGM8ProtagonistsHouse_EventScript_ToDoList::
 	lock
+		compare VAR_ROUTE101_STATE, 1
+		goto_if_eq MAGM8ProtagonistsHouse_EventScript_ToDoListAfterSleep
+		goto_if_set FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_RASCALOOT, MAGM8ProtagonistsHouse_EventScript_ToDoListCompleteAndWrittenInForTomorrow
+		goto_if_set FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY, MAGM8ProtagonistsHouse_EventScript_ToDoListSoupAlreadyMade
+		goto_if_set FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN, MAGM8ProtagonistsHouse_EventScript_ToDoListMedicineAlreadyGiven
 		msgbox MAGM8ProtagonistsHouse_Text_ToDoList, MSGBOX_YESNO
 		switch VAR_RESULT
 		case NO, MAGM8ProtagonistsHouse_EventScript_ToDoListExit
@@ -62,19 +83,88 @@ MAGM8ProtagonistsHouse_EventScript_ShowToDoList:
 				case MULTI_B_PRESSED, MAGM8ProtagonistsHouse_EventScript_ToDoListExit
 	release
 	end
+
+MAGM8ProtagonistsHouse_EventScript_ToDoListSoupAlreadyMade:
+	goto_if_set FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN, MAGM8ProtagonistsHouse_EventScript_ToDoListComplete
+	closemessage
+			scrollingmultichoice LOCALID_SCROLLINGMENU_FIRST_TO_DO_LIST, 2, 3, 2, TRUE
+			switch VAR_RESULT
+				case 0, MAGM8ProtagonistsHouse_EventScript_TaskComplete
+				case 1, MAGM8ProtagonistsHouse_EventScript_ToDoListGoToTownForMedicine
+				case MULTI_B_PRESSED, MAGM8ProtagonistsHouse_EventScript_ToDoListExit
+	release
+	end	
+
+MAGM8ProtagonistsHouse_EventScript_ToDoListMedicineAlreadyGiven:
+	goto_if_set FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY, MAGM8ProtagonistsHouse_EventScript_ToDoListComplete
+	closemessage
+			scrollingmultichoice LOCALID_SCROLLINGMENU_FIRST_TO_DO_LIST, 2, 3, 2, TRUE
+			switch VAR_RESULT
+				case 0, MAGM8ProtagonistsHouse_EventScript_ToDoListHarvestMushrooms
+				case 1, MAGM8ProtagonistsHouse_EventScript_TaskComplete
+				case MULTI_B_PRESSED, MAGM8ProtagonistsHouse_EventScript_ToDoListExit
+	release
+	end	
+
+MAGM8ProtagonistsHouse_EventScript_ToDoListComplete:
+		msgbox MAGM8ProtagonistsHouse_Text_ToDoListcomplete, MSGBOX_DEFAULT
+		//playse SE_SOMETHING_THAT_SOUNDS_LIKE_WRITING
+		//waitse
+		setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_RASCALOOT
+	release
+	end
+
+MAGM8ProtagonistsHouse_EventScript_ToDoListCompleteAndWrittenInForTomorrow:
+		msgbox MAGM8ProtagonistsHouse_Text_TimeToGoToSleepCheckTomorrow, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8ProtagonistsHouse_EventScript_ToDoListAfterSleep:
+	msgbox MAGM8ProtagonistsHouse_Text_ToDoList, MSGBOX_YESNO
+		switch VAR_RESULT
+		case NO, MAGM8ProtagonistsHouse_EventScript_ToDoListExit
+		case YES, MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep
+		case MULTI_B_PRESSED, MAGM8ProtagonistsHouse_EventScript_ToDoListExit
+	release
+	end		
+
+MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep:
+			closemessage
+			scrollingmultichoice LOCALID_SCROLLINGMENU_SECOND_TO_DO_LIST, 2, 3, 2, TRUE
+			switch VAR_RESULT
+				case 0, MAGM8ProtagonistsHouse_EventScript_ToDoListCutDownTrees
+				case 1, MAGM8ProtagonistsHouse_EventScript_ToDoListHarvestMushrooms
+				case MULTI_B_PRESSED, MAGM8ProtagonistsHouse_EventScript_ToDoListExit
+	release
+	end
+
+
+
 MAGM8ProtagonistsHouse_EventScript_ToDoListHarvestMushrooms:
 		setflag FLAG_0x4EB
 		msgbox MAGM8ProtagonistsHouse_Text_ToDoListHarvestMushrooms, MSGBOX_DEFAULT
+		compare VAR_ROUTE101_STATE, 1
+		goto_if_eq MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep
 		goto MAGM8ProtagonistsHouse_EventScript_ShowToDoList
 MAGM8ProtagonistsHouse_EventScript_ToDoListGoToTownForMedicine:
 		setflag FLAG_0x4EB
 		msgbox MAGM8ProtagonistsHouse_Text_ToDoListGoToTownForMedicine, MSGBOX_DEFAULT
+		compare VAR_ROUTE101_STATE, 1
+		goto_if_eq MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep
 		goto MAGM8ProtagonistsHouse_EventScript_ShowToDoList
+MAGM8ProtagonistsHouse_EventScript_ToDoListCutDownTrees:
+		setflag FLAG_0x4EB
+		msgbox MAGM8ProtagonistsHouse_Text_ToDoListCutDownTrees, MSGBOX_DEFAULT
+		compare VAR_ROUTE101_STATE, 1
+		goto_if_eq MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep
+		goto MAGM8ProtagonistsHouse_EventScript_ShowToDoList
+
+
 
 MAGM8ProtagonistsHouse_EventScript_MakeSoup::
 	lockall
 			goto_if_set FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY, MAGM8ProtagonistsHouse_EventScript_AlreadyMadeSoup
-
+MAGM8ProtagonistsHouse_EventScript_MakeSoupStart:
 			msgbox MAGM8ProtagonistsHouse_Text_WouldYouLikeToMakeSoup, MSGBOX_YESNO
 				switch VAR_RESULT
 				case NO, MAGM8ProtagonistsHouse_EventScript_WouldYouLikeToMakeSoupEnd
@@ -106,7 +196,14 @@ MAGM8ProtagonistsHouse_EventScript_WouldYouLikeToMakeSoupEnd:
 end
 
 MAGM8ProtagonistsHouse_EventScript_AlreadyMadeSoup:
+	compare VAR_ROUTE101_STATE, 1
+	goto_if_eq MAGM8ProtagonistsHouse_EventScript_MakeSoupStart
 	msgbox MAGM8ProtagonistsHouse_Text_AlreadyMadeSoup, MSGBOX_DEFAULT
+	releaseall
+end
+
+MAGM8ProtagonistsHouse_EventScript_TaskComplete:
+	msgbox MAGM8ProtagonistsHouse_Text_TaskComplete, MSGBOX_DEFAULT
 	releaseall
 end
 
@@ -117,6 +214,8 @@ end
 
 MAGM8ProtagonistsHouse_EventScript_SickPokemon::
 	lockall
+	compare VAR_ROUTE101_STATE, 1
+	goto_if_eq MAGM8ProtagonistsHouse_EventScript_AzumarillIsFeelingBetter
 	goto_if_set FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN, MAGM8ProtagonistsHouse_EventScript_SickPokemonAlreadyGivenMedicine
 	msgbox MAGM8ProtagonistsHouse_Text_PokemonIsSick, MSGBOX_NPC
 	msgbox MAGM8ProtagonistsHouse_Text_WouldYouLikeToGiveMedicineToSickPokemon, MSGBOX_YESNO
@@ -140,12 +239,29 @@ MAGM8ProtagonistsHouse_EventScript_SickPokemonHeal:
 	compare VAR_RESULT, FALSE
 	goto_if_eq MAGM8ProtagonistsHouse_EventScript_NoMedicineToGiveSickPokemon
 	msgbox MAGM8ProtagonistsHouse_Text_MedicineGiveSickPokemon, MSGBOX_DEFAULT
-	playse SE_PIN
-	waitse
+	playfanfare MUS_HEAL
+	waitfanfare
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
 	removeitem ITEM_MAGM8_HEAL_POWDER, 1
 release
 end
+
+MAGM8ProtagonistsHouse_EventScript_AzumarillIsFeelingBetter:
+	msgbox MAGM8ProtagonistsHouse_Text_AzumarillIsFeelingBetterPartyJoin, MSGBOX_NPC
+	//playse SE_CAUGHT
+	//waitse
+	removeobject 1
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS
+	setflag FLAG_HIDE_NALLS_RESIDENCE_1F_ISIAH
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_SYS_POKEDEX_GET
+	givecustommon SPECIES_AZUMARILL, 50, ITEM_LEFTOVERS, ITEM_DIVE_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_SUBSTITUTE, MOVE_WATERFALL, MOVE_SING, MOVE_BODY_SLAM, 0
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox MAGM8ProtagonistsHouse_Text_AzumarillJoinedParty, MSGBOX_DEFAULT
+	waitfanfare
+release
+end
+
 
 MAGM8ProtagonistsHouse_EventScript_WouldYouLikeToSleep::
 	lockall
@@ -160,21 +276,27 @@ MAGM8ProtagonistsHouse_EventScript_WouldYouLikeToSleepEnd:
 	releaseall
 	end
 MAGM8ProtagonistsHouse_EventScriptWouldYouLikeToSleepYes:
+	compare VAR_ROUTE101_STATE, 1
+	goto_if_eq MAGM8ProtagonistsHouse_EventScript_ItsNotBedTimeYet
 	goto_if_unset FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY, MAGM8ProtagonistsHouse_EventScript_HaventEatenYet
 	goto_if_unset FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN, MAGM8ProtagonistsHouse_EventScript_HaventHealedSickPokemonYet
+	goto_if_unset FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_RASCALOOT, MAGM8ProtagonistsHouse_EventScript_DadsAdviceStartToDoListForTomorrow
 	setvar VAR_ROUTE101_STATE, 1
 	fadescreen FADE_TO_BLACK
 	playfanfare MUS_FV_GOODNIGHT
 	waitfanfare
-	removeobject 1
-	setflag FLAG_HIDE_NALLS_RESIDENCE_1F_ISIAH
+	setobjectxy 1, 6, 5
+	setobjectmovementtype 1, MOVEMENT_TYPE_FACE_RIGHT
 	special HealPlayerParty
 	setdynamicwarp MAP_NEW_MAP1, 255, 29, 32
-	setflag FLAG_SYS_POKEMON_GET
-	setflag FLAG_SYS_POKEDEX_GET
-	givecustommon SPECIES_AZUMARILL, 50, ITEM_LEFTOVERS, ITEM_DIVE_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_SUBSTITUTE, MOVE_WATERFALL, MOVE_SING, MOVE_BODY_SLAM, 0
+	clearflag FLAG_0x4EB
 	fadescreen FADE_FROM_BLACK
 	releaseall
+end
+
+MAGM8ProtagonistsHouse_EventScript_ItsNotBedTimeYet:
+	msgbox MAGM8ProtagonistsHouse_Text_ItsNotBedTimeYet, MSGBOX_DEFAULT
+releaseall
 end
 
 MAGM8ProtagonistsHouse_EventScript_HaventEatenYet:
@@ -184,6 +306,11 @@ end
 
 MAGM8ProtagonistsHouse_EventScript_HaventHealedSickPokemonYet:
 	msgbox MAGM8ProtagonistsHouse_Text_HaventHealedSickPokemonYet, MSGBOX_DEFAULT
+	releaseall
+end
+
+MAGM8ProtagonistsHouse_EventScript_DadsAdviceStartToDoListForTomorrow:
+	msgbox MAGM8ProtagonistsHouse_Text_DadsAdviceStartToDoListForTomorrow, MSGBOX_DEFAULT
 	releaseall
 end
 
@@ -319,3 +446,41 @@ MAGM8ProtagonistsHouse_Text_SickPokemonAlreadyGivenMedicine:
 	.string "She just needs a good nights sleep\n"
 	.string "for it to take effect.$"
 
+MAGM8ProtagonistsHouse_Text_DadsAdviceStartToDoListForTomorrow:
+	.string "Dads advice... always make sure you\n"
+	.string "write down tomorrows tasks in your\l"
+	.string "To Do list before bed, otherwise you\l"
+	.string "might not remember in the morning.$"
+
+MAGM8ProtagonistsHouse_Text_TaskComplete:
+	.string "{PLAYER} has completed this task and\n"
+	.string "it is crossed off the list.$"
+
+MAGM8ProtagonistsHouse_Text_ToDoListcomplete:
+	.string "{PLAYER} has completed all their tasks\n"
+	.string "for today.\p"
+	.string "Time to write tomorrows tasks and head\n"
+	.string "to bed.$"
+
+MAGM8ProtagonistsHouse_Text_TimeToGoToSleepCheckTomorrow:
+	.string "{PLAYER} has already written tomorrow's\n"
+	.string "To Do list.$"
+
+MAGM8ProtagonistsHouse_Text_AzumarillIsFeelingBetterPartyJoin:
+	.string "Azumarill is feeling better!\n"
+	.string "She is ready to join your party!$"
+
+MAGM8ProtagonistsHouse_Text_AzumarillIsFeelingBetter:
+	.string "Azumarill is feeling better! Don't\n"
+	.string "forget to bring her along!$"
+
+MAGM8ProtagonistsHouse_Text_ToDoListCutDownTrees:
+	.string "Cut down the trees blocking the\n"
+	.string "path to the northern area of the\l"
+	.string "woods.$"
+
+MAGM8ProtagonistsHouse_Text_AzumarillJoinedParty:
+	.string "Azumarill has joined your party!$"
+
+MAGM8ProtagonistsHouse_Text_ItsNotBedTimeYet:
+	.string "It is not time for bed yet!$"

@@ -886,6 +886,7 @@ static const u8 sText_12_07_1958[] =_("12/07/1958");
 static const u8 sText_12_10_1958[] =_("12/10/1958");
 static const u8 sText_12_11_1958[] =_("12/11/1958");
 static const u8 sText_12_12_1958[] =_("12/12/1958");
+static const u8 sText_CutTrees[] =_("Trees");
 
 
 
@@ -1041,8 +1042,8 @@ static const struct ListMenuItem sMAGM8FirstToDoList[] =
 
 static const struct ListMenuItem sMAGM8SecondToDoList[] =
 {
-    {sText_Mushrooms, 0}, //get mushrooms to make soup for dinner
-    {sText_Town, 1}, //go to town to get medicine for pokemon
+    {sText_CutTrees, 0}, //get mushrooms to make soup for dinner
+    {sText_Mushrooms, 1}, //go to town to get medicine for pokemon
 };
 
 static const struct ListMenuItem sMAGM8ProfessorsJournalEntries[] =
