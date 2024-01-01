@@ -171,6 +171,10 @@ EventScript_IsBadMushroom_AlreadyPickedMushroom:
 end
 
 EventScript_IsBadMushroom_FirstBattleGuarentee:
+	msgbox Text_BadMushroom, MSGBOX_DEFAULT
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox Text_ItLooksLikeSomethingIsHidingInTheMushroom, MSGBOX_DEFAULT
 	goto Eventscript_SetWildBattleEscarataco
 

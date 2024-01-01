@@ -1,6 +1,11 @@
 NewMap1_MapScripts::
 	//map_script MAP_SCRIPT_ON_LOAD, NewMap1_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NewMap1_OnFrame
 	.byte 0
+
+NewMap1_OnFrame: @ 824B218
+	map_script_2 VAR_ROUTE101_STATE, 1, NewMap1_EventScript_WhatHappened
+	.2byte 0
 
 NewMap1_OnLoad:
 	//call_if_set FLAG_MAGEE_VERSION, NewMap1_EventScript_SetDynamicWarpMageeVersion
@@ -53,6 +58,33 @@ MAGM8Forest_MainArea_Eventscripts_HouseSign::
 	msgbox MAGM8Forest_MainArea_Text_HouseSign, MSGBOX_SIGN
 	release
 end
+
+NewMap1_EventScript_WhatHappened:
+	lockall
+		playse SE_PIN
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+		waitmovement OBJ_EVENT_ID_PLAYER
+		applymovement OBJ_EVENT_ID_PLAYER, NewMap1_Movement_PlayerLooksAround
+		waitmovement OBJ_EVENT_ID_PLAYER
+		setvar VAR_ROUTE101_STATE, 2
+	releaseall
+end
+
+NewMap1_Movement_PlayerLooksAround:
+	face_left
+	face_left
+	face_left
+	face_right
+	face_right
+	face_left
+	face_down
+	face_left
+	face_left
+	face_right
+	face_right
+	face_down
+	step_end
+		
 
 MAGM8Forest_MainArea_Text_HouseSign:
 	.string "{PLAYER}'s House:\n"
