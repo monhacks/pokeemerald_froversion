@@ -145,6 +145,8 @@ EventScript_BadMushroomDiceRoll:
 	goto_if_unset FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU, EventScript_IsBadMushroom_FirstBattleGuarentee
 	msgbox Text_BadMushroom, MSGBOX_DEFAULT
 		random 10
+		compare VAR_TEMP_0, 1
+		call_if_eq EventScript_BlackForestWildPokemonEncounterForceSpinarak
 	switch VAR_RESULT
 		case 5, EventScript_BlackForestWildPokemonEncounter
 		case 3, EventScript_BlackForestWildPokemonEncounter
@@ -180,12 +182,33 @@ EventScript_IsBadMushroom_FirstBattleGuarentee:
 
 EventScript_BlackForestWildPokemonEncounter:
 		random 5
+		compare VAR_TEMP_0, 1
+		call_if_eq EventScript_BlackForestWildPokemonEncounterForceSpinarak
 	switch VAR_RESULT
-		case 0, Eventscript_SetWildBattleAriados
+		case 0, Eventscript_SetWildBattleWeedle
 		case 1, Eventscript_SetWildBattleEscarataco
 		case 2, Eventscript_SetWildBattleShedinja
 		case 3, Eventscript_SetWildBattleNinjask
 		case 4, Eventscript_SetWildBattleScyther
+		case 5, Eventscript_SetWildBattleAriados
+end
+EventScript_BlackForestWildPokemonEncounterForceSpinarak:
+	setvar VAR_RESULT, 5
+return
+
+EventScript_BlackForestForceSpinarakEnterTrigger::
+	setvar VAR_TEMP_0, 1
+	end
+
+EventScript_BlackForestForceSpinarakExitTrigger::
+	setvar VAR_TEMP_0, 0
+	end
+
+Eventscript_SetWildBattleWeedle:
+	//setwildbattle SPECIES_ARIADOS, 50, ITEM_NONE
+	setwildbattle SPECIES_WEEDLE, 50, ITEM_NONE
+dowildbattle
+releaseall
 end
 
 Eventscript_SetWildBattleAriados:

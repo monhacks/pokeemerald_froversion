@@ -72,7 +72,42 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 54,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "1",
+      "script": "EventScript_BlackForestForceSpinarakExitTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 54,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "1",
+      "script": "EventScript_BlackForestForceSpinarakExitTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 55,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EventScript_BlackForestForceSpinarakEnterTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 55,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EventScript_BlackForestForceSpinarakEnterTrigger"
+    }
   ],
   "bg_events": [
     {
