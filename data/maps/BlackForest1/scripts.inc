@@ -101,6 +101,21 @@ BlackForest1_EventScript_ProfessorsBag::
 	finddiaryentry DIARY_ENTRY_FIFTEENTH
 	finddiaryentry DIARY_ENTRY_FOURTEENTH
 	finddiaryentry DIARY_ENTRY_THIRTEENTH
+	clearflag FLAG_ITEM_ROUTE_132_PROTEIN                                 
+	clearflag FLAG_ITEM_ROUTE_133_MAX_REVIVE                              
+	clearflag FLAG_ITEM_ROUTE_134_CARBOS                                  
+	clearflag FLAG_ITEM_ROUTE_134_STAR_PIECE                              
+	clearflag FLAG_ITEM_ROUTE_114_ENERGY_POWDER                           
+	clearflag FLAG_ITEM_ROUTE_115_PP_UP                                   
+	clearflag FLAG_ITEM_ARTISAN_CAVE_B1F_HP_UP                            
+	clearflag FLAG_ITEM_ARTISAN_CAVE_1F_CARBOS                            
+	clearflag FLAG_ITEM_MAGMA_HIDEOUT_2F_2R_MAX_ELIXIR                    
+	clearflag FLAG_ITEM_MAGMA_HIDEOUT_2F_2R_FULL_RESTORE                  
+	clearflag FLAG_ITEM_MAGMA_HIDEOUT_3F_1R_NUGGET                        
+	clearflag FLAG_ITEM_MAGMA_HIDEOUT_3F_2R_PP_MAX                        
+	clearflag FLAG_ITEM_MAGMA_HIDEOUT_4F_MAX_REVIVE                       
+	clearflag FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     
+	clearflag FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL
 	release
 	end
 

@@ -47,6 +47,7 @@
 #include "union_room_chat.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
+extern const u8 EventScript_ClearDiaryFlags[];
 
 // this file's functions
 static void ClearFrontierRecord(void);
@@ -244,6 +245,8 @@ void NewGameInitData(void)
     ResetLotteryCorner();
     WarpToTruck();
     ScriptContext2_RunNewScript(EventScript_ResetAllMapFlags);
+    if (B_VERSION_MAGEE)
+        ScriptContext2_RunNewScript(EventScript_ClearDiaryFlags);
     ResetMiniGamesResults();
     InitUnionRoomChatRegisteredTexts();
     InitLilycoveLady();

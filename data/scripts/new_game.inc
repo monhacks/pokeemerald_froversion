@@ -278,3 +278,20 @@ EventScript_ResetAllMapFlags:: @ 82715DE
 	setflag FLAG_HIDE_VERDANTURF_TRADER
 	call EventScript_ResetAllBerries
 	end
+
+EventScript_ClearDiaryFlags::
+	setflag FLAG_ITEM_ROUTE_132_PROTEIN                                 
+	setflag FLAG_ITEM_ROUTE_133_MAX_REVIVE                              
+	setflag FLAG_ITEM_ROUTE_134_CARBOS                                  
+	setflag FLAG_ITEM_ROUTE_134_STAR_PIECE                              
+	setflag FLAG_ITEM_ROUTE_114_ENERGY_POWDER                           
+	setflag FLAG_ITEM_ROUTE_115_PP_UP                                   
+	setflag FLAG_ITEM_ARTISAN_CAVE_B1F_HP_UP                            
+	setflag FLAG_ITEM_ARTISAN_CAVE_1F_CARBOS                            
+	setflag FLAG_ITEM_MAGMA_HIDEOUT_2F_2R_MAX_ELIXIR                    
+	setflag FLAG_ITEM_MAGMA_HIDEOUT_2F_2R_FULL_RESTORE                  
+	setflag FLAG_ITEM_MAGMA_HIDEOUT_3F_1R_NUGGET                        
+	setflag FLAG_ITEM_MAGMA_HIDEOUT_3F_2R_PP_MAX                        
+	setflag FLAG_ITEM_MAGMA_HIDEOUT_4F_MAX_REVIVE                       
+	setflag FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     
+	setflag FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  
