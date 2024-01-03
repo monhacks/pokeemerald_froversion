@@ -86,6 +86,7 @@ BlackForest1_EventScript_WildBattleSpecialGastly:
 	msgbox BlackForest1_Text_WildGastlyDroppedThis, MSGBOX_DEFAULT
 	// FROVERSION SCRIPT giveitem ITEM_SPELLBOOK, 1
 	giveitem ITEM_POKEPRIMER, 1
+	removeobject 8
 	setflag FLAG_FOUND_CIPHER
 	release
 end

@@ -1,3 +1,12 @@
+MAGM8DiaryEntry_EventScript_DiaryEntryFirst::
+	lock
+    finddiaryentry DIARY_ENTRY_FIRST
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
 MAGM8DiaryEntry_EventScript_DiaryEntrySecond::
 	lock
     finddiaryentry DIARY_ENTRY_SECOND
@@ -7,6 +16,103 @@ MAGM8DiaryEntry_EventScript_DiaryEntrySecond::
 	release
 	end
 
+MAGM8DiaryEntry_EventScript_DiaryEntryThird::
+	lock
+    finddiaryentry DIARY_ENTRY_THIRD
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryFourth::
+	lock
+    finddiaryentry DIARY_ENTRY_FOURTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryFifth::
+	lock
+    finddiaryentry DIARY_ENTRY_FIFTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntrySixth::
+	lock
+    finddiaryentry DIARY_ENTRY_SIXTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntrySeventh::
+	lock
+    finddiaryentry DIARY_ENTRY_SEVENTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryEighth::
+	lock
+    finddiaryentry DIARY_ENTRY_EIGHTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryNinth::
+	lock
+    finddiaryentry DIARY_ENTRY_NINTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryTenth::
+	lock
+    finddiaryentry DIARY_ENTRY_TENTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryEvelenth::
+	lock
+    finddiaryentry DIARY_ENTRY_ELEVENTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryTwelveth::
+	lock
+    finddiaryentry DIARY_ENTRY_TWLEVETH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryThirteenth::
+	lock
+    finddiaryentry DIARY_ENTRY_THIRTHEENTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
 
 MAGM8DiaryEntry_Text_FoundMissingDiaryEntry:
 	.string "{PLAYER} found one of the missing pages\n"
