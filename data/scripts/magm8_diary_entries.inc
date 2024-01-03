@@ -99,7 +99,7 @@ MAGM8DiaryEntry_EventScript_DiaryEntryEvelenth::
 
 MAGM8DiaryEntry_EventScript_DiaryEntryTwelveth::
 	lock
-    finddiaryentry DIARY_ENTRY_TWLEVETH
+    finddiaryentry DIARY_ENTRY_TWELVETH
 	finditem ITEM_DIARY_ENTRY, 1
 	removeitem ITEM_DIARY_ENTRY
 	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
@@ -108,7 +108,7 @@ MAGM8DiaryEntry_EventScript_DiaryEntryTwelveth::
 
 MAGM8DiaryEntry_EventScript_DiaryEntryThirteenth::
 	lock
-    finddiaryentry DIARY_ENTRY_THIRTHEENTH
+    finddiaryentry DIARY_ENTRY_THIRTEENTH
 	finditem ITEM_DIARY_ENTRY, 1
 	removeitem ITEM_DIARY_ENTRY
 	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT

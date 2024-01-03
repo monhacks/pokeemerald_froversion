@@ -2584,3 +2584,27 @@ const struct SpriteFrameImage gObjectEventPicTable_Mewtwo[] = {
 const struct SpriteFrameImage gObjectEventPicTable_Boat[] = {
     obj_frame_tiles(gObjectEventPic_Boat),
 };
+
+const struct SpriteFrameImage gObjectEventPicTable_GastlyFront[] = {
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 1),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_GastlySide[] = {
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Gastly, 4, 4, 3),
+};
