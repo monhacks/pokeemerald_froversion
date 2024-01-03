@@ -7994,5 +7994,19 @@ const struct Item gItems[] =
         .battleUsage = ITEM_B_USE_MEDICINE,
         .battleUseFunc = ItemUseInBattle_Medicine,
         .holdEffect = HOLD_EFFECT_CURE_STATUS,
-    }
+    },
+
+    [ITEM_DIARY_ENTRY] =
+    {
+        .name = _("Diary Entry"),
+        .itemId = ITEM_DIARY_ENTRY,
+        .price = 0,
+        .description = sDiaryEntryDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Diary,
+    },
+
+    
 };

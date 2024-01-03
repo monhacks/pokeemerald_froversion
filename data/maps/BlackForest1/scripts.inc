@@ -79,14 +79,14 @@ BlackForest1_EventScript_WildBattleSpecialGastlyLocationCheck4::
 end
 
 BlackForest1_EventScript_WildBattleSpecialGastly:
-	goto_if_set FLAG_RECEIVED_SPELLBOOK, EventScript_IsBadMushroom
+	goto_if_set FLAG_FOUND_CIPHER, EventScript_IsBadMushroom
 	msgbox BlackForest1_Text_WildGastlyBattle, MSGBOX_DEFAULT
 	setwildbattle SPECIES_GASTLY, 50, ITEM_NONE
 	dowildbattle
 	msgbox BlackForest1_Text_WildGastlyDroppedThis, MSGBOX_DEFAULT
 	// FROVERSION SCRIPT giveitem ITEM_SPELLBOOK, 1
 	giveitem ITEM_POKEPRIMER, 1
-	setflag FLAG_RECEIVED_SPELLBOOK
+	setflag FLAG_FOUND_CIPHER
 	release
 end
 

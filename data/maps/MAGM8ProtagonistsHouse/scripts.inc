@@ -214,6 +214,9 @@ end
 
 MAGM8ProtagonistsHouse_EventScript_SickPokemon::
 	lockall
+	playmoncry SPECIES_AZUMARILL, 2
+	delay 40
+	waitmoncry
 	compare VAR_ROUTE101_STATE, 1
 	goto_if_ge MAGM8ProtagonistsHouse_EventScript_AzumarillIsFeelingBetter
 	goto_if_set FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN, MAGM8ProtagonistsHouse_EventScript_SickPokemonAlreadyGivenMedicine
@@ -248,8 +251,6 @@ end
 
 MAGM8ProtagonistsHouse_EventScript_AzumarillIsFeelingBetter:
 	msgbox MAGM8ProtagonistsHouse_Text_AzumarillIsFeelingBetterPartyJoin, MSGBOX_NPC
-	//playse SE_CAUGHT
-	//waitse
 	removeobject 1
 	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS
 	setflag FLAG_HIDE_NALLS_RESIDENCE_1F_ISIAH
