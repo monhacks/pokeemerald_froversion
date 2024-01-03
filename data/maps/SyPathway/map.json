@@ -14,24 +14,24 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
+      "map": "MAP_JAGOW_WAY",
       "offset": -11,
-      "map": "MAP_JAGOW_WAY"
+      "direction": "down"
     },
     {
-      "direction": "left",
+      "map": "MAP_JAGOW_SY_CONNECTION1",
       "offset": -5,
-      "map": "MAP_JAGOW_SY_CONNECTION1"
+      "direction": "left"
     },
     {
-      "direction": "down",
+      "map": "MAP_JAGOW_SY_CONNECTION2",
       "offset": 9,
-      "map": "MAP_JAGOW_SY_CONNECTION2"
+      "direction": "down"
     },
     {
-      "direction": "up",
+      "map": "MAP_FERCHEN_TRAIL",
       "offset": 24,
-      "map": "MAP_FERCHEN_TRAIL"
+      "direction": "up"
     }
   ],
   "object_events": [

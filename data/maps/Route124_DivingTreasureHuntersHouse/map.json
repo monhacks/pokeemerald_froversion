@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "right",
+      "map": "MAP_LAKE_MEAD_VILLAGE",
       "offset": 116,
-      "map": "MAP_LAKE_MEAD_VILLAGE"
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -40,14 +40,14 @@
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_ROUTE124",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_ROUTE124",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
