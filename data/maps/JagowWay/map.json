@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_LAKE_MEAD_VILLAGE",
+      "direction": "left",
       "offset": -6,
-      "direction": "left"
+      "map": "MAP_LAKE_MEAD_VILLAGE"
     },
     {
-      "map": "MAP_WALMORE_TOWN",
+      "direction": "right",
       "offset": 37,
-      "direction": "right"
+      "map": "MAP_WALMORE_TOWN"
     }
   ],
   "object_events": [

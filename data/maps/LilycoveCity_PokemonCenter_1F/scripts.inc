@@ -52,31 +52,6 @@ LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone:: @ 821C614
 	release
 	end
 
-LilycoveCity_PokemonCenter_EventScript_JumpDesk:: @ 821C5FF
-	lock
-	faceplayer
-	msgbox LilycoveCity_PokemonCenter_1F_Text_JumpDesk, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq LilycoveCity_PokemonCenter_EventScript_JumpDeskYes
-	end
-
-LilycoveCity_PokemonCenter_1F_Text_JumpDesk::
-	.string "No one is here, do you want to jump\n"
-	.string "over the counter?$"
-
-LilycoveCity_PokemonCenter_EventScript_JumpDeskYes::
-	delay 30
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_JumpDesk
-	waitmovement 0
-	release
-	end
-
-Movement_JumpDesk: @ 827224E
-	JUMP_SPECIAL_UP
-	JUMP_SPECIAL_UP
-	step_end
-	
-
 LilycoveCity_PokemonCenter_1F_Text_HowManyKindsOfPokemon: @ 821C61E
 	.string "I wonder how many kinds of Pokémon\n"
 	.string "there are in the world.\p"
