@@ -267,6 +267,7 @@
 #define MAP_MAGM8PRE_INFECTION_LOST_WOODS    (13 | (8 << 8))
 #define MAP_MAGM8EXTENDED_FOREST             (14 | (8 << 8))
 #define MAP_MAGM8FOREST_TOWN_POST_INFECTION  (15 | (8 << 8))
+#define MAP_BLACK_FOREST3                    (16 | (8 << 8))
 
 // gMapGroup9
 #define MAP_SLATEPORT_CITY_STERNS_SHIPYARD_1F      (0 | (9 << 8))

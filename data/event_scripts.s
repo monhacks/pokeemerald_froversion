@@ -1409,3 +1409,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/MAGM8ExtendedForest/scripts.inc"
 
 	.include "data/maps/MAGM8ForestTownPostInfection/scripts.inc"
+
+	.include "data/maps/BlackForest3/scripts.inc"

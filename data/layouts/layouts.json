@@ -6120,6 +6120,16 @@
       "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
       "border_filepath": "data/layouts/MAGM8ForestTownPostInfection/border.bin",
       "blockdata_filepath": "data/layouts/MAGM8ForestTownPostInfection/map.bin"
+    },
+    {
+      "id": "LAYOUT_BLACK_FOREST3",
+      "name": "BlackForest3_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
+      "border_filepath": "data/layouts/BlackForest3/border.bin",
+      "blockdata_filepath": "data/layouts/BlackForest3/map.bin"
     }
   ]
 }

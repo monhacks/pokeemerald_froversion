@@ -81,18 +81,26 @@ end
 BlackForest1_EventScript_WildBattleSpecialGastly:
 	goto_if_set FLAG_FOUND_CIPHER, EventScript_IsBadMushroom
 	msgbox BlackForest1_Text_WildGastlyBattle, MSGBOX_DEFAULT
+	playmoncry SPECIES_GASTLY, 2
 	setwildbattle SPECIES_GASTLY, 50, ITEM_NONE
-	dowildbattle
+	waitmoncry
+	special StartGastlyBattle
+	waitstate
 	msgbox BlackForest1_Text_WildGastlyDroppedThis, MSGBOX_DEFAULT
 	// FROVERSION SCRIPT giveitem ITEM_SPELLBOOK, 1
 	giveitem ITEM_POKEPRIMER, 1
+	msgbox BlackForest1_Text_WildGastlyWantsToJoinParty, MSGBOX_DEFAULT
+	playmoncry SPECIES_GASTLY, 2
 	removeobject 8
+	waitmoncry
+	givecustommon SPECIES_GASTLY, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_GIGA_DRAIN, MOVE_SUBSTITUTE, 0
 	setflag FLAG_FOUND_CIPHER
 	release
 end
 
 BlackForest1_EventScript_ProfessorsBag::
 	lock
+	msgbox BlackForest1_Text_ProfessorsBagFound, MSGBOX_DEFAULT
 	finditem ITEM_DIARY,1
 	finddiaryentry DIARY_ENTRY_TWENTIETH
 	finddiaryentry DIARY_ENTRY_NINETEENTH
@@ -117,6 +125,16 @@ BlackForest1_EventScript_ProfessorsBag::
 	clearflag FLAG_ITEM_MAGMA_HIDEOUT_4F_MAX_REVIVE                       
 	clearflag FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     
 	clearflag FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL
+	msgbox BlackForest1_Text_ProfessorsBagFoundRunningShoes, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	setflag FLAG_SYS_B_DASH
+	release
+	end
+
+EventScript_BlackForest1_Venusaur::
+	givecustommon SPECIES_VENUSAUR, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_SLEEP_POWDER, MOVE_LEECH_SEED, MOVE_SLUDGE_BOMB, MOVE_SYNTHESIS, 0
+	removeobject 7
+	setflag FLAG_ITEM_MOUNT_CINNABAR_NORTHWEST_1F_MAX_REVIVE
 	release
 	end
 
@@ -135,3 +153,22 @@ BlackForest1_Text_ProfessorsJournalEntry1:
 	.string "of research.\p"
 	.string "It is even more magnificent than I\n"
 	.string "imagined.$"
+
+BlackForest1_Text_WildGastlyWantsToJoinParty:
+	.string "The wild Gastly seems to want to join\n"
+	.string "you after you've defeated it.\p"
+	.string "{PLAYER} allows Gastly to join the\n"
+	.string  "party.$"
+
+BlackForest1_Text_ProfessorsBagFoundRunningShoes:	
+	.string "{PLAYER} Also found a pair of running\n"
+	.string "shoes in the Professor's Bag.\p"
+	.string "Might as well wear them until you\n"
+	.string "find the professor to return them.$"
+	
+BlackForest1_Text_ProfessorsBagFound:
+	.string "{PLAYER} found a bag.\p"
+	.string "“This Bag Belongs to Professor\n"
+	.string "Gooseberry”\p"
+	.string "It looks like there is a Diary\n"
+	.string "inside.$"
