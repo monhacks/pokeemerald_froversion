@@ -52,6 +52,35 @@ LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone:: @ 821C614
 	release
 	end
 
+LilycoveCity_PokemonCenter_EventScript_TryHeal:: @ 821C5FF
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_BLAZIKEN, LilycoveCity_PokemonCenter_EventScript_Heal
+	msgbox LilycoveCity_PokemonCenter_1F_Text_BallStuckInMachine, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_BLAZIKEN
+	playmoncry SPECIES_BLAZIKEN, 2
+    delay 40
+    waitmoncry
+    givecustommon SPECIES_BLAZIKEN, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_CUT, MOVE_SWORDS_DANCE, MOVE_OVERHEAT, MOVE_ROCK_SLIDE, 0
+    setmetatile 5, 1, METATILE_PokemonCenter_HealingMachineEmpty, 1
+	special DrawWholeMapView
+    setflag FLAG_RECEIVED_BLAZIKEN
+	release
+	end
+
+LilycoveCity_PokemonCenter_EventScript_Heal::
+	lock
+	msgbox LilycoveCity_PokemonCenter_1F_Text_HealYourPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq LilycoveCity_PokemonCenter_EventScript_Heal2
+	release
+	end
+
+LilycoveCity_PokemonCenter_EventScript_Heal2::
+	special HealPlayerParty
+	release
+	end
+
 LilycoveCity_PokemonCenter_EventScript_JumpDesk:: @ 821C5FF
 	lock
 	faceplayer
@@ -102,6 +131,14 @@ Movement_JumpDeskDown: @ 827224E
 	JUMP_SPECIAL_DOWN
 	JUMP_SPECIAL_DOWN
 	step_end
+
+LilycoveCity_PokemonCenter_1F_Text_HealYourPokemon::
+	.string "Do you want to heal your Pokemon\n"
+	.string "on your own?$"
+
+LilycoveCity_PokemonCenter_1F_Text_BallStuckInMachine::
+	.string "There is a Pokeball stuck in the\n"
+	.string "machine. You remove it carefully.$"
 
 LilycoveCity_PokemonCenter_1F_Text_HowManyKindsOfPokemon: @ 821C61E
 	.string "I wonder how many kinds of Pokémon\n"

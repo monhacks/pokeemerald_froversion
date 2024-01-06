@@ -457,6 +457,8 @@
 #define METATILE_PokemonCenter_Floor_Plain_Alt           0x02E4
 #define METATILE_PokemonCenter_Floor_ShadowTop           0x021E
 #define METATILE_PokemonCenter_Floor_ShadowTop_Alt       0x02DC
+#define METATILE_PokemonCenter_HealingMachineEmpty       0x0222
+#define METATILE_PokemonCenter_HealingMachineFilled      0x02D4
 
 // gTileset_Rustboro
 #define METATILE_Rustboro_Door_Gray  0x021F
