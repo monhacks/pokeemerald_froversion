@@ -430,6 +430,8 @@
 
 // gTileset_PokemonCenter
 #define METATILE_PokemonCenter_CounterBarrier            0x025D
+#define METATILE_PokemonCenter_CounterCovered            0x02D3
+#define METATILE_PokemonCenter_CounterUncovered          0x0207
 #define METATILE_PokemonCenter_Door_CableClub            0x0264
 #define METATILE_PokemonCenter_Escalator1F_Tile0_Frame0  0x0280
 #define METATILE_PokemonCenter_Escalator1F_Tile0_Frame1  0x0282
