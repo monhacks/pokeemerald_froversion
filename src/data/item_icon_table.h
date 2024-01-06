@@ -644,4 +644,5 @@ const u32 *const gItemIconTable[][2] =
     //MAGM8 Items
     [ITEM_POKEPRIMER]  = {gItemIcon_Pokeprimer, gItemIconPalette_Pokeprimer},
     [ITEM_DIARY] = {gItemIcon_Pokeprimer, gItemIconPalette_Pokeprimer},
+    [ITEM_MAGM8_HEAL_POWDER] = {gItemIcon_Powder, gItemIconPalette_HealPowder},
 };

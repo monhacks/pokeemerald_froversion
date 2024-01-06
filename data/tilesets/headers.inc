@@ -1038,7 +1038,7 @@ gTileset_NiagaraWoodsPrimary::
 	.4byte gTilesetPalettes_NiagaraWoodsPrimary
 	.4byte gMetatiles_NiagaraWoodsPrimary
 	.4byte gMetatileAttributes_NiagaraWoodsPrimary
-	.4byte NULL
+	.4byte InitTilesetAnim_NiagaraWoodsPrimary
 
 	.align 2
 gTileset_NiagaraWoodsSecondary::

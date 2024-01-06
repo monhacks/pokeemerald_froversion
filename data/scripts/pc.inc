@@ -141,15 +141,23 @@ EventScript_IsBadMushroom:: @ 8271D92
 	goto_if_set FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU, EventScript_IsBadMushroom_CheckInfectionState
 	releaseall	
 end
-EventScript_BadMushroomDiceRoll:	
+EventScript_BadMushroomDiceRoll:
+	goto_if_unset FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU, EventScript_IsBadMushroom_FirstBattleGuarentee
 	msgbox Text_BadMushroom, MSGBOX_DEFAULT
 		random 10
+		compare VAR_TEMP_0, 1
+		call_if_eq EventScript_BlackForestWildPokemonEncounterForceSpinarak
 	switch VAR_RESULT
 		case 5, EventScript_BlackForestWildPokemonEncounter
+		case 3, EventScript_BlackForestWildPokemonEncounter
+		case 1, EventScript_BlackForestWildPokemonEncounter
+		case 7, EventScript_BlackForestWildPokemonEncounter
+		case 9, EventScript_BlackForestWildPokemonEncounter
 	releaseall
 end
 EventScript_IsBadMushroom_PreInfection:
 	msgbox Text_PickMushroom, MSGBOX_DEFAULT
+	giveitem ITEM_TINY_MUSHROOM, 1
 	setflag FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU
 	releaseall
 end
@@ -164,14 +172,43 @@ EventScript_IsBadMushroom_AlreadyPickedMushroom:
 	releaseall
 end
 
+EventScript_IsBadMushroom_FirstBattleGuarentee:
+	msgbox Text_BadMushroom, MSGBOX_DEFAULT
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox Text_ItLooksLikeSomethingIsHidingInTheMushroom, MSGBOX_DEFAULT
+	goto Eventscript_SetWildBattleEscarataco
+
 EventScript_BlackForestWildPokemonEncounter:
 		random 5
+		compare VAR_TEMP_0, 1
+		call_if_eq EventScript_BlackForestWildPokemonEncounterForceSpinarak
 	switch VAR_RESULT
-		case 0, Eventscript_SetWildBattleAriados
+		case 0, Eventscript_SetWildBattleWeedle
 		case 1, Eventscript_SetWildBattleEscarataco
 		case 2, Eventscript_SetWildBattleShedinja
 		case 3, Eventscript_SetWildBattleNinjask
 		case 4, Eventscript_SetWildBattleScyther
+		case 5, Eventscript_SetWildBattleAriados
+end
+EventScript_BlackForestWildPokemonEncounterForceSpinarak:
+	setvar VAR_RESULT, 5
+return
+
+EventScript_BlackForestForceSpinarakEnterTrigger::
+	setvar VAR_TEMP_0, 1
+	end
+
+EventScript_BlackForestForceSpinarakExitTrigger::
+	setvar VAR_TEMP_0, 0
+	end
+
+Eventscript_SetWildBattleWeedle:
+	//setwildbattle SPECIES_ARIADOS, 50, ITEM_NONE
+	setwildbattle SPECIES_WEEDLE, 50, ITEM_NONE
+dowildbattle
+releaseall
 end
 
 Eventscript_SetWildBattleAriados:
@@ -182,16 +219,21 @@ releaseall
 end
 
 Eventscript_SetWildBattleEscarataco:
-	//setwildbattle SPECIES_ESCARATACO, 50, ITEM_NONE
-	setwildbattle SPECIES_PARAS, 50, ITEM_NONE
-dowildbattle
-releaseall
+		//setwildbattle SPECIES_ESCARATACO, 50, ITEM_NONE
+		setwildbattle SPECIES_PARAS, 50, ITEM_NONE
+	dowildbattle
+	goto_if_unset FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU, EventScript_IsBadMushroom_AfterFirstBattle
+	releaseall
+	end
+EventScript_IsBadMushroom_AfterFirstBattle:
+	msgbox Text_LooksLikePokemonLikeToHideInMushrooms, MSGBOX_DEFAULT
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU
+	releaseall
 end
-
 Eventscript_SetWildBattleShedinja:
 	setwildbattle SPECIES_SHEDINJA, 50, ITEM_NONE
-dowildbattle
-releaseall
+	dowildbattle
+	releaseall
 end
 
 Eventscript_SetWildBattleScyther:
@@ -293,3 +335,12 @@ Text_AlreadyPickedMushroom:
 	.string "Dad's advice...\p"
 	.string "Never take more than you need.$"
 
+Text_ItLooksLikeSomethingIsHidingInTheMushroom:
+	.string "Wait!\p"
+	.string "It looks like something is hiding in\n"
+	.string "the mushroom!$"
+
+Text_LooksLikePokemonLikeToHideInMushrooms:
+	.string "It seems these mushrooms are now\n"
+	.string "large enough to hide wild Pokémon.\p"
+	.string "Best to proceed with caution.$"

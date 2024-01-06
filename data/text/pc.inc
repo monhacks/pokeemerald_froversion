@@ -17,4 +17,5 @@ gText_AccessedLanettesPC:: @ 82726D4
 	.string "Accessed LANETTE's PC.$"
 
 gText_PCIsBroke::
-	.string "PC down for maintenance.$"
+	.string "PC is updating to Windows 11.\p"
+	.string "It looks like it will be awhile...$"

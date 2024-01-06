@@ -48,6 +48,7 @@ static void TilesetAnim_CinnibarIsland_Primary(u16);
 static void TilesetAnim_WesternApproach(u16);
 static void TilesetAnim_RaintreeIsland_Gym_Fire(u16);
 static void TilesetAnim_RaintreeIsland_Gym_Ice(u16);
+static void TilesetAnim_NiagaraWoodsPrimary(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_CinnibarIsland_Water(u16);
@@ -87,6 +88,7 @@ static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Lava(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Rock(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Puddle(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Ice_Sparkle(u16);
+static void QueueAnimTiles_NiagaraWoodsPrimary_Waterfall(u16);
 
 //////////////////////////////////////////////////////////
 /////////////////FROVERSION ANIMATION////////////////////
@@ -273,6 +275,17 @@ const u16 *const gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle[] = {
     gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle_Frame5
 };
 
+const u16 gTilesetAnims_NiagaraWoodsPrimary_Waterfall_Frame0[] = INCBIN_U16("data/tilesets/primary/niagarawoodsprimary/anim/waterfall/0.4bpp");
+const u16 gTilesetAnims_NiagaraWoodsPrimary_Waterfall_Frame1[] = INCBIN_U16("data/tilesets/primary/niagarawoodsprimary/anim/waterfall/1.4bpp");
+const u16 gTilesetAnims_NiagaraWoodsPrimary_Waterfall_Frame2[] = INCBIN_U16("data/tilesets/primary/niagarawoodsprimary/anim/waterfall/2.4bpp");
+const u16 gTilesetAnims_NiagaraWoodsPrimary_Waterfall_Frame3[] = INCBIN_U16("data/tilesets/primary/niagarawoodsprimary/anim/waterfall/3.4bpp");
+
+const u16 *const gTilesetAnims_NiagaraWoodsPrimary_Waterfall[] = {
+    gTilesetAnims_NiagaraWoodsPrimary_Waterfall_Frame0,
+    gTilesetAnims_NiagaraWoodsPrimary_Waterfall_Frame1,
+    gTilesetAnims_NiagaraWoodsPrimary_Waterfall_Frame2,
+    gTilesetAnims_NiagaraWoodsPrimary_Waterfall_Frame3
+};
 
 const u16 gTilesetAnims_General_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/flower/1.4bpp");
 const u16 gTilesetAnims_General_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/flower/0.4bpp");
@@ -863,6 +876,13 @@ void InitTilesetAnim_WesternApproach(void)
     sPrimaryTilesetAnimCallback = TilesetAnim_WesternApproach;
 }
 
+void InitTilesetAnim_NiagaraWoodsPrimary(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_NiagaraWoodsPrimary;
+}
+
 void InitTilesetAnim_Building(void)
 {
     sPrimaryTilesetAnimCounter = 0;
@@ -900,6 +920,12 @@ static void TilesetAnim_Building(u16 timer)
         QueueAnimTiles_Building_TVTurnedOn(timer >> 3);
 }
 
+static void TilesetAnim_NiagaraWoodsPrimary(u16 timer)
+{
+    if (timer % 16 == 3)
+        QueueAnimTiles_NiagaraWoodsPrimary_Waterfall(timer >> 4);
+}
+
 static void QueueAnimTiles_General_Flower(u16 timer)
 {
     u16 i = timer % 4;
@@ -924,6 +950,13 @@ static void QueueAnimTiles_CinnibarIsland_Lava(u16 timer)
     AppendTilesetAnimToBuffer(gTilesetAnims_MountCinnabar_Lava[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(0x29B)), 128);
 }
 
+
+static void QueueAnimTiles_NiagaraWoodsPrimary_Waterfall(u16 timer)
+{
+    u16 i = timer % 4;
+    AppendTilesetAnimToBuffer(gTilesetAnims_NiagaraWoodsPrimary_Waterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(496)), 0xc0);
+}
+
 static void QueueAnimTiles_General_SandWaterEdge(u16 timer)
 {
     u16 i = timer % 8;
@@ -935,6 +968,7 @@ static void QueueAnimTiles_General_Waterfall(u16 timer)
     u16 i = timer % 4;
     AppendTilesetAnimToBuffer(gTilesetAnims_General_Waterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(496)), 0xc0);
 }
+
 
 void InitTilesetAnim_Petalburg(void)
 {

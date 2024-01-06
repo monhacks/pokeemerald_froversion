@@ -58,6 +58,7 @@ struct Weather
     u16 unknown_6E2;
     u8 snowflakeSpriteCount;
     u8 targetSnowflakeSpriteCount;
+    u8 targetParticleSpriteCount;
     u16 unknown_6E6;
     u16 thunderCounter;
     u8 unknown_6EA;
@@ -213,6 +214,10 @@ void Bubbles_InitVars(void);
 void Bubbles_Main(void);
 void Bubbles_InitAll(void);
 bool8 Bubbles_Finish(void);
+void Particle_Main(void);
+void Particle_InitVars(void);
+void Particle_InitAll(void);
+bool8 Particle_Finish(void);
 
 u8 GetSav1Weather(void);
 void SetSav1Weather(u32 weather);

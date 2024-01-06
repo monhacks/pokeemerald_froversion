@@ -295,7 +295,10 @@
     "MAGM8ForestTown",
     "MAGM8ProtagonistsHouse",
     "MAGM8BlackForestPreInfection",
-    "MAGM8PreInfectionLostWoods"
+    "MAGM8PreInfectionLostWoods",
+    "MAGM8ExtendedForest",
+    "MAGM8ForestTownPostInfection",
+    "BlackForest3"
   ],
   "gMapGroup9": [
     "SlateportCity_SternsShipyard_1F",

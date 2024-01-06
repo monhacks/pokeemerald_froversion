@@ -665,6 +665,46 @@ void StartPrimeapeBattle(void)
     TryUpdateGymLeaderRematchFromWild();
 }
 
+void StartGastlyBattle(void)
+{
+    u8 transitionId;
+    u16 species;
+    s32 move1 = MOVE_THUNDERBOLT;
+    s32 move2 = MOVE_PSYCHIC;
+    s32 move3 = MOVE_GIGA_DRAIN;
+    s32 move4 = MOVE_SUBSTITUTE;
+
+    ScriptContext2_Enable();
+    gMain.savedCallback = CB2_EndScriptedWildBattle;
+    gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_REGI;
+
+    species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
+    switch (species)
+    {
+    case SPECIES_REGIROCK:
+        transitionId = B_TRANSITION_REGIROCK;
+        break;
+    case SPECIES_REGICE:
+        transitionId = B_TRANSITION_REGICE;
+        break;
+    case SPECIES_REGISTEEL:
+        transitionId = B_TRANSITION_REGISTEEL;
+        break;
+    default:
+        transitionId = B_TRANSITION_GRID_SQUARES;
+        break;
+    }
+    CreateBattleStartTask(transitionId, MUS_VS_REGI);
+    SetMonData(&gEnemyParty[0], MON_DATA_MOVE1, &move1);
+    SetMonData(&gEnemyParty[0], MON_DATA_MOVE2, &move2);
+    SetMonData(&gEnemyParty[0], MON_DATA_MOVE3, &move3);
+    SetMonData(&gEnemyParty[0], MON_DATA_MOVE4, &move4);
+    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
+    IncrementGameStat(GAME_STAT_WILD_BATTLES);
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
+}
+
 static void CB2_EndWildBattle(void)
 {
     CpuFill16(0, (void*)(BG_PLTT), BG_PLTT_SIZE);

@@ -6074,7 +6074,7 @@
     {
       "id": "LAYOUT_MAGM8PROTAGONISTS_HOUSE",
       "name": "MAGM8ProtagonistsHouse_Layout",
-      "width": 11,
+      "width": 15,
       "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
@@ -6100,6 +6100,36 @@
       "secondary_tileset": "gTileset_BlackForesstPreInfectionSecondary",
       "border_filepath": "data/layouts/MAGM8PreInfectionLostWoods/border.bin",
       "blockdata_filepath": "data/layouts/MAGM8PreInfectionLostWoods/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGM8EXTENDED_FOREST",
+      "name": "MAGM8ExtendedForest_Layout",
+      "width": 96,
+      "height": 64,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/MAGM8ExtendedForest/border.bin",
+      "blockdata_filepath": "data/layouts/MAGM8ExtendedForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGM8FOREST_TOWN_POST_INFECTION",
+      "name": "MAGM8ForestTownPostInfection_Layout",
+      "width": 45,
+      "height": 37,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
+      "border_filepath": "data/layouts/MAGM8ForestTownPostInfection/border.bin",
+      "blockdata_filepath": "data/layouts/MAGM8ForestTownPostInfection/map.bin"
+    },
+    {
+      "id": "LAYOUT_BLACK_FOREST3",
+      "name": "BlackForest3_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_NiagaraWoodsPrimary",
+      "secondary_tileset": "gTileset_NiagaraWoodsSecondary",
+      "border_filepath": "data/layouts/BlackForest3/border.bin",
+      "blockdata_filepath": "data/layouts/BlackForest3/map.bin"
     }
   ]
 }

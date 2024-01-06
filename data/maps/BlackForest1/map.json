@@ -5,7 +5,7 @@
   "music": "MUS_FV_HAUNTED",
   "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
-  "weather": "WEATHER_FOG_HORIZONTAL",
+  "weather": "WEATHER_PARTICLE",
   "map_type": "MAP_TYPE_NONE",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -37,8 +37,125 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MAGM8DiaryEntry_EventScript_DiaryEntryFocusPunch",
+      "script": "MAGM8DiaryEntry_EventScript_DiaryEntrySecond",
+      "flag": "FLAG_ITEM_ROUTE_132_PROTEIN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 12,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MAGM8DiaryEntry_EventScript_DiaryEntryFirst",
+      "flag": "FLAG_ITEM_ROUTE_133_MAX_REVIVE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 23,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MAGM8DiaryEntry_EventScript_DiaryEntryThird",
+      "flag": "FLAG_ITEM_ROUTE_134_CARBOS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 27,
+      "y": 45,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MAGM8DiaryEntry_EventScript_DiaryEntryFourth",
+      "flag": "FLAG_ITEM_ROUTE_134_STAR_PIECE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 56,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MAGM8DiaryEntry_EventScript_DiaryEntryFifth",
+      "flag": "FLAG_ITEM_ROUTE_114_ENERGY_POWDER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_1",
+      "x": 71,
+      "y": 34,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_BlackForest1_Venusaur",
+      "flag": "FLAG_ITEM_MOUNT_CINNABAR_NORTHWEST_1F_MAX_REVIVE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GASTLY_1",
+      "x": 10,
+      "y": 70,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BlackForest1_EventScript_WildBattleSpecialGastlyLocationCheck3",
+      "flag": "FLAG_FOUND_CIPHER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 12,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MAGM8DiaryEntry_EventScript_DiaryEntrySixth",
+      "flag": "FLAG_ITEM_ROUTE_115_PP_UP"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 9,
+      "y": 48,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 71,
+      "y": 48,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MAGM8DiaryEntry_EventScript_DiaryEntrySeventh",
+      "flag": "FLAG_ITEM_ARTISAN_CAVE_B1F_HP_UP"
     }
   ],
   "warp_events": [
@@ -60,29 +177,56 @@
       "x": 40,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_BLACK_FOREST2",
+      "dest_map": "MAP_BLACK_FOREST3",
       "dest_warp_id": "0"
     },
     {
       "x": 41,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_BLACK_FOREST2",
+      "dest_map": "MAP_BLACK_FOREST1",
       "dest_warp_id": "1"
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 54,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "1",
+      "script": "EventScript_BlackForestForceSpinarakExitTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 54,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "1",
+      "script": "EventScript_BlackForestForceSpinarakExitTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 55,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EventScript_BlackForestForceSpinarakEnterTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 55,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EventScript_BlackForestForceSpinarakEnterTrigger"
+    }
   ],
   "bg_events": [
-    {
-      "type": "sign",
-      "x": 23,
-      "y": 20,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "BlackForest1_EventScript_WildBattleSpecialGastlyLocationCheck0"
-    },
     {
       "type": "sign",
       "x": 51,

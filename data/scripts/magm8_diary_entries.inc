@@ -1,26 +1,124 @@
-MAGM8DiaryEntry_EventScript_DiaryEntryFocusPunch::
+MAGM8DiaryEntry_EventScript_DiaryEntryFirst::
 	lock
-    finditem ITEM_DIARY, 1
+    finddiaryentry DIARY_ENTRY_FIRST
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntrySecond::
+	lock
     finddiaryentry DIARY_ENTRY_SECOND
-	msgbox MAGM8DiaryEntry_Text_FoundDiaryEntry, MSGBOX_YESNO
-		switch VAR_RESULT
-		case NO, MAGM8DiaryEntry_EventScript_DiaryEntryFocusPunch_End
-		case YES, MAGM8DiaryEntry_EventScript_DiaryEntryFocusPunch_LanguageCheck
-		case MULTI_B_PRESSED, MAGM8DiaryEntry_EventScript_DiaryEntryFocusPunch_End
-MAGM8DiaryEntry_EventScript_DiaryEntryFocusPunch_LanguageCheck:
-	checkitem ITEM_POKEPRIMER, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq MAGM8DiaryEntry_EventScript_DiaryEntryFocusPunch_MSGBOX_Pokeprimer
-	msgbox MAGM8DiaryEntry_Text_DiaryEntryFocusPunch_English, MSGBOX_DEFAULT
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
 	release
 	end
-MAGM8DiaryEntry_EventScript_DiaryEntryFocusPunch_MSGBOX_Pokeprimer:
-	msgbox MAGM8DiaryEntry_Text_DiaryEntryFocusPunch_Pokeprimer, MSGBOX_DEFAULT
+
+MAGM8DiaryEntry_EventScript_DiaryEntryThird::
+	lock
+    finddiaryentry DIARY_ENTRY_THIRD
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
 	release
 	end
-MAGM8DiaryEntry_EventScript_DiaryEntryFocusPunch_End:
+
+MAGM8DiaryEntry_EventScript_DiaryEntryFourth::
+	lock
+    finddiaryentry DIARY_ENTRY_FOURTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
 	release
 	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryFifth::
+	lock
+    finddiaryentry DIARY_ENTRY_FIFTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntrySixth::
+	lock
+    finddiaryentry DIARY_ENTRY_SIXTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntrySeventh::
+	lock
+    finddiaryentry DIARY_ENTRY_SEVENTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryEighth::
+	lock
+    finddiaryentry DIARY_ENTRY_EIGHTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryNinth::
+	lock
+    finddiaryentry DIARY_ENTRY_NINTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryTenth::
+	lock
+    finddiaryentry DIARY_ENTRY_TENTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryEvelenth::
+	lock
+    finddiaryentry DIARY_ENTRY_ELEVENTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryTwelveth::
+	lock
+    finddiaryentry DIARY_ENTRY_TWELVETH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+	end
+
+MAGM8DiaryEntry_EventScript_DiaryEntryThirteenth::
+	lock
+    finddiaryentry DIARY_ENTRY_THIRTEENTH
+	finditem ITEM_DIARY_ENTRY, 1
+	removeitem ITEM_DIARY_ENTRY
+	msgbox MAGM8DiaryEntry_Text_FoundMissingDiaryEntry, MSGBOX_DEFAULT
+	release
+
+MAGM8DiaryEntry_Text_FoundMissingDiaryEntry:
+	.string "{PLAYER} found one of the missing pages\n"
+	.string "from Professor Gooseberry's diary!\p"
+	.string "{PLAYER} put the missing page back in\n"
+	.string "the diary!$"
 
 MAGM8DiaryEntry_Text_DiaryEntryFocusPunch_English:
 	.string "I really need to Focus.\p"

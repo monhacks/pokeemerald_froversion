@@ -539,3 +539,4 @@ gSpecials:: @ 81DBA64
 	def_special StartPrimeapeBattle
 	def_special IsSpeciesInParty							@uses gSpecialVar_0x8005 to check against
 	def_special RemoveAllPartySlots
+	def_special StartGastlyBattle
