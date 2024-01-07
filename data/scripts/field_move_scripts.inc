@@ -1,7 +1,16 @@
+@MAGM8 Cut Prevention
+EventScript_MAGM8_CutTree::
+	goto_if_set FLAG_RECEIVED_BLAZIKEN, EventScript_CutTreeCheckPartyMove
+	msgbox Text_WantToCut, MSGBOX_YESNO
+	msgbox Text_AzumarillStillNotHealthyEnoughToCut, MSGBOX_AUTOCLOSE
+	release
+	end
+
 @ Interact with cuttable tree
 EventScript_CutTree:: @ 82906BB
 	lockall
 	goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
+EventScript_CutTreeCheckPartyMove:
 	checkpartymove MOVE_CUT
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq EventScript_CheckTreeCantCut
@@ -46,6 +55,11 @@ EventScript_CancelCut:: @ 829072B
 	closemessage
 	releaseall
 	end
+
+Text_AzumarillStillNotHealthyEnoughToCut:
+	.string "Azumarill tired to cut the tree,\n"
+	.string "but is still a not feeling entirely\l"
+	.string "healthy...$"
 
 Text_WantToCut: @ 829072E
 	.string "This tree looks like it can be\n"
