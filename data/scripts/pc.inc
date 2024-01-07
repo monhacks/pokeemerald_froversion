@@ -198,10 +198,12 @@ return
 
 EventScript_BlackForestForceSpinarakEnterTrigger::
 	setvar VAR_TEMP_0, 1
+	call BlackForest1_SetWildBattleLocation
 	end
 
 EventScript_BlackForestForceSpinarakExitTrigger::
 	setvar VAR_TEMP_0, 0
+	setvar VAR_TEMP_1, 0
 	end
 
 Eventscript_SetWildBattleWeedle:

@@ -106,22 +106,9 @@
       "flag": "FLAG_ITEM_MOUNT_CINNABAR_NORTHWEST_1F_MAX_REVIVE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GASTLY_1",
-      "x": 10,
-      "y": 70,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "BlackForest1_EventScript_WildBattleSpecialGastlyLocationCheck3",
-      "flag": "FLAG_FOUND_CIPHER"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 12,
-      "y": 17,
+      "x": 10,
+      "y": 68,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -242,14 +229,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "BlackForest1_EventScript_WildBattleSpecialGastlyLocationCheck2"
-    },
-    {
-      "type": "sign",
-      "x": 10,
-      "y": 69,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "BlackForest1_EventScript_WildBattleSpecialGastlyLocationCheck3"
     },
     {
       "type": "sign",

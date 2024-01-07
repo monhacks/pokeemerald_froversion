@@ -338,8 +338,8 @@ static const struct AbilitySetter sNinjaskAbilitySet[] =
 
 static const struct AbilitySetter sShedinjaAbilitySet[] =
 {
-    {ABILITY_PRANKSTER, 1},
     {ABILITY_WONDER_GUARD, 1},
+    {ABILITY_PRANKSTER, 1},
     ABILITY_SET_END
 };
 
