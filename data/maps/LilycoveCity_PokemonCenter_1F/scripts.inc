@@ -3,11 +3,12 @@
 LilycoveCity_PokemonCenter_1F_MapScripts:: @ 821C5B2
 	map_script MAP_SCRIPT_ON_TRANSITION, LilycoveCity_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	map_script MAP_SCRIPT_ON_LOAD, LilycoveCity_PokemonCenter_1F_OnTransition
 	.byte 0
 
 LilycoveCity_PokemonCenter_1F_OnTransition: @ 821C5BD
 	setrespawn HEAL_LOCATION_LILYCOVE_CITY
-	goto LilycoveCity_PokemonCenter_1F_EventScript_SetLilycoveLadyGfx
+	call_if_set FLAG_RECEIVED_BLAZIKEN, LilycoveCity_PokemonCenter_EventScript_RemovePokeball
 	end
 
 @ SetLilycoveLadyGfx returns TRUE if its the Contest Lady
@@ -51,6 +52,11 @@ LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone:: @ 821C614
 	msgbox LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels, MSGBOX_DEFAULT
 	release
 	end
+
+LilycoveCity_PokemonCenter_EventScript_RemovePokeball::
+	setmetatile 5, 1, METATILE_PokemonCenter_HealingMachineEmpty, 1
+	special DrawWholeMapView
+	return
 
 LilycoveCity_PokemonCenter_EventScript_TryHeal:: @ 821C5FF
 	lock
