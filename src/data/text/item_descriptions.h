@@ -3099,6 +3099,6 @@ static const u8 sDiaryDesc[] = _(
     "Gooseberry.");
 
 static const u8 sDiaryEntryDesc[] = _(
-    "A missing page from\n"
+    "A ripped out page from\n"
     "Professor Gooseberry's\n"
     "Diary.");
