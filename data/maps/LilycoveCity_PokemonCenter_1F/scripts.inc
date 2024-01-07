@@ -67,6 +67,8 @@ LilycoveCity_PokemonCenter_EventScript_TryHeal:: @ 821C5FF
 	playmoncry SPECIES_BLAZIKEN, 2
     delay 40
     waitmoncry
+	msgbox LilycoveCity_PokemonCenter_1F_Text_ThePokeballContainedBlaziken, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
     givecustommon SPECIES_BLAZIKEN, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_CUT, MOVE_SWORDS_DANCE, MOVE_OVERHEAT, MOVE_ROCK_SLIDE, 0
     setmetatile 5, 1, METATILE_PokemonCenter_HealingMachineEmpty, 1
 	special DrawWholeMapView
@@ -161,4 +163,7 @@ LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels: @ 821C6F6
 	.string "Those rotten scoundrels who steal\n"
 	.string "Pokémon and rip off METEORITES…\p"
 	.string "I haven't seen them around recently.$"
+
+LilycoveCity_PokemonCenter_1F_Text_ThePokeballContainedBlaziken:
+	.string "The Pokéball contained a Blaziken!$"
 
