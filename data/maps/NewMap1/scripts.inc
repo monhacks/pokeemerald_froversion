@@ -78,16 +78,17 @@ end
 
 NewMap1_Movement_PlayerLooksAround:
 	face_left
-	face_left
-	face_left
+	delay_16
 	face_right
-	face_right
+	delay_16
 	face_left
+	delay_16
 	face_down
+	delay_16
 	face_left
-	face_left
+	delay_16
 	face_right
-	face_right
+	delay_16
 	face_down
 	step_end
 		

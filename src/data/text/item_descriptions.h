@@ -3094,8 +3094,8 @@ static const u8 sPokePrimerDesc[] = _(
     "languages");
 
 static const u8 sDiaryDesc[] = _(
-    "A diary\n"
-    "written by Professor\n"
+    "A diary written\n" 
+    "by Professor\n"
     "Gooseberry.");
 
 static const u8 sDiaryEntryDesc[] = _(

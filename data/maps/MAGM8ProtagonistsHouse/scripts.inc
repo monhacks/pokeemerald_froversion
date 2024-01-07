@@ -10,6 +10,7 @@ MAGM8ProtagonistsHouse_MapScripts::
 
 MAGM8ProtagonistsHouse_OnLoad:
 	compare VAR_ROUTE101_STATE, 1
+	setrespawn HEAL_LOCATION_CABIN_IN_THE_WOODS
 	call_if_ge MAGM8ProtagonistsHouse_EventScript_SetDynamicWarpPostInfection
 	call_if_lt MAGM8ProtagonistsHouse_EventScript_SetDynamicWarpPreInfection
 	end
@@ -393,7 +394,7 @@ MAGM8ProtagonistsHouse_Text_WouldYouLikeToGiveMedicineToSickPokemon:
 MAGM8ProtagonistsHouse_Text_MedicineGiveSickPokemon:
 	.string "Azumarill seems grateful for the\n"
 	.string "medicine.\p"
-	.string "After a good nights rest she should\n"
+	.string "After a good nights rest it should\n"
 	.string "be as good as new!$"
 
 MAGM8ProtagonistsHouse_Text_NoMedicineToGiveSickPokemon:
@@ -444,7 +445,7 @@ MAGM8ProtagonistsHouse_Text_AlreadyMadeSoup:
 MAGM8ProtagonistsHouse_Text_SickPokemonAlreadyGivenMedicine:
 	.string "Azumarill seems grateful for the.\n"
 	.string "medicine.\p"
-	.string "She just needs a good nights sleep\n"
+	.string "It just needs a good nights sleep\n"
 	.string "for it to take effect.$"
 
 MAGM8ProtagonistsHouse_Text_DadsAdviceStartToDoListForTomorrow:
@@ -469,7 +470,7 @@ MAGM8ProtagonistsHouse_Text_TimeToGoToSleepCheckTomorrow:
 
 MAGM8ProtagonistsHouse_Text_AzumarillIsFeelingBetterPartyJoin:
 	.string "Azumarill is feeling better!\n"
-	.string "She is ready to join your party!$"
+	.string "It is ready to join your party!$"
 
 MAGM8ProtagonistsHouse_Text_AzumarillIsFeelingBetter:
 	.string "Azumarill is feeling better! Don't\n"
