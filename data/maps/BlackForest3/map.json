@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 29,
-      "y": 35,
+      "x": 22,
+      "y": 46,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -29,8 +29,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 11,
-      "y": 57,
+      "x": 10,
+      "y": 62,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -120,6 +120,13 @@
       "elevation": 0,
       "dest_map": "MAP_BLACK_FOREST1",
       "dest_warp_id": "3"
+    },
+    {
+      "x": 47,
+      "y": 41,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8CAVE_HIDDEN_BEHIND_WATERFALL",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
