@@ -5188,13 +5188,18 @@ const u16 gCheetoSecondaryItems[] =
 
 const u16 gWildPokemonDropItems[] =
 {
-    ITEM_RED_SHARD,
-    ITEM_TINY_MUSHROOM,
-    ITEM_BIG_MUSHROOM,
-    ITEM_HEART_SCALE,
-    ITEM_YELLOW_NECTAR,
+    //ITEM_RED_SHARD,
+    //ITEM_TINY_MUSHROOM,
+    //ITEM_BIG_MUSHROOM,
+    //ITEM_HEART_SCALE,
+    //ITEM_YELLOW_NECTAR,
     ITEM_SITRUS_BERRY,
     ITEM_FIRE_GEM,
+    ITEM_X_ATTACK,
+    ITEM_X_SP_ATK,
+    ITEM_X_DEFENSE,
+    ITEM_X_SP_DEF,
+    ITEM_X_SPEED,
     ITEM_NONE,
     0xFFFF
 };
