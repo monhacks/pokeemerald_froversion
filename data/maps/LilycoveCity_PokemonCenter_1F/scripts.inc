@@ -7,7 +7,7 @@ LilycoveCity_PokemonCenter_1F_MapScripts:: @ 821C5B2
 	.byte 0
 
 LilycoveCity_PokemonCenter_1F_OnTransition: @ 821C5BD
-	setrespawn HEAL_LOCATION_LILYCOVE_CITY
+	setrespawn HEAL_LOCATION_PC_IN_THE_WOODS
 	call_if_set FLAG_RECEIVED_BLAZIKEN, LilycoveCity_PokemonCenter_EventScript_RemovePokeball
 	end
 

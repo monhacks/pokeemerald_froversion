@@ -57,7 +57,7 @@ EventScript_CancelCut:: @ 829072B
 	end
 
 Text_AzumarillStillNotHealthyEnoughToCut:
-	.string "Azumarill tired to cut the tree,\n"
+	.string "Azumarill tried to cut the tree,\n"
 	.string "but is still a not feeling entirely\l"
 	.string "healthy...$"
 
