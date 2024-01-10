@@ -236,7 +236,6 @@ static const struct MenuAction MultichoiceList_TMVendingMachine2[] =
     {gText_TM10AndPrice},
     {gText_TM11AndPrice},
     {gText_TM12AndPrice},
-    {gText_TM13AndPrice},
     {gText_Previous},
     {gText_Exit},
 };
