@@ -91,7 +91,7 @@ BlackForest1_EventScript_WildBattleSpecialGastly:
 	giveitem ITEM_POKEPRIMER, 1
 	msgbox BlackForest1_Text_WildGastlyWantsToJoinParty, MSGBOX_DEFAULT
 	playmoncry SPECIES_GASTLY, 2
-	removeobject 8
+	removeobject 6
 	waitmoncry
 	givecustommon SPECIES_GASTLY, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_GIGA_DRAIN, MOVE_SUBSTITUTE, 0
 	setflag FLAG_FOUND_CIPHER

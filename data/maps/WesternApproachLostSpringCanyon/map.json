@@ -14,24 +14,24 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
+      "map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1",
       "offset": -24,
-      "map": "MAP_WESTERN_APPROACH_LOST_SPRING_CANYON_TRAIL1"
+      "direction": "down"
     },
     {
-      "direction": "right",
+      "map": "MAP_WESTERN_APPROACH_LOST_SPRINGS_CANYON_RIGHT_BORDER",
       "offset": 0,
-      "map": "MAP_WESTERN_APPROACH_LOST_SPRINGS_CANYON_RIGHT_BORDER"
+      "direction": "right"
     },
     {
-      "direction": "left",
+      "map": "MAP_WESTERN_APPROACH_STILL_RUINS",
       "offset": 27,
-      "map": "MAP_WESTERN_APPROACH_STILL_RUINS"
+      "direction": "left"
     },
     {
-      "direction": "left",
+      "map": "MAP_WESTERN_APPROACH_STILL_RUINS_EAST",
       "offset": 0,
-      "map": "MAP_WESTERN_APPROACH_STILL_RUINS_EAST"
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -55,14 +55,14 @@
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LAVARIDIGE_TOWN_MARRIOTT_LAYOUT",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     },
     {
       "x": 22,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LAVARIDIGE_TOWN_MARRIOTT_LAYOUT",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

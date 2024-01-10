@@ -219,6 +219,8 @@ void NewGameInitData(void)
     ClearBerryTrees();
     if(B_VERSION_MARRIOTT)
         SetMoney(&gSaveBlock1Ptr->money, 50000);
+    if(B_VERSION_MAGEE)
+        SetMoney(&gSaveBlock1Ptr->money, 100);
     else
         SetMoney(&gSaveBlock1Ptr->money, 3000);
     SetCoins(0);

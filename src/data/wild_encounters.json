@@ -14807,6 +14807,40 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_BLACK_FOREST3",
+          "base_label": "gBlackForest30",
+          "water_mons": {
+            "encounter_rate": 22,
+            "mons": [
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_MUDKIP"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_ZUBAT"
+              },
+              {
+                "min_level": 50,
+                "max_level": 50,
+                "species": "SPECIES_YANMA"
+              }
+            ]
+          }
         }
       ]
     },
