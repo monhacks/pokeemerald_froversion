@@ -1222,18 +1222,18 @@
 #define FLAG_ITEM_HM06                                              0x496 // Found rock smash
 #define FLAG_HIDE_PRIMEAPE                                          0x497 // Hide Primeape Mount Cinnabar Summit
 #define FLAG_HIDE_MOUNT_SUMMIT_NCC_SCIENTIST                        0x498 // Hide Summit Cities
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
-#define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
-#define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
+#define FLAG_VENDINGMACHINE_TM1                                     0x499 // Unused Flag
+#define FLAG_VENDINGMACHINE_TM2                                     0x49A // Unused Flag
+#define FLAG_VENDINGMACHINE_TM3                                     0x49B // Unused Flag
+#define FLAG_VENDINGMACHINE_TM4                                     0x49C // Unused Flag
+#define FLAG_VENDINGMACHINE_TM5                                     0x49D // Unused Flag
+#define FLAG_VENDINGMACHINE_TM6                                     0x49E // Unused Flag
+#define FLAG_VENDINGMACHINE_TM7                                     0x49F // Unused Flag
+#define FLAG_VENDINGMACHINE_TM8                                     0x4A0 // Unused Flag
+#define FLAG_VENDINGMACHINE_TM9                                     0x4A1 // Unused Flag
+#define FLAG_VENDINGMACHINE_TM10                                    0x4A2 // Unused Flag
+#define FLAG_VENDINGMACHINE_TM11                                    0x4A3 // Unused Flag
+#define FLAG_VENDINGMACHINE_TM12                                    0x4A4 // Unused Flag
 #define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
 #define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
 #define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
