@@ -216,6 +216,31 @@ static const struct MenuAction MultichoiceList_VendingMachine[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_TMVendingMachine1[] =
+{
+    {gText_TM1AndPrice},
+    {gText_TM2AndPrice},
+    {gText_TM3AndPrice},
+    {gText_TM4AndPrice},
+    {gText_TM5AndPrice},
+    {gText_TM6AndPrice},
+    {gText_TM7AndPrice},
+    {gText_Next},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_TMVendingMachine2[] =
+{
+    {gText_TM8AndPrice},
+    {gText_TM9AndPrice},
+    {gText_TM10AndPrice},
+    {gText_TM11AndPrice},
+    {gText_TM12AndPrice},
+    {gText_TM13AndPrice},
+    {gText_Previous},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_MachBikeInfo[] =
 {
     {gText_HowToRide},
@@ -907,6 +932,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_NEW_MECHANICS]              = MULTICHOICE(MultichoiceList_NewMechanics),
+    [MULTI_TM_VENDING_MACHINE1]        = MULTICHOICE(MultichoiceList_TMVendingMachine1),
+    [MULTI_TM_VENDING_MACHINE2]        = MULTICHOICE(MultichoiceList_TMVendingMachine2),
 };
 
 const u8 *const gStdStrings[] =
