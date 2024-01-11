@@ -98,6 +98,9 @@
 #define METATILE_BikeShop_Generator_Off_Tile7      0x2F7
 #define METATILE_BikeShop_Wall_Edge_Top            0x281
 
+// gTileset_BlackForestPreInfection
+#define METATILE_BlackForestPreInfection_HouseDoor  0x0B4
+
 // gTileset_BrendansMaysHouse
 #define METATILE_BrendansMaysHouse_BookOnTable       0x293
 #define METATILE_BrendansMaysHouse_BrendanPC_Off     0x25A

@@ -151,6 +151,7 @@ static const u8 sDoorAnimTiles_CinnibarIsland_Secondary_Door_Warehouse[] = INCBI
 static const u8 sDoorAnimTiles_CinnibarIsland_Primary_Door_NCC[] = INCBIN_U8("graphics/door_anims/cinnabar_ncc.4bpp");
 static const u8 sDoorAnimTiles_CinnibarIsland_Primary_Gym_Door[] = INCBIN_U8("graphics/door_anims/cinnabar_gym.4bpp");
 static const u8 sDoorAnimTiles_CinnibarIsland_Primary_Inn_Door[] = INCBIN_U8("graphics/door_anims/cinnabar_inn.4bpp");
+static const u8 sDoorAnimTiles_BlackForestPreInfection[] = INCBIN_U8("graphics/door_anims/black_forest_pre_infection.4bpp");
 
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
@@ -256,6 +257,7 @@ static const u8 sDoorAnimPalettes_CinnibarIsland_Secondary_Door_Warehouse[] = {8
 static const u8 sDoorAnimPalettes_CinnibarIsland_Primary_Door_NCC[] = {6, 6, 6, 6, 6, 6, 6, 6};
 static const u8 sDoorAnimPalettes_CinnibarIsland_Primary_Gym_Door[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_CinnibarIsland_Primary_Inn_Door[] = {10, 10, 10, 10, 10, 10, 10, 10};
+static const u8 sDoorAnimPalettes_BlackForestPreInfection[] = {2, 2, 2, 2, 2, 2, 2, 2};
 
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
@@ -319,6 +321,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_WalmoreTown_Door_BobsHouse,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_WalmoreTownBobsHouse, sDoorAnimPalettes_WalmoreTownBobsHouse},
     {METATILE_WalmoreTown_DoorsFuckingSuck,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_WalmoreTownJohnsHouse, sDoorAnimPalettes_WalmoreTownJohnsHouse},
     {METATILE_NiagaraWoodsPrimary_HouseDoor,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_NiagaraVillage, sDoorAnimPalettes_NiagaraVillage},
+    {METATILE_BlackForestPreInfection_HouseDoor,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_BlackForestPreInfection, sDoorAnimPalettes_BlackForestPreInfection},
     {METATILE_HomesteadNorth_Door_Lodge,            DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_SnowVillageDoorLodge, sDoorAnimPalettes_SnowVillageDoorLodge},
     {METATILE_HomesteadNorth_Door_PokeCenter,                     DOOR_SOUND_NORMAL, 1, sDoorAnimTiles_SnowTownPokecenter, sDoorAnimPalettes_SnowTownPokeCenter },
     {METATILE_HomesteadNorth_Door_Pokemart,                       DOOR_SOUND_SLIDING, 1, sDoorAnimTilesSnowTownPokemart, sDoorAnimPalettes_SnowTownPokemart},
