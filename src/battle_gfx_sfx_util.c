@@ -936,7 +936,7 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
 {
     s32 i, position, palOffset, newSubstituteGfx, newSubstitutePalette;
     u16 species, eggSpecies, subSpecies;
-    u32 personality, otId;
+    u32 personality, otId, monPalette;
     
     species = gBattleMons[battlerId].species; //Beedrill
     eggSpecies = GetEggSpecies(species); //weedle
@@ -1020,6 +1020,8 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
                     && species != eggSpecies)
             {
             LoadCompressedPalette(GetMonSpritePalFromSpeciesAndPersonality(subSpecies, otId, personality), palOffset, 32);
+            TintPalette_GrayScale(&gPlttBufferUnfaded[palOffset], 16);
+            TintPalette_GrayScale(&gPlttBufferFaded[palOffset], 16);
             }
         else
         LoadCompressedPalette(gSubstituteDollPal, palOffset, 32);

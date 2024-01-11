@@ -8723,6 +8723,24 @@ u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, bool32 i
         break;
     }
 
+    //bugstitute boost
+    if(gBattleSpritesDataPtr->battlerData[battlerAtk].substituteType == TYPE_BUG
+    && stat == STAT_ATK)
+        {
+            if(gBattleSpritesDataPtr->battlerData[battlerAtk].bugSubstituteEvolveCount == 0)
+                MulModifier(&modifier, UQ_4_12(0.1));
+            if(gBattleSpritesDataPtr->battlerData[battlerAtk].bugSubstituteEvolveCount == 2)
+                MulModifier(&modifier, UQ_4_12(6.0));
+        }
+    if(gBattleSpritesDataPtr->battlerData[battlerAtk].substituteType == TYPE_BUG
+    && stat == STAT_SPATK)
+        {
+            if(gBattleSpritesDataPtr->battlerData[battlerAtk].bugSubstituteEvolveCount == 0)
+                MulModifier(&modifier, UQ_4_12(0.1));
+            if(gBattleSpritesDataPtr->battlerData[battlerAtk].bugSubstituteEvolveCount == 2)
+                MulModifier(&modifier, UQ_4_12(6.0));
+        }
+
     // The offensive stats of a Player's Pokémon are boosted by x1.1 (+10%) if they have the 1st badge and 7th badges.
     // Having the 1st badge boosts physical attack while having the 7th badge boosts special attack.
     // if (ShouldGetStatBadgeBoost(FLAG_BADGE01_GET, battlerAtk) && stat == STAT_ATK)

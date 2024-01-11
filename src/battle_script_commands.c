@@ -8231,11 +8231,11 @@ static void Cmd_various(void)
                     {
                         if(gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer > 0)
                             gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer--;
-                        if(species - eggSpecies == 2)
+                        if(species - eggSpecies >= 2)
                             {
                                 gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
-                                eggSpeciesMaxHP = ((gBattleMons[gBattlerAttacker].maxHP * 105) /100);
-                                gDisableStructs[gBattlerAttacker].substituteHP = eggSpeciesMaxHP;
+                                eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 105) /100);
+                                gDisableStructs[gBattleScripting.battler].substituteHP = eggSpeciesMaxHP;
                                 BattleScriptPushCursor();
                                 gBattlescriptCurrInstr = BattleScript_BugSubstituteAnim2;
                                 return;
@@ -8253,8 +8253,8 @@ static void Cmd_various(void)
                         if(species != eggSpecies)
                             {
                             gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
-                            eggSpeciesMaxHP = ((gBattleMons[gBattlerAttacker].maxHP * 95) /100);
-                            gDisableStructs[gBattlerAttacker].substituteHP = eggSpeciesMaxHP;
+                            eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 95) /100);
+                            gDisableStructs[gBattleScripting.battler].substituteHP = eggSpeciesMaxHP;
                             BattleScriptPushCursor();
                             gBattlescriptCurrInstr = BattleScript_BugSubstituteAnim2;
                             }

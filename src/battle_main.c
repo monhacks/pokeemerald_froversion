@@ -5002,6 +5002,17 @@ u32 GetBattlerTotalSpeedStat(u8 battlerId)
     speed *= gStatStageRatios[gBattleMons[battlerId].statStages[STAT_SPEED]][0];
     speed /= gStatStageRatios[gBattleMons[battlerId].statStages[STAT_SPEED]][1];
 
+    //bugstitute boost
+    if(gBattleSpritesDataPtr->battlerData[battlerId].substituteType == TYPE_BUG)
+        {
+            if(gBattleSpritesDataPtr->battlerData[battlerId].bugSubstituteEvolveCount == 0)
+                {
+                    speed = (speed * 90) / 100;
+                }
+            if(gBattleSpritesDataPtr->battlerData[battlerId].bugSubstituteEvolveCount == 2)
+                speed = (speed * 110) / 100;
+        }
+
     // player's badge boost
     // if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK | BATTLE_TYPE_FRONTIER))
     //     && ShouldGetStatBadgeBoost(FLAG_BADGE03_GET, battlerId)
