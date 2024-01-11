@@ -86,6 +86,9 @@ BlackForest1_EventScript_WildBattleSpecialGastly:
 	waitmoncry
 	special StartGastlyBattle
 	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq WildBattleSpecialGastlyOutcomeRan
 	msgbox BlackForest1_Text_WildGastlyDroppedThis, MSGBOX_DEFAULT
 	// FROVERSION SCRIPT giveitem ITEM_SPELLBOOK, 1
 	giveitem ITEM_POKEPRIMER, 1
@@ -94,6 +97,19 @@ BlackForest1_EventScript_WildBattleSpecialGastly:
 	removeobject 6
 	waitmoncry
 	givecustommon SPECIES_GASTLY, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_GIGA_DRAIN, MOVE_SUBSTITUTE, 0
+	setflag FLAG_FOUND_CIPHER
+	release
+end
+
+WildBattleSpecialGastlyOutcomeRan:
+	playmoncry SPECIES_GASTLY, 2
+	removeobject 6
+	waitmoncry
+	msgbox BlackForest1_Text_WildGastlyRan, MSGBOX_DEFAULT
+	closemessage
+	msgbox BlackForest1_Text_WildGastlyDroppedThis, MSGBOX_DEFAULT
+	// FROVERSION SCRIPT giveitem ITEM_SPELLBOOK, 1
+	giveitem ITEM_POKEPRIMER, 1
 	setflag FLAG_FOUND_CIPHER
 	release
 end
@@ -131,12 +147,39 @@ BlackForest1_EventScript_ProfessorsBag::
 	release
 	end
 
+
+
 EventScript_BlackForest1_Venusaur::
-	givecustommon SPECIES_VENUSAUR, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_SLEEP_POWDER, MOVE_LEECH_SEED, MOVE_SLUDGE_BOMB, MOVE_SYNTHESIS, 0
+	playmoncry SPECIES_VENUSAUR, 2
+	setwildbattle SPECIES_VENUSAUR, 50, ITEM_NONE
+	waitmoncry
+	special StartVenusaurBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq WildBattleSpecialVenusaurOutcomeRan
+	msgbox Text_BlackForest3_VenusaurJoins, MSGBOX_DEFAULT
+	playmoncry SPECIES_VENUSAUR, 2
 	removeobject 7
+	waitmoncry
+	givecustommon SPECIES_VENUSAUR, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_CURSE, MOVE_SLUDGE_BOMB, MOVE_LEECH_SEED, MOVE_SYNTHESIS, 0
 	setflag FLAG_ITEM_MOUNT_CINNABAR_NORTHWEST_1F_MAX_REVIVE
 	release
 	end
+
+WildBattleSpecialVenusaurOutcomeRan:
+	playmoncry SPECIES_VENUSAUR, 2
+	removeobject 7
+	waitmoncry
+	msgbox BlackForest3_Text_WildVenusaurRan, MSGBOX_DEFAULT
+	setflag FLAG_ITEM_MOUNT_CINNABAR_NORTHWEST_1F_MAX_REVIVE
+	release
+end
+
+BlackForest1_Text_WildVenusaurRan:
+	.string "The wild Venusaur ran away in the\n"
+	.string "opposite direction!$"
+
 
 
 BlackForest1_Text_WildGastlyBattle:
@@ -172,3 +215,18 @@ BlackForest1_Text_ProfessorsBagFound:
 	.string "Gooseberry”\p"
 	.string "It looks like there is a Diary\n"
 	.string "inside.$"
+
+BlackForest1_Text_WildGastlyRan:
+	.string "The wild Gastly ran away in the\n"
+	.string "opposite direction!$"
+
+BlackForest3_Text_WildVenusaurRan:
+	.string "The wild Venusaur ran away in the\n"
+	.string "opposite direction!$"
+
+Text_BlackForest3_VenusaurJoins:
+	.string "The wild Venusaur seems to want to join\n"
+	.string "you after you've defeated it.\p"
+	.string "{PLAYER} allows Venusaur to join the\n"
+	.string  "party.$"
+

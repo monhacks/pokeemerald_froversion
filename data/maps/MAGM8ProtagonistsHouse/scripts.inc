@@ -287,6 +287,7 @@ MAGM8ProtagonistsHouse_EventScriptWouldYouLikeToSleepYes:
 	fadescreen FADE_TO_BLACK
 	playfanfare MUS_FV_GOODNIGHT
 	waitfanfare
+	closemessage
 	setobjectxy 1, 6, 5
 	setobjectmovementtype 1, MOVEMENT_TYPE_FACE_RIGHT
 	special HealPlayerParty

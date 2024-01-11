@@ -540,3 +540,5 @@ gSpecials:: @ 81DBA64
 	def_special IsSpeciesInParty							@uses gSpecialVar_0x8005 to check against
 	def_special RemoveAllPartySlots
 	def_special StartGastlyBattle
+	def_special StartMurkrowBattle
+	def_special StartVenusaurBattle
