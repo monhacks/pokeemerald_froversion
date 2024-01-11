@@ -10710,7 +10710,7 @@ static void Cmd_transformdataexecution(void)
 static void Cmd_setsubstitute(void)
 {
     u16 species, eggSpecies;
-    u32 hp;
+    u32 hp = gBattleMons[gBattlerAttacker].maxHP / 4;
     s32 eggSpeciesMaxHP;
 
     species = gBattleMons[gBattlerAttacker].species;
@@ -10721,7 +10721,7 @@ static void Cmd_setsubstitute(void)
 
     if (gBattleMons[gBattlerAttacker].maxHP / 4 == 0)
         hp = 1;
-
+        Printf ("hp = %d", gBattleMons[gBattlerAttacker].hp);
     if (gBattleMons[gBattlerAttacker].hp <= hp)
     {
         gBattleMoveDamage = 0;
