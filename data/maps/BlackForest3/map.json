@@ -42,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 68,
+      "x": 63,
       "y": 44,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
