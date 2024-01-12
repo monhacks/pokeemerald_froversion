@@ -9104,7 +9104,7 @@ static const struct LevelUpMove sFiller_36LevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };
-static const struct LevelUpMove sFiller_37LevelUpLearnset[] = {
+static const struct LevelUpMove sAriados_GhostLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };

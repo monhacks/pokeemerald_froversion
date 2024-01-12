@@ -4012,6 +4012,9 @@ void BattleTurnPassed(void)
     
     if (gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_BLAZIKEN)
         SetOpponentMovesBlaziken();
+
+    //if (gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ARIADOS)
+        //SetOpponentMovesAriadosBoss();
 }
 
 bool32 IsMoveOneOf(u16 move, const u16 *moves)

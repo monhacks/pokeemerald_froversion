@@ -3,7 +3,7 @@
   "name": "MAGM8ForestTownPostInfection",
   "layout": "LAYOUT_MAGM8FOREST_TOWN_POST_INFECTION",
   "music": "MUS_FV_HAUNTED",
-  "region_map_section": "MAPSEC_FORTREE_CITY",
+  "region_map_section": "MAPSEC_PEWTER_CITY",
   "requires_flash": false,
   "weather": "WEATHER_PARTICLE",
   "map_type": "MAP_TYPE_CITY",

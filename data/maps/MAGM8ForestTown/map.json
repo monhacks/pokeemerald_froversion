@@ -3,7 +3,7 @@
   "name": "MAGM8ForestTown",
   "layout": "LAYOUT_MAGM8FOREST_TOWN",
   "music": "MUS_FV_MAGM8_FOREST",
-  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "region_map_section": "MAPSEC_PEWTER_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",

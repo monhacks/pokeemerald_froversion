@@ -2701,7 +2701,7 @@ const u8 gFiller_36PokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_37PokedexText[] = _(
+const u8 gAriados_GhostPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"

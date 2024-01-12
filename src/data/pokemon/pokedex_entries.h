@@ -5505,12 +5505,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_37] =
+[NATIONAL_DEX_ARIADOS_GHOST] =
     {
         .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
-        .description = gFiller_37PokedexText,
+        .description = gAriados_GhostPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,

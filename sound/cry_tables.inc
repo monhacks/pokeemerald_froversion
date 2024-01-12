@@ -467,8 +467,8 @@ cry Cry_Filler_33
 cry Cry_Filler_34
 cry Cry_Filler_35
 cry Cry_Filler_36
-cry Cry_Filler_37
-cry Cry_Filler_38
+cry Cry_Ariados_Ghost
+cry Cry_Ariados_Ghost
 cry Cry_Charizard_X
 cry Cry_Warklock
 cry Cry_Cloclock
@@ -943,8 +943,8 @@ cry2 Cry_Filler_33
 cry2 Cry_Filler_34
 cry2 Cry_Filler_35
 cry2 Cry_Filler_36
-cry2 Cry_Filler_37
-cry2 Cry_Filler_38
+cry2 Cry_Ariados_Ghost
+cry2 Cry_Ariados_Ghost
 cry2 Cry_Charizard_X
 cry2 Cry_Warklock
 cry2 Cry_Cloclock

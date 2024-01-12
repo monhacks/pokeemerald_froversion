@@ -2409,8 +2409,8 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
     Cry_Filler_36::
 	.incbin "sound/direct_sound_samples/cries/filler_36.bin"
 .align 2
-    Cry_Filler_37::
-	.incbin "sound/direct_sound_samples/cries/filler_37.bin"
+    Cry_Ariados_Ghost::
+	.incbin "sound/direct_sound_samples/cries/ariados_ghost.bin"
 .align 2
     Cry_Filler_38::
 	.incbin "sound/direct_sound_samples/cries/filler_38.bin"

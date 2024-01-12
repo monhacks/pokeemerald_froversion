@@ -151,7 +151,7 @@ BlackForest1_EventScript_ProfessorsBag::
 
 EventScript_BlackForest1_Venusaur::
 	playmoncry SPECIES_VENUSAUR, 2
-	setwildbattle SPECIES_VENUSAUR, 50, ITEM_NONE
+	setwildbattle SPECIES_ARIADOS_GHOST, 50, ITEM_NONE
 	waitmoncry
 	special StartVenusaurBattle
 	waitstate

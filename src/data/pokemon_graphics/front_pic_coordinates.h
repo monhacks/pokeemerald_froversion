@@ -2595,10 +2595,10 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = 0x00,
     },
-    [SPECIES_FILLER_37] =
+    [SPECIES_ARIADOS_GHOST] =
     {
         .size = 0x88,
-        .y_offset = 0x00,
+        .y_offset = 6,
     },
     [SPECIES_FILLER_38] =
     {
