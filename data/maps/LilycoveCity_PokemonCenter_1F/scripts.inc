@@ -85,6 +85,8 @@ LilycoveCity_PokemonCenter_EventScript_Heal::
 	end
 
 LilycoveCity_PokemonCenter_EventScript_Heal2::
+	dofieldeffect FLDEFF_POKECENTER_HEAL
+    waitfieldeffect FLDEFF_POKECENTER_HEAL
 	special HealPlayerParty
 	release
 	end
@@ -95,6 +97,7 @@ LilycoveCity_PokemonCenter_EventScript_JumpDesk:: @ 821C5FF
 	msgbox LilycoveCity_PokemonCenter_1F_Text_JumpDesk, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq LilycoveCity_PokemonCenter_EventScript_JumpDeskYes
+	release
 	end
 
 LilycoveCity_PokemonCenter_1F_Text_JumpDesk::
@@ -114,6 +117,10 @@ LilycoveCity_PokemonCenter_EventScript_JumpDeskDown::
 	special DrawWholeMapView
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_JumpDeskDown
 	waitmovement 0
+	playse SE_TRUCK_DOOR
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_JumpDeskDown
+	waitmovement 0
+	playse SE_TRUCK_DOOR
 	setmetatile 7, 2, METATILE_PokemonCenter_CounterUncovered, 0
 	special DrawWholeMapView
 	release
@@ -124,6 +131,10 @@ LilycoveCity_PokemonCenter_EventScript_JumpDeskUp::
 	setmetatile 7, 2, METATILE_PokemonCenter_CounterCovered, 0
 	special DrawWholeMapView
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_JumpDeskUp
+	playse SE_TRUCK_DOOR
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_JumpDeskUp
+	playse SE_TRUCK_DOOR
 	waitmovement 0
 	setmetatile 7, 2, METATILE_PokemonCenter_CounterUncovered, 0
 	special DrawWholeMapView
@@ -132,11 +143,9 @@ LilycoveCity_PokemonCenter_EventScript_JumpDeskUp::
 
 Movement_JumpDeskUp: @ 827224E
 	JUMP_SPECIAL_UP
-	JUMP_SPECIAL_UP
 	step_end
 	
 Movement_JumpDeskDown: @ 827224E
-	JUMP_SPECIAL_DOWN
 	JUMP_SPECIAL_DOWN
 	step_end
 

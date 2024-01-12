@@ -1023,9 +1023,9 @@ bool8 FldEff_PokecenterHeal(void)
     task = &gTasks[CreateTask(Task_PokecenterHeal, 0xff)];
     task->tNumMons = nPokemon;
     task->tFirstBallX = 93;
-    task->tFirstBallY = 36;
+    task->tFirstBallY = 36+32;
     task->tMonitorX = 124;
-    task->tMonitorY = 24;
+    task->tMonitorY = 24+32;
     return FALSE;
 }
 
