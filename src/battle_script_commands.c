@@ -3442,11 +3442,13 @@ static void Cmd_clearstatusfromeffect(void)
 static const struct {
     u16 species;
     u16 moves[MAX_MON_MOVES];
-} sFormMoves[] = {
+} 
+sFormMoves[] = {
     { SPECIES_GENGAR, { MOVE_ICE_PUNCH, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_WILL_O_WISP } },
     { SPECIES_PHOTASM, { MOVE_HYPNOSIS, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_CURSE } },
     { SPECIES_MAROWAK_ALOLAN, { MOVE_BONE_RUSH, MOVE_FLARE_BLITZ, MOVE_SHADOW_BONE, MOVE_SWORDS_DANCE } },
     { SPECIES_SPIRETT, { MOVE_PHANTOM_FORCE, MOVE_SHADOW_CLAW, MOVE_SWORDS_DANCE, MOVE_DESTINY_BOND} },
+    { SPECIES_ARIADOS_GHOST, { MOVE_BUG_SUBSTITUTE, MOVE_BUG_SUBSTITUTE, MOVE_BUG_SUBSTITUTE, MOVE_BUG_SUBSTITUTE} },
 };
 
 static void Cmd_tryfaintmon(void)
@@ -10715,9 +10717,7 @@ static void Cmd_setsubstitute(void)
 
     species = gBattleMons[gBattlerAttacker].species;
     eggSpecies = GetEggSpecies(species);
-    Printf("gBattleMons[gBattlerAttacker].maxHP = %d", gBattleMons[gBattlerAttacker].maxHP);
     eggSpeciesMaxHP = ((gBattleMons[gBattlerAttacker].maxHP * 80) /100);
-    Printf("eggSpeciesMaxHP = %d", eggSpeciesMaxHP);
 
     if (gBattleMons[gBattlerAttacker].maxHP / 4 == 0)
         hp = 1;

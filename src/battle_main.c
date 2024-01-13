@@ -126,6 +126,9 @@ static void SetOpponentMovesAbyssalHighDragon(void);
 static void SetOpponentMovesMattFinalBoss(void);
 static void SetOpponentMovesMattFinalBossAccordingToItem(void);
 static void SetOpponentMovesMattFinalBossAccordingToStatus(void);
+static void SetOpponentMovesAriadosBoss(void);
+static void SetOpponentMovesAriadosBossAccordingToItem(void);
+static void SetOpponentMovesAriadosBossAccordingToStatus(void);
 
 // EWRAM vars
 EWRAM_DATA u16 gBattle_BG0_X = 0;
@@ -3925,6 +3928,42 @@ const u16 gCheetoMiscMoves[] =
         MOVE_REFLECT,
         0xFFFF
     };
+    
+const u16 gAriadosBossMiscMoves[] =
+    {
+        MOVE_SCREECH,
+        MOVE_COPYCAT,
+        MOVE_LIGHT_SCREEN,
+        MOVE_REFLECT,
+        0xFFFF
+    };
+
+const u16 gAriadosBossGhostMoves[] =
+    {
+        MOVE_DRAINING_KISS,
+        MOVE_MOONBLAST,
+        MOVE_MISTY_TERRAIN,
+        MOVE_STRANGE_STEAM,
+        0xFFFF
+    };
+
+const u16 gariadosBossBugMoves[] =
+    {
+        MOVE_PSYCHIC,
+        MOVE_PSYCHIC_TERRAIN,
+        MOVE_FREEZING_GLARE,
+        MOVE_FUTURE_SIGHT,
+        0xFFFF
+    };
+
+const u16 gAriadosBossPoisonMoves[] =
+    {
+        MOVE_FLARE_BLITZ,
+        MOVE_SUNNY_DAY,
+        MOVE_FIRE_FANG,
+        MOVE_SACRED_FIRE,
+        0xFFFF
+    };
 
 void BattleTurnPassed(void)
 {
@@ -4012,9 +4051,9 @@ void BattleTurnPassed(void)
     
     if (gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_BLAZIKEN)
         SetOpponentMovesBlaziken();
-
-    //if (gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ARIADOS)
-        //SetOpponentMovesAriadosBoss();
+        Printf("species = %d",gBattleMons[B_POSITION_OPPONENT_LEFT].species);
+    if (gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ARIADOS_GHOST)
+        SetOpponentMovesAriadosBoss();
 }
 
 bool32 IsMoveOneOf(u16 move, const u16 *moves)
@@ -4117,6 +4156,138 @@ static void SetOpponentMovesMattFinalBossAccordingToStatus(void)
 }
 
 static void SetOpponentMovesMattFinalBossAccordingToItem(void)
+{
+
+     if(gBattleMons[B_POSITION_OPPONENT_LEFT].item == ITEM_PSYCHIC_GEM)
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_PSYCHIC;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_PSYCHO_CUT;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_EXTRASENSORY;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_PSYCHIC_FANGS;
+                return;
+        }
+        else if(gBattleMons[B_POSITION_OPPONENT_LEFT].item == ITEM_FAIRY_GEM)
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DAZZLING_GLEAM;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_PLAY_ROUGH;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_MOONBLAST;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_DRAINING_KISS;
+                return;
+        }
+        else if(gBattleMons[B_POSITION_OPPONENT_LEFT].item == ITEM_FIRE_GEM)
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_FIRE_FANG;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_FLAMETHROWER;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_SUNNY_DAY;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_FIRE_SPIN;
+                return;
+        }
+        else if(gBattleMons[B_POSITION_OPPONENT_LEFT].item == ITEM_LIGHT_CLAY)
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_REFLECT;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_LIGHT_SCREEN;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_PSYCHIC_TERRAIN;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_MISTY_TERRAIN;
+                return;
+        }
+        else
+        return;
+        
+}
+
+static void SetOpponentMovesAriadosBoss(void)
+{
+    s32 i, j;
+    s32 ariadosBossStatTotal = 0;
+    s32 ariadosBossDifficultyThreshold;
+    u8 ariadosBossTopsyTurveyChance = Random() % 256;
+    bool32 playerHasBigBoosts = FALSE;
+    Printf("test1");
+
+    for (j = 0; j < NUM_BATTLE_STATS; j++)
+        {
+            ariadosBossStatTotal += gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[j];
+        }
+    
+  for (i = 0; i < NUM_BATTLE_STATS; i++)
+    {
+    if (gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] > 9 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] > 9 )
+                playerHasBigBoosts = TRUE;
+    }
+
+    switch (gSaveBlock2Ptr->optionsWindowDifficulty)
+    {
+    case OPTIONS_DIFFICULTY_EASY:
+        ariadosBossDifficultyThreshold = 32; 
+        break;
+    case OPTIONS_DIFFICULTY_NORMAL:
+        ariadosBossDifficultyThreshold = 36; 
+        break;
+    case OPTIONS_DIFFICULTY_HARD:
+        ariadosBossDifficultyThreshold = 39; 
+        break;
+    }
+    
+    if(playerHasBigBoosts == TRUE
+        && ariadosBossTopsyTurveyChance > 125
+        && !(gBattleMons[B_POSITION_OPPONENT_LEFT].status1) & STATUS1_SLEEP)
+        {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_CLEAR_SMOG;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_CLEAR_SMOG;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_CLEAR_SMOG;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_CLEAR_SMOG;
+            return; 
+        }
+    if((ariadosBossStatTotal < ariadosBossDifficultyThreshold)
+        && ariadosBossTopsyTurveyChance > 125
+        && !(gBattleMons[B_POSITION_OPPONENT_LEFT].status1) & STATUS1_SLEEP)
+        {
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_TOPSY_TURVY;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TOPSY_TURVY;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_TOPSY_TURVY;
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_TOPSY_TURVY;
+            return;
+        }
+    else if(gBattleMons[B_POSITION_OPPONENT_LEFT].status1 & STATUS1_ANY)
+        SetOpponentMovesAriadosBossAccordingToStatus();
+    else if(IsItemOneOf(gBattleMons[B_POSITION_OPPONENT_LEFT].item, gAriadosBossSecondaryItems))
+        {
+            SetOpponentMovesAriadosBossAccordingToItem();
+            Printf("test2");}
+    else
+        {
+            Printf("test3");
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = gAriadosBossMiscMoves[Random() % 4];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = gAriadosBossPoisonMoves[Random() % 4];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = gAriadosBossGhostMoves[Random() % 4];
+            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = gariadosBossBugMoves[Random() % 4];
+        }
+
+}
+
+static void SetOpponentMovesAriadosBossAccordingToStatus(void)
+{
+     if(gBattleMons[B_POSITION_OPPONENT_LEFT].status1 & STATUS1_BURN)
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_FIRE_BLAST;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_FLAMETHROWER;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_FIRE_BLAST;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_FLAMETHROWER;
+                return;
+        }
+        else if(gBattleMons[B_POSITION_OPPONENT_LEFT].status1 & STATUS1_SLEEP)
+        {
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SLEEP_TALK;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_LAVA_PLUME;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_DAZZLING_GLEAM;
+                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_PSYCHIC;
+                return;
+        }
+        else
+        return;
+}
+
+static void SetOpponentMovesAriadosBossAccordingToItem(void)
 {
 
      if(gBattleMons[B_POSITION_OPPONENT_LEFT].item == ITEM_PSYCHIC_GEM)
@@ -4707,6 +4878,19 @@ static void HandleTurnActionSelectionState(void)
                     BattleScriptExecute(BattleScript_PrintCantRunFromTrainer);
                     gBattleCommunication[gActiveBattler] = STATE_BEFORE_ACTION_CHOSEN;
                 }
+                // Conditions to prevent escape from final boss in MAGM8
+                else if (gBattleTypeFlags & BATTLE_TYPE_REGI
+                         && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
+                         && gBattleResources->bufferB[gActiveBattler][1] == B_ACTION_RUN
+                         && B_VERSION_MAGEE
+                         && FlagGet(FLAG_BATTLE_HAUNTING))
+                {
+                    gSelectionBattleScripts[gActiveBattler] = BattleScript_PrintCantEscapeFromBattle;
+                    gBattleCommunication[gActiveBattler] = STATE_SELECTION_SCRIPT;
+                    *(gBattleStruct->selectionScriptFinished + gActiveBattler) = FALSE;
+                    *(gBattleStruct->stateIdAfterSelScript + gActiveBattler) = STATE_BEFORE_ACTION_CHOSEN;
+                    return;
+                }
                 else if (IsRunningFromBattleImpossible()
                          && gBattleResources->bufferB[gActiveBattler][1] == B_ACTION_RUN)
                 {
@@ -5152,6 +5336,7 @@ const u16 gSlashingMoves[] =
         SPECIES_RHYDON,
         SPECIES_DUGTRIO,
         SPECIES_ABYSSALDRAGONTHIRDEVO,
+        SPECIES_ARIADOS_GHOST,
         0xFFFF
     };
 
@@ -5197,6 +5382,18 @@ const u16 gCheetoSecondaryItems[] =
     ITEM_PSYCHIC_GEM,
     ITEM_FIRE_GEM,
     ITEM_NONE,
+    0xFFFF
+};
+
+const u16 gAriadosBossSecondaryItems[] =
+{
+    ITEM_ROCKY_HELMET,
+    ITEM_LIFE_ORB,
+    ITEM_ASSAULT_VEST,
+    ITEM_LIGHT_CLAY,
+    ITEM_BUG_GEM,
+    ITEM_GHOST_GEM,
+    ITEM_POISON_GEM,
     0xFFFF
 };
 

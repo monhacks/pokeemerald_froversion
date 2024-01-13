@@ -32,6 +32,7 @@ extern const u16 gMegaBosses[];
 extern const u16 gLevitateMons[];
 extern const u16 gSelfInflictingItems[];
 extern const u16 gCheetoSecondaryItems[];
+extern const u16 gAriadosBossSecondaryItems[];
 extern const u16 gNonStealItems[];
 extern const u16 gWildPokemonDropItems[];
 extern const u16 gNonOrganicItems[];

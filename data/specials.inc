@@ -542,3 +542,4 @@ gSpecials:: @ 81DBA64
 	def_special StartGastlyBattle
 	def_special StartMurkrowBattle
 	def_special StartVenusaurBattle
+	def_special StartAriadosBossBattle
