@@ -3183,6 +3183,10 @@ void CalculateMonStats(struct Pokemon *mon)
     {
         newMaxHP = 2000;
     }
+    else if (species == SPECIES_ARIADOS_GHOST && B_VERSION_MAGEE)
+    {
+        newMaxHP = 700;
+    }
     else
     {
         s32 n = 2 * gBaseStats[species].baseHP + hpIV;

@@ -791,7 +791,7 @@ void StartAriadosBossBattle(void)
     u16 species;
     s32 move1 = MOVE_SLUDGE_BOMB;
     s32 move2 = MOVE_SIGNAL_BEAM;
-    s32 move3 = MOVE_SPIDER_WEB;
+    s32 move3 = MOVE_EARTHQUAKE;
     s32 move4 = MOVE_GIGA_DRAIN;
     s32 movePP = 200;
     s32 hp = 500;

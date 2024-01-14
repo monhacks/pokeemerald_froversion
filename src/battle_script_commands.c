@@ -8236,7 +8236,10 @@ static void Cmd_various(void)
                         if(species - eggSpecies >= 2)
                             {
                                 gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
-                                eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 105) /100);
+                                if(IsSpeciesOneOf(gBattleMons[gBattleScripting.battler].species, gMegaBosses))
+                                    eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 17) /100);
+                                else
+                                    eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 105) /100);
                                 gDisableStructs[gBattleScripting.battler].substituteHP = eggSpeciesMaxHP;
                                 BattleScriptPushCursor();
                                 gBattlescriptCurrInstr = BattleScript_BugSubstituteAnim2;
@@ -8255,7 +8258,10 @@ static void Cmd_various(void)
                         if(species != eggSpecies)
                             {
                             gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
-                            eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 95) /100);
+                            if(IsSpeciesOneOf(gBattleMons[gBattleScripting.battler].species, gMegaBosses))
+                                eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 20) /100);
+                            else
+                                eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 95) /100);
                             gDisableStructs[gBattleScripting.battler].substituteHP = eggSpeciesMaxHP;
                             BattleScriptPushCursor();
                             gBattlescriptCurrInstr = BattleScript_BugSubstituteAnim2;
@@ -10717,7 +10723,10 @@ static void Cmd_setsubstitute(void)
 
     species = gBattleMons[gBattlerAttacker].species;
     eggSpecies = GetEggSpecies(species);
-    eggSpeciesMaxHP = ((gBattleMons[gBattlerAttacker].maxHP * 80) /100);
+    if(IsSpeciesOneOf(species, gMegaBosses))
+        eggSpeciesMaxHP = ((gBattleMons[gBattlerAttacker].maxHP * 14) /100);
+    else
+        eggSpeciesMaxHP = ((gBattleMons[gBattlerAttacker].maxHP * 80) /100);
 
     if (gBattleMons[gBattlerAttacker].maxHP / 4 == 0)
         hp = 1;
