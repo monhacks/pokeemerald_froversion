@@ -2608,3 +2608,63 @@ const struct SpriteFrameImage gObjectEventPicTable_GastlySide[] = {
     overworld_frame(gObjectEventPic_Gastly, 4, 4, 3),
     overworld_frame(gObjectEventPic_Gastly, 4, 4, 3),
 };
+
+const struct SpriteFrameImage gObjectEventPicTable_AriadosFront[] = {
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 1),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_AriadosSide[] = {
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Ariados, 4, 4, 3),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_VenusaurFront[] = {
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 1),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_VenusaurSide[] = {
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Venusaur, 4, 4, 3),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_Murkrow[] = {
+    overworld_frame(gObjectEventPic_Murkrow, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Murkrow, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Murkrow, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Murkrow, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Murkrow, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Murkrow, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Murkrow, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Murkrow, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Murkrow, 2, 2, 2),
+};

@@ -4250,7 +4250,8 @@ static void SetOpponentMovesAriadosBoss(void)
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_TOPSY_TURVY;
             return;
         }
-    if((gBattleMons[B_POSITION_OPPONENT_LEFT].status2) != STATUS2_SUBSTITUTE)
+    if(((gBattleMons[B_POSITION_OPPONENT_LEFT].status2) != STATUS2_SUBSTITUTE)
+        && ariadosBossTopsyTurveyChance > 125)
         {
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_BUG_SUBSTITUTE;
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_BUG_SUBSTITUTE;
@@ -4263,10 +4264,9 @@ static void SetOpponentMovesAriadosBoss(void)
     else if(IsItemOneOf(gBattleMons[B_POSITION_OPPONENT_LEFT].item, gAriadosBossSecondaryItems))
         {
             SetOpponentMovesAriadosBossAccordingToItem();
-            Printf("test2");}
+        }
     else
         {
-            Printf("test3");
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = gAriadosBossMiscMoves[Random() % 4];
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = gAriadosBossPoisonMoves[Random() % 4];
             gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = gAriadosBossGhostMoves[Random() % 4];

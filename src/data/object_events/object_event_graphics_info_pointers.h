@@ -281,6 +281,11 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mewtwo;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Boat;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gastly1;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gastly3;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Venusaur1;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Venusaur3;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ariados1;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ariados3;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Murkrow;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -560,6 +565,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BOAT] =                    &gObjectEventGraphicsInfo_Boat,
     [OBJ_EVENT_GFX_GASTLY_1] =                 &gObjectEventGraphicsInfo_Gastly1,
     [OBJ_EVENT_GFX_GASTLY_3] =                 &gObjectEventGraphicsInfo_Gastly3,
+    [OBJ_EVENT_GFX_VENUSAUR_1] =                 &gObjectEventGraphicsInfo_Venusaur1,
+    [OBJ_EVENT_GFX_VENUSAUR_3] =                 &gObjectEventGraphicsInfo_Venusaur3,
+    [OBJ_EVENT_GFX_ARIADOS_1] =                 &gObjectEventGraphicsInfo_Ariados1,
+    [OBJ_EVENT_GFX_ARIADOS_3] =                 &gObjectEventGraphicsInfo_Ariados3,
+    [OBJ_EVENT_GFX_MURKROW] =                    &gObjectEventGraphicsInfo_Murkrow,
 
 
 };

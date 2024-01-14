@@ -465,3 +465,12 @@ const u16 gObjectEventPal_Boat[] = INCBIN_U16("graphics/object_events/palettes/b
 
 const u32 gObjectEventPic_Gastly[] = INCBIN_U32("graphics/object_events/pics/pokemon/gastly.4bpp");
 const u16 gObjectEventPal_Gastly[] = INCBIN_U16("graphics/object_events/palettes/gastly.gbapal");
+
+const u32 gObjectEventPic_Murkrow[] = INCBIN_U32("graphics/object_events/pics/pokemon/murkrow.4bpp");
+const u16 gObjectEventPal_Murkrow[] = INCBIN_U16("graphics/object_events/palettes/murkrow.gbapal");
+
+const u32 gObjectEventPic_Ariados[] = INCBIN_U32("graphics/object_events/pics/pokemon/ariados.4bpp");
+const u16 gObjectEventPal_Ariados[] = INCBIN_U16("graphics/object_events/palettes/ariados.gbapal");
+
+const u32 gObjectEventPic_Venusaur[] = INCBIN_U32("graphics/object_events/pics/pokemon/venusaur.4bpp");
+const u16 gObjectEventPal_Venusaur[] = INCBIN_U16("graphics/object_events/palettes/venusaur.gbapal");
