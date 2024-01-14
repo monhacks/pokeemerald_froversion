@@ -8237,7 +8237,7 @@ static void Cmd_various(void)
                             {
                                 gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
                                 if(IsSpeciesOneOf(gBattleMons[gBattleScripting.battler].species, gMegaBosses))
-                                    eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 17) /100);
+                                    eggSpeciesMaxHP = (((gBattleMons[gBattleScripting.battler].maxHP * 17) /100) - gDisableStructs[gBattleScripting.battler].substituteHP);
                                 else
                                     eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 105) /100);
                                 gDisableStructs[gBattleScripting.battler].substituteHP = eggSpeciesMaxHP;
@@ -8259,7 +8259,7 @@ static void Cmd_various(void)
                             {
                             gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
                             if(IsSpeciesOneOf(gBattleMons[gBattleScripting.battler].species, gMegaBosses))
-                                eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 20) /100);
+                                eggSpeciesMaxHP = (((gBattleMons[gBattleScripting.battler].maxHP * 20) /100) - gDisableStructs[gBattleScripting.battler].substituteHP);
                             else
                                 eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 95) /100);
                             gDisableStructs[gBattleScripting.battler].substituteHP = eggSpeciesMaxHP;

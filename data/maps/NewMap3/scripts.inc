@@ -7,13 +7,28 @@ EventScript_NewMap3_AriadosBossBattle::
 	setwildbattle SPECIES_ARIADOS, 50, ITEM_NONE
 	waitmoncry
 	setflag FLAG_BATTLE_HAUNTING
+	setflag FLAG_CAN_LOSE_NEXT_BATTLE
 	special StartAriadosBossBattle
 	waitstate
-	//msgbox Text_NewMap3_TheAirFeelsClear, MSGBOX_DEFAULT
-	playmoncry SPECIES_VENUSAUR, 2
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_LOST
+	goto_if_eq EventScript_NewMap3_AriadosBossBattleLost
+	msgbox Text_NewMap3_TheAirFeelsClear, MSGBOX_DEFAULT
+	playmoncry SPECIES_ARIADOS, 2
 	removeobject 1
-	waitmoncry
-	givecustommon SPECIES_VENUSAUR, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_CURSE, MOVE_SLUDGE_BOMB, MOVE_LEECH_SEED, MOVE_SYNTHESIS, 0
 	setflag FLAG_ITEM_MOUNT_CINNABAR_WEST_1F_NUGGET
 	release
 	end
+
+EventScript_NewMap3_AriadosBossBattleLost:
+	msgbox Text_NewMap3_TheAirFeelsHeavy, MSGBOX_DEFAULT
+	fadescreen FADE_TO_BLACK
+	warpsilent MAP_MAGM8EXTENDED_FOREST, 255, 44, 28 //replace this with anercomps map
+	
+
+Text_NewMap3_TheAirFeelsClear::
+	.string "{PLAYER} notices the air feels clear.$"
+
+Text_NewMap3_TheAirFeelsHeavy::
+	.string "{PLAYER} notices the air feels heavy.\p"
+	.string "{PLAYER} passes out.$"
