@@ -335,7 +335,7 @@ MAGM8ProtagonistsHouse_EventScript_Sink::
 end
 
 MAGM8ProtagonistsHouse_EventScript_Cabinets::
-	setflag FLAG_ITEM_MOUNT_CINNABAR_WEST_1F_NUGGET
+	setflag FLAG_LOST_BOSS_BATTLE
 	lockall
 		msgbox MAGM8ProtagonistsHouse_Text_Cabinets, MSGBOX_DEFAULT
 	releaseall

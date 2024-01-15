@@ -3,6 +3,8 @@ MAGM8ExtendedForest_MapScripts::
 
 MAGM8ExtendedForest_Eventscript_GiveUp::
 	msgbox MAGM8ExtendedForest_Text_GiveUp, MSGBOX_DEFAULT
+	waitmessage
+	fadescreenspeed FADE_TO_BLACK, 24
 	special GameClear
 	waitstate
 	releaseall
