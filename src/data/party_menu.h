@@ -1206,7 +1206,7 @@ static const u8 *const sUnused_StatStrings[] =
 
 static const u16 sTMHMMoves[] =
 {
-    [ITEM_TM01 - ITEM_TM01] = MOVE_WIDE_GUARD,
+    [ITEM_TM01 - ITEM_TM01] = MOVE_FOCUS_PUNCH,
     [ITEM_TM02 - ITEM_TM01] = MOVE_DRAGON_CLAW,
     [ITEM_TM03 - ITEM_TM01] = MOVE_WATER_PULSE,
     [ITEM_TM04 - ITEM_TM01] = MOVE_CALM_MIND,

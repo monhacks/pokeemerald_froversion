@@ -15,7 +15,9 @@ EventScript_BlackForest3_Murkrow::
 	playmoncry SPECIES_MURKROW, 2
 	removeobject 5
 	waitmoncry
+	playfanfare  MUS_OBTAIN_ITEM
 	givecustommon SPECIES_MURKROW, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_DRILL_PECK, MOVE_SHADOW_BALL, MOVE_PROTECT, MOVE_REST, 0
+	waitfanfare
 	setflag FLAG_ITEM_MOUNT_CINNABAR_WEST_1F_ULTRA_BALL
 	release
 	end
@@ -24,7 +26,9 @@ WildBattleSpecialMurkrowOutcomeRan:
 	playmoncry SPECIES_MURKROW, 2
 	removeobject 5
 	waitmoncry
+	playfanfare MUS_OBTAIN_ITEM
 	msgbox BlackForest3_Text_WildMurkrowRan, MSGBOX_DEFAULT
+	waitfanfare
 	setflag FLAG_ITEM_MOUNT_CINNABAR_WEST_1F_ULTRA_BALL
 	release
 end

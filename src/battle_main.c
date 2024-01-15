@@ -5435,7 +5435,13 @@ const u16 gWildPokemonDropItems[] =
     ITEM_X_DEFENSE,
     ITEM_X_SP_DEF,
     ITEM_X_SPEED,
-    ITEM_NONE,
+    ITEM_POTION,
+    ITEM_SUPER_POTION,
+    ITEM_HYPER_POTION,
+    ITEM_MAX_POTION,
+    ITEM_REVIVE,
+    ITEM_FULL_HEAL,
+    ITEM_BURN_HEAL,
     0xFFFF
 };
 
@@ -5454,6 +5460,7 @@ const u16 gNonOrganicItems[] =
     ITEM_SUPER_POTION,
     ITEM_HYPER_POTION,
     ITEM_MAX_POTION,
+    ITEM_REVIVE,
     ITEM_FULL_HEAL,
     ITEM_BURN_HEAL,
     ITEM_NONE,

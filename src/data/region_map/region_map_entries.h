@@ -201,6 +201,7 @@ static const u8 sMapName_TrainerHill[] = _("Trainer Hill");
 static const u8 sMapName_NiagaraVillage[] = _("Niagara Village");
 static const u8 sMapName_WalmoreTown[] = _("Walmore Town");
 static const u8 sMapName_SummitCaverns[] = _("Summit Caverns");
+static const u8 sMapName_Unknown[] = _("???");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_ABANDONED_SHIP]             = {6, 14, 1, 1, sMapName_AbandonedShip},
@@ -251,7 +252,7 @@ const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_KANTO_SAFARI_ZONE]          = {0, 0, 1, 1, sMapName_KantoSafariZone},
     [MAPSEC_KANTO_VICTORY_ROAD]         = {0, 0, 1, 1, sMapName_KantoVictoryRoad},
     [MAPSEC_KINDLE_ROAD]                = {0, 0, 1, 1, sMapName_KindleRoad},
-    [MAPSEC_LAKE_MEAD_VILLAGE]          = {4, 11, 1, 1, sMapName_CinnabarIsland},
+    [MAPSEC_LAKE_MEAD_VILLAGE]          = {4, 11, 1, 1, sMapName_Unknown},
     [MAPSEC_LAVARIDGE_TOWN]             = {5, 3, 1, 1, sMapName_LavaridgeTown},
     [MAPSEC_LAVENDER_TOWN]              = {0, 0, 1, 1, sMapName_LavenderTown},
     [MAPSEC_LILYCOVE_CITY]              = {18, 3, 2, 1, sMapName_LilycoveCity},

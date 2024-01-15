@@ -9229,7 +9229,7 @@ static void Cmd_various(void)
             u8 WildPokemonDropChance = Random();
             if(WildPokemonDropChance > 128)
             {
-                u16 item = gWildPokemonDropItems[Random() % 7];
+                u16 item = gWildPokemonDropItems[Random() % 13];
                 if(AddBagItem(item, 1))
                     {
                         gLastUsedItem = item;    

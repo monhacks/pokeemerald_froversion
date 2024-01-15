@@ -96,7 +96,9 @@ BlackForest1_EventScript_WildBattleSpecialGastly:
 	playmoncry SPECIES_GASTLY, 2
 	removeobject 6
 	waitmoncry
+	playfanfare MUS_OBTAIN_ITEM
 	givecustommon SPECIES_GASTLY, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_GIGA_DRAIN, MOVE_SUBSTITUTE, 0
+	waitfanfare
 	setflag FLAG_FOUND_CIPHER
 	release
 end
@@ -151,7 +153,7 @@ BlackForest1_EventScript_ProfessorsBag::
 
 EventScript_BlackForest1_Venusaur::
 	playmoncry SPECIES_VENUSAUR, 2
-	setwildbattle SPECIES_ARIADOS_GHOST, 50, ITEM_NONE
+	setwildbattle SPECIES_VENUSAUR, 50, ITEM_NONE
 	waitmoncry
 	special StartVenusaurBattle
 	waitstate
@@ -162,7 +164,9 @@ EventScript_BlackForest1_Venusaur::
 	playmoncry SPECIES_VENUSAUR, 2
 	removeobject 7
 	waitmoncry
+	playfanfare MUS_OBTAIN_ITEM
 	givecustommon SPECIES_VENUSAUR, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_CURSE, MOVE_SLUDGE_BOMB, MOVE_LEECH_SEED, MOVE_SYNTHESIS, 0
+	waitfanfare
 	setflag FLAG_ITEM_MOUNT_CINNABAR_NORTHWEST_1F_MAX_REVIVE
 	release
 	end

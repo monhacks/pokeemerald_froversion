@@ -506,6 +506,10 @@ MtPyre_Exterior_EventScript_ItemMaxPotion:: @ 829133E
 	finditem ITEM_MAX_POTION
 	end
 
+MtPyre_Exterior_EventScript_ItemAssaultVest::
+	finditem ITEM_ASSAULT_VEST
+	end
+
 MtPyre_Exterior_EventScript_ItemTM48:: @ 829134B
 	finditem ITEM_TM48
 	end
