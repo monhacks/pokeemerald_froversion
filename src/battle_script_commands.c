@@ -7662,7 +7662,7 @@ static void Cmd_various(void)
     u8 data[10];
     u32 side, bits;
     u16 species, eggSpecies, subSpecies;
-    s32 SubstituteDef, SubstituteSpDef, eggSpeciesMaxHP;
+    s32 SubstituteDef, SubstituteSpDef, eggSpeciesMaxHP, eggSpeciesMaxHPModifier;
 
     if (gBattleControllerExecFlags)
         return;
@@ -8235,14 +8235,23 @@ static void Cmd_various(void)
                             gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer--;
                         if(species - eggSpecies >= 2)
                             {
-                                Printf("gDisableStructs[gBattleScripting.battler].substituteHP = %d", gDisableStructs[gBattleScripting.battler].substituteHP);
-                                Printf("((gBattleMons[gBattleScripting.battler].maxHP * 17) /100) = %d",((gBattleMons[gBattleScripting.battler].maxHP * 17) /100));
-                                gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
-                                if(IsSpeciesOneOf(gBattleMons[gBattleScripting.battler].species, gMegaBosses))
-                                    eggSpeciesMaxHP = (((gBattleMons[gBattleScripting.battler].maxHP * 17) /100) - gDisableStructs[gBattleScripting.battler].substituteHP);
-                                else
-                                    eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 105) /100);
-                                gDisableStructs[gBattleScripting.battler].substituteHP = eggSpeciesMaxHP;
+                            gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
+                            if(IsSpeciesOneOf(gBattleMons[gBattleScripting.battler].species, gMegaBosses))
+                                eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 17) /100);
+                            else
+                                eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 95) /100);
+                            
+                            Printf("eggSpeciesMaxHP CHECK BEFORE SETTING MOD = %d", eggSpeciesMaxHP);
+                            eggSpeciesMaxHPModifier = eggSpeciesMaxHP; //set to previous forms Max HP
+                            Printf("eggSpeciesMaxHPModifier CHECK BEFORE SETTING MOD = %d", eggSpeciesMaxHPModifier);
+                            if(IsSpeciesOneOf(gBattleMons[gBattleScripting.battler].species, gMegaBosses))
+                                eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 20) /100);
+                            else
+                                eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 105) /100);
+                                Printf("gDisableStructs[gBattleScripting.battler].substituteHP = %d",gDisableStructs[gBattleScripting.battler].substituteHP);
+                                Printf("eggSpeciesMaxHP = %d",eggSpeciesMaxHP);
+                                Printf("eggSpeciesMaxHPModifier = %d",eggSpeciesMaxHPModifier);
+                                gDisableStructs[gBattleScripting.battler].substituteHP = ((gDisableStructs[gBattleScripting.battler].substituteHP * eggSpeciesMaxHP) / eggSpeciesMaxHPModifier);
                                 BattleScriptPushCursor();
                                 gBattlescriptCurrInstr = BattleScript_BugSubstituteAnim2;
                                 return;
@@ -8259,14 +8268,24 @@ static void Cmd_various(void)
                             gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteTimer--;
                         if(species != eggSpecies)
                             {
-                            Printf("gDisableStructs[gBattleScripting.battler].substituteHP = %d", gDisableStructs[gBattleScripting.battler].substituteHP);
-                            Printf("((gBattleMons[gBattleScripting.battler].maxHP * 20) /100) = %d",((gBattleMons[gBattleScripting.battler].maxHP * 20) /100));
                             gBattleSpritesDataPtr->battlerData[gBattleScripting.battler].bugSubstituteEvolveCount++;
                             if(IsSpeciesOneOf(gBattleMons[gBattleScripting.battler].species, gMegaBosses))
-                                eggSpeciesMaxHP = (((gBattleMons[gBattleScripting.battler].maxHP * 20) /100) - gDisableStructs[gBattleScripting.battler].substituteHP);
+                                eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 14) /100);
+                            else
+                                eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 80) /100);
+                            
+                            Printf("eggSpeciesMaxHP CHECK BEFORE SETTING MOD = %d", eggSpeciesMaxHP);
+                            eggSpeciesMaxHPModifier = eggSpeciesMaxHP; //set to previous forms Max HP
+                            Printf("eggSpeciesMaxHPModifier CHECK BEFORE SETTING MOD = %d", eggSpeciesMaxHPModifier);
+                            if(IsSpeciesOneOf(gBattleMons[gBattleScripting.battler].species, gMegaBosses))
+                                eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 17) /100);
                             else
                                 eggSpeciesMaxHP = ((gBattleMons[gBattleScripting.battler].maxHP * 95) /100);
-                            gDisableStructs[gBattleScripting.battler].substituteHP = eggSpeciesMaxHP;
+
+                            Printf("gDisableStructs[gBattleScripting.battler].substituteHP = %d",gDisableStructs[gBattleScripting.battler].substituteHP);
+                                Printf("eggSpeciesMaxHP = %d",eggSpeciesMaxHP);
+                                Printf("eggSpeciesMaxHPModifier = %d",eggSpeciesMaxHPModifier);
+                            gDisableStructs[gBattleScripting.battler].substituteHP = ((gDisableStructs[gBattleScripting.battler].substituteHP * eggSpeciesMaxHP) / eggSpeciesMaxHPModifier);
                             BattleScriptPushCursor();
                             gBattlescriptCurrInstr = BattleScript_BugSubstituteAnim2;
                             }
