@@ -17,7 +17,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 44,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8EXTENDED_FOREST",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

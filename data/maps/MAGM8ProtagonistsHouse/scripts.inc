@@ -6,17 +6,22 @@
 MAGM8ProtagonistsHouse_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, MAGM8ProtagonistsHouse_OnLoad
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, MAGM8ProtagonistsHouse_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MAGM8ProtagonistsHouse_OnFrame
 	.byte 0
 
 MAGM8ProtagonistsHouse_OnLoad:
-	compare VAR_ROUTE101_STATE, 1
 	setrespawn HEAL_LOCATION_CABIN_IN_THE_WOODS
+	compare VAR_ROUTE101_STATE, 1
 	call_if_ge MAGM8ProtagonistsHouse_EventScript_SetDynamicWarpPostInfection
 	call_if_lt MAGM8ProtagonistsHouse_EventScript_SetDynamicWarpPreInfection
 	end
 
 MAGM8ProtagonistsHouse_OnWarp:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 0, MAGM8ProtagonistsHouse_SetProtagWest
+	map_script_2 VAR_ROUTE101_STATE, 1, MAGM8ProtagonistsHouse_SetProtagWest
+	.2byte 0
+
+MAGM8ProtagonistsHouse_OnFrame:
+	map_script_2 VAR_ROUTE101_STATE, 2, MAGM8ProtagonistsHouse_EventScript_Credits
 	.2byte 0
 
 MAGM8ProtagonistsHouse_SetProtagWest:
@@ -330,10 +335,23 @@ MAGM8ProtagonistsHouse_EventScript_Sink::
 end
 
 MAGM8ProtagonistsHouse_EventScript_Cabinets::
+	setflag FLAG_ITEM_MOUNT_CINNABAR_WEST_1F_NUGGET
 	lockall
 		msgbox MAGM8ProtagonistsHouse_Text_Cabinets, MSGBOX_DEFAULT
 	releaseall
 end
+
+MAGM8ProtagonistsHouse_EventScript_Credits::
+
+	fadescreenspeed FADE_TO_BLACK, 24
+	msgbox MAGM8ProtagonistsHouse_Text_SaveForestCheck, MSGBOX_DEFAULT
+	special GameClear
+	waitstate
+	releaseall
+	end
+
+noCredits::
+	end
 
 MAGM8ProtagonistsHouse_Movement_MoveToTable:	
 	walk_right	
@@ -487,3 +505,7 @@ MAGM8ProtagonistsHouse_Text_AzumarillJoinedParty:
 
 MAGM8ProtagonistsHouse_Text_ItsNotBedTimeYet:
 	.string "It is not time for bed yet!$"
+
+MAGM8ProtagonistsHouse_Text_SaveForestCheck:
+	.string "To do: save the forest...\n"
+	.string "done!$"
