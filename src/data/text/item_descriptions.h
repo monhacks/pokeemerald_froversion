@@ -1536,8 +1536,9 @@ static const u8 sDevonScopeDesc[] = _(
 
 // TMs/HMs
 static const u8 sTM01Desc[] = _(
-    "Evades wide-ranging attacks\n"
-    "for one turn.");
+    "The user focuses its\n"
+    "mind before launching\n"
+    "a punch");
 
 static const u8 sTM02Desc[] = _(
     "Hooks and slashes\n"

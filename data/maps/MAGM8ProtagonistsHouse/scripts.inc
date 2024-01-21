@@ -45,6 +45,7 @@ MAGM8ProtagonistsHouse_EventScript_PreventPlayerFromLeavingUntilToDoListChecked:
 	lock
 		goto_if_set FLAG_0x4EB, MAGM8ProtagonistsHouse_EventScript_ToDoListHasBeenChecked
 		msgbox MAGM8ProtagonistsHouse_Text_CheckToDoList, MSGBOX_DEFAULT
+		closemessage
 		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 		waitmovement OBJ_EVENT_ID_PLAYER
 	release
@@ -59,6 +60,7 @@ MAGM8ProtagonistsHouse_EventScript_PreventPlayerFromLeavingUntilPokemonJoinedPar
 	lock
 		goto_if_set FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS, MAGM8ProtagonistsHouse_EventScript_PokemonHasJoinedParty
 		msgbox MAGM8ProtagonistsHouse_Text_AzumarillIsFeelingBetter, MSGBOX_DEFAULT
+		closemessage
 		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 		waitmovement OBJ_EVENT_ID_PLAYER
 	release
@@ -140,6 +142,8 @@ MAGM8ProtagonistsHouse_EventScript_ToDoListAfterSleep:
 
 MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep:
 			closemessage
+			goto_if_set FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU, MAGM8ProtagonistsHouse_EventScript_ToDoListMushroomsBad
+			goto_if_set FLAG_ITEM_ROUTE_109_POTION, MAGM8ProtagonistsHouse_EventScript_ToDoListTreesCutDown
 			scrollingmultichoice LOCALID_SCROLLINGMENU_SECOND_TO_DO_LIST, 2, 3, 2, TRUE
 			switch VAR_RESULT
 				case 0, MAGM8ProtagonistsHouse_EventScript_ToDoListCutDownTrees
@@ -147,6 +151,28 @@ MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep:
 				case MULTI_B_PRESSED, MAGM8ProtagonistsHouse_EventScript_ToDoListExit
 	release
 	end
+
+MAGM8ProtagonistsHouse_EventScript_ToDoListMushroomsBad:
+	goto_if_set FLAG_ITEM_ROUTE_109_POTION, MAGM8ProtagonistsHouse_EventScript_ToDoListComplete
+	closemessage
+			scrollingmultichoice LOCALID_SCROLLINGMENU_SECOND_TO_DO_LIST, 2, 3, 2, TRUE
+			switch VAR_RESULT
+				case 0, MAGM8ProtagonistsHouse_EventScript_ToDoListCutDownTrees
+				case 1, MAGM8ProtagonistsHouse_EventScript_ToDoListHarvestMushroomsBad
+				case MULTI_B_PRESSED, MAGM8ProtagonistsHouse_EventScript_ToDoListExit
+	release
+	end
+
+MAGM8ProtagonistsHouse_EventScript_ToDoListTreesCutDown:
+	goto_if_set FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU, MAGM8ProtagonistsHouse_EventScript_ToDoListComplete
+	closemessage
+			scrollingmultichoice LOCALID_SCROLLINGMENU_SECOND_TO_DO_LIST, 2, 3, 2, TRUE
+			switch VAR_RESULT
+				case 0, MAGM8ProtagonistsHouse_EventScript_TaskComplete
+				case 1, MAGM8ProtagonistsHouse_EventScript_ToDoListHarvestMushrooms
+				case MULTI_B_PRESSED, MAGM8ProtagonistsHouse_EventScript_ToDoListExit
+	release
+	end	
 
 
 
@@ -168,6 +194,12 @@ MAGM8ProtagonistsHouse_EventScript_ToDoListCutDownTrees:
 		compare VAR_ROUTE101_STATE, 1
 		goto_if_ge MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep
 		goto MAGM8ProtagonistsHouse_EventScript_ShowToDoList
+MAGM8ProtagonistsHouse_EventScript_ToDoListHarvestMushroomsBad:
+		setflag FLAG_0x4EB
+		msgbox MAGM8ProtagonistsHouse_Text_ToDoListHarvestMushroomsBad, MSGBOX_DEFAULT
+		compare VAR_ROUTE101_STATE, 1
+		goto_if_ge MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep
+		goto MAGM8ProtagonistsHouse_EventScript_ShowToDoList	
 
 
 
@@ -192,6 +224,7 @@ MAGM8ProtagonistsHouse_EventScriptWouldYouLikeToMakeSoupYes:
 			playse SE_M_CUT
 			waitse
 			msgbox MAGM8ProtagonistsHouse_Text_SoupReady, MSGBOX_DEFAULT
+			closemessage
 			applymovement OBJ_EVENT_ID_PLAYER, MAGM8ProtagonistsHouse_Movement_MoveToTable
 			waitmovement OBJ_EVENT_ID_PLAYER
 			playse SE_M_BITE
@@ -339,7 +372,6 @@ MAGM8ProtagonistsHouse_EventScript_Sink::
 end
 
 MAGM8ProtagonistsHouse_EventScript_Cabinets::
-	setflag FLAG_LOST_BOSS_BATTLE
 	lockall
 		msgbox MAGM8ProtagonistsHouse_Text_Cabinets, MSGBOX_DEFAULT
 	releaseall
@@ -380,7 +412,7 @@ MAGM8ProtagonistsHouse_Text_ToDoListHarvestMushrooms:
 MAGM8ProtagonistsHouse_Text_ToDoListGoToTownForMedicine:
 	.string "Medicine for POKEMON will be ready\n"
 	.string "by mid-afternoon.\p"
-	.string "Head to XXXXXXX Town to pick it up.$"
+	.string "Head to Oucat Village to pick it up.$"
 
 MAGM8ProtagonistsHouse_Text_PrepareSoup:
 	.string "{PLAYER} begins to prepare the\n"
@@ -508,3 +540,7 @@ MAGM8ProtagonistsHouse_Text_ItsNotBedTimeYet:
 MAGM8ProtagonistsHouse_Text_SaveForestCheck:
 	.string "To do: save the forest...\n"
 	.string "done!$"
+
+MAGM8ProtagonistsHouse_Text_ToDoListHarvestMushroomsBad:
+	.string "Unable to use mushrooms. Something\n"
+	.string "has rotted them.$"

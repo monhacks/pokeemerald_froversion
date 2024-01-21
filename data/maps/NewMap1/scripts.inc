@@ -103,4 +103,4 @@ MAGM8Forest_MainArea_Text_NorthSign:
 	
 MAGM8Forest_MainArea_Text_SouthSign:
 	.string "{UP_ARROW} {PLAYER}'s House\n"
-	.string "{DOWN_ARROW}$ Town Name"
+	.string "{DOWN_ARROW}Oucat Village$"

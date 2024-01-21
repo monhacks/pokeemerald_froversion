@@ -1194,6 +1194,7 @@ static const struct AbilitySetter sCheetoAbilitySet[] =
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
+    [SPECIES_VENUSAUR] = sBulbasaurAbilitySet,
     [SPECIES_MUDKIP] = sMudkipAbilitySet,
     [SPECIES_PIDGEY] = sPidgeyAbilitySet,
     [SPECIES_PIDGEOTTO] = sPidgeyAbilitySet,

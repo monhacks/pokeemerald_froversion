@@ -3,7 +3,7 @@ MarriottIntroFrame1_MapScripts::
 	.byte 0
 
 MarriottIntroFrame1_OnFrame:
-	map_script_2 VAR_TEMP_0, 0, MarriottIntroFrame1_EventScript_MarriottStudies
+	map_script_2 VAR_TEMP_0, 0, MAGM8ExtendedForest_Eventscript_GiveUpClear
 	.2byte 0
 
 MarriottIntroFrame1_EventScript_MarriottStudies:
@@ -14,6 +14,17 @@ MarriottIntroFrame1_EventScript_MarriottStudies:
 	warpsilent MAP_MARRIOTT_INTRO_FRAME2, 255, 7, 5 
 	release
 end
+
+MAGM8ExtendedForest_Eventscript_GiveUpClear::
+lock
+	delay 16
+	setvar VAR_TEMP_0, 1
+	msgbox MAGM8ExtendedForest_Text_GiveUp, MSGBOX_DEFAULT
+	waitmessage
+	special GameClear
+	waitstate
+	releaseall
+	end
 
 
 @--------------------------------------------------------------------------------

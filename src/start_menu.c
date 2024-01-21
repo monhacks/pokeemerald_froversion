@@ -789,7 +789,9 @@ extern const u8 MAGM8ExtendedForest_Eventscript_GiveUp[];
 
 static bool8 StartMenuGiveUpCallback(void)
 {
+    ClearStdWindowAndFrame(GetStartMenuWindowId(), TRUE);
     RemoveStartMenuWindow();
+    ScriptContext2_Enable();
     ScriptContext1_SetupScript(MAGM8ExtendedForest_Eventscript_GiveUp);
 
     return TRUE;

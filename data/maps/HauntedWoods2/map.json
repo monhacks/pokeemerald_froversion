@@ -35,22 +35,22 @@
       "x": 17,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_NIAGARA_VILLAGE",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_MAGM8FOREST_TOWN_POST_INFECTION",
+      "dest_warp_id": "4"
     },
     {
       "x": 17,
       "y": 20,
       "elevation": 0,
-      "dest_map": "MAP_NIAGARA_VILLAGE",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_MAGM8FOREST_TOWN_POST_INFECTION",
+      "dest_warp_id": "5"
     },
     {
       "x": 17,
       "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_NIAGARA_VILLAGE",
-      "dest_warp_id": "4"
+      "dest_map": "MAP_MAGM8FOREST_TOWN_POST_INFECTION",
+      "dest_warp_id": "6"
     },
     {
       "x": 22,

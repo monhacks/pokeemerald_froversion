@@ -104,6 +104,70 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MAGM8ForestTown_EventScript_HouseSign"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_CutTree"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_CutTree"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 21,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_CutTree"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_CutTree"
+    },
+    {
+      "type": "sign",
+      "x": 27,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_CutTree"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_CutTree"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_CutTree"
+    },
+    {
+      "type": "sign",
+      "x": 33,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_CutTree"
     }
   ]
 }
