@@ -2,9 +2,15 @@ MAGM8ExtendedForest_MapScripts::
 	.byte 0
 
 MAGM8ExtendedForest_Eventscript_GiveUp::
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_Delay
-	waitmovement OBJ_EVENT_ID_PLAYER
-	warpsilent MAP_MARRIOTT_INTRO_FRAME1, 255, 7, 5 
+	lock
+	setvar VAR_TEMP_0, 1
+	msgbox MAGM8ExtendedForest_Text_GiveUp, MSGBOX_DEFAULT
+	waitmessage
+	fadescreen FADE_TO_BLACK
+	delay 16
+	special GameClear
+	waitstate
+	releaseall
 	end
 
 MAGM8ExtendedForest_Text_GiveUp::

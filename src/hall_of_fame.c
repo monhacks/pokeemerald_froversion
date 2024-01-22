@@ -395,7 +395,11 @@ static bool8 InitHallOfFameScreen(void)
         if (!gPaletteFade.active)
         {
             SetMainCallback2(CB2_HallOfFame);
-            PlayBGM(MUS_HALL_OF_FAME);
+            if(FlagGet(FLAG_LOST_BOSS_BATTLE))
+                PlayBGM(MUS_FV_HAUNTED);
+            else 
+                PlayBGM(MUS_FV_MAGM8_FOREST);
+            //PlayBGM(MUS_HALL_OF_FAME);
             return FALSE;
         }
         break;
@@ -721,8 +725,16 @@ static void Task_Hof_WaitAndPrintPlayerInfo(u8 taskId)
         FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 0x20, 0x20);
         HallOfFame_PrintPlayerInfo(1, 2);
         DrawDialogueFrame(0, 0);
-        AddTextPrinterParameterized2(0, 1, gText_LeagueChamp, 0, NULL, 2, 1, 3);
-        CopyWindowToVram(0, 3);
+        if(FlagGet(FLAG_LOST_BOSS_BATTLE))
+            {
+                AddTextPrinterParameterized2(0, 1, gText_LeagueChump, 0, NULL, 2, 1, 3);
+                CopyWindowToVram(0, 3);
+            }
+        else
+            {
+                AddTextPrinterParameterized2(0, 1, gText_LeagueChamp, 0, NULL, 2, 1, 3);
+                CopyWindowToVram(0, 3);
+            }
         gTasks[taskId].func = Task_Hof_ExitOnKeyPressed;
     }
 }
@@ -1111,8 +1123,16 @@ static void HallOfFame_PrintWelcomeText(u8 unusedPossiblyWindowId, u8 unused2)
 {
     FillWindowPixelBuffer(0, PIXEL_FILL(0));
     PutWindowTilemap(0);
-    AddTextPrinterParameterized3(0, 1, GetStringCenterAlignXOffset(1, gText_WelcomeToHOF, 0xD0), 1, sMonInfoTextColors, 0, gText_WelcomeToHOF);
-    CopyWindowToVram(0, 3);
+    if(FlagGet(FLAG_LOST_BOSS_BATTLE))
+        {
+            AddTextPrinterParameterized3(0, 1, GetStringCenterAlignXOffset(1, gText_WelcomeToHOS, 0xD0), 1, sMonInfoTextColors, 0, gText_WelcomeToHOS);
+            CopyWindowToVram(0, 3);
+        }
+    else
+        {
+            AddTextPrinterParameterized3(0, 1, GetStringCenterAlignXOffset(1, gText_WelcomeToHOF, 0xD0), 1, sMonInfoTextColors, 0, gText_WelcomeToHOF);
+            CopyWindowToVram(0, 3);
+        }
 }
 
 static void HallOfFame_PrintMonInfo(struct HallofFameMon* currMon, u8 unused1, u8 unused2)

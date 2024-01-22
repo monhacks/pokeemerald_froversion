@@ -319,12 +319,12 @@ static void BuildNormalStartMenu(void)
         AddStartMenuAction(MENU_ACTION_OPTION);
         AddStartMenuAction(MENU_ACTION_EXIT);
     }
-    
+
 
 }
 
 static void BuildDebugStartMenu(void)
-{    
+{
     if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
     {
         AddStartMenuAction(MENU_ACTION_POKEDEX);
@@ -630,7 +630,8 @@ static bool8 HandleStartMenuInput(void)
             && gMenuCallback != StartMenuExitCallback
             && gMenuCallback != StartMenuDebugCallback
             && gMenuCallback != StartMenuSafariZoneRetireCallback
-            && gMenuCallback != StartMenuBattlePyramidRetireCallback)
+            && gMenuCallback != StartMenuBattlePyramidRetireCallback
+            && gMenuCallback != StartMenuGiveUpCallback)
         {
            FadeScreen(FADE_TO_BLACK, 0);
         }
@@ -789,11 +790,10 @@ extern const u8 MAGM8ExtendedForest_Eventscript_GiveUp[];
 
 static bool8 StartMenuGiveUpCallback(void)
 {
-    ClearStdWindowAndFrame(GetStartMenuWindowId(), TRUE);
-    RemoveStartMenuWindow();
+    RemoveExtraStartMenuWindows();
+    HideStartMenu(); // Hide start menu
     ScriptContext2_Enable();
     ScriptContext1_SetupScript(MAGM8ExtendedForest_Eventscript_GiveUp);
-
     return TRUE;
 }
 
