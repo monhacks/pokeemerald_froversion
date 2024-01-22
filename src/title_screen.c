@@ -27,7 +27,7 @@
 #define VERSION_BANNER_LEFT_X 91
 #define VERSION_BANNER_RIGHT_X 155
 #define VERSION_BANNER_Y 2
-#define VERSION_BANNER_Y_GOAL 73
+#define VERSION_BANNER_Y_GOAL 80
 #define START_BANNER_X 128
 
 #define CLEAR_SAVE_BUTTON_COMBO (B_BUTTON | SELECT_BUTTON | DPAD_UP)
@@ -103,7 +103,7 @@ const u16 gIntroWaterDropAlphaBlend[] =
 
 static const struct OamData sVersionBannerLeftOamData =
 {
-    .y = 160,
+    .y = 250,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
@@ -120,7 +120,7 @@ static const struct OamData sVersionBannerLeftOamData =
 
 static const struct OamData sVersionBannerRightOamData =
 {
-    .y = 160,
+    .y = 175,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = 0,
