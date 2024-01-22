@@ -396,7 +396,7 @@ static bool8 InitHallOfFameScreen(void)
         {
             SetMainCallback2(CB2_HallOfFame);
             if(FlagGet(FLAG_LOST_BOSS_BATTLE))
-                PlayBGM(MUS_FV_HAUNTED);
+                return FALSE;
             else 
                 PlayBGM(MUS_FV_MAGM8_FOREST);
             //PlayBGM(MUS_HALL_OF_FAME);
