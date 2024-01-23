@@ -3,7 +3,7 @@
   "name": "MAGM8ProtagonistsHouse",
   "layout": "LAYOUT_MAGM8PROTAGONISTS_HOUSE",
   "music": "MUS_FV_NIAGARA_WOODS",
-  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "region_map_section": "MAPSEC_VIRIDIAN_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
