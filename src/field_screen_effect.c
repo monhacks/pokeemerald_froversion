@@ -1544,7 +1544,7 @@ static void DestroyPortalSprite(struct Sprite *sprite)
 static u32 CreatePortalSprite(u32 id, s32 x, s32 y)
 {
     const struct Portal *portal;
-    u32 spriteId, paletteNum;
+    u32 spriteId;
     struct Sprite *sprite;
 
     portal = &gSaveBlock1Ptr->portals[id];
@@ -1554,39 +1554,40 @@ static u32 CreatePortalSprite(u32 id, s32 x, s32 y)
         if (gSprites[spriteId].callback == SpriteCallback_Portal
          && gSprites[spriteId].data[2] == id)
         {
+            sprite = &gSprites[spriteId];
             break;
         }
     }
 
     if (spriteId == MAX_SPRITES)
     {
-        paletteNum = LoadSpritePalette(&sSpritePalette_Portal);
+        LoadSpritePalette(&sSpritePalette_Portal);
         spriteId = CreateSprite(&sSpriteTemplate_Portal, 0, 0, 255);
-    }
+        sprite = &gSprites[spriteId];
+        sprite->coordOffsetEnabled = TRUE;
+        SetSpritePosToMapCoords(x, y, &sprite->pos1.x, &sprite->pos1.y);
+        sprite->pos2.x = -8;
+        sprite->pos2.y = -8;
 
-    sprite = &gSprites[spriteId];
-    sprite->coordOffsetEnabled = TRUE;
-    SetSpritePosToMapCoords(x, y, &sprite->pos1.x, &sprite->pos1.y);
-    sprite->pos2.x = -8;
-    sprite->pos2.y = -8;
+        // TODO: Graphics/animation for each direction.
+        StartSpriteAnimIfDifferent(sprite, ANIM_PORTAL_ORANGE_NORTH + id);
 
-    // TODO: Graphics/animation for each direction.
-    StartSpriteAnimIfDifferent(sprite, ANIM_PORTAL_ORANGE_NORTH + id);
+        switch (gSaveBlock1Ptr->portals[id].direction)
+        {
+        case DIR_NORTH:
+        default:
+            SetSubspriteTables(sprite, &sSubspriteTable_Portal_NorthEastWest);
+            break;
+        case DIR_SOUTH:
+            SetSubspriteTables(sprite, &sSubspriteTable_Portal_South);
+            break;
+        }
 
-    switch (gSaveBlock1Ptr->portals[id].direction)
-    {
-    case DIR_NORTH:
-    default:
-        SetSubspriteTables(sprite, &sSubspriteTable_Portal_NorthEastWest);
-        break;
-    case DIR_SOUTH:
-        SetSubspriteTables(sprite, &sSubspriteTable_Portal_South);
-        break;
+        sprite->data[2] = id;
     }
 
     sprite->data[0] = x;
     sprite->data[1] = y;
-    sprite->data[2] = id;
 
     return spriteId;
 }
@@ -2095,4 +2096,10 @@ static void FieldCB_PortalWarpExit(void)
     CreateTask(Task_ExitPortal, 10);
     PlaySE(SE_WARP_IN);
     ScriptContext2_Enable();
+}
+
+void ClearPortalSprites(void)
+{
+    DoCapturePortalSprite(PORTAL_ORANGE, 0, 0, FALSE);
+    DoCapturePortalSprite(PORTAL_BLUE, 0, 0, FALSE);
 }

@@ -45,6 +45,7 @@
 #include "berry_powder.h"
 #include "mevent.h"
 #include "union_room_chat.h"
+#include "field_screen_effect.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 
@@ -261,6 +262,8 @@ void NewGameInitData(void)
     else
         gSaveBlock2Ptr->expShare = 0;
     memset(&gSaveBlock2Ptr->follower, 0, sizeof(gSaveBlock2Ptr->follower));
+
+    ClearPortalSprites();
 }
 
 static void ResetMiniGamesResults(void)

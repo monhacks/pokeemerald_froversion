@@ -49,5 +49,6 @@ bool32 WaitForWeatherFadeIn(void);
 void DoCreatePortal(const struct MapPosition *, u8, u32);
 void DoPortalWarp(u32, u32);
 void CreatePortalSprites(void);
+void ClearPortalSprites(void);
 
 #endif // GUARD_FIELD_SCREEN_EFFECT_H
