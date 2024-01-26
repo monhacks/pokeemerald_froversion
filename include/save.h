@@ -1,6 +1,9 @@
 #ifndef GUARD_SAVE_H
 #define GUARD_SAVE_H
 
+#define SECTOR_DATA_SIZE 4084
+#define SECTOR_FOOTER_SIZE 12
+
 struct SaveSectionLocation
 {
     void *data;
@@ -9,7 +12,7 @@ struct SaveSectionLocation
 
 struct SaveSection
 {
-    u8 data[0xFF4];
+    u8 data[SECTOR_DATA_SIZE];
     u16 id;
     u16 checksum;
     u32 security;
@@ -19,7 +22,7 @@ struct SaveSection
 // headless save section?
 struct UnkSaveSection
 {
-    u8 data[0xFF4];
+    u8 data[SECTOR_DATA_SIZE];
     u32 security;
 }; // size is 0xFF8
 
@@ -67,6 +70,8 @@ enum
 #define SECTOR_ID_TRAINER_HILL 30
 #define SECTOR_ID_RECORDED_BATTLE  31
 #define SECTORS_COUNT 32
+
+#define NUM_HOF_SECTORS 2
 
 #define SAVE_STATUS_EMPTY    0
 #define SAVE_STATUS_OK       1

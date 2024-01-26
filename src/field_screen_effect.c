@@ -1300,3 +1300,799 @@ static void Task_EnableScriptAfterMusicFade(u8 taskId)
     }
 }
 
+static const u32 sPortal_Gfx[] = INCBIN_U32("graphics/misc/portal.4bpp");
+static const u16 sPortal_Pal[] = INCBIN_U16("graphics/misc/portal.gbapal");
+
+#define TAG_PORTAL 0x0100
+
+static const struct SpritePalette sSpritePalette_Portal =
+{
+    sPortal_Pal, TAG_PORTAL
+};
+
+static const struct OamData sOam_Portal =
+{
+    .affineMode = ST_OAM_AFFINE_DOUBLE,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(16x32),
+    .size = SPRITE_SIZE(16x32),
+    .priority = 3,
+};
+
+static const struct SubspriteTable sSubspriteTable_Portal_NorthEastWest =
+{
+    .subspriteCount = 2,
+    .subsprites = (const struct Subsprite[]) {
+        {
+            .x = 0,
+            .y = -16,
+            .shape = SPRITE_SHAPE(16x16),
+            .size = SPRITE_SIZE(16x16),
+            .tileOffset = 0,
+            .priority = 1,
+        },
+        {
+            .x = 0,
+            .y = 0,
+            .shape = SPRITE_SHAPE(16x16),
+            .size = SPRITE_SIZE(16x16),
+            .tileOffset = 4,
+            .priority = 2,
+        },
+    },
+};
+
+static const struct SubspriteTable sSubspriteTable_Portal_South =
+{
+    .subspriteCount = 2,
+    .subsprites = (const struct Subsprite[]) {
+        {
+            .x = 0,
+            .y = -16,
+            .shape = SPRITE_SHAPE(16x16),
+            .size = SPRITE_SIZE(16x16),
+            .tileOffset = 0,
+            .priority = 2,
+        },
+        {
+            .x = 0,
+            .y = 0,
+            .shape = SPRITE_SHAPE(16x16),
+            .size = SPRITE_SIZE(16x16),
+            .tileOffset = 4,
+            .priority = 3,
+        },
+    },
+};
+
+static const struct SpriteFrameImage sPicTable_Portal[] =
+{
+    overworld_frame(sPortal_Gfx, 2, 4, 0),
+    overworld_frame(sPortal_Gfx, 2, 4, 1),
+};
+
+static const union AnimCmd sAnim_Portal_OrangeNorth[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END
+};
+
+static const union AnimCmd sAnim_Portal_BlueNorth[] =
+{
+    ANIMCMD_FRAME(1, 1),
+    ANIMCMD_END
+};
+
+enum
+{
+    ANIM_PORTAL_ORANGE_NORTH,
+    ANIM_PORTAL_BLUE_NORTH,
+};
+
+static const union AnimCmd *const sAnims_Portal[] =
+{
+    [ANIM_PORTAL_BLUE_NORTH] = sAnim_Portal_BlueNorth,
+    [ANIM_PORTAL_ORANGE_NORTH] = sAnim_Portal_OrangeNorth,
+};
+
+static const union AffineAnimCmd sAffineAnim_Portal_0[] =
+{
+    AFFINEANIMCMD_FRAME(0x100, 0x100, 0, 0),
+    AFFINEANIMCMD_END,
+};
+
+static const union AffineAnimCmd sAffineAnim_Portal_1[] =
+{
+    AFFINEANIMCMD_FRAME( 0x200,  0x080, 0, 0),
+    AFFINEANIMCMD_FRAME(-0x080, +0x040, 0, 2),
+    AFFINEANIMCMD_FRAME(-0x040, +0x020, 0, 2),
+    AFFINEANIMCMD_FRAME(+0x040, -0x020, 0, 2),
+    AFFINEANIMCMD_END,
+};
+
+static const union AffineAnimCmd *const sAffineAnims_Portal[] =
+{
+    sAffineAnim_Portal_0,
+    sAffineAnim_Portal_1,
+};
+
+static void SpriteCallback_Portal(struct Sprite *sprite);
+
+static const struct SpriteTemplate sSpriteTemplate_Portal =
+{
+    .tileTag = 0xFFFF,
+    .paletteTag = TAG_PORTAL,
+    .oam = &sOam_Portal,
+    .anims = sAnims_Portal,
+    .images = sPicTable_Portal,
+    .affineAnims = sAffineAnims_Portal,
+    .callback = SpriteCallback_Portal,
+};
+
+static void DestroyPortalSprite(struct Sprite *sprite);
+
+struct PixelReader
+{
+    u32 buffer;
+    u32 remaining;
+    const u8 *stream;
+};
+
+static inline void MakePixelReader(struct PixelReader *pr, const u8 *stream)
+{
+    pr->buffer = T1_READ_32(stream);
+    pr->remaining = 8;
+    pr->stream = stream + 4;
+}
+
+static inline u32 PopPixelReader(struct PixelReader *pr)
+{
+    u32 pop = pr->buffer & 0xF;
+    pr->buffer >>= 4;
+    pr->remaining--;
+    return pop;
+}
+
+static inline void BufferPixelReader(struct PixelReader *pr, u32 remaining)
+{
+    while (pr->remaining < remaining)
+    {
+        pr->buffer |= *pr->stream++ << (4 * pr->remaining);
+        pr->remaining += 2;
+    }
+}
+
+static void SpriteCallback_Portal(struct Sprite *sprite)
+{
+    s32 left =   gSaveBlock1Ptr->pos.x - 2;
+    s32 right =  gSaveBlock1Ptr->pos.x + 17;
+    s32 top =    gSaveBlock1Ptr->pos.y;
+    s32 bottom = gSaveBlock1Ptr->pos.y + 16;
+
+    if (sprite->data[0] < left
+     || sprite->data[0] > right
+     || sprite->data[1] < top
+     || sprite->data[1] > bottom
+     || !gSaveBlock1Ptr->portals[sprite->data[2]].active)
+    {
+        DestroyPortalSprite(sprite);
+    }
+    else
+    {
+        SetSpritePosToMapCoords(sprite->data[0], sprite->data[1], &sprite->pos1.x, &sprite->pos1.y);
+
+        // Update the portal pixels.
+        if (!sprite->data[3] && sprite->animEnded)
+        {
+            s32 i;
+            const u16 *rom4s = (const u16 *)((uintptr_t)sPicTable_Portal[sprite->data[2]].data + TILE_OFFSET_4BPP(2));
+            u16 *vram4s = (u16 *)(OBJ_VRAM0 + TILE_OFFSET_4BPP(sprite->oam.tileNum + 2));
+            u16 rom4, vram4;
+            struct PixelReader pr;
+            MakePixelReader(&pr, gSaveBlock1Ptr->portals[1 - sprite->data[2]].pixels);
+            for (i = 0; i < 6 * TILE_SIZE_4BPP / 2; i++)
+            {
+                BufferPixelReader(&pr, 4);
+                rom4 = rom4s[i];
+
+                if ((rom4 & 0x000F) == 0x000F)
+                    vram4 = PopPixelReader(&pr);
+                else
+                    vram4 = rom4 & 0x000F;
+
+                if ((rom4 & 0x00F0) == 0x00F0)
+                    vram4 |= PopPixelReader(&pr) << 4;
+                else
+                    vram4 |= rom4 & 0x00F0;
+
+                if ((rom4 & 0x0F00) == 0x0F00)
+                    vram4 |= PopPixelReader(&pr) << 8;
+                else
+                    vram4 |= rom4 & 0x0F00;
+
+                if ((rom4 & 0xF000) == 0xF000)
+                    vram4 |= PopPixelReader(&pr) << 12;
+                else
+                    vram4 |= rom4 & 0xF000;
+
+                vram4s[i] = vram4;
+            }
+            sprite->data[3] = TRUE;
+        }
+    }
+}
+
+static void DestroyPortalSprite(struct Sprite *sprite)
+{
+    s32 i, n;
+    for (i = n = 0; i < MAX_SPRITES; i++)
+    {
+        if (gSprites[i].callback == SpriteCallback_Portal)
+        {
+            n++;
+            if (n > 1)
+            {
+                DestroySprite(sprite);
+                return;
+            }
+        }
+    }
+    DestroySpriteAndFreeResources(sprite);
+}
+
+static u32 CreatePortalSprite(u32 id, s32 x, s32 y)
+{
+    const struct Portal *portal;
+    u32 spriteId, paletteNum;
+    struct Sprite *sprite;
+
+    portal = &gSaveBlock1Ptr->portals[id];
+
+    for (spriteId = 0; spriteId < MAX_SPRITES; spriteId++)
+    {
+        if (gSprites[spriteId].callback == SpriteCallback_Portal
+         && gSprites[spriteId].data[2] == id)
+        {
+            break;
+        }
+    }
+
+    if (spriteId == MAX_SPRITES)
+    {
+        paletteNum = LoadSpritePalette(&sSpritePalette_Portal);
+        spriteId = CreateSprite(&sSpriteTemplate_Portal, 0, 0, 255);
+    }
+
+    sprite = &gSprites[spriteId];
+    sprite->coordOffsetEnabled = TRUE;
+    SetSpritePosToMapCoords(x, y, &sprite->pos1.x, &sprite->pos1.y);
+    sprite->pos2.x = -8;
+    sprite->pos2.y = -8;
+
+    // TODO: Graphics/animation for each direction.
+    StartSpriteAnimIfDifferent(sprite, ANIM_PORTAL_ORANGE_NORTH + id);
+
+    switch (gSaveBlock1Ptr->portals[id].direction)
+    {
+    case DIR_NORTH:
+    default:
+        SetSubspriteTables(sprite, &sSubspriteTable_Portal_NorthEastWest);
+        break;
+    case DIR_SOUTH:
+        SetSubspriteTables(sprite, &sSubspriteTable_Portal_South);
+        break;
+    }
+
+    sprite->data[0] = x;
+    sprite->data[1] = y;
+    sprite->data[2] = id;
+
+    return spriteId;
+}
+
+void CreatePortalSprites(void)
+{
+    s32 i, j;
+    s32 left =   gSaveBlock1Ptr->pos.x - 2;
+    s32 right =  gSaveBlock1Ptr->pos.x + 17;
+    s32 top =    gSaveBlock1Ptr->pos.y;
+    s32 bottom = gSaveBlock1Ptr->pos.y + 16;
+
+    for (i = 0; i < PORTAL_COUNT; i++)
+    {
+        s32 x = INT_MAX, y = INT_MAX;
+
+        const struct Portal *portal = &gSaveBlock1Ptr->portals[i];
+        if (!portal->active)
+            continue;
+
+        if (portal->mapGroup == gSaveBlock1Ptr->location.mapGroup
+         && portal->mapNum == gSaveBlock1Ptr->location.mapNum)
+        {
+            x = portal->x;
+            y = portal->y;
+        }
+
+        for (j = 0; j < gMapHeader.connections->count; j++)
+        {
+            const struct MapConnection *connection = &gMapHeader.connections->connections[j];
+            if (portal->mapGroup == connection->mapGroup
+             && portal->mapNum == connection->mapNum)
+            {
+                const struct MapLayout *connectedLayout = GetMapHeaderFromConnection(connection)->mapLayout;
+                if (connection->direction == CONNECTION_SOUTH)
+                {
+                    x = connection->offset + portal->x;
+                    y = gMapHeader.mapLayout->height + portal->y;
+                }
+                else if (connection->direction == CONNECTION_NORTH)
+                {
+                    x = connection->offset + portal->x;
+                    y = -connectedLayout->height + portal->y;
+                }
+                else if (connection->direction == CONNECTION_WEST)
+                {
+                    x = -connectedLayout->width + portal->x;
+                    y = connection->offset + portal->y;
+                }
+                else if (connection->direction == CONNECTION_EAST)
+                {
+                    x = gMapHeader.mapLayout->width + portal->x;
+                    y = connection->offset + portal->y;
+                }
+            }
+        }
+
+        if (left <= x && x <= right && top <= y && y <= bottom)
+            CreatePortalSprite(i, x, y);
+    }
+}
+
+struct PixelWriter
+{
+    bool8 buffered;
+    u8 *stream;
+};
+
+static inline void MakePixelWriter(struct PixelWriter *pw, u8 *stream)
+{
+    pw->buffered = FALSE;
+    pw->stream = stream;
+}
+
+static inline void PushPixelWriter(struct PixelWriter *pw, u32 push)
+{
+    if (pw->buffered)
+    {
+        *pw->stream |= push << 4;
+        pw->stream++;
+        pw->buffered = FALSE;
+    }
+    else
+    {
+        *pw->stream = push;
+        pw->buffered = TRUE;
+    }
+}
+
+struct LumaPalettes
+{
+    u8 offset;
+    u16 cached;
+    u8 palettes[256];
+};
+
+static inline void MakeLumaPalettes(struct LumaPalettes *lp, u32 offset)
+{
+    lp->offset = offset;
+    lp->cached = 0;
+}
+
+static const u8 *GetLumaPalette(struct LumaPalettes *lp, u32 palette)
+{
+    if (!(lp->cached & (1 << palette)))
+    {
+        s32 i;
+        lp->cached |= (1 << palette);
+        for (i = 1; i < 16; i++)
+        {
+            u32 color = gPlttBufferUnfaded[palette * 16 + i];
+            u32 r, g, b, l;
+            r = GET_R(color);
+            g = GET_G(color);
+            b = GET_B(color);
+            // TODO: There's probably a faster formula for this given we
+            // only have 7 steps.
+            l = (r * Q_8_8(0.3) + g * Q_8_8(0.59) + b * Q_8_8(0.1133)) >> 8;
+            l = min(l >> 2, 6);
+            lp->palettes[palette * 16 + i] = lp->offset + l;
+        }
+    }
+
+    return &lp->palettes[palette * 16];
+}
+
+static void GetMetatileEntriesAt(u16 *entries, s32 x, s32 y)
+{
+    s32 i;
+    u32 metatileId = MapGridGetMetatileIdAt(x, y);
+    const u16 *metatileEntries;
+
+    if (metatileId < NUM_METATILES_IN_PRIMARY)
+        metatileEntries = gMapHeader.mapLayout->primaryTileset->metatiles + metatileId * 3 * 4;
+    else
+        metatileEntries = gMapHeader.mapLayout->secondaryTileset->metatiles + (metatileId - NUM_METATILES_IN_PRIMARY) * 3 * 4;
+
+    entries[0] = metatileEntries[0];
+    entries[3] = metatileEntries[1];
+    entries[6] = metatileEntries[2];
+    entries[9] = metatileEntries[3];
+
+    entries[1] = metatileEntries[4];
+    entries[4] = metatileEntries[5];
+    entries[7] = metatileEntries[6];
+    entries[10] = metatileEntries[7];
+
+    entries[2] = metatileEntries[8];
+    entries[5] = metatileEntries[9];
+    entries[8] = metatileEntries[10];
+    entries[11] = metatileEntries[11];
+}
+
+static inline u16 hFlip(const u16 *_4s, u32 i, bool32 hFlip)
+{
+    if (!hFlip)
+    {
+        return _4s[i];
+    }
+    else
+    {
+        u16 _4 = _4s[i ^ 1];
+        return ((_4 & 0x000F) << 12)
+             | ((_4 & 0x00F0) << 4)
+             | ((_4 & 0x0F00) >> 4)
+             | (_4 >> 12);
+    }
+}
+
+// XXX: Assumes triple-layer metatiles.
+static void DoCapturePortalSprite(u32 id, s32 x, s32 y, bool32 capture)
+{
+    s32 i, j;
+
+    if (capture)
+    {
+        // Fill active portals with the pixels underneath, shifted to
+        // their color.
+        struct PixelWriter pw;
+        struct LumaPalettes lp;
+        u16 entries[2 * 3 * 4];
+        GetMetatileEntriesAt(&entries[0], x, y - 1);
+        GetMetatileEntriesAt(&entries[12], x, y);
+        MakePixelWriter(&pw, gSaveBlock1Ptr->portals[id].pixels);
+        MakeLumaPalettes(&lp, id == PORTAL_ORANGE ? 0x8 : 0x1);
+        for (i = 2; i < 8; i++)
+        {
+            const u16 *rom4s = (const u16 *)((uintptr_t)sPicTable_Portal[id].data + TILE_OFFSET_4BPP(i));
+            const u8 *botLuma = GetLumaPalette(&lp, entries[i * 3] >> 12);
+            const u16 *bot4s = (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(entries[i * 3] & 0x03FF));
+            bool32 botH = !!(entries[i * 3] & 0x0400);
+            const u8 *midLuma = GetLumaPalette(&lp, entries[i * 3 + 1] >> 12);
+            const u16 *mid4s = (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(entries[i * 3 + 1] & 0x03FF));
+            bool32 midH = !!(entries[i * 3 + 1] & 0x0400);
+            const u8 *topLuma = GetLumaPalette(&lp, entries[i * 3 + 2] >> 12);
+            const u16 *top4s = (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(entries[i * 3 + 2] & 0x03FF));
+            bool32 topH = !!(entries[i * 3 + 2] & 0x0400);
+            u16 rom4, bot4, mid4, top4;
+
+            for (j = 0; j < TILE_SIZE_4BPP / 2; j++)
+            {
+                rom4 = rom4s[j];
+                bot4 = hFlip(bot4s, j, botH);
+                mid4 = hFlip(mid4s, j, midH);
+                top4 = hFlip(top4s, j, topH);
+                if ((rom4 & 0x000F) == 0x000F)
+                {
+                    if (top4 & 0x000F)
+                        PushPixelWriter(&pw, topLuma[top4 & 0x000F]);
+                    else if (mid4 & 0x000F)
+                        PushPixelWriter(&pw, midLuma[mid4 & 0x000F]);
+                    else
+                        PushPixelWriter(&pw, botLuma[bot4 & 0x000F]);
+                }
+
+                if (((rom4 >> 4) & 0x000F) == 0x000F)
+                {
+                    if ((top4 >> 4) & 0x000F)
+                        PushPixelWriter(&pw, topLuma[(top4 >> 4) & 0x000F]);
+                    else if ((mid4 >> 4) & 0x000F)
+                        PushPixelWriter(&pw, midLuma[(mid4 >> 4) & 0x000F]);
+                    else
+                        PushPixelWriter(&pw, botLuma[(bot4 >> 4) & 0x000F]);
+                }
+
+                if (((rom4 >> 8) & 0x000F) == 0x000F)
+                {
+                    if ((top4 >> 8) & 0x000F)
+                        PushPixelWriter(&pw, topLuma[(top4 >> 8) & 0x000F]);
+                    else if ((mid4 >> 8) & 0x000F)
+                        PushPixelWriter(&pw, midLuma[(mid4 >> 8) & 0x000F]);
+                    else
+                        PushPixelWriter(&pw, botLuma[(bot4 >> 8) & 0x000F]);
+                }
+
+                if (((rom4 >> 12) & 0x000F) == 0x000F)
+                {
+                    if ((top4 >> 12) & 0x000F)
+                        PushPixelWriter(&pw, topLuma[(top4 >> 12) & 0x000F]);
+                    else if ((mid4 >> 12) & 0x000F)
+                        PushPixelWriter(&pw, midLuma[(mid4 >> 12) & 0x000F]);
+                    else
+                        PushPixelWriter(&pw, botLuma[(bot4 >> 12) & 0x000F]);
+                }
+            }
+        }
+    }
+    else
+    {
+        // Fill inactive portals with the opposite's darkest color.
+        memset(gSaveBlock1Ptr->portals[id].pixels, id == PORTAL_ORANGE ? 0x11 : 0x88, sizeof(gSaveBlock1Ptr->portals[id].pixels));
+    }
+
+    // Trigger the other portal to update (if necessary).
+    for (i = 0; i < MAX_SPRITES; i++)
+    {
+        if (gSprites[i].callback == SpriteCallback_Portal
+         && gSprites[i].data[2] != id)
+        {
+            gSprites[i].data[3] = FALSE;
+        }
+    }
+}
+
+static void Task_WaitForPortalAnim(u8 taskId);
+
+void DoCreatePortal(const struct MapPosition *position, u8 direction, u32 id)
+{
+    s32 i, x, y, dx, dy;
+    struct Portal *portal = &gSaveBlock1Ptr->portals[id];
+    const struct MapConnection *connection;
+
+    x = position->x;
+    y = position->y;
+    switch (direction)
+    {
+    case DIR_NORTH: dx =  0; dy = -1; break;
+    case DIR_EAST:  dx =  1; dy =  0; break;
+    case DIR_SOUTH: dx =  0; dy =  1; break;
+    case DIR_WEST:  dx = -1; dy =  0; break;
+    }
+
+    portal->active = FALSE;
+    for (i = 0; i < 7; i++)
+    {
+        x += dx;
+        y += dy;
+        if (MapGridIsImpassableAt(x, y))
+        {
+            portal->active = TRUE;
+            portal->direction = direction;
+            if ((connection = GetConnectionAtCoords(x, y)))
+            {
+                const struct MapLayout *connectedLayout = GetMapHeaderFromConnection(connection)->mapLayout;
+                portal->mapGroup = connection->mapGroup;
+                portal->mapNum = connection->mapNum;
+                switch (connection->direction)
+                {
+                case CONNECTION_SOUTH:
+                    portal->x = -connection->offset + x;
+                    portal->y = -gMapHeader.mapLayout->height + y;
+                    break;
+                case CONNECTION_NORTH:
+                    portal->x = -connection->offset + x;
+                    portal->y = connectedLayout->height + y;
+                    break;
+                case CONNECTION_WEST:
+                    portal->x = connectedLayout->width + portal->x;
+                    portal->y = -connection->offset + portal->y;
+                    break;
+                case CONNECTION_EAST:
+                    portal->x = -gMapHeader.mapLayout->width + x;
+                    portal->y = -connection->offset + y;
+                    break;
+                }
+            }
+            else
+            {
+                portal->mapGroup = gSaveBlock1Ptr->location.mapGroup;
+                portal->mapNum = gSaveBlock1Ptr->location.mapNum;
+                portal->x = x;
+                portal->y = y;
+            }
+            break;
+        }
+    }
+
+    if (portal->active)
+    {
+        for (i = 0; i < ARRAY_COUNT(gSaveBlock1Ptr->portals); i++)
+        {
+            if (i != id
+             && gSaveBlock1Ptr->portals[i].active
+             && portal->mapGroup == gSaveBlock1Ptr->portals[i].mapGroup
+             && portal->mapNum == gSaveBlock1Ptr->portals[i].mapNum
+             && portal->x == gSaveBlock1Ptr->portals[i].x
+             && portal->y == gSaveBlock1Ptr->portals[i].y)
+            {
+                portal->active = FALSE;
+                break;
+            }
+        }
+    }
+
+    // HINT: Could 'x - dx, y - dy' to capture the metatile that will be
+    // walked on, but that doesn't look very good.
+    DoCapturePortalSprite(id, x, y, portal->active);
+    if (portal->active)
+    {
+        u32 taskId, spriteId;
+        spriteId = CreatePortalSprite(id, x, y);
+        StartSpriteAffineAnim(&gSprites[spriteId], 1);
+        PlaySE(SE_PIN);
+        taskId = CreateTask(Task_WaitForPortalAnim, 0);
+        gTasks[taskId].data[0] = spriteId;
+    }
+    else
+    {
+        PlaySE(SE_BOO);
+        EnableBothScriptContexts();
+    }
+}
+
+static void Task_WaitForPortalAnim(u8 taskId)
+{
+    struct Sprite *sprite = &gSprites[gTasks[taskId].data[0]];
+    if (sprite->affineAnimEnded)
+    {
+        EnableBothScriptContexts();
+        DestroyTask(taskId);
+    }
+}
+
+static void FieldCB_PortalWarpExit(void);
+
+static void Task_DoPortalWarp(u8 taskId)
+{
+    s32 i;
+    struct Task *task = &gTasks[taskId];
+    const struct Portal *from = &gSaveBlock1Ptr->portals[task->data[1]];
+    const struct Portal *to = &gSaveBlock1Ptr->portals[task->data[2]];
+    u32 objEventId;
+    switch (task->tState)
+    {
+    case 0:
+        FreezeObjectEvents();
+        objEventId = GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_PLAYER, 0, 0);
+        switch (from->direction)
+        {
+        case DIR_NORTH:
+        case DIR_EAST:
+        case DIR_WEST:
+            gObjectEvents[objEventId].fixedPriority = TRUE;
+            gSprites[gObjectEvents[objEventId].spriteId].oam.priority = 1;
+            break;
+        }
+        gSprites[gObjectEvents[objEventId].spriteId].subspriteTableNum = 0;
+        ObjectEventClearHeldMovementIfActive(&gObjectEvents[objEventId]);
+        ObjectEventSetHeldMovement(&gObjectEvents[objEventId], GetWalkNormalMovementAction(from->direction));
+        task->data[3] = 16;
+        task->tState = 1;
+    case 1:
+        if (--task->data[3] == 0)
+        {
+            UnfreezeObjectEvents();
+            task->tState = 2;
+        }
+        break;
+    case 2:
+        // TODO: Different warp if in range.
+        SetDynamicWarpWithCoords(0x7F, to->mapGroup, to->mapNum, -1, to->x - 7, to->y - 7);
+        SetWarpDestinationToDynamicWarp(0x7F);
+        TryFadeOutOldMapMusic();
+        FadeScreen(FADE_TO_WHITE, 8);
+        PlayRainStoppingSoundEffect();
+        gFieldCallback = FieldCB_PortalWarpExit;
+        for (i = 0; i < MAX_SPRITES; i++)
+        {
+            // Prevent portal sprites from moving during the warp
+            // sequence.
+            if (gSprites[i].callback == SpriteCallback_Portal)
+                gSprites[i].callback = SpriteCallbackDummy;
+        }
+        task->func = Task_WarpAndLoadMap;
+        break;
+    }
+}
+
+void DoPortalWarp(u32 from, u32 to)
+{
+    u8 taskId;
+
+    taskId = CreateTask(Task_DoPortalWarp, 10);
+    gTasks[taskId].data[1] = from;
+    gTasks[taskId].data[2] = to;
+}
+
+static void Task_ExitPortal(u8 taskId)
+{
+    s32 i;
+    u32 objEventId;
+    struct Task *task = &gTasks[taskId];
+
+    switch (task->tState)
+    {
+    case 0:
+        objEventId = GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_PLAYER, 0, 0);
+        PlayerGetDestCoords(&task->data[1], &task->data[2]);
+        for (i = 0; i < ARRAY_COUNT(gSaveBlock1Ptr->portals); i++)
+        {
+            if (gSaveBlock1Ptr->portals[i].active
+             && gSaveBlock1Ptr->portals[i].mapGroup == gSaveBlock1Ptr->location.mapGroup
+             && gSaveBlock1Ptr->portals[i].mapNum == gSaveBlock1Ptr->location.mapNum
+             && gSaveBlock1Ptr->portals[i].x == task->data[1]
+             && gSaveBlock1Ptr->portals[i].y == task->data[2])
+            {
+                task->data[3] = GetOppositeDirection(gSaveBlock1Ptr->portals[i].direction);
+                break;
+            }
+        }
+        switch (gSaveBlock1Ptr->portals[i].direction)
+        {
+        case DIR_NORTH:
+        case DIR_EAST:
+        case DIR_WEST:
+            gObjectEvents[objEventId].fixedPriority = TRUE;
+            gSprites[gObjectEvents[objEventId].spriteId].oam.priority = 1;
+            break;
+        }
+        gSprites[gObjectEvents[objEventId].spriteId].subspriteTableNum = 0;
+        SetPlayerVisibility(TRUE);
+        FreezeObjectEvents();
+        PlayerFaceDirection(task->data[3]);
+        task->tState = 1;
+        break;
+    case 1:
+        if (WaitForWeatherFadeIn())
+        {
+            objEventId = GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_PLAYER, 0, 0);
+            ObjectEventClearHeldMovementIfActive(&gObjectEvents[objEventId]);
+            ObjectEventSetHeldMovement(&gObjectEvents[objEventId], GetWalkNormalMovementAction(task->data[3]));
+            task->tState = 2;
+        }
+        break;
+    case 2:
+        if (IsPlayerStandingStill())
+        {
+            objEventId = GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_PLAYER, 0, 0);
+            gObjectEvents[objEventId].fixedPriority = FALSE;
+            SetObjectSubpriorityByZCoord(gObjectEvents[objEventId].previousElevation, &gSprites[gObjectEvents[objEventId].spriteId], 1);
+            UnfreezeObjectEvents();
+            task->tState = 3;
+        }
+        break;
+    case 3:
+        ScriptContext2_Disable();
+        DestroyTask(taskId);
+        break;
+    }
+}
+
+static void FieldCB_PortalWarpExit(void)
+{
+    Overworld_PlaySpecialMapMusic();
+    FadeInFromWhite();
+    CreateTask(Task_ExitPortal, 10);
+    PlaySE(SE_WARP_IN);
+    ScriptContext2_Enable();
+}

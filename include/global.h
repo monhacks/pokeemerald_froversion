@@ -10,6 +10,7 @@
 #include "constants/flags.h"
 #include "constants/vars.h"
 #include "constants/species.h"
+#include "mgba_printf.h"
 
 // Prevent cross-jump optimization.
 #define BLOCK_CROSS_JUMP asm("");
@@ -130,6 +131,10 @@
 
 #define DEX_FLAGS_NO (ROUND_BITS_TO_BYTES(NUM_SPECIES))
 #define NUM_FLAG_BYTES (ROUND_BITS_TO_BYTES(FLAGS_COUNT))
+
+// This produces an error at compile-time if expr is zero.
+// It looks like file.c:line: size of array `id' is negative
+#define STATIC_ASSERT(expr, id) typedef char id[(expr) ? 1 : -1];
 
 struct Coords8
 {
@@ -948,6 +953,24 @@ struct MysteryEventStruct
     /*0x344 0x3570*/ u32 unk_344[2][5];
 }; // 0x36C 0x3598
 
+enum
+{
+    PORTAL_ORANGE,
+    PORTAL_BLUE,
+    PORTAL_COUNT
+};
+
+struct Portal
+{
+    bool8 active;
+    u8 direction;
+    s8 mapGroup;
+    s8 mapNum;
+    s16 x;
+    s16 y;
+    u8 pixels[96];
+};
+
 struct SaveBlock1
 {
     /*0x00*/ struct Coords16 pos;
@@ -1039,6 +1062,7 @@ struct SaveBlock1
     // sizeof: 0x3D88
     u8 diaryEntriesFound;
     u8 diaryEntriesOrder[NUM_DIARY_ENTRIES];
+    struct Portal portals[2];
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;

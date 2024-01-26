@@ -11,6 +11,7 @@
 #include "field_effect.h"
 #include "field_effect_helpers.h"
 #include "field_player_avatar.h"
+#include "field_screen_effect.h"
 #include "field_weather.h"
 #include "fieldmap.h"
 #include "mauville_old_man.h"
@@ -1578,6 +1579,8 @@ void TrySpawnObjectEvents(s16 cameraX, s16 cameraY)
                 TrySpawnObjectEventTemplate(template, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup, cameraX, cameraY);
         }
     }
+
+    CreatePortalSprites();
 }
 
 void RemoveObjectEventsOutsideView(void)
@@ -1631,6 +1634,7 @@ void sub_808E16C(s16 x, s16 y)
         }
     }
     CreateReflectionEffectSprites();
+    CreatePortalSprites();
 }
 
 static void sub_808E1B8(u8 objectEventId, s16 x, s16 y)
