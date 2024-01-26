@@ -60,26 +60,7 @@ Debug_CheatStart::
 	end
 
 Debug_Script_1::
-	finddiaryentry DIARY_ENTRY_TWENTIETH
-	finddiaryentry DIARY_ENTRY_NINETEENTH
-	finddiaryentry DIARY_ENTRY_EIGHTEENTH
-	finddiaryentry DIARY_ENTRY_SEVENTEENTH
-	finddiaryentry DIARY_ENTRY_SIXTEENTH
-	finddiaryentry DIARY_ENTRY_FIFTEENTH
-	finddiaryentry DIARY_ENTRY_FOURTEENTH
-	finddiaryentry DIARY_ENTRY_THIRTEENTH
-	finddiaryentry DIARY_ENTRY_TWELVETH
-	finddiaryentry DIARY_ENTRY_ELEVENTH
-	finddiaryentry DIARY_ENTRY_TENTH
-	finddiaryentry DIARY_ENTRY_NINTH
-	finddiaryentry DIARY_ENTRY_EIGHTH
-	finddiaryentry DIARY_ENTRY_SEVENTH
-	finddiaryentry DIARY_ENTRY_SIXTH
-	finddiaryentry DIARY_ENTRY_FIFTH
-	finddiaryentry DIARY_ENTRY_FOURTH
-	finddiaryentry DIARY_ENTRY_THIRD
-	finddiaryentry DIARY_ENTRY_SECOND
-	finddiaryentry DIARY_ENTRY_FIRST
+	setflag FLAG_SYS_PORTAL_GUN_GET
 	end
 
 Debug_Script_2::
