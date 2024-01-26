@@ -964,6 +964,7 @@ struct Portal
     s8 mapNum;
     s16 x;
     s16 y;
+    u8 pixels[96];
 };
 
 struct SaveBlock1

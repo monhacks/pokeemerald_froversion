@@ -1372,13 +1372,13 @@ static const struct SpriteFrameImage sPicTable_Portal[] =
     overworld_frame(sPortal_Gfx, 2, 4, 1),
 };
 
-static const union AnimCmd sAnim_Portal_BlueNorth[] =
+static const union AnimCmd sAnim_Portal_OrangeNorth[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END
 };
 
-static const union AnimCmd sAnim_Portal_OrangeNorth[] =
+static const union AnimCmd sAnim_Portal_BlueNorth[] =
 {
     ANIMCMD_FRAME(1, 1),
     ANIMCMD_END
@@ -1386,8 +1386,8 @@ static const union AnimCmd sAnim_Portal_OrangeNorth[] =
 
 enum
 {
-    ANIM_PORTAL_BLUE_NORTH,
     ANIM_PORTAL_ORANGE_NORTH,
+    ANIM_PORTAL_BLUE_NORTH,
 };
 
 static const union AnimCmd *const sAnims_Portal[] =
@@ -1432,6 +1432,37 @@ static const struct SpriteTemplate sSpriteTemplate_Portal =
 
 static void DestroyPortalSprite(struct Sprite *sprite);
 
+struct PixelReader
+{
+    u32 buffer;
+    u32 remaining;
+    const u8 *stream;
+};
+
+static inline void MakePixelReader(struct PixelReader *pr, const u8 *stream)
+{
+    pr->buffer = T1_READ_32(stream);
+    pr->remaining = 8;
+    pr->stream = stream + 4;
+}
+
+static inline u32 PopPixelReader(struct PixelReader *pr)
+{
+    u32 pop = pr->buffer & 0xF;
+    pr->buffer >>= 4;
+    pr->remaining--;
+    return pop;
+}
+
+static inline void BufferPixelReader(struct PixelReader *pr, u32 remaining)
+{
+    while (pr->remaining < remaining)
+    {
+        pr->buffer |= *pr->stream++ << (4 * pr->remaining);
+        pr->remaining += 2;
+    }
+}
+
 static void SpriteCallback_Portal(struct Sprite *sprite)
 {
     s32 left =   gSaveBlock1Ptr->pos.x - 2;
@@ -1450,6 +1481,45 @@ static void SpriteCallback_Portal(struct Sprite *sprite)
     else
     {
         SetSpritePosToMapCoords(sprite->data[0], sprite->data[1], &sprite->pos1.x, &sprite->pos1.y);
+
+        // Update the portal pixels.
+        if (!sprite->data[3] && sprite->animEnded)
+        {
+            s32 i;
+            const u16 *rom4s = (const u16 *)((uintptr_t)sPicTable_Portal[sprite->data[2]].data + TILE_OFFSET_4BPP(2));
+            u16 *vram4s = (u16 *)(OBJ_VRAM0 + TILE_OFFSET_4BPP(sprite->oam.tileNum + 2));
+            u16 rom4, vram4;
+            struct PixelReader pr;
+            MakePixelReader(&pr, gSaveBlock1Ptr->portals[1 - sprite->data[2]].pixels);
+            for (i = 0; i < 6 * TILE_SIZE_4BPP / 2; i++)
+            {
+                BufferPixelReader(&pr, 4);
+                rom4 = rom4s[i];
+
+                if ((rom4 & 0x000F) == 0x000F)
+                    vram4 = PopPixelReader(&pr);
+                else
+                    vram4 = rom4 & 0x000F;
+
+                if ((rom4 & 0x00F0) == 0x00F0)
+                    vram4 |= PopPixelReader(&pr) << 4;
+                else
+                    vram4 |= rom4 & 0x00F0;
+
+                if ((rom4 & 0x0F00) == 0x0F00)
+                    vram4 |= PopPixelReader(&pr) << 8;
+                else
+                    vram4 |= rom4 & 0x0F00;
+
+                if ((rom4 & 0xF000) == 0xF000)
+                    vram4 |= PopPixelReader(&pr) << 12;
+                else
+                    vram4 |= rom4 & 0xF000;
+
+                vram4s[i] = vram4;
+            }
+            sprite->data[3] = TRUE;
+        }
     }
 }
 
@@ -1499,8 +1569,9 @@ static u32 CreatePortalSprite(u32 id, s32 x, s32 y)
     SetSpritePosToMapCoords(x, y, &sprite->pos1.x, &sprite->pos1.y);
     sprite->pos2.x = -8;
     sprite->pos2.y = -8;
+
     // TODO: Graphics/animation for each direction.
-    StartSpriteAnim(sprite, ANIM_PORTAL_BLUE_NORTH + id);
+    StartSpriteAnimIfDifferent(sprite, ANIM_PORTAL_ORANGE_NORTH + id);
 
     switch (gSaveBlock1Ptr->portals[id].direction)
     {
@@ -1575,6 +1646,208 @@ void CreatePortalSprites(void)
 
         if (left <= x && x <= right && top <= y && y <= bottom)
             CreatePortalSprite(i, x, y);
+    }
+}
+
+struct PixelWriter
+{
+    bool8 buffered;
+    u8 *stream;
+};
+
+static inline void MakePixelWriter(struct PixelWriter *pw, u8 *stream)
+{
+    pw->buffered = FALSE;
+    pw->stream = stream;
+}
+
+static inline void PushPixelWriter(struct PixelWriter *pw, u32 push)
+{
+    if (pw->buffered)
+    {
+        *pw->stream |= push << 4;
+        pw->stream++;
+        pw->buffered = FALSE;
+    }
+    else
+    {
+        *pw->stream = push;
+        pw->buffered = TRUE;
+    }
+}
+
+struct LumaPalettes
+{
+    u8 offset;
+    u16 cached;
+    u8 palettes[256];
+};
+
+static inline void MakeLumaPalettes(struct LumaPalettes *lp, u32 offset)
+{
+    lp->offset = offset;
+    lp->cached = 0;
+}
+
+static const u8 *GetLumaPalette(struct LumaPalettes *lp, u32 palette)
+{
+    if (!(lp->cached & (1 << palette)))
+    {
+        s32 i;
+        lp->cached |= (1 << palette);
+        for (i = 1; i < 16; i++)
+        {
+            u32 color = gPlttBufferUnfaded[palette * 16 + i];
+            u32 r, g, b, l;
+            r = GET_R(color);
+            g = GET_G(color);
+            b = GET_B(color);
+            // TODO: There's probably a faster formula for this given we
+            // only have 7 steps.
+            l = (r * Q_8_8(0.3) + g * Q_8_8(0.59) + b * Q_8_8(0.1133)) >> 8;
+            l = min(l >> 2, 6);
+            lp->palettes[palette * 16 + i] = lp->offset + l;
+        }
+    }
+
+    return &lp->palettes[palette * 16];
+}
+
+static void GetMetatileEntriesAt(u16 *entries, s32 x, s32 y)
+{
+    s32 i;
+    u32 metatileId = MapGridGetMetatileIdAt(x, y);
+    const u16 *metatileEntries;
+
+    if (metatileId < NUM_METATILES_IN_PRIMARY)
+        metatileEntries = gMapHeader.mapLayout->primaryTileset->metatiles + metatileId * 3 * 4;
+    else
+        metatileEntries = gMapHeader.mapLayout->secondaryTileset->metatiles + (metatileId - NUM_METATILES_IN_PRIMARY) * 3 * 4;
+
+    entries[0] = metatileEntries[0];
+    entries[3] = metatileEntries[1];
+    entries[6] = metatileEntries[2];
+    entries[9] = metatileEntries[3];
+
+    entries[1] = metatileEntries[4];
+    entries[4] = metatileEntries[5];
+    entries[7] = metatileEntries[6];
+    entries[10] = metatileEntries[7];
+
+    entries[2] = metatileEntries[8];
+    entries[5] = metatileEntries[9];
+    entries[8] = metatileEntries[10];
+    entries[11] = metatileEntries[11];
+}
+
+static inline u16 hFlip(const u16 *_4s, u32 i, bool32 hFlip)
+{
+    if (!hFlip)
+    {
+        return _4s[i];
+    }
+    else
+    {
+        u16 _4 = _4s[i ^ 1];
+        return ((_4 & 0x000F) << 12)
+             | ((_4 & 0x00F0) << 4)
+             | ((_4 & 0x0F00) >> 4)
+             | (_4 >> 12);
+    }
+}
+
+// XXX: Assumes triple-layer metatiles.
+static void DoCapturePortalSprite(u32 id, s32 x, s32 y, bool32 capture)
+{
+    s32 i, j;
+
+    if (capture)
+    {
+        // Fill active portals with the pixels underneath, shifted to
+        // their color.
+        struct PixelWriter pw;
+        struct LumaPalettes lp;
+        u16 entries[2 * 3 * 4];
+        GetMetatileEntriesAt(&entries[0], x, y - 1);
+        GetMetatileEntriesAt(&entries[12], x, y);
+        MakePixelWriter(&pw, gSaveBlock1Ptr->portals[id].pixels);
+        MakeLumaPalettes(&lp, id == PORTAL_ORANGE ? 0x8 : 0x1);
+        for (i = 2; i < 8; i++)
+        {
+            const u16 *rom4s = (const u16 *)((uintptr_t)sPicTable_Portal[id].data + TILE_OFFSET_4BPP(i));
+            const u8 *botLuma = GetLumaPalette(&lp, entries[i * 3] >> 12);
+            const u16 *bot4s = (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(entries[i * 3] & 0x03FF));
+            bool32 botH = !!(entries[i * 3] & 0x0400);
+            const u8 *midLuma = GetLumaPalette(&lp, entries[i * 3 + 1] >> 12);
+            const u16 *mid4s = (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(entries[i * 3 + 1] & 0x03FF));
+            bool32 midH = !!(entries[i * 3 + 1] & 0x0400);
+            const u8 *topLuma = GetLumaPalette(&lp, entries[i * 3 + 2] >> 12);
+            const u16 *top4s = (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(entries[i * 3 + 2] & 0x03FF));
+            bool32 topH = !!(entries[i * 3 + 2] & 0x0400);
+            u16 rom4, bot4, mid4, top4;
+
+            for (j = 0; j < TILE_SIZE_4BPP / 2; j++)
+            {
+                rom4 = rom4s[j];
+                bot4 = hFlip(bot4s, j, botH);
+                mid4 = hFlip(mid4s, j, midH);
+                top4 = hFlip(top4s, j, topH);
+                if ((rom4 & 0x000F) == 0x000F)
+                {
+                    if (top4 & 0x000F)
+                        PushPixelWriter(&pw, topLuma[top4 & 0x000F]);
+                    else if (mid4 & 0x000F)
+                        PushPixelWriter(&pw, midLuma[mid4 & 0x000F]);
+                    else
+                        PushPixelWriter(&pw, botLuma[bot4 & 0x000F]);
+                }
+
+                if (((rom4 >> 4) & 0x000F) == 0x000F)
+                {
+                    if ((top4 >> 4) & 0x000F)
+                        PushPixelWriter(&pw, topLuma[(top4 >> 4) & 0x000F]);
+                    else if ((mid4 >> 4) & 0x000F)
+                        PushPixelWriter(&pw, midLuma[(mid4 >> 4) & 0x000F]);
+                    else
+                        PushPixelWriter(&pw, botLuma[(bot4 >> 4) & 0x000F]);
+                }
+
+                if (((rom4 >> 8) & 0x000F) == 0x000F)
+                {
+                    if ((top4 >> 8) & 0x000F)
+                        PushPixelWriter(&pw, topLuma[(top4 >> 8) & 0x000F]);
+                    else if ((mid4 >> 8) & 0x000F)
+                        PushPixelWriter(&pw, midLuma[(mid4 >> 8) & 0x000F]);
+                    else
+                        PushPixelWriter(&pw, botLuma[(bot4 >> 8) & 0x000F]);
+                }
+
+                if (((rom4 >> 12) & 0x000F) == 0x000F)
+                {
+                    if ((top4 >> 12) & 0x000F)
+                        PushPixelWriter(&pw, topLuma[(top4 >> 12) & 0x000F]);
+                    else if ((mid4 >> 12) & 0x000F)
+                        PushPixelWriter(&pw, midLuma[(mid4 >> 12) & 0x000F]);
+                    else
+                        PushPixelWriter(&pw, botLuma[(bot4 >> 12) & 0x000F]);
+                }
+            }
+        }
+    }
+    else
+    {
+        // Fill inactive portals with the opposite's darkest color.
+        memset(gSaveBlock1Ptr->portals[id].pixels, id == PORTAL_ORANGE ? 0x11 : 0x88, sizeof(gSaveBlock1Ptr->portals[id].pixels));
+    }
+
+    // Trigger the other portal to update (if necessary).
+    for (i = 0; i < MAX_SPRITES; i++)
+    {
+        if (gSprites[i].callback == SpriteCallback_Portal
+         && gSprites[i].data[2] != id)
+        {
+            gSprites[i].data[3] = FALSE;
+        }
     }
 }
 
@@ -1658,6 +1931,9 @@ void DoCreatePortal(const struct MapPosition *position, u8 direction, u32 id)
         }
     }
 
+    // HINT: Could 'x - dx, y - dy' to capture the metatile that will be
+    // walked on, but that doesn't look very good.
+    DoCapturePortalSprite(id, x, y, portal->active);
     if (portal->active)
     {
         u32 taskId, spriteId;
