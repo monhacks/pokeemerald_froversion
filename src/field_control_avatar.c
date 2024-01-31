@@ -208,12 +208,12 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
 
     if (FlagGet(FLAG_SYS_PORTAL_GUN_GET))
     {
-        if (JOY_NEW(L_BUTTON))
+        if (input->pressedLButton)
         {
             DoCreatePortal(&position, playerDirection, PORTAL_ORANGE);
             return TRUE;
         }
-        else if (JOY_NEW(R_BUTTON))
+        else if (input->pressedRButton)
         {
             DoCreatePortal(&position, playerDirection, PORTAL_BLUE);
             return TRUE;
@@ -1011,24 +1011,28 @@ static bool8 TryPortalWarp(const struct MapPosition *position, u8 direction)
                           && position->y == gMapHeader.mapLayout->height + portals[i].y)
                     {
                         DoPortalWarp(i, 1 - i);
+                        return TRUE;
                     }
                     else if (connection->direction == CONNECTION_NORTH
                           && position->x == connection->offset + portals[i].x
                           && position->y == -connectedLayout->height + portals[i].y)
                     {
                         DoPortalWarp(i, 1 - i);
+                        return TRUE;
                     }
                     else if (connection->direction == CONNECTION_WEST
                           && position->x == -connectedLayout->width + portals[i].x
                           && position->y == connection->offset + portals[i].y)
                     {
                         DoPortalWarp(i, 1 - i);
+                        return TRUE;
                     }
                     else if (connection->direction == CONNECTION_EAST
                           && position->x == gMapHeader.mapLayout->width + portals[i].x
                           && position->y == connection->offset + portals[i].y)
                     {
                         DoPortalWarp(i, 1 - i);
+                        return TRUE;
                     }
                 }
             }
