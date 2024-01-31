@@ -1336,6 +1336,19 @@ static void Cmd_attackcanceler(void)
         gBattlescriptCurrInstr = BattleScript_DragonOrbActivates;
         return;
     }
+
+///Metagross Boss
+    GET_MOVE_TYPE(gCurrentMove, moveType);
+    if (gBattleMons[gBattlerAttacker].ability == ABILITY_METAGROSS_BOSS && gBattleMons[gBattlerAttacker].type2 != moveType 
+        && gCurrentMove != MOVE_STRUGGLE)
+    {
+        PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
+        gBattleMons[gBattlerAttacker].type2 = moveType;
+        gBattlerAbility = gBattlerAttacker;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_DragonOrbActivates;
+        return;
+    }
  ///ShadowCharizard  
     if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SHADOW_CHARIZARD
         && (gBattleResults.battleTurnCounter % 5 == 4)
