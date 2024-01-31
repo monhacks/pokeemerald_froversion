@@ -16,7 +16,6 @@ bool8 SetUpFieldMove_Teleport(void)
 {
     if (!CheckFollowerFlag(FOLLOWER_FLAG_CAN_LEAVE_ROUTE))
         return FALSE;
-    Printf("Value for TryFindTeleportDestination = %d", TryFindTeleportDestination());
     if (TryFindTeleportDestination() == TRUE)
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;

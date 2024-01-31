@@ -1084,9 +1084,9 @@ struct TradeRoomPlayer
     u16 field_C;
 };
 
-#define B_VERSION_FRO           FALSE
+#define B_VERSION_FRO           TRUE
 #define B_VERSION_MARRIOTT      FALSE
 #define B_VERSION_MAGM6         FALSE
-#define B_VERSION_MAGEE         TRUE
+#define B_VERSION_MAGEE         FALSE
 
 #endif // GUARD_GLOBAL_H

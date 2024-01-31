@@ -3921,8 +3921,6 @@ bool32 ShouldDoTrainerSlide(u32 battlerId, u32 trainerId, u32 which)
 
     for (i = 0; i < ARRAY_COUNT(sTrainerSlides); i++)
     {
-        Printf("turn = %d", gBattleResults.battleTurnCounter);
-        Printf("trainerslides = %d", sTrainerSlides[i].msgFirstTurn);
         
         if (trainerId == sTrainerSlides[i].trainerId)
         {

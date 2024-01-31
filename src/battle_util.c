@@ -104,7 +104,6 @@ bool32 AnyDragonFainted(u32 battlerId)
     int i;
     u32 species;
     struct Party party = GetBattlerParty(gActiveBattler, TRUE);
-    // Printf("Battler for party check = %d", gActiveBattler);
     for (i = 0; i < party.maxSize; ++i)
     {
         if (i == gBattlerPartyIndexes[battlerId])
@@ -112,13 +111,11 @@ bool32 AnyDragonFainted(u32 battlerId)
         if (IsDoubleBattle(gActiveBattler) && i == gBattlerPartyIndexes[battlerId ^ BIT_FLANK])
             continue;
         species = GetMonData(&party.mons[i], MON_DATA_SPECIES2);
-        // Printf("Party Mon = %d", GetMonData(&party.mons[i], MON_DATA_SPECIES2));
         if (species != SPECIES_NONE && species != SPECIES_EGG
          && GetMonData(&party.mons[i], MON_DATA_HP) == 0
          && (gBaseStats[species].type1 == TYPE_DRAGON 
          || gBaseStats[species].type2 == TYPE_DRAGON))
         {
-            Printf("i = %d", i);
             return TRUE;
         }
     }
@@ -2323,7 +2320,6 @@ u8 DoFieldEndTurnEffects(void)
                 {
                 bool32 canStatusLeft = CanStatus(GetBattlerAtPosition(B_POSITION_PLAYER_LEFT));
                 bool32 canStatusRight = CanStatus(GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT));
-                Printf("gBattleResults.battleTurnCounter = %d",gBattleResults.battleTurnCounter);
                 gBattleScripting.battler = gBattleStruct->conjureId++;
                 gBattlerAbility = gBattleScripting.battler;
                 gActiveBattler = gBattleScripting.battler;
@@ -2482,7 +2478,6 @@ u8 DoFieldEndTurnEffects(void)
                  && !(gStatuses3[gActiveBattler] & STATUS3_HEAL_BLOCK)
                  && IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_WATER))
                 {
-                    //Printf("Executing RainHealScript");
                     gBattleScripting.battler = gActiveBattler;
                     gBattlescriptCurrInstr = BattleScript_RainHpHeal;
                     BattleScriptExecute(gBattlescriptCurrInstr);
@@ -4845,7 +4840,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 if (gBattleResults.battleTurnCounter % 3 == 2
                     && TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM, TRUE) )
                 {
-                    Printf("gBattleScripting.battler (sandstream) = %d", gBattleMons[battler].species);
                     gChangeAbilityPopUp = 2;
                     gChangeTxtScrAbility2 = TRUE;
                     gNewAbilityPopUp2 = ABILITY_SAND_STREAM;
@@ -4920,12 +4914,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                         {
                         gBattlerTarget = gActiveBattler;
                         }
-
-                    
-                    Printf("B_POSITION_PLAYER_RIGHT = %d", B_POSITION_PLAYER_RIGHT);
-                    Printf("B_POSITION_PLAYER_LEFT = %d", B_POSITION_PLAYER_LEFT);
-                    Printf("gBattlerTarget = %d", gBattlerTarget);
-
+                        
                     if ((gBattleMons[gActiveBattler].status1 & STATUS1_PARALYSIS && !CanBeParalyzed(gBattlerTarget))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_PSN_ANY && !CanBePoisoned(gActiveBattler, gBattlerTarget))
                     || (gBattleMons[gActiveBattler].status1 & STATUS1_BURN && !CanBeBurned(gBattlerTarget))
@@ -4955,9 +4944,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 break;
             case ABILITY_INVERTEBRAKE_HIDDEN_ABILITY:
                 {
-                u32 AbilityActivationRoll = 45;//Random() % 100;
-                //Printf("Random (Status Check)= %d", AbilityActivationRoll);
-                //Printf("Current HP = %d Max HP/3 =%d", gBattleMons[battler].hp, (gBattleMons[battler].maxHP / 3));
+                u32 AbilityActivationRoll = 45;
+                if(gBattleMons[battler].status1 & STATUS1_ANY)
+                    {
+                        gBattleResults.shunyongStatusCounter++;
+                        
+                    }
+                if(gBattleResults.shunyongStatusCounter >= 3)
+                    goto ABILITY_HEAL_MON_STATUS;
+                
                 if ((gBattleMons[battler].status1 & STATUS1_ANY)
                     && (AbilityActivationRoll <= 30))
                 {
@@ -4966,7 +4961,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 else if ((gBattleMons[battler].hp <= (gBattleMons[battler].maxHP / 3))
                     && (AbilityActivationRoll >= 70))
                     {
-                    //Printf("Random (HP check) = %d", AbilityActivationRoll);
                     BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
                     gBattleMoveDamage = gBattleMons[battler].maxHP / 18;
                     if (gBattleMoveDamage == 0)
@@ -4978,7 +4972,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 if ((gBattleMons[battler].statStages[j] <= 3)
                     && ((AbilityActivationRoll >= 40) && (AbilityActivationRoll <= 60)))
                     {
-                    //Printf("Random (Stat Reset Check) = %d", AbilityActivationRoll);
                     for (j = 0; j < NUM_BATTLE_STATS; j++)
                         gBattleMons[battler].statStages[j] = DEFAULT_STAT_STAGE;
                         BattleScriptPushCursorAndCallback(BattleScript_MotorCloakActivates);

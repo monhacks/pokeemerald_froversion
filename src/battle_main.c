@@ -1883,8 +1883,6 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     static const u8 maxDynamicLevel = 98;
     u8 levelDifference = Random() % 2;
 
-    Printf("gSaveBlock2Ptr->optionsWindowDifficulty = %d", gSaveBlock2Ptr->optionsWindowDifficulty);
-
     switch (gSaveBlock2Ptr->optionsWindowDifficulty)
     {
     case OPTIONS_DIFFICULTY_EASY:
@@ -1897,8 +1895,6 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
         difficultyModification = 110;
         break;
     }
-
-    Printf("difmod = %d", difficultyModification);
 
     for(i = 0; i < PARTY_SIZE; i++)
         {
@@ -2019,8 +2015,6 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
-                Printf("partyData[i].lvl = %d", partyData[i].lvl);
-                Printf("dynamicLevel = %d", dynamicLevel);
                 if(partyData[i].lvl > dynamicLevel
                 || partyData[i].species == SPECIES_ABYSSALDRAGONFIRSTEVO
                 || partyData[i].species == SPECIES_ABYSSALDRAGONSECONDEVO)
@@ -4044,14 +4038,13 @@ void BattleTurnPassed(void)
         break;
         case TRAINER_WINSTON_5:
         SetOpponentMovesAbyssalHighDragon();
-        case TRAINER_MATT_FINAL_BOSS:
+        case TRAINER_WATTSON_1:
         SetOpponentMovesMattFinalBoss();
         break;
         }
     
     if (gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_BLAZIKEN)
         SetOpponentMovesBlaziken();
-        Printf("species = %d",gBattleMons[B_POSITION_OPPONENT_LEFT].species);
     if (gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_ARIADOS_GHOST)
         SetOpponentMovesAriadosBoss();
 }
@@ -4202,10 +4195,6 @@ static void SetOpponentMovesAriadosBoss(void)
     s32 ariadosBossDifficultyThreshold;
     u8 ariadosBossTopsyTurveyChance = Random() % 256;
     bool32 playerHasBigBoosts = FALSE;
-    Printf("substitute status = %d", gBattleMons[B_POSITION_OPPONENT_LEFT].status2);
-    Printf("STATUS2_SUBSTITUTE = %d", STATUS2_SUBSTITUTE);
-    Printf("!(gBattleMons[B_POSITION_OPPONENT_LEFT].status2) & STATUS2_SUBSTITUTE = %d", (gBattleMons[B_POSITION_OPPONENT_LEFT].status2) & STATUS2_SUBSTITUTE);
-
     for (j = 0; j < NUM_BATTLE_STATS; j++)
         {
             ariadosBossStatTotal += gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[j];

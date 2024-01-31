@@ -2896,7 +2896,10 @@ void SetMoveEffect(bool32 primary, u32 certain)
                 else
                 {
                     if (GetBattlerTurnOrderNum(gEffectBattler) > gCurrentTurnActionNumber)
-                        gBattleMons[gEffectBattler].status2 |= sStatusFlagsForMoveEffects[gBattleScripting.moveEffect];
+                        {
+                            gBattleMons[gEffectBattler].status2 |= sStatusFlagsForMoveEffects[gBattleScripting.moveEffect];
+                            Printf("gBattleMons[gEffectBattler].status2 = %d", gBattleMons[gEffectBattler].status2);
+                        }
                     gBattlescriptCurrInstr++;
                 }
                 break;

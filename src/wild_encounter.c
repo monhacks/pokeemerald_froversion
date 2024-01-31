@@ -300,23 +300,15 @@ static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon)
                 }
             dynamicLevel += GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
         }
-    Printf("dynamicLevelChooseWildMon = %d", dynamicLevel);
-    Printf("i = %d", i);
-    Printf("partysize = %d", PARTY_SIZE);
     if(i == PARTY_SIZE)
         dynamicLevel /=i;
     if(dynamicLevel < minDynamicLevel)
         dynamicLevel = minDynamicLevel;
     if(dynamicLevel > maxDynamicLevel)
         dynamicLevel = maxDynamicLevel;
-    Printf("deynamiclevelafter = %d", dynamicLevel);
-    Printf("min = %d", min);
-    Printf("rand = %d", rand);
-    Printf("min + rand = %d", min + rand);
 
     if((min + rand) > dynamicLevel)
     {
-        Printf("(after if statement) min + rand = %d", min + rand);
         return (((min + rand) * difficultyModification) / 100);
     }
     else
@@ -456,7 +448,6 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
     u8 wildMonIndex = 0;
     u8 level;
 
-    Printf("Is This Running");
     switch (area)
     {
     case WILD_AREA_LAND:
@@ -495,9 +486,7 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, u8 ar
         wildMonIndex = ChooseWildMonIndex_WaterRock();
         break;
     }
-    Printf("Linebeforechoosewildmonlevel");
     level = ChooseWildMonLevel(&wildMonInfo->wildPokemon[wildMonIndex]);
-    Printf("level = %d", level);
     if (flags & WILD_CHECK_REPEL && !IsWildLevelAllowedByRepel(level))
         return FALSE;
     if (gMapHeader.mapLayoutId != LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS && flags & WILD_CHECK_KEEN_EYE && !IsAbilityAllowingEncounter(level))

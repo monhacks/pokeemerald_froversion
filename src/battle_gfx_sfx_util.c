@@ -961,9 +961,6 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battlerId, bool8 loadMonSprite)
             && evolution->method != EVO_MOVE_MEGA_EVOLUTION)
             subSpecies = evolution->targetSpecies; //set to beedrill (stage 3) 15 - 13 = 2
         }
-    
-
-    Printf("subSpecies = %d", subSpecies);
 
     if (!loadMonSprite)
     {

@@ -624,19 +624,16 @@ static void SetPlayerCoordsFromWarp(void)
     {
         gSaveBlock1Ptr->pos.x = gMapHeader.events->warps[gSaveBlock1Ptr->location.warpId].x;
         gSaveBlock1Ptr->pos.y = gMapHeader.events->warps[gSaveBlock1Ptr->location.warpId].y;
-        Printf("gSaveBlock1Ptr->pos.x = %d, gSaveBlock1Ptr->pos.y = %d", gSaveBlock1Ptr->pos.x, gSaveBlock1Ptr->pos.y);
     }
     else if (gSaveBlock1Ptr->location.x >= 0 && gSaveBlock1Ptr->location.y >= 0)
     {
         gSaveBlock1Ptr->pos.x = gSaveBlock1Ptr->location.x;
         gSaveBlock1Ptr->pos.y = gSaveBlock1Ptr->location.y;
-        Printf("gSaveBlock1Ptr->pos.x = %d, gSaveBlock1Ptr->pos.y = %d", gSaveBlock1Ptr->pos.x, gSaveBlock1Ptr->pos.y);
     }
     else
     {
         gSaveBlock1Ptr->pos.x = gMapHeader.mapLayout->width / 2;
         gSaveBlock1Ptr->pos.y = gMapHeader.mapLayout->height / 2;
-        Printf("gSaveBlock1Ptr->pos.x = %d, gSaveBlock1Ptr->pos.y = %d", gSaveBlock1Ptr->pos.x, gSaveBlock1Ptr->pos.y);
     }
 }
 

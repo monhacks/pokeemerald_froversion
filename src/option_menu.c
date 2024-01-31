@@ -506,7 +506,6 @@ static int ProcessInput_Options_Two(int selection)
 {
     if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
         selection ^= 1;
-    Printf("selection = %d", selection);
     return selection;
     
 }
@@ -747,10 +746,6 @@ static int ProcessInput_Autorun(int selection)
         gSaveBlock2Ptr->autoRun = FALSE;
     else
         gSaveBlock2Ptr->autoRun = TRUE;
-
-    
-    Printf("selection = %d", selection);
-    Printf("gSaveBlock2Ptr->autoRun = %d", gSaveBlock2Ptr->autoRun);
     return selection;
 }
 
