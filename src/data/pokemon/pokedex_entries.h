@@ -5573,7 +5573,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_FIRE] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_FirePokedexText,
@@ -5584,7 +5584,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_WATER] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_WaterPokedexText,
@@ -5595,7 +5595,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_GRASS] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_GrassPokedexText,
@@ -5606,7 +5606,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_ELECTRIC] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_ElectricPokedexText,
@@ -5617,7 +5617,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_NORMAL] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_NormalPokedexText,
@@ -5628,7 +5628,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_ICE] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_IcePokedexText,
@@ -5639,7 +5639,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_FIGHTING] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_FightingPokedexText,
@@ -5650,7 +5650,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_POISON] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_PoisonPokedexText,
@@ -5661,7 +5661,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_GROUND] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_GroundPokedexText,
@@ -5672,7 +5672,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_FLYING] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_FlyingPokedexText,
@@ -5683,7 +5683,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_BUG] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_BugPokedexText,
@@ -5694,7 +5694,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_GHOST] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_GhostPokedexText,
@@ -5705,7 +5705,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_DRAGON] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_DragonPokedexText,
@@ -5716,7 +5716,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_DARK] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_DarkPokedexText,
@@ -5727,7 +5727,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_FAIRY] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_FairyPokedexText,
@@ -5738,7 +5738,7 @@ const struct PokedexEntry gPokedexEntries[] =
     },
 [NATIONAL_DEX_METAGROSS_ROCK] =
     {
-        .categoryName = _("NEW SPECIES")
+        .categoryName = _("NEW SPECIES"),
         .height = 15,
         .weight = 330,
         .description = gMetagross_RockPokedexText,

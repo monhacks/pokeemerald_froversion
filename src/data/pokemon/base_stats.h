@@ -15045,7 +15045,7 @@ const struct BaseStats gBaseStats[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
-    }
+    },
 [SPECIES_METAGROSS_FIRE] =
     {
         .baseHP        = 80,
