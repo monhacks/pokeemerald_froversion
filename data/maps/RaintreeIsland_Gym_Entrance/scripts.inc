@@ -10,27 +10,13 @@
 RaintreeIsland_Gym_Entrance_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, RaintreeIsland_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
-	map_script MAP_SCRIPT_ON_LOAD, RaintreeIsland_PokemonCenter_1F_OnLoad
 	.byte 0
 
 RaintreeIsland_PokemonCenter_1F_OnTransition: @ 81FC52E
-	setrespawn HEAL_LOCATION_CINNABAR_ISLAND_POST_SHIP_WRECK
+	setrespawn HEAL_LOCATION_RAINTREE_ISLAND
 	call Common_EventScript_UpdateBrineyLocation
 	end
-RaintreeIsland_PokemonCenter_1F_OnLoad:
-	compare VAR_ROUTE101_STATE, 3
-	call_if_ge RaintreeIsland_PokemonCenter_1F_EventScript_SetDynamicWarpPostSleep
-	call_if_lt RaintreeIsland_PokemonCenter_1F_EventScript_SetDynamicWarpPreSleep
-end
 
-
-RaintreeIsland_PokemonCenter_1F_EventScript_SetDynamicWarpPreSleep:
-	setdynamicwarp MAP_CINNIBAR_ISLAND, 255, 25, 47
-end
-
-RaintreeIsland_PokemonCenter_1F_EventScript_SetDynamicWarpPostSleep:
-	setdynamicwarp MAP_CINNABAR_ISLAND_POST_SHIP_WRECK, 255, 25, 47
-end
 
 ////////////////////////////////////
 //////////Scripts//////////////////
@@ -50,28 +36,24 @@ GymLobby_EventScript_Chad::
 
 GymLobby_EventScript_Mike::
 	lock
-	faceplayer
 	msgbox Text_Mike, MSGBOX_DEFAULT
 	release
 	end
 
 GymLobby_EventScript_John::
 	lock
-	faceplayer
 	msgbox Text_John, MSGBOX_DEFAULT
 	release
 	end
 
 GymLobby_EventScript_GuardFrosty::
 	lock
-	faceplayer
 	msgbox Text_GuardFrosty, MSGBOX_DEFAULT
 	release
 	end
 
 GymLobby_EventScript_GuardHot::
 	lock
-	faceplayer
 	msgbox Text_GuardHot, MSGBOX_DEFAULT
 	release
 	end
@@ -99,7 +81,7 @@ end
 GymLobby_BattleItems_Mart_Pokemart:
 	.2byte ITEM_LEFTOVERS
 	.2byte ITEM_FOCUS_SASH
-	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_KINGS_ROCK
 	.2byte ITEM_QUICK_CLAW
 	.2byte ITEM_FLAME_ORB
 	.2byte ITEM_SAFETY_GOGGLES
@@ -121,13 +103,13 @@ GymLobby_Mart_EventScript_HealingItemsClerk::
 
 .align 2
 GymLobby_HealingItems_Mart_Pokemart:
-	.2byte ITEM_X_ATTACK
-	.2byte ITEM_X_DEFENSE
-	.2byte ITEM_X_SPEED
-	.2byte ITEM_X_SP_ATK
-	.2byte ITEM_X_SP_DEF
-	.2byte ITEM_DIRE_HIT
-	.2byte ITEM_PP_MAX
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_REVIVE
 	.2byte ITEM_NONE
 	release
 	end
@@ -184,7 +166,7 @@ Text_Chad:
 Text_Mike:
 	.string "I traveled all the way from\n"
 	.string "Homestead Town.\p"
-	.string "Now that the Pandemic is\n"
+	.string "Now that they Pandemic is\n"
 	.string "slowing down they are allowing\l"
 	.string "people in and out!$"
 

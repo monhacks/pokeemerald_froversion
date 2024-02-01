@@ -138,21 +138,21 @@
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_RAINTREE_ISLAND_GYM_FIRE_ROOM",
-      "dest_warp_id": "0"
+      "dest_warp_id": 0
     },
     {
       "x": 9,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": "127"
+      "dest_map": "MAP_RAINTREE_ISLAND",
+      "dest_warp_id": 1
     },
     {
       "x": 10,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": "127"
+      "dest_map": "MAP_RAINTREE_ISLAND",
+      "dest_warp_id": 1
     }
   ],
   "coord_events": [
