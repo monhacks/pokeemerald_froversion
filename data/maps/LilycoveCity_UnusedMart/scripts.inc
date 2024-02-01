@@ -44,83 +44,71 @@ LilycoveCity_UnusedMart_EventScript_Next::
 LilycoveCity_UnusedMart_EventScript_1:: @ 82202E4
 	setvar VAR_TEMP_0, ITEM_TM01
 	goto_if_set FLAG_VENDINGMACHINE_TM1, LilycoveCity_UnusedMart_EventScript_TMSoldOut
-	setflag FLAG_VENDINGMACHINE_TM1
 	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink
 	end
 
 LilycoveCity_UnusedMart_EventScript_2:: @ 82202EF
 	setvar VAR_TEMP_0, ITEM_TM02
 	goto_if_set FLAG_VENDINGMACHINE_TM2, LilycoveCity_UnusedMart_EventScript_TMSoldOut
-	setflag FLAG_VENDINGMACHINE_TM2
 	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink
 	end
 
 LilycoveCity_UnusedMart_EventScript_3:: @ 82202FA
 	setvar VAR_TEMP_0, ITEM_TM03
 	goto_if_set FLAG_VENDINGMACHINE_TM3, LilycoveCity_UnusedMart_EventScript_TMSoldOut
-	setflag FLAG_VENDINGMACHINE_TM3
 	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink
 	end
 
 LilycoveCity_UnusedMart_EventScript_4:: @ 82202E4
 	setvar VAR_TEMP_0, ITEM_TM04
 	goto_if_set FLAG_VENDINGMACHINE_TM4, LilycoveCity_UnusedMart_EventScript_TMSoldOut
-	setflag FLAG_VENDINGMACHINE_TM4
 	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink
 	end
 
 LilycoveCity_UnusedMart_EventScript_5:: @ 82202EF
 	setvar VAR_TEMP_0, ITEM_TM05
 	goto_if_set FLAG_VENDINGMACHINE_TM5, LilycoveCity_UnusedMart_EventScript_TMSoldOut
-	setflag FLAG_VENDINGMACHINE_TM5
 	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink
 	end
 
 LilycoveCity_UnusedMart_EventScript_6:: @ 82202FA
 	setvar VAR_TEMP_0, ITEM_TM06
 	goto_if_set FLAG_VENDINGMACHINE_TM6, LilycoveCity_UnusedMart_EventScript_TMSoldOut
-	setflag FLAG_VENDINGMACHINE_TM6
 	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink
 	end
 LilycoveCity_UnusedMart_EventScript_7:: @ 82202E4
 	setvar VAR_TEMP_0, ITEM_TM07
 	goto_if_set FLAG_VENDINGMACHINE_TM7, LilycoveCity_UnusedMart_EventScript_TMSoldOut
-	setflag FLAG_VENDINGMACHINE_TM7
 	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink
 	end
 
 LilycoveCity_UnusedMart_EventScript_8:: @ 82202EF
 	setvar VAR_TEMP_0, ITEM_TM08
 	goto_if_set FLAG_VENDINGMACHINE_TM8, LilycoveCity_UnusedMart_EventScript_TMSoldOut2
-	setflag FLAG_VENDINGMACHINE_TM8
 	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink2
 	end
 
 LilycoveCity_UnusedMart_EventScript_9:: @ 82202FA
 	setvar VAR_TEMP_0, ITEM_TM09
 	goto_if_set FLAG_VENDINGMACHINE_TM9, LilycoveCity_UnusedMart_EventScript_TMSoldOut2
-	setflag FLAG_VENDINGMACHINE_TM9
 	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink2
 	end
 
 LilycoveCity_UnusedMart_EventScript_10:: @ 82202E4
 	setvar VAR_TEMP_0, ITEM_TM10
 	goto_if_set FLAG_VENDINGMACHINE_TM10, LilycoveCity_UnusedMart_EventScript_TMSoldOut2
-	setflag FLAG_VENDINGMACHINE_TM10
 	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink2
 	end
 
 LilycoveCity_UnusedMart_EventScript_11:: @ 82202EF
 	setvar VAR_TEMP_0, ITEM_TM11
 	goto_if_set FLAG_VENDINGMACHINE_TM11, LilycoveCity_UnusedMart_EventScript_TMSoldOut2
-	setflag FLAG_VENDINGMACHINE_TM11
 	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink2
 	end
 
 LilycoveCity_UnusedMart_EventScript_12:: @ 82202FA
 	setvar VAR_TEMP_0, ITEM_TM12
 	goto_if_set FLAG_VENDINGMACHINE_TM12, LilycoveCity_UnusedMart_EventScript_TMSoldOut2
-	setflag FLAG_VENDINGMACHINE_TM12
 	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink2
 	end
 
@@ -158,6 +146,9 @@ LilycoveCity_UnusedMart_EventScript_TryBuyDrink:: @ 822032F
 	bufferitemname 1, VAR_TEMP_0
 	bufferstdstring 2, STDSTRING_ITEMS
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
+	goto LilycoveCity_UnusedMart_EventScript_SetTMFlag
+	
+LilycoveCity_UnusedMart_EventScript_TryBuyDrink1::	
 	random 64  																			@ 1/64 chance of an additional drink dropping
 	compare VAR_RESULT, 0
 	goto_if_ne LilycoveCity_UnusedMart_EventScript_ChooseNewDrink
@@ -201,6 +192,9 @@ LilycoveCity_UnusedMart_EventScript_TryBuyDrink2:: @ 822032F
 	bufferitemname 1, VAR_TEMP_0
 	bufferstdstring 2, STDSTRING_ITEMS
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
+	goto LilycoveCity_UnusedMart_EventScript_SetTMFlag
+
+LilycoveCity_UnusedMart_EventScript_TryBuyDrink2b::	
 	random 64  																			@ 1/64 chance of an additional drink dropping
 	compare VAR_RESULT, 0
 	goto_if_ne LilycoveCity_UnusedMart_EventScript_ChooseNewDrink2
@@ -227,6 +221,82 @@ LilycoveCity_UnusedMart_EventScript_TryBuyDrink2:: @ 822032F
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
 	goto LilycoveCity_UnusedMart_EventScript_ChooseNewDrink2
 	end
+
+LilycoveCity_UnusedMart_EventScript_SetTMFlag::
+	switch VAR_TEMP_0
+	case ITEM_TM01, LilycoveCity_UnusedMart_EventScript_TM1Sold
+	case ITEM_TM02, LilycoveCity_UnusedMart_EventScript_TM2Sold
+	case ITEM_TM03, LilycoveCity_UnusedMart_EventScript_TM3Sold
+	case ITEM_TM04, LilycoveCity_UnusedMart_EventScript_TM4Sold
+	case ITEM_TM05, LilycoveCity_UnusedMart_EventScript_TM5Sold
+	case ITEM_TM06, LilycoveCity_UnusedMart_EventScript_TM6Sold
+	case ITEM_TM07, LilycoveCity_UnusedMart_EventScript_TM7Sold
+	case ITEM_TM08, LilycoveCity_UnusedMart_EventScript_TM8Sold
+	case ITEM_TM09, LilycoveCity_UnusedMart_EventScript_TM9Sold
+	case ITEM_TM10, LilycoveCity_UnusedMart_EventScript_TM10Sold
+	case ITEM_TM11, LilycoveCity_UnusedMart_EventScript_TM11Sold
+	case ITEM_TM12, LilycoveCity_UnusedMart_EventScript_TM12Sold
+end
+
+LilycoveCity_UnusedMart_EventScript_TM1Sold::
+	setflag FLAG_VENDINGMACHINE_TM1
+	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink1
+end
+
+LilycoveCity_UnusedMart_EventScript_TM2Sold::
+	setflag FLAG_VENDINGMACHINE_TM2
+	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink1
+end
+
+LilycoveCity_UnusedMart_EventScript_TM3Sold::
+	setflag FLAG_VENDINGMACHINE_TM3
+	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink1
+end
+
+LilycoveCity_UnusedMart_EventScript_TM4Sold::
+	setflag FLAG_VENDINGMACHINE_TM4
+	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink1
+end
+
+LilycoveCity_UnusedMart_EventScript_TM5Sold::
+	setflag FLAG_VENDINGMACHINE_TM5
+	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink1
+end
+
+LilycoveCity_UnusedMart_EventScript_TM6Sold::
+	setflag FLAG_VENDINGMACHINE_TM6
+	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink1
+end
+
+LilycoveCity_UnusedMart_EventScript_TM7Sold::
+	setflag FLAG_VENDINGMACHINE_TM7
+	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink1
+end
+
+LilycoveCity_UnusedMart_EventScript_TM8Sold::
+	setflag FLAG_VENDINGMACHINE_TM8
+	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink2b
+end
+
+LilycoveCity_UnusedMart_EventScript_TM9Sold::
+	setflag FLAG_VENDINGMACHINE_TM9
+	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink2b
+end
+
+LilycoveCity_UnusedMart_EventScript_TM10Sold::
+	setflag FLAG_VENDINGMACHINE_TM10
+	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink2b
+end
+
+LilycoveCity_UnusedMart_EventScript_TM11Sold::
+	setflag FLAG_VENDINGMACHINE_TM11
+	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink2b
+end
+
+LilycoveCity_UnusedMart_EventScript_TM12Sold::
+	setflag FLAG_VENDINGMACHINE_TM12
+	goto LilycoveCity_UnusedMart_EventScript_TryBuyDrink2b
+end
 
 LilycoveCity_UnusedMart_EventScript_ChooseNewDrink:: @ 8220436
 	message LilycoveCity_UnusedMart_Text_WhichDrinkWouldYouLike
