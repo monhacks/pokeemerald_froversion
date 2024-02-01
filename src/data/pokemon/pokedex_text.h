@@ -2731,4 +2731,84 @@ const u8 gSpirettPokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
+const u8 gMetagross_FirePokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_WaterPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_GrassPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_ElectricPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_NormalPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_IcePokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_FightingPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_PoisonPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_GroundPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_FlyingPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_BugPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_GhostPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_DragonPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_DarkPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_FairyPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
+const u8 gMetagross_RockPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
 

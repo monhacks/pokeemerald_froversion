@@ -2426,3 +2426,52 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
 .align 2
     Cry_Spirett::
 	.incbin "sound/direct_sound_samples/cries/spirett.bin"
+.align 2
+    Cry_Metagross_Fire::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Water::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Grass::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Electric::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Normal::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Ice::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Fighting::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Poison::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Ground::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Flying::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Bug::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Ghost::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Dragon::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Dark::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Fairy::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+.align 2
+    Cry_Metagross_Rock::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+

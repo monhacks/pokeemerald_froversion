@@ -525,5 +525,23 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(WARKLOCK, gMonShinyPalette_Warklock),
     SPECIES_SHINY_PAL(CLOCLOCK, gMonShinyPalette_Cloclock),
     SPECIES_SHINY_PAL(SPIRETT, gMonShinyPalette_Spirett),
+    //metagross forms
+    SPECIES_SHINY_PAL(METAGROSS_FIRE, gMonShinyPalette_Metagross_Fire),
+    SPECIES_SHINY_PAL(METAGROSS_WATER, gMonShinyPalette_Metagross_Water),
+    SPECIES_SHINY_PAL(METAGROSS_GRASS, gMonShinyPalette_Metagross_Grass),
+    SPECIES_SHINY_PAL(METAGROSS_ELECTRIC, gMonShinyPalette_Metagross_Electric),
+    SPECIES_SHINY_PAL(METAGROSS_NORMAL, gMonShinyPalette_Metagross_Normal),
+    SPECIES_SHINY_PAL(METAGROSS_ICE, gMonShinyPalette_Metagross_Ice),
+    SPECIES_SHINY_PAL(METAGROSS_FIGHTING, gMonShinyPalette_Metagross_Fighting),
+    SPECIES_SHINY_PAL(METAGROSS_POISON, gMonShinyPalette_Metagross_Poison),
+    SPECIES_SHINY_PAL(METAGROSS_GROUND, gMonShinyPalette_Metagross_Ground),
+    SPECIES_SHINY_PAL(METAGROSS_FLYING, gMonShinyPalette_Metagross_Flying),
+    SPECIES_SHINY_PAL(METAGROSS_BUG, gMonShinyPalette_Metagross_Bug),
+    SPECIES_SHINY_PAL(METAGROSS_GHOST, gMonShinyPalette_Metagross_Ghost),
+    SPECIES_SHINY_PAL(METAGROSS_DRAGON, gMonShinyPalette_Metagross_Dragon),
+    SPECIES_SHINY_PAL(METAGROSS_DARK, gMonShinyPalette_Metagross_Dark),
+    SPECIES_SHINY_PAL(METAGROSS_FAIRY, gMonShinyPalette_Metagross_Fairy),
+    SPECIES_SHINY_PAL(METAGROSS_ROCK, gMonShinyPalette_Metagross_Rock),
+
 
 };

@@ -514,3 +514,23 @@ const u32 gMonFrontPic_Warklock[] = INCBIN_U32("graphics/pokemon/warklock/anim_f
 const u32 gMonFrontPic_Cloclock[] = INCBIN_U32("graphics/pokemon/cloclock/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Spirett[] = INCBIN_U32("graphics/pokemon/spirett/anim_front.4bpp.lz");
 
+//Metagross Forms
+
+const u32 gMonFrontPic_Metagross_Fire[] = INCBIN_U32("graphics/pokemon/metagross_fire/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Water[] = INCBIN_U32("graphics/pokemon/metagross_water/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Grass[] = INCBIN_U32("graphics/pokemon/metagross_grass/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Electric[] = INCBIN_U32("graphics/pokemon/metagross_electric/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Normal[] = INCBIN_U32("graphics/pokemon/metagross_normal/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Ice[] = INCBIN_U32("graphics/pokemon/metagross_ice/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Fighting[] = INCBIN_U32("graphics/pokemon/metagross_fighting/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Poison[] = INCBIN_U32("graphics/pokemon/metagross_poison/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Ground[] = INCBIN_U32("graphics/pokemon/metagross_ground/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Flying[] = INCBIN_U32("graphics/pokemon/metagross_flying/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Bug[] = INCBIN_U32("graphics/pokemon/metagross_bug/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Ghost[] = INCBIN_U32("graphics/pokemon/metagross_ghost/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Dragon[] = INCBIN_U32("graphics/pokemon/metagross_dragon/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Dark[] = INCBIN_U32("graphics/pokemon/metagross_dark/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Fairy[] = INCBIN_U32("graphics/pokemon/metagross_fairy/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Rock[] = INCBIN_U32("graphics/pokemon/metagross_rock/anim_front.4bpp.lz");
+
+

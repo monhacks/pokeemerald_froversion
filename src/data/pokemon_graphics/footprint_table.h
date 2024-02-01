@@ -496,5 +496,23 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_WARKLOCK] = gMonFootprint_Warklock,
     [SPECIES_CLOCLOCK] = gMonFootprint_Cloclock,
     [SPECIES_SPIRETT] = gMonFootprint_Spirett,
+    //metagross forms
+    [SPECIES_METAGROSS_FIRE] = gMonFootprint_Metagross_Fire,
+    [SPECIES_METAGROSS_WATER] = gMonFootprint_Metagross_Water,
+    [SPECIES_METAGROSS_GRASS] = gMonFootprint_Metagross_Grass,
+    [SPECIES_METAGROSS_ELECTRIC] = gMonFootprint_Metagross_Electric,
+    [SPECIES_METAGROSS_NORMAL] = gMonFootprint_Metagross_Normal,
+    [SPECIES_METAGROSS_ICE] = gMonFootprint_Metagross_Ice,
+    [SPECIES_METAGROSS_FIGHTING] = gMonFootprint_Metagross_Fighting,
+    [SPECIES_METAGROSS_POISON] = gMonFootprint_Metagross_Poison,
+    [SPECIES_METAGROSS_GROUND] = gMonFootprint_Metagross_Ground,
+    [SPECIES_METAGROSS_FLYING] = gMonFootprint_Metagross_Flying,
+    [SPECIES_METAGROSS_BUG] = gMonFootprint_Metagross_Bug,
+    [SPECIES_METAGROSS_GHOST] = gMonFootprint_Metagross_Ghost,
+    [SPECIES_METAGROSS_DRAGON] = gMonFootprint_Metagross_Dragon,
+    [SPECIES_METAGROSS_DARK] = gMonFootprint_Metagross_Dark,
+    [SPECIES_METAGROSS_FAIRY] = gMonFootprint_Metagross_Fairy,
+    [SPECIES_METAGROSS_ROCK] = gMonFootprint_Metagross_Rock,
+
     [SPECIES_EGG] = gMonFootprint_Bulbasaur,
 };

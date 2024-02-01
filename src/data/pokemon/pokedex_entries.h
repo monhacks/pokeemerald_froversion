@@ -5571,4 +5571,181 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
+[NATIONAL_DEX_METAGROSS_FIRE] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_FirePokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_WATER] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_WaterPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_GRASS] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_GrassPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_ELECTRIC] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_ElectricPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_NORMAL] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_NormalPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_ICE] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_IcePokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_FIGHTING] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_FightingPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_POISON] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_PoisonPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_GROUND] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_GroundPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_FLYING] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_FlyingPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_BUG] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_BugPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_GHOST] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_GhostPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_DRAGON] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_DragonPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_DARK] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_DarkPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_FAIRY] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_FairyPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_METAGROSS_ROCK] =
+    {
+        .categoryName = _("NEW SPECIES")
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_RockPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+
 };

@@ -9170,3 +9170,69 @@ static const struct LevelUpMove sSpirettLevelUpLearnset[] = {
 	LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 	LEVEL_UP_END
 };
+
+static const struct LevelUpMove sMetagross_FireLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_WaterLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_GrassLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_ElectricLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_NormalLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_IceLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_FightingLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_PoisonLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_GroundLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_FlyingLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_BugLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_GhostLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_DragonLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_DarkLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_FairyLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+static const struct LevelUpMove sMetagross_RockLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
+

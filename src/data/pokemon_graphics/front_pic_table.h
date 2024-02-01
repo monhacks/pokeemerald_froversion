@@ -528,4 +528,23 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(CLOCLOCK, gMonFrontPic_Cloclock),
     SPECIES_SPRITE(SPIRETT, gMonFrontPic_Spirett),
 
+    //Metagross forms
+    SPECIES_SPRITE(METAGROSS_FIRE, gMonFrontPic_Metagross_Fire),
+    SPECIES_SPRITE(METAGROSS_WATER, gMonFrontPic_Metagross_Water),
+    SPECIES_SPRITE(METAGROSS_GRASS, gMonFrontPic_Metagross_Grass),
+    SPECIES_SPRITE(METAGROSS_ELECTRIC, gMonFrontPic_Metagross_Electric),
+    SPECIES_SPRITE(METAGROSS_NORMAL, gMonFrontPic_Metagross_Normal),
+    SPECIES_SPRITE(METAGROSS_ICE, gMonFrontPic_Metagross_Ice),
+    SPECIES_SPRITE(METAGROSS_FIGHTING, gMonFrontPic_Metagross_Fighting),
+    SPECIES_SPRITE(METAGROSS_POISON, gMonFrontPic_Metagross_Poison),
+    SPECIES_SPRITE(METAGROSS_GROUND, gMonFrontPic_Metagross_Ground),
+    SPECIES_SPRITE(METAGROSS_FLYING, gMonFrontPic_Metagross_Flying),
+    SPECIES_SPRITE(METAGROSS_BUG, gMonFrontPic_Metagross_Bug),
+    SPECIES_SPRITE(METAGROSS_GHOST, gMonFrontPic_Metagross_Ghost),
+    SPECIES_SPRITE(METAGROSS_DRAGON, gMonFrontPic_Metagross_Dragon),
+    SPECIES_SPRITE(METAGROSS_DARK, gMonFrontPic_Metagross_Dark),
+    SPECIES_SPRITE(METAGROSS_FAIRY, gMonFrontPic_Metagross_Fairy),
+    SPECIES_SPRITE(METAGROSS_ROCK, gMonFrontPic_Metagross_Rock),
+
+
 };

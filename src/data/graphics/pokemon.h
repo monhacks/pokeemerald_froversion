@@ -3334,3 +3334,117 @@ const u8 gMonFootprint_Charizard_X[] = INCBIN_U8("graphics/pokemon/charizard_x/f
 const u8 gMonFootprint_Warklock[] = INCBIN_U8("graphics/pokemon/warklock/footprint.1bpp");
 const u8 gMonFootprint_Cloclock[] = INCBIN_U8("graphics/pokemon/cloclock/footprint.1bpp");
 const u8 gMonFootprint_Spirett[] = INCBIN_U8("graphics/pokemon/spirett/footprint.1bpp");
+
+//Metagross Forms
+const u32 gMonStillFrontPic_Metagross_Fire[] = INCBIN_U32("graphics/pokemon/metagross_fire/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Fire[] = INCBIN_U32("graphics/pokemon/metagross_fire/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Fire[] = INCBIN_U32("graphics/pokemon/metagross_fire/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Fire[] = INCBIN_U32("graphics/pokemon/metagross_fire/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Fire[] = INCBIN_U8("graphics/pokemon/metagross_fire/icon.4bpp");
+const u8 gMonFootprint_Metagross_Fire[] = INCBIN_U8("graphics/pokemon/metagross_fire/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Water[] = INCBIN_U32("graphics/pokemon/metagross_water/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Water[] = INCBIN_U32("graphics/pokemon/metagross_water/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Water[] = INCBIN_U32("graphics/pokemon/metagross_water/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Water[] = INCBIN_U32("graphics/pokemon/metagross_water/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Water[] = INCBIN_U8("graphics/pokemon/metagross_water/icon.4bpp");
+const u8 gMonFootprint_Metagross_Water[] = INCBIN_U8("graphics/pokemon/metagross_water/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Grass[] = INCBIN_U32("graphics/pokemon/metagross_grass/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Grass[] = INCBIN_U32("graphics/pokemon/metagross_grass/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Grass[] = INCBIN_U32("graphics/pokemon/metagross_grass/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Grass[] = INCBIN_U32("graphics/pokemon/metagross_grass/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Grass[] = INCBIN_U8("graphics/pokemon/metagross_grass/icon.4bpp");
+const u8 gMonFootprint_Metagross_Grass[] = INCBIN_U8("graphics/pokemon/metagross_grass/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Electric[] = INCBIN_U32("graphics/pokemon/metagross_electric/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Electric[] = INCBIN_U32("graphics/pokemon/metagross_electric/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Electric[] = INCBIN_U32("graphics/pokemon/metagross_electric/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Electric[] = INCBIN_U32("graphics/pokemon/metagross_electric/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Electric[] = INCBIN_U8("graphics/pokemon/metagross_electric/icon.4bpp");
+const u8 gMonFootprint_Metagross_Electric[] = INCBIN_U8("graphics/pokemon/metagross_electric/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Normal[] = INCBIN_U32("graphics/pokemon/metagross_normal/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Normal[] = INCBIN_U32("graphics/pokemon/metagross_normal/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Normal[] = INCBIN_U32("graphics/pokemon/metagross_normal/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Normal[] = INCBIN_U32("graphics/pokemon/metagross_normal/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Normal[] = INCBIN_U8("graphics/pokemon/metagross_normal/icon.4bpp");
+const u8 gMonFootprint_Metagross_Normal[] = INCBIN_U8("graphics/pokemon/metagross_normal/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Bug[] = INCBIN_U32("graphics/pokemon/metagross_bug/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Bug[] = INCBIN_U32("graphics/pokemon/metagross_bug/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Bug[] = INCBIN_U32("graphics/pokemon/metagross_bug/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Bug[] = INCBIN_U32("graphics/pokemon/metagross_bug/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Bug[] = INCBIN_U8("graphics/pokemon/metagross_bug/icon.4bpp");
+const u8 gMonFootprint_Metagross_Bug[] = INCBIN_U8("graphics/pokemon/metagross_bug/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Dragon[] = INCBIN_U32("graphics/pokemon/metagross_dragon/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Dragon[] = INCBIN_U32("graphics/pokemon/metagross_dragon/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Dragon[] = INCBIN_U32("graphics/pokemon/metagross_dragon/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Dragon[] = INCBIN_U32("graphics/pokemon/metagross_dragon/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Dragon[] = INCBIN_U8("graphics/pokemon/metagross_dragon/icon.4bpp");
+const u8 gMonFootprint_Metagross_Dragon[] = INCBIN_U8("graphics/pokemon/metagross_dragon/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Fairy[] = INCBIN_U32("graphics/pokemon/metagross_fairy/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Fairy[] = INCBIN_U32("graphics/pokemon/metagross_fairy/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Fairy[] = INCBIN_U32("graphics/pokemon/metagross_fairy/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Fairy[] = INCBIN_U32("graphics/pokemon/metagross_fairy/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Fairy[] = INCBIN_U8("graphics/pokemon/metagross_fairy/icon.4bpp");
+const u8 gMonFootprint_Metagross_Fairy[] = INCBIN_U8("graphics/pokemon/metagross_fairy/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Ice[] = INCBIN_U32("graphics/pokemon/metagross_ice/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Ice[] = INCBIN_U32("graphics/pokemon/metagross_ice/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Ice[] = INCBIN_U32("graphics/pokemon/metagross_ice/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Ice[] = INCBIN_U32("graphics/pokemon/metagross_ice/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Ice[] = INCBIN_U8("graphics/pokemon/metagross_ice/icon.4bpp");
+const u8 gMonFootprint_Metagross_Ice[] = INCBIN_U8("graphics/pokemon/metagross_ice/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Fighting[] = INCBIN_U32("graphics/pokemon/metagross_fighting/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Fighting[] = INCBIN_U32("graphics/pokemon/metagross_fighting/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Fighting[] = INCBIN_U32("graphics/pokemon/metagross_fighting/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Fighting[] = INCBIN_U32("graphics/pokemon/metagross_fighting/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Fighting[] = INCBIN_U8("graphics/pokemon/metagross_fighting/icon.4bpp");
+const u8 gMonFootprint_Metagross_Fighting[] = INCBIN_U8("graphics/pokemon/metagross_fighting/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Poison[] = INCBIN_U32("graphics/pokemon/metagross_poison/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Poison[] = INCBIN_U32("graphics/pokemon/metagross_poison/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Poison[] = INCBIN_U32("graphics/pokemon/metagross_poison/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Poison[] = INCBIN_U32("graphics/pokemon/metagross_poison/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Poison[] = INCBIN_U8("graphics/pokemon/metagross_poison/icon.4bpp");
+const u8 gMonFootprint_Metagross_Poison[] = INCBIN_U8("graphics/pokemon/metagross_poison/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Ground[] = INCBIN_U32("graphics/pokemon/metagross_ground/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Ground[] = INCBIN_U32("graphics/pokemon/metagross_ground/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Ground[] = INCBIN_U32("graphics/pokemon/metagross_ground/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Ground[] = INCBIN_U32("graphics/pokemon/metagross_ground/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Ground[] = INCBIN_U8("graphics/pokemon/metagross_ground/icon.4bpp");
+const u8 gMonFootprint_Metagross_Ground[] = INCBIN_U8("graphics/pokemon/metagross_ground/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Flying[] = INCBIN_U32("graphics/pokemon/metagross_flying/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Flying[] = INCBIN_U32("graphics/pokemon/metagross_flying/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Flying[] = INCBIN_U32("graphics/pokemon/metagross_flying/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Flying[] = INCBIN_U32("graphics/pokemon/metagross_flying/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Flying[] = INCBIN_U8("graphics/pokemon/metagross_flying/icon.4bpp");
+const u8 gMonFootprint_Metagross_Flying[] = INCBIN_U8("graphics/pokemon/metagross_flying/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Ghost[] = INCBIN_U32("graphics/pokemon/metagross_ghost/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Ghost[] = INCBIN_U32("graphics/pokemon/metagross_ghost/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Ghost[] = INCBIN_U32("graphics/pokemon/metagross_ghost/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Ghost[] = INCBIN_U32("graphics/pokemon/metagross_ghost/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Ghost[] = INCBIN_U8("graphics/pokemon/metagross_ghost/icon.4bpp");
+const u8 gMonFootprint_Metagross_Ghost[] = INCBIN_U8("graphics/pokemon/metagross_ghost/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Dark[] = INCBIN_U32("graphics/pokemon/metagross_dark/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Dark[] = INCBIN_U32("graphics/pokemon/metagross_dark/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Dark[] = INCBIN_U32("graphics/pokemon/metagross_dark/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Dark[] = INCBIN_U32("graphics/pokemon/metagross_dark/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Dark[] = INCBIN_U8("graphics/pokemon/metagross_dark/icon.4bpp");
+const u8 gMonFootprint_Metagross_Dark[] = INCBIN_U8("graphics/pokemon/metagross_dark/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Metagross_Rock[] = INCBIN_U32("graphics/pokemon/metagross_rock/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Rock[] = INCBIN_U32("graphics/pokemon/metagross_rock/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Rock[] = INCBIN_U32("graphics/pokemon/metagross_rock/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Rock[] = INCBIN_U32("graphics/pokemon/metagross_rock/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Rock[] = INCBIN_U8("graphics/pokemon/metagross_rock/icon.4bpp");
+const u8 gMonFootprint_Metagross_Rock[] = INCBIN_U8("graphics/pokemon/metagross_rock/footprint.1bpp");
+

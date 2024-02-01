@@ -5314,6 +5314,104 @@ static const union AnimCmd sAnim_SPIRETT_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_METAGROSS_FIRE_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_WATER_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_GRASS_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_ELECTRIC_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_NORMAL_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_ICE_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_FIGHTING_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_POISON_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_GROUND_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_FLYING_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_BUG_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_GHOST_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_DRAGON_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_DARK_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_FAIRY_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_METAGROSS_ROCK_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+
+
 //////////////////////////////////////
 ////////END FROVERSION FAKEMON///////
 /////////////////////////////////////
@@ -7798,6 +7896,70 @@ static const union AnimCmd *const sAnims_SPIRETT[] ={
     sAnim_GeneralFrame0,
     sAnim_SPIRETT_1,
 };
+static const union AnimCmd *const sAnims_METAGROSS_FIRE[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_FIRE_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_WATER[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_WATER_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_GRASS[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_GRASS_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_ELECTRIC[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_ELECTRIC_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_NORMAL[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_NORMAL_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_ICE[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_ICE_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_FIGHTING[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_FIGHTING_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_POISON[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_POISON_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_GROUND[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_GROUND_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_FLYING[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_FLYING_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_BUG[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_BUG_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_GHOST[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_GHOST_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_DRAGON[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_DRAGON_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_DARK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_DARK_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_FAIRY[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_FAIRY_1,
+};
+static const union AnimCmd *const sAnims_METAGROSS_ROCK[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_ROCK_1,
+};
 
 //////////////////////////////////////
 ////////END FROVERSION FAKEMON///////
@@ -8336,6 +8498,23 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(WARKLOCK),
     ANIM_CMD(CLOCLOCK),
     ANIM_CMD(SPIRETT),
+    ANIM_CMD(METAGROSS_FIRE),
+    ANIM_CMD(METAGROSS_WATER),
+    ANIM_CMD(METAGROSS_GRASS),
+    ANIM_CMD(METAGROSS_ELECTRIC),
+    ANIM_CMD(METAGROSS_NORMAL),
+    ANIM_CMD(METAGROSS_ICE),
+    ANIM_CMD(METAGROSS_FIGHTING),
+    ANIM_CMD(METAGROSS_POISON),
+    ANIM_CMD(METAGROSS_GROUND),
+    ANIM_CMD(METAGROSS_FLYING),
+    ANIM_CMD(METAGROSS_BUG),
+    ANIM_CMD(METAGROSS_GHOST),
+    ANIM_CMD(METAGROSS_DRAGON),
+    ANIM_CMD(METAGROSS_DARK),
+    ANIM_CMD(METAGROSS_FAIRY),
+    ANIM_CMD(METAGROSS_ROCK),
+
 };
 
 #undef ANIM_CMD

@@ -5841,6 +5841,22 @@ static const u32 sTutorLearnsets[] =
 [SPECIES_WARKLOCK]           = (0),
 [SPECIES_CLOCLOCK]           = (0),
 [SPECIES_SPIRETT]           = (0),
+[SPECIES_METAGROSS_FIRE]           = (0),
+[SPECIES_METAGROSS_WATER]           = (0),
+[SPECIES_METAGROSS_GRASS]           = (0),
+[SPECIES_METAGROSS_ELECTRIC]           = (0),
+[SPECIES_METAGROSS_NORMAL]           = (0),
+[SPECIES_METAGROSS_ICE]           = (0),
+[SPECIES_METAGROSS_FIGHTING]           = (0),
+[SPECIES_METAGROSS_POISON]           = (0),
+[SPECIES_METAGROSS_GROUND]           = (0),
+[SPECIES_METAGROSS_FLYING]           = (0),
+[SPECIES_METAGROSS_BUG]           = (0),
+[SPECIES_METAGROSS_GHOST]           = (0),
+[SPECIES_METAGROSS_DRAGON]           = (0),
+[SPECIES_METAGROSS_DARK]           = (0),
+[SPECIES_METAGROSS_FAIRY]           = (0),
+[SPECIES_METAGROSS_ROCK]           = (0),
 
 
 };

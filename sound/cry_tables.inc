@@ -390,89 +390,106 @@ gCryTable:: @ 869DCF4
 	cry Cry_Chimecho  @ 869EF18
 	//froversion fakemon
 	cry Cry_Rascaloot
-cry Cry_Bandithug
-cry Cry_Ruthlash
-cry Cry_Flobra
-cry Cry_Morphlo
-cry Cry_Mechobra
-cry Cry_Emboryps
-cry Cry_Huntoryps
-cry Cry_Riptoryps
-cry Cry_Spiritomb
-cry Cry_Snoumese
-cry Cry_Snoubaul
-cry Cry_Nevawok
-cry Cry_Wokagin
-cry Cry_Vayping
-cry Cry_Kabowl
-cry Cry_Bowlast
-cry Cry_Phokai
-cry Cry_Photasm
-cry Cry_Photogeist
-cry Cry_Togekiss
-cry Cry_Otdorble
-cry Cry_Lutrador
-cry Cry_Dumbellion
-cry Cry_Barbellion
-cry Cry_Octire
-cry Cry_Invertebrake
-cry Cry_Haaglet
-cry Cry_Warthaag
-cry Cry_Taquittle
-cry Cry_Escarataco
-cry Cry_Chad_Bug_1
-cry Cry_Chad_Bug_2
-cry Cry_Pilopoo
-cry Cry_Billfalo
-cry Cry_Sablizzard
-cry Cry_Passimian
-cry Cry_Cactar
-cry Cry_Cracthorn
-cry Cry_Cracktuss
-cry Cry_Dracaster
-cry Cry_Blue_Eyes
-cry Cry_Filler_1
-cry Cry_Marowak_Alolan
-cry Cry_Contraram
-cry Cry_Plasmung
-cry Cry_Gruntaze
-cry Cry_Elitetric
-cry Cry_Mega_Dewgong
-cry Cry_Filler_8
-cry Cry_Filler_9
-cry Cry_Frentoad
-cry Cry_Rabatoast
-cry Cry_Shadow_Charizard
-cry Cry_Abyssaldragonthirdevo
-cry Cry_Abyssaldragonsecondevo
-cry Cry_Abyssaldragonfirstevo
-cry Cry_Cheeto
-cry Cry_Filler_17
-cry Cry_Filler_18
-cry Cry_Filler_19
-cry Cry_Filler_20
-cry Cry_Filler_21
-cry Cry_Filler_22
-cry Cry_Filler_23
-cry Cry_Filler_24
-cry Cry_Filler_25
-cry Cry_Filler_26
-cry Cry_Filler_27
-cry Cry_Filler_28
-cry Cry_Filler_29
-cry Cry_Filler_30
-cry Cry_Filler_31
-cry Cry_Filler_32
-cry Cry_Filler_33
-cry Cry_Filler_34
-cry Cry_Filler_35
-cry Cry_Filler_36
-cry Cry_Ariados_Ghost
-cry Cry_Ariados_Ghost
-cry Cry_Charizard_X
-cry Cry_Warklock
-cry Cry_Cloclock
-cry Cry_Spirett
+	cry Cry_Bandithug
+	cry Cry_Ruthlash
+	cry Cry_Flobra
+	cry Cry_Morphlo
+	cry Cry_Mechobra
+	cry Cry_Emboryps
+	cry Cry_Huntoryps
+	cry Cry_Riptoryps
+	cry Cry_Spiritomb
+	cry Cry_Snoumese
+	cry Cry_Snoubaul
+	cry Cry_Nevawok
+	cry Cry_Wokagin
+	cry Cry_Vayping
+	cry Cry_Kabowl
+	cry Cry_Bowlast
+	cry Cry_Phokai
+	cry Cry_Photasm
+	cry Cry_Photogeist
+	cry Cry_Togekiss
+	cry Cry_Otdorble
+	cry Cry_Lutrador
+	cry Cry_Dumbellion
+	cry Cry_Barbellion
+	cry Cry_Octire
+	cry Cry_Invertebrake
+	cry Cry_Haaglet
+	cry Cry_Warthaag
+	cry Cry_Taquittle
+	cry Cry_Escarataco
+	cry Cry_Chad_Bug_1
+	cry Cry_Chad_Bug_2
+	cry Cry_Pilopoo
+	cry Cry_Billfalo
+	cry Cry_Sablizzard
+	cry Cry_Passimian
+	cry Cry_Cactar
+	cry Cry_Cracthorn
+	cry Cry_Cracktuss
+	cry Cry_Dracaster
+	cry Cry_Blue_Eyes
+	cry Cry_Filler_1
+	cry Cry_Marowak_Alolan
+	cry Cry_Contraram
+	cry Cry_Plasmung
+	cry Cry_Gruntaze
+	cry Cry_Elitetric
+	cry Cry_Mega_Dewgong
+	cry Cry_Filler_8
+	cry Cry_Filler_9
+	cry Cry_Frentoad
+	cry Cry_Rabatoast
+	cry Cry_Shadow_Charizard
+	cry Cry_Abyssaldragonthirdevo
+	cry Cry_Abyssaldragonsecondevo
+	cry Cry_Abyssaldragonfirstevo
+	cry Cry_Cheeto
+	cry Cry_Filler_17
+	cry Cry_Filler_18
+	cry Cry_Filler_19
+	cry Cry_Filler_20
+	cry Cry_Filler_21
+	cry Cry_Filler_22
+	cry Cry_Filler_23
+	cry Cry_Filler_24
+	cry Cry_Filler_25
+	cry Cry_Filler_26
+	cry Cry_Filler_27
+	cry Cry_Filler_28
+	cry Cry_Filler_29
+	cry Cry_Filler_30
+	cry Cry_Filler_31
+	cry Cry_Filler_32
+	cry Cry_Filler_33
+	cry Cry_Filler_34
+	cry Cry_Filler_35
+	cry Cry_Filler_36
+	cry Cry_Ariados_Ghost
+	cry Cry_Ariados_Ghost
+	cry Cry_Charizard_X
+	cry Cry_Warklock
+	cry Cry_Cloclock
+	cry Cry_Spirett
+	cry Cry_Metagross_Fire
+	cry Cry_Metagross_Water
+	cry Cry_Metagross_Grass
+	cry Cry_Metagross_Electric
+	cry Cry_Metagross_Normal
+	cry Cry_Metagross_Ice
+	cry Cry_Metagross_Fighting
+	cry Cry_Metagross_Poison
+	cry Cry_Metagross_Ground
+	cry Cry_Metagross_Flying
+	cry Cry_Metagross_Bug
+	cry Cry_Metagross_Ghost
+	cry Cry_Metagross_Dragon
+	cry Cry_Metagross_Dark
+	cry Cry_Metagross_Fairy
+	cry Cry_Metagross_Rock
+
 
 	.align 2
 gCryTable2:: @ 869EF24
@@ -866,87 +883,104 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Chimecho  @ 86A0148
 	//froversion fakemon
 	cry2 Cry_Rascaloot
-cry2 Cry_Bandithug
-cry2 Cry_Ruthlash
-cry2 Cry_Flobra
-cry2 Cry_Morphlo
-cry2 Cry_Mechobra
-cry2 Cry_Emboryps
-cry2 Cry_Huntoryps
-cry2 Cry_Riptoryps
-cry2 Cry_Spiritomb
-cry2 Cry_Snoumese
-cry2 Cry_Snoubaul
-cry2 Cry_Nevawok
-cry2 Cry_Wokagin
-cry2 Cry_Vayping
-cry2 Cry_Kabowl
-cry2 Cry_Bowlast
-cry2 Cry_Phokai
-cry2 Cry_Photasm
-cry2 Cry_Photogeist
-cry2 Cry_Togekiss
-cry2 Cry_Otdorble
-cry2 Cry_Lutrador
-cry2 Cry_Dumbellion
-cry2 Cry_Barbellion
-cry2 Cry_Octire
-cry2 Cry_Invertebrake
-cry2 Cry_Haaglet
-cry2 Cry_Warthaag
-cry2 Cry_Taquittle
-cry2 Cry_Escarataco
-cry2 Cry_Chad_Bug_1
-cry2 Cry_Chad_Bug_2
-cry2 Cry_Pilopoo
-cry2 Cry_Billfalo
-cry2 Cry_Sablizzard
-cry2 Cry_Passimian
-cry2 Cry_Cactar
-cry2 Cry_Cracthorn
-cry2 Cry_Cracktuss
-cry2 Cry_Dracaster
-cry2 Cry_Blue_Eyes
-cry2 Cry_Filler_1
-cry2 Cry_Marowak_Alolan
-cry2 Cry_Contraram
-cry2 Cry_Plasmung
-cry2 Cry_Gruntaze
-cry2 Cry_Elitetric
-cry2 Cry_Mega_Dewgong
-cry2 Cry_Filler_8
-cry2 Cry_Filler_9
-cry2 Cry_Frentoad
-cry2 Cry_Rabatoast
-cry2 Cry_Shadow_Charizard
-cry2 Cry_Abyssaldragonthirdevo
-cry2 Cry_Abyssaldragonsecondevo
-cry2 Cry_Abyssaldragonfirstevo
-cry2 Cry_Cheeto
-cry2 Cry_Filler_17
-cry2 Cry_Filler_18
-cry2 Cry_Filler_19
-cry2 Cry_Filler_20
-cry2 Cry_Filler_21
-cry2 Cry_Filler_22
-cry2 Cry_Filler_23
-cry2 Cry_Filler_24
-cry2 Cry_Filler_25
-cry2 Cry_Filler_26
-cry2 Cry_Filler_27
-cry2 Cry_Filler_28
-cry2 Cry_Filler_29
-cry2 Cry_Filler_30
-cry2 Cry_Filler_31
-cry2 Cry_Filler_32
-cry2 Cry_Filler_33
-cry2 Cry_Filler_34
-cry2 Cry_Filler_35
-cry2 Cry_Filler_36
-cry2 Cry_Ariados_Ghost
-cry2 Cry_Ariados_Ghost
-cry2 Cry_Charizard_X
-cry2 Cry_Warklock
-cry2 Cry_Cloclock
-cry2 Cry_Spirett
+	cry2 Cry_Bandithug
+	cry2 Cry_Ruthlash
+	cry2 Cry_Flobra
+	cry2 Cry_Morphlo
+	cry2 Cry_Mechobra
+	cry2 Cry_Emboryps
+	cry2 Cry_Huntoryps
+	cry2 Cry_Riptoryps
+	cry2 Cry_Spiritomb
+	cry2 Cry_Snoumese
+	cry2 Cry_Snoubaul
+	cry2 Cry_Nevawok
+	cry2 Cry_Wokagin
+	cry2 Cry_Vayping
+	cry2 Cry_Kabowl
+	cry2 Cry_Bowlast
+	cry2 Cry_Phokai
+	cry2 Cry_Photasm
+	cry2 Cry_Photogeist
+	cry2 Cry_Togekiss
+	cry2 Cry_Otdorble
+	cry2 Cry_Lutrador
+	cry2 Cry_Dumbellion
+	cry2 Cry_Barbellion
+	cry2 Cry_Octire
+	cry2 Cry_Invertebrake
+	cry2 Cry_Haaglet
+	cry2 Cry_Warthaag
+	cry2 Cry_Taquittle
+	cry2 Cry_Escarataco
+	cry2 Cry_Chad_Bug_1
+	cry2 Cry_Chad_Bug_2
+	cry2 Cry_Pilopoo
+	cry2 Cry_Billfalo
+	cry2 Cry_Sablizzard
+	cry2 Cry_Passimian
+	cry2 Cry_Cactar
+	cry2 Cry_Cracthorn
+	cry2 Cry_Cracktuss
+	cry2 Cry_Dracaster
+	cry2 Cry_Blue_Eyes
+	cry2 Cry_Filler_1
+	cry2 Cry_Marowak_Alolan
+	cry2 Cry_Contraram
+	cry2 Cry_Plasmung
+	cry2 Cry_Gruntaze
+	cry2 Cry_Elitetric
+	cry2 Cry_Mega_Dewgong
+	cry2 Cry_Filler_8
+	cry2 Cry_Filler_9
+	cry2 Cry_Frentoad
+	cry2 Cry_Rabatoast
+	cry2 Cry_Shadow_Charizard
+	cry2 Cry_Abyssaldragonthirdevo
+	cry2 Cry_Abyssaldragonsecondevo
+	cry2 Cry_Abyssaldragonfirstevo
+	cry2 Cry_Cheeto
+	cry2 Cry_Filler_17
+	cry2 Cry_Filler_18
+	cry2 Cry_Filler_19
+	cry2 Cry_Filler_20
+	cry2 Cry_Filler_21
+	cry2 Cry_Filler_22
+	cry2 Cry_Filler_23
+	cry2 Cry_Filler_24
+	cry2 Cry_Filler_25
+	cry2 Cry_Filler_26
+	cry2 Cry_Filler_27
+	cry2 Cry_Filler_28
+	cry2 Cry_Filler_29
+	cry2 Cry_Filler_30
+	cry2 Cry_Filler_31
+	cry2 Cry_Filler_32
+	cry2 Cry_Filler_33
+	cry2 Cry_Filler_34
+	cry2 Cry_Filler_35
+	cry2 Cry_Filler_36
+	cry2 Cry_Ariados_Ghost
+	cry2 Cry_Ariados_Ghost
+	cry2 Cry_Charizard_X
+	cry2 Cry_Warklock
+	cry2 Cry_Cloclock
+	cry2 Cry_Spirett
+	cry2 Cry_Metagross_Fire
+	cry2 Cry_Metagross_Water
+	cry2 Cry_Metagross_Grass
+	cry2 Cry_Metagross_Electric
+	cry2 Cry_Metagross_Normal
+	cry2 Cry_Metagross_Ice
+	cry2 Cry_Metagross_Fighting
+	cry2 Cry_Metagross_Poison
+	cry2 Cry_Metagross_Ground
+	cry2 Cry_Metagross_Flying
+	cry2 Cry_Metagross_Bug
+	cry2 Cry_Metagross_Ghost
+	cry2 Cry_Metagross_Dragon
+	cry2 Cry_Metagross_Dark
+	cry2 Cry_Metagross_Fairy
+	cry2 Cry_Metagross_Rock
+
 

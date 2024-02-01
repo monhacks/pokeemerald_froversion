@@ -549,6 +549,24 @@ const u8 *const gMonIconTable[] =
     [SPECIES_WARKLOCK] = gMonIcon_Warklock,
     [SPECIES_CLOCLOCK] = gMonIcon_Cloclock,
     [SPECIES_SPIRETT] = gMonIcon_Spirett,
+    //metagross forms
+    [SPECIES_METAGROSS_FIRE] = gMonIcon_Metagross_Fire,
+    [SPECIES_METAGROSS_WATER] = gMonIcon_Metagross_Water,
+    [SPECIES_METAGROSS_GRASS] = gMonIcon_Metagross_Grass,
+    [SPECIES_METAGROSS_ELECTRIC] = gMonIcon_Metagross_Electric,
+    [SPECIES_METAGROSS_NORMAL] = gMonIcon_Metagross_Normal,
+    [SPECIES_METAGROSS_ICE] = gMonIcon_Metagross_Ice,
+    [SPECIES_METAGROSS_FIGHTING] = gMonIcon_Metagross_Fighting,
+    [SPECIES_METAGROSS_POISON] = gMonIcon_Metagross_Poison,
+    [SPECIES_METAGROSS_GROUND] = gMonIcon_Metagross_Ground,
+    [SPECIES_METAGROSS_FLYING] = gMonIcon_Metagross_Flying,
+    [SPECIES_METAGROSS_BUG] = gMonIcon_Metagross_Bug,
+    [SPECIES_METAGROSS_GHOST] = gMonIcon_Metagross_Ghost,
+    [SPECIES_METAGROSS_DRAGON] = gMonIcon_Metagross_Dragon,
+    [SPECIES_METAGROSS_DARK] = gMonIcon_Metagross_Dark,
+    [SPECIES_METAGROSS_FAIRY] = gMonIcon_Metagross_Fairy,
+    [SPECIES_METAGROSS_ROCK] = gMonIcon_Metagross_Rock,
+
 };
 
 const u8 gMonIconPaletteIndices[] =
@@ -1078,6 +1096,23 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_WARKLOCK] = 0,
     [SPECIES_CLOCLOCK] = 0,
     [SPECIES_SPIRETT] = 0,
+    [SPECIES_METAGROSS_FIRE] = 2,
+    [SPECIES_METAGROSS_WATER] = 2,
+    [SPECIES_METAGROSS_GRASS] = 2,
+    [SPECIES_METAGROSS_ELECTRIC] = 2,
+    [SPECIES_METAGROSS_NORMAL] = 2,
+    [SPECIES_METAGROSS_ICE] = 2,
+    [SPECIES_METAGROSS_FIGHTING] = 2,
+    [SPECIES_METAGROSS_POISON] = 2,
+    [SPECIES_METAGROSS_GROUND] = 2,
+    [SPECIES_METAGROSS_FLYING] = 2,
+    [SPECIES_METAGROSS_BUG] = 2,
+    [SPECIES_METAGROSS_GHOST] = 2,
+    [SPECIES_METAGROSS_DRAGON] = 2,
+    [SPECIES_METAGROSS_DARK] = 2,
+    [SPECIES_METAGROSS_FAIRY] = 2,
+    [SPECIES_METAGROSS_ROCK] = 2,
+
 
 };
 

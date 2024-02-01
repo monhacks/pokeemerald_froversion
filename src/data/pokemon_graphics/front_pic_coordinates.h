@@ -2625,5 +2625,86 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x88,
         .y_offset = 0x00,
     },
+    //Metagross Forms
+    [SPECIES_METAGROSS_FIRE] =
+    {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_WATER] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_GRASS] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_ELECTRIC] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_NORMAL] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_ICE] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_FIGHTING] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_POISON] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_GROUND] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_FLYING] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_BUG] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_GHOST] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_DRAGON] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_DARK] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_FAIRY] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
+    [SPECIES_METAGROSS_ROCK] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
 
 };

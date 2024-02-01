@@ -525,6 +525,24 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(WARKLOCK, gMonPalette_Warklock),
     SPECIES_PAL(CLOCLOCK, gMonPalette_Cloclock),
     SPECIES_PAL(SPIRETT, gMonPalette_Spirett),
+    //metagross forms
+    SPECIES_PAL(METAGROSS_FIRE, gMonPalette_Metagross_Fire),
+    SPECIES_PAL(METAGROSS_WATER, gMonPalette_Metagross_Water),
+    SPECIES_PAL(METAGROSS_GRASS, gMonPalette_Metagross_Grass),
+    SPECIES_PAL(METAGROSS_ELECTRIC, gMonPalette_Metagross_Electric),
+    SPECIES_PAL(METAGROSS_NORMAL, gMonPalette_Metagross_Normal),
+    SPECIES_PAL(METAGROSS_ICE, gMonPalette_Metagross_Ice),
+    SPECIES_PAL(METAGROSS_FIGHTING, gMonPalette_Metagross_Fighting),
+    SPECIES_PAL(METAGROSS_POISON, gMonPalette_Metagross_Poison),
+    SPECIES_PAL(METAGROSS_GROUND, gMonPalette_Metagross_Ground),
+    SPECIES_PAL(METAGROSS_FLYING, gMonPalette_Metagross_Flying),
+    SPECIES_PAL(METAGROSS_BUG, gMonPalette_Metagross_Bug),
+    SPECIES_PAL(METAGROSS_GHOST, gMonPalette_Metagross_Ghost),
+    SPECIES_PAL(METAGROSS_DRAGON, gMonPalette_Metagross_Dragon),
+    SPECIES_PAL(METAGROSS_DARK, gMonPalette_Metagross_Dark),
+    SPECIES_PAL(METAGROSS_FAIRY, gMonPalette_Metagross_Fairy),
+    SPECIES_PAL(METAGROSS_ROCK, gMonPalette_Metagross_Rock),
+
 
 
     
