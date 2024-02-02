@@ -1319,6 +1319,7 @@ static void Cmd_attackcanceler(void)
         PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
         SET_BATTLER_TYPE(gBattlerAttacker, moveType);
         gBattlerAbility = gBattlerAttacker;
+        
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_ProteanActivates;
         return;
@@ -1345,8 +1346,66 @@ static void Cmd_attackcanceler(void)
         PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
         gBattleMons[gBattlerAttacker].type2 = moveType;
         gBattlerAbility = gBattlerAttacker;
+        switch(gBattleMons[gBattlerAttacker].type2)
+            {
+                case TYPE_NORMAL:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_NORMAL;
+                    break;
+                case TYPE_FIGHTING:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_FIGHTING;
+                    break;
+                case TYPE_FLYING:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_FLYING;
+                    break;
+                case TYPE_POISON:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_POISON;
+                    break;
+                case TYPE_GROUND:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_GROUND;
+                    break;
+                case TYPE_ROCK:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_ROCK;
+                    break;
+                case TYPE_BUG:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_BUG;
+                    break;
+                case TYPE_GHOST:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_GHOST;
+                    break;
+                case TYPE_STEEL:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS;
+                    break;
+                case TYPE_FIRE:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_FIRE;
+                    break;
+                case TYPE_WATER:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_WATER;
+                    break;
+                case TYPE_GRASS:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_GRASS;
+                    break;
+                case TYPE_ELECTRIC:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_ELECTRIC;
+                    break;
+                case TYPE_PSYCHIC:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS;
+                    break;
+                case TYPE_ICE:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_ICE;
+                    break;
+                case TYPE_DRAGON:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_DRAGON;
+                    break;
+                case TYPE_DARK:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_DARK;
+                    break;
+                case TYPE_FAIRY:
+                    gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_FAIRY;
+                    break;
+            }
+
         BattleScriptPushCursor();
-        gBattlescriptCurrInstr = BattleScript_DragonOrbActivates;
+        gBattlescriptCurrInstr = BattleScript_AttackerFormChange;
         return;
     }
  ///ShadowCharizard  
