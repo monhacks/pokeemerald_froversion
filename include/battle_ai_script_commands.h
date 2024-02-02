@@ -25,7 +25,6 @@ void RecordItemEffectBattle(u8 battlerId, u8 itemEffect);
 void ClearBattlerItemEffectHistory(u8 battlerId);
 bool32 IsSpeciesOneOf(u16 specie, const u16 *species);
 bool32 IsItemOneOf(u16 item, const u16 *item1);
-bool32 IsAbilityOneOf(u16 ability, const u16 *abilities);
 extern const u16 gRuthlashLine[];
 extern const u16 gMechobraLine[];
 extern const u16 gRiptorypsLine[];
@@ -37,7 +36,7 @@ extern const u16 gAriadosBossSecondaryItems[];
 extern const u16 gNonStealItems[];
 extern const u16 gWildPokemonDropItems[];
 extern const u16 gNonOrganicItems[];
-extern const u16 gMetagrossMetamorphAbilities[];
+extern const u16 gMetagrossMetamorphForms[];
 
 
 #endif // GUARD_BATTLE_AI_SCRIPT_COMMANDS_H
