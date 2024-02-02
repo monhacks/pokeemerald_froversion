@@ -566,6 +566,7 @@ const u8 *const gMonIconTable[] =
     [SPECIES_METAGROSS_DARK] = gMonIcon_Metagross_Dark,
     [SPECIES_METAGROSS_FAIRY] = gMonIcon_Metagross_Fairy,
     [SPECIES_METAGROSS_ROCK] = gMonIcon_Metagross_Rock,
+    [SPECIES_METAGROSS_STEEL] = gMonIcon_Metagross_Steel,
 
 };
 
@@ -1112,6 +1113,7 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_METAGROSS_DARK] = 2,
     [SPECIES_METAGROSS_FAIRY] = 2,
     [SPECIES_METAGROSS_ROCK] = 2,
+    [SPECIES_METAGROSS_STEEL] = 2,
 
 
 };

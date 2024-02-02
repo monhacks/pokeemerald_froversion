@@ -532,5 +532,6 @@ const u32 gMonFrontPic_Metagross_Dragon[] = INCBIN_U32("graphics/pokemon/metagro
 const u32 gMonFrontPic_Metagross_Dark[] = INCBIN_U32("graphics/pokemon/metagross_dark/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Metagross_Fairy[] = INCBIN_U32("graphics/pokemon/metagross_fairy/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Metagross_Rock[] = INCBIN_U32("graphics/pokemon/metagross_rock/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Metagross_Steel[] = INCBIN_U32("graphics/pokemon/metagross_steel/anim_front.4bpp.lz");
 
 

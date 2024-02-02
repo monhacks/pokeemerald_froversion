@@ -5410,6 +5410,12 @@ static const union AnimCmd sAnim_METAGROSS_ROCK_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
+static const union AnimCmd sAnim_METAGROSS_STEEL_1[] = 
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
 
 
 //////////////////////////////////////
@@ -7960,6 +7966,10 @@ static const union AnimCmd *const sAnims_METAGROSS_ROCK[] ={
     sAnim_GeneralFrame0,
     sAnim_METAGROSS_ROCK_1,
 };
+static const union AnimCmd *const sAnims_METAGROSS_STEEL[] ={
+    sAnim_GeneralFrame0,
+    sAnim_METAGROSS_STEEL_1,
+};
 
 //////////////////////////////////////
 ////////END FROVERSION FAKEMON///////
@@ -8514,6 +8524,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(METAGROSS_DARK),
     ANIM_CMD(METAGROSS_FAIRY),
     ANIM_CMD(METAGROSS_ROCK),
+    ANIM_CMD(METAGROSS_STEEL),
 
 };
 

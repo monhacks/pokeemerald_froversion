@@ -513,5 +513,6 @@ const struct LevelUpMove *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_METAGROSS_DARK] = sMetagross_DarkLevelUpLearnset,
     [SPECIES_METAGROSS_FAIRY] = sMetagross_FairyLevelUpLearnset,
     [SPECIES_METAGROSS_ROCK] = sMetagross_RockLevelUpLearnset,
+    [SPECIES_METAGROSS_STEEL] = sMetagross_SteelLevelUpLearnset,
 
 };

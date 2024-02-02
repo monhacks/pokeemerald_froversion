@@ -612,6 +612,7 @@ const u16 gSpeciesToHoennPokedexNum[] = // Assigns all species to the Hoenn Dex 
     SPECIES_TO_HOENN(METAGROSS_DARK),
     SPECIES_TO_HOENN(METAGROSS_FAIRY),
     SPECIES_TO_HOENN(METAGROSS_ROCK),
+    SPECIES_TO_HOENN(METAGROSS_STEEL),
 
 };
 
@@ -1129,6 +1130,7 @@ const u16 gSpeciesToNationalPokedexNum[] = // Assigns all species to the Nationa
     SPECIES_TO_NATIONAL(METAGROSS_DARK),
     SPECIES_TO_NATIONAL(METAGROSS_FAIRY),
     SPECIES_TO_NATIONAL(METAGROSS_ROCK),
+    SPECIES_TO_NATIONAL(METAGROSS_STEEL),
 
 };
 
@@ -2200,6 +2202,7 @@ static const u8 sMonFrontAnimIdsTable[] =
     [SPECIES_METAGROSS_DARK - 1] = 0x09,
     [SPECIES_METAGROSS_FAIRY - 1] = 0x09,
     [SPECIES_METAGROSS_ROCK - 1] = 0x09,
+    [SPECIES_METAGROSS_STEEL - 1] = 0x09,
 
 };
 

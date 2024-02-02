@@ -2706,5 +2706,10 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0x87,
         .y_offset = 6,
     },
+    [SPECIES_METAGROSS_STEEL] =
+        {
+        .size = 0x87,
+        .y_offset = 6,
+    },
 
 };

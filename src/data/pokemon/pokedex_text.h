@@ -2811,4 +2811,9 @@ const u8 gMetagross_RockPokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
+const u8 gMetagross_SteelPokedexText[] = _(
+    "This is a test.\n"
+    "Entry is a test.\n"
+    "Line 3.\n"
+    "Line 4.");
 

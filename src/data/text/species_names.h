@@ -512,5 +512,6 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_METAGROSS_DARK] = _("Metagross"),
     [SPECIES_METAGROSS_FAIRY] = _("Metagross"),
     [SPECIES_METAGROSS_ROCK] = _("Metagross"),
+    [SPECIES_METAGROSS_STEEL] = _("Metagross"),
 
 };

@@ -3613,6 +3613,13 @@ extern const u32 gMonShinyPalette_Metagross_Rock[];
 extern const u32 gMonStillFrontPic_Metagross_Rock[];
 extern const u8 gMonFootprint_Metagross_Rock[];
 extern const u8 gMonIcon_Metagross_Rock[];
+extern const u32 gMonFrontPic_Metagross_Steel[];
+extern const u32 gMonPalette_Metagross_Steel[];
+extern const u32 gMonBackPic_Metagross_Steel[];
+extern const u32 gMonShinyPalette_Metagross_Steel[];
+extern const u32 gMonStillFrontPic_Metagross_Steel[];
+extern const u8 gMonFootprint_Metagross_Steel[];
+extern const u8 gMonIcon_Metagross_Steel[];
 
 
 // trainer sprites

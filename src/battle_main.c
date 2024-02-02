@@ -129,6 +129,7 @@ static void SetOpponentMovesMattFinalBossAccordingToStatus(void);
 static void SetOpponentMovesAriadosBoss(void);
 static void SetOpponentMovesAriadosBossAccordingToItem(void);
 static void SetOpponentMovesAriadosBossAccordingToStatus(void);
+static void SetOpponentMovesMetagrossBossTest(void);
 
 // EWRAM vars
 EWRAM_DATA u16 gBattle_BG0_X = 0;
@@ -4040,6 +4041,8 @@ void BattleTurnPassed(void)
         SetOpponentMovesAbyssalHighDragon();
         case TRAINER_WATTSON_1:
         SetOpponentMovesMattFinalBoss();
+        case TRAINER_MATT_FINAL_BOSS:
+        SetOpponentMovesMetagrossBossTest();
         break;
         }
     
@@ -4578,6 +4581,124 @@ static void SetOpponentMovesAbyssalHighDragon(void)
             gBattleMons[abyssalHighDragonPosition].moves[3] = gAbyssalHighDragonBoostStatusMoves[Random() % 4];
         }
     }
+}
+
+static void SetOpponentMovesMetagrossBossTest(void)
+{
+    Printf("turn = %d", gBattleResults.battleTurnCounter);
+     switch(gBattleResults.battleTurnCounter)
+     {
+        {
+                case 1:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_TAKE_DOWN;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TAKE_DOWN;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_TAKE_DOWN;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_TAKE_DOWN;
+                    break;
+                case 2:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_FOCUS_BLAST;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_FOCUS_BLAST;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_FOCUS_BLAST;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_FOCUS_BLAST;
+                    break;
+                case 3:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_TAILWIND;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TAILWIND;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_TAILWIND;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_TAILWIND;
+                    break;
+                case 4:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_POISON_JAB;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_POISON_JAB;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_POISON_JAB;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_POISON_JAB;
+                    break;
+                case 5:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_EARTHQUAKE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_EARTHQUAKE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_EARTHQUAKE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_EARTHQUAKE;
+                    break;
+                case 6:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_STONE_EDGE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_STONE_EDGE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_STONE_EDGE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_STONE_EDGE;
+                    break;
+                case 7:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_BUG_BUZZ;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_BUG_BUZZ;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_BUG_BUZZ;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_BUG_BUZZ;
+                    break;
+                case 8:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SHADOW_BALL;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_SHADOW_BALL;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_SHADOW_BALL;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_SHADOW_BALL;
+                    break;
+                case 9:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_IRON_DEFENSE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_IRON_DEFENSE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_IRON_DEFENSE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_IRON_DEFENSE;
+                    break;
+                case 10:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_FIRE_SPIN;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_FIRE_SPIN;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_FIRE_SPIN;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_FIRE_SPIN;
+                    break;
+                case 11:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_WATER_PULSE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_WATER_PULSE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_WATER_PULSE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_WATER_PULSE;
+                    break;
+                case 12:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_LEAF_BLADE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_LEAF_BLADE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_LEAF_BLADE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_LEAF_BLADE;
+                    break;
+                case 13:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_THUNDERBOLT;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_THUNDERBOLT;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_THUNDERBOLT;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_THUNDERBOLT;
+                    break;
+                case 14:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_PSYCHIC;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_PSYCHIC;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_PSYCHIC;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_PSYCHIC;
+                    break;
+                case 15:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ICICLE_CRASH;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_ICICLE_CRASH;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_ICICLE_CRASH;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_ICICLE_CRASH;
+                    break;
+                case 16:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DRAGON_BREATH;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_DRAGON_BREATH;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_DRAGON_BREATH;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_DRAGON_BREATH;
+                    break;
+                case 17:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ASSURANCE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_ASSURANCE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_ASSURANCE;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_ASSURANCE;
+                    break;
+                case 18:
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_MOONBLAST;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_MOONBLAST;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_MOONBLAST;
+                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_MOONBLAST;
+                    break;
+            }
+     }
 }
 
 u8 IsRunningFromBattleImpossible(void)
@@ -5391,6 +5512,7 @@ const u16 gSlashingMoves[] =
         SPECIES_METAGROSS_DARK,
         SPECIES_METAGROSS_FAIRY,
         SPECIES_METAGROSS_ROCK,
+        SPECIES_METAGROSS_STEEL,
         0xFFFF
     };
 

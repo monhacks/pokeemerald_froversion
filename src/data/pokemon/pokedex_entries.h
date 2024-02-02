@@ -5748,4 +5748,16 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 2,
     },
 
+[NATIONAL_DEX_METAGROSS_STEEL] =
+    {
+        .categoryName = _("NEW SPECIES"),
+        .height = 15,
+        .weight = 330,
+        .description = gMetagross_SteelPokedexText,
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+
 };

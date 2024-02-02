@@ -9235,4 +9235,8 @@ static const struct LevelUpMove sMetagross_RockLevelUpLearnset[] = {
 LEVEL_UP_MOVE( 1, MOVE_TACKLE),
 LEVEL_UP_END
 };
+static const struct LevelUpMove sMetagross_SteelLevelUpLearnset[] = {
+LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+LEVEL_UP_END
+};
 

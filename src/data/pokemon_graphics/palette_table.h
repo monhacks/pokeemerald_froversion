@@ -542,6 +542,7 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(METAGROSS_DARK, gMonPalette_Metagross_Dark),
     SPECIES_PAL(METAGROSS_FAIRY, gMonPalette_Metagross_Fairy),
     SPECIES_PAL(METAGROSS_ROCK, gMonPalette_Metagross_Rock),
+    SPECIES_PAL(METAGROSS_STEEL, gMonPalette_Metagross_Steel),
 
 
 

@@ -2475,3 +2475,7 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
     Cry_Metagross_Rock::
 	.incbin "sound/direct_sound_samples/cries/metagross.bin"
 
+.align 2
+    Cry_Metagross_Steel::
+	.incbin "sound/direct_sound_samples/cries/metagross.bin"
+

@@ -513,6 +513,7 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_METAGROSS_DARK] = gMonFootprint_Metagross_Dark,
     [SPECIES_METAGROSS_FAIRY] = gMonFootprint_Metagross_Fairy,
     [SPECIES_METAGROSS_ROCK] = gMonFootprint_Metagross_Rock,
+    [SPECIES_METAGROSS_STEEL] = gMonFootprint_Metagross_Steel,
 
     [SPECIES_EGG] = gMonFootprint_Bulbasaur,
 };

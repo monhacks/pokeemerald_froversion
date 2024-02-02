@@ -542,6 +542,7 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(METAGROSS_DARK, gMonShinyPalette_Metagross_Dark),
     SPECIES_SHINY_PAL(METAGROSS_FAIRY, gMonShinyPalette_Metagross_Fairy),
     SPECIES_SHINY_PAL(METAGROSS_ROCK, gMonShinyPalette_Metagross_Rock),
+    SPECIES_SHINY_PAL(METAGROSS_STEEL, gMonShinyPalette_Metagross_Steel),
 
 
 };

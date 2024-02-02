@@ -5857,6 +5857,7 @@ static const u32 sTutorLearnsets[] =
 [SPECIES_METAGROSS_DARK]           = (0),
 [SPECIES_METAGROSS_FAIRY]           = (0),
 [SPECIES_METAGROSS_ROCK]           = (0),
+[SPECIES_METAGROSS_STEEL]           = (0),
 
 
 };

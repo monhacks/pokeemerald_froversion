@@ -489,6 +489,7 @@ gCryTable:: @ 869DCF4
 	cry Cry_Metagross_Dark
 	cry Cry_Metagross_Fairy
 	cry Cry_Metagross_Rock
+	cry Cry_Metagross_Steel
 
 
 	.align 2
@@ -982,5 +983,6 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Metagross_Dark
 	cry2 Cry_Metagross_Fairy
 	cry2 Cry_Metagross_Rock
+	cry2 Cry_Metagross_Steel
 
 

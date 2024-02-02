@@ -3448,3 +3448,11 @@ const u32 gMonShinyPalette_Metagross_Rock[] = INCBIN_U32("graphics/pokemon/metag
 const u8 gMonIcon_Metagross_Rock[] = INCBIN_U8("graphics/pokemon/metagross_rock/icon.4bpp");
 const u8 gMonFootprint_Metagross_Rock[] = INCBIN_U8("graphics/pokemon/metagross_rock/footprint.1bpp");
 
+
+const u32 gMonStillFrontPic_Metagross_Steel[] = INCBIN_U32("graphics/pokemon/metagross_steel/front.4bpp.lz");
+const u32 gMonPalette_Metagross_Steel[] = INCBIN_U32("graphics/pokemon/metagross_steel/normal.gbapal.lz");
+const u32 gMonBackPic_Metagross_Steel[] = INCBIN_U32("graphics/pokemon/metagross_steel/back.4bpp.lz");
+const u32 gMonShinyPalette_Metagross_Steel[] = INCBIN_U32("graphics/pokemon/metagross_steel/shiny.gbapal.lz");
+const u8 gMonIcon_Metagross_Steel[] = INCBIN_U8("graphics/pokemon/metagross_steel/icon.4bpp");
+const u8 gMonFootprint_Metagross_Steel[] = INCBIN_U8("graphics/pokemon/metagross_steel/footprint.1bpp");
+

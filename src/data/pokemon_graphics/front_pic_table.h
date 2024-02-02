@@ -545,6 +545,7 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(METAGROSS_DARK, gMonFrontPic_Metagross_Dark),
     SPECIES_SPRITE(METAGROSS_FAIRY, gMonFrontPic_Metagross_Fairy),
     SPECIES_SPRITE(METAGROSS_ROCK, gMonFrontPic_Metagross_Rock),
+    SPECIES_SPRITE(METAGROSS_STEEL, gMonFrontPic_Metagross_Steel),
 
 
 };
