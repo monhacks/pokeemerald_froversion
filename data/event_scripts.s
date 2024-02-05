@@ -1413,3 +1413,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/BlackForest3/scripts.inc"
 
 	.include "data/maps/MAGM8CaveHiddenBehindWaterfall/scripts.inc"
+
+	.include "data/maps/VermillionBeach/scripts.inc"
