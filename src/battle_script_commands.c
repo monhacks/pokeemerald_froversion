@@ -1404,6 +1404,10 @@ static void Cmd_attackcanceler(void)
                     gBattleMons[gBattlerAttacker].species = SPECIES_METAGROSS_FAIRY;
                     break;
             }
+        gChangeAbilityPopUp = 1;
+        gChangeTxtScrAbility1 = 1;
+        gNewAbilityPopUp1 = ABILITY_METAMORPH;
+        gNewTxtScrAbility1 = ABILITY_METAMORPH;
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_AttackerFormChange;
         return;

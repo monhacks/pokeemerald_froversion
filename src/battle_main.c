@@ -1839,6 +1839,8 @@ static void TrySetCustomMonStats(struct Pokemon *mon, const struct TrainerMonSta
         s32 modifiedHP;
         s32 modifiedMaxHP;
 
+        Printf("stats->statMaxHP = %d", stats->statMaxHP);
+
         if (stats->statDef > 0)
         {
             modifiedDef = ((stats->statDef * difficultyModification) / 100);

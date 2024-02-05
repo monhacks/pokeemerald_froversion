@@ -15008,8 +15008,6 @@ static const struct TrainerMonItemCustomMoves sParty_MattBossTest[] = {
     .moves = {MOVE_SNEER, MOVE_SNEER, MOVE_SNEER, MOVE_SNEER},
     .stats =
         {
-        .statHP = 2800,
-        .statMaxHP = 2800,
         .movePP1 = 255,
         .movePP2 = 255,
         .movePP3 = 255,

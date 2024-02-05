@@ -65,6 +65,7 @@ Debug_Script_1::
 	end
 
 Debug_Script_2::
+	setflag FLAG_SYS_PORTAL_GUN_GET
 	end
 
 Debug_Script_3::

@@ -46,6 +46,7 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/battle_config.h"
+#include "battle_ai_script_commands.h"
 
 typedef char PokemonSubstruct0SizeIs12Bytes[sizeof(struct PokemonSubstruct0) == 12 ? 0 : -1];
 typedef char PokemonSubstruct1SizeIs12Bytes[sizeof(struct PokemonSubstruct1) == 12 ? 0 : -1];
@@ -3224,6 +3225,8 @@ void CalculateMonStats(struct Pokemon *mon)
     s32 level = GetLevelFromMonExp(mon);
     s32 newMaxHP;
 
+    Printf("species = %d", species);
+    Printf("IsSpeciesOneOf(species, gMetagrossMetamorphForms) = %d", IsSpeciesOneOf(species, gMetagrossMetamorphForms));
     SetMonData(mon, MON_DATA_LEVEL, &level);
 
     if (species == SPECIES_SHEDINJA)
@@ -3242,12 +3245,18 @@ void CalculateMonStats(struct Pokemon *mon)
     {
         newMaxHP = 700;
     }
+    else if (IsSpeciesOneOf(species, gMetagrossMetamorphForms))
+    {
+        newMaxHP = ((gBaseStats[species].baseHP * level) - (gBaseStats[species].baseHP *(level / 4)) + (level * 2));
+        Printf("NewMaxHPInsideElseIf = %d", newMaxHP);
+    }
     else
     {
         s32 n = 2 * gBaseStats[species].baseHP + hpIV;
         newMaxHP = (((n + hpEV / 4) * level) / 100) + level + 10;
     }
 
+    Printf("NewMaxHP = %d", newMaxHP);
     gBattleScripting.levelUpHP = newMaxHP - oldMaxHP;
     if (gBattleScripting.levelUpHP == 0)
         gBattleScripting.levelUpHP = 1;
@@ -3332,6 +3341,11 @@ void CalculateTrainerMonStats(struct Pokemon *mon)
     else if (species == SPECIES_CHARIZARD_X)
     {
         newMaxHP = 2000;
+    }
+    else if (IsSpeciesOneOf(species, gMetagrossMetamorphForms))
+    {
+        newMaxHP = ((gBaseStats[species].baseHP * level) - (gBaseStats[species].baseHP *(level / 4)) + (level * 2));
+        Printf("NewMaxHPInsideElseIf = %d", newMaxHP);
     }
     else
     {

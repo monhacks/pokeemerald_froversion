@@ -566,7 +566,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MATT_BOSS_FIGHT] = _("Placeholder"),
     [ABILITY_PSYCHO_SHIFT] = _("PsychoShift"),
     [ABILITY_CONJURE] = _("Conjure"),
-    [ABILITY_METAGROSS_BOSS] = _("Metamorph"),
+    [ABILITY_METAMORPH] = _("Metamorph"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
