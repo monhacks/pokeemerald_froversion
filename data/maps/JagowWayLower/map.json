@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
+      "map": "MAP_SUMMIT_CITY",
       "offset": -30,
-      "map": "MAP_SUMMIT_CITY"
+      "direction": "down"
     },
     {
-      "direction": "up",
+      "map": "MAP_JAGOW_WAY",
       "offset": 0,
-      "map": "MAP_JAGOW_WAY"
+      "direction": "up"
     }
   ],
   "object_events": [
