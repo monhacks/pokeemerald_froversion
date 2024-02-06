@@ -476,4 +476,4 @@ const u32 gObjectEventPic_Venusaur[] = INCBIN_U32("graphics/object_events/pics/p
 const u16 gObjectEventPal_Venusaur[] = INCBIN_U16("graphics/object_events/palettes/venusaur.gbapal");
 
 const u32 gObjectEventPic_Metagross[] = INCBIN_U32("graphics/object_events/pics/pokemon/metagross.4bpp");
-const u16 gObjectEventPal_Metagross[] = INCBIN_U16("graphics/object_events/palettes/poochyena.gbapal");
+const u16 gObjectEventPal_Metagross[] = INCBIN_U16("graphics/object_events/palettes/metagross.gbapal");
