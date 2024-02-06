@@ -51,7 +51,7 @@ Script_MageeVersionHomesteadTownNorth_FroBattleLost:
 	//play sad music sound effect
 	special RemoveAllPartySlots
 	fadescreenspeed FADE_TO_BLACK, 24
-	warpsilent MAP_VERMILLION_CITY, 255, 50, 10
+	warpsilent MAP_VERMILLION_BEACH, 255, 15, 17
 	release
 end
 

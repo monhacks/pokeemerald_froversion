@@ -286,6 +286,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Venusaur3;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ariados1;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ariados3;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Murkrow;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Metagross;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -570,6 +571,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ARIADOS_1] =                 &gObjectEventGraphicsInfo_Ariados1,
     [OBJ_EVENT_GFX_ARIADOS_3] =                 &gObjectEventGraphicsInfo_Ariados3,
     [OBJ_EVENT_GFX_MURKROW] =                    &gObjectEventGraphicsInfo_Murkrow,
+    [OBJ_EVENT_GFX_METAGROSS] =                &gObjectEventGraphicsInfo_Metagross,
 
 
 };

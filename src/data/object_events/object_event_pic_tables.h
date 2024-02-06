@@ -2668,3 +2668,15 @@ const struct SpriteFrameImage gObjectEventPicTable_Murkrow[] = {
     overworld_frame(gObjectEventPic_Murkrow, 2, 2, 2),
     overworld_frame(gObjectEventPic_Murkrow, 2, 2, 2),
 };
+
+const struct SpriteFrameImage gObjectEventPicTable_Metagross[] = {
+    overworld_frame(gObjectEventPic_Metagross, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Metagross, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Metagross, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Metagross, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Metagross, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Metagross, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Metagross, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Metagross, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Metagross, 4, 4, 8),
+};

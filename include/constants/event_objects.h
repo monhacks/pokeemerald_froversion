@@ -282,8 +282,9 @@
 #define OBJ_EVENT_GFX_ARIADOS_1                 278
 #define OBJ_EVENT_GFX_ARIADOS_3                 279
 #define OBJ_EVENT_GFX_MURKROW                 280
+#define OBJ_EVENT_GFX_METAGROSS                 281
 
-#define NUM_OBJ_EVENT_GFX                        281
+#define NUM_OBJ_EVENT_GFX                        282
 
 
 // These are dynamic object gfx ids.

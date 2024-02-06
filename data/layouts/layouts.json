@@ -6150,6 +6150,16 @@
       "secondary_tileset": "gTileset_VermillionCitySecondary",
       "border_filepath": "data/layouts/VermillionBeach/border.bin",
       "blockdata_filepath": "data/layouts/VermillionBeach/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILLION_CITY_LEFT_BOARDER",
+      "name": "VermillionCityLeftBoarder_Layout",
+      "width": 20,
+      "height": 60,
+      "primary_tileset": "gTileset_VermillionCityPrimary",
+      "secondary_tileset": "gTileset_VermillionCitySecondary",
+      "border_filepath": "data/layouts/VermillionCityLeftBoarder/border.bin",
+      "blockdata_filepath": "data/layouts/VermillionCityLeftBoarder/map.bin"
     }
   ]
 }

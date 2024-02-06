@@ -739,6 +739,7 @@
 #define MAP_WESTERN_APPROACH_CAVERNS2         (6 | (32 << 8))
 #define MAP_VERMILLION_CITY                   (7 | (32 << 8))
 #define MAP_VERMILLION_BEACH                  (8 | (32 << 8))
+#define MAP_VERMILLION_CITY_LEFT_BOARDER      (9 | (32 << 8))
 
 // gMapGroup33
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))

@@ -478,6 +478,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_VENUSAUR              0x1150
 #define OBJ_EVENT_PAL_TAG_MURKROW             0x1151
 #define OBJ_EVENT_PAL_TAG_ARIADOS              0x1152
+#define OBJ_EVENT_PAL_TAG_METAGROSS               0x1153
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -565,6 +566,7 @@ const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Venusaur,                   OBJ_EVENT_PAL_TAG_VENUSAUR},
     {gObjectEventPal_Murkrow,                   OBJ_EVENT_PAL_TAG_MURKROW},
     {gObjectEventPal_Ariados,                   OBJ_EVENT_PAL_TAG_ARIADOS},
+    {gObjectEventPal_Metagross,             OBJ_EVENT_PAL_TAG_METAGROSS},
     {NULL,                                  0x0000},
 };
 

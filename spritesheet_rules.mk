@@ -824,3 +824,6 @@ $(OBJEVENTGFXDIR)/pokemon/venusaur.4bpp: %.4bpp: %.png
 
 $(OBJEVENTGFXDIR)/pokemon/ariados.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
+
+$(OBJEVENTGFXDIR)/pokemon/metagross.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4

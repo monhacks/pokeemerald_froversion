@@ -34,14 +34,14 @@
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_MAGEE_VERSION_HOMESTEAD_TOWN_NORTH",
-      "dest_warp_id": 5
+      "dest_warp_id": "5"
     },
     {
       "x": 3,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_MAGEE_VERSION_HOMESTEAD_TOWN_NORTH",
-      "dest_warp_id": 5
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [
