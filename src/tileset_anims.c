@@ -49,6 +49,7 @@ static void TilesetAnim_WesternApproach(u16);
 static void TilesetAnim_RaintreeIsland_Gym_Fire(u16);
 static void TilesetAnim_RaintreeIsland_Gym_Ice(u16);
 static void TilesetAnim_NiagaraWoodsPrimary(u16);
+static void TilesetAnim_VermillionCitySecondary(u16);
 static void QueueAnimTiles_General_Flower(u16);
 static void QueueAnimTiles_General_Water(u16);
 static void QueueAnimTiles_CinnibarIsland_Water(u16);
@@ -90,6 +91,7 @@ static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Rock(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Fire_Puddle(u16);
 static void QueueAnimTiles_RaintreeIsland_Gym_Ice_Sparkle(u16);
 static void QueueAnimTiles_NiagaraWoodsPrimary_Waterfall(u16);
+static void QueueAnimTiles_VermillionCitySecondary_Water(u16);
 
 //////////////////////////////////////////////////////////
 /////////////////FROVERSION ANIMATION////////////////////
@@ -362,6 +364,26 @@ const u16 *const gTilesetAnims_General_Water[] = {
     gTilesetAnims_General_Water_Frame5,
     gTilesetAnims_General_Water_Frame6,
     gTilesetAnims_General_Water_Frame7
+};
+
+const u16 gTilesetAnims_Vermillion_City_Water_Frame0[] = INCBIN_U16("data/tilesets/primary/vermillioncityprimary/anim/water/0.4bpp");
+const u16 gTilesetAnims_Vermillion_City_Water_Frame1[] = INCBIN_U16("data/tilesets/primary/vermillioncityprimary/anim/water/1.4bpp");
+const u16 gTilesetAnims_Vermillion_City_Water_Frame2[] = INCBIN_U16("data/tilesets/primary/vermillioncityprimary/anim/water/2.4bpp");
+const u16 gTilesetAnims_Vermillion_City_Water_Frame3[] = INCBIN_U16("data/tilesets/primary/vermillioncityprimary/anim/water/3.4bpp");
+const u16 gTilesetAnims_Vermillion_City_Water_Frame4[] = INCBIN_U16("data/tilesets/primary/vermillioncityprimary/anim/water/4.4bpp");
+const u16 gTilesetAnims_Vermillion_City_Water_Frame5[] = INCBIN_U16("data/tilesets/primary/vermillioncityprimary/anim/water/5.4bpp");
+const u16 gTilesetAnims_Vermillion_City_Water_Frame6[] = INCBIN_U16("data/tilesets/primary/vermillioncityprimary/anim/water/6.4bpp");
+const u16 gTilesetAnims_Vermillion_City_Water_Frame7[] = INCBIN_U16("data/tilesets/primary/vermillioncityprimary/anim/water/7.4bpp");
+
+const u16 *const gTilesetAnims_VermillionCitySecondary_Water[] = {
+    gTilesetAnims_Vermillion_City_Water_Frame0,
+    gTilesetAnims_Vermillion_City_Water_Frame1,
+    gTilesetAnims_Vermillion_City_Water_Frame2,
+    gTilesetAnims_Vermillion_City_Water_Frame3,
+    gTilesetAnims_Vermillion_City_Water_Frame4,
+    gTilesetAnims_Vermillion_City_Water_Frame5,
+    gTilesetAnims_Vermillion_City_Water_Frame6,
+    gTilesetAnims_Vermillion_City_Water_Frame7
 };
 
 const u16 gTilesetAnims_General_SandWaterEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/sand_water_edge/0.4bpp");
@@ -1165,6 +1187,21 @@ void InitTilesetAnim_RaintreeIsland_Gym_Fire(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_RaintreeIsland_Gym_Fire;
 }
 
+// void InitTilesetAnim_VermillionCitySecondary(void)
+// {
+//     sSecondaryTilesetAnimCounter = 0;
+//     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
+//     sSecondaryTilesetAnimCallback = TilesetAnim_VermillionCitySecondary;
+// }
+
+void InitTilesetAnim_VermillionCitySecondary(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_VermillionCitySecondary;
+}
+
+
 void InitTilesetAnim_RaintreeIsland_Gym_Ice(void)
 {
     sSecondaryTilesetAnimCounter = 0;
@@ -1320,6 +1357,12 @@ static void TilesetAnim_RaintreeIsland_Gym_Ice(u16 timer)
 {
     if (timer % 8 == 0)
         QueueAnimTiles_RaintreeIsland_Gym_Ice_Sparkle(timer >> 3);
+}
+
+static void TilesetAnim_VermillionCitySecondary(u16 timer)
+{
+    if (timer % 16 == 1)
+        QueueAnimTiles_VermillionCitySecondary_Water(timer >> 4);
 }
 
 static void QueueAnimTiles_General_LandWaterEdge(u16 timer)
@@ -1579,6 +1622,18 @@ static void QueueAnimTiles_RaintreeIsland_Gym_Ice_Sparkle(u16 timer)
     u16 i = timer % 4;
     AppendTilesetAnimToBuffer(gTilesetAnims_RaintreeIsland_Gym_Ice_Sparkle[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 34)), 0x80);
 }
+
+static void QueueAnimTiles_VermillionCitySecondary_Water(u16 timer)
+{
+    u16 i = timer % 7;
+    AppendTilesetAnimToBuffer(gTilesetAnims_VermillionCitySecondary_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(16)), 0x40);
+}
+
+// static void QueueAnimTiles_VermillionCitySecondary_Water(u16 timer)
+// {
+//     u16 i = timer % 7;
+//     AppendTilesetAnimToBuffer(gTilesetAnims_VermillionCitySecondary_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(40)), 0x40);
+// }
 
 static void BlendAnimPalette_BattleDome_FloorLights(u16 timer)
 {

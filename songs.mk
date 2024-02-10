@@ -1363,3 +1363,7 @@ $(MID_SUBDIR)/mus_fv_magm8_forest.s: %.s: %.mid
 	
 $(MID_SUBDIR)/mus_fv_haunted.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V090	
+
+	
+$(MID_SUBDIR)/mus_fv_sandy_beach.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V090	

@@ -1269,7 +1269,8 @@ gTileset_VermillionCityPrimary::
 	.4byte gTilesetPalettes_VermillionCityPrimary
 	.4byte gMetatiles_VermillionCityPrimary
 	.4byte gMetatileAttributes_VermillionCityPrimary
-	.4byte NULL
+	.4byte InitTilesetAnim_VermillionCitySecondary
+	
 
 	.align 2
 gTileset_VermillionCitySecondary::
@@ -1281,6 +1282,7 @@ gTileset_VermillionCitySecondary::
 	.4byte gMetatiles_VermillionCitySecondary
 	.4byte gMetatileAttributes_VermillionCitySecondary
 	.4byte NULL
+	@@.4byte InitTilesetAnim_VermillionCitySecondary
 
 	.align 2
 gTileset_BlackForestPreInfection::

@@ -2,7 +2,7 @@
   "id": "MAP_VERMILLION_CITY",
   "name": "VermillionCity",
   "layout": "LAYOUT_VERMILLION_CITY",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_FV_SANDY_BEACH",
   "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
