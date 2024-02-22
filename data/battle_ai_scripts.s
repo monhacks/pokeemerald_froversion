@@ -2034,10 +2034,26 @@ AI_CV_Heal6:
 
 AI_CV_Heal7:
 	if_random_less_than 20, AI_CV_Heal_End
+	if_can_faint AI_CV_Heal8
 	if_hp_less_than AI_USER, 70, Score_Plus5
 	if_hp_less_than AI_USER, 50, Score_Plus10
 
+AI_CV_Heal8:
+	if_user_faster ScoreDown5
+	if_move_flag FLAG_HIGH_CRIT, ScoreDown10
+	score -2
+	goto AI_TryToFaint_CheckIfDanger
+
 AI_CV_Heal_End:
+	end
+	
+
+ScoreDown5:
+	score -5
+	end
+
+ScoreDown10:
+	score -10
 	end
 	
 EncouragePsnVenoshock:

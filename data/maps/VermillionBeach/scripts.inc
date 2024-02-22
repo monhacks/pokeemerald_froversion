@@ -1,5 +1,32 @@
 VermillionBeach_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, VermillionBeach_OnFrame
 	.byte 0
+
+VermillionBeach_OnFrame::
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 1, VermillionBeach_Eventscript_ProtagRestingOnBeach
+	.2byte 0
+
+VermillionBeach_Eventscript_ProtagRestingOnBeach:
+	lockall
+		msgbox VermillionBeach_Text_ProtagIntroText, MSGBOX_DEFAULT
+		closemessage
+		msgbox VermillionBeach_Text_ProtagIntroText2, MSGBOX_DEFAULT
+		playmoncry SPECIES_METAGROSS, 2
+		waitmoncry
+		closemessage
+		msgbox VermillionBeach_Text_ProtagIntroText3, MSGBOX_DEFAULT
+		msgbox VermillionBeach_Text_ProtagIntroText2, MSGBOX_DEFAULT
+		playmoncry SPECIES_METAGROSS, 2
+		waitmoncry
+		applymovement 9, Common_Movement_FaceRight
+		waitmovement 9
+		removeobject 9
+		playfanfare MUS_OBTAIN_ITEM
+		waitfanfare
+		setflag FLAG_HIDE_BEACH_METAGROSS
+	addvar VAR_LITTLEROOT_INTRO_STATE, 1 					@@ sets var to 2
+	releaseall
+	end
 
 VermillionBeach_Eventscript_ShadeWoman::
 	lockall
@@ -113,3 +140,30 @@ VermillionBeach_Text_TreasureHunter2:
 .string "buried treasure! Last time, I found a\p"
 .string "cool seashell. Today, it's all about\n"
 .string "the coins!$"
+@--------------------------------------------------
+VermillionBeach_Text_ProtagIntroText:
+	.string "{PLAYER}: It sure is nice relaxing\n"
+	.string "at the beach, isn't it Metagross?\p"
+	.string "I can't believe it's been over a year\n"
+	.string "since we've battled together.$"
+@--------------------------------------------------
+VermillionBeach_Text_ProtagIntroText2:
+	.string "Metagross: Mrraahhh.$"
+@--------------------------------------------------
+VermillionBeach_Text_ProtagIntroText3:
+	.string "{PLAYER}: I know buddy, I miss it\n"
+	.string "too.\p"
+	.string "But we have a good thing going for us\n"
+	.string "here.\p"
+	.string "Our dreams have become a reality.\n"
+	.string "We finally got to open {COLOR RED}Magee's Pleasure\l"
+	.string "Factory{COLOR DARK_GREY}, a place that brings joy to\l"
+	.string "both Pokémon and trainers.\p"
+	.string "Speaking of that, we should probably\n"
+	.string "head back to town and check on\l"
+	.string "{COLOR RED}Jennifer{COLOR DARK_GREY}.\p"
+	.string "She hates when we leave her to run\n"
+	.string "the store while we kick back on the\l"
+	.string "beach.\p"
+	.string "Let's go buddy!$"
+

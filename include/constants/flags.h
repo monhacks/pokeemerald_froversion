@@ -1296,7 +1296,7 @@
 #define FLAG_BATTLE_SANDSTORM                                       0x4E0 // Automatic sandstorm
 #define FLAG_BATTLE_RAIN                                            0x4E1 // Automatic rain
 #define FLAG_BATTLE_SUN                                             0x4E2 // Automatic sun
-#define FLAG_HIDE_TILYOUS_LAB_ISIAH                                 0x4E3 // Hides Isiah In Tilyous Lab
+#define FLAG_HIDE_BEACH_METAGROSS                                 0x4E3 // Hides Isiah In Tilyous Lab
 #define FLAG_SPOKE_TO_FIRST_MESSENGER                               0x4E4 // Used to stop intro dialouge from triggering for messenger battles
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_SOLDIERS                        0x4E5 // Hides all soldiers after team maga battle
 #define FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_EMBORYPS            0x4E6 // Hides "charmander" until after starter choice made //MAGM8: Marks pokemon joined party

@@ -2,7 +2,7 @@
   "id": "MAP_MAGEE_VERSION_PROTAGONISTS_HOUSE",
   "name": "MageeVersionProtagonistsHouse",
   "layout": "LAYOUT_MAGEE_VERSION_PROTAGONISTS_HOUSE",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_FV_STILLSNOW",
   "region_map_section": "MAPSEC_SOOTOPOLIS_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
