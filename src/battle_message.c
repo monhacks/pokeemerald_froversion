@@ -755,7 +755,7 @@ static const u8 sText_SoaringDragonStatReset[] = _("{B_ATK_NAME_WITH_PREFIX} tim
 static const u8 sText_PkmnBugSubEvolved[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s Bugstitute\nevolved!\pIt is now stonger!");
 static const u8 sText_SleepyHeadFog[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nwhips up a dreamy fog!\n");
 static const u8 sText_AbilityGivesHeldItem[] = _("{B_BUFF3}'s {B_BUFF2}\nconjures a {B_BUFF1} for it to hold");
-static const u8 sText_FroTrashTalkMagee[] = _("Fro: {PLAYER}!\pI will exorcise your demons!");
+static const u8 sText_FroTrashTalkMagee[] = _("Fro: MATTHEW!!!!!\pI will exorcise your demons!");
 
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =

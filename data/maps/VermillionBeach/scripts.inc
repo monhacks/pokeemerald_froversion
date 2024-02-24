@@ -10,16 +10,24 @@ VermillionBeach_Eventscript_ProtagRestingOnBeach:
 	lockall
 		msgbox VermillionBeach_Text_ProtagIntroText, MSGBOX_DEFAULT
 		closemessage
-		msgbox VermillionBeach_Text_ProtagIntroText2, MSGBOX_DEFAULT
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+		applymovement 9, Common_Movement_FaceRight
+		waitmovement 0
 		playmoncry SPECIES_METAGROSS, 2
 		waitmoncry
+		msgbox VermillionBeach_Text_ProtagIntroText2, MSGBOX_DEFAULT
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+		applymovement 9, Common_Movement_FaceDown
+		waitmovement 0
 		closemessage
 		msgbox VermillionBeach_Text_ProtagIntroText3, MSGBOX_DEFAULT
-		msgbox VermillionBeach_Text_ProtagIntroText2, MSGBOX_DEFAULT
+		closemessage
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+		applymovement 9, Common_Movement_FaceRight
+		waitmovement 0
 		playmoncry SPECIES_METAGROSS, 2
 		waitmoncry
-		applymovement 9, Common_Movement_FaceRight
-		waitmovement 9
+		msgbox VermillionBeach_Text_ProtagIntroText2, MSGBOX_DEFAULT
 		removeobject 9
 		playfanfare MUS_OBTAIN_ITEM
 		waitfanfare
