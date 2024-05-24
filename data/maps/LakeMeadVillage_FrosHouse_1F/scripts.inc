@@ -5,13 +5,13 @@ LakeMeadVillage_FrosHouse_1F_MapScripts::
 	.byte 0
 
 //Variables
-// VAR_LITTLEROOT_INTRO_STATE 0 = Intro state which triggers intro event when warping to starting map. sets var to 1 after initial cutscene
-// VAR_LITTLEROOT_INTRO_STATE 1 = In this state the player must speak to angelina to trigger event which allows player to enter the basement. sets var to 2 when complete
-// VAR_LITTLEROOT_INTRO_STATE 2 = In this state the player must go to their room and go to sleep, ending the prolouge event and setting the var to 3
-// VAR_LITTLEROOT_INTRO_STATE 3 = Player must enter Isiahs house; when set to 3 isiahs mom event will trigger promting you to return home and setting var to 4
-// VAR_LITTLEROOT_INTRO_STATE 4 = Upon returning home mom event occurs; sets VAR_LITTLEROOT_INTRO_STATE to 5 and VAR_LITTLEROOT_TOWN_STATE 1, allowing professor give pokemon event to trigger
-// VAR_LITTLEROOT_INTRO_STATE 5 =  as of now this serves as the final variable currently coded no special events (except 6 which offers one special dialouge option)
-// VAR_LITTLEROOT_INTRO_STATE 6 = Unlocks special dialouge option for Isiah in village
+// VAR_MAGEE_VERSION_INTRO_STATE 0 = Intro state which triggers intro event when warping to starting map. sets var to 1 after initial cutscene
+// VAR_MAGEE_VERSION_INTRO_STATE 1 = In this state the player must speak to angelina to trigger event which allows player to enter the basement. sets var to 2 when complete
+// VAR_MAGEE_VERSION_INTRO_STATE 2 = In this state the player must go to their room and go to sleep, ending the prolouge event and setting the var to 3
+// VAR_MAGEE_VERSION_INTRO_STATE 3 = Player must enter Isiahs house; when set to 3 isiahs mom event will trigger promting you to return home and setting var to 4
+// VAR_MAGEE_VERSION_INTRO_STATE 4 = Upon returning home mom event occurs; sets VAR_MAGEE_VERSION_INTRO_STATE to 5 and VAR_LITTLEROOT_TOWN_STATE 1, allowing professor give pokemon event to trigger
+// VAR_MAGEE_VERSION_INTRO_STATE 5 =  as of now this serves as the final variable currently coded no special events (except 6 which offers one special dialouge option)
+// VAR_MAGEE_VERSION_INTRO_STATE 6 = Unlocks special dialouge option for Isiah in village
 
 
 // VAR_LITTLEROOT_TOWN_STATE 0 = Default Town State, prevents player from leaving town before finding professor and picking pokemon
@@ -29,7 +29,7 @@ LakeMeadVillage_FrosHouse_1F_IsiahWasJustHere:
 lock
 msgbox T_FrosHouse1F_IsiahWasJustHere, MSGBOX_DEFAULT
 setvar VAR_LITTLEROOT_TOWN_STATE, 1
-setvar VAR_LITTLEROOT_INTRO_STATE, 5
+setvar VAR_MAGEE_VERSION_INTRO_STATE, 5
 clearflag FLAG_HIDE_LAKE_MEAD_VILLAGE_ISIAH
 closemessage
 release
@@ -69,7 +69,7 @@ msgbox LakeMeadVillage_Text_AngelinaKickedDoor, MSGBOX_DEFAULT
 applymovement OBJ_EVENT_ID_CAMERA, LakeMeadVillage_FrosHouse_1F_CameraReturnToFro
 waitmovement OBJ_EVENT_ID_CAMERA
 special RemoveCameraObject
-setvar VAR_LITTLEROOT_INTRO_STATE, 1
+setvar VAR_MAGEE_VERSION_INTRO_STATE, 1
 releaseall
 end
 
@@ -125,9 +125,9 @@ face_up
 step_end
 
 LakeMeadVillage_FrosHouse_1F_OnLoad:
-	compare VAR_LITTLEROOT_INTRO_STATE, 4
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 4
 	goto_if_eq LakeMeadVillage_FrosHouse_1F_MoveMom2
-	compare VAR_LITTLEROOT_INTRO_STATE, 0
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 0
 	goto_if_eq LakeMeadVillage_FrosHouse_1F_MoveMom
 	end
 
@@ -139,7 +139,7 @@ LakeMeadVillage_FrosHouse_1F_MoveMom2:
 LakeMeadVillage_FrosHouse_1F_MoveMom:
 	setobjectxyperm 2, 8, 2
 	removeobject 2
-	setflag FLAG_0x4EB
+	setflag FLAG_HIDE_VERMILLION_CITY_BOY
 	end
 
 LakeMead_FrosHouse_1F_SetFroNorth:
@@ -147,12 +147,12 @@ LakeMead_FrosHouse_1F_SetFroNorth:
 	end
 
 LakeMeadVillage_FrosHouse_1F_OnFrame:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 4, LakeMeadVillage_FrosHouse_1F_IsiahWasJustHere
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 0, LakeMead_FrosHouse_1F_SetFroFacingTV
+	map_script_2 VAR_MAGEE_VERSION_INTRO_STATE, 4, LakeMeadVillage_FrosHouse_1F_IsiahWasJustHere
+	map_script_2 VAR_MAGEE_VERSION_INTRO_STATE, 0, LakeMead_FrosHouse_1F_SetFroFacingTV
 	.2byte 0
 
 LakeMeadVillage_FrosHouse_1F_OnWarp:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 0, LakeMead_FrosHouse_1F_SetFroNorth
+	map_script_2 VAR_MAGEE_VERSION_INTRO_STATE, 0, LakeMead_FrosHouse_1F_SetFroNorth
 	.2byte 0
 
 //Angelina NPC Script
@@ -161,12 +161,12 @@ LakeMeadVillage_FrosHouse_1F_Angelina_NPC::
 	lock
 	faceplayer
 	addobject 2
-	clearflag FLAG_0x4EB
-	compare VAR_LITTLEROOT_INTRO_STATE, 1
+	clearflag FLAG_HIDE_VERMILLION_CITY_BOY
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 1
 	goto_if_eq LakeMeadVillage_FrosHouse_1F_WhatHaveYouDone
-	compare VAR_LITTLEROOT_INTRO_STATE, 2
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 2
 	goto_if_eq Script_LakeMeadVillage_FrosHouse_1F_HahaYoureGrounded
-	compare VAR_LITTLEROOT_INTRO_STATE, 3
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 3
 	goto_if_ge Script_LakeMeadVillage_FrosHouse_1F_Angelina_StandardDialouge
 	end
 	
@@ -204,13 +204,13 @@ Script_LakeMeadVillage_FrosHouse_1F_AngelinaNPCDialouge3::
 LakeMeadVillage_FrosHouse_1F_Mom_NPC::
 	lock
 	faceplayer
-	compare VAR_LITTLEROOT_INTRO_STATE, 2
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 2
 	goto_if_eq Script_LakeMeadVillage_FrosHouse_1F_GoDownstairsStandard
 	compare VAR_LITTLEROOT_TOWN_STATE, 4
 	goto_if_ge Script_LakeMeadVillage_FrosHouse_1F_MomAfterRecievedPoke
-	compare VAR_LITTLEROOT_INTRO_STATE, 5
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 5
 	goto_if_eq Script_LakeMeadVillage_FrosHouse_IsiahLookingForYou
-	compare VAR_LITTLEROOT_INTRO_STATE, 3
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 3
 	goto_if_ge Script_LakeMeadVillage_FrosHouse_1F_MomRandom1
 	end
 
@@ -258,7 +258,7 @@ end
 LakeMeadVillage_FrosHouse_1F_WhatHaveYouDone::
 	lockall
 	msgbox LakeMeadVillage_Text_WhatHaveYouDone, MSGBOX_DEFAULT	
-	setvar VAR_LITTLEROOT_INTRO_STATE, 2
+	setvar VAR_MAGEE_VERSION_INTRO_STATE, 2
 	applymovement 2, MovementMomSeesDoor
 	waitmovement 2
 	msgbox LakeMeadVillage_Text_MomNoticesDamage, MSGBOX_DEFAULT
@@ -285,9 +285,9 @@ LakeMeadVillage_FrosHouse_1F_MomsRoomBetterNotGoUp::
 
 LakeMeadVillage_FrosHouse_1F_BetterNotGoOut::
 	lock
-	compare VAR_LITTLEROOT_INTRO_STATE, 1
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 1
 	goto_if_eq Script_LakeMeadVillage_FrosHouse_1F_CheckTheDamage
-	compare VAR_LITTLEROOT_INTRO_STATE, 2
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 2
 	goto_if_eq Script_LakeMeadVillage_FrosHouse_1F_YoureGroundedGoDownstairs
 	release
 	end
@@ -307,7 +307,7 @@ Script_LakeMeadVillage_FrosHouse_1F_YoureGroundedGoDownstairs::
 	end
 	
 Script_LakeMeadVillage_FrosHouse_1F_TV::
-	compare VAR_LITTLEROOT_INTRO_STATE, 1
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 1
 	goto_if_eq Script_LakeMeadVillageFros_1F_TV1
 	goto_if_gt Script_LakeMeadVillageFros_1F_TV2
 	end

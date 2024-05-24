@@ -1417,3 +1417,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/VermillionBeach/scripts.inc"
 
 	.include "data/maps/VermillionCityLeftBoarder/scripts.inc"
+
+	.include "data/maps/VermillionCityMageesPleasureFactory/scripts.inc"

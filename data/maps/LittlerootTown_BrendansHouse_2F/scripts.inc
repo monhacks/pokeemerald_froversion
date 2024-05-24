@@ -10,7 +10,7 @@ LittlerootTown_BrendansHouse_2F_OnTransition: @ 81F83EE
 	call_if_lt LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan
 	compare VAR_LITTLEROOT_RIVAL_STATE, 3
 	call_if_ge LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos
-	compare VAR_LITTLEROOT_INTRO_STATE, 4
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 4
 	call_if_eq PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
 	call SecretBase_EventScript_SetDecorationFlags
 	setvar VAR_SECRET_BASE_INITIALIZED, 0

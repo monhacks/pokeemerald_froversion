@@ -6160,6 +6160,16 @@
       "secondary_tileset": "gTileset_VermillionCitySecondary",
       "border_filepath": "data/layouts/VermillionCityLeftBoarder/border.bin",
       "blockdata_filepath": "data/layouts/VermillionCityLeftBoarder/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILLION_CITY_MAGEES_PLEASURE_FACTORY",
+      "name": "VermillionCityMageesPleasureFactory_Layout",
+      "width": 28,
+      "height": 19,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SummitCityGym",
+      "border_filepath": "data/layouts/VermillionCityMageesPleasureFactory/border.bin",
+      "blockdata_filepath": "data/layouts/VermillionCityMageesPleasureFactory/map.bin"
     }
   ]
 }

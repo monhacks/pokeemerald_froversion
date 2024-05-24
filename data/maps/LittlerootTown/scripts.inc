@@ -15,7 +15,7 @@ LittlerootTown_MapScripts:: @ 81E7DCB
 	@ 3: Received Pokedex
 	@ 4: Received Running Shoes
 
-	@ State descriptions for VAR_LITTLEROOT_INTRO_STATE
+	@ State descriptions for VAR_MAGEE_VERSION_INTRO_STATE
 	@ 1: In truck male
 	@ 2: In truck female
 	@ 3: Entered house
@@ -42,7 +42,7 @@ LittlerootTown_MapScripts:: @ 81E7DCB
 LittlerootTown_OnTransition: @ 81E7DDB
 	setflag FLAG_VISITED_LITTLEROOT_TOWN
 	call Common_EventScript_SetupRivalGfxId
-	compare VAR_LITTLEROOT_INTRO_STATE, 2
+	compare VAR_MAGEE_VERSION_INTRO_STATE, 2
 	call_if_eq LittlerootTown_EventScript_MoveMomToMaysDoor
 	call_if_unset FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_SetTwinPos
 	compare VAR_LITTLEROOT_TOWN_STATE, 3
@@ -118,8 +118,8 @@ LittlerootTown_EventScript_SetMomInFrontOfDoorFemale:: @ 81E7EB9
 	return
 
 LittlerootTown_OnFrame: @ 81E7EC1
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 1, LittlerootTown_EventScript_StepOffTruckMale
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_EventScript_StepOffTruckFemale
+	map_script_2 VAR_MAGEE_VERSION_INTRO_STATE, 1, LittlerootTown_EventScript_StepOffTruckMale
+	map_script_2 VAR_MAGEE_VERSION_INTRO_STATE, 2, LittlerootTown_EventScript_StepOffTruckFemale
 	map_script_2 VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_EventScript_BeginDexUpgradeScene
 	.2byte 0
 
@@ -171,7 +171,7 @@ LittlerootTown_EventScript_GoInsideWithMom:: @ 81E7F17
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerEnterHouse
 	waitmovement 0
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
-	setvar VAR_LITTLEROOT_INTRO_STATE, 3
+	setvar VAR_MAGEE_VERSION_INTRO_STATE, 3
 	hideobjectat OBJ_EVENT_ID_PLAYER, 0
 	closedoor VAR_0x8004, VAR_0x8005
 	waitdooranim

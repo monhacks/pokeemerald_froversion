@@ -31,7 +31,7 @@
       "x": 10,
       "y": 3,
       "elevation": 0,
-      "var": "VAR_LITTLEROOT_INTRO_STATE",
+      "var": "VAR_MAGEE_VERSION_INTRO_STATE",
       "var_value": "2",
       "script": "LakeMeadVillage_FrosHouse_Basement_WouldYouLikeToSleep"
     }

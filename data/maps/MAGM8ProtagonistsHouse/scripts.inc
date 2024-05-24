@@ -1,4 +1,4 @@
-//FLAG_0x4EB == FLAG_TO_DO_LIST_CHECKED
+//FLAG_HIDE_VERMILLION_CITY_BOY == FLAG_TO_DO_LIST_CHECKED
 .set LOCALID_SCROLLINGMENU_FIRST_TO_DO_LIST, 13
 .set LOCALID_SCROLLINGMENU_SECOND_TO_DO_LIST, 14
 
@@ -30,7 +30,7 @@ MAGM8ProtagonistsHouse_OnFrame:
 
 MAGM8ProtagonistsHouse_SetProtagWest:
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
-	addvar VAR_LITTLEROOT_INTRO_STATE, 1
+	addvar VAR_MAGEE_VERSION_INTRO_STATE, 1
 	end
 
 MAGM8ProtagonistsHouse_EventScript_SetDynamicWarpPreInfection:
@@ -43,7 +43,7 @@ end
 
 MAGM8ProtagonistsHouse_EventScript_PreventPlayerFromLeavingUntilToDoListChecked::
 	lock
-		goto_if_set FLAG_0x4EB, MAGM8ProtagonistsHouse_EventScript_ToDoListHasBeenChecked
+		goto_if_set FLAG_HIDE_VERMILLION_CITY_BOY, MAGM8ProtagonistsHouse_EventScript_ToDoListHasBeenChecked
 		msgbox MAGM8ProtagonistsHouse_Text_CheckToDoList, MSGBOX_DEFAULT
 		closemessage
 		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
@@ -177,25 +177,25 @@ MAGM8ProtagonistsHouse_EventScript_ToDoListTreesCutDown:
 
 
 MAGM8ProtagonistsHouse_EventScript_ToDoListHarvestMushrooms:
-		setflag FLAG_0x4EB
+		setflag FLAG_HIDE_VERMILLION_CITY_BOY
 		msgbox MAGM8ProtagonistsHouse_Text_ToDoListHarvestMushrooms, MSGBOX_DEFAULT
 		compare VAR_ROUTE101_STATE, 1
 		goto_if_ge MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep
 		goto MAGM8ProtagonistsHouse_EventScript_ShowToDoList
 MAGM8ProtagonistsHouse_EventScript_ToDoListGoToTownForMedicine:
-		setflag FLAG_0x4EB
+		setflag FLAG_HIDE_VERMILLION_CITY_BOY
 		msgbox MAGM8ProtagonistsHouse_Text_ToDoListGoToTownForMedicine, MSGBOX_DEFAULT
 		compare VAR_ROUTE101_STATE, 1
 		goto_if_ge MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep
 		goto MAGM8ProtagonistsHouse_EventScript_ShowToDoList
 MAGM8ProtagonistsHouse_EventScript_ToDoListCutDownTrees:
-		setflag FLAG_0x4EB
+		setflag FLAG_HIDE_VERMILLION_CITY_BOY
 		msgbox MAGM8ProtagonistsHouse_Text_ToDoListCutDownTrees, MSGBOX_DEFAULT
 		compare VAR_ROUTE101_STATE, 1
 		goto_if_ge MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep
 		goto MAGM8ProtagonistsHouse_EventScript_ShowToDoList
 MAGM8ProtagonistsHouse_EventScript_ToDoListHarvestMushroomsBad:
-		setflag FLAG_0x4EB
+		setflag FLAG_HIDE_VERMILLION_CITY_BOY
 		msgbox MAGM8ProtagonistsHouse_Text_ToDoListHarvestMushroomsBad, MSGBOX_DEFAULT
 		compare VAR_ROUTE101_STATE, 1
 		goto_if_ge MAGM8ProtagonistsHouse_EventScript_ShowToDoListAfterSleep
@@ -334,7 +334,7 @@ MAGM8ProtagonistsHouse_EventScriptWouldYouLikeToSleepYes:
 	setobjectmovementtype 1, MOVEMENT_TYPE_FACE_RIGHT
 	special HealPlayerParty
 	setdynamicwarp MAP_NEW_MAP1, 255, 29, 32
-	clearflag FLAG_0x4EB
+	clearflag FLAG_HIDE_VERMILLION_CITY_BOY
 	fadescreen FADE_FROM_BLACK
 	releaseall
 end

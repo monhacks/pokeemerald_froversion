@@ -12,10 +12,10 @@ MageeVersionProtagonistsHouse_MapScripts::
 //////////////////////////////////////////////////////////////////
 
 MageeVersionProtagonistsHouse_OnFrame:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 0, Script_MageeVersionProtagonistsHouse_Secretary
+	map_script_2 VAR_MAGEE_VERSION_INTRO_STATE, 0, Script_MageeVersionProtagonistsHouse_Secretary
 
 MageeVersionProtagonistsHouse_OnWarp:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 0, Script_MageeVersionProtagonistsHouse_SetProtagSouth
+	map_script_2 VAR_MAGEE_VERSION_INTRO_STATE, 0, Script_MageeVersionProtagonistsHouse_SetProtagSouth
 	.2byte 0
 
 //////////////////////////////////////////////////////////////////
@@ -44,7 +44,7 @@ Script_MageeVersionProtagonistsHouse_Secretary:
 		setflag FLAG_FRO_VERSION_HIDE_TILYOUS_LAB_BOBBY_MAGEE_VERSION_HIDE_SECRETARY
 		setflag FLAG_SYS_POKEMON_GET
 		setflag FLAG_SYS_POKEDEX_GET
-		setvar VAR_LITTLEROOT_INTRO_STATE, 1
+		setvar VAR_MAGEE_VERSION_INTRO_STATE, 1
 		release
 	end
 

@@ -3,7 +3,7 @@ VermillionBeach_MapScripts::
 	.byte 0
 
 VermillionBeach_OnFrame::
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 1, VermillionBeach_Eventscript_ProtagRestingOnBeach
+	map_script_2 VAR_MAGEE_VERSION_INTRO_STATE, 1, VermillionBeach_Eventscript_ProtagRestingOnBeach
 	.2byte 0
 
 VermillionBeach_Eventscript_ProtagRestingOnBeach:
@@ -32,7 +32,7 @@ VermillionBeach_Eventscript_ProtagRestingOnBeach:
 		playfanfare MUS_OBTAIN_ITEM
 		waitfanfare
 		setflag FLAG_HIDE_BEACH_METAGROSS
-	addvar VAR_LITTLEROOT_INTRO_STATE, 1 					@@ sets var to 2
+	addvar VAR_MAGEE_VERSION_INTRO_STATE, 1 					@@ sets var to 2
 	releaseall
 	end
 

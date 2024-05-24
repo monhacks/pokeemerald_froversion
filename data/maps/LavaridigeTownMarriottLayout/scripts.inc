@@ -8,12 +8,12 @@ LavaridigeTownMarriottLayout_OnTransition:
 	end
 
 LavaridigeTownMarriottLayout_OnFrame:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 0, LavaridigeTownMarriottLayout_EventScript_GiveOtdorble
+	map_script_2 VAR_MAGEE_VERSION_INTRO_STATE, 0, LavaridigeTownMarriottLayout_EventScript_GiveOtdorble
 	.2byte 0
 
 LavaridigeTownMarriottLayout_EventScript_GiveOtdorble:
 	givecustommon SPECIES_OTDORBLE ,50, ITEM_EVIOLITE, ITEM_ULTRA_BALL, NATURE_CAREFUL,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_ICE_PUNCH, MOVE_BRICK_BREAK, MOVE_SWORDS_DANCE, MOVE_AQUA_TAIL, 0
-	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+	setvar VAR_MAGEE_VERSION_INTRO_STATE, 1
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_ITEM_MAGMA_HIDEOUT_1F_RARE_CANDY

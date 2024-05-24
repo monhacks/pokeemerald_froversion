@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LakeMeadVillage_FrosHouse_1F_Mom_NPC",
-      "flag": "FLAG_0x4EB"
+      "flag": "FLAG_HIDE_VERMILLION_CITY_BOY"
     }
   ],
   "warp_events": [
