@@ -53,7 +53,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 53,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILLION_CITY_MAGEES_PLEASURE_FACTORY",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
     {
