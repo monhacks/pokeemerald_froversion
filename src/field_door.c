@@ -152,6 +152,7 @@ static const u8 sDoorAnimTiles_CinnibarIsland_Primary_Door_NCC[] = INCBIN_U8("gr
 static const u8 sDoorAnimTiles_CinnibarIsland_Primary_Gym_Door[] = INCBIN_U8("graphics/door_anims/cinnabar_gym.4bpp");
 static const u8 sDoorAnimTiles_CinnibarIsland_Primary_Inn_Door[] = INCBIN_U8("graphics/door_anims/cinnabar_inn.4bpp");
 static const u8 sDoorAnimTiles_BlackForestPreInfection[] = INCBIN_U8("graphics/door_anims/black_forest_pre_infection.4bpp");
+static const u8 sDoorAnimTiles_VermillionCity[] = INCBIN_U8("graphics/door_anims/vermillion_city.4bpp");
 
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
@@ -258,6 +259,7 @@ static const u8 sDoorAnimPalettes_CinnibarIsland_Primary_Door_NCC[] = {6, 6, 6, 
 static const u8 sDoorAnimPalettes_CinnibarIsland_Primary_Gym_Door[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_CinnibarIsland_Primary_Inn_Door[] = {10, 10, 10, 10, 10, 10, 10, 10};
 static const u8 sDoorAnimPalettes_BlackForestPreInfection[] = {2, 2, 2, 2, 2, 2, 2, 2};
+static const u8 sDoorAnimPalettes_Vermillion_City[] = {2, 2, 2, 2, 2, 2, 2, 2};
 
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
@@ -333,6 +335,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_CinnibarIsland_Primary_Door_NCC,                    DOOR_SOUND_SLIDING,  1, sDoorAnimTiles_CinnibarIsland_Primary_Door_NCC, sDoorAnimPalettes_CinnibarIsland_Primary_Door_NCC},
     {METATILE_CinnibarIsland_Primary_Gym_Door,                    DOOR_SOUND_SLIDING,  1, sDoorAnimTiles_CinnibarIsland_Primary_Gym_Door, sDoorAnimPalettes_CinnibarIsland_Primary_Gym_Door},
     {METATILE_CinnibarIsland_Primary_Inn_Door,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_CinnibarIsland_Primary_Inn_Door, sDoorAnimPalettes_CinnibarIsland_Primary_Inn_Door},
+    {METATILE_VermillionCityPrimary_VermillionCityDoor,                    DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_VermillionCity, sDoorAnimPalettes_Vermillion_City},
     {},
 };
 
