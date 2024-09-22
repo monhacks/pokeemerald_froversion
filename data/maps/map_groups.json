@@ -315,7 +315,9 @@
     "SlateportCity_House",
     "SlateportCity_PokemonCenter_1F",
     "SlateportCity_PokemonCenter_2F",
-    "SlateportCity_Mart"
+    "SlateportCity_Mart",
+    "EscapeRoom_FirstRoom_ProtagonistOne",
+    "EscapeRoom_FirstRoom_Protagonist2"
   ],
   "gMapGroup10": [
     "MauvilleCity_Gym",

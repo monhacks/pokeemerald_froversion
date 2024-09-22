@@ -6140,6 +6140,26 @@
       "secondary_tileset": "gTileset_Cave2",
       "border_filepath": "data/layouts/MAGM8CaveHiddenBehindWaterfall/border.bin",
       "blockdata_filepath": "data/layouts/MAGM8CaveHiddenBehindWaterfall/map.bin"
+    },
+    {
+      "id": "LAYOUT_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE",
+      "name": "EscapeRoom_FirstRoom_ProtagonistOne_Layout",
+      "width": 18,
+      "height": 19,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SummitCityGym",
+      "border_filepath": "data/layouts/EscapeRoom_FirstRoom_ProtagonistOne/border.bin",
+      "blockdata_filepath": "data/layouts/EscapeRoom_FirstRoom_ProtagonistOne/map.bin"
+    },
+    {
+      "id": "LAYOUT_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST2",
+      "name": "EscapeRoom_FirstRoom_Protagonist2_Layout",
+      "width": 26,
+      "height": 27,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/EscapeRoom_FirstRoom_Protagonist2/border.bin",
+      "blockdata_filepath": "data/layouts/EscapeRoom_FirstRoom_Protagonist2/map.bin"
     }
   ]
 }

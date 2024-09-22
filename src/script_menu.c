@@ -887,6 +887,12 @@ static const u8 sText_12_10_1958[] =_("12/10/1958");
 static const u8 sText_12_11_1958[] =_("12/11/1958");
 static const u8 sText_12_12_1958[] =_("12/12/1958");
 static const u8 sText_CutTrees[] =_("Trees");
+static const u8 sText_EscapeRoomProtagA[] =_("Protag A");
+static const u8 sText_EscapeRoomProtagB[] =_("Protag B");
+static const u8 sText_EscapeRoomProtagC[] =_("Protag C");
+static const u8 sText_DynamicPokemonA[] =_("Set Variable First");
+static const u8 sText_DynamicPokemonB[] =_("Set Variable Second");
+
 
 
 
@@ -1058,6 +1064,30 @@ static const struct ListMenuItem sMAGM8ProfessorsJournalEntries[] =
     {sText_12_12_1958, 7},
 };
 
+static const struct ListMenuItem sEscapeRoomTradeProtagonistOptionsProtagA[] =
+{
+    {sText_EscapeRoomProtagB, 0},
+    {sText_EscapeRoomProtagC, 1},
+};
+
+static const struct ListMenuItem sEscapeRoomTradeProtagonistOptionsProtagB[] =
+{
+    {sText_EscapeRoomProtagA, 0},
+    {sText_EscapeRoomProtagC, 1},
+};
+
+static const struct ListMenuItem sEscapeRoomTradeProtagonistOptionsProtagC[] =
+{
+    {sText_EscapeRoomProtagA, 0},
+    {sText_EscapeRoomProtagB, 1},
+};
+
+static const struct ListMenuItem sEscapeRoomTradeProtagonistOptionsDynamicPokemonMenu[] =
+{
+    {sText_DynamicPokemonA, 0},
+    {sText_DynamicPokemonB, 1},
+};
+
 // Table of your multichoice sets.
 struct
 {
@@ -1081,6 +1111,12 @@ struct
     {sMAGM8FirstToDoList, ARRAY_COUNT(sMAGM8FirstToDoList)}, //13
     {sMAGM8SecondToDoList, ARRAY_COUNT(sMAGM8SecondToDoList)}, //14
     {sMAGM8ProfessorsJournalEntries, ARRAY_COUNT(sMAGM8ProfessorsJournalEntries)}, //15
+    {sEscapeRoomTradeProtagonistOptionsProtagA, ARRAY_COUNT(sEscapeRoomTradeProtagonistOptionsProtagA)}, //16
+    {sEscapeRoomTradeProtagonistOptionsProtagB, ARRAY_COUNT(sEscapeRoomTradeProtagonistOptionsProtagB)}, //17
+    {sEscapeRoomTradeProtagonistOptionsProtagC, ARRAY_COUNT(sEscapeRoomTradeProtagonistOptionsProtagC)}, //18
+    {sEscapeRoomTradeProtagonistOptionsDynamicPokemonMenu, ARRAY_COUNT(sEscapeRoomTradeProtagonistOptionsDynamicPokemonMenu)}, //19
+
+    
     
     
 };

@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
+      "map": "MAP_JAGOW_WAY_LOWER",
       "offset": 30,
-      "map": "MAP_JAGOW_WAY_LOWER"
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -28,7 +28,7 @@
       "y": 22,
       "elevation": 0,
       "dest_map": "MAP_SUMMIT_CITY",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
