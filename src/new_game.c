@@ -261,6 +261,7 @@ void NewGameInitData(void)
     ResetContestLinkResults();
     
     memset(&gSaveBlock2Ptr->itemFlags, 0, sizeof(gSaveBlock2Ptr->itemFlags));
+    gSaveBlock1Ptr->activeChar = 0;
     if(B_VERSION_MARRIOTT)
         gSaveBlock2Ptr->expShare = 1;
     else

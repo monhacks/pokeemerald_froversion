@@ -4474,6 +4474,19 @@ static void _CreateInGameTradePokemon(u8 whichPlayerMon, u8 whichInGameTrade)
     CalculateMonStats(&gEnemyParty[0]);
 }
 
+static void _CreateInGameCharacterTradePokemon(u8 whichPlayerMon, u8 whichTradePartner)
+{
+    struct Pokemon *recvpokemon = &gEnemyParty[0];
+    struct Pokemon *storepokemon = &gEnemyParty[1];
+    struct BoxPokemon *storeboxmon = &storepokemon->box;
+    
+    
+    CopyMon(storepokemon, &gPlayerParty[whichPlayerMon], sizeof(*storepokemon));
+    BoxMonAtToMon(0, 0, recvpokemon);
+    ZeroBoxMonAt(0, 0);
+    SetBoxMonAt(0, 0, storeboxmon);
+}
+
 static void SetInGameTradeMail(struct MailStruct *mail, const struct InGameTrade *trade) {
     s32 i;
 
@@ -4503,6 +4516,11 @@ u16 GetTradeSpecies(void)
 void CreateInGameTradePokemon(void)
 {
     _CreateInGameTradePokemon(gSpecialVar_0x8005, gSpecialVar_0x8004);
+}
+
+void CreateInGameCharacterTradePokemon(void)
+{
+    _CreateInGameCharacterTradePokemon(gSpecialVar_0x8005, gSpecialVar_0x8004);
 }
 
 static void CB2_UpdateLinkTrade(void)

@@ -265,6 +265,7 @@ gSpecials:: @ 81DBA64
 	def_special FieldShowRegionMap
 	def_special GetInGameTradeSpeciesInfo
 	def_special CreateInGameTradePokemon
+	def_special CreateInGameCharacterTradePokemon
 	def_special DoInGameTradeScene
 	def_special GetTradeSpecies
 	def_special GetWeekCount
@@ -543,3 +544,5 @@ gSpecials:: @ 81DBA64
 	def_special StartMurkrowBattle
 	def_special StartVenusaurBattle
 	def_special StartAriadosBossBattle
+	def_special SwitchCharacter
+

@@ -34,6 +34,8 @@ MAGM8ProtagonistsHouse_SetProtagWest:
 	end
 
 MAGM8ProtagonistsHouse_EventScript_SetDynamicWarpPreInfection:
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_SYS_POKEDEX_GET
 	setdynamicwarp MAP_MAGM8BLACK_FOREST_PRE_INFECTION, 255, 29, 32
 end
 
@@ -360,18 +362,30 @@ MAGM8ProtagonistsHouse_EventScript_DadsAdviceStartToDoListForTomorrow:
 end
 
 MAGM8ProtagonistsHouse_EventScript_Fridge::
-	lockall
-		msgbox MAGM8ProtagonistsHouse_Text_Fridge, MSGBOX_DEFAULT
-	releaseall
+fadescreen FADE_TO_BLACK
+special SwitchCharacter
+msgbox activeCharNumber, MSGBOX_DEFAULT
+closemessage
+fadescreen FADE_FROM_BLACK
+end
+
+MAGM8ProtagonistsHouse_EventScript_ItemDebug1::
+	giveitem 10, 10
+end
+
+MAGM8ProtagonistsHouse_EventScript_ItemDebug2::
+	giveitem 11, 10
 end
 
 MAGM8ProtagonistsHouse_EventScript_Sink::
+givecustommon SPECIES_BLAZIKEN, 50, ITEM_LEFTOVERS, ITEM_DIVE_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_SUBSTITUTE, MOVE_WATERFALL, MOVE_SING, MOVE_BODY_SLAM, 0
 	lockall
 		msgbox MAGM8ProtagonistsHouse_Text_Sink, MSGBOX_DEFAULT
 	releaseall
 end
 
 MAGM8ProtagonistsHouse_EventScript_Cabinets::
+givecustommon SPECIES_TROPIUS, 50, ITEM_LEFTOVERS, ITEM_DIVE_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_SUBSTITUTE, MOVE_WATERFALL, MOVE_SING, MOVE_BODY_SLAM, 0
 	lockall
 		msgbox MAGM8ProtagonistsHouse_Text_Cabinets, MSGBOX_DEFAULT
 	releaseall
@@ -544,3 +558,6 @@ MAGM8ProtagonistsHouse_Text_SaveForestCheck:
 MAGM8ProtagonistsHouse_Text_ToDoListHarvestMushroomsBad:
 	.string "Unable to use mushrooms. Something\n"
 	.string "has rotted them.$"
+
+activeCharNumber:
+	.string "Switched to char {STR_VAR_1}$"
