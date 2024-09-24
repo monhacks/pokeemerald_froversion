@@ -1210,6 +1210,6 @@ static void Task_ScrollingMultichoiceInput(u8 taskId)
 
 void BufferStoredPokemon(void)
 {
-    GetBoxMonNickAt(0, 0, gStringVar1);
-    GetBoxMonNickAt(0, 1, gStringVar2);
+    GetBoxMonNickAt(0, gSpecialVar_0x8006, gStringVar1);
+    GetBoxMonNickAt(0, gSpecialVar_0x8007, gStringVar2);
 }

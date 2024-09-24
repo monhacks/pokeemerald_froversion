@@ -51,6 +51,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "constants/union_room.h"
+#include "event_scripts.h"
 
 #define Trade_SendData(ptr) (SendBlock(bitmask_all_link_players_but_self(), ptr->linkData, 20))
 
@@ -4480,11 +4481,36 @@ static void _CreateInGameCharacterTradePokemon(u8 whichPlayerMon, u8 whichTradeP
     struct Pokemon *storepokemon = &gEnemyParty[1];
     struct BoxPokemon *storeboxmon = &storepokemon->box;
     
+    //ConvertIntToDecimalStringN(gStringVar1, gSpecialVar_0x8008, STR_CONV_MODE_RIGHT_ALIGN, 2);
+    //ScriptContext2_Enable();
+    //ScriptContext1_SetupScript(EscapeRoom_Debug);
+
+    switch (gSpecialVar_0x800B)
+    {
+    case 0:
+        CopyMon(storepokemon, &gPlayerParty[whichPlayerMon], sizeof(*storepokemon));
+        BoxMonAtToMon(0, gSpecialVar_Result, recvpokemon);
+        ZeroBoxMonAt(0, gSpecialVar_Result);
+        SetBoxMonAt(0, gSpecialVar_Result, storeboxmon);
+        break;
     
-    CopyMon(storepokemon, &gPlayerParty[whichPlayerMon], sizeof(*storepokemon));
-    BoxMonAtToMon(0, 0, recvpokemon);
-    ZeroBoxMonAt(0, 0);
-    SetBoxMonAt(0, 0, storeboxmon);
+    case 1:
+        CopyMon(storepokemon, &gPlayerParty[whichPlayerMon], sizeof(*storepokemon));
+        BoxMonAtToMon(0, gSpecialVar_Result + 2, recvpokemon);
+        ZeroBoxMonAt(0, gSpecialVar_Result + 2);
+        SetBoxMonAt(0, gSpecialVar_Result + 2, storeboxmon);
+        break;
+
+    case 2:
+        CopyMon(storepokemon, &gPlayerParty[whichPlayerMon], sizeof(*storepokemon));
+        BoxMonAtToMon(0, gSpecialVar_Result + 4, recvpokemon);
+        ZeroBoxMonAt(0, gSpecialVar_Result + 4);
+        SetBoxMonAt(0, gSpecialVar_Result + 4, storeboxmon);
+        break;
+
+    default:
+        break;
+    }
 }
 
 static void SetInGameTradeMail(struct MailStruct *mail, const struct InGameTrade *trade) {
