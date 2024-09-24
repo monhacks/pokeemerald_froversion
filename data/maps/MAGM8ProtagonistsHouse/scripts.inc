@@ -346,7 +346,7 @@ MAGM8ProtagonistsHouse_EventScript_ItsNotBedTimeYet:
 releaseall
 end
 
-MAGM8ProtagonistsHouse_EventScript_HaventEatenYet:
+MAGM8ProtagonistsHouse_EventScript_HaventEatenYet::
 	msgbox MAGM8ProtagonistsHouse_Text_HaventEatenYet, MSGBOX_DEFAULT
 	releaseall
 end
@@ -370,7 +370,7 @@ fadescreen FADE_FROM_BLACK
 end
 
 MAGM8ProtagonistsHouse_EventScript_ItemDebug1::
-	giveitem 10, 10
+	special ShowPokemonStorageSystemPC
 end
 
 MAGM8ProtagonistsHouse_EventScript_ItemDebug2::

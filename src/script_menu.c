@@ -19,6 +19,8 @@
 #include "constants/songs.h"
 #include "data/script_menu.h"
 #include "list_menu.h"
+#include "pokemon_storage_system.h"
+#include "event_scripts.h"
 
 static EWRAM_DATA u8 sProcessInputDelay = 0;
 
@@ -890,8 +892,8 @@ static const u8 sText_CutTrees[] =_("Trees");
 static const u8 sText_EscapeRoomProtagA[] =_("Protag A");
 static const u8 sText_EscapeRoomProtagB[] =_("Protag B");
 static const u8 sText_EscapeRoomProtagC[] =_("Protag C");
-static const u8 sText_DynamicPokemonA[] =_("Set Variable First");
-static const u8 sText_DynamicPokemonB[] =_("Set Variable Second");
+static const u8 sText_DynamicPokemonA[] =_("{STR_VAR_1}");
+static const u8 sText_DynamicPokemonB[] =_("{STR_VAR_2}");
 
 
 
@@ -1084,8 +1086,8 @@ static const struct ListMenuItem sEscapeRoomTradeProtagonistOptionsProtagC[] =
 
 static const struct ListMenuItem sEscapeRoomTradeProtagonistOptionsDynamicPokemonMenu[] =
 {
-    {sText_DynamicPokemonA, 0},
-    {sText_DynamicPokemonB, 1},
+    {gStringVar1, 0},
+    {gStringVar2, 1},
 };
 
 // Table of your multichoice sets.
@@ -1112,7 +1114,7 @@ struct
     {sMAGM8SecondToDoList, ARRAY_COUNT(sMAGM8SecondToDoList)}, //14
     {sMAGM8ProfessorsJournalEntries, ARRAY_COUNT(sMAGM8ProfessorsJournalEntries)}, //15
     {sEscapeRoomTradeProtagonistOptionsProtagA, ARRAY_COUNT(sEscapeRoomTradeProtagonistOptionsProtagA)}, //16
-    {sEscapeRoomTradeProtagonistOptionsProtagB, ARRAY_COUNT(sEscapeRoomTradeProtagonistOptionsProtagB)}, //17
+    {sEscapeRoomTradeProtagonistOptionsProtagB, ARRAY_COUNT(sEscapeRoomTradeProtagonistOptionsProtagB)}, //17 
     {sEscapeRoomTradeProtagonistOptionsProtagC, ARRAY_COUNT(sEscapeRoomTradeProtagonistOptionsProtagC)}, //18
     {sEscapeRoomTradeProtagonistOptionsDynamicPokemonMenu, ARRAY_COUNT(sEscapeRoomTradeProtagonistOptionsDynamicPokemonMenu)}, //19
 
@@ -1204,4 +1206,10 @@ static void Task_ScrollingMultichoiceInput(u8 taskId)
         EnableBothScriptContexts();
         DestroyTask(taskId);
     }
+}
+
+void BufferStoredPokemon(void)
+{
+    GetBoxMonNickAt(0, 0, gStringVar1);
+    GetBoxMonNickAt(0, 1, gStringVar2);
 }

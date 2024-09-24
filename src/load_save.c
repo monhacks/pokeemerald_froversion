@@ -16,6 +16,7 @@
 #include "field_screen_effect.h"
 #include "field_weather.h"
 #include "string_util.h"
+#include "event_data.h"
 
 static void ApplyNewEncryptionKeyToAllEncryptedData(u32 encryptionKey);
 
@@ -468,4 +469,9 @@ void SwitchCharacter(void)
     }
     LoadPlayerBag();
     LoadPlayerParty();
+}
+
+void GetActiveChar(void)
+{
+    gSpecialVar_Result = gSaveBlock1Ptr->activeChar;
 }

@@ -545,4 +545,5 @@ gSpecials:: @ 81DBA64
 	def_special StartVenusaurBattle
 	def_special StartAriadosBossBattle
 	def_special SwitchCharacter
-
+	def_special BufferStoredPokemon
+	def_special GetActiveChar
