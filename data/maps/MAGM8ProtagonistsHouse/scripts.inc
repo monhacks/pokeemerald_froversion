@@ -377,6 +377,14 @@ MAGM8ProtagonistsHouse_EventScript_ItemDebug2::
 	giveitem 11, 10
 end
 
+EventScript_CharacterSwitch::
+fadescreen FADE_TO_BLACK
+special SwitchCharacter
+msgbox activeCharNumber, MSGBOX_DEFAULT
+closemessage
+fadescreen FADE_FROM_BLACK
+end
+
 MAGM8ProtagonistsHouse_EventScript_Sink::
 givecustommon SPECIES_BLAZIKEN, 50, ITEM_LEFTOVERS, ITEM_DIVE_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_SUBSTITUTE, MOVE_WATERFALL, MOVE_SING, MOVE_BODY_SLAM, 0
 givecustommon SPECIES_ABRA, 50, ITEM_LEFTOVERS, ITEM_DIVE_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_SUBSTITUTE, MOVE_WATERFALL, MOVE_SING, MOVE_BODY_SLAM, 0

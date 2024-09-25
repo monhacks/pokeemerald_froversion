@@ -64,7 +64,7 @@ enum
     MENU_ACTION_RETIRE_FRONTIER,
     MENU_ACTION_PYRAMID_BAG,
     MENU_ACTION_DEBUG,
-    MENU_ACTION_GIVE_UP,
+    MENU_ACTION_SWITCH_CHAR,
 };
 
 // Save status
@@ -106,7 +106,7 @@ static bool8 StartMenuLinkModePlayerNameCallback(void);
 static bool8 StartMenuBattlePyramidRetireCallback(void);
 static bool8 StartMenuBattlePyramidBagCallback(void);
 static bool8 StartMenuDebugCallback(void);
-static bool8 StartMenuGiveUpCallback(void);
+static bool8 StartMenuSwitchCharCallback(void);
 
 // Menu callbacks
 static bool8 SaveStartCallback(void);
@@ -159,7 +159,7 @@ static const struct WindowTemplate sPyramidFloorWindowTemplate_2 = {0, 1, 1, 0xA
 static const struct WindowTemplate sPyramidFloorWindowTemplate_1 = {0, 1, 1, 0xC, 4, 0xF, 8};
 
 static const u8 gText_MenuDebug[] = _("DEBUG");
-static const u8 gText_GiveUp[] = _("Give up");
+static const u8 gText_SwitchChar[] = _("Switch");
 
 static const struct MenuAction sStartMenuItems[] =
 {
@@ -177,7 +177,7 @@ static const struct MenuAction sStartMenuItems[] =
     {gText_MenuRetire, {.u8_void = StartMenuBattlePyramidRetireCallback}},
     {gText_MenuBag, {.u8_void = StartMenuBattlePyramidBagCallback}},
     {gText_MenuDebug, {.u8_void = StartMenuDebugCallback}},
-    {gText_GiveUp, {.u8_void = StartMenuGiveUpCallback}},
+    {gText_SwitchChar, {.u8_void = StartMenuSwitchCharCallback}},
 };
 
 static const struct BgTemplate sUnknown_085105A8[] =
@@ -291,36 +291,27 @@ static void AddStartMenuAction(u8 action)
 
 static void BuildNormalStartMenu(void)
 {
-    if (FlagGet(FLAG_LOST_BOSS_BATTLE) == TRUE)
+    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
     {
-        AddStartMenuAction(MENU_ACTION_GIVE_UP);
-        AddStartMenuAction(MENU_ACTION_EXIT);
+        AddStartMenuAction(MENU_ACTION_POKEDEX);
     }
-    else
+    if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
     {
-        if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
-        {
-            AddStartMenuAction(MENU_ACTION_POKEDEX);
-        }
-        if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
-        {
-            AddStartMenuAction(MENU_ACTION_POKEMON);
-        }
-
-        AddStartMenuAction(MENU_ACTION_BAG);
-
-        if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
-        {
-            AddStartMenuAction(MENU_ACTION_POKENAV);
-        }
-
-        AddStartMenuAction(MENU_ACTION_PLAYER);
-        AddStartMenuAction(MENU_ACTION_SAVE);
-        AddStartMenuAction(MENU_ACTION_OPTION);
-        AddStartMenuAction(MENU_ACTION_EXIT);
+        AddStartMenuAction(MENU_ACTION_POKEMON);
     }
 
+    AddStartMenuAction(MENU_ACTION_BAG);
 
+    if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
+    {
+        AddStartMenuAction(MENU_ACTION_POKENAV);
+    }
+
+    AddStartMenuAction(MENU_ACTION_PLAYER);
+    AddStartMenuAction(MENU_ACTION_SAVE);
+    AddStartMenuAction(MENU_ACTION_OPTION);
+    AddStartMenuAction(MENU_ACTION_SWITCH_CHAR);
+    AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
 static void BuildDebugStartMenu(void)
@@ -631,7 +622,7 @@ static bool8 HandleStartMenuInput(void)
             && gMenuCallback != StartMenuDebugCallback
             && gMenuCallback != StartMenuSafariZoneRetireCallback
             && gMenuCallback != StartMenuBattlePyramidRetireCallback
-            && gMenuCallback != StartMenuGiveUpCallback)
+            && gMenuCallback != StartMenuSwitchCharCallback)
         {
            FadeScreen(FADE_TO_BLACK, 0);
         }
@@ -788,12 +779,12 @@ static bool8 StartMenuSafariZoneRetireCallback(void)
 
 extern const u8 MAGM8ExtendedForest_Eventscript_GiveUp[];
 
-static bool8 StartMenuGiveUpCallback(void)
+static bool8 StartMenuSwitchCharCallback(void)
 {
     RemoveExtraStartMenuWindows();
     HideStartMenu(); // Hide start menu
     ScriptContext2_Enable();
-    ScriptContext1_SetupScript(MAGM8ExtendedForest_Eventscript_GiveUp);
+    ScriptContext1_SetupScript(EventScript_CharacterSwitch);
     return TRUE;
 }
 
