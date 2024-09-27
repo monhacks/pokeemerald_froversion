@@ -3244,6 +3244,7 @@ static void LoadTradeSequenceSpriteSheetsAndPalettes(void)
 // Buffers "[Pokemon] will be sent to [Trainer]" strings
 static void BufferTradeSceneStrings(void)
 {
+    u8 i;
     u8 mpId;
     u8 name[20];
     const struct InGameTrade *ingameTrade;
@@ -3259,11 +3260,32 @@ static void BufferTradeSceneStrings(void)
     }
     else
     {
-        ingameTrade = &sIngameTrades[gSpecialVar_0x8004];
-        StringCopy(gStringVar1, ingameTrade->otName);
-        StringCopy10(gStringVar3, ingameTrade->nickname);
-        GetMonData(&gPlayerParty[gSpecialVar_0x8005], MON_DATA_NICKNAME, name);
-        StringCopy10(gStringVar2, name);
+        for (i = 0; i < 7; i++)
+            gSaveBlock2Ptr->playerName2[i] = name[i];
+
+        StringCopy(gSaveBlock2Ptr->playerName2, gText_DefaultNameMilton);
+        StringCopy(gSaveBlock2Ptr->playerName3, gText_DefaultNameTom);
+
+        switch (gSpecialVar_0x800B)
+        {
+        case 0:
+            StringCopy(gStringVar1, gSaveBlock2Ptr->playerName);
+            break;
+
+        case 1:
+            StringCopy(gStringVar1, gSaveBlock2Ptr->playerName2);         
+            break;
+
+        case 2:
+            StringCopy(gStringVar1, gSaveBlock2Ptr->playerName3);       
+            break;
+        
+        default:
+            break;
+        }
+
+        GetMonNickname(&gPlayerParty[gSpecialVar_0x8005], gStringVar2);
+        GetMonNickname(&gEnemyParty[0], gStringVar3);
     }
 }
 
@@ -4480,10 +4502,6 @@ static void _CreateInGameCharacterTradePokemon(u8 whichPlayerMon, u8 whichTradeP
     struct Pokemon *recvpokemon = &gEnemyParty[0];
     struct Pokemon *storepokemon = &gEnemyParty[1];
     struct BoxPokemon *storeboxmon = &storepokemon->box;
-    
-    //ConvertIntToDecimalStringN(gStringVar1, gSpecialVar_0x8008, STR_CONV_MODE_RIGHT_ALIGN, 2);
-    //ScriptContext2_Enable();
-    //ScriptContext1_SetupScript(EscapeRoom_Debug);
 
     switch (gSpecialVar_0x800B)
     {

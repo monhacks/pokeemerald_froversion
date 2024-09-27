@@ -370,11 +370,22 @@ fadescreen FADE_FROM_BLACK
 end
 
 MAGM8ProtagonistsHouse_EventScript_ItemDebug1::
+	lockall
 	special ShowPokemonStorageSystemPC
+	waitstate
+	closemessage
+	releaseall
 end
 
 MAGM8ProtagonistsHouse_EventScript_ItemDebug2::
+	lockall
 	giveitem 11, 10
+	giveitem 110, 10
+	giveitem 169, 10
+	giveitem 140, 10
+	giveitem 249, 10
+	closemessage
+	releaseall
 end
 
 EventScript_CharacterSwitch::
