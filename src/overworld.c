@@ -703,7 +703,7 @@ void SetWarpDestinationToCharLocation(void)
         default:
             break;
     }
-
+    SetWarpDestination(sWarpDestination.mapGroup, sWarpDestination.mapNum, -1, sWarpDestination.x, sWarpDestination.y);
 }
 
 void SetLastHealLocationWarp(u8 healLocationId)

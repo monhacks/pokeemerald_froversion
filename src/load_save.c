@@ -18,6 +18,7 @@
 #include "string_util.h"
 #include "event_data.h"
 #include "constants/items.h"
+#include "field_player_avatar.h"
 static void ApplyNewEncryptionKeyToAllEncryptedData(u32 encryptionKey);
 
 #define SAVEBLOCK_MOVE_RANGE    128
@@ -325,11 +326,55 @@ static void ApplyNewEncryptionKeyToAllEncryptedData(u32 encryptionKey)
     ApplyNewEncryptionKeyToHword(&gSaveBlock1Ptr->coins, encryptionKey);
 }
 
+void SaveCharLocation(void)
+{
+    s16 x;
+    s16 y;
+    s32 z;
+
+    u16 mapGroup = gSaveBlock1Ptr->location.mapGroup;
+    u16 mapNum = gSaveBlock1Ptr->location.mapNum;
+
+    x = gSaveBlock1Ptr->pos.x;
+    y = gSaveBlock1Ptr->pos.y;
+    z = PlayerGetZCoord();
+
+switch (gSaveBlock1Ptr->activeChar)
+{
+    case 0:
+        gSaveBlock1Ptr->mapLocChar1.mapGroup = mapGroup;
+        gSaveBlock1Ptr->mapLocChar1.mapNum = mapNum;
+        gSaveBlock1Ptr->mapLocChar1.x = x;
+        gSaveBlock1Ptr->mapLocChar1.y = y;
+        break;
+
+    case 1:
+        gSaveBlock1Ptr->mapLocChar2.mapGroup = mapGroup;
+        gSaveBlock1Ptr->mapLocChar2.mapNum = mapNum;
+        gSaveBlock1Ptr->mapLocChar2.x = x;
+        gSaveBlock1Ptr->mapLocChar2.y = y;
+        break;
+
+    case 2:
+        gSaveBlock1Ptr->mapLocChar3.mapGroup = mapGroup;
+        gSaveBlock1Ptr->mapLocChar3.mapNum = mapNum;
+        gSaveBlock1Ptr->mapLocChar3.x = x;
+        gSaveBlock1Ptr->mapLocChar3.y = y;
+        break;
+
+    default:
+        break;
+}
+
+}
+
 void SwitchCharacter(void)
 {
     struct Pokemon *recvpokemon = &gEnemyParty[0];
     struct Pokemon *storepokemon = &gEnemyParty[1];
     struct BoxPokemon *storeboxmon = &storepokemon->box;
+
+    SaveCharLocation();
 
     switch(gSaveBlock1Ptr->activeChar)
     {
@@ -390,8 +435,10 @@ void SwitchCharacter(void)
     }
 
     SetBagItemsPointers();
-
-    ConvertIntToDecimalStringN(gStringVar1, gSaveBlock1Ptr->activeChar, STR_CONV_MODE_LEADING_ZEROS, 2);
+    ConvertIntToDecimalStringN(gStringVar1, gSaveBlock1Ptr->activeChar, STR_CONV_MODE_LEADING_ZEROS, 2);        //TODO Replace with name at some point
+    SetWarpDestinationToCharLocation();    
+    WarpIntoMap();
+    SetMainCallback2(CB2_LoadMap);
 }
 
 void GetActiveChar(void)
