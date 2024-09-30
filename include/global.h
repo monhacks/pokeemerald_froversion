@@ -952,6 +952,15 @@ struct MysteryEventStruct
     /*0x344 0x3570*/ u32 unk_344[2][5];
 }; // 0x36C 0x3598
 
+struct Bag
+{
+    struct ItemSlot pocket_Items[BAG_ITEMS_COUNT];
+    struct ItemSlot pocket_KeyItems[BAG_KEYITEMS_COUNT];
+    struct ItemSlot pocket_PokeBalls[BAG_POKEBALLS_COUNT];
+    struct ItemSlot pocket_TMHM[BAG_TMHM_COUNT];
+    struct ItemSlot pocket_Berries[BAG_BERRIES_COUNT];
+};
+
 struct SaveBlock1
 {
                 u8 activeChar;
@@ -981,21 +990,7 @@ struct SaveBlock1
     /*0x498*/ struct ItemSlot pcItems[PC_ITEMS_COUNT];
                 struct ItemSlot pcItemsChar2[PC_ITEMS_COUNT];
                 struct ItemSlot pcItemsChar3[PC_ITEMS_COUNT];
-    /*0x560*/ struct ItemSlot bagPocket_Items[BAG_ITEMS_COUNT];
-                struct ItemSlot bagPocket_ItemsChar2[BAG_ITEMS_COUNT];
-                struct ItemSlot bagPocket_ItemsChar3[BAG_ITEMS_COUNT];
-    /*0x5B0*/ struct ItemSlot bagPocket_KeyItems[BAG_KEYITEMS_COUNT];
-                struct ItemSlot bagPocket_KeyItemsChar2[BAG_KEYITEMS_COUNT];
-                struct ItemSlot bagPocket_KeyItemsChar3[BAG_KEYITEMS_COUNT];
-    /*0x600*/ struct ItemSlot bagPocket_PokeBalls[BAG_POKEBALLS_COUNT];
-                struct ItemSlot bagPocket_PokeBallsChar2[BAG_POKEBALLS_COUNT];
-                struct ItemSlot bagPocket_PokeBallsChar3[BAG_POKEBALLS_COUNT];
-    /*0x640*/ struct ItemSlot bagPocket_TMHM[BAG_TMHM_COUNT];
-                struct ItemSlot bagPocket_TMHMChar2[BAG_TMHM_COUNT];
-                struct ItemSlot bagPocket_TMHMChar3[BAG_TMHM_COUNT];
-    /*0x740*/ struct ItemSlot bagPocket_Berries[BAG_BERRIES_COUNT];
-                struct ItemSlot bagPocket_BerriesChar2[BAG_BERRIES_COUNT];
-                struct ItemSlot bagPocket_BerriesChar3[BAG_BERRIES_COUNT];
+    /* ??? */ struct Bag bags[3];
     /*0x848*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
     /*0x988*/ u8 seen1[DEX_FLAGS_NO];
     /*0x9BC*/ u16 berryBlenderRecords[3];

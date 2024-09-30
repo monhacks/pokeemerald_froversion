@@ -2206,27 +2206,29 @@ bool8 IsWallysBag(void)
 void PrepareBagForWallyTutorial(void)
 {
     u32 i;
+    struct Bag *bag = &gSaveBlock1Ptr->bags[gSaveBlock1Ptr->activeChar];
 
     sTempWallyBag = AllocZeroed(sizeof(struct TempWallyStruct));
-    memcpy(sTempWallyBag->bagPocket_Items, gSaveBlock1Ptr->bagPocket_Items, sizeof(gSaveBlock1Ptr->bagPocket_Items));
-    memcpy(sTempWallyBag->bagPocket_PokeBalls, gSaveBlock1Ptr->bagPocket_PokeBalls, sizeof(gSaveBlock1Ptr->bagPocket_PokeBalls));
+    memcpy(sTempWallyBag->bagPocket_Items, bag->pocket_Items, sizeof(bag->pocket_Items));
+    memcpy(sTempWallyBag->bagPocket_PokeBalls, bag->pocket_PokeBalls, sizeof(bag->pocket_PokeBalls));
     sTempWallyBag->pocket = gBagPositionStruct.pocket;
     for (i = 0; i <= 4; i++)
     {
         sTempWallyBag->cursorPosition[i] = gBagPositionStruct.cursorPosition[i];
         sTempWallyBag->scrollPosition[i] = gBagPositionStruct.scrollPosition[i];
     }
-    ClearItemSlots(gSaveBlock1Ptr->bagPocket_Items, BAG_ITEMS_COUNT);
-    ClearItemSlots(gSaveBlock1Ptr->bagPocket_PokeBalls, BAG_POKEBALLS_COUNT);
+    ClearItemSlots(bag->pocket_Items, BAG_ITEMS_COUNT);
+    ClearItemSlots(bag->pocket_PokeBalls, BAG_POKEBALLS_COUNT);
     ResetBagScrollPositions();
 }
 
 void RestoreBagAfterWallyTutorial(void)
 {
     u32 i;
+    struct Bag *bag = &gSaveBlock1Ptr->bags[gSaveBlock1Ptr->activeChar];
 
-    memcpy(gSaveBlock1Ptr->bagPocket_Items, sTempWallyBag->bagPocket_Items, sizeof(sTempWallyBag->bagPocket_Items));
-    memcpy(gSaveBlock1Ptr->bagPocket_PokeBalls, sTempWallyBag->bagPocket_PokeBalls, sizeof(sTempWallyBag->bagPocket_PokeBalls));
+    memcpy(bag->pocket_Items, sTempWallyBag->bagPocket_Items, sizeof(sTempWallyBag->bagPocket_Items));
+    memcpy(bag->pocket_PokeBalls, sTempWallyBag->bagPocket_PokeBalls, sizeof(sTempWallyBag->bagPocket_PokeBalls));
     gBagPositionStruct.pocket = sTempWallyBag->pocket;
     for (i = 0; i <= 4; i++)
     {

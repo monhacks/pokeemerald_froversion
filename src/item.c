@@ -63,13 +63,24 @@ static void SetPCItemQuantity(u16 *quantity, u16 newValue)
     *quantity = newValue;
 }
 
+void ApplyNewEncryptionKeyToPocket(struct ItemSlot *pocket, u32 capacity, u32 newKey)
+{
+    u32 item;
+    for (item = 0; item < capacity; item++)
+        ApplyNewEncryptionKeyToHword(&pocket[item].quantity, newKey);
+}
+
 void ApplyNewEncryptionKeyToBagItems(u32 newKey)
 {
-    u32 pocket, item;
-    for (pocket = 0; pocket < POCKETS_COUNT; pocket++)
+    u32 i;
+    for (i = 0; i < 3; i++)
     {
-        for (item = 0; item < gBagPockets[pocket].capacity; item++)
-            ApplyNewEncryptionKeyToHword(&(gBagPockets[pocket].itemSlots[item].quantity), newKey);
+        struct Bag *bag = &gSaveBlock1Ptr->bags[i];
+        ApplyNewEncryptionKeyToPocket(bag->pocket_Items, ARRAY_COUNT(bag->pocket_Items), newKey);
+        ApplyNewEncryptionKeyToPocket(bag->pocket_KeyItems, ARRAY_COUNT(bag->pocket_KeyItems), newKey);
+        ApplyNewEncryptionKeyToPocket(bag->pocket_PokeBalls, ARRAY_COUNT(bag->pocket_PokeBalls), newKey);
+        ApplyNewEncryptionKeyToPocket(bag->pocket_TMHM, ARRAY_COUNT(bag->pocket_TMHM), newKey);
+        ApplyNewEncryptionKeyToPocket(bag->pocket_Berries, ARRAY_COUNT(bag->pocket_Berries), newKey);
     }
 }
 
@@ -80,19 +91,21 @@ void ApplyNewEncryptionKeyToBagItems_(u32 newKey) // really GF?
 
 void SetBagItemsPointers(void)
 {
-    gBagPockets[ITEMS_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_Items;
+    struct Bag *bag = &gSaveBlock1Ptr->bags[gSaveBlock1Ptr->activeChar];
+
+    gBagPockets[ITEMS_POCKET].itemSlots = bag->pocket_Items;
     gBagPockets[ITEMS_POCKET].capacity = BAG_ITEMS_COUNT;
 
-    gBagPockets[KEYITEMS_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_KeyItems;
+    gBagPockets[KEYITEMS_POCKET].itemSlots = bag->pocket_KeyItems;
     gBagPockets[KEYITEMS_POCKET].capacity = BAG_KEYITEMS_COUNT;
 
-    gBagPockets[BALLS_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_PokeBalls;
+    gBagPockets[BALLS_POCKET].itemSlots = bag->pocket_PokeBalls;
     gBagPockets[BALLS_POCKET].capacity = BAG_POKEBALLS_COUNT;
 
-    gBagPockets[TMHM_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_TMHM;
+    gBagPockets[TMHM_POCKET].itemSlots = bag->pocket_TMHM;
     gBagPockets[TMHM_POCKET].capacity = BAG_TMHM_COUNT;
 
-    gBagPockets[BERRIES_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_Berries;
+    gBagPockets[BERRIES_POCKET].itemSlots = bag->pocket_Berries;
     gBagPockets[BERRIES_POCKET].capacity = BAG_BERRIES_COUNT;
 }
 

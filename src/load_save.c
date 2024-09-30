@@ -24,12 +24,8 @@ static void ApplyNewEncryptionKeyToAllEncryptedData(u32 encryptionKey);
 
 struct LoadedSaveData
 {
- /*0x0000*/ struct ItemSlot items[BAG_ITEMS_COUNT];
- /*0x0078*/ struct ItemSlot keyItems[BAG_KEYITEMS_COUNT];
- /*0x00F0*/ struct ItemSlot pokeBalls[BAG_POKEBALLS_COUNT];
- /*0x0130*/ struct ItemSlot TMsHMs[BAG_TMHM_COUNT];
- /*0x0230*/ struct ItemSlot berries[BAG_BERRIES_COUNT];
- /*0x02E8*/ struct MailStruct mail[MAIL_COUNT];
+    struct Bag bag;
+    struct MailStruct mail[MAIL_COUNT];
 };
 
 // EWRAM DATA
@@ -85,7 +81,6 @@ void SetSaveBlocksPointers(u16 offset)
     *sav1_LocalVar = (void*)(&gSaveblock1) + offset;
     gPokemonStoragePtr = (void*)(&gPokemonStorage) + offset;
 
-    SetBagItemsPointers();
     SetDecorationInventoriesPointers();
 }
 
@@ -125,6 +120,11 @@ void MoveSaveBlocks_ResetHeap(void)
     *gSaveBlock2Ptr = *saveBlock2Copy;
     *gSaveBlock1Ptr = *saveBlock1Copy;
     *gPokemonStoragePtr = *pokemonStorageCopy;
+
+    // SetBagItemsPointers references 'gSaveBlock1Ptr->activeChar' so
+    // wait until the saveblock has been restored rather than calling it
+    // in 'SetSaveBlocksPointers'.
+    SetBagItemsPointers();
 
     // heap was destroyed in the copying process, so reset it
     InitHeap(gHeap, HEAP_SIZE);
@@ -250,129 +250,23 @@ void LoadSerializedGame(void)
 
 void LoadPlayerBag(void)
 {
-        switch (gSaveBlock1Ptr->activeChar)
-    {
-        case 0:
-            memcpy(gSaveBlock1Ptr->bagPocket_Items, gSaveBlock1Ptr->bagPocket_ItemsChar2, sizeof(gSaveBlock1Ptr->bagPocket_ItemsChar2));
-            break;
-
-        case 1:
-            memcpy(gSaveBlock1Ptr->bagPocket_Items, gSaveBlock1Ptr->bagPocket_ItemsChar3, sizeof(gSaveBlock1Ptr->bagPocket_ItemsChar3));
-            break;
-
-        case 2:
-            memcpy(gSaveBlock1Ptr->bagPocket_Items, gSaveBlock1Ptr->bagPocket_Items, sizeof(gSaveBlock1Ptr->bagPocket_Items));
-            break;
-
-        default:
-            break;
-        }
-
-}
-
-/*
-void LoadPlayerBag(void)
-{
     int i;
 
-    switch (gSaveBlock1Ptr->activeChar)
-    {
-        case 0:
-            // load player items.
-            for (i = 0; i < BAG_ITEMS_COUNT; i++)
-                gLoadedSaveData.items[i] = gSaveBlock1Ptr->bagPocket_Items[i];
+    gLoadedSaveData.bag = gSaveBlock1Ptr->bags[gSaveBlock1Ptr->activeChar];
 
-            // load player key items.
-            for (i = 0; i < BAG_KEYITEMS_COUNT; i++)
-                gLoadedSaveData.keyItems[i] = gSaveBlock1Ptr->bagPocket_KeyItems[i];
+    // load mail.
+    for (i = 0; i < MAIL_COUNT; i++)
+        gLoadedSaveData.mail[i] = gSaveBlock1Ptr->mail[i];
 
-            // load player pokeballs.
-            for (i = 0; i < BAG_POKEBALLS_COUNT; i++)
-                gLoadedSaveData.pokeBalls[i] = gSaveBlock1Ptr->bagPocket_PokeBalls[i];
-
-            // load player TMs and HMs.
-            for (i = 0; i < BAG_TMHM_COUNT; i++)
-                gLoadedSaveData.TMsHMs[i] = gSaveBlock1Ptr->bagPocket_TMHM[i];
-
-            // load player berries.
-            for (i = 0; i < BAG_BERRIES_COUNT; i++)
-                gLoadedSaveData.berries[i] = gSaveBlock1Ptr->bagPocket_Berries[i];
-
-            // load mail.
-            for (i = 0; i < MAIL_COUNT; i++)
-                gLoadedSaveData.mail[i] = gSaveBlock1Ptr->mail[i];
-            break;
-
-        case 1:
-
-            // load player items.
-            for (i = 0; i < BAG_ITEMS_COUNT; i++)
-                gLoadedSaveData.items[i] = gSaveBlock1Ptr->bagPocket_ItemsChar2[i];
-
-            // load player key items.
-            for (i = 0; i < BAG_KEYITEMS_COUNT; i++)
-                gLoadedSaveData.keyItems[i] = gSaveBlock1Ptr->bagPocket_KeyItemsChar2[i];
-
-            // load player pokeballs.
-            for (i = 0; i < BAG_POKEBALLS_COUNT; i++)
-                gLoadedSaveData.pokeBalls[i] = gSaveBlock1Ptr->bagPocket_PokeBallsChar2[i];
-
-            // load player TMs and HMs.
-            for (i = 0; i < BAG_TMHM_COUNT; i++)
-                gLoadedSaveData.TMsHMs[i] = gSaveBlock1Ptr->bagPocket_TMHMChar2[i];
-
-            // load player berries.
-            for (i = 0; i < BAG_BERRIES_COUNT; i++)
-                gLoadedSaveData.berries[i] = gSaveBlock1Ptr->bagPocket_BerriesChar2[i];
-
-            // load mail.
-            for (i = 0; i < MAIL_COUNT; i++)
-                gLoadedSaveData.mail[i] = gSaveBlock1Ptr->mail[i];
-        break;
-
-        case 2:
-
-            // load player items.
-            for (i = 0; i < BAG_ITEMS_COUNT; i++)
-                gLoadedSaveData.items[i] = gSaveBlock1Ptr->bagPocket_ItemsChar3[i];
-
-            // load player key items.
-            for (i = 0; i < BAG_KEYITEMS_COUNT; i++)
-                gLoadedSaveData.keyItems[i] = gSaveBlock1Ptr->bagPocket_KeyItemsChar3[i];
-
-            // load player pokeballs.
-            for (i = 0; i < BAG_POKEBALLS_COUNT; i++)
-                gLoadedSaveData.pokeBalls[i] = gSaveBlock1Ptr->bagPocket_PokeBallsChar3[i];
-
-            // load player TMs and HMs.
-            for (i = 0; i < BAG_TMHM_COUNT; i++)
-                gLoadedSaveData.TMsHMs[i] = gSaveBlock1Ptr->bagPocket_TMHMChar3[i];
-
-            // load player berries.
-            for (i = 0; i < BAG_BERRIES_COUNT; i++)
-                gLoadedSaveData.berries[i] = gSaveBlock1Ptr->bagPocket_BerriesChar3[i];
-
-            // load mail.
-            for (i = 0; i < MAIL_COUNT; i++)
-                gLoadedSaveData.mail[i] = gSaveBlock1Ptr->mail[i];
-            break;
-        
-        default:
-            break;
-    }
     gLastEncryptionKey = gSaveBlock2Ptr->encryptionKey;
-
-    // Sync loaded save data back to the bag pockets
-    SyncSaveDataToBag();
 }
-
-*/
 
 static void SetBagItemQuantity(u16 *quantity, u16 newValue)
 {
     *quantity =  newValue ^ gSaveBlock2Ptr->encryptionKey;
 }
 
+// TODO: Should this apply to all characters?
 void ResetPlayerBag(void)
 {
     u8 pocket, slot;
@@ -382,7 +276,7 @@ void ResetPlayerBag(void)
     for (pocket = 0; pocket < POCKETS_COUNT; pocket++)
     {
         itemPocket = &gBagPockets[pocket];
-        
+
         // Iterate through each slot in the current pocket
         for (slot = 0; slot < itemPocket->capacity; slot++)
         {
@@ -398,93 +292,16 @@ void SavePlayerBag(void)
     int i;
     u32 encryptionKeyBackup;
 
-    switch (gSaveBlock1Ptr->activeChar)
-    {
-        case 0:
-                // save player items.
-            for (i = 0; i < BAG_ITEMS_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_Items[i] = gLoadedSaveData.items[i];
+    gSaveBlock1Ptr->bags[gSaveBlock1Ptr->activeChar] = gLoadedSaveData.bag;
 
-            // save player key items.
-            for (i = 0; i < BAG_KEYITEMS_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_KeyItems[i] = gLoadedSaveData.keyItems[i];
+    // save mail.
+    for (i = 0; i < MAIL_COUNT; i++)
+        gSaveBlock1Ptr->mail[i] = gLoadedSaveData.mail[i];
 
-            // save player pokeballs.
-            for (i = 0; i < BAG_POKEBALLS_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_PokeBalls[i] = gLoadedSaveData.pokeBalls[i];
-
-            // save player TMs and HMs.
-            for (i = 0; i < BAG_TMHM_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_TMHM[i] = gLoadedSaveData.TMsHMs[i];
-
-            // save player berries.
-            for (i = 0; i < BAG_BERRIES_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_Berries[i] = gLoadedSaveData.berries[i];
-
-            // save mail.
-            for (i = 0; i < MAIL_COUNT; i++)
-                gSaveBlock1Ptr->mail[i] = gLoadedSaveData.mail[i];
-            break;
-
-        case 1:
-                // save player items.
-            for (i = 0; i < BAG_ITEMS_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_ItemsChar2[i] = gLoadedSaveData.items[i];
-
-            // save player key items.
-            for (i = 0; i < BAG_KEYITEMS_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_KeyItemsChar2[i] = gLoadedSaveData.keyItems[i];
-
-            // save player pokeballs.
-            for (i = 0; i < BAG_POKEBALLS_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_PokeBallsChar2[i] = gLoadedSaveData.pokeBalls[i];
-
-            // save player TMs and HMs.
-            for (i = 0; i < BAG_TMHM_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_TMHMChar2[i] = gLoadedSaveData.TMsHMs[i];
-
-            // save player berries.
-            for (i = 0; i < BAG_BERRIES_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_BerriesChar2[i] = gLoadedSaveData.berries[i];
-
-            // save mail.
-            for (i = 0; i < MAIL_COUNT; i++)
-                gSaveBlock1Ptr->mail[i] = gLoadedSaveData.mail[i];
-            break;
-
-        case 2:
-                // save player items.
-            for (i = 0; i < BAG_ITEMS_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_ItemsChar3[i] = gLoadedSaveData.items[i];
-
-            // save player key items.
-            for (i = 0; i < BAG_KEYITEMS_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_KeyItemsChar3[i] = gLoadedSaveData.keyItems[i];
-
-            // save player pokeballs.
-            for (i = 0; i < BAG_POKEBALLS_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_PokeBallsChar3[i] = gLoadedSaveData.pokeBalls[i];
-
-            // save player TMs and HMs.
-            for (i = 0; i < BAG_TMHM_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_TMHMChar3[i] = gLoadedSaveData.TMsHMs[i];
-
-            // save player berries.
-            for (i = 0; i < BAG_BERRIES_COUNT; i++)
-                gSaveBlock1Ptr->bagPocket_BerriesChar3[i] = gLoadedSaveData.berries[i];
-
-            // save mail.
-            for (i = 0; i < MAIL_COUNT; i++)
-                gSaveBlock1Ptr->mail[i] = gLoadedSaveData.mail[i];
-            break;
-
-        default:
-            break;
-        }
-            encryptionKeyBackup = gSaveBlock2Ptr->encryptionKey;
-            gSaveBlock2Ptr->encryptionKey = gLastEncryptionKey;
-            ApplyNewEncryptionKeyToBagItems(encryptionKeyBackup);
-            gSaveBlock2Ptr->encryptionKey = encryptionKeyBackup; // updated twice?
+    encryptionKeyBackup = gSaveBlock2Ptr->encryptionKey;
+    gSaveBlock2Ptr->encryptionKey = gLastEncryptionKey;
+    ApplyNewEncryptionKeyToBagItems(encryptionKeyBackup);
+    gSaveBlock2Ptr->encryptionKey = encryptionKeyBackup; // updated twice?
 }
 
 void ApplyNewEncryptionKeyToHword(u16 *hWord, u32 newKey)
@@ -514,9 +331,6 @@ void SwitchCharacter(void)
     struct Pokemon *storepokemon = &gEnemyParty[1];
     struct BoxPokemon *storeboxmon = &storepokemon->box;
 
-    SavePlayerBag();
-    ResetPlayerBag();
-    
     switch(gSaveBlock1Ptr->activeChar)
     {
         case 0:
@@ -575,8 +389,9 @@ void SwitchCharacter(void)
             break;
     }
 
+    SetBagItemsPointers();
+
     ConvertIntToDecimalStringN(gStringVar1, gSaveBlock1Ptr->activeChar, STR_CONV_MODE_LEADING_ZEROS, 2);
-    LoadPlayerBag();
 }
 
 void GetActiveChar(void)
