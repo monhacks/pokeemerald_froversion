@@ -45,6 +45,7 @@
 #include "berry_powder.h"
 #include "mevent.h"
 #include "union_room_chat.h"
+#include "field_player_avatar.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 extern const u8 EventScript_ClearDiaryFlags[];
@@ -175,6 +176,9 @@ static void WarpToTruck(void)
             VarSet(VAR_MAGEE_VERSION, 1);
             SetWarpDestination(MAP_GROUP(MAGM8PROTAGONISTS_HOUSE), MAP_NUM(MAGM8PROTAGONISTS_HOUSE), -1, 5, 6);
             WarpIntoMap();
+            gSaveBlock1Ptr->mapLocChar1 = gSaveBlock1Ptr->location;
+            gSaveBlock1Ptr->mapLocChar2 = gSaveBlock1Ptr->location;
+            gSaveBlock1Ptr->mapLocChar3 = gSaveBlock1Ptr->location;
         }
 }
 

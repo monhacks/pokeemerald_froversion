@@ -81,6 +81,7 @@ void SetDynamicWarpWithCoords(s32 unused, s8 mapGroup, s8 mapNum, s8 warpId, s8 
 void SetWarpDestinationToDynamicWarp(u8 unused);
 void SetWarpDestinationToHealLocation(u8 a1);
 void SetWarpDestinationToLastHealLocation(void);
+void SetWarpDestinationToCharLocation(void);
 void SetLastHealLocationWarp(u8 healLocationId);
 void UpdateEscapeWarp(s16 x, s16 y);
 void SetEscapeWarp(s8 mapGroup, s8 mapNum, s8 warpId, s8 x, s8 y);
@@ -159,5 +160,7 @@ bool32 sub_808766C(void);
 void ClearLinkPlayerObjectEvents(void);
 u8 GetLastUsedWarpMapSectionId(void);
 bool32 TryFindTeleportDestination(void);
+void SetWarpDestinationToContinueGameWarp(void);
+
 
 #endif // GUARD_OVERWORLD_H

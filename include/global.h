@@ -965,11 +965,10 @@ struct SaveBlock1
 {
                 u8 activeChar;
     /*0x00*/ struct Coords16 pos;
-                struct Coords16 posChar2;
-                struct Coords16 posChar3;
     /*0x04*/ struct WarpData location;
-                struct WarpData locationChar2;
-                struct WarpData locationChar3;
+                struct WarpData mapLocChar1;
+                struct WarpData mapLocChar2;
+                struct WarpData mapLocChar3;
     /*0x0C*/ struct WarpData continueGameWarp;
     /*0x14*/ struct WarpData dynamicWarp;
     /*0x1C*/ struct WarpData lastHealLocation; // used by white-out and teleport

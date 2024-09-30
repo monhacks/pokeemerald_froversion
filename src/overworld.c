@@ -684,6 +684,28 @@ void SetWarpDestinationToLastHealLocation(void)
     sWarpDestination = gSaveBlock1Ptr->lastHealLocation;
 }
 
+void SetWarpDestinationToCharLocation(void)
+{
+    switch (gSaveBlock1Ptr->activeChar)
+    {
+        case 0:
+            sWarpDestination = gSaveBlock1Ptr->mapLocChar1;    
+            break;
+    
+        case 1:
+            sWarpDestination = gSaveBlock1Ptr->mapLocChar2;    
+            break;
+
+        case 2:
+            sWarpDestination = gSaveBlock1Ptr->mapLocChar3;    
+            break;
+    
+        default:
+            break;
+    }
+
+}
+
 void SetLastHealLocationWarp(u8 healLocationId)
 {
     const struct HealLocation *healLocation = GetHealLocation(healLocationId);
@@ -732,7 +754,7 @@ void SetWarpDestinationToFixedHoleWarp(s16 x, s16 y)
         SetWarpDestination(sFixedHoleWarp.mapGroup, sFixedHoleWarp.mapNum, -1, x, y);
 }
 
-static void SetWarpDestinationToContinueGameWarp(void)
+void SetWarpDestinationToContinueGameWarp(void)
 {
     sWarpDestination = gSaveBlock1Ptr->continueGameWarp;
 }
