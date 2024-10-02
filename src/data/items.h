@@ -8008,5 +8008,14 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Diary,
     },
 
-    
+    [ITEM_OUTFIT_BOX] =
+    {
+        .name = _("OUTFIT BOX"),
+        .price = 0,
+        .importance = 1,
+        .description = sOutfitBoxDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_OutfitBox,
+    },
 };

@@ -3103,3 +3103,9 @@ static const u8 sDiaryEntryDesc[] = _(
     "A ripped out page from\n"
     "Professor Gooseberry's\n"
     "Diary.");
+
+static const u8 sOutfitBoxDesc[] = _(
+    "A BOX for storing\n"
+    "your collections of\n"
+    "OUTFITS safely.");
+    

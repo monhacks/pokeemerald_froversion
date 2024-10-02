@@ -547,3 +547,5 @@ gSpecials:: @ 81DBA64
 	def_special SwitchCharacter
 	def_special BufferStoredPokemon
 	def_special GetActiveChar
+	def_special UnlockAllOutfits
+	

@@ -25,6 +25,7 @@
 #include "title_screen.h"
 #include "constants/rgb.h"
 #include "constants/battle_anim.h"
+#include "outfit_menu.h"
 
 /*
  * Intro animation sequence state machine
@@ -1070,6 +1071,11 @@ void CB2_InitCopyrightScreenAfterBootup(void)
         Save_LoadGameData(SAVE_NORMAL);
         if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_CORRUPT)
             Sav2_ClearSetDefault();
+        if (gSaveBlock2Ptr->currOutfitId == OUTFIT_NONE)
+        {
+            UnlockOutfit(DEFAULT_OUTFIT);
+            gSaveBlock2Ptr->currOutfitId = DEFAULT_OUTFIT;
+        }
         SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
         InitHeap(gHeap, HEAP_SIZE);
     }

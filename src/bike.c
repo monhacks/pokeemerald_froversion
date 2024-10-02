@@ -9,6 +9,7 @@
 #include "sound.h"
 #include "constants/map_types.h"
 #include "constants/songs.h"
+#include "constants/items.h"
 
 // this file's functions
 static void MovePlayerOnMachBike(u8, u16, u16);
@@ -126,7 +127,7 @@ static const struct BikeHistoryInputInfo sAcroBikeTricksList[] =
 // code
 void MovePlayerOnBike(u8 direction, u16 newKeys, u16 heldKeys)
 {
-    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
+    if (gSaveBlock2Ptr->playerBike == MACH_BIKE)
         MovePlayerOnMachBike(direction, newKeys, heldKeys);
     else
         MovePlayerOnAcroBike(direction, newKeys, heldKeys);
@@ -783,7 +784,7 @@ static void AcroBikeTransition_WheelieLoweringMoving(u8 direction)
 
 void Bike_TryAcroBikeHistoryUpdate(u16 newKeys, u16 heldKeys)
 {
-    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE)
+    if (gSaveBlock2Ptr->playerBike != MACH_BIKE)
         AcroBike_TryHistoryUpdate(newKeys, heldKeys);
 }
 
@@ -987,12 +988,13 @@ bool8 IsBikingDisallowedByPlayer(void)
 
 bool8 player_should_look_direction_be_enforced_upon_movement(void)
 {
-    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE) != FALSE && MetatileBehavior_IsBumpySlope(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) != FALSE)
+    if (gSaveBlock2Ptr->playerBike != MACH_BIKE && MetatileBehavior_IsBumpySlope(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) != FALSE)
         return FALSE;
     else
         return TRUE;
 }
 
+/*
 void GetOnOffBike(u8 transitionFlags)
 {
     gUnusedBikeCameraAheadPanback = FALSE;
@@ -1010,6 +1012,7 @@ void GetOnOffBike(u8 transitionFlags)
         Overworld_ChangeMusicTo(MUS_CYCLING);
     }
 }
+*/
 
 void BikeClearState(int newDirHistory, int newAbStartHistory)
 {
@@ -1043,19 +1046,30 @@ static void Bike_SetBikeStill(void)
 
 s16 GetPlayerSpeed(void)
 {
-    // because the player pressed a direction, it won't ever return a speed of 0 since this function returns the player's current speed.
-    s16 machSpeeds[3];
+    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_BIKE)
+    {
+        if (gSaveBlock2Ptr->playerBike == MACH_BIKE)    // because the player pressed a direction, it won't ever return a speed of 0 since this function returns the player's current speed.
+        {
+            s16 machSpeeds[3];
 
-    memcpy(machSpeeds, sMachBikeSpeeds, sizeof(machSpeeds));
+            memcpy(machSpeeds, sMachBikeSpeeds, sizeof(machSpeeds));
+            return machSpeeds[gPlayerAvatar.bikeFrameCounter];
+        }
+        else
+        {    
+            return SPEED_FASTER;
+        }
+    }
 
-    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
-        return machSpeeds[gPlayerAvatar.bikeFrameCounter];
-    else if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE)
-        return SPEED_FASTER;
     else if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_SURFING | PLAYER_AVATAR_FLAG_DASH))
+    {
         return SPEED_FAST;
+    }
+
     else
+    {
         return SPEED_NORMAL;
+    }
 }
 
 void Bike_HandleBumpySlopeJump(void)
@@ -1063,7 +1077,7 @@ void Bike_HandleBumpySlopeJump(void)
     s16 x, y;
     u8 tileBehavior;
 
-    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE)
+    if (gSaveBlock2Ptr->playerBike != MACH_BIKE)
     {
         PlayerGetDestCoords(&x, &y);
         tileBehavior = MapGridGetMetatileBehaviorAt(x, y);

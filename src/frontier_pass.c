@@ -30,6 +30,8 @@
 #include "constants/rgb.h"
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
+#include "data.h"
+#include "outfit_menu.h"
 
 // All windows displayed in the frontier pass.
 enum

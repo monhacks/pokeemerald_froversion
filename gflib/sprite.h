@@ -3,6 +3,7 @@
 
 #define MAX_SPRITES 64
 #define SPRITE_INVALID_TAG 0xFFFF
+#define SPRITE_NONE 0xFF
 
 struct SpriteSheet
 {

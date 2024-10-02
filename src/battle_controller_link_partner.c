@@ -28,6 +28,7 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "recorded_battle.h"
+#include "outfit_menu.h"
 
 // this file's functions
 static void LinkPartnerHandleGetMonData(void);
@@ -1135,7 +1136,13 @@ static void LinkPartnerHandleDrawTrainerPic(void)
     }
     else
     {
-        trainerPicId = gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].gender;
+        u8 outfit = gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].currOutfitId;
+        u8 gender = gLinkPlayers[GetBattlerMultiplayerId(gActiveBattler)].gender;
+
+        if (outfit < OUTFIT_COUNT)
+            trainerPicId = GetPlayerTrainerPicIdByOutfitGenderType(outfit, gender, 0);
+        else
+            trainerPicId = gender;
     }
 
     DecompressTrainerBackPic(trainerPicId, gActiveBattler);

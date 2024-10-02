@@ -379,6 +379,8 @@ end
 
 MAGM8ProtagonistsHouse_EventScript_ItemDebug2::
 	lockall
+	giveitem ITEM_OUTFIT_BOX, 1
+	special UnlockAllOutfits
 	giveitem 11, 10
 	giveitem 110, 10
 	giveitem 169, 10

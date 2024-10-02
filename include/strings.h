@@ -3057,6 +3057,13 @@ extern const u8 gText_PkmnForSwap[];
 extern const u8 gText_SamePkmnInPartyAlready[];
 extern const u8 gText_Cancel3[];
 
+
+//Outfits
+extern const u8 gText_YouWantedVar1OutfitThatllBeVar2[];
+extern const u8 gText_HereIsTheOutfitThankYou[];
+extern const u8 gText_ThatOutfitIsSoldOut[];
+extern const u8 gText_SoldOut[];
+
 /////////////////////NickNames/////////////////////////
 
 extern const u8 gText_MarriottVaporeonNickname[];

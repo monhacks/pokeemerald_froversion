@@ -179,6 +179,8 @@
 #define CHAR_NEWLINE           0xFE
 #define EOS                    0xFF // end of string
 
+#define TEXT_SKIP_DRAW         0xFF
+
 // CHAR_KEYPAD_ICON chars
 #define CHAR_A_BUTTON       0x00
 #define CHAR_B_BUTTON       0x01
@@ -268,6 +270,19 @@
 #define NUM_TEXT_PRINTERS 32
 
 #define TEXT_SPEED_FF 0xFF
+
+enum {
+    FONT_SMALL,
+    FONT_NORMAL,
+    FONT_SHORT,
+    FONT_SHORT_COPY_1,
+    FONT_SHORT_COPY_2,
+    FONT_SHORT_COPY_3,
+    FONT_BRAILLE,
+    FONT_NARROW,
+    FONT_SMALL_NARROW, // Very similar to FONT_SMALL, some glyphs are narrower
+    FONT_BOLD, // JP glyph set only
+};
 
 enum
 {

@@ -34,4 +34,6 @@
 #endif
 #endif
 
+#define MUDSKIP_OUTFIT_SYSTEM
+
 #endif // GUARD_CONFIG_H

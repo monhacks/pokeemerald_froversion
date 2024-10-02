@@ -39,7 +39,9 @@
 #define B_ACTION_DEBUG                  20
 #define B_ACTION_NONE                   0xFF
 
-#define MAX_TRAINER_ITEMS 4
+#define MAX_TRAINER_ITEMS               4
+
+#define TAG_NONE                        0xFFFF
 
 // array entries for battle communication
 #define MULTIUSE_STATE          0x0

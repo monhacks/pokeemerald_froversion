@@ -1883,6 +1883,10 @@ const u8 gText_Berry[] = _("BERRY");
 const u8 gText_Berries[] = _("Berries");
 const u8 gText_AbilityLearnsets[] = _("Abilities");
 const u8 gText_TypeEffectiveness[] = _("Types");
+const u8 gText_YouWantedVar1OutfitThatllBeVar2[] = _("You wanted that {STR_VAR_1} OUTFIT?\nThat'll be ¥{STR_VAR_2}. Will that be okay?");
+const u8 gText_HereIsTheOutfitThankYou[] = _("Here is the OUTFIT!\nThank you very much.");
+const u8 gText_ThatOutfitIsSoldOut[] = _("I'm sorry, but that OUTFIT is sold out.{PAUSE_UNTIL_PRESS}");
+const u8 gText_SoldOut[] = _("SOLD OUT");
 
 ////////////////////////////
 ////////NICKNAMES///////////

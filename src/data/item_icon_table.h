@@ -341,6 +341,7 @@ const u32 *const gItemIconTable[][2] =
     // Emerald-only key items
     [ITEM_MAGMA_EMBLEM] = {gItemIcon_MagmaEmblem, gItemIconPalette_MagmaEmblem},
     [ITEM_OLD_SEA_MAP] = {gItemIcon_OldSeaMap, gItemIconPalette_OldSeaMap},
+    [ITEM_OUTFIT_BOX] = {gItemIcon_OutfitBox, gItemIconPalette_OutfitBox},
     // mints
     [ITEM_ADAMANT_MINT] = {gItemIcon_Mint, gItemIconPalette_RedMint},
     [ITEM_BOLD_MINT] = {gItemIcon_Mint, gItemIconPalette_BlueMint},

@@ -393,6 +393,7 @@ void SwitchCharacter(void)
             ZeroBoxMonAt(0, 2);
             ZeroBoxMonAt(0, 3);
             gSaveBlock1Ptr->activeChar = 1;
+            gSaveBlock2Ptr->currOutfitId = 2;
             break;
 
         case 1:
@@ -427,6 +428,7 @@ void SwitchCharacter(void)
             ZeroBoxMonAt(0, 0);
             ZeroBoxMonAt(0, 1);
             gSaveBlock1Ptr->activeChar = 0;
+            gSaveBlock2Ptr->currOutfitId = 1;
             break;
 
         default:

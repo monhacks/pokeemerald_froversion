@@ -46,6 +46,7 @@
 #include "mevent.h"
 #include "union_room_chat.h"
 #include "field_player_avatar.h"
+#include "outfit_menu.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 extern const u8 EventScript_ClearDiaryFlags[];
@@ -54,6 +55,7 @@ extern const u8 EventScript_ClearDiaryFlags[];
 static void ClearFrontierRecord(void);
 static void WarpToTruck(void);
 static void ResetMiniGamesResults(void);
+static void ResetOutfitData(void);
 
 // EWRAM vars
 EWRAM_DATA bool8 gDifferentSaveFile = FALSE;
@@ -182,10 +184,18 @@ static void WarpToTruck(void)
         }
 }
 
+static void ResetOutfitData(void)
+{
+    memset(gSaveBlock2Ptr->outfits, 0, sizeof(gSaveBlock2Ptr->outfits));
+    UnlockOutfit(DEFAULT_OUTFIT);
+    gSaveBlock2Ptr->currOutfitId = DEFAULT_OUTFIT;
+}
+
 void Sav2_ClearSetDefault(void)
 {
     ClearSav2();
     SetDefaultOptions();
+    ResetOutfitData();
 }
 
 void ResetMenuAndMonGlobals(void)
@@ -263,7 +273,8 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
-    
+    ResetOutfitData();
+
     memset(&gSaveBlock2Ptr->itemFlags, 0, sizeof(gSaveBlock2Ptr->itemFlags));
     gSaveBlock1Ptr->activeChar = 0;
     if(B_VERSION_MARRIOTT)

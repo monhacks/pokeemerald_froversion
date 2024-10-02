@@ -36,6 +36,12 @@ struct BgTemplate
     u16 baseTile:10;
 };
 
+enum {
+    BG_COORD_SET,
+    BG_COORD_ADD,
+    BG_COORD_SUB,
+};
+
 void ResetBgs(void);
 u8 GetBgMode(void);
 void ResetBgControlStructs(void);

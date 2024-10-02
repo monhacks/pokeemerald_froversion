@@ -1,10 +1,19 @@
 #ifndef GUARD_FIELD_PLAYER_AVATAR_H
 #define GUARD_FIELD_PLAYER_AVATAR_H
 
+#define PLAYER_AVATAR_FLAG_ON_FOOT    (1 << 0)
+#define PLAYER_AVATAR_FLAG_MACH_BIKE  (1 << 1)
+#define PLAYER_AVATAR_FLAG_ACRO_BIKE  (1 << 2)
+#define PLAYER_AVATAR_FLAG_SURFING    (1 << 3)
+#define PLAYER_AVATAR_FLAG_UNDERWATER (1 << 4)
+#define PLAYER_AVATAR_FLAG_5          (1 << 5)
+#define PLAYER_AVATAR_FLAG_6          (1 << 6)
+#define PLAYER_AVATAR_FLAG_DASH       (1 << 7)
+
 void PlayerStep(u8 direction, u16 newKeys, u16 heldKeys);
 void ClearPlayerAvatarInfo(void);
 void SetPlayerAvatarExtraStateTransition(u16, u8);
-u8 GetPlayerAvatarGenderByGraphicsId(u16);
+//u8 GetPlayerAvatarGenderByGraphicsId(u16);
 bool8 TestPlayerAvatarFlags(u8);
 u8 GetPlayerAvatarObjectId(void);
 void PlayerGetDestCoords(s16 *, s16 *);
@@ -33,12 +42,16 @@ u8 CheckForObjectEventCollision(struct ObjectEvent *a, s16 b, s16 c, u8 d, u8 e)
 u8 PlayerGetZCoord(void);
 void SetPlayerAvatarTransitionFlags(u16 a);
 void sub_808BCE8(void);
-void InitPlayerAvatar(s16 a, s16 b, u8 c, u8 d);
+void InitPlayerAvatar(s16 x, s16 y, u8 direction);
+//void InitPlayerAvatar(s16 a, s16 b, u8 c, u8 d);
 void sub_808B864(void);
 void sub_808BCF4(void);
 void SetSpinStartFacingDir(u8);
 void GetXYCoordsOneStepInFrontOfPlayer(s16 *xPtr, s16 *yPtr);
 u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8, u8);
+u16 GetPlayerAvatarGraphicsIdByOutfitStateIdAndGender(u8 outfit, u8 state, u8 gender);
+u16 GetPlayerAnimGraphicsIdByOutfitStateIdAndGender(u8 outfit, u8 state, u8 gender);
+u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender);
 void SetPlayerAvatarFieldMove(void);
 u16 GetPlayerAvatarGraphicsIdByCurrentState(void);
 void SetPlayerAvatarStateMask(u8 a);
@@ -68,5 +81,6 @@ bool8 ObjectMovingOnRockStairs(struct ObjectEvent *objectEvent, u8 direction);
 //sideways stairs
 u8 GetRightSideStairsDirection(u8 direction);
 u8 GetLeftSideStairsDirection(u8 direction);
+u8 GetLinkPlayerAvatarGraphicsIdByStateIdLinkIdAndGender(u8 state, u8 linkId, u8 gender);
 
 #endif // GUARD_FIELD_PLAYER_AVATAR_H

@@ -6,6 +6,8 @@
 #define calloc(ct, sz) AllocZeroed((ct) * (sz))
 #define free Free
 
+#define TRY_FREE_AND_SET_NULL(ptr) if (ptr != NULL) FREE_AND_SET_NULL(ptr)
+
 #define FREE_AND_SET_NULL(ptr)          \
 {                                       \
     free(ptr);                          \
