@@ -23,6 +23,7 @@
 #include "intro.h"
 #include "main.h"
 #include "trainer_hill.h"
+#include "event_data.h"
 
 static void VBlankIntr(void);
 static void HBlankIntr(void);
@@ -331,6 +332,12 @@ static void VBlankIntr(void)
         LinkVSync();
 
     gMain.vblankCounter1++;
+    if (gMain.inGame && gMain.vblankCounter1 % 60 == 0)
+    {
+        u16 *timeoutSeconds = GetVarPointer(VAR_TIMEOUT_SECONDS);
+        if (*timeoutSeconds != 0xFFFF && *timeoutSeconds > 0)
+            *timeoutSeconds -= 1;
+    }
 
     if (gTrainerHillVBlankCounter && *gTrainerHillVBlankCounter < 0xFFFFFFFF)
         (*gTrainerHillVBlankCounter)++;

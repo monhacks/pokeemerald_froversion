@@ -86,6 +86,8 @@ EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
 EWRAM_DATA static u8 sCurrentStartMenuActions[9] = {0};
 EWRAM_DATA static u8 sInitStartMenuData[2] = {0};
+EWRAM_DATA static u16 sLastTimeoutSeconds = 0;
+EWRAM_DATA static u8 sTimeoutSecondsWindowId = 0;
 
 EWRAM_DATA static u8 (*sSaveDialogCallback)(void) = NULL;
 EWRAM_DATA static u8 sSaveDialogTimer = 0;
@@ -158,6 +160,8 @@ static const u8* const sPyramidFloorNames[] =
 static const struct WindowTemplate sPyramidFloorWindowTemplate_2 = {0, 1, 1, 0xA, 4, 0xF, 8};
 static const struct WindowTemplate sPyramidFloorWindowTemplate_1 = {0, 1, 1, 0xC, 4, 0xF, 8};
 
+static const struct WindowTemplate sTimeoutSecondsWindowTemplate = {0, 1, 1, 6, 2, 0xF, 8};
+
 static const u8 gText_MenuDebug[] = _("DEBUG");
 static const u8 gText_SwitchChar[] = _("Switch");
 
@@ -214,6 +218,8 @@ static void BuildBattlePyramidStartMenu(void);
 static void BuildMultiPartnerRoomStartMenu(void);
 static void ShowSafariBallsWindow(void);
 static void ShowPyramidFloorWindow(void);
+static void ShowTimeoutSecondsWindow(u32);
+static void UpdateTimeoutSecondsWindow(u32);
 static void RemoveExtraStartMenuWindows(void);
 static bool32 PrintStartMenuActions(s8 *pIndex, u32 count);
 static bool32 InitStartMenuStep(void);
@@ -433,6 +439,29 @@ static void ShowPyramidFloorWindow(void)
     CopyWindowToVram(sBattlePyramidFloorWindowId, 2);
 }
 
+static void ShowTimeoutSecondsWindow(u32 timeoutSeconds)
+{
+    sTimeoutSecondsWindowId = AddWindow(&sTimeoutSecondsWindowTemplate);
+    DrawStdWindowFrame(sTimeoutSecondsWindowId, FALSE);
+    UpdateTimeoutSecondsWindow(timeoutSeconds);
+}
+
+static void UpdateTimeoutSecondsWindow(u32 timeoutSeconds)
+{
+    u32 seconds = timeoutSeconds % 60;
+    u32 minutes = (timeoutSeconds / 60) % 60;
+    u32 hours = timeoutSeconds / (60 * 60);
+    u8 *buffer = gStringVar4;
+    PutWindowTilemap(sTimeoutSecondsWindowId);
+    buffer = ConvertIntToDecimalStringN(buffer, hours, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *buffer++ = CHAR_COLON;
+    buffer = ConvertIntToDecimalStringN(buffer, minutes, STR_CONV_MODE_LEADING_ZEROS, 2);
+    *buffer++ = CHAR_COLON;
+    buffer = ConvertIntToDecimalStringN(buffer, seconds, STR_CONV_MODE_LEADING_ZEROS, 2);
+    AddTextPrinterParameterized(sTimeoutSecondsWindowId, 1, gStringVar4, 3, 1, 0xFF, NULL);
+    CopyWindowToVram(sTimeoutSecondsWindowId, 2);
+}
+
 static void RemoveExtraStartMenuWindows(void)
 {
     if (GetSafariZoneFlag())
@@ -445,6 +474,11 @@ static void RemoveExtraStartMenuWindows(void)
     {
         ClearStdWindowAndFrameToTransparent(sBattlePyramidFloorWindowId, FALSE);
         RemoveWindow(sBattlePyramidFloorWindowId);
+    }
+    if (sLastTimeoutSeconds != 0xFFFF)
+    {
+        ClearStdWindowAndFrameToTransparent(sTimeoutSecondsWindowId, FALSE);
+        RemoveWindow(sTimeoutSecondsWindowId);
     }
 }
 
@@ -482,6 +516,7 @@ static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
 static bool32 InitStartMenuStep(void)
 {
     s8 state = sInitStartMenuData[0];
+    u32 timeoutSeconds;
 
     switch (state)
     {
@@ -503,6 +538,9 @@ static bool32 InitStartMenuStep(void)
             ShowSafariBallsWindow();
         if (InBattlePyramid())
             ShowPyramidFloorWindow();
+        sLastTimeoutSeconds = timeoutSeconds = VarGet(VAR_TIMEOUT_SECONDS);
+        if (timeoutSeconds != 0xFFFF)
+            ShowTimeoutSecondsWindow(timeoutSeconds);
         sInitStartMenuData[0]++;
         break;
     case 4:
@@ -563,6 +601,7 @@ void ShowReturnToFieldStartMenu(void)
 void Task_ShowStartMenu(u8 taskId)
 {
     struct Task* task = &gTasks[taskId];
+    u32 timeoutSeconds;
 
     switch(task->data[0])
     {
@@ -574,6 +613,15 @@ void Task_ShowStartMenu(u8 taskId)
         task->data[0]++;
         break;
     case 1:
+        if (gMenuCallback == HandleStartMenuInput)
+        {
+            timeoutSeconds = VarGet(VAR_TIMEOUT_SECONDS);
+            if (timeoutSeconds != sLastTimeoutSeconds)
+            {
+                UpdateTimeoutSecondsWindow(timeoutSeconds);
+                sLastTimeoutSeconds = timeoutSeconds;
+            }
+        }
         if (gMenuCallback() == TRUE)
             DestroyTask(taskId);
         break;
