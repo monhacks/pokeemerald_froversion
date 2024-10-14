@@ -187,6 +187,12 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     GetPlayerPosition(&position);
     metatileBehavior = MapGridGetMetatileBehaviorAt(position.x, position.y);
 
+    if (VarGet(VAR_TIMEOUT_SECONDS) == 0)
+    {
+        ScriptContext1_SetupScript(EventScript_Timeout);
+        return TRUE;
+    }
+
     if (CheckForTrainersWantingBattle() == TRUE)
         return TRUE;
 

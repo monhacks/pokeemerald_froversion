@@ -104,3 +104,16 @@ end
 
 EscapeRoom_FirstRoom_Text_Test::
 	.string "{STR_VAR_1}$"
+
+EventScript_Timeout::
+	msgbox Text_Timeout, MSGBOX_SIGN
+	@ Use 'setvar VAR_TIMEOUT_SECONDS, X' to reset the time before
+	@ this script runs again. Time starts ticking down immediately
+	@ after the 'setvar', so it's a good idea to do it as late as
+	@ possible.
+	@ 'setvar VAR_TIMEOUT_SECONDS, 0xFFFF' will disable the timer.
+	setvar VAR_TIMEOUT_SECONDS, 0xFFFF
+	end
+
+Text_Timeout:
+	.string "Uh-oh, time's up!$"

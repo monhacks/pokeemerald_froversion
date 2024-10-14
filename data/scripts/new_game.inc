@@ -278,6 +278,7 @@ EventScript_ResetAllMapFlags:: @ 82715DE
 	setflag FLAG_HIDE_BOBBY_HOUSE_BOBBY
 	setflag FLAG_HIDE_VERDANTURF_TRADER
 	call EventScript_ResetAllBerries
+	setvar VAR_TIMEOUT_SECONDS, 0xFFFF @ No timeout.
 	end
 
 EventScript_ClearDiaryFlags::

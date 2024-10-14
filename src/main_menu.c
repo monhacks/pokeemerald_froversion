@@ -1063,12 +1063,14 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
                 //gTasks[taskId].func = Task_NewGameBirchSpeech_Init;
                 NewGameBirchSpeech_SetDefaultPlayerName(Random() % 20);
                 gTasks[taskId].func = Task_NewGameBirchSpeech_Cleanup;
+                gMain.inGame = TRUE;
                 break;
             case ACTION_CONTINUE:
                 gPlttBufferUnfaded[0] = RGB_BLACK;
                 gPlttBufferFaded[0] = RGB_BLACK;
                 SetMainCallback2(CB2_ContinueSavedGame);
                 DestroyTask(taskId);
+                gMain.inGame = TRUE;
                 break;
             case ACTION_OPTION:
                 gMain.savedCallback = CB2_ReinitMainMenu;
