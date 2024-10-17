@@ -2002,3 +2002,9 @@
 	settotemboost \battler, 0, 0, 0, 0, 0, 0, 2
 	.endm
 
+	@ Animates a bridge expanding from (fromX, fromY) to (toX, toY).
+	.macro animatebridge fromX:req, fromY:req, toX:req, toY:req, metatile_number:req
+	callnative Native_AnimateBridge
+	.byte \fromX, \fromY, \toX, \toY
+	.2byte \metatile_number
+	.endm

@@ -4397,3 +4397,229 @@ u8 Script_TryGainNewFanFromCounter(void)
 {
     return TryGainNewFanFromCounter(gSpecialVar_0x8004);
 }
+
+#define BRIDGE_TAG 0xFEDC
+
+#define sMapX data[0]
+#define sMapY data[1]
+#define sDX data[2]
+#define sDY data[3]
+#define sMoveSteps data[4]
+#define sMoveFrame data[5]
+#define sShakeFrame data[6]
+#define sMetatileId data[7]
+
+static const s8 sBridgeMoveFrames[] =  { 0, 0, 0, 0, 1, 2, 3, 5, 8, 13, 16 };
+static const s8 sBridgeShakeFrames[] = { -1, 1, -1, 1, 0 };
+
+static void SpriteCB_AnimateBridge(struct Sprite *sprite)
+{
+    if (sprite->sMoveFrame < ARRAY_COUNT(sBridgeMoveFrames))
+    {
+        sprite->pos2.x = sprite->sDX * sBridgeMoveFrames[sprite->sMoveFrame];
+        sprite->pos2.y = sprite->sDY * sBridgeMoveFrames[sprite->sMoveFrame];
+        sprite->sMoveFrame++;
+        if (sprite->sMoveFrame == ARRAY_COUNT(sBridgeMoveFrames))
+        {
+            sprite->sMapX += sprite->sDX;
+            sprite->sMapY += sprite->sDY;
+            MapGridSetMetatileIdAt(sprite->sMapX, sprite->sMapY, sprite->sMetatileId);
+            CurrentMapDrawMetatileAt(sprite->sMapX, sprite->sMapY);
+
+            sprite->pos1.x += sprite->sDX * 16;
+            sprite->pos1.y += sprite->sDY * 16;
+            sprite->pos2.x = 0;
+            sprite->pos2.y = 0;
+
+            PlaySE(SE_M_STRENGTH);
+            sprite->sShakeFrame = 0;
+
+            sprite->sMoveSteps--;
+            if (sprite->sMoveSteps > 0)
+                sprite->sMoveFrame = 0;
+        }
+    }
+
+    if (sprite->sShakeFrame < ARRAY_COUNT(sBridgeShakeFrames))
+    {
+        SetCameraPanning(sprite->sDY * sBridgeShakeFrames[sprite->sShakeFrame], sprite->sDX * sBridgeShakeFrames[sprite->sShakeFrame]);
+        sprite->sShakeFrame++;
+    }
+
+    if (sprite->sMoveSteps == 0
+     && sprite->sMoveFrame == ARRAY_COUNT(sBridgeMoveFrames)
+     && sprite->sShakeFrame == ARRAY_COUNT(sBridgeShakeFrames))
+    {
+        InstallCameraPanAheadCallback();
+        EnableBothScriptContexts();
+        DestroySpriteAndFreeResources(sprite);
+    }
+}
+
+static const struct OamData sBridgeMetatileOamData =
+{
+    .affineMode = ST_OAM_AFFINE_OFF,
+    .objMode = ST_OAM_OBJ_NORMAL,
+    .bpp = ST_OAM_4BPP,
+    .shape = SPRITE_SHAPE(16x16),
+    .size = SPRITE_SIZE(16x16),
+    .priority = 1,
+};
+
+static const struct SpriteTemplate sBridgeMetatileTemplate =
+{
+    .tileTag = BRIDGE_TAG,
+    .paletteTag = BRIDGE_TAG,
+    .oam = &sBridgeMetatileOamData,
+    .anims = gDummySpriteAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_AnimateBridge,
+};
+
+static void CopyTile4BPP(u32 screenEntry, void *_dest)
+{
+    u32 *dest = _dest;
+
+    CpuFastCopy((u8 *)BG_VRAM + (screenEntry & 0x3FF) * TILE_SIZE_4BPP, dest, TILE_SIZE_4BPP);
+
+    if (screenEntry & BG_TILE_H_FLIP(0))
+    {
+        int i;
+        for (i = 0; i < 8; i++)
+        {
+            u32 tmp = dest[i];
+            tmp = ((tmp & 0x0000000F) << (7*4))
+                | ((tmp & 0x000000F0) << (5*4))
+                | ((tmp & 0x00000F00) << (3*4))
+                | ((tmp & 0x0000F000) << (1*4))
+                | ((tmp & 0x000F0000) >> (1*4))
+                | ((tmp & 0x00F00000) >> (3*4))
+                | ((tmp & 0x0F000000) >> (5*4))
+                | ((tmp & 0xF0000000) >> (7*4));
+            dest[i] = tmp;
+        }
+    }
+
+    if (screenEntry & BG_TILE_V_FLIP(0))
+    {
+        int i;
+        for (i = 0; i < 4; i++)
+        {
+            u32 tmp = dest[i];
+            dest[i] = dest[7-i];
+            dest[7-i] = tmp;
+        }
+    }
+}
+
+static bool32 LoadBridgeGraphics(u32 metatileId)
+{
+    u8 *tiles;
+    const u16 *metatile;
+    struct SpritePalette palette;
+    struct SpriteSheet sheet;
+
+    if (metatileId < NUM_METATILES_IN_PRIMARY)
+    {
+        metatile = gMapHeader.mapLayout->primaryTileset->metatiles;
+    }
+    else
+    {
+        metatile = gMapHeader.mapLayout->secondaryTileset->metatiles;
+        metatileId -= NUM_METATILES_IN_PRIMARY;
+    }
+
+    // Assumes:
+    // 1. Triple-layer metatiles.
+    // 2. That the middle layer is the bridge tile.
+    // 3. That the middle layer tiles all share a palette.
+    // 4. That the 'charBaseBlock' is 0.
+    metatile = metatile + metatileId * 12;
+
+    palette.tag = BRIDGE_TAG;
+    palette.data = &gPlttBufferUnfaded[16 * (metatile[4] >> 12)];
+
+    sheet.tag = BRIDGE_TAG;
+    sheet.size = TILE_SIZE_4BPP * 4;
+    sheet.data = tiles = Alloc(sheet.size);
+    if (tiles == NULL)
+        return FALSE;
+
+    CopyTile4BPP(metatile[4], (u8 *)tiles + 0 * TILE_SIZE_4BPP);
+    CopyTile4BPP(metatile[5], (u8 *)tiles + 1 * TILE_SIZE_4BPP);
+    CopyTile4BPP(metatile[6], (u8 *)tiles + 2 * TILE_SIZE_4BPP);
+    CopyTile4BPP(metatile[7], (u8 *)tiles + 3 * TILE_SIZE_4BPP);
+
+    if (LoadSpritePalette(&palette) == 0xFF)
+    {
+        Free(tiles);
+        return FALSE;
+    }
+
+    if (LoadSpriteSheet(&sheet) == 0)
+    {
+        Free(tiles);
+        FreeSpritePaletteByTag(palette.tag);
+        return FALSE;
+    }
+
+    Free(tiles);
+    return TRUE;
+}
+
+void Native_AnimateBridge(struct ScriptContext *ctx)
+{
+    s32 dx, dy;
+    u32 spriteId;
+    s16 targetScreenX, targetScreenY;
+
+    u32 fromX = ScriptReadByte(ctx) + 7;
+    u32 fromY = ScriptReadByte(ctx) + 7;
+    u32 toX = ScriptReadByte(ctx) + 7;
+    u32 toY = ScriptReadByte(ctx) + 7;
+    u32 metatileId = ScriptReadHalfword(ctx);
+
+    if (fromX == toX) // Vertical.
+    {
+        dx = 0;
+        dy = fromY < toY ? 1 : -1;
+    }
+    else if (fromY == toY) // Horizontal.
+    {
+        dx = fromX < toX ? 1 : -1;
+        dy = 0;
+    }
+    else // Diagonal (illegal).
+    {
+        return;
+    }
+
+    if (!LoadBridgeGraphics(metatileId))
+        return;
+
+    spriteId = CreateSprite(&sBridgeMetatileTemplate, 0, 0, 0xFF);
+    if (spriteId == SPRITE_NONE)
+        return;
+    gSprites[spriteId].coordOffsetEnabled = TRUE;
+    SetSpritePosToMapCoords(fromX, fromY, &gSprites[spriteId].pos1.x, &gSprites[spriteId].pos1.y);
+    gSprites[spriteId].pos1.x += 8;
+    gSprites[spriteId].pos1.y += 8;
+    gSprites[spriteId].sMapX = fromX;
+    gSprites[spriteId].sMapY = fromY;
+    gSprites[spriteId].sDX = dx;
+    gSprites[spriteId].sDY = dy;
+    gSprites[spriteId].sMoveSteps = abs(toX - fromX) + abs(toY - fromY);
+    gSprites[spriteId].sMoveFrame = 0;
+    gSprites[spriteId].sShakeFrame = ARRAY_COUNT(sBridgeShakeFrames);
+    gSprites[spriteId].sMetatileId = metatileId;
+    SetCameraPanningCallback(NULL);
+}
+
+#undef sMapX
+#undef sMapY
+#undef sDX
+#undef sDY
+#undef sMoveSteps
+#undef sMoveFrame
+#undef sShakeFrame
+#undef sMetatileId
