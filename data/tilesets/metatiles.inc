@@ -862,3 +862,11 @@ gMetatiles_BlackForesstPreInfectionSecondary::
 	.align 1
 gMetatileAttributes_BlackForesstPreInfectionSecondary::
 	.incbin "data/tilesets/secondary/black_foresst_pre_infection_secondary/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_Plains::
+	.incbin "data/tilesets/primary/plains/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_Plains::
+	.incbin "data/tilesets/primary/plains/metatile_attributes.bin"
