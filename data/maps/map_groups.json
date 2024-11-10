@@ -1,4 +1,5 @@
 {
+  "layouts_table_label": "gMapLayouts",
   "group_order": [
     "gMapGroup0",
     "gMapGroup1",
@@ -316,7 +317,8 @@
     "SlateportCity_PokemonCenter_2F",
     "SlateportCity_Mart",
     "EscapeRoom_FirstRoom_ProtagonistOne",
-    "EscapeRoom_FirstRoom_Protagonist2"
+    "EscapeRoom_FirstRoom_Protagonist2",
+    "TestMap"
   ],
   "gMapGroup10": [
     "MauvilleCity_Gym",

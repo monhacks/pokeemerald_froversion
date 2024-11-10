@@ -1,2 +1,2 @@
-TestMAp_MapScripts::
+TestMap_MapScripts::
 	.byte 0

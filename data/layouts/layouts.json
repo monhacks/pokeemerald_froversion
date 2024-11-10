@@ -5053,13 +5053,13 @@
     },
     {
       "id": "LAYOUT_TEST_MAP",
-      "name": "TestMAp_Layout",
-      "width": 60,
-      "height": 60,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Sootopolis",
-      "border_filepath": "data/layouts/TestMAp/border.bin",
-      "blockdata_filepath": "data/layouts/TestMAp/map.bin"
+      "name": "TestMap_Layout",
+      "width": 80,
+      "height": 20,
+      "primary_tileset": "gTileset_Plains",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/TestMap/border.bin",
+      "blockdata_filepath": "data/layouts/TestMap/map.bin"
     },
     {
       "id": "LAYOUT_DELETE_THIS",
