@@ -139,7 +139,6 @@
     "TransitionMapPokecenter",
     "JohnsRoom",
     "EverGrandeCity_Hall6",
-    "TestMAp",
     "DeleteThis",
     "HauntedWoods2",
     "HauntedWoods6",
@@ -317,8 +316,7 @@
     "SlateportCity_PokemonCenter_2F",
     "SlateportCity_Mart",
     "EscapeRoom_FirstRoom_ProtagonistOne",
-    "EscapeRoom_FirstRoom_Protagonist2",
-    "TestMap"
+    "EscapeRoom_FirstRoom_Protagonist2"
   ],
   "gMapGroup10": [
     "MauvilleCity_Gym",
