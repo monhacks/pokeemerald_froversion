@@ -433,3 +433,40 @@ EventScript_EnableAutoRun::
     end
 AutoRunEnabled:
     .string "Auto Run {COLOR GREEN}Enabled{COLOR DARK_GREY}.$"
+
+EventScript_Overheat:: @ 82906BB
+EventScript_OverheatCheckPartyMove:
+	checkpartymove MOVE_OVERHEAT
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq EventScript_CheckOverheatCantHeat
+	setfieldeffectargument 0, VAR_RESULT
+	bufferpartymonnick 0, VAR_RESULT
+	buffermovename 1, MOVE_OVERHEAT
+	msgbox Text_WantToOverheat, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq EventScript_CancelOverheat
+	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
+	addvar VAR_TEMP_1, 1
+	closemessage
+	end
+
+EventScript_CheckOverheatCantHeat:: @ 8290721
+	msgbox Text_CantOverheat, MSGBOX_DEFAULT
+	warpsilent MAP_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE, 255, 27, 56
+	releaseall
+	end
+
+EventScript_CancelOverheat:: @ 829072B
+	closemessage
+	msgbox Text_CantOverheat, MSGBOX_DEFAULT
+	warpsilent MAP_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE, 255, 27, 56
+	releaseall
+	end
+
+Text_WantToOverheat:
+	.string "Would you like to use\n"
+	.string "Overheat to keep warm?$"
+
+Text_CantOverheat:
+	.string "This cave is far too cold\n"
+	.string "to stay in!$"

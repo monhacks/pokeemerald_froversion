@@ -6134,10 +6134,10 @@
     {
       "id": "LAYOUT_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE",
       "name": "EscapeRoom_FirstRoom_ProtagonistOne_Layout",
-      "width": 18,
-      "height": 19,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SummitCityGym",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_GeneralSnow",
+      "secondary_tileset": "gTileset_HomesteadNorth",
       "border_filepath": "data/layouts/EscapeRoom_FirstRoom_ProtagonistOne/border.bin",
       "blockdata_filepath": "data/layouts/EscapeRoom_FirstRoom_ProtagonistOne/map.bin"
     },
@@ -6150,6 +6150,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/EscapeRoom_FirstRoom_Protagonist2/border.bin",
       "blockdata_filepath": "data/layouts/EscapeRoom_FirstRoom_Protagonist2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ESCAPE_ROOM_ICE_CAVE1",
+      "name": "EscapeRoom_IceCave1_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_SnowCavePrimary",
+      "secondary_tileset": "gTileset_SnowSecondary",
+      "border_filepath": "data/layouts/EscapeRoom_IceCave1/border.bin",
+      "blockdata_filepath": "data/layouts/EscapeRoom_IceCave1/map.bin"
     }
   ]
 }
