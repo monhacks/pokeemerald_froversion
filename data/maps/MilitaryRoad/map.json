@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "right",
+      "map": "MAP_GRAND_ISLAND_VALLEY",
       "offset": -7,
-      "map": "MAP_GRAND_ISLAND_VALLEY"
+      "direction": "right"
     },
     {
-      "direction": "left",
+      "map": "MAP_HOMESTEAD_TOWN",
       "offset": 0,
-      "map": "MAP_HOMESTEAD_TOWN"
+      "direction": "left"
     }
   ],
   "object_events": [

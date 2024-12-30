@@ -286,6 +286,7 @@
 #define MAP_SLATEPORT_CITY_MART                    (13 | (9 << 8))
 #define MAP_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE (14 | (9 << 8))
 #define MAP_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST2    (15 | (9 << 8))
+#define MAP_ESCAPE_ROOM_ICE_CAVE1                  (16 | (9 << 8))
 
 // gMapGroup10
 #define MAP_MAUVILLE_CITY_GYM               (0 | (10 << 8))
