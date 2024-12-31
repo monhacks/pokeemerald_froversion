@@ -174,11 +174,8 @@ static void WarpToTruck(void)
         {
             FlagSet(FLAG_MAGEE_VERSION);
             VarSet(VAR_MAGEE_VERSION, 1);
-            SetWarpDestination(MAP_GROUP(MAGM8PROTAGONISTS_HOUSE), MAP_NUM(MAGM8PROTAGONISTS_HOUSE), -1, 5, 6);
+            SetWarpDestination(MAP_GROUP(ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE), MAP_NUM(ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE), -1, 35, 73);
             WarpIntoMap();
-            gSaveBlock1Ptr->mapLocChar1 = gSaveBlock1Ptr->location;
-            gSaveBlock1Ptr->mapLocChar2 = gSaveBlock1Ptr->location;
-            gSaveBlock1Ptr->mapLocChar3 = gSaveBlock1Ptr->location;
         }
 }
 

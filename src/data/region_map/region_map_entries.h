@@ -2,7 +2,7 @@
 #define GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
 
 static const u8 sMapName_LakeMeadVillage[] = _("Lake Mead Village");
-static const u8 sMapName_OldaleTown[] = _("Six Corners");
+static const u8 sMapName_OldaleTown[] = _("Escape Room");
 static const u8 sMapName_DewfordTown[] = _("RainTree Island");
 static const u8 sMapName_LavaridgeTown[] = _("Grand Island");
 static const u8 sMapName_FallarborTown[] = _("Cayuga Town");
