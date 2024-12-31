@@ -14,19 +14,19 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "left",
+      "map": "MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE",
       "offset": -116,
-      "map": "MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE"
+      "direction": "left"
     },
     {
-      "direction": "right",
+      "map": "MAP_JAGOW_WAY",
       "offset": 6,
-      "map": "MAP_JAGOW_WAY"
+      "direction": "right"
     },
     {
-      "direction": "up",
+      "map": "MAP_ROUTE101",
       "offset": -2,
-      "map": "MAP_ROUTE101"
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -141,21 +141,21 @@
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_LAKE_MEAD_VILLAGE_FROS_HOUSE_1F",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     },
     {
       "x": 22,
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_LAKE_MEAD_VILLAGE_NALLS_RESIDENCE_1F",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     },
     {
       "x": 22,
       "y": 22,
       "elevation": 0,
       "dest_map": "MAP_LAKE_MEAD_VILLAGE_TILYOUS_LAB",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

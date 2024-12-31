@@ -117,3 +117,121 @@ EventScript_Timeout::
 
 Text_Timeout:
 	.string "Uh-oh, time's up!$"
+
+
+
+///
+
+EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutRiddleStart::
+	lockall
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired1stLetter, MSGBOX_DEFAULT
+	scrollingmultichoice 6, 2, 3, 5, TRUE
+	compare VAR_RESULT, 2
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutCorrectAnswer1
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired2ndLetter, MSGBOX_DEFAULT
+	scrollingmultichoice 6, 2, 3, 5, TRUE
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired3rdLetter, MSGBOX_DEFAULT
+	scrollingmultichoice 6, 2, 3, 5, TRUE
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired4thLetter, MSGBOX_DEFAULT
+	scrollingmultichoice 6, 2, 3, 5, TRUE
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutRiddleStart
+	release
+	end
+
+EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutCorrectAnswer1:
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired2ndLetter, MSGBOX_DEFAULT
+	scrollingmultichoice 6, 2, 3, 5, TRUE
+	compare VAR_RESULT, 7
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutCorrectAnswer2
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired3rdLetter, MSGBOX_DEFAULT
+	scrollingmultichoice 6, 2, 3, 5, TRUE
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired4thLetter, MSGBOX_DEFAULT
+	scrollingmultichoice 6, 2, 3, 5, TRUE
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutRiddleStart
+	release
+	end
+
+EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutCorrectAnswer2:
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired3rdLetter, MSGBOX_DEFAULT
+	scrollingmultichoice 6, 2, 3, 5, TRUE
+	compare VAR_RESULT, 14
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutCorrectAnswer3
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired4thLetter, MSGBOX_DEFAULT
+	scrollingmultichoice 6, 2, 3, 5, TRUE
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutRiddleStart
+	release
+	end
+
+EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutCorrectAnswer3:
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired4thLetter, MSGBOX_DEFAULT
+	scrollingmultichoice 6, 2, 3, 5, TRUE
+	compare VAR_RESULT, 15
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutSolved
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutRiddleStart
+	release
+	end
+
+EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutSolved:
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequiredCorrectSolution, MSGBOX_DEFAULT
+	finditem ITEM_HM01
+	release
+	end
+	
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired1stLetter:
+	.string "Input 1st Letter of four digit code$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired2ndLetter:
+	.string "Input 2nd Letter of four digit code$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired3rdLetter:
+	.string "Input 3rd Letter of four digit code$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired4thLetter:
+	.string "Input 4th Letter of four digit code$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequiredWrongSolution:
+	.string "That is incorrect. Try Again?$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequiredCorrectSolution:
+	.string "Congratulations! That is correct!$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FiveNumberComboRequired1stNumber:
+	.string "Input 1st Number of five digit code.$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FiveNumberComboRequired2ndNumber:
+	.string "Input 2nd Number of five digit code.$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FiveNumberComboRequired3rdNumber:
+	.string "Input 3rd Number of five digit code.$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FiveNumberComboRequired4thNumber:
+	.string "Input 4th Number of five digit code.$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FiveNumberComboRequired5thNumber:
+	.string "Input 5th Number of five digit code.$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FiveNumberComboRequiredWrongSolution:
+	.string "Sorry that is incorrect. Try again?$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FourNumberComboRequiredYellowNumber:
+	.string "Input Yellow Number of Four digit code.$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FourNumberComboRequiredBlueNumber:
+	.string "Input Blue Number of Four digit code.$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FourNumberComboRequiredGreenNumber:
+	.string "Input Green Number of Four digit code.$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FourNumberComboRequiredRedNumber:
+	.string "Input Red Number of Four digit code.$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_FiveLetterComboRequiredWrongSolution:
+	.string "Sorry that is incorrect. Try again?$"

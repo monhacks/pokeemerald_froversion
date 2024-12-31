@@ -18,3 +18,10 @@ OldaleTown_PokemonCenter_2F_EventScript_RecordCorner:: @ 81FC239
 	call CableClub_EventScript_RecordCorner
 	end
 
+OldaleTown_PokemonCenter_2F_EventScript_WarpOut::
+	lock
+	warpsilent MAP_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE, 255, 43, 51
+	closemessage
+	release
+	end
+
