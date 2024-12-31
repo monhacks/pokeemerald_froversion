@@ -4598,7 +4598,7 @@ void Native_AnimateBridge(struct ScriptContext *ctx)
         return;
 
     spriteId = CreateSprite(&sBridgeMetatileTemplate, 0, 0, 0xFF);
-    if (spriteId == SPRITE_NONE)
+    if (spriteId == 0xFF)
         return;
     gSprites[spriteId].coordOffsetEnabled = TRUE;
     SetSpritePosToMapCoords(fromX, fromY, &gSprites[spriteId].pos1.x, &gSprites[spriteId].pos1.y);
