@@ -21,12 +21,29 @@
       "x": 43,
       "y": 50,
       "elevation": 0,
-      "dest_map": "MAP_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST2",
+      "dest_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_2F",
       "dest_warp_id": "0"
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 74,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 74,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CantLeave"
+    }
   ],
   "bg_events": [
 
