@@ -185,6 +185,14 @@ EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutSolved:
 	release
 	end
 	
+EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CantLeave::
+	lockall
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_CantGoBack, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement OBJ_EVENT_ID_PLAYER
+	releaseall
+	end
+
 EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired1stLetter:
 	.string "Input 1st Letter of four digit code$"
 
@@ -235,3 +243,7 @@ EscapeRoom_FirstRoom_ProtagonistOne_Text_FourNumberComboRequiredRedNumber:
 
 EscapeRoom_FirstRoom_ProtagonistOne_Text_FiveLetterComboRequiredWrongSolution:
 	.string "Sorry that is incorrect. Try again?$"
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_CantGoBack:
+	.string "The door is locked from the inside.$"
+

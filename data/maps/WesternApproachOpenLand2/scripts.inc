@@ -12,7 +12,7 @@ end
 
 
 WesternApproachOpenLand2_EventScript_FredericQuestAssignment::
-	goto_if_unset FLAG_STARTED_FREDERIC_QUEST, WesternApproachOpenLand2_EventScript_FredericIntro
+	goto_if_unset FLAG_OPENED_BLACKROOM_DOOR_1, WesternApproachOpenLand2_EventScript_FredericIntro
 	compare VAR_FREDERIC_STATE, 4
 	goto_if_le WesternApproachOpenLand2_EventScript_FredericNeedSupplies
 	compare VAR_FREDERIC_STATE, 14
@@ -26,7 +26,7 @@ end
 
 WesternApproachOpenLand2_EventScript_FredericIntro:
 	msgbox WesternApproachOpenLand2_Text_FredericIntro, MSGBOX_NPC
-	setflag FLAG_STARTED_FREDERIC_QUEST
+	setflag FLAG_OPENED_BLACKROOM_DOOR_1
 goto WesternApproachOpenLand2_EventScript_FredericQuestAssignment
 
 WesternApproachOpenLand2_EventScript_FredericNeedSupplies:

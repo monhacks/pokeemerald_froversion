@@ -650,7 +650,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_2             (FLAG_HIDDEN_ITEMS_START + 0x5D)
 #define FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_3             (FLAG_HIDDEN_ITEMS_START + 0x5E)
 
-#define FLAG_STARTED_FREDERIC_QUEST  0x264 // Have Spoken to Frederic
+#define FLAG_OPENED_BLACKROOM_DOOR_1  0x264 // Have Spoken to Frederic
 #define FLAG_HIDE_FREDERIC  0x265 // Hide Frederic in Western Approach
 #define FLAG_HIDE_FREDERIC_2  0x266 // Hide Frederic for boss battle
 #define FLAG_HIDE_FLANNERY_WESTERN_APPROACH  0x267 // Unused Flag

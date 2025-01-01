@@ -6144,10 +6144,10 @@
     {
       "id": "LAYOUT_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST2",
       "name": "EscapeRoom_FirstRoom_Protagonist2_Layout",
-      "width": 26,
-      "height": 27,
+      "width": 80,
+      "height": 80,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/EscapeRoom_FirstRoom_Protagonist2/border.bin",
       "blockdata_filepath": "data/layouts/EscapeRoom_FirstRoom_Protagonist2/map.bin"
     },
@@ -6160,6 +6160,26 @@
       "secondary_tileset": "gTileset_SnowSecondary",
       "border_filepath": "data/layouts/EscapeRoom_IceCave1/border.bin",
       "blockdata_filepath": "data/layouts/EscapeRoom_IceCave1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ESCAPE_ROOM_STARTING_ROOM",
+      "name": "EscapeRoom_StartingRoom_Layout",
+      "width": 20,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_RaintreeIsland_Pokecenter_Interior",
+      "border_filepath": "data/layouts/EscapeRoom_StartingRoom/border.bin",
+      "blockdata_filepath": "data/layouts/EscapeRoom_StartingRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_ESCAPE_ROOM_BLACK_ROOM",
+      "name": "EscapeRoom_BlackRoom_Layout",
+      "width": 5,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/EscapeRoom_BlackRoom/border.bin",
+      "blockdata_filepath": "data/layouts/EscapeRoom_BlackRoom/map.bin"
     }
   ]
 }

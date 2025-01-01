@@ -84,7 +84,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 74,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 74,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CantLeave"
+    }
   ],
   "bg_events": [
 

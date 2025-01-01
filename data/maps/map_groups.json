@@ -317,7 +317,9 @@
     "SlateportCity_Mart",
     "EscapeRoom_FirstRoom_ProtagonistOne",
     "EscapeRoom_FirstRoom_Protagonist2",
-    "EscapeRoom_IceCave1"
+    "EscapeRoom_IceCave1",
+    "EscapeRoom_StartingRoom",
+    "EscapeRoom_BlackRoom"
   ],
   "gMapGroup10": [
     "MauvilleCity_Gym",
