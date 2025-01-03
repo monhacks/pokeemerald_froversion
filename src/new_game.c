@@ -177,6 +177,29 @@ static void WarpToTruck(void)
             SetWarpDestination(MAP_GROUP(ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE), MAP_NUM(ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE), -1, 35, 73);
             WarpIntoMap();
         }
+    if(B_VERSION_ESCAPE_ROOM_MASTER)
+        {
+            FlagSet(FLAG_ESCAPE_ROOM_MASTER);
+            VarSet(VAR_ESCAPE_ROOM_MASTER, 0);
+            SetWarpDestination(MAP_GROUP(ESCAPE_ROOM_STARTING_ROOM), MAP_NUM(ESCAPE_ROOM_STARTING_ROOM), -1, 9, 11);
+            WarpIntoMap();
+        }
+
+    if(B_VERSION_ESCAPE_ROOM_PLAINS)
+        {
+            FlagSet(FLAG_ESCAPE_ROOM_PLAINS);
+            VarSet(VAR_ESCAPE_ROOM_PLAINS, 0);
+            SetWarpDestination(MAP_GROUP(ESCAPE_ROOM_BLACK_ROOM_PLAINS), MAP_NUM(ESCAPE_ROOM_BLACK_ROOM_PLAINS), -1, 2, 4);
+            WarpIntoMap();
+        }
+
+    if(B_VERSION_ESCAPE_ROOM_SNOW)
+        {
+            FlagSet(FLAG_ESCAPE_ROOM_SNOW);
+            VarSet(VAR_ESCAPE_ROOM_SNOW, 0);
+            SetWarpDestination(MAP_GROUP(ESCAPE_ROOM_BLACK_ROOM), MAP_NUM(ESCAPE_ROOM_BLACK_ROOM), -1, 2, 4);
+            WarpIntoMap();
+        }
 }
 
 void Sav2_ClearSetDefault(void)

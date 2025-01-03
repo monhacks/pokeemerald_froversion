@@ -1,0 +1,35 @@
+{
+  "id": "MAP_ESCAPE_ROOM_BLACK_ROOM_PLAINS",
+  "name": "EscapeRoom_BlackRoomPlains",
+  "layout": "LAYOUT_ESCAPE_ROOM_BLACK_ROOM_PLAINS",
+  "music": "MUS_OLDALE",
+  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EscapeRoom_BlackRoomPlains_EventScript_DoorCode"
+    }
+  ]
+}

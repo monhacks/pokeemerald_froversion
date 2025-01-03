@@ -289,6 +289,7 @@
 #define MAP_ESCAPE_ROOM_ICE_CAVE1                  (16 | (9 << 8))
 #define MAP_ESCAPE_ROOM_STARTING_ROOM              (17 | (9 << 8))
 #define MAP_ESCAPE_ROOM_BLACK_ROOM                 (18 | (9 << 8))
+#define MAP_ESCAPE_ROOM_BLACK_ROOM_PLAINS          (19 | (9 << 8))
 
 // gMapGroup10
 #define MAP_MAUVILLE_CITY_GYM               (0 | (10 << 8))

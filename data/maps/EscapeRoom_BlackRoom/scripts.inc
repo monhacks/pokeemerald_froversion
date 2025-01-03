@@ -1,6 +1,20 @@
 EscapeRoom_BlackRoom_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, EscapeRoom_BlackRoomSnow_OnFrame
 	.byte 0
 
+EscapeRoom_BlackRoomSnow_OnFrame::
+	map_script_2 VAR_ESCAPE_ROOM_SNOW, 0, EscapeRoom_BlackRoomSnow_EventScript_GameStart
+	.2byte 0
+
+
+EscapeRoom_BlackRoomSnow_EventScript_GameStart::
+	givecustommon SPECIES_UMBREON, 50, ITEM_NONE, ITEM_GREAT_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_MOONLIGHT, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_ADVENTURE_STARTED
+	setvar VAR_ESCAPE_ROOM_SNOW, 1
+	release
+	end
 
 EscapeRoom_BlackRoom_EventScript_DoorCode::
 	lockall
@@ -39,7 +53,7 @@ EscapeRoom_BlackRoom_EventScript_CutCorrectAnswer1:
 EscapeRoom_BlackRoom_EventScript_CutCorrectAnswer2:
 	msgbox EscapeRoom_BlackRoom_Text_FourNumberComnoRequired3rdNumber, MSGBOX_DEFAULT
 	scrollingmultichoice 7, 2, 3, 5, TRUE
-	compare VAR_RESULT, 7
+	compare VAR_RESULT, 3
 	goto_if_eq EscapeRoom_BlackRoom_EventScript_CutCorrectAnswer3
 	msgbox EscapeRoom_BlackRoom_Text_FourNumberComnoRequired4thNumber, MSGBOX_DEFAULT
 	scrollingmultichoice 7, 2, 3, 5, TRUE
@@ -52,7 +66,7 @@ EscapeRoom_BlackRoom_EventScript_CutCorrectAnswer2:
 EscapeRoom_BlackRoom_EventScript_CutCorrectAnswer3:
 	msgbox EscapeRoom_BlackRoom_Text_FourNumberComnoRequired4thNumber, MSGBOX_DEFAULT
 	scrollingmultichoice 7, 2, 3, 5, TRUE
-	compare VAR_RESULT, 6
+	compare VAR_RESULT, 5
 	goto_if_eq EscapeRoom_BlackRoom_EventScript_CutSolved
 	msgbox EscapeRoom_BlackRoom_Text_FourNumberComnoRequiredWrongSolution, MSGBOX_YESNO
 	compare VAR_RESULT, YES

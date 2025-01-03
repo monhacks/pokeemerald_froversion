@@ -1152,7 +1152,7 @@ bool32 TryFindTeleportDestination(void)
     struct ObjectEvent *objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     
 
-    for (i = 0; i < 8; i++)
+    for (i = 1; i < 8; i++)
     {
             switch (GetPlayerFacingDirection())
         {

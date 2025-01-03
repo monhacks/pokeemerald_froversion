@@ -6146,7 +6146,7 @@
       "name": "EscapeRoom_FirstRoom_Protagonist2_Layout",
       "width": 80,
       "height": 80,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_Plains",
       "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/EscapeRoom_FirstRoom_Protagonist2/border.bin",
       "blockdata_filepath": "data/layouts/EscapeRoom_FirstRoom_Protagonist2/map.bin"
@@ -6180,6 +6180,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/EscapeRoom_BlackRoom/border.bin",
       "blockdata_filepath": "data/layouts/EscapeRoom_BlackRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_ESCAPE_ROOM_BLACK_ROOM_PLAINS",
+      "name": "EscapeRoom_BlackRoomPlains_Layout",
+      "width": 5,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/EscapeRoom_BlackRoomPlains/border.bin",
+      "blockdata_filepath": "data/layouts/EscapeRoom_BlackRoomPlains/map.bin"
     }
   ]
 }

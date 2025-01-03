@@ -1080,6 +1080,9 @@ struct TradeRoomPlayer
 #define B_VERSION_FRO           FALSE
 #define B_VERSION_MARRIOTT      FALSE
 #define B_VERSION_MAGM6         FALSE
-#define B_VERSION_MAGEE         TRUE
+#define B_VERSION_MAGEE         FALSE
+#define B_VERSION_ESCAPE_ROOM_MASTER   FALSE
+#define B_VERSION_ESCAPE_ROOM_PLAINS   FALSE
+#define B_VERSION_ESCAPE_ROOM_SNOW   TRUE
 
 #endif // GUARD_GLOBAL_H
