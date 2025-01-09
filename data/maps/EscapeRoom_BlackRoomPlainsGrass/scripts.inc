@@ -1,5 +1,19 @@
 EscapeRoom_BlackRoomPlainsGrass_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, EscapeRoom_BlackRoomPlainsGrass_OnFrame
 	.byte 0
+
+EscapeRoom_BlackRoomPlainsGrass_OnFrame::
+	map_script_2 VAR_ESCAPE_ROOM_PLAINS_GRASS, 0, EscapeRoom_BlackRoomPlainsGrass_EventScript_GameStart
+	.2byte 0
+
+EscapeRoom_BlackRoomPlainsGrass_EventScript_GameStart::
+	givecustommon SPECIES_ARCANINE, 50, ITEM_NONE, ITEM_GREAT_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_ADVENTURE_STARTED
+	setvar VAR_ESCAPE_ROOM_PLAINS_GRASS, 1
+	release
+	end
 
 EscapeRoom_BlackRoomPlainsGrass_EventScript_DoorRiddleStart::
 	lockall
