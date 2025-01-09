@@ -320,7 +320,9 @@
     "EscapeRoom_IceCave1",
     "EscapeRoom_StartingRoom",
     "EscapeRoom_BlackRoom",
-    "EscapeRoom_BlackRoomPlains"
+    "EscapeRoom_BlackRoomPlains",
+    "EscapeRoom_Plains",
+    "EscapeRoom_BlackRoomPlainsGrass"
   ],
   "gMapGroup10": [
     "MauvilleCity_Gym",

@@ -6190,6 +6190,26 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/EscapeRoom_BlackRoomPlains/border.bin",
       "blockdata_filepath": "data/layouts/EscapeRoom_BlackRoomPlains/map.bin"
+    },
+    {
+      "id": "LAYOUT_ESCAPE_ROOM_PLAINS",
+      "name": "EscapeRoom_Plains_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_Plains",
+      "secondary_tileset": "gTileset_PlainsSecondary",
+      "border_filepath": "data/layouts/EscapeRoom_Plains/border.bin",
+      "blockdata_filepath": "data/layouts/EscapeRoom_Plains/map.bin"
+    },
+    {
+      "id": "LAYOUT_ESCAPE_ROOM_BLACK_ROOM_PLAINS_GRASS",
+      "name": "EscapeRoom_BlackRoomPlainsGrass_Layout",
+      "width": 5,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/EscapeRoom_BlackRoomPlainsGrass/border.bin",
+      "blockdata_filepath": "data/layouts/EscapeRoom_BlackRoomPlainsGrass/map.bin"
     }
   ]
 }

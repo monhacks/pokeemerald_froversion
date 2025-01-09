@@ -184,6 +184,12 @@ EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutSolved:
 	finditem ITEM_HM01
 	release
 	end
+
+EscapeRoom_FirstRoom_ProtagonistOne_EventScript_FindRazorLeaf::
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne_Text_ThisItemIsTheKeyToUnlockingGrassDoor, MSGBOX_DEFAULT
+	finditem ITEM_TM01
+	release
+	end
 	
 EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CantLeave::
 	lockall
@@ -192,6 +198,10 @@ EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CantLeave::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	releaseall
 	end
+
+EscapeRoom_FirstRoom_ProtagonistOne_Text_ThisItemIsTheKeyToUnlockingGrassDoor:
+	.string "This item contains the code to unlock\n"
+	.string "a locked door!$"
 
 EscapeRoom_FirstRoom_ProtagonistOne_Text_FourLetterComboRequired1stLetter:
 	.string "Input 1st Letter of four digit code$"

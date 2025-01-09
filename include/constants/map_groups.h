@@ -290,6 +290,8 @@
 #define MAP_ESCAPE_ROOM_STARTING_ROOM              (17 | (9 << 8))
 #define MAP_ESCAPE_ROOM_BLACK_ROOM                 (18 | (9 << 8))
 #define MAP_ESCAPE_ROOM_BLACK_ROOM_PLAINS          (19 | (9 << 8))
+#define MAP_ESCAPE_ROOM_PLAINS                     (20 | (9 << 8))
+#define MAP_ESCAPE_ROOM_BLACK_ROOM_PLAINS_GRASS    (21 | (9 << 8))
 
 // gMapGroup10
 #define MAP_MAUVILLE_CITY_GYM               (0 | (10 << 8))

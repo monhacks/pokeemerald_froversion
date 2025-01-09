@@ -21,5 +21,5 @@ EscapeRoom_FirstRoom_Protagonist2__Text_IceRoomClue1:
 
 EscapeRoom_FirstRoom_Protagonist2__Text_IceRoomClue2:	
 	.string "{COLOR BLUE}Reverse then repeat to unlock\n"
-	.string "your next treat.$"
+	.string "your a snowy retreat.$"
 	

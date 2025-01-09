@@ -31,3 +31,4 @@ EventScript_ReleaseUseTeleportFromField:: @ 8271ED5
 	releaseall
 EventScript_EndUseTeleportFromField:: @ 8271ED6
 	end
+	

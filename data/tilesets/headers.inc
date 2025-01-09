@@ -1314,3 +1314,14 @@ gTileset_Plains::
 	.4byte gMetatiles_Plains
 	.4byte gMetatileAttributes_Plains
 	.4byte NULL @ animation callback
+
+	.align 2
+gTileset_PlainsSecondary::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_PlainsSecondary
+	.4byte gTilesetPalettes_PlainsSecondary
+	.4byte gMetatiles_PlainsSecondary
+	.4byte gMetatileAttributes_PlainsSecondary
+	.4byte NULL @ animation callback

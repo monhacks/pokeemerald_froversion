@@ -870,3 +870,11 @@ gMetatiles_Plains::
 	.align 1
 gMetatileAttributes_Plains::
 	.incbin "data/tilesets/primary/plains/metatile_attributes.bin"
+
+	.align 1
+gMetatiles_PlainsSecondary::
+	.incbin "data/tilesets/secondary/plains_secondary/metatiles.bin"
+
+	.align 1
+gMetatileAttributes_PlainsSecondary::
+	.incbin "data/tilesets/secondary/plains_secondary/metatile_attributes.bin"

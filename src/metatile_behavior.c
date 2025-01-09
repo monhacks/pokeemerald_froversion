@@ -54,7 +54,7 @@ static const u8 sTileBitAttributes[] =
     [MB_LAVARIDGE_GYM_B1F_WARP] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
     [MB_SEAWEED_NO_SURFACING] = TILE_ATTRIBUTES(TRUE, TRUE, TRUE),
     [MB_REFLECTION_UNDER_BRIDGE] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
-    [MB_UNUSED_2C] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_ICE_WARP_PAD] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
     [MB_UNUSED_2D] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_UNUSED_2E] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_UNUSED_2F] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
@@ -327,6 +327,7 @@ bool8 MetatileBehavior_IsReflective(u8 metatileBehavior)
      || metatileBehavior == MB_PUDDLE
      || metatileBehavior == MB_UNUSED_SOOTOPOLIS_DEEP_WATER_2
      || metatileBehavior == MB_ICE
+     || metatileBehavior == MB_ICE_WARP_PAD
      || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER
      || metatileBehavior == MB_REFLECTION_UNDER_BRIDGE)
         return TRUE;
@@ -336,7 +337,7 @@ bool8 MetatileBehavior_IsReflective(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsIce(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_ICE)
+    if (metatileBehavior == MB_ICE || metatileBehavior == MB_ICE_WARP_PAD)
         return TRUE;
     else
         return FALSE;
@@ -468,6 +469,7 @@ bool8 MetatileBehavior_IsForcedMovementTile(u8 metatileBehavior)
      || metatileBehavior == MB_CRACKED_FLOOR
      || metatileBehavior == MB_WATERFALL
      || metatileBehavior == MB_ICE
+     || metatileBehavior == MB_ICE_WARP_PAD
      || metatileBehavior == MB_SECRET_BASE_JUMP_MAT
      || metatileBehavior == MB_SECRET_BASE_SPIN_MAT)
         return TRUE;
@@ -477,7 +479,8 @@ bool8 MetatileBehavior_IsForcedMovementTile(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsIce_2(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_ICE)
+    if (metatileBehavior == MB_ICE
+     || metatileBehavior == MB_ICE_WARP_PAD)
         return TRUE;
     else
         return FALSE;
@@ -1269,7 +1272,7 @@ bool8 MetatileBehavior_IsWarpOrBridge(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMossdeepGymWarp(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_MOSSDEEP_GYM_WARP)
+    if (metatileBehavior == MB_MOSSDEEP_GYM_WARP || metatileBehavior == MB_ICE_WARP_PAD)
         return TRUE;
     else
         return FALSE;
@@ -1600,7 +1603,7 @@ bool8 MetatileBehavior_IsTeleportTarget(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_AQUA_HIDEOUT_WARP)
         return TRUE;
-    else if (metatileBehavior == MB_MOSSDEEP_GYM_WARP)
+    else if (metatileBehavior == MB_MOSSDEEP_GYM_WARP || metatileBehavior == MB_ICE_WARP_PAD)
         return TRUE;
     else
         return FALSE;

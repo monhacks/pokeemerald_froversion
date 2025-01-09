@@ -1,5 +1,5 @@
 #define TMHM_LEARNSET(moves) {(u32)(moves), ((u64)(moves) >> 32)}
-#define TMHM(tmhm) ((u64)1 << (ITEM_##tmhm - ITEM_TM01_FOCUS_PUNCH))
+#define TMHM(tmhm) ((u64)1 << (ITEM_##tmhm - ITEM_TM01_RAZOR_LEAF))
 
 // This table determines which TMs and HMs a species is capable of learning.
 // Each entry is a 64-bit bit array spread across two 32-bit values, with
@@ -71,7 +71,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_CHARMANDER]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CHARMANDER]  = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -95,7 +95,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_CHARMELEON]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CHARMELEON]  = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -119,7 +119,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_CHARIZARD]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CHARIZARD]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -148,7 +148,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_SQUIRTLE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SQUIRTLE]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
@@ -173,7 +173,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_WARTORTLE]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_WARTORTLE]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
@@ -198,7 +198,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_BLASTOISE]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_BLASTOISE]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -472,7 +472,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM04_STRENGTH)),
 
-    [SPECIES_PIKACHU]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_PIKACHU]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -495,7 +495,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_RAICHU]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_RAICHU]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -520,7 +520,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_SANDSHREW]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SANDSHREW]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -544,7 +544,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_SANDSLASH]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SANDSLASH]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -623,7 +623,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_NIDOQUEEN]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_NIDOQUEEN]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -715,7 +715,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_NIDOKING]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_NIDOKING]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -754,7 +754,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_CLEFAIRY]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CLEFAIRY]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -789,7 +789,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_CLEFABLE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CLEFABLE]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -864,7 +864,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM50_OVERHEAT)),
 
-    [SPECIES_JIGGLYPUFF]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_JIGGLYPUFF]  = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -897,7 +897,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_WIGGLYTUFF]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_WIGGLYTUFF]  = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1213,7 +1213,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_PSYDUCK]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_PSYDUCK]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -1241,7 +1241,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_GOLDUCK]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_GOLDUCK]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -1270,7 +1270,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_MANKEY]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MANKEY]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1298,7 +1298,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_PRIMEAPE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_PRIMEAPE]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1394,7 +1394,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_POLIWHIRL]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_POLIWHIRL]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
@@ -1421,7 +1421,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_POLIWRATH]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_POLIWRATH]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
@@ -1451,7 +1451,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_ABRA]        = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_ABRA]        = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1479,7 +1479,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_KADABRA]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_KADABRA]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1507,7 +1507,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_ALAKAZAM]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_ALAKAZAM]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1536,7 +1536,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_MACHOP]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MACHOP]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1560,7 +1560,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_MACHOKE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MACHOKE]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1584,7 +1584,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_MACHAMP]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MACHAMP]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1714,7 +1714,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_GEODUDE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_GEODUDE]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -1736,7 +1736,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_GRAVELER]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_GRAVELER]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -1758,7 +1758,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_GOLEM]       = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_GOLEM]       = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -1850,7 +1850,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_SLOWBRO]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SLOWBRO]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -2041,7 +2041,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)),
 
-    [SPECIES_MUK]         = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MUK]         = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -2155,7 +2155,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)),
 
-    [SPECIES_GENGAR]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_GENGAR]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -2206,7 +2206,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_DROWZEE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_DROWZEE]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2233,7 +2233,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_HYPNO]       = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_HYPNO]       = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2396,7 +2396,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_CUBONE]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CUBONE]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -2423,7 +2423,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_MAROWAK]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MAROWAK]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -2451,7 +2451,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_HITMONLEE]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_HITMONLEE]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2472,7 +2472,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_HITMONCHAN]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_HITMONCHAN]  = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2493,7 +2493,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_LICKITUNG]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_LICKITUNG]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2607,7 +2607,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_RHYDON]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_RHYDON]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2641,7 +2641,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_CHANSEY]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CHANSEY]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -2702,7 +2702,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_KANGASKHAN]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_KANGASKHAN]  = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -2869,7 +2869,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_MR_MIME]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MR_MIME]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -2920,7 +2920,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_JYNX]        = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_JYNX]        = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -2949,7 +2949,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_ELECTABUZZ]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_ELECTABUZZ]  = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -2974,7 +2974,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_MAGMAR]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MAGMAR]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -2996,7 +2996,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_PINSIR]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_PINSIR]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -3354,7 +3354,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_SNORLAX]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SNORLAX]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -3511,7 +3511,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM03_SURF)
                                         | TMHM(HM07_WATERFALL)),
 
-    [SPECIES_DRAGONITE]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_DRAGONITE]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -3552,7 +3552,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_MEWTWO]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MEWTWO]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -3596,7 +3596,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_MEW]         = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MEW]         = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -3742,7 +3742,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM01_CUT)),
 
-    [SPECIES_QUILAVA]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_QUILAVA]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -3765,7 +3765,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_TYPHLOSION]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_TYPHLOSION]  = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -3790,7 +3790,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_TOTODILE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_TOTODILE]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
@@ -3815,7 +3815,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_CROCONAW]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CROCONAW]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -3843,7 +3843,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_FERALIGATR]  = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FERALIGATR]  = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -3874,7 +3874,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_SENTRET]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SENTRET]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -3901,7 +3901,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM03_SURF)),
 
-    [SPECIES_FURRET]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FURRET]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -3976,7 +3976,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM02_FLY)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_LEDYBA]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_LEDYBA]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -3999,7 +3999,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_LEDIAN]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_LEDIAN]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -4227,7 +4227,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_TOGETIC]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_TOGETIC]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4328,7 +4328,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_FLAAFFY]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FLAAFFY]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -4350,7 +4350,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_AMPHAROS]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_AMPHAROS]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM15_HYPER_BEAM)
@@ -4393,7 +4393,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_MARILL]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MARILL]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
@@ -4418,7 +4418,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_AZUMARILL]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_AZUMARILL]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
@@ -4444,7 +4444,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_SUDOWOODO]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SUDOWOODO]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4467,7 +4467,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_POLITOED]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_POLITOED]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
@@ -4547,7 +4547,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_AIPOM]       = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_AIPOM]       = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -4664,7 +4664,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_QUAGSIRE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_QUAGSIRE]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
@@ -4764,7 +4764,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM02_FLY)),
 
-    [SPECIES_SLOWKING]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SLOWKING]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -4980,7 +4980,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_SNUBBULL]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SNUBBULL]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -5014,7 +5014,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_GRANBULL]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_GRANBULL]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -5115,7 +5115,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_HERACROSS]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_HERACROSS]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -5139,7 +5139,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_SNEASEL]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SNEASEL]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
@@ -5170,7 +5170,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_TEDDIURSA]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_TEDDIURSA]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
@@ -5196,7 +5196,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_URSARING]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_URSARING]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
@@ -5394,7 +5394,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_DELIBIRD]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_DELIBIRD]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
@@ -5687,7 +5687,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_ELEKID]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_ELEKID]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM16_LIGHT_SCREEN)
@@ -5709,7 +5709,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_MAGBY]       = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MAGBY]       = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -5729,7 +5729,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_MILTANK]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MILTANK]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -5760,7 +5760,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_BLISSEY]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_BLISSEY]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -5922,7 +5922,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_TYRANITAR]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_TYRANITAR]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -6114,7 +6114,7 @@ const u32 gTMHMLearnsets[][2] =
 
     [SPECIES_OLD_UNOWN_Z] = TMHM_LEARNSET(0),
 
-    [SPECIES_TREECKO]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_TREECKO]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6140,7 +6140,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_GROVYLE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_GROVYLE]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6166,7 +6166,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_SCEPTILE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SCEPTILE]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -6217,7 +6217,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_COMBUSKEN]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_COMBUSKEN]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -6241,7 +6241,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_BLAZIKEN]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_BLAZIKEN]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
@@ -6317,7 +6317,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_SWAMPERT]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SWAMPERT]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -6547,7 +6547,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_LUDICOLO]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_LUDICOLO]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
@@ -6765,7 +6765,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_BRELOOM]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_BRELOOM]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM09_BULLET_SEED)
@@ -6792,7 +6792,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_SPINDA]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SPINDA]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -7013,7 +7013,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_KECLEON]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_KECLEON]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7141,7 +7141,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_SABLEYE]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SABLEYE]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -7456,7 +7456,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_MAKUHITA]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MAKUHITA]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7478,7 +7478,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_HARIYAMA]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_HARIYAMA]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7661,7 +7661,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
 
-    [SPECIES_CACNEA]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CACNEA]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7680,7 +7680,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_CACTURNE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CACTURNE]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM09_BULLET_SEED)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7841,7 +7841,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_GRUMPIG]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_GRUMPIG]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -7905,7 +7905,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_MAWILE]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MAWILE]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -7932,7 +7932,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_MEDITITE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MEDITITE]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
@@ -7957,7 +7957,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_MEDICHAM]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MEDICHAM]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
@@ -8057,7 +8057,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_DUSCLOPS]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_DUSCLOPS]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -8106,7 +8106,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_SLAKOTH]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SLAKOTH]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
@@ -8136,7 +8136,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_VIGOROTH]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_VIGOROTH]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -8169,7 +8169,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_SLAKING]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SLAKING]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -8534,7 +8534,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_ZANGOOSE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_ZANGOOSE]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
@@ -8644,7 +8644,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_AGGRON]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_AGGRON]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM05_ROAR)
@@ -8709,7 +8709,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_VOLBEAT]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_VOLBEAT]     = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -8735,7 +8735,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM46_THIEF)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_ILLUMISE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_ILLUMISE]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -9056,7 +9056,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_REGIROCK]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_REGIROCK]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -9080,7 +9080,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_REGICE]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_REGICE]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM07_HAIL)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -9104,7 +9104,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
-    [SPECIES_REGISTEEL]   = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_REGISTEEL]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM11_SUNNY_DAY)
@@ -9332,7 +9332,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_DEOXYS]      = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_DEOXYS]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
                                         | TMHM(TM06_TOXIC)
@@ -9393,7 +9393,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM05_FLASH)),
-    [SPECIES_RASCALOOT]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_RASCALOOT]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM09_BULLET_SEED)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -9412,7 +9412,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
-    [SPECIES_BANDITHUG]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_BANDITHUG]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM09_BULLET_SEED)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -9431,7 +9431,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
-    [SPECIES_RUTHLASH]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_RUTHLASH]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM09_BULLET_SEED)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -9807,7 +9807,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM32_DOUBLE_TEAM)
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
-                                            | TMHM(TM01_FOCUS_PUNCH)
+                                            | TMHM(TM01_RAZOR_LEAF)
                                             | TMHM(TM21_FRUSTRATION)
                                             | TMHM(TM07_HAIL)
                                             | TMHM(TM10_HIDDEN_POWER)
@@ -9836,7 +9836,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM32_DOUBLE_TEAM)
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
-                                            | TMHM(TM01_FOCUS_PUNCH)
+                                            | TMHM(TM01_RAZOR_LEAF)
                                             | TMHM(TM21_FRUSTRATION)
                                             | TMHM(TM07_HAIL)
                                             | TMHM(TM10_HIDDEN_POWER)
@@ -9856,7 +9856,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM06_TOXIC)
                                             | TMHM(HM07_WATERFALL)
                                             | TMHM(TM03_WATER_PULSE)),
-    [SPECIES_DUMBELLION]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_DUMBELLION]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -9880,7 +9880,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
-    [SPECIES_BARBELLION]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_BARBELLION]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM08_BULK_UP)
                                         | TMHM(TM10_HIDDEN_POWER)
@@ -9904,7 +9904,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
-    [SPECIES_OCTIRE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_OCTIRE]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM12_TAUNT)
@@ -9924,7 +9924,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_INVERTEBRAKE]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_INVERTEBRAKE]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM10_HIDDEN_POWER)
                                         | TMHM(TM12_TAUNT)
@@ -10074,7 +10074,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM38_FIRE_BLAST)
                                             | TMHM(TM35_FLAMETHROWER)
-                                            | TMHM(TM01_FOCUS_PUNCH)
+                                            | TMHM(TM01_RAZOR_LEAF)
                                             | TMHM(TM21_FRUSTRATION)
                                             | TMHM(TM19_GIGA_DRAIN)
                                             | TMHM(TM10_HIDDEN_POWER)
@@ -10097,7 +10097,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM24_THUNDERBOLT)
                                             | TMHM(TM41_TORMENT)
                                             | TMHM(TM06_TOXIC)),
-    [SPECIES_BILLFALO]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_BILLFALO]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM05_ROAR)
                                         | TMHM(TM06_TOXIC)
                                         | TMHM(TM08_BULK_UP)
@@ -10135,7 +10135,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM28_DIG)
                                             | TMHM(TM32_DOUBLE_TEAM)
                                             | TMHM(TM42_FACADE)
-                                            | TMHM(TM01_FOCUS_PUNCH)
+                                            | TMHM(TM01_RAZOR_LEAF)
                                             | TMHM(TM21_FRUSTRATION)
                                             | TMHM(TM07_HAIL)
                                             | TMHM(TM10_HIDDEN_POWER)
@@ -10164,7 +10164,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM32_DOUBLE_TEAM)
                                             | TMHM(TM26_EARTHQUAKE)
                                             | TMHM(TM42_FACADE)
-                                            | TMHM(TM01_FOCUS_PUNCH)
+                                            | TMHM(TM01_RAZOR_LEAF)
                                             | TMHM(TM21_FRUSTRATION)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM15_HYPER_BEAM)
@@ -10190,7 +10190,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM38_FIRE_BLAST)
                                             | TMHM(TM35_FLAMETHROWER)
-                                            | TMHM(TM01_FOCUS_PUNCH)
+                                            | TMHM(TM01_RAZOR_LEAF)
                                             | TMHM(TM21_FRUSTRATION)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM17_PROTECT)
@@ -10211,7 +10211,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM42_FACADE)
                                             | TMHM(TM38_FIRE_BLAST)
                                             | TMHM(TM35_FLAMETHROWER)
-                                            | TMHM(TM01_FOCUS_PUNCH)
+                                            | TMHM(TM01_RAZOR_LEAF)
                                             | TMHM(TM21_FRUSTRATION)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM17_PROTECT)
@@ -10254,7 +10254,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM32_DOUBLE_TEAM)
                                             | TMHM(TM42_FACADE)
                                             | TMHM(HM05_FLASH)
-                                            | TMHM(TM01_FOCUS_PUNCH)
+                                            | TMHM(TM01_RAZOR_LEAF)
                                             | TMHM(TM21_FRUSTRATION)
                                             | TMHM(TM10_HIDDEN_POWER)
                                             | TMHM(TM15_HYPER_BEAM)
@@ -10342,7 +10342,7 @@ const u32 gTMHMLearnsets[][2] =
                                             | TMHM(TM46_THIEF)
                                             | TMHM(TM41_TORMENT)
                                             | TMHM(TM06_TOXIC)),
-    [SPECIES_MAROWAK_ALOLAN]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MAROWAK_ALOLAN]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -10486,7 +10486,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM05_FLASH)
                                         | TMHM(HM06_ROCK_SMASH)),
-    [SPECIES_MEGA_DEWGONG]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_MEGA_DEWGONG]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -10543,7 +10543,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_8]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_8]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -10600,7 +10600,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_9]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_9]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -10693,7 +10693,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM48_SKILL_SWAP)
                                         | TMHM(TM50_OVERHEAT)
                                         | TMHM(HM05_FLASH)),
-    [SPECIES_SHADOW_CHARIZARD]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SHADOW_CHARIZARD]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -10750,7 +10750,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_ABYSSALDRAGONTHIRDEVO]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_ABYSSALDRAGONTHIRDEVO]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -10807,7 +10807,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_ABYSSALDRAGONSECONDEVO]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_ABYSSALDRAGONSECONDEVO]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -10864,7 +10864,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_ABYSSALDRAGONFIRSTEVO]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_ABYSSALDRAGONFIRSTEVO]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -10921,7 +10921,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_CHEETO]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CHEETO]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -10978,7 +10978,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_17]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_17]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11035,7 +11035,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_18]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_18]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11092,7 +11092,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_19]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_19]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11149,7 +11149,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_20]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_20]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11206,7 +11206,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_21]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_21]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11263,7 +11263,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_22]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_22]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11320,7 +11320,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_23]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_23]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11377,7 +11377,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_24]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_24]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11434,7 +11434,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_25]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_25]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11491,7 +11491,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_26]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_26]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11548,7 +11548,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_27]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_27]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11605,7 +11605,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_28]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_28]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11662,7 +11662,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_29]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_29]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11719,7 +11719,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_30]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_30]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11776,7 +11776,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_31]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_31]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11833,7 +11833,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_32]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_32]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11890,7 +11890,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_33]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_33]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -11947,7 +11947,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_34]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_34]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -12004,7 +12004,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_35]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_35]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -12061,7 +12061,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_36]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_36]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -12118,7 +12118,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_ARIADOS_GHOST]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_ARIADOS_GHOST]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -12175,7 +12175,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_FILLER_38]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_FILLER_38]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -12232,7 +12232,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_CHARIZARD_X]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CHARIZARD_X]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -12289,7 +12289,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_WARKLOCK]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_WARKLOCK]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -12346,7 +12346,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_CLOCLOCK]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_CLOCLOCK]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)
@@ -12403,7 +12403,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM06_ROCK_SMASH)
                                         | TMHM(HM07_WATERFALL)
                                         | TMHM(HM08_DIVE)),
-    [SPECIES_SPIRETT]    = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+    [SPECIES_SPIRETT]    = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM02_DRAGON_CLAW)
                                         | TMHM(TM03_WATER_PULSE)
                                         | TMHM(TM04_CALM_MIND)

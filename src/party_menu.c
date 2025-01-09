@@ -2579,7 +2579,7 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
         if (!(fieldMoves & (1 << j))
          && hmItem != ITEM_NONE
          && CheckBagHasItem(hmItem, 1)
-         && CanMonLearnTMHM(&mons[slotId], hmItem - ITEM_TM01_FOCUS_PUNCH))
+         && CanMonLearnTMHM(&mons[slotId], hmItem - ITEM_TM01_RAZOR_LEAF))
         {
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
             fieldMoves |= 1 << j;
@@ -4817,7 +4817,7 @@ bool8 MonKnowsFieldMove(struct Pokemon *mon, u16 move)
     hmItem = GetHMItem(move);
     if (hmItem != ITEM_NONE
      && CheckBagHasItem(hmItem, 1)
-     &&  CanMonLearnTMHM(mon, hmItem - ITEM_TM01_FOCUS_PUNCH))
+     &&  CanMonLearnTMHM(mon, hmItem - ITEM_TM01_RAZOR_LEAF))
     {
         return TRUE;
     }

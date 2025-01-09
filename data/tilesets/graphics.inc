@@ -2609,3 +2609,23 @@ gTilesetPalettes_Plains::
 	.align 2
 gTilesetTiles_Plains::
 	.incbin "data/tilesets/primary/plains/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_PlainsSecondary::
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/plains_secondary/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_PlainsSecondary::
+	.incbin "data/tilesets/secondary/plains_secondary/tiles.4bpp.lz"
