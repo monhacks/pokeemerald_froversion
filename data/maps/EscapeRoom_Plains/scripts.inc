@@ -92,6 +92,73 @@ EscapeRoom_Plains_EventScript_FlameOrbSolved:
 	release
 	end
 
+EscapeRoom_Plains_EventScript_WarpPadPuzzleUpperOne::
+	compare VAR_TEMP_1, 0
+	goto_if_eq EscapeRoom_Plains_EventScript_WarpPadPuzzleAddVar
+	goto_if_ne EscapeRoom_Plains_EventScript_WarpPadPuzzleReset
+
+EscapeRoom_Plains_EventScript_WarpPadPuzzleLowerTwo::
+	compare VAR_TEMP_1, 1
+	goto_if_eq EscapeRoom_Plains_EventScript_WarpPadPuzzleAddVar
+	goto_if_ne EscapeRoom_Plains_EventScript_WarpPadPuzzleReset
+
+EscapeRoom_Plains_EventScript_WarpPadPuzzleUpperTwo::
+	compare VAR_TEMP_1, 2
+	goto_if_eq EscapeRoom_Plains_EventScript_WarpPadPuzzleAddVar
+	goto_if_ne EscapeRoom_Plains_EventScript_WarpPadPuzzleReset
+
+EscapeRoom_Plains_EventScript_WarpPadPuzzleLowerThree::
+	compare VAR_TEMP_1, 3
+	goto_if_eq EscapeRoom_Plains_EventScript_WarpPadPuzzleAddVar
+	goto_if_ne EscapeRoom_Plains_EventScript_WarpPadPuzzleReset
+
+EscapeRoom_Plains_EventScript_WarpPadPuzzleUpperFour::
+	compare VAR_TEMP_1, 4
+	goto_if_eq EscapeRoom_Plains_EventScript_WarpPadPuzzleAddVar
+	goto_if_ne EscapeRoom_Plains_EventScript_WarpPadPuzzleReset
+
+EscapeRoom_Plains_EventScript_WarpPadPuzzleLowerOne::
+	compare VAR_TEMP_1, 5
+	goto_if_eq EscapeRoom_Plains_EventScript_WarpPadPuzzleAddVar
+	goto_if_ne EscapeRoom_Plains_EventScript_WarpPadPuzzleReset
+
+EscapeRoom_Plains_EventScript_WarpPadPuzzleLowerFour::
+	compare VAR_TEMP_1, 6
+	goto_if_eq EscapeRoom_Plains_EventScript_WarpPadPuzzleAddVar
+	goto_if_ne EscapeRoom_Plains_EventScript_WarpPadPuzzleReset
+	
+EscapeRoom_Plains_EventScript_WarpPadPuzzleUpperThree::
+	compare VAR_TEMP_1, 7
+	goto_if_eq EscapeRoom_Plains_EventScript_WarpPadPuzzleAddVar
+	goto_if_ne EscapeRoom_Plains_EventScript_WarpPadPuzzleReset
+
+EscapeRoom_Plains_EventScript_WarpPadPuzzleAddVar:
+	addvar VAR_TEMP_1, 1
+	compare VAR_TEMP_1, 7
+	goto_if_eq EscapeRoom_Plains_EventScript_WarpPadPuzzleSolved
+	release
+	end
+
+EscapeRoom_Plains_EventScript_WarpPadPuzzleSolved:
+	goto_if_unset FLAG_WAR_PAD_PUZZLE_SOLVED, EscapeRoom_Plains_EventScript_WarpPadPuzzleSolvedEnd
+	addobject 3
+	clearflag FLAG_WAR_PAD_PUZZLE_SOLVED
+	playse SE_SAVE
+	waitse
+EscapeRoom_Plains_EventScript_WarpPadPuzzleSolvedEnd:
+	release
+	end
+
+EscapeRoom_Plains_EventScript_FinalPuzzleClue::
+	msgbox EscapeRoom_Plains_Text_FinalPuzzleSolved, MSGBOX_DEFAULT
+	release
+	end
+
+EscapeRoom_Plains_EventScript_WarpPadPuzzleReset:
+	setvar VAR_TEMP_1, 0
+	release
+	end
+
 EscapeRoom_Plains_Text_IceCaveClue:	
 	.string "If you're ever feeling too cold,\n"
 	.string "try Yfihnied.$"
@@ -113,5 +180,10 @@ EscapeRoom_Plains_Text_FourLetterComboRequiredWrongSolution:
 	.string "Sorry that is incorrect. Try again?$"
 
 EscapeRoom_Plains_Text_WaterRoomFinalClue:
-	.string "Final Clue for water room$"
+	.string "There is water hidden in the\n"
+	.string "Grass...$"
+
+EscapeRoom_Plains_Text_FinalPuzzleSolved:
+	.string "Dra Vencd vuin hispan luta du aclyba\n"
+	.string "ec: Veja, Veja, Cajah, Drnaa$"
 

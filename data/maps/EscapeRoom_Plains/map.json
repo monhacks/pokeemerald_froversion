@@ -41,7 +41,7 @@
       "flag": "FLAG_RECEIVED_CASTFORM"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_CHANSEY",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 42,
       "y": 24,
       "elevation": 0,
@@ -50,8 +50,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "EscapeRoom_Plains_EventScript_FinalPuzzleClue",
+      "flag": "FLAG_WAR_PAD_PUZZLE_SOLVED"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -88,6 +88,78 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CantLeave"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_Plains_EventScript_WarpPadPuzzleUpperOne"
+    },
+    {
+      "type": "trigger",
+      "x": 41,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_Plains_EventScript_WarpPadPuzzleUpperTwo"
+    },
+    {
+      "type": "trigger",
+      "x": 44,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_Plains_EventScript_WarpPadPuzzleUpperThree"
+    },
+    {
+      "type": "trigger",
+      "x": 46,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_Plains_EventScript_WarpPadPuzzleUpperFour"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_Plains_EventScript_WarpPadPuzzleLowerOne"
+    },
+    {
+      "type": "trigger",
+      "x": 41,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_Plains_EventScript_WarpPadPuzzleLowerTwo"
+    },
+    {
+      "type": "trigger",
+      "x": 44,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_Plains_EventScript_WarpPadPuzzleLowerThree"
+    },
+    {
+      "type": "trigger",
+      "x": 46,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_Plains_EventScript_WarpPadPuzzleLowerFour"
     }
   ],
   "bg_events": [

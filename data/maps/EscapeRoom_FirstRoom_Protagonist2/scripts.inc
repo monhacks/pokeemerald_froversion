@@ -121,6 +121,12 @@ Text_Solved_Burn_Cipher:
 	.string "inflict damage every turn and also\l"
 	.string "lowers thier attack!$"
 
+EscapeRoom_FirstRoom_Protagonist2__EventScript_FinalClueMaster::
+	lock
+	msgbox EscapeRoom_FirstRoom_Protagonist2__Text_FinalClueMaster, MSGBOX_DEFAULT
+	release
+	end
+
 EscapeRoom_FirstRoom_Protagonist2_Text_FourNumberComnoRequired1stNumber:
 	.string "Input 1st Letter of four digit code$"
 
@@ -183,4 +189,9 @@ EscapeRoom_FirstRoom_Protagonist2__Text_IceRoomClue2:
 EscapeRoom_FirstRoom_Protagonist2__Text_SnowRoomFinalClue:	
 	.string "Log, Log, Dead, Alive, Grass, Dead,\n"
 	.string "Grass, Log$"
+
+EscapeRoom_FirstRoom_Protagonist2__Text_FinalClueMaster:	
+	.string "Dra Caluht vuin hispan luta du aclyba\n"
+	.string "ec: Ceq, Uha, Dfu, Ceq$"
+
 	

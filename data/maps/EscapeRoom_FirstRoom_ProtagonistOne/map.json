@@ -3,7 +3,7 @@
   "name": "EscapeRoom_FirstRoom_ProtagonistOne",
   "layout": "LAYOUT_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE",
   "music": "MUS_FV_STILLSNOW",
-  "region_map_section": "MAPSEC_FORTREE_CITY",
+  "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SNOW",
   "map_type": "MAP_TYPE_INDOOR",

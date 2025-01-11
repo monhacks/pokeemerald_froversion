@@ -326,6 +326,6 @@ EscapeRoom_FirstRoom_Protagonist2__Text_MountainRoomFinalClue:
 	.string "to right.$"
 
 EscapeRoom_FirstRoom_ProtagonistOne__Text_FinalPuzzleSolved:
-	.string "Dra Vencd vuin hispan luta du aclyba\n"
+	.string "Dra Vuindr vuin hispan luta du aclyba\n"
 	.string "ec: Uha, Cajah, Dfu, Ceq$"
 

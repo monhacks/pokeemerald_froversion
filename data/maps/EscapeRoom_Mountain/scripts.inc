@@ -180,9 +180,13 @@ EscapeRoom_Mountain_Text_BoxOpenedRecievedIceVest:
 	.string "Surfaces!"
 
 EscapeRoom_Mountain_Text_GrassRoomFinalClue:
-	.string "Grass room final clue.$"
+	.string "When you teleport as high as you\n"
+	.string "can, there is a secret hidden\l"
+	.string "in the land.\p"
+	.string "ONE two TWO three FOUR one four\n"
+	.string "THREE$"
 
 EscapeRoom_Mountain_Text_FinalPuzzleSolved:
-	.string "Dra Vencd vuin hispan luta du aclyba\n"
+	.string "Dra Drent vuin hispan luta du aclyba\n"
 	.string "ec: Aekrd, Vuin, Uha, Heha$"
 

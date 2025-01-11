@@ -3,7 +3,7 @@
   "name": "EscapeRoom_FirstRoom_Protagonist2",
   "layout": "LAYOUT_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST2",
   "music": "MUS_OLDALE",
-  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "region_map_section": "MAPSEC_DEWFORD_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -249,7 +249,15 @@
       "y": 51,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EscapeRoom_FirstRoom_Protagonist2__EventScript_IceRoomClue1"
+      "script": "EscapeRoom_FirstRoom_Protagonist2__EventScript_SnowRoomFinalClue"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EscapeRoom_FirstRoom_Protagonist2__EventScript_FinalClueMaster"
     }
   ]
 }
