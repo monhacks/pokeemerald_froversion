@@ -3,7 +3,214 @@ EscapeRoom_StartingRoom_MapScripts::
 
 
 EscapeRoom_StartingRoom_EventScript_SolveTheRiddle::
-	end
+	compare VAR_TEMP_1, 0
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolvePlains
+	compare VAR_TEMP_1, 1
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveWater
+	compare VAR_TEMP_1, 2
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveSnow
+	compare VAR_TEMP_1, 3
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveMountain
+
+EscapeRoom_StartingRoom_EventScript_SolvePlains:
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired1stNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 5
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolvePlains_CorrectAnswer1
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolvePlains_CorrectAnswer1:
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 5
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolvePlains_CorrectAnswer2
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolvePlains_CorrectAnswer2:
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 7
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolvePlains_CorrectAnswer3
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+	
+EscapeRoom_StartingRoom_EventScript_SolvePlains_CorrectAnswer3:
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 3
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolvePlains_Solved
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolvePlains_Solved:
+	msgbox EscapeRoom_StartingRoom_Text_SolvedGoAgain, MSGBOX_DEFAULT
+	addvar VAR_TEMP_1, 1
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolveWater: 
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired1stNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 6
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveWater_CorrectAnswer1
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolveWater_CorrectAnswer1:
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 1
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveWater_CorrectAnswer2
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolveWater_CorrectAnswer2:
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 2
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveWater_CorrectAnswer3
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+	
+EscapeRoom_StartingRoom_EventScript_SolveWater_CorrectAnswer3:
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 6
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveWater_Solved
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolveWater_Solved:
+	msgbox EscapeRoom_StartingRoom_Text_SolvedGoAgain, MSGBOX_DEFAULT
+	addvar VAR_TEMP_1, 1
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolveSnow:
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired1stNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 1
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveSnow_CorrectAnswer1
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolveSnow_CorrectAnswer1:
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 7
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveSnow_CorrectAnswer2
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolveSnow_CorrectAnswer2:
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 2
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveSnow_CorrectAnswer3
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+	
+EscapeRoom_StartingRoom_EventScript_SolveSnow_CorrectAnswer3:
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 6
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveSnow_Solved
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolveSnow_Solved:
+	msgbox EscapeRoom_StartingRoom_Text_SolvedGoAgain, MSGBOX_DEFAULT
+	addvar VAR_TEMP_1, 1
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolveMountain:
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired1stNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 8
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveMountain_CorrectAnswer1
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolveMountain_CorrectAnswer1:
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 4
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveMountain_CorrectAnswer2
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolveMountain_CorrectAnswer2:
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 1
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveMountain_CorrectAnswer3
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+	
+EscapeRoom_StartingRoom_EventScript_SolveMountain_CorrectAnswer3:
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 9
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveMountain_Solved
+	msgbox EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+
+EscapeRoom_StartingRoom_EventScript_SolveMountain_Solved:
+	msgbox EscapeRoom_StartingRoom_Text_SolvedGoAgain, MSGBOX_DEFAULT
+	addvar VAR_TEMP_1, 1
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
 
 EscapeRoom_StartingRoom_EventScript_Tree::
 	lock
