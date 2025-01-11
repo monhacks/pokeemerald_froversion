@@ -190,6 +190,11 @@ EscapeRoom_FirstRoom_ProtagonistOne_EventScript_FindRazorLeaf::
 	finditem ITEM_TM01
 	release
 	end
+
+EscapeRoom_FirstRoom_ProtagonistOne_EventScript_FindOverheat::
+	finditem ITEM_TM50
+	release
+	end
 	
 EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CantLeave::
 	lockall
@@ -197,6 +202,62 @@ EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CantLeave::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
 	waitmovement OBJ_EVENT_ID_PLAYER
 	releaseall
+	end
+
+EscapeRoom_FirstRoom_ProtagonistOne__EventScript_MountainRoomFinalClue::
+	lockall
+	msgbox EscapeRoom_FirstRoom_Protagonist2__Text_MountainRoomFinalClue, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EscapeRoom_FirstRoom_ProtagonistOne__EventScript_Log:: @@ Var 0 -> 1 -> 2  Var 7 -> Solved
+	lock
+	goto_if_set FLAG_SNOW_FINAL_PUZZLE_SOLVED, EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleSolved
+	compare VAR_SNOW_FINAL_PUZZLE, 7
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleSolved
+	compare VAR_SNOW_FINAL_PUZZLE, 2
+	goto_if_gt EscapeRoom_FirstRoom_ProtagonistOne_EventScript_ResetFinalPuzzle
+	goto_if_lt EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleAddVar
+
+EscapeRoom_FirstRoom_ProtagonistOne__EventScript_DeadTree:: @@ Var 2 -> 3 // Var 5 -> 6
+	lock
+	goto_if_set FLAG_SNOW_FINAL_PUZZLE_SOLVED, EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleSolved
+	compare VAR_SNOW_FINAL_PUZZLE, 5
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleAddVar
+	compare VAR_SNOW_FINAL_PUZZLE, 2
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleAddVar
+	goto_if_ne EscapeRoom_FirstRoom_ProtagonistOne_EventScript_ResetFinalPuzzle
+
+EscapeRoom_FirstRoom_ProtagonistOne__EventScript_AliveTree:: @@ Var 3 ->4
+	lock
+	goto_if_set FLAG_SNOW_FINAL_PUZZLE_SOLVED, EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleSolved
+	compare VAR_SNOW_FINAL_PUZZLE, 3
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleAddVar
+	goto_if_ne EscapeRoom_FirstRoom_ProtagonistOne_EventScript_ResetFinalPuzzle
+
+EscapeRoom_FirstRoom_ProtagonistOne__EventScript_Grass:: @@ Var 4 -> 5 // Var 6 -> 7
+	lock
+	goto_if_set FLAG_SNOW_FINAL_PUZZLE_SOLVED, EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleSolved
+	compare VAR_SNOW_FINAL_PUZZLE, 6
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleAddVar
+	compare VAR_SNOW_FINAL_PUZZLE, 4
+	goto_if_eq EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleAddVar
+	goto_if_ne EscapeRoom_FirstRoom_ProtagonistOne_EventScript_ResetFinalPuzzle
+
+EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleAddVar:
+	addvar VAR_SNOW_FINAL_PUZZLE, 1
+	release
+	end
+
+EscapeRoom_FirstRoom_ProtagonistOne_EventScript_ResetFinalPuzzle:
+	setvar VAR_SNOW_FINAL_PUZZLE, 0
+	release
+	end
+
+EscapeRoom_FirstRoom_ProtagonistOne__EventScript_FinalPuzzleSolved:
+	msgbox EscapeRoom_FirstRoom_ProtagonistOne__Text_FinalPuzzleSolved, MSGBOX_DEFAULT
+	setflag FLAG_SNOW_FINAL_PUZZLE_SOLVED
+	release
 	end
 
 EscapeRoom_FirstRoom_ProtagonistOne_Text_ThisItemIsTheKeyToUnlockingGrassDoor:
@@ -256,4 +317,15 @@ EscapeRoom_FirstRoom_ProtagonistOne_Text_FiveLetterComboRequiredWrongSolution:
 
 EscapeRoom_FirstRoom_ProtagonistOne_Text_CantGoBack:
 	.string "The door is locked from the inside.$"
+
+EscapeRoom_FirstRoom_Protagonist2__Text_MountainRoomFinalClue:	
+	.string "When covering the lava, make sure\n"
+	.string "to start third from the right,\l"
+	.string "followed by the furthest left.\p"
+	.string "After that make your way from left\n"
+	.string "to right.$"
+
+EscapeRoom_FirstRoom_ProtagonistOne__Text_FinalPuzzleSolved:
+	.string "Dra Vencd vuin hispan luta du aclyba\n"
+	.string "ec: Uha, Cajah, Dfu, Ceq$"
 

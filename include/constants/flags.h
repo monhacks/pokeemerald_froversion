@@ -53,8 +53,8 @@
 #define FLAG_ESCAPE_ROOM_PLAINS    0x29 // Unused Flag
 #define FLAG_ESCAPE_ROOM_SNOW    0x2A // Unused Flag
 #define FLAG_ESCAPE_ROOM_PLAINS_GRASS    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
+#define FLAG_ESCAPE_ROOM_MOUNTAIN   0x2C // Unused Flag
+#define FLAG_RECIEVED_CARD_KEY_ICE_CAVE    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
@@ -339,8 +339,8 @@
 #define FLAG_RECEIVED_MYSTIC_TICKET          0x13B
 #define FLAG_RECEIVED_OLD_SEA_MAP            0x13C 
 #define FLAG_RECEIVED_TM01       0x13D
-#define FLAG_UNUSED_MYSTERY_GIFT_0x13E       0x13E
-#define FLAG_UNUSED_MYSTERY_GIFT_0x13F       0x13F
+#define FLAG_RECEIVED_ICE_CAVE_KEY       0x13E
+#define FLAG_SNOW_FINAL_PUZZLE_SOLVED       0x13F
 #define FLAG_UNUSED_MYSTERY_GIFT_0x140       0x140
 #define FLAG_UNUSED_MYSTERY_GIFT_0x141       0x141
 #define FLAG_UNUSED_MYSTERY_GIFT_0x142       0x142
@@ -654,7 +654,7 @@
 #define FLAG_HIDE_FREDERIC  0x265 // Hide Frederic in Western Approach
 #define FLAG_HIDE_FREDERIC_2  0x266 // Hide Frederic for boss battle
 #define FLAG_HIDE_FLANNERY_WESTERN_APPROACH  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
+#define FLAG_SOLVED_BURN_CIPHER  0x268 // Unused Flag
 #define FLAG_UNUSED_0x269  0x269 // Unused Flag
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag

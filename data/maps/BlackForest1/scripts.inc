@@ -104,15 +104,6 @@ BlackForest1_EventScript_WildBattleSpecialGastly:
 end
 
 WildBattleSpecialGastlyOutcomeRan:
-	playmoncry SPECIES_GASTLY, 2
-	removeobject 6
-	waitmoncry
-	msgbox BlackForest1_Text_WildGastlyRan, MSGBOX_DEFAULT
-	closemessage
-	msgbox BlackForest1_Text_WildGastlyDroppedThis, MSGBOX_DEFAULT
-	// FROVERSION SCRIPT giveitem ITEM_SPELLBOOK, 1
-	giveitem ITEM_POKEPRIMER, 1
-	setflag FLAG_FOUND_CIPHER
 	release
 end
 

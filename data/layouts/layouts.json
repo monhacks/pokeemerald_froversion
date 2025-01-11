@@ -6210,6 +6210,36 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/EscapeRoom_BlackRoomPlainsGrass/border.bin",
       "blockdata_filepath": "data/layouts/EscapeRoom_BlackRoomPlainsGrass/map.bin"
+    },
+    {
+      "id": "LAYOUT_ESCAPE_ROOM_BLACK_ROOM_MOUNTAIN",
+      "name": "EscapeRoom_BlackRoomMountain_Layout",
+      "width": 5,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/EscapeRoom_BlackRoomMountain/border.bin",
+      "blockdata_filepath": "data/layouts/EscapeRoom_BlackRoomMountain/map.bin"
+    },
+    {
+      "id": "LAYOUT_ESCAPE_ROOM_MOUNTAIN",
+      "name": "EscapeRoom_Mountain_Layout",
+      "width": 80,
+      "height": 80,
+      "primary_tileset": "gTileset_CinnibarIsland_Primary",
+      "secondary_tileset": "gTileset_CinnibarIsland_Secondary",
+      "border_filepath": "data/layouts/EscapeRoom_Mountain/border.bin",
+      "blockdata_filepath": "data/layouts/EscapeRoom_Mountain/map.bin"
+    },
+    {
+      "id": "LAYOUT_ESCAPE_ROOM_ICE_CAVE2",
+      "name": "EscapeRoom_IceCave2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_SnowCavePrimary",
+      "secondary_tileset": "gTileset_SnowSecondary",
+      "border_filepath": "data/layouts/EscapeRoom_IceCave2/border.bin",
+      "blockdata_filepath": "data/layouts/EscapeRoom_IceCave2/map.bin"
     }
   ]
 }

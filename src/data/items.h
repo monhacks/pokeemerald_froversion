@@ -4607,11 +4607,11 @@ const struct Item gItems[] =
     [ITEM_CARD_KEY] =
     {
         .name = _("Card Key"),
-        .itemId = ITEM_CARD_KEY,
+        .itemId = POCKET_ITEMS,
         .price = 0,
         .description = sCardKeyDesc,
-        .importance = 1,
-        .pocket = POCKET_KEY_ITEMS,
+        .importance = 0,
+        .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },

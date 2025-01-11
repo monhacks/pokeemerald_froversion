@@ -277,6 +277,7 @@ EventScript_ResetAllMapFlags:: @ 82715DE
 	setflag FLAG_HIDE_RAYQUAZA_SKY_TOWER_SUMMIT
 	setflag FLAG_HIDE_BOBBY_HOUSE_BOBBY
 	setflag FLAG_HIDE_VERDANTURF_TRADER
+	setflag FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN
 	call EventScript_ResetAllBerries
 	setvar VAR_TIMEOUT_SECONDS, 0xFFFF @ No timeout.
 	end

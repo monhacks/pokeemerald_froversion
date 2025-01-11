@@ -10,3 +10,19 @@ IceCave1_OnFrame: @ 8238C4F
 IceCave1_EventScript_CheckOverheat::
 	goto EventScript_Overheat
 	end
+
+IceCave1_EventScript_YouWillNeedToFaceBobbyInMarkards::
+	lock
+	msgbox IceCave1_Text_YouWillNeedToFaceBobbyInMarkards, MSGBOX_DEFAULT
+	release
+	end
+
+IceCave1_Text_YouWillNeedToFaceBobbyInMarkards:	
+	.string "The Pai Gow master is eagerly\n" 
+	.string "awaiting a challenge in a card\l"
+	.string "game you have recieved as a previous\l"
+	.string "secret santa gift\p"
+	.string "A specific prize card holds a clue\n"
+	.string "for you to progress.\p"
+	.string "If you can win, choose your prize\n"
+	.string "card wisely...$"

@@ -1427,3 +1427,9 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/EscapeRoom_Plains/scripts.inc"
 
 	.include "data/maps/EscapeRoom_BlackRoomPlainsGrass/scripts.inc"
+
+	.include "data/maps/EscapeRoom_BlackRoomMountain/scripts.inc"
+
+	.include "data/maps/EscapeRoom_Mountain/scripts.inc"
+
+	.include "data/maps/EscapeRoom_IceCave2/scripts.inc"

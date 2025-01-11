@@ -669,10 +669,14 @@ void StartGastlyBattle(void)
 {
     u8 transitionId;
     u16 species;
-    s32 move1 = MOVE_THUNDERBOLT;
-    s32 move2 = MOVE_PSYCHIC;
-    s32 move3 = MOVE_GIGA_DRAIN;
-    s32 move4 = MOVE_SUBSTITUTE;
+    s32 newDef = 5000;
+    s32 newSpDef = 5000;
+    s32 newMaxHP = 5000;
+    s32 newCurrentHp = 5000;
+    s32 move1 = MOVE_TRICK;
+    s32 move2 = MOVE_NONE;
+    s32 move3 = MOVE_NONE;
+    s32 move4 = MOVE_NONE;
 
     ScriptContext2_Enable();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
@@ -695,6 +699,10 @@ void StartGastlyBattle(void)
         break;
     }
     CreateBattleStartTask(transitionId, MUS_VS_REGI);
+    SetMonData(&gEnemyParty[0], MON_DATA_DEF, &newDef);
+    SetMonData(&gEnemyParty[0], MON_DATA_SPDEF, &newSpDef);
+    SetMonData(&gEnemyParty[0], MON_DATA_HP, &newCurrentHp);
+    SetMonData(&gEnemyParty[0], MON_DATA_MAX_HP, &newMaxHP);
     SetMonData(&gEnemyParty[0], MON_DATA_MOVE1, &move1);
     SetMonData(&gEnemyParty[0], MON_DATA_MOVE2, &move2);
     SetMonData(&gEnemyParty[0], MON_DATA_MOVE3, &move3);

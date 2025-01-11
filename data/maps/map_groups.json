@@ -322,7 +322,10 @@
     "EscapeRoom_BlackRoom",
     "EscapeRoom_BlackRoomPlains",
     "EscapeRoom_Plains",
-    "EscapeRoom_BlackRoomPlainsGrass"
+    "EscapeRoom_BlackRoomPlainsGrass",
+    "EscapeRoom_BlackRoomMountain",
+    "EscapeRoom_Mountain",
+    "EscapeRoom_IceCave2"
   ],
   "gMapGroup10": [
     "MauvilleCity_Gym",

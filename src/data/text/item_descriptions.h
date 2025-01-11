@@ -1620,9 +1620,8 @@ static const u8 sTM17Desc[] = _(
     "in succession.");
 
 static const u8 sTM18Desc[] = _(
-    "Raises the power of\n"
-    "WATER-type moves\n"
-    "for 5 turns.");
+    "An ascending attack that may\n"
+    "confuse the foe.");
 
 static const u8 sTM19Desc[] = _(
     "Recovers half the\n"

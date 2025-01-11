@@ -200,7 +200,7 @@
 #define VAR_TRICK_HOUSE_ENTER_FROM_CORRIDOR  0x40B5
 #define VAR_TRICK_HOUSE_PUZZLE_7_STATE_2     0x40B6 // Leftover from RS, never set
 #define VAR_SLATEPORT_FAN_CLUB_STATE         0x40B7
-#define VAR_UNUSED_0x40B8                    0x40B8 // Unused Var
+#define VAR_ESCAPE_ROOM_MOUNTAIN                    0x40B8 // Unused Var
 #define VAR_MT_PYRE_STATE                    0x40B9
 #define VAR_NEW_MAUVILLE_STATE               0x40BA
 #define VAR_UNUSED_0x40BB                    0x40BB // Unused Var
@@ -235,7 +235,7 @@
 #define VAR_SOOTOPOLIS_WALLACE_STATE         0x40D8
 #define VAR_HAS_TALKED_TO_SEAFLOOR_CAVERN_ENTRANCE_GRUNT 0x40D9
 #define VAR_REGISTER_BIRCH_STATE             0x40DA
-#define VAR_UNUSED_0x40DB                    0x40DB // Unused Var
+#define VAR_MOUNTAIN_ROCK_PUZZLE                    0x40DB // Unused Var
 #define VAR_UNUSED_0x40DC                    0x40DC // Unused Var
 #define VAR_EVENT_PICHU_SLOT                 0x40DD
 #define VAR_NEVER_READ_0x40DE                0x40DE // Var is written to, but never read
@@ -266,8 +266,8 @@
 #define VAR_HOMESTEAD_NORTH_STATE            0x40F7 // Triggering Snowflake Battle
 #define VAR_BLACK_FOREST_STATE                   0x40F8 // Witches Quest
 #define VAR_FREDERIC_STATE                    0x40F9 // Frederics quest state
-#define VAR_UNUSED_0x40FA                    0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                    0x40FB // Unused Var
+#define VAR_SNOW_FINAL_PUZZLE                    0x40FA // Unused Var
+#define VAR_FINAL_MOUNTAIN_PUZZLE                    0x40FB // Unused Var
 #define VAR_UNUSED_0x40FC                    0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                    0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                    0x40FE // Unused Var

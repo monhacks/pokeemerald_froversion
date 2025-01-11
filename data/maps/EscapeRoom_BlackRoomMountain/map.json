@@ -1,9 +1,9 @@
 {
-  "id": "MAP_ESCAPE_ROOM_BLACK_ROOM_PLAINS_GRASS",
-  "name": "EscapeRoom_BlackRoomPlainsGrass",
-  "layout": "LAYOUT_ESCAPE_ROOM_BLACK_ROOM_PLAINS_GRASS",
+  "id": "MAP_ESCAPE_ROOM_BLACK_ROOM_MOUNTAIN",
+  "name": "EscapeRoom_BlackRoomMountain",
+  "layout": "LAYOUT_ESCAPE_ROOM_BLACK_ROOM_MOUNTAIN",
   "music": "MUS_ABANDONED_SHIP",
-  "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
+  "region_map_section": "MAPSEC_FALLARBOR_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

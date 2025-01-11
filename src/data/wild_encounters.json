@@ -14841,6 +14841,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ESCAPE_ROOM_PLAINS",
+          "base_label": "gEscapeRoom_Plains0",
+          "land_mons": {
+            "encounter_rate": 180,
+            "mons": [
+              {
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_MACHAMP"
+              },
+              {
+                "min_level": 100,
+                "max_level": 100,
+                "species": "SPECIES_MACHAMP"
+              }
+            ]
+          }
         }
       ]
     },

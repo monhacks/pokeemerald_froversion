@@ -208,6 +208,13 @@ static void WarpToTruck(void)
             SetWarpDestination(MAP_GROUP(ESCAPE_ROOM_BLACK_ROOM_PLAINS_GRASS), MAP_NUM(ESCAPE_ROOM_BLACK_ROOM_PLAINS_GRASS), -1, 2, 4);
             WarpIntoMap();
         }
+    if(B_VERSION_ESCAPE_ROOM_MOUNTAIN)
+        {
+            FlagSet(FLAG_ESCAPE_ROOM_MOUNTAIN);
+            VarSet(VAR_ESCAPE_ROOM_MOUNTAIN, 0);
+            SetWarpDestination(MAP_GROUP(ESCAPE_ROOM_BLACK_ROOM_MOUNTAIN), MAP_NUM(ESCAPE_ROOM_BLACK_ROOM_MOUNTAIN), -1, 2, 4);
+            WarpIntoMap();
+        }
 }
 
 void Sav2_ClearSetDefault(void)

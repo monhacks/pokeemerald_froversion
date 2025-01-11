@@ -1,23 +1,23 @@
 {
-  "id": "MAP_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE",
-  "name": "EscapeRoom_FirstRoom_ProtagonistOne",
-  "layout": "LAYOUT_ESCAPE_ROOM_FIRST_ROOM_PROTAGONIST_ONE",
-  "music": "MUS_FV_STILLSNOW",
-  "region_map_section": "MAPSEC_FORTREE_CITY",
+  "id": "MAP_ESCAPE_ROOM_MOUNTAIN",
+  "name": "EscapeRoom_Mountain",
+  "layout": "LAYOUT_ESCAPE_ROOM_MOUNTAIN",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_FALLARBOR_TOWN",
   "requires_flash": false,
-  "weather": "WEATHER_SNOW",
-  "map_type": "MAP_TYPE_INDOOR",
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 38,
-      "y": 61,
+      "x": 24,
+      "y": 26,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -28,74 +28,9 @@
       "flag": "FLAG_TEMP_1"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
-      "x": 36,
-      "y": 53,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "FLAG_RUSTURF_TUNNEL_OPENED"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 25,
-      "y": 28,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CutRiddleStart",
-      "flag": "FLAG_RECEIVED_HM01"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 31,
-      "y": 46,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_CutTree",
-      "flag": "FLAG_TEMP_2"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 53,
-      "y": 20,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne_EventScript_FindOverheat",
-      "flag": "FLAG_RECEIVED_TM50"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 58,
-      "y": 54,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne_EventScript_FindRazorLeaf",
-      "flag": "FLAG_RECEIVED_TM01"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 37,
-      "y": 42,
+      "x": 2,
+      "y": 27,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -107,8 +42,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 36,
-      "y": 43,
+      "x": 7,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -120,142 +55,186 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 38,
-      "y": 24,
+      "x": 10,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne__EventScript_MountainRoomFinalClue",
+      "script": "EventScript_StrengthBoulder",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 13,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_StrengthBoulder",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 16,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_StrengthBoulder",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 11,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EscapeRoom_Mountain_EventScript_FinalPuzzleClue",
+      "flag": "FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_JOHN"
     }
   ],
   "warp_events": [
-    {
-      "x": 26,
-      "y": 56,
-      "elevation": 0,
-      "dest_map": "MAP_ESCAPE_ROOM_ICE_CAVE1",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 44,
-      "y": 50,
-      "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN_POKEMON_CENTER_2F",
-      "dest_warp_id": "2"
-    }
+
   ],
   "coord_events": [
     {
       "type": "trigger",
-      "x": 36,
-      "y": 74,
+      "x": 7,
+      "y": 5,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CantLeave"
+      "script": "EscapeRoom_Mountain_EventScript_FinalPuzzleTrigger1"
     },
     {
       "type": "trigger",
-      "x": 35,
-      "y": 74,
+      "x": 10,
+      "y": 5,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne_EventScript_CantLeave"
+      "script": "EscapeRoom_Mountain_EventScript_FinalPuzzleTrigger2"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_Mountain_EventScript_FinalPuzzleTrigger3"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EscapeRoom_Mountain_EventScript_FinalPuzzleTrigger4"
     }
   ],
   "bg_events": [
     {
       "type": "sign",
-      "x": 41,
-      "y": 24,
+      "x": 25,
+      "y": 38,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne__EventScript_Log"
+      "script": "EscapeRoom_Mountain_EventScript_GiveLavaSurf"
     },
     {
       "type": "sign",
-      "x": 42,
-      "y": 24,
+      "x": 35,
+      "y": 51,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne__EventScript_Log"
+      "script": "NULL"
     },
     {
       "type": "sign",
-      "x": 42,
-      "y": 23,
+      "x": 8,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne__EventScript_AliveTree"
+      "script": "EscapeRoom_Mountain_EventScript_RockPuzzle1"
     },
     {
       "type": "sign",
-      "x": 45,
-      "y": 23,
+      "x": 10,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne__EventScript_DeadTree"
+      "script": "EscapeRoom_Mountain_EventScript_RockPuzzle2"
     },
     {
       "type": "sign",
-      "x": 44,
-      "y": 23,
+      "x": 12,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne__EventScript_DeadTree"
+      "script": "EscapeRoom_Mountain_EventScript_RockPuzzle3"
     },
     {
       "type": "sign",
-      "x": 45,
-      "y": 24,
+      "x": 14,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne__EventScript_DeadTree"
+      "script": "EscapeRoom_Mountain_EventScript_RockPuzzle4"
     },
     {
       "type": "sign",
-      "x": 45,
-      "y": 24,
+      "x": 16,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne__EventScript_DeadTree"
+      "script": "EscapeRoom_Mountain_EventScript_RockPuzzle5"
     },
     {
       "type": "sign",
-      "x": 41,
-      "y": 23,
+      "x": 18,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne__EventScript_AliveTree"
+      "script": "EscapeRoom_Mountain_EventScript_RockPuzzle6"
     },
     {
       "type": "sign",
-      "x": 42,
-      "y": 22,
+      "x": 20,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne__EventScript_AliveTree"
+      "script": "EscapeRoom_Mountain_EventScript_RockPuzzle7"
     },
     {
       "type": "sign",
-      "x": 41,
-      "y": 22,
+      "x": 22,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne__EventScript_AliveTree"
+      "script": "EscapeRoom_Mountain_EventScript_RockPuzzle8"
     },
     {
       "type": "sign",
-      "x": 44,
-      "y": 21,
+      "x": 20,
+      "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EscapeRoom_FirstRoom_ProtagonistOne__EventScript_Grass"
+      "script": "EscapeRoom_Mountain_EventScript_GrassRoomFinalClue"
     }
   ]
 }
