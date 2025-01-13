@@ -1369,6 +1369,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(TM45_ATTRACT)
                                         | TMHM(TM46_THIEF)
                                         | TMHM(TM50_OVERHEAT)
+                                        | TMHM(HM01_CUT)
                                         | TMHM(HM04_STRENGTH)
                                         | TMHM(HM06_ROCK_SMASH)),
 
@@ -4393,30 +4394,7 @@ const u32 gTMHMLearnsets[][2] =
                                         | TMHM(HM01_CUT)
                                         | TMHM(HM05_FLASH)),
 
-    [SPECIES_MARILL]      = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
-                                        | TMHM(TM03_WATER_PULSE)
-                                        | TMHM(TM06_TOXIC)
-                                        | TMHM(TM07_HAIL)
-                                        | TMHM(TM10_HIDDEN_POWER)
-                                        | TMHM(TM13_ICE_BEAM)
-                                        | TMHM(TM14_BLIZZARD)
-                                        | TMHM(TM17_PROTECT)
-                                        | TMHM(TM18_RAIN_DANCE)
-                                        | TMHM(TM21_FRUSTRATION)
-                                        | TMHM(TM23_IRON_TAIL)
-                                        | TMHM(TM27_RETURN)
-                                        | TMHM(TM28_DIG)
-                                        | TMHM(TM31_BRICK_BREAK)
-                                        | TMHM(TM32_DOUBLE_TEAM)
-                                        | TMHM(TM42_FACADE)
-                                        | TMHM(TM43_SECRET_POWER)
-                                        | TMHM(TM44_REST)
-                                        | TMHM(TM45_ATTRACT)
-                                        | TMHM(HM03_SURF)
-                                        | TMHM(HM04_STRENGTH)
-                                        | TMHM(HM06_ROCK_SMASH)
-                                        | TMHM(HM07_WATERFALL)
-                                        | TMHM(HM08_DIVE)),
+    [SPECIES_MARILL]      = TMHM_LEARNSET(0),
 
     [SPECIES_AZUMARILL]   = TMHM_LEARNSET(TMHM(TM01_RAZOR_LEAF)
                                         | TMHM(TM03_WATER_PULSE)

@@ -2351,7 +2351,7 @@ static u32 CanTradeSelectedMon(struct Pokemon *playerParty, int partyCount, int 
     if (numMonsLeft != 0)
         return CAN_TRADE_MON;
     else
-        return CANT_TRADE_LAST_MON;
+        return CAN_TRADE_MON;
 }
 
 s32 GetGameProgressForLinkTrade(void)
@@ -2563,7 +2563,7 @@ int CanSpinTradeMon(struct Pokemon *mon, u16 monIdx)
     }
 
     if (!numMonsLeft)
-        return CANT_TRADE_LAST_MON;
+        return CAN_TRADE_MON;
     else
         return CAN_TRADE_MON;
 }

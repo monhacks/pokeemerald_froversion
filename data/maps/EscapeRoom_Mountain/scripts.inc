@@ -1,10 +1,78 @@
 EscapeRoom_Mountain_MapScripts::
 	.byte 0
 
-EscapeRoom_Mountain_EventScript_GiveLavaSurf::
+EscapeRoom_Mountain_EventScript_GiveLavaSurfCode::
 	checkitem ITEM_CARD_KEY, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EscapeRoom_Mountain_EventScript_GiveLavaSurfDontHaveKey
+	msgbox EscapeRoom_Mountain_Text_BoxOpenedGiveCode, MSGBOX_DEFAULT
+	setflag FLAG_BADGE05_GET
+	release
+	end
+
+EscapeRoom_Mountain_EventScript_GiveLavaSurfVest::
+	EscapeRoomMountain_EventScript_DoorCode::
+	lockall
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequired1stNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 5
+	goto_if_eq EscapeRoomMountain_EventScript_CutCorrectAnswer1
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoomMountain_EventScript_DoorCode
+	release
+	msgbox EscapeRoom_Mountain_Text_BoxOpenedGiveCode, MSGBOX_DEFAULT
+	setflag FLAG_BADGE05_GET
+	release
+	end
+
+
+EscapeRoomMountain_EventScript_CutCorrectAnswer1:
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 7
+	goto_if_eq EscapeRoomMountain_EventScript_CutCorrectAnswer2
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoomMountain_EventScript_DoorCode
+	release
+	end
+
+EscapeRoomMountain_EventScript_CutCorrectAnswer2:
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 4
+	goto_if_eq EscapeRoomMountain_EventScript_CutCorrectAnswer3
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoomMountain_EventScript_DoorCode
+	release
+	end
+
+EscapeRoomMountain_EventScript_CutCorrectAnswer3:
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequired2ndNumber, MSGBOX_DEFAULT
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 1
+	goto_if_eq EscapeRoomMountain_EventScript_CutCorrectAnswerSolve
+	msgbox EscapeRoomMountain_Text_FourNumberComnoRequiredWrongSolution, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq EscapeRoomMountain_EventScript_DoorCode
+	release
+	end
+
+EscapeRoomMountain_EventScript_CutCorrectAnswerSolve:
 	msgbox EscapeRoom_Mountain_Text_BoxOpenedRecievedIceVest, MSGBOX_DEFAULT
 	setflag FLAG_BADGE05_GET
 	release
@@ -190,3 +258,17 @@ EscapeRoom_Mountain_Text_FinalPuzzleSolved:
 	.string "Dra Drent vuin hispan luta du aclyba\n"
 	.string "ec: Aekrd, Vuin, Uha, Heha$"
 
+EscapeRoom_Mountain_Text_BoxOpenedGiveCode:
+	.string "The Box opened containing a\n"
+	.string "note.\p"
+	.string "5 7 4 1$"
+
+EscapeRoomMountain_Text_FourNumberComnoRequired1stNumber:
+	.string "enter 1st number$"
+
+EscapeRoomMountain_Text_FourNumberComnoRequired2ndNumber:
+	.string "enter next number$"
+
+EscapeRoomMountain_Text_FourNumberComnoRequiredWrongSolution:
+	.string "That is not correct.\n"
+	.string "Try again?$"

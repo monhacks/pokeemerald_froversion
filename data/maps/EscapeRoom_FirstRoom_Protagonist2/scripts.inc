@@ -184,7 +184,7 @@ EscapeRoom_FirstRoom_Protagonist2__Text_IceRoomClue1:
 
 EscapeRoom_FirstRoom_Protagonist2__Text_IceRoomClue2:	
 	.string "{COLOR BLUE}Reverse then repeat to unlock\n"
-	.string "your a snowy retreat.$"
+	.string "a snowy retreat.$"
 
 EscapeRoom_FirstRoom_Protagonist2__Text_SnowRoomFinalClue:	
 	.string "Log, Log, Dead, Alive, Grass, Dead,\n"

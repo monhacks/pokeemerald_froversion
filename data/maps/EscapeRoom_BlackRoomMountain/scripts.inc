@@ -8,6 +8,7 @@ EscapeRoom_BlackRoomMountain_OnFrame::
 
 EscapeRoom_BlackRoomMountain_EventScript_GameStart::
 	givecustommon SPECIES_DEWGONG, 50, ITEM_NONE, ITEM_GREAT_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_SURF, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
+	givecustommon SPECIES_UNOWN, 1, ITEM_NONE, ITEM_GREAT_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_NONE, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_ADVENTURE_STARTED
@@ -80,7 +81,7 @@ EscapeRoom_BlackRoomMountain_EventScript_DoorRiddleSolved:
 			waitmovement OBJ_EVENT_ID_PLAYER
 			closedoor 2 1
 			waitdooranim
-			warp MAP_ESCAPE_ROOM_PLAINS, 255, 35, 74
+			warp MAP_ESCAPE_ROOM_MOUNTAIN, 255, 35, 74
 			waitstate
 	release
 	end
@@ -97,3 +98,4 @@ EscapeRoom_BlackRoomMountain_Text_FourLetterComboRequiredCorrectSolution:
 EscapeRoom_BlackRoomMountain_Text_FourLetterComboRequiredWrongSolution:	
 	.string "That is not correct.\p"
 	.string "Would you like to try again?$"
+

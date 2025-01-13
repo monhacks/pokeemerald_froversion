@@ -500,7 +500,7 @@ CableClub_EventScript_EnterTradeCenter:: @ 827713A
 
 CableClub_EventScript_CheckPartyTradeRequirements:: @ 8277199
 	specialvar VAR_RESULT, CalculatePlayerPartyCount
-	compare VAR_RESULT, 2
+	compare VAR_RESULT, 1
 	goto_if_lt CableClub_EventScript_NeedTwoMonsToTrade
 	specialvar VAR_RESULT, DoesPartyHaveEnigmaBerry
 	compare VAR_RESULT, TRUE

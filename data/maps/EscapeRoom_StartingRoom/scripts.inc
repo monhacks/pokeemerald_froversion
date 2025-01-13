@@ -208,9 +208,19 @@ EscapeRoom_StartingRoom_EventScript_SolveMountain_CorrectAnswer3:
 	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
 
 EscapeRoom_StartingRoom_EventScript_SolveMountain_Solved:
-	msgbox EscapeRoom_StartingRoom_Text_SolvedGoAgain, MSGBOX_DEFAULT
-	addvar VAR_TEMP_1, 1
-	goto_if_eq EscapeRoom_StartingRoom_EventScript_SolveTheRiddle
+	goto_if_eq EscapeRoom_StartingRoom_EventScript_RiddleSolved
+
+EscapeRoom_StartingRoom_EventScript_RiddleSolved:
+	opendoor 10 1
+			applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+			waitmovement OBJ_EVENT_ID_PLAYER
+			closedoor 2 1
+			waitdooranim
+			special GameClear
+	waitstate
+	releaseall
+	end
+	
 
 EscapeRoom_StartingRoom_EventScript_Tree::
 	lock
@@ -263,7 +273,7 @@ EscapeRoom_StartingRoom_Text_Tree:
 	.string "A tree planted in soil.$"
 
 EscapeRoom_StartingRoom_Text_LeftPokeballStatue:
-	.string "Red before Green...$"
+	.string "Orange before Yellow...$"
 
 EscapeRoom_StartingRoom_Text_RightPokeballStatue:
 	.string "Soil before Rock...$"
@@ -296,3 +306,16 @@ EscapeRoom_StartingRoom_Text_BookShelfLeftExcerpt:
 	.string "four letter word that is a synonym\l"
 	.string "of the first Hidden Machine you\l"
 	.string "get in every Pokemon game.$"
+
+EscapeRoom_StartingRoom_Text_FourNumberComboRequired1stNumber:
+	.string "Enter 1st Number$"
+
+EscapeRoom_StartingRoom_Text_FourNumberComboRequired2ndNumber:
+	.string "Enter Next Number$"
+
+EscapeRoom_StartingRoom_Text_FourNumberComboRequiredWrongSolution:
+	.string "Sorry that is incorrect. Try again?$"
+
+EscapeRoom_StartingRoom_Text_SolvedGoAgain:
+	.string "That's correct, please enter next\n"
+	.string "code.$"
