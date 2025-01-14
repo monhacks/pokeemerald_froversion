@@ -15,32 +15,32 @@ VermillionCityMageesPleasureFactory_OnFrame:
 
 VermillionCityMageesPleasureFactory_EventScript_EscortMageeToOffice:
 	lockall
-	addobject LOCALID_GRUNT_1
-	addobject LOCALID_GRUNT_2
-	addobject LOCALID_GRUNT_3
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	waitmovement OBJ_EVENT_ID_PLAYER
-	applymovement OBJ_EVENT_ID_PLAYER, VermillionCityMageesPleasureFactory_Movement_MageeWalksToGrunts
-	waitmovement OBJ_EVENT_ID_PLAYER
-	msgbox VermillionCityMageesPleasureFactory_Text_WhatsGoingOnHere, MSGBOX_AUTOCLOSE
-	applymovement OBJ_EVENT_ID_PLAYER, VermillionCityMageesPleasureFactory_Movement_MageeWalksToRegister
-	waitmovement OBJ_EVENT_ID_PLAYER
-	addobject LOCALID_POKEBALL
-	playse SE_WALL_HIT
-	waitse
-	applymovement OBJ_EVENT_ID_PLAYER, VermillionCityMageesPleasureFactory_Movement_MageeWalksBackFromRegister
-	waitmovement OBJ_EVENT_ID_PLAYER
-	msgbox VermillionCityMageesPleasureFactory_Text_LetsGo, MSGBOX_AUTOCLOSE
-	applymovement LOCALID_GRUNT_2, VermillionCityMageesPleasureFactory_Movement_WalkToOffice
-	applymovement LOCALID_GRUNT_3, VermillionCityMageesPleasureFactory_Movement_WalkToOffice
-	applymovement OBJ_EVENT_ID_PLAYER, VermillionCityMageesPleasureFactory_Movement_WalkToOffice
-	waitmovement OBJ_EVENT_ID_PLAYER
-	removeobject LOCALID_GRUNT_2
-	removeobject LOCALID_GRUNT_3
-	setvar VAR_MAGEE_VERSION, 1
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
-	waitmovement OBJ_EVENT_ID_PLAYER
-	warp MAP_VERMILLION_CITY_MAGEES_PLEASURE_FACTORY_OFFICE, 255, 6, 6
+		addobject LOCALID_GRUNT_1
+		addobject LOCALID_GRUNT_2
+		addobject LOCALID_GRUNT_3
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+		waitmovement OBJ_EVENT_ID_PLAYER
+		applymovement OBJ_EVENT_ID_PLAYER, VermillionCityMageesPleasureFactory_Movement_MageeWalksToGrunts
+		waitmovement OBJ_EVENT_ID_PLAYER
+		msgbox VermillionCityMageesPleasureFactory_Text_WhatsGoingOnHere, MSGBOX_AUTOCLOSE
+		applymovement OBJ_EVENT_ID_PLAYER, VermillionCityMageesPleasureFactory_Movement_MageeWalksToRegister
+		waitmovement OBJ_EVENT_ID_PLAYER
+		addobject LOCALID_POKEBALL
+		playse SE_WALL_HIT
+		waitse
+		applymovement OBJ_EVENT_ID_PLAYER, VermillionCityMageesPleasureFactory_Movement_MageeWalksBackFromRegister
+		waitmovement OBJ_EVENT_ID_PLAYER
+		msgbox VermillionCityMageesPleasureFactory_Text_LetsGo, MSGBOX_AUTOCLOSE
+		applymovement LOCALID_GRUNT_2, VermillionCityMageesPleasureFactory_Movement_WalkToOffice
+		applymovement LOCALID_GRUNT_3, VermillionCityMageesPleasureFactory_Movement_WalkToOffice
+		applymovement OBJ_EVENT_ID_PLAYER, VermillionCityMageesPleasureFactory_Movement_WalkToOffice
+		waitmovement OBJ_EVENT_ID_PLAYER
+		removeobject LOCALID_GRUNT_2
+		removeobject LOCALID_GRUNT_3
+		setvar VAR_MAGEE_VERSION, 1
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+		waitmovement OBJ_EVENT_ID_PLAYER
+		warp MAP_VERMILLION_CITY_MAGEES_PLEASURE_FACTORY_OFFICE, 255, 6, 6
 	releaseall
 	end
 
