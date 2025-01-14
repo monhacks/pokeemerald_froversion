@@ -6180,6 +6180,16 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/VermillionCityMageesPleasureFactoryOffice/border.bin",
       "blockdata_filepath": "data/layouts/VermillionCityMageesPleasureFactoryOffice/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILLION_CITY_HARBOR",
+      "name": "VermillionCityHarbor_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_VermillionCityPrimary",
+      "secondary_tileset": "gTileset_VermillionCitySecondary",
+      "border_filepath": "data/layouts/VermillionCityHarbor/border.bin",
+      "blockdata_filepath": "data/layouts/VermillionCityHarbor/map.bin"
     }
   ]
 }

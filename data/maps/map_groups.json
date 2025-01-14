@@ -1,5 +1,4 @@
 {
-  "layouts_table_label": "gMapLayouts",
   "group_order": [
     "gMapGroup0",
     "gMapGroup1",
@@ -772,7 +771,8 @@
     "VermillionBeach",
     "VermillionCityLeftBoarder",
     "VermillionCityMageesPleasureFactory",
-    "VermillionCityMageesPleasureFactoryOffice"
+    "VermillionCityMageesPleasureFactoryOffice",
+    "VermillionCityHarbor"
   ],
   "gMapGroup33": [
     "Route124_DivingTreasureHuntersHouse",

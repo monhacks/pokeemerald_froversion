@@ -742,6 +742,7 @@
 #define MAP_VERMILLION_CITY_LEFT_BOARDER                   (9 | (32 << 8))
 #define MAP_VERMILLION_CITY_MAGEES_PLEASURE_FACTORY        (10 | (32 << 8))
 #define MAP_VERMILLION_CITY_MAGEES_PLEASURE_FACTORY_OFFICE (11 | (32 << 8))
+#define MAP_VERMILLION_CITY_HARBOR                         (12 | (32 << 8))
 
 // gMapGroup33
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
