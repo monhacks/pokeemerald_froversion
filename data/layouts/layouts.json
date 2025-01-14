@@ -6182,6 +6182,16 @@
       "blockdata_filepath": "data/layouts/VermillionCityMageesPleasureFactoryOffice/map.bin"
     },
     {
+      "id": "LAYOUT_VERMILLION_CITY_MAGEES_PLEASURE_FACTORY_OFFICE2",
+      "name": "VermillionCityMageesPleasureFactoryOffice2_Layout",
+      "width": 8,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/VermillionCityMageesPleasureFactoryOffice2/border.bin",
+      "blockdata_filepath": "data/layouts/VermillionCityMageesPleasureFactoryOffice2/map.bin"
+    },
+    {
       "id": "LAYOUT_VERMILLION_CITY_HARBOR",
       "name": "VermillionCityHarbor_Layout",
       "width": 32,

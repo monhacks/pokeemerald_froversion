@@ -15,6 +15,7 @@ VermillionCityMageesPleasureFactory_OnFrame:
 
 VermillionCityMageesPleasureFactory_EventScript_EscortMageeToOffice:
 	lockall
+		playbgm MUS_FV_TEAM_MAGA, 0
 		addobject LOCALID_GRUNT_1
 		addobject LOCALID_GRUNT_2
 		addobject LOCALID_GRUNT_3
