@@ -1,0 +1,102 @@
+.set LOCALID_GRUNT_1, 1
+.set LOCALID_GRUNT_2, 2
+.set LOCALID_GRUNT_3, 3
+.set LOCALID_WILD_POKEMON_1, 4
+
+VermillionCityRoute2_MapScripts::
+	.byte 0
+
+VermillionCityRoute2_EventScript_WildPokemonAttacks::
+	lockall
+		playbgm MUS_FV_TEAM_MAGA, 0
+		call VermillionCityRoute2_EventScript_SetWildPokemonXY
+		msgbox VermillionCityRoute2_Text_ReturnToHQ MSGBOX_DEFAULT
+		applymovement LOCALID_GRUNT_2, VermillionCityRoute2_Movement_GruntsLeave
+		applymovement LOCALID_GRUNT_3, VermillionCityRoute2_Movement_GruntsLeave
+		waitmovement LOCALID_GRUNT_2
+		removeobject LOCALID_GRUNT_2
+		removeobject LOCALID_GRUNT_3
+		setflag FLAG_HIDE_ROUTE_2_MAGA_GRUNT_2
+		applymovement OBJ_EVENT_ID_PLAYER, VermillionCityRoute2_Movement_PlayerAttemptsToFollow
+		waitmovement OBJ_EVENT_ID_PLAYER
+		addobject LOCALID_WILD_POKEMON_1
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+		waitmovement OBJ_EVENT_ID_PLAYER
+		playse SE_WALL_HIT
+		waitse
+		msgbox VermillionCityRoute2_Text_OuchThatHurt, MSGBOX_AUTOCLOSE
+		playse SE_WALL_HIT
+		waitse
+		playse SE_WALL_HIT
+		waitse
+		msgbox VermillionCityRoute2_Text_StopThat, MSGBOX_AUTOCLOSE
+		fadescreenspeed FADE_TO_BLACK, 24
+		delay_16
+		delay_16
+		//warpsilent MAP_VERMILLION_CITY_MATTS_HOUSE, 255, 7, 4
+	waitstate
+	releaseall
+	end 
+
+
+VermillionCityRoute2_EventScript_SetWildPokemonXY:
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	setobjectxyperm LOCALID_WILD_POKEMON_1, 11, VAR_TEMP_2
+	return
+
+VermillionCityRoute2_EventScript_GruntStopsPlayerFromLeaving::
+	lockall
+		compare VAR_MAGEE_VERSION, 3
+		goto_if_ge	VermillionCityRoute2_EventScript_GruntStopsPlayerFromLeavingEnd
+		applymovement LOCALID_GRUNT_1, Common_Movement_ExclamationMark
+		waitmovement LOCALID_GRUNT_1
+		msgbox VermillionCityRoute2_Text_TeamMAGAIsWaitingAtPleasureFactory, MSGBOX_DEFAULT
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+		waitmovement OBJ_EVENT_ID_PLAYER
+		VermillionCityRoute2_EventScript_GruntStopsPlayerFromLeavingEnd:
+	releaseall
+	end
+	
+
+VermillionCityRoute2_EventScript_Grunt::
+	lockall
+		msgbox VermillionCityRoute2_Text_TeamMAGAIsWaitingAtPleasureFactory, MSGBOX_NPC
+	releaseall
+	end
+
+VermillionCityRoute2_Movement_GruntsLeave:
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+
+VermillionCityRoute2_Movement_PlayerAttemptsToFollow:
+	walk_right
+	step_end
+
+VermillionCityRoute2_Text_TeamMAGAIsWaitingAtPleasureFactory:
+	.string "Hey!\p"
+	.string "You need to go back to your Pleasure\n"
+	.string "Factory at once!\p"
+	.string "We are waiting for you there!$"
+
+VermillionCityRoute2_Text_ReturnToHQ:
+	.string "Grunt 1: We need to return to\n"
+	.string "headquarters at once.\p"
+	.string "The boss is waiting for us to\n"
+	.string "begin the experiments on Metagross!\p"
+	.string "Grunt 2: I know, better get moving!\n"
+	.string "The equipment for Metagross is\l"
+	.string "already prepped and ready to go!$"
+
+VermillionCityRoute2_Text_OuchThatHurt:
+	.string "{PLAYER}: Ouch!\p"
+	.string "That hurt!$"
+
+VermillionCityRoute2_Text_StopThat:
+	.string "Stop that. I need...\p"
+	.string "to get...\p"
+	.string "Meta...\p"
+	.string "...\p"
+	.string "...gross$"

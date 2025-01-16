@@ -773,7 +773,9 @@
     "VermillionCityLeftBoarder",
     "VermillionCityMageesPleasureFactory",
     "VermillionCityMageesPleasureFactoryOffice",
-    "VermillionCityMageesPleasureFactoryOffice2"
+    "VermillionCityMageesPleasureFactoryOffice2",
+    "VermillionCityRoute1",
+    "VermillionCityRoute2"
   ],
   "gMapGroup33": [
     "Route124_DivingTreasureHuntersHouse",

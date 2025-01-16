@@ -71,7 +71,7 @@ WalmoreTown_EventScript_TooWeakToKick:
 
 Script_WalmoreTown_AmneetIntroductionTrigger1::
 	lock
-	goto_if_set FLAG_HIDE_WMT_AMNEET, Script_WalmoreTown_AmneetIntroductionDone
+	goto_if_set FLAG_HIDE_ROUTE_2_MAGA_GRUNT_2, Script_WalmoreTown_AmneetIntroductionDone
 	applymovement OBJ_EVENT_ID_PLAYER, M_WMT_MoveForAmneetIntro1
 	waitmovement OBJ_EVENT_ID_PLAYER
 	setvar VAR_0x8000, MUGSHOT_AMNEET
@@ -86,7 +86,7 @@ Script_WalmoreTown_AmneetIntroductionTrigger1::
 	callnative ClearMugshot
 	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
 	waitmovement LOCALID_AMNEET
-	setflag FLAG_HIDE_WMT_AMNEET
+	setflag FLAG_HIDE_ROUTE_2_MAGA_GRUNT_2
 	removeobject LOCALID_FREEWOMAN
 	removeobject LOCALID_AMNEET
 	fadedefaultbgm
@@ -95,7 +95,7 @@ Script_WalmoreTown_AmneetIntroductionTrigger1::
 
 Script_WalmoreTown_AmneetIntroductionTrigger2::
 	lock
-	goto_if_set FLAG_HIDE_WMT_AMNEET, Script_WalmoreTown_AmneetIntroductionDone
+	goto_if_set FLAG_HIDE_ROUTE_2_MAGA_GRUNT_2, Script_WalmoreTown_AmneetIntroductionDone
 	applymovement OBJ_EVENT_ID_PLAYER, M_WMT_MoveForAmneetIntro2
 	waitmovement OBJ_EVENT_ID_PLAYER
 	setvar VAR_0x8000, MUGSHOT_AMNEET
@@ -110,7 +110,7 @@ Script_WalmoreTown_AmneetIntroductionTrigger2::
 	callnative ClearMugshot
 	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
 	waitmovement LOCALID_AMNEET
-	setflag FLAG_HIDE_WMT_AMNEET
+	setflag FLAG_HIDE_ROUTE_2_MAGA_GRUNT_2
 	removeobject LOCALID_FREEWOMAN
 	removeobject LOCALID_AMNEET
 	fadedefaultbgm
@@ -119,7 +119,7 @@ Script_WalmoreTown_AmneetIntroductionTrigger2::
 
 Script_WalmoreTown_AmneetIntroductionTrigger3::
 	lock
-	goto_if_set FLAG_HIDE_WMT_AMNEET, Script_WalmoreTown_AmneetIntroductionDone
+	goto_if_set FLAG_HIDE_ROUTE_2_MAGA_GRUNT_2, Script_WalmoreTown_AmneetIntroductionDone
 	applymovement OBJ_EVENT_ID_PLAYER, M_WMT_MoveForAmneetIntro3
 	waitmovement OBJ_EVENT_ID_PLAYER
 	setvar VAR_0x8000, MUGSHOT_AMNEET
@@ -135,7 +135,7 @@ Script_WalmoreTown_AmneetIntroductionTrigger3::
 	closemessage
 	applymovement LOCALID_AMNEET, M_WMT_AmneetLeaves
 	waitmovement LOCALID_AMNEET
-	setflag FLAG_HIDE_WMT_AMNEET
+	setflag FLAG_HIDE_ROUTE_2_MAGA_GRUNT_2
 	removeobject LOCALID_FREEWOMAN
 	removeobject LOCALID_AMNEET
 	fadedefaultbgm
