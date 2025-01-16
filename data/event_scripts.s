@@ -1427,3 +1427,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/VermillionCityRoute1/scripts.inc"
 
 	.include "data/maps/VermillionCityRoute2/scripts.inc"
+
+	.include "data/maps/VermillionCityMattsHouse/scripts.inc"

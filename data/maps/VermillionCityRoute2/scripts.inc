@@ -25,16 +25,17 @@ VermillionCityRoute2_EventScript_WildPokemonAttacks::
 		playse SE_WALL_HIT
 		waitse
 		msgbox VermillionCityRoute2_Text_OuchThatHurt, MSGBOX_AUTOCLOSE
+		applymovement LOCALID_WILD_POKEMON_1, Common_Movement_WalkInPlaceFastestLeft
+		waitmovement LOCALID_WILD_POKEMON_1
 		playse SE_WALL_HIT
 		waitse
+		applymovement LOCALID_WILD_POKEMON_1, Common_Movement_WalkInPlaceFastestLeft
+		waitmovement LOCALID_WILD_POKEMON_1
 		playse SE_WALL_HIT
 		waitse
 		msgbox VermillionCityRoute2_Text_StopThat, MSGBOX_AUTOCLOSE
-		fadescreenspeed FADE_TO_BLACK, 24
-		delay_16
-		delay_16
-		//warpsilent MAP_VERMILLION_CITY_MATTS_HOUSE, 255, 7, 4
-	waitstate
+		setvar VAR_MAGEE_VERSION, 4
+		warpsilent MAP_VERMILLION_CITY_MATTS_HOUSE, 255, 1, 4												
 	releaseall
 	end 
 
@@ -99,4 +100,8 @@ VermillionCityRoute2_Text_StopThat:
 	.string "to get...\p"
 	.string "Meta...\p"
 	.string "...\p"
-	.string "...gross$"
+	.string "...gross\p"
+	.string "...\p"
+	.string "...\p"
+	.string "The wild Azumarill knocked {PLAYER}\n"
+	.string "out.$"

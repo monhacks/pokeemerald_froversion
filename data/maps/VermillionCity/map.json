@@ -129,6 +129,13 @@
       "elevation": 0,
       "dest_map": "MAP_VERMILLION_CITY_MAGEES_PLEASURE_FACTORY",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILLION_CITY_MATTS_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

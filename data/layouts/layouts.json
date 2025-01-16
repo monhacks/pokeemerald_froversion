@@ -6205,11 +6205,21 @@
       "id": "LAYOUT_VERMILLION_CITY_ROUTE2",
       "name": "VermillionCityRoute2_Layout",
       "width": 36,
-      "height": 20,
+      "height": 22,
       "primary_tileset": "gTileset_VermillionCityPrimary",
       "secondary_tileset": "gTileset_VermillionCitySecondary",
       "border_filepath": "data/layouts/VermillionCityRoute2/border.bin",
       "blockdata_filepath": "data/layouts/VermillionCityRoute2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILLION_CITY_MATTS_HOUSE",
+      "name": "VermillionCityMattsHouse_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/VermillionCityMattsHouse/border.bin",
+      "blockdata_filepath": "data/layouts/VermillionCityMattsHouse/map.bin"
     }
   ]
 }
