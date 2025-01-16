@@ -3,7 +3,7 @@ SummitCityGym_MapScripts::
 	.byte 0
 
 SummitCity_Gym_OnLoad:
-	call_if_set FLAG_SOLVED_SUMMIT_GYM_PUZZLE, SummitCity_Gym_EventScript_RevealHiddenStaircase
+	call_if_set FLAG_HIDE_MATTS_HOUSE_NPCS, SummitCity_Gym_EventScript_RevealHiddenStaircase
 	end
 	
 
@@ -50,7 +50,7 @@ SummitCityGym_EventScript_TakeYourTime:
 
 SummitCity_Gym_EventScript_GentlemanCashier::
 	lockall
-	goto_if_set FLAG_SOLVED_SUMMIT_GYM_PUZZLE, SummitCityGym_EventScript_GoodLuckFacingChadAndMark
+	goto_if_set FLAG_HIDE_MATTS_HOUSE_NPCS, SummitCityGym_EventScript_GoodLuckFacingChadAndMark
 	goto_if_unset FLAG_TEMP_4, SummitCity_Gym_EventScript_ChadAndMarkSetUpEscapeRoom
 	call_if_set FLAG_TEMP_1, SummitCity_Gym_EventScript_RiddleOneSolvedCheck
 	msgbox SummitCity_Gym_Text_WhichRiddleWouldYouLikeToSolve, MSGBOX_DEFAULT
@@ -162,7 +162,7 @@ SummitCity_Gym_EventScript_ProtectionAgreementSolved:
 SummitCityGym_EventScript_CongratsYouSolvedRiddle:
 	lockall
 	msgbox SummitCity_Gym_Text_SolvedRiddleRevealSecretPassage, MSGBOX_DEFAULT
-	setflag FLAG_SOLVED_SUMMIT_GYM_PUZZLE
+	setflag FLAG_HIDE_MATTS_HOUSE_NPCS
 	playse SE_DOOR
 	warpsilent MAP_SUMMIT_CITY_GYM, 255, 3, 4
 	release
