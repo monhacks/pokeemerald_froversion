@@ -126,12 +126,12 @@ EverGrandeCity_DrakesRoom_EventScript_DrakeBattle4:
 EverGrandeCity_DrakesRoom_EventScript_DefeatedPostGame:: @ 8227F95
 	addvar VAR_ELITE_4_REMATCH_STATE, 1
 	setflag FLAG_DEFEATED_ELITE_4_DRAKE
-	goto_if_set FLAG_RECEIVED_LEFT_LEG, EverGrandeCity_DrakesRoom_EventScript_DefeatedPostGameNoPackage
+	goto_if_set FLAG_QUEST_FETCH_GOODS_FROM_NORTHTOWN, EverGrandeCity_DrakesRoom_EventScript_DefeatedPostGameNoPackage
 	compare VAR_ELITE_4_REMATCH_STATE, 4
 	goto_if_lt EverGrandeCity_DrakesRoom_EventScript_DefeatedPostGameNoPackage
 	msgbox EverGrandeCity_DrakesRoom_Text_PostBattleSpeechPostGamePackage, MSGBOX_DEFAULT
 	giveitem ITEM_LEFT_LEG_OF_THE_FORBIDDEN_ONE, 1
-	setflag FLAG_RECEIVED_LEFT_LEG
+	setflag FLAG_QUEST_FETCH_GOODS_FROM_NORTHTOWN
 	fadescreen FADE_TO_BLACK
 	warpsilent MAP_LAKE_MEAD_VILLAGE, 255, 11, 14
 	release

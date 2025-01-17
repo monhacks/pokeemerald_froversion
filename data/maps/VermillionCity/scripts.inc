@@ -123,6 +123,14 @@ VermillionCity_EventScript_NPC5::
 	releaseall
 	end
 
+VermillionCity_EventScript_Tommy::
+	lockall
+		compare VAR_MAGEE_VERSION, 5
+		goto_if_eq VermillionCity_EventScript_TommyTask
+		msgbox VermillionCity_Text_MarketStandOwner, MSGBOX_NPC
+	releaseall
+	end
+
 VermillionCity_EventScript_DialogueSawTeamMAGAHeadingTowardsRoute2:
 		msgbox VermillionCity_Text_TeamMAGASighting, MSGBOX_NPC
 	releaseall
@@ -148,6 +156,18 @@ VermillionCity_EventScript_DialougeMovingFast:
 	releaseall
 	end
 
+VermillionCity_EventScript_TommyTask:
+	lockall
+		goto_if_set FLAG_QUEST_FETCH_GOODS_FROM_NORTHTOWN, VermillionCity_EventScript_TommyTaskStarted
+		setflag FLAG_QUEST_FETCH_GOODS_FROM_NORTHTOWN
+		msgbox VermillionCity_Text_TommyTask, MSGBOX_NPC
+	releaseall
+	end
+
+VermillionCity_EventScript_TommyTaskStarted:
+		msgbox VermillionCity_Text_CanYouGrabGoods, MSGBOX_NPC
+	releaseall
+	end
 
 VermillionCity_EventScript_MageePleasureFactorySign::
 	lock
@@ -311,3 +331,26 @@ VermillionCity_Text_WavesNeverGetOld:
 .string "Life here in Sandy Beach Town is\n"
 .string "simple and peaceful. The sound of\l"
 .string "the waves never gets old!$"
+
+VermillionCity_Text_TommyTask:
+.string "Tommy: Hey, {PLAYER}! What? Team MAGA\n"
+.string "stole Metagross?!\p"
+.string "Yea, I've got a\n"
+.string "Pokémon that I've been struggling to train.\l"
+.string "I'd be willing to let you have it.\p"
+.string "But first, I need a favor. Can you\n"
+.string "grab my most recent shipment of fresh\l"
+.string "goods from the town to the north?$"
+
+
+VermillionCity_Text_CanYouGrabGoods:
+.string "Can you grab my most recent\n"
+.string "shipment of fresh goods goods from the\l"
+.string "town to the north?\p"
+.string "Once you do that, you can have my\n"
+.string "Pokémon.$"
+
+VermillionCity_Text_MarketStandOwner:
+.string "Tommy: Welcome to the farmers\n"
+.string "market! I've got the freshest produce\l"
+.string "and goods you'll find anywhere!$"

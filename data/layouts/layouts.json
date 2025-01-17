@@ -6194,10 +6194,10 @@
     {
       "id": "LAYOUT_VERMILLION_CITY_ROUTE1",
       "name": "VermillionCityRoute1_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "width": 66,
+      "height": 27,
+      "primary_tileset": "gTileset_VermillionCityPrimary",
+      "secondary_tileset": "gTileset_VermillionCitySecondary",
       "border_filepath": "data/layouts/VermillionCityRoute1/border.bin",
       "blockdata_filepath": "data/layouts/VermillionCityRoute1/map.bin"
     },

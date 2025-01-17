@@ -1278,7 +1278,7 @@
 #define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
 #define FLAG_GAVE_NCC_PACKAGE                                           0x4CF // Unused Flag
 #define FLAG_HIDE_VERDANTURF_TRADER                                          0x4D0 // Hide Verdanturf Trader until postgame
-#define FLAG_RECEIVED_LEFT_LEG                                           0x4D1 // Recieved Key Item
+#define FLAG_QUEST_FETCH_GOODS_FROM_NORTHTOWN                       0x4D1 // Magee Version -- Started Quest to get goods
 #define FLAG_RECEIVED_BOBBYS_EGG                                           0x4D2 // Post game bobby gave egg
 #define FLAG_HIDE_BOBBY_HOUSE_BOBBY                                           0x4D3 // Unhide Bobby at endgame
 #define FLAG_RECEIVED_JOHNS_EGG                                          0x4D4 // Post Game John Gave Egg
