@@ -17,6 +17,11 @@
       "map": "MAP_VERMILLION_CITY",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_SALT_LAKE_CITY",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -33,7 +38,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "VermillionCityRoute1_EventScript_StopPlayerFromGoingInRightGrassTriggerCheck"
     },
     {
       "type": "trigger",
@@ -42,7 +47,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "VermillionCityRoute1_EventScript_StopPlayerFromGoingInRightGrassTriggerCheck"
     },
     {
       "type": "trigger",
@@ -51,7 +56,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "VermillionCityRoute1_EventScript_StopPlayerFromGoingInNorthGrassTriggerCheck"
     },
     {
       "type": "trigger",
@@ -60,7 +65,25 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "VermillionCityRoute1_EventScript_StopPlayerFromGoingInNorthGrassTriggerCheck"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "VermillionCityRoute1_EventScript_StopPlayerFromGoingInRightGrassTriggerCheck"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "VermillionCityRoute1_EventScript_StopPlayerFromGoingInRightGrassTriggerCheck"
     }
   ],
   "bg_events": [

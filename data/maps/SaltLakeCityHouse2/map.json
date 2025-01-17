@@ -1,8 +1,8 @@
 {
-  "id": "MAP_OLDALE_TOWN_HOUSE2",
-  "name": "OldaleTown_House2",
-  "layout": "LAYOUT_HOUSE2",
-  "music": "MUS_OLDALE",
+  "id": "MAP_SALT_LAKE_CITY_HOUSE2",
+  "name": "SaltLakeCityHouse2",
+  "layout": "LAYOUT_SALT_LAKE_CITY_HOUSE2",
+  "music": "MUS_FV_WESTERN_APPROACH",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -15,29 +15,29 @@
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
+      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
       "x": 4,
       "y": 4,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_House2_EventScript_Woman",
+      "script": "SaltLakeCityHouse2_EventScript_Woman",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
       "x": 7,
       "y": 4,
-      "elevation": 3,
+      "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "OldaleTown_House2_EventScript_Man",
+      "script": "SaltLakeCityHouse2_EventScript_GoodsWoman",
       "flag": "0"
     }
   ],
@@ -46,14 +46,14 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN",
+      "dest_map": "MAP_SALT_LAKE_CITY",
       "dest_warp_id": "1"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_OLDALE_TOWN",
+      "dest_map": "MAP_SALT_LAKE_CITY",
       "dest_warp_id": "1"
     }
   ],

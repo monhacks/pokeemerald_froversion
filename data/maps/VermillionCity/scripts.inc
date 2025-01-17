@@ -165,7 +165,20 @@ VermillionCity_EventScript_TommyTask:
 	end
 
 VermillionCity_EventScript_TommyTaskStarted:
+		checkitem ITEM_OAKS_PARCEL, 1
+		compare VAR_RESULT, TRUE
+		goto_if_eq SaltLakeCity_EventScript_ThanksAndReward
 		msgbox VermillionCity_Text_CanYouGrabGoods, MSGBOX_NPC
+	releaseall
+	end
+
+SaltLakeCity_EventScript_ThanksAndReward:
+		msgbox SaltLakeCity_Text_ThanksAndReward, MSGBOX_DEFAULT
+		givemon SPECIES_MACHOP, 10, ITEM_NONE
+		msgbox SaltLakeCity_Text_PlayerReceivesPokemon, MSGBOX_AUTOCLOSE
+		playfanfare MUS_OBTAIN_ITEM
+		waitfanfare
+		setvar VAR_MAGEE_VERSION, 6
 	releaseall
 	end
 
@@ -178,6 +191,12 @@ VermillionCity_EventScript_MageePleasureFactorySign::
 VermillionCity_EventScript_TownSign::
 	lock
 		msgbox VermillionCity_Text_TownSign, MSGBOX_SIGN
+	release
+	end
+
+VermillionCity_EventScript_Route2Sign::
+	lock
+		msgbox VermillionCity_Text_Route2Sign, MSGBOX_SIGN
 	release
 	end
 
@@ -257,6 +276,9 @@ VermillionCity_Text_MageePleasureFactory:
 VermillionCity_Text_TownSign:
 	.string "Sandy Beach Town$"
 
+VermillionCity_Text_Route2Sign:
+	.string "Route 2 {UP_ARROW}$"
+
 VermillionCity_Text_TeamMAGASighting:
 .string "I saw Team MAGA heading toward Route\n"
 .string "2. They didn't look like they were\l"
@@ -335,8 +357,8 @@ VermillionCity_Text_WavesNeverGetOld:
 VermillionCity_Text_TommyTask:
 .string "Tommy: Hey, {PLAYER}! What? Team MAGA\n"
 .string "stole Metagross?!\p"
-.string "Yea, I've got a\n"
-.string "Pokémon that I've been struggling to train.\l"
+.string "Yea, I've got a Pokémon that\n"
+.string "I've been struggling to train.\p"
 .string "I'd be willing to let you have it.\p"
 .string "But first, I need a favor. Can you\n"
 .string "grab my most recent shipment of fresh\l"
@@ -345,7 +367,7 @@ VermillionCity_Text_TommyTask:
 
 VermillionCity_Text_CanYouGrabGoods:
 .string "Can you grab my most recent\n"
-.string "shipment of fresh goods goods from the\l"
+.string "shipment of fresh goods from the\l"
 .string "town to the north?\p"
 .string "Once you do that, you can have my\n"
 .string "Pokémon.$"
@@ -354,3 +376,18 @@ VermillionCity_Text_MarketStandOwner:
 .string "Tommy: Welcome to the farmers\n"
 .string "market! I've got the freshest produce\l"
 .string "and goods you'll find anywhere!$"
+
+SaltLakeCity_Text_ThanksAndReward:
+	.string "Thanks, {PLAYER}! I really appreciate\n"
+	.string "you grabbing those goods for me. It\l"
+	.string "means a lot!\p"
+	.string "Here, as promised, take this Pokémon.\n"
+	.string "It's been too hard for me to train,\l"
+	.string "but I know you'll take great care!\p"
+	.string "Good luck getting Metagross back and\n"
+	.string "stopping Team MAGA.\p"
+	.string "I'm rooting for you! You've got\n"
+	.string "this, {PLAYER}!$"
+
+SaltLakeCity_Text_PlayerReceivesPokemon:
+	.string "{PLAYER} has received Machop!$"
