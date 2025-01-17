@@ -92,7 +92,7 @@ SummitCave_EventScript_GiveItemRascaloot:
 	applymovement LOCALID_BOBBY Movement_SummitCaveBobbyLeavesSummitCave
 	waitmovement LOCALID_BOBBY
 	removeobject LOCALID_BOBBY
-	setflag FLAG_ITEM_SUMMIT_CAVE_MINT 
+	setflag FLAG_HIDE_ROUTE_2_MAGA_GRUNT_1 
 	setvar VAR_OLDALE_TOWN_STATE, 8
 	release
 	end
@@ -104,7 +104,7 @@ SummitCave_EventScript_GiveItemFlobra:
 	applymovement LOCALID_BOBBY Movement_SummitCaveBobbyLeavesSummitCave
 	waitmovement LOCALID_BOBBY
 	removeobject LOCALID_BOBBY
-	setflag FLAG_ITEM_SUMMIT_CAVE_MINT 
+	setflag FLAG_HIDE_ROUTE_2_MAGA_GRUNT_1 
 	setvar VAR_OLDALE_TOWN_STATE, 8
 	release
 	end
@@ -116,7 +116,7 @@ SummitCave_EventScript_GiveItemEmboryps:
 	applymovement LOCALID_BOBBY Movement_SummitCaveBobbyLeavesSummitCave
 	waitmovement LOCALID_BOBBY
 	removeobject LOCALID_BOBBY
-	setflag FLAG_ITEM_SUMMIT_CAVE_MINT 
+	setflag FLAG_HIDE_ROUTE_2_MAGA_GRUNT_1 
 	setvar VAR_OLDALE_TOWN_STATE, 8
 	release
 	end

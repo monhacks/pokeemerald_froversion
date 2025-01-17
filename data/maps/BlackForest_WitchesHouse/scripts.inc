@@ -3,7 +3,7 @@ BlackForest_WitchesHouse_MapScripts::
 
 BlackForest_WitchesHouse_EventScript_Witch::
 	lock
-	goto_if_set FLAG_RECEIVED_SPELLBOOK, BlackForest_WitchesHouse_EventScript_WitchFoundSpellbook
+	goto_if_set FLAG_HIDE_ROUTE_2_WILD_POKEMON, BlackForest_WitchesHouse_EventScript_WitchFoundSpellbook
 	msgbox BlackForest_WitchesHouse_Text_WitchIntro, MSGBOX_DEFAULT
 	release
 end

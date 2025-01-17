@@ -1216,9 +1216,9 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_ITEM_SUMMIT_CAVE_MINT                                  0x493 // Mint in summit cave
-#define FLAG_HIDE_WMT_AMNEET                                        0x494 // Hides Amneet and Woman
-#define FLAG_RECEIVED_SPELLBOOK                                     0x495 // Received spell book for black witch
+#define FLAG_HIDE_ROUTE_2_MAGA_GRUNT_1                                  0x493 // Mint in summit cave
+#define FLAG_HIDE_ROUTE_2_MAGA_GRUNT_2                                        0x494 // Hides Amneet and Woman
+#define FLAG_HIDE_ROUTE_2_WILD_POKEMON                                     0x495 // Received spell book for black witch
 #define FLAG_ITEM_HM06                                              0x496 // Found rock smash
 #define FLAG_HIDE_PRIMEAPE                                          0x497 // Hide Primeape Mount Cinnabar Summit
 #define FLAG_HIDE_MOUNT_SUMMIT_NCC_SCIENTIST                        0x498 // Hide Summit Cities
