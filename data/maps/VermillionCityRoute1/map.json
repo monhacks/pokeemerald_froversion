@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
+      "map": "MAP_SALT_LAKE_CITY",
       "offset": 0,
-      "map": "MAP_SALT_LAKE_CITY"
+      "direction": "up"
     },
     {
-      "direction": "down",
+      "map": "MAP_VERMILLION_CITY",
       "offset": 0,
-      "map": "MAP_VERMILLION_CITY"
+      "direction": "down"
     }
   ],
   "object_events": [

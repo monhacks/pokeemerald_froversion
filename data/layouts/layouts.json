@@ -6204,7 +6204,7 @@
     {
       "id": "LAYOUT_VERMILLION_CITY_ROUTE2",
       "name": "VermillionCityRoute2_Layout",
-      "width": 36,
+      "width": 52,
       "height": 20,
       "primary_tileset": "gTileset_VermillionCityPrimary",
       "secondary_tileset": "gTileset_VermillionCitySecondary",
@@ -6254,12 +6254,22 @@
     {
       "id": "LAYOUT_VERMILLION_CITY_HARBOR",
       "name": "VermillionCityHarbor_Layout",
-      "width": 36,
+      "width": 86,
       "height": 32,
       "primary_tileset": "gTileset_VermillionCityPrimary",
       "secondary_tileset": "gTileset_VermillionCitySecondary",
       "border_filepath": "data/layouts/VermillionCityHarbor/border.bin",
       "blockdata_filepath": "data/layouts/VermillionCityHarbor/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIVERTON_TOWN",
+      "name": "Riverton_Town_Layout",
+      "width": 28,
+      "height": 20,
+      "primary_tileset": "gTileset_VermillionCityPrimary",
+      "secondary_tileset": "gTileset_VermillionCitySecondary",
+      "border_filepath": "data/layouts/Riverton_Town/border.bin",
+      "blockdata_filepath": "data/layouts/Riverton_Town/map.bin"
     }
   ]
 }

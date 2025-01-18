@@ -1437,3 +1437,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/SaltLakeCityHouse1/scripts.inc"
 
 	.include "data/maps/SaltLakeCityHouse2/scripts.inc"
+
+	.include "data/maps/Riverton_Town/scripts.inc"
