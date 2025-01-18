@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_VERMILLION_CITY",
-      "offset": -20,
-      "direction": "left"
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_VERMILLION_CITY_ROUTE2"
     },
     {
-      "map": "MAP_VERMILLION_CITY_ROUTE2",
-      "offset": 0,
-      "direction": "up"
+      "direction": "left",
+      "offset": -20,
+      "map": "MAP_VERMILLION_CITY"
     }
   ],
   "object_events": [
