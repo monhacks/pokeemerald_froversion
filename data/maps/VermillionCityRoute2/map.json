@@ -17,6 +17,11 @@
       "map": "MAP_VERMILLION_CITY",
       "offset": 0,
       "direction": "left"
+    },
+    {
+      "map": "MAP_VERMILLION_CITY_HARBOR",
+      "offset": 0,
+      "direction": "down"
     }
   ],
   "object_events": [

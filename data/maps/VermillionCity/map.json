@@ -32,6 +32,11 @@
       "map": "MAP_VERMILLION_CITY_ROUTE1",
       "offset": 0,
       "direction": "up"
+    },
+    {
+      "map": "MAP_VERMILLION_CITY_HARBOR",
+      "offset": 18,
+      "direction": "right"
     }
   ],
   "object_events": [
