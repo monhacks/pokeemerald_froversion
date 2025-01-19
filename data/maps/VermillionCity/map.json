@@ -14,29 +14,29 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_VERMILLION_BEACH",
+      "direction": "down",
       "offset": 0,
-      "direction": "down"
+      "map": "MAP_VERMILLION_BEACH"
     },
     {
-      "map": "MAP_VERMILLION_CITY_LEFT_BOARDER",
+      "direction": "left",
       "offset": 39,
-      "direction": "left"
+      "map": "MAP_VERMILLION_CITY_LEFT_BOARDER"
     },
     {
-      "map": "MAP_VERMILLION_CITY_ROUTE2",
+      "direction": "right",
       "offset": 0,
-      "direction": "right"
+      "map": "MAP_VERMILLION_CITY_ROUTE2"
     },
     {
-      "map": "MAP_VERMILLION_CITY_ROUTE1",
+      "direction": "up",
       "offset": 0,
-      "direction": "up"
+      "map": "MAP_VERMILLION_CITY_ROUTE1"
     },
     {
-      "map": "MAP_VERMILLION_CITY_HARBOR",
+      "direction": "right",
       "offset": 20,
-      "direction": "right"
+      "map": "MAP_VERMILLION_CITY_HARBOR"
     }
   ],
   "object_events": [
@@ -151,21 +151,21 @@
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_VERMILLION_CITY_MAGEES_PLEASURE_FACTORY",
-      "dest_warp_id": "0"
+      "dest_warp_id": 0
     },
     {
       "x": 21,
       "y": 32,
       "elevation": 0,
       "dest_map": "MAP_VERMILLION_CITY_MATTS_HOUSE",
-      "dest_warp_id": "0"
+      "dest_warp_id": 0
     },
     {
       "x": 14,
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_FALLARBOR_TOWN_POKEMON_CENTER_1F",
-      "dest_warp_id": "0"
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

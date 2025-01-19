@@ -14,19 +14,19 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_VERMILLION_CITY",
+      "direction": "left",
       "offset": 0,
-      "direction": "left"
+      "map": "MAP_VERMILLION_CITY"
     },
     {
-      "map": "MAP_VERMILLION_CITY_HARBOR",
+      "direction": "down",
       "offset": 0,
-      "direction": "down"
+      "map": "MAP_VERMILLION_CITY_HARBOR"
     },
     {
-      "map": "MAP_RIVERTON_TOWN",
+      "direction": "right",
       "offset": 0,
-      "direction": "right"
+      "map": "MAP_RIVERTON_TOWN"
     }
   ],
   "object_events": [
