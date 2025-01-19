@@ -179,6 +179,18 @@ SaltLakeCity_EventScript_ThanksAndReward:
 		playfanfare MUS_OBTAIN_ITEM
 		waitfanfare
 		setvar VAR_MAGEE_VERSION, 6
+		setflag FLAG_SYS_POKEMON_GET
+	releaseall
+	end
+
+VermillionCityRoute1_EventScript_StopPlayerFromLeaving::
+	lockall
+		compare VAR_MAGEE_VERSION, 0
+		goto_if_gt VermillionCityRoute1_EventScript_StopPlayerFromLeavingEnd
+		msgbox SaltLakeCity_Text_BetterNotLeaveBeforeGoingToTheOffice, MSGBOX_AUTOCLOSE
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+		waitmovement OBJ_EVENT_ID_PLAYER
+			VermillionCityRoute1_EventScript_StopPlayerFromLeavingEnd:
 	releaseall
 	end
 
@@ -391,3 +403,8 @@ SaltLakeCity_Text_ThanksAndReward:
 
 SaltLakeCity_Text_PlayerReceivesPokemon:
 	.string "{PLAYER} has received Machop!$"
+
+SaltLakeCity_Text_BetterNotLeaveBeforeGoingToTheOffice:
+	.string "Team MAGA was looking for me. Better\n"
+	.string "go see what they want before going\l"
+	.string "anywhere else.$"

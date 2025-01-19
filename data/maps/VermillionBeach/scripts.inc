@@ -32,6 +32,8 @@ VermillionBeach_Eventscript_ProtagRestingOnBeach:
 		playfanfare MUS_OBTAIN_ITEM
 		waitfanfare
 		setflag FLAG_HIDE_BEACH_METAGROSS
+		setrespawn HEAL_LOCATION_VERMILLION_CITY
+		clearflag FLAG_SYS_POKEMON_GET
 	addvar VAR_MAGEE_VERSION_INTRO_STATE, 1 					@@ sets var to 2
 	releaseall
 	end

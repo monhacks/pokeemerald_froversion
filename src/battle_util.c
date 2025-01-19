@@ -3268,6 +3268,7 @@ bool8 HandleFaintedMonActions(void)
                     }
                     if(B_VERSION_MAGM6 || B_VERSION_MAGEE)
                     {
+                        BattleScriptExecute(BattleScript_GiveExp);
                         gBattleStruct->faintedActionsState = 2;
                         return TRUE;
                     }

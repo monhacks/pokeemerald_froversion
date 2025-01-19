@@ -204,6 +204,33 @@
       "var": "VAR_MAGEE_VERSION_INTRO_STATE",
       "var_value": "2",
       "script": "VermillionCity_EventScript_BoyTellsPlayerAquaMemberIsAtHisShop4"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "VermillionCityRoute1_EventScript_StopPlayerFromLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "VermillionCityRoute1_EventScript_StopPlayerFromLeaving"
+    },
+    {
+      "type": "trigger",
+      "x": 65,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "VermillionCityRoute1_EventScript_StopPlayerFromLeaving"
     }
   ],
   "bg_events": [

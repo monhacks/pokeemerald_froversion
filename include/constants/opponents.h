@@ -17,7 +17,7 @@
 #define TRAINER_ED                           13
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
 #define TRAINER_DECLAN                       15
-#define TRAINER_GRUNT_RUSTURF_TUNNEL         16
+#define TRAINER_GRUNT_SALT_LAKE         16
 #define TRAINER_GRUNT_WEATHER_INST_1         17
 #define TRAINER_GRUNT_WEATHER_INST_2         18
 #define TRAINER_GRUNT_WEATHER_INST_3         19
@@ -771,8 +771,8 @@
 #define TRAINER_CRISTIN_1                   767
 #define TRAINER_MAY_RUSTBORO_TREECKO        768
 #define TRAINER_MAY_RUSTBORO_TORCHIC        769
-#define TRAINER_ROXANNE_2                   770
-#define TRAINER_ROXANNE_3                   771
+#define TRAINER_BARB                   770
+#define TRAINER_FINN                   771
 #define TRAINER_ROXANNE_4                   772
 #define TRAINER_ROXANNE_5                   773
 #define TRAINER_BRAWLY_2                    774

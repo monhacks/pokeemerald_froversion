@@ -33,7 +33,7 @@ VermillionCityMageesPleasureFactoryOffice_EventScript_GruntsTakeMetagross:
 		waitmovement LOCALID_GRUNT_2
 		removeobject LOCALID_GRUNT_1
 		removeobject LOCALID_GRUNT_2
-		setvar VAR_MAGEE_VERSION,2
+		setvar VAR_MAGEE_VERSION, 2
 		setflag FLAG_HIDE_ROUTE_2_MAGA_GRUNT_1
 		playbgm MUS_FV_SANDY_BEACH, 0
 	releaseall

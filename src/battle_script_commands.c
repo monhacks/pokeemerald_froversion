@@ -3951,7 +3951,7 @@ static void Cmd_getexp(void)
     gBattlerFainted = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
     sentIn = gSentPokesToOpponent[(gBattlerFainted & 2) >> 1];
 
-    if(B_VERSION_MARRIOTT)
+    if(B_VERSION_MARRIOTT || B_VERSION_MAGEE)
         levelDivisorExp = 3;
     if(B_VERSION_FRO)
         levelDivisorExp = 7;

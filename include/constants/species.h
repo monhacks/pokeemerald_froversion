@@ -1267,7 +1267,7 @@
 #define HOENN_DEX_DRACASTER	182
 
 //#define HOENN_DEX_COUNT         HOENN_DEX_DRACASTER //froversion
-#define HOENN_DEX_COUNT         HOENN_DEX_DUGTRIO //marriottversion
+#define HOENN_DEX_COUNT         HOENN_DEX_DIGLETT //marriottversion
 
 
 #define HOENN_DEX_AERODACTYL 183

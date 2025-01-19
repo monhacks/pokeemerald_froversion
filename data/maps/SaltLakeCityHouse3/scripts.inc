@@ -17,13 +17,14 @@ SaltLakeCityHouse3_EventScript_Man::
 SaltLakeCityHouse3_EventScript_GruntBattle:
 	lockall
 		msgbox SaltLakeCity_Text_HeyLeaveHimAlone, MSGBOX_DEFAULT
+		playse SE_PIN
 		applymovement LOCALID_GRUNT_1, SaltLakeCity_Movement_LookShocked
 		applymovement LOCALID_MAN, SaltLakeCity_Movement_LookShocked
 		waitmovement LOCALID_MAN
 		msgbox SaltLakeCity_Text_NoneOfYourBusiness, MSGBOX_DEFAULT
 		applymovement LOCALID_GRUNT_1, SaltLakeCity_Movement_WalkToPlayer
 		waitmovement LOCALID_GRUNT_1
-		trainerbattle_no_intro TRAINER_JOHN_CHAMPIONS_HALL_TREECKO, SaltLakeCity_Text_GruntDefeatedMessage
+		trainerbattle_no_intro TRAINER_GRUNT_SALT_LAKE, SaltLakeCity_Text_GruntDefeatedMessage
 		setvar VAR_MAGEE_VERSION, 7
 		applymovement LOCALID_GRUNT_1, SaltLakeCity_Movement_GruntLeaves
 		waitmovement LOCALID_GRUNT_1
@@ -31,7 +32,6 @@ SaltLakeCityHouse3_EventScript_GruntBattle:
 		setflag FLAG_HIDE_SALT_LAKE_CITY_GRUNT
 		msgbox SaltLakeCity_Text_ManAfterBattle, MSGBOX_DEFAULT
 		msgbox SaltLakeCity_Text_ManAfterBattle2, MSGBOX_DEFAULT
-		setvar VAR_MAGEE_VERSION, 7
 	releaseall
 	end
 		

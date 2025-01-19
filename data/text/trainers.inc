@@ -4835,4 +4835,22 @@ LancelotPath_Text_Messenger1Defeated:
 	.string "This plane is going down in flames \nand this time, there's no black box \lto capture your last words.$"
 
 
+/////////////////////////////////////////
+////////MAGEEVERSION TEXTS/////////////////
+////////////////////////////////////////
 
+Route2_Text_BarbIntro:
+	.string "You want to have a practice battle?\n"
+	.string "I'm trying to get stronger so I can\l"
+	.string "challenge the Vermillion City Gym\n"
+	.string "leader.\p"
+	.string "He specializes in Electric type\n"
+	.string "Pokémon!$"
+
+Route102_Text_BarbDefeated:
+	.string "Good thing that was just practice!$"
+
+Route2_Text_BarbPostBattle:
+	.string "I need to practice more if I'm going\n"
+	.string "to have any shot at beating Lt.\l"
+	.string "Surge.$"

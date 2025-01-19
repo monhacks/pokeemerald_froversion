@@ -54,7 +54,19 @@ VermillionCityRoute2_EventScript_GruntStopsPlayerFromLeaving::
 		msgbox VermillionCityRoute2_Text_TeamMAGAIsWaitingAtPleasureFactory, MSGBOX_DEFAULT
 		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
 		waitmovement OBJ_EVENT_ID_PLAYER
-		VermillionCityRoute2_EventScript_GruntStopsPlayerFromLeavingEnd:
+			VermillionCityRoute2_EventScript_GruntStopsPlayerFromLeavingEnd:
+				compare VAR_MAGEE_VERSION, 3
+				goto_if_ne VermillionCityRoute2_EventScript_NoPokemonInParty
+	releaseall
+	end
+	
+VermillionCityRoute2_EventScript_NoPokemonInParty:
+	compare VAR_MAGEE_VERSION, 6
+	goto_if_ge VermillionCityRoute2_EventScript_NoPokemonInPartyEnd
+	msgbox VermillionCityRoute1_Text_IShouldntGoInTallGrass, MSGBOX_AUTOCLOSE
+		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft
+		waitmovement OBJ_EVENT_ID_PLAYER
+	VermillionCityRoute2_EventScript_NoPokemonInPartyEnd:
 	releaseall
 	end
 	
@@ -64,6 +76,19 @@ VermillionCityRoute2_EventScript_Grunt::
 		msgbox VermillionCityRoute2_Text_TeamMAGAIsWaitingAtPleasureFactory, MSGBOX_NPC
 	releaseall
 	end
+
+VermillionCityRoute2_EventScript_Barb::
+	trainerbattle_single TRAINER_BARB, Route2_Text_BarbIntro, Route102_Text_BarbDefeated
+	msgbox Route2_Text_BarbPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+RivertonVermillionCityRoute2_EventScript_Finn::
+	trainerbattle_single TRAINER_FINN, VermillionCityRoute2_Text_FinnIntro, VermillionCityRoute2_Text_FinnDefeated
+	msgbox VermillionCityRoute2_Text_FinnPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
 
 VermillionCityRoute2_Movement_GruntsLeave:
 	walk_right
@@ -105,3 +130,16 @@ VermillionCityRoute2_Text_StopThat:
 	.string "...\p"
 	.string "The wild Azumarill knocked {PLAYER}\n"
 	.string "out.$"
+
+VermillionCityRoute2_Text_FinnIntro:
+	.string "Hey, landlubber! Think you can\n"
+	.string "handle a battle on the high seas?\p"
+	.string "The salty breeze and crashing\n"
+	.string "waves are my home! Let's fight!$"
+
+VermillionCityRoute2_Text_FinnDefeated:
+	.string "Argh, looks like I got swept away!$"
+
+VermillionCityRoute2_Text_FinnPostBattle:
+	.string "You're tough, landlubber. Maybe\n"
+	.string "you'll sail far on your journey.$"

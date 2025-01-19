@@ -10,12 +10,19 @@ SaltLakeCityHouse2_EventScript_GoodsWoman::
 		checkitem ITEM_OAKS_PARCEL, 1
 		compare VAR_RESULT, TRUE
 		goto_if_eq SaltLakeCityHouse2_EventScript_AlreadyReceivedGoods
+		goto_if_unset FLAG_QUEST_FETCH_GOODS_FROM_NORTHTOWN, SaltLakeCityHouse2_EventScript_GoodsWomanNPC
+		goto_if_lt SaltLakeCityHouse2_EventScript_GoodsWomanNPC
 		msgbox SaltLakeCityHouse2_Text_TommyGoods, MSGBOX_NPC
 		giveitem ITEM_OAKS_PARCEL, 1
 		goto SaltLakeCityHouse2_EventScript_AlreadyReceivedGoods
 
 SaltLakeCityHouse2_EventScript_AlreadyReceivedGoods:
 		msgbox SaltLakeCityHouse2_Text_TommyGoods2, MSGBOX_NPC
+	releaseall
+	end
+
+SaltLakeCityHouse2_EventScript_GoodsWomanNPC:
+		msgbox SaltLakeCity_House2_Text_WonderWhenTommy, MSGBOX_NPC
 	releaseall
 	end
 
@@ -36,3 +43,7 @@ SaltLakeCityHouse2_Text_TommyGoods2:
 	.string "Make sure to tell Tommy that his shipment\n"
 	.string "arrived safely and to let me know if he\l"
 	.string "needs anything else.$"
+
+SaltLakeCity_House2_Text_WonderWhenTommy:
+	.string "I wonder when Tommy will be by to pick\n"
+	.string "up his goods.$"

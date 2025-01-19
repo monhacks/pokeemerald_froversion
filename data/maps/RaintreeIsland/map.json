@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
+      "map": "MAP_ROUTE106",
       "offset": -53,
-      "map": "MAP_ROUTE106"
+      "direction": "up"
     },
     {
-      "direction": "right",
+      "map": "MAP_ROUTE107",
       "offset": 0,
-      "map": "MAP_ROUTE107"
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -97,35 +97,35 @@
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_DEWFORD_TOWN_HALL",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 5,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_RAINTREE_ISLAND_GYM_ENTRANCE",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     },
     {
       "x": 24,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_DEWFORD_TOWN_HOUSE1",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 15,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_DEWFORD_TOWN_HOUSE2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 14,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_RAINTREE_ISLAND_BERRY_STAND",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

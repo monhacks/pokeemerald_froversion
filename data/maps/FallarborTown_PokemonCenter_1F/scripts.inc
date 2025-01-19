@@ -62,9 +62,20 @@ VermillionCity_Pokemart_EventScript_Clerk::
 	playbgm MUS_FV_PIMP, 0
 	message VermillionCity_Pokemart_Text_Clerk
 	waitmessage
-	pokemart LavaridgeCity_Pokemart_Amneet
+	pokemart VermillionCity_Pokemart_Amneet
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	fadedefaultbgm
+	release
+	end
+
+.align 2
+VermillionCity_Pokemart_Amneet:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_NONE
 	release
 	end
 

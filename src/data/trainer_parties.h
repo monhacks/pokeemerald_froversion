@@ -170,10 +170,10 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Declan[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntRusturfTunnel[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntSaltLake[] = {
     {
     .iv = 0,
-    .lvl = 16,
+    .lvl = 10,
     .species = SPECIES_GRIMER,
     }
 };
@@ -15015,3 +15015,30 @@ static const struct TrainerMonItemCustomMoves sParty_MattBossTest[] = {
         },
     },
 };
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Barb[] = {
+    {
+    .iv = 0,
+    .lvl = 7,
+    .species = SPECIES_SENTRET,
+    },
+    {
+    .iv = 0,
+    .lvl = 7,
+    .species = SPECIES_ODDISH,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Finn[] = {
+    {
+    .iv = 10,
+    .lvl = 10,
+    .species = SPECIES_OTDORBLE,
+    },
+    {
+    .iv = 20,
+    .lvl = 10,
+    .species = SPECIES_CACTAR,
+    }
+};
+
