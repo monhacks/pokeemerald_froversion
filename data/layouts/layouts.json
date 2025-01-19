@@ -6270,6 +6270,16 @@
       "secondary_tileset": "gTileset_VermillionCitySecondary",
       "border_filepath": "data/layouts/Riverton_Town/border.bin",
       "blockdata_filepath": "data/layouts/Riverton_Town/map.bin"
+    },
+    {
+      "id": "LAYOUT_SALT_LAKE_CITY_HOUSE3",
+      "name": "SaltLakeCityHouse3_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/SaltLakeCityHouse3/border.bin",
+      "blockdata_filepath": "data/layouts/SaltLakeCityHouse3/map.bin"
     }
   ]
 }

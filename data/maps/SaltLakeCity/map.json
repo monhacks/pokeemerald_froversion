@@ -36,6 +36,13 @@
       "elevation": 0,
       "dest_map": "MAP_SALT_LAKE_CITY_HOUSE2",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_SALT_LAKE_CITY_HOUSE3",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

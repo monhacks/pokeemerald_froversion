@@ -1234,7 +1234,7 @@
 #define FLAG_VENDINGMACHINE_TM10                                    0x4A2 // Unused Flag
 #define FLAG_VENDINGMACHINE_TM11                                    0x4A3 // Unused Flag
 #define FLAG_VENDINGMACHINE_TM12                                    0x4A4 // Unused Flag
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
+#define FLAG_HIDE_SALT_LAKE_CITY_GRUNT                                           0x4A5 // Unused Flag
 #define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
 #define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
 #define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
