@@ -6179,7 +6179,7 @@
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/VermillionCityMageesPleasureFactoryOffice/border.bin",
-      "blockdata_filepath": "data/layouts/VermillionCityMageesPle\u0000\u0000\u0000\u0000eFactoryOffice/map.bin"
+      "blockdata_filepath": "data/layouts/VermillionCityMageesPleasureFactoryOffice/map.bin"
     },
     {
       "id": "LAYOUT_VERMILLION_CITY_MAGEES_PLEASURE_FACTORY_OFFICE2",
