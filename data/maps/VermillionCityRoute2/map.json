@@ -3,7 +3,7 @@
   "name": "VermillionCityRoute2",
   "layout": "LAYOUT_VERMILLION_CITY_ROUTE2",
   "music": "MUS_ROUTE101",
-  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "region_map_section": "MAPSEC_ROUTE_102",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",

@@ -110,6 +110,17 @@ Common_Movement_WalkRight::
 Common_Movement_WalkLeft::
 	walk_left
 	step_end
+
+Common_Movement_WalkLeft8::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
 	
 Common_Movement_FaceLeftSurprised: @ 82725AE
 	face_left

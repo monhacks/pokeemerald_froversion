@@ -887,6 +887,8 @@ static const u8 sText_12_10_1958[] =_("12/10/1958");
 static const u8 sText_12_11_1958[] =_("12/11/1958");
 static const u8 sText_12_12_1958[] =_("12/12/1958");
 static const u8 sText_CutTrees[] =_("Trees");
+static const u8 sText_Island[] =_("Island");
+static const u8 sText_Swamp[] =_("Swamp");
 
 
 
@@ -1057,6 +1059,11 @@ static const struct ListMenuItem sMAGM8ProfessorsJournalEntries[] =
     {sText_12_11_1958, 6},
     {sText_12_12_1958, 7},
 };
+static const struct ListMenuItem sRivertonTownSailingDestinations[] =
+{
+    {sText_Island, 0},
+    {sText_Swamp, 1},
+};
 
 // Table of your multichoice sets.
 struct
@@ -1081,6 +1088,7 @@ struct
     {sMAGM8FirstToDoList, ARRAY_COUNT(sMAGM8FirstToDoList)}, //13
     {sMAGM8SecondToDoList, ARRAY_COUNT(sMAGM8SecondToDoList)}, //14
     {sMAGM8ProfessorsJournalEntries, ARRAY_COUNT(sMAGM8ProfessorsJournalEntries)}, //15
+    {sRivertonTownSailingDestinations, ARRAY_COUNT(sRivertonTownSailingDestinations)}, //16
     
     
 };

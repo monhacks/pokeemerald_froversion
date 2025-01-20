@@ -1,9 +1,9 @@
 #ifndef GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
 #define GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
 
-static const u8 sMapName_LakeMeadVillage[] = _("Lake Mead Village");
-static const u8 sMapName_OldaleTown[] = _("Six Corners");
-static const u8 sMapName_DewfordTown[] = _("RainTree Island");
+static const u8 sMapName_LakeMeadVillage[] = _("Sandy Beach Town");
+static const u8 sMapName_OldaleTown[] = _("Salt Lake City");
+static const u8 sMapName_DewfordTown[] = _("Riverton Town");
 static const u8 sMapName_LavaridgeTown[] = _("Grand Island");
 static const u8 sMapName_FallarborTown[] = _("Cayuga Town");
 static const u8 sMapName_VerdanturfTown[] = _("Saunders Settlement");
@@ -17,8 +17,8 @@ static const u8 sMapName_LilycoveCity[] = _("Fashion Outlets");
 static const u8 sMapName_MossdeepCity[] = _("Ward City");
 static const u8 sMapName_SootopolisCity[] = _("S. Homestead");
 static const u8 sMapName_EverGrandeCity[] = _("Scranton");
-static const u8 sMapName_Route101[] = _("Route 101");
-static const u8 sMapName_Route102[] = _("Route 102");
+static const u8 sMapName_Route101[] = _("Route 1");
+static const u8 sMapName_Route102[] = _("Route 2");
 static const u8 sMapName_Route103[] = _("Route 103");
 static const u8 sMapName_Route104[] = _("Route 104");
 static const u8 sMapName_Route105[] = _("Route 105");

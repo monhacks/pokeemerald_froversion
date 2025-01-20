@@ -2,7 +2,7 @@
   "id": "MAP_RIVERTON_TOWN",
   "name": "Riverton_Town",
   "layout": "LAYOUT_RIVERTON_TOWN",
-  "music": "MUS_FV_RAINTREE_ISLAND",
+  "music": "MUS_SAILING",
   "region_map_section": "MAPSEC_DEWFORD_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
