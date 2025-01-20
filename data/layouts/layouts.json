@@ -6179,7 +6179,7 @@
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/VermillionCityMageesPleasureFactoryOffice/border.bin",
-      "blockdata_filepath": "data/layouts/VermillionCityMageesPleasureFactoryOffice/map.bin"
+      "blockdata_filepath": "data/layouts/VermillionCityMageesPle\u0000\u0000\u0000\u0000eFactoryOffice/map.bin"
     },
     {
       "id": "LAYOUT_VERMILLION_CITY_MAGEES_PLEASURE_FACTORY_OFFICE2",
@@ -6310,6 +6310,46 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Riverton_Town_House_3/border.bin",
       "blockdata_filepath": "data/layouts/Riverton_Town_House_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILLION_CITY_ARNOLDS_BOAT_REPAIR",
+      "name": "VermillionCityArnoldsBoatRepair_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_OceanicMuseum",
+      "border_filepath": "data/layouts/VermillionCityArnoldsBoatRepair/border.bin",
+      "blockdata_filepath": "data/layouts/VermillionCityArnoldsBoatRepair/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILLION_CITY_HOUSE1",
+      "name": "VermillionCity_House1_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VermillionCity_House1/border.bin",
+      "blockdata_filepath": "data/layouts/VermillionCity_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILLION_CITY_HOUSE2",
+      "name": "VermillionCity_House2_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VermillionCity_House2/border.bin",
+      "blockdata_filepath": "data/layouts/VermillionCity_House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILLION_CITY_HOUSE3",
+      "name": "VermillionCity_House3_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/VermillionCity_House3/border.bin",
+      "blockdata_filepath": "data/layouts/VermillionCity_House3/map.bin"
     }
   ]
 }

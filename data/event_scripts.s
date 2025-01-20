@@ -1447,3 +1447,11 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/Riverton_Town_House_2/scripts.inc"
 
 	.include "data/maps/Riverton_Town_House_3/scripts.inc"
+
+	.include "data/maps/VermillionCityArnoldsBoatRepair/scripts.inc"
+
+	.include "data/maps/VermillionCity_House1/scripts.inc"
+
+	.include "data/maps/VermillionCity_House2/scripts.inc"
+
+	.include "data/maps/VermillionCity_House3/scripts.inc"

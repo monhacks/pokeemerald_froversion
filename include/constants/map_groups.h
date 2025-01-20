@@ -755,6 +755,10 @@
 #define MAP_RIVERTON_TOWN_HOUSE_1                           (22 | (32 << 8))
 #define MAP_RIVERTON_TOWN_HOUSE_2                           (23 | (32 << 8))
 #define MAP_RIVERTON_TOWN_HOUSE_3                           (24 | (32 << 8))
+#define MAP_VERMILLION_CITY_ARNOLDS_BOAT_REPAIR             (25 | (32 << 8))
+#define MAP_VERMILLION_CITY_HOUSE1                          (26 | (32 << 8))
+#define MAP_VERMILLION_CITY_HOUSE2                          (27 | (32 << 8))
+#define MAP_VERMILLION_CITY_HOUSE3                          (28 | (32 << 8))
 
 // gMapGroup33
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))

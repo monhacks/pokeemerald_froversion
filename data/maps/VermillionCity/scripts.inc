@@ -221,6 +221,12 @@ VermillionCity_EventScript_PokeCenterAndMartSign::
 	release
 	end
 
+VermillionCity_EventScript_BoatRepairShopSign::
+	lock
+		msgbox VermillionCity_Text_BoatRepairShopSign, MSGBOX_SIGN
+	release
+	end
+
 
 ////////////////////////////////////////////
 ///////////////MOVEMENT/////////////////////
@@ -408,3 +414,6 @@ SaltLakeCity_Text_BetterNotLeaveBeforeGoingToTheOffice:
 	.string "Team MAGA was looking for me. Better\n"
 	.string "go see what they want before going\l"
 	.string "anywhere else.$"
+
+VermillionCity_Text_BoatRepairShopSign:
+	.string "Arnolds Boat Repair Shop$"
