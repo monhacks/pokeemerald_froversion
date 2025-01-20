@@ -7,6 +7,8 @@ Riverton_Town_House_2_EventScript_InventorTheo::
 
 Riverton_Town_House_2_Text_InventorTheo:
 	.string "Ah, a visitor! Welcome to my workshop.\n"
-	.string "I'm working on a prototype engine for boats.\p"
-	.string "If you find any rare components, do let me\n"
-	.string "know-I might just have something for you!$"
+	.string "I'm working on a prototype engine for\l"
+	.string "boats.\p"
+	.string "If you find any rare components, do let\n"
+	.string "me know-I might just have something\l"
+	.string "for you!$"

@@ -42,8 +42,8 @@ Riverton_Town_Text_HarborGuardTony:
 Riverton_Town_Text_TouristEllie:
 	.string "This harbor's so charming! I just love\n"
 	.string "watching the boats come and go.\p"
-	.string "Have you explored the surrounding routes?\n"
-	.string "They're full of adventure!$"
+	.string "Have you explored the surrounding\n"
+	.string "routes? They're full of adventure!$"
 
 Riverton_Town_Text_LostChildAmy:
 	.string "I lost my balloon near the docks!\n"

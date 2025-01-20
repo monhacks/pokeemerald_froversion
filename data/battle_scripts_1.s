@@ -5471,8 +5471,6 @@ BattleScript_PayDayMoneyAndPickUpItems::
 BattleScript_ItemDropped::
 	playse SE_BALL_BOUNCE_1
 	printfromtable gItemDroppedStringIds
-	getmoneyreward
-	printstring STRINGID_PLAYERGOTMONEY
 	waitmessage 0x40
 	return
 

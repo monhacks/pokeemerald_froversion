@@ -17,6 +17,7 @@ Riverton_EventScript_CaptainGregOffersRideNeedsFuel:
 
 Riverton_EventScript_CaptainGregOffersRide:
 		msgbox Riverton_Text_GiveFuel, MSGBOX_NPC
+		removeitem ITEM_COIN_CASE, 1
 		setflag FLAG_RIVERTON_FUEL_QUEST_COMPLETED
 		Riverton_EventScript_CaptainGregOffersRideFuelGiven:
 			msgbox Riverton_Text_SoWhereWouldYouLikeToGo, MSGBOX_DEFAULT
