@@ -1,9 +1,13 @@
+
+.set LOCALID_SAILOR, 6
+
 CinnibarIsland_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, CinnabarIsland_OnFrame
 	.byte 0
 
 CinnabarIsland_OnFrame: @ 8238C4F
 	map_script_2 VAR_ROUTE101_STATE, 0, CinnabarIsland_NewGameEvents
+	map_script_2 VAR_ROUTE101_STATE, 7, CinnabarIsland_PostBoss
 	.2byte 0
 
 @--------------------------------------------------------------------------------
@@ -29,17 +33,22 @@ debug_RandomItem3:
 
 CinnabarIsland_NewGameEvents::
 	lock
+		applymovement LOCALID_SAILOR, Common_Movement_FacePlayer
+		waitmovement LOCALID_SAILOR
+		msgbox CinnabarIsland_Text_PleaseTakePackageToNCC, MSGBOX_DEFAULT
 		giveitem ITEM_NCC_PACKAGE, 1
-				givecustommon SPECIES_VAPOREON, 50, ITEM_LEFTOVERS, ITEM_DIVE_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_SCALD, MOVE_WISH, MOVE_PROTECT, MOVE_HEAL_BELL, 0
-                givecustommon SPECIES_MACHAMP, 50, ITEM_NONE, ITEM_ULTRA_BALL, NATURE_JOLLY, 1, 0, 100, 4, 100, 0, 0, 16, 16, 16, 16, 16, 16, MOVE_CROSS_CHOP, MOVE_BULK_UP, MOVE_BULLET_PUNCH, MOVE_KNOCK_OFF, 0
-                givecustommon SPECIES_HOUNDOOM, 50, ITEM_SITRUS_BERRY, ITEM_DUSK_BALL, NATURE_TIMID, 1, 56, 0, 0, 88, 100, 12, 16, 16, 16, 16, 16, 16, MOVE_CRUNCH, MOVE_NASTY_PLOT, MOVE_FLAMETHROWER, MOVE_TOXIC, 0
 		setvar VAR_ROUTE101_STATE, 1
-		setflag FLAG_SYS_POKEMON_GET
-		setflag FLAG_ITEM_FISHING
-		clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
-		setrespawn HEAL_LOCATION_CINNIBAR_ISLAND
 	release
 	end
+
+CinnabarIsland_PostBoss::
+		applymovement LOCALID_SAILOR, Common_Movement_FacePlayer
+		waitmovement LOCALID_SAILOR
+		msgbox CinnabarIsland_Text_BoatFixed, MSGBOX_DEFAULT
+		setvar VAR_ROUTE101_STATE, 8
+	release
+	end
+	
 
 
 CinnabarIsland_EventScript_ManUnloadingShip::
@@ -68,8 +77,55 @@ CinnabarIsland_EventScript_ManMovingBoxes::
 end
 
 CinnabarIsland_EventScript_Sailor::
+	compare VAR_ROUTE101_STATE, 8
+	goto_if_ge CinnabarIsland_EventScript_SailorReturnToVermillion
 	msgbox CinnabarIsland_Text_Sailor, MSGBOX_NPC
 end
+
+CinnabarIsland_EventScript_SailorReturnToVermillion:
+	msgbox CinnabarIsland_Text_SailorReturnToVermillion, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, CinnabarIsland_EventScript_SailorReturnToVermillionNo
+	case YES, CinnabarIsland_EventScript_SailorReturnToVermillionYes
+	case MULTI_B_PRESSED, CinnabarIsland_EventScript_SailorReturnToVermillionNo
+
+CinnabarIsland_EventScript_SailorReturnToVermillionNo:
+	msgbox CinnabarIsland_Text_OkayLetMeKnowWhen,MSGBOX_DEFAULT
+	releaseall
+	end
+
+CinnabarIsland_EventScript_SailorReturnToVermillionYes:
+		msgbox Riverton_Text_AlrightLetsGo, MSGBOX_AUTOCLOSE
+		applymovement OBJ_EVENT_ID_PLAYER, CinnabarIsland_Movement_PlayerEnterBoat
+		waitmovement OBJ_EVENT_ID_PLAYER
+		hideobjectat OBJ_EVENT_ID_PLAYER, 0
+		applymovement LOCALID_CAPTAIN, CinnabarIsland_Movement_CaptainEnterBoat
+		waitmovement LOCALID_CAPTAIN
+		removeobject LOCALID_CAPTAIN
+		applymovement LOCALID_SS_TIDAL, Common_Movement_WalkLeft
+		waitmovement LOCALID_SS_TIDAL
+		warpsilent MAP_VERMILLION_CITY_HARBOR, 255, 56, 14
+	releaseall
+	end
+
+CinnabarIsland_Movement_PlayerEnterBoat:
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+CinnabarIsland_Movement_CaptainEnterBoat:
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+
 
 CinnabarIsland_EventScript_Scientist::
 	msgbox CinnabarIsland_Text_Scientist, MSGBOX_NPC
@@ -179,8 +235,8 @@ CinnabarIsland_Text_ManNextToBoxes2:
 	.string "have heard.$"
 
 CinnabarIsland_Text_Sailor:
-	.string "I still can't believe my old captain\n"
-	.string "got seasick on a regular basis.\p"
+	.string "I still can't believe I get sea legs\n"
+	.string "on a regular basis.\p"
 	.string "I suppose you're off to tell them their\n"
 	.string "delivery arrived?$"
 
@@ -233,6 +289,27 @@ CinnabarIsland_Text_GymClosedToday:
 	.string "Come back tomorrow if you want to get\n"
 	.string "handed a good old fasioned beat down.$"
 
+CinnabarIsland_Text_PleaseTakePackageToNCC:
+	.string "Ahoy {PLAYER}! I know you're busy\n"
+	.string "looking for Metagross, but I was\l"
+	.string "hoping you could drop this package\l"
+	.string "off at the Nautical Communication\l"
+	.string "center for me while we're here.\p"
+	.string "I always have sea legs after a long\n"
+	.string "sail and need to rest.$"
+
+CinnabarIsland_Text_SailorReturnToVermillion:
+	.string "Would you like to return to Riverton\n"
+	.string "Harbor?$"
+
+CinnabarIsland_Text_OkayLetMeKnowWhen:
+	.string "No problem Matey! Let me know when\n"
+	.string "you're ready!$"
+
+CinnabarIsland_Text_BoatFixed:
+	.string "Ahoy Matey. While you were off goofing\n"
+	.string "around, I got our boat fixed! Now we\l"
+	.string "get back home, no thanks to you!$"
 @--------------------------------------------------------------------------------
 @-----------------------------------Movement-------------------------------------
 @--------------------------------------------------------------------------------

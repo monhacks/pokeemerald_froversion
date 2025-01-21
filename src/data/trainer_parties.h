@@ -14773,31 +14773,31 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowNidokingAndQueen[] = 
     {
     .abilityNum = 0,
     .iv = 250,
-    .lvl = 45,
+    .lvl = 25,
     .species = SPECIES_NIDOKING,
     .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_EARTHQUAKE, MOVE_SHADOW_BALL, MOVE_ICE_BEAM, MOVE_THUNDERBOLT},
+    .moves = {MOVE_EARTH_POWER, MOVE_HORN_ATTACK, MOVE_ICE_BEAM, MOVE_SHOCK_WAVE},
     .stats = 
         {
-        .statDef = 170,
-        .statSpDef = 170,
-        .statHP = 305,
-        .statMaxHP = 305,
+        .statDef = 45,
+        .statSpDef = 45,
+        .statHP = 115,
+        .statMaxHP = 115,
         },
     },
     {
     .abilityNum = 0,
     .iv = 250,
-    .lvl = 45,
+    .lvl = 25,
     .species = SPECIES_NIDOQUEEN,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_HEAL_PULSE, MOVE_FOLLOW_ME, MOVE_HELPING_HAND, MOVE_EARTHQUAKE},
+    .moves = {MOVE_HEAL_PULSE, MOVE_FOLLOW_ME, MOVE_HELPING_HAND, MOVE_EARTH_POWER},
     .stats =
         {
-        .statDef = 214,
-        .statSpDef = 210,
-        .statHP = 320,
-        .statMaxHP = 320,
+        .statDef = 65,
+        .statSpDef = 64,
+        .statHP = 120,
+        .statMaxHP = 120,
         },
     },
 };
@@ -14806,7 +14806,7 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowCharizard[] = {
     {
     .abilityNum = 0,
     .iv = 225,
-    .lvl = 50,
+    .lvl = 30,
     .species = SPECIES_CHARIZARD_X,
     .heldItem = ITEM_RED_CARD,
     .moves = {MOVE_DRAGON_DANCE, MOVE_NASTY_PLOT, MOVE_SUNNY_DAY, MOVE_QUIVER_DANCE},

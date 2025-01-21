@@ -32,7 +32,7 @@ MountCinnabar_Summit_ShadowPrimeapeBattle::
 		playmoncry SPECIES_PRIMEAPE, 2
 		delay 40
 		waitmoncry
-		setwildbattle SPECIES_PRIMEAPE, 45, ITEM_NONE
+		setwildbattle SPECIES_PRIMEAPE, 15, ITEM_NONE
 		setflag FLAG_SYS_CTRL_OBJ_DELETE
 		setflag FLAG_SYS_NO_CATCHING
 		setflag FLAG_CAN_LOSE_NEXT_BATTLE
@@ -78,13 +78,14 @@ MountCinnabar_Summit_ShadowPrimeapeBattle::
 		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 		waitmovement OBJ_EVENT_ID_PLAYER
 		msgbox MountCinnabar_Summit_Text_NeverTrustedTheNCC, MSGBOX_DEFAULT
-		scrollingmultichoice 11, 2, 3, 3, TRUE
-		switch VAR_RESULT
-		case 0, MountCinnabar_Summit_EventScript_GiveJolteon
-		case 1, MountCinnabar_Summit_EventScript_GiveGengar
-		case 2, MountCinnabar_Summit_EventScript_GiveEspeon
-		case MULTI_B_PRESSED, MountCinnabar_Summit_EventScript_ChooseAPokemon
+		//scrollingmultichoice 11, 2, 3, 3, TRUE
+		//switch VAR_RESULT
+		//case 0, MountCinnabar_Summit_EventScript_GiveJolteon
+		//case 1, MountCinnabar_Summit_EventScript_GiveGengar
+		//case 2, MountCinnabar_Summit_EventScript_GiveEspeon
+		//case MULTI_B_PRESSED, MountCinnabar_Summit_EventScript_ChooseAPokemon
 		setflag FLAG_HIDE_MOUNT_SUMMIT_NCC_SCIENTIST
+		goto MountCinnabar_Summit_EventScript_GiveEspeon
 	release
 	end
 
@@ -125,10 +126,10 @@ MountCinnabar_Summit_EventScript_GiveGengar::
 	end
 
 MountCinnabar_Summit_EventScript_GiveEspeon::
-		playmoncry SPECIES_ESPEON, 2
+		playmoncry SPECIES_VAPOREON, 2
 		waitmoncry
 		msgbox MountCinnabar_Summit_Text_YouTookEspeon, MSGBOX_DEFAULT
-		givecustommon SPECIES_ESPEON ,50, ITEM_QUICK_CLAW, ITEM_ULTRA_BALL, NATURE_TIMID,1,150,50,50,50,50,50,15,16,15,16,15,16, MOVE_CALM_MIND, MOVE_MORNING_SUN, MOVE_DAZZLING_GLEAM, MOVE_SHADOW_BALL, 0
+		givemon SPECIES_VAPOREON, 20, ITEM_NONE
 		msgbox MountCinnabar_Summit_PostShipwreck_Text_TakeGoodCareOfPokemon, MSGBOX_DEFAULT
 		applymovement LOCAL_ID_ALLY, MountCinnabar_Summit_Movement_Scientist1Leave
 		waitmovement LOCAL_ID_ALLY
@@ -258,7 +259,7 @@ MountCinnabar_Summit_Text_NeverTrustedTheNCC:
 	.string "I saw the way you handled yourself,\n"
 	.string "you shouldn't have any problem\l"
 	.string "getting to the bottom of this.\p"
-	.string "Go ahead, take one!$"
+	.string "Go ahead, take this one!$"
 
 MountCinnabar_Summit_PostShipwreck_Text_TakeGoodCareOfPokemon:
 	.string "Please, don't let my Pokemon get\n"
@@ -271,7 +272,7 @@ MountCinnabar_Summit_Text_YouTookGengar:
 	.string "Gengar was added to your party.$"
 
 MountCinnabar_Summit_Text_YouTookEspeon:
-	.string "Espeon was added to your party.$"
+	.string "Vaporeon was added to your party.$"
 
 MountCinnabar_Summit_Text_YouNeedToTakeAPokemon:
 	.string "I insist you take a Pokémon. I want\n"

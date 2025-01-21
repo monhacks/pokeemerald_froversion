@@ -46,7 +46,7 @@ NCC_Underground_BossLab_BossBattleInitiate::
 		waitmovement OBJ_EVENT_ID_PLAYER
 		playse SE_PIN
 		waitse
-		msgbox NCC_Underground_BossLab_Text_MewtwoPlanReveal
+		msgbox NCC_Underground_BossLab_Text_MagaScientistReveal
 		applymovement LOCAL_ID_POKE_BALL, Common_Movement_WalkDown
 		waitmovement LOCAL_ID_POKE_BALL
 		applymovement LOCAL_ID_POKE_BALL, Common_Movement_WalkLeft
@@ -71,16 +71,15 @@ NCC_Underground_BossLab_BossBattleInitiate::
 		removeobject LOCAL_ID_SCIENTIST_5
 		setflag FLAG_HIDE_NCC_LAB_MEWTWO
 		setflag FLAG_HIDE_NCC_LAB_SCIENTIST
-		setflag FLAG_SYS_GAME_CLEAR
 		setvar VAR_ROUTE101_STATE, 7
-		warpsilent MAP_CREDITS_MAP_CINNABAR, 255, 42, 12
+		warpsilent MAP_CINNIBAR_ISLAND, 255, 62, 53
 	NCC_Underground_BossLab_Release:
 	releaseall
 	end
 
 NCC_Underground_BossLab_Mewtwo::
 	lock
-		msgbox NCC_Underground_BossLab_Text_MewtwoPlanReveal, MSGBOX_DEFAULT
+		msgbox NCC_Underground_BossLab_Text_MagaScientistReveal, MSGBOX_DEFAULT
 		trainerbattle_no_intro TRAINER_SUMMIT_CAVERNS_LATTKA_2, SummitCaverns_Text_LattkaDefeat2
 		msgbox SummitCaverns_Text_PostLattkaBattle, MSGBOX_DEFAULT
 	release
@@ -116,68 +115,39 @@ NCC_Underground_BossLab_Text_DontTouchThat:
 	.string "only have your head, but mine too\l"
 	.string "if he sees you touching that!$"
 
-NCC_Underground_BossLab_Text_MewtwoPlanReveal:
+NCC_Underground_BossLab_Text_MagaScientistReveal:
 	.string "What is this?\p"
 	.string "\p"
-	.string "I should have known better than to\n"
-	.string "trust the security of my experiments\l"
-	.string "to humans.\p"
+	.string "I should have expected someone to\n"
+	.string "discover my experiments eventually.\p"
 	.string "\p"
-	.string "What, are you surprised to find out\n"
-	.string "that I, a Pokémon, am responsible for\l"
-	.string "everything that has been happening?\p"
-	.string "Humans have taken advantage of Pokémon\n"
-	.string "for far too long, but when I was created\l"
-	.string "I knew I had one purpose in this life.\l"
-	.string "To free all Pokémon from humans.\p"
-	.string "The problem with humans is they never\n"
-	.string "stop to think about the consequences\l"
-	.string "of their actions.\p"
-	.string "Humans created me through savage\n"
-	.string "methods of DNA splicing, merging human\l"
-	.string "and Pokémon DNA.\p"
-	.string "What they didn't forsee was by doing\n"
-	.string "this they gave me a consciousness\l"
-	.string "that Pokémon genetically lack.\p"
-	.string "I was able to commiunicate with Pokémon\n"
-	.string "and humans alike. I was far more powerful\l"
-	.string "than they could have ever anticipated.\p"
-	.string "My telekinetic prowess allowed me to\n"
-	.string "exert control over humans much like\l"
-	.string "they've done to Pokémon for far too\l"
-	.string "long.\p"
-	.string "But I couldn't do this in view of the\n"
-	.string "public eye. I needed to stay hidden in\l"
-	.string "the shadows.\p"
-	.string "I began to sense that some of the\n"
-	.string "scientists under my control were\l"
-	.string "breaking free of my telekinesis\l"
-	.string "so I had to make a move to keep\l"
-	.string "everyone on the island until I\l"
-	.string "could regain control.\p"
-	.string "I see now this was far too reckless.\p"
-	.string "So what have I been doing that I\n"
-	.string "needed to keep hidden?\p"
-	.string "I began conducting my own experiments to\n"
-	.string "give all Pokémon the sentience that I\l"
-	.string "possess.\p"
-	.string "My experiments involved giving part of\n"
-	.string "myself to other species of Pokémon\l"
-	.string "through a much more humane method than\l"
-	.string "I was created with.\p"
-	.string "No matter what I or my team tried\n"
-	.string "the other species never gained the\l"
-	.string "same intelligence as I did. They did\l"
-	.string "however reap some benefits.\p"
-	.string "Every experiment we did resulted in\n"
-	.string "a much stronger Pokémon by all\l"
-	.string "measureable statistics.\p"
-	.string "In fact, why don't I show you my\n"
-	.string "most recent attempt.\p"
-	.string "A species volunteered by our very\n"
-	.string "own Gym Leader Blaine.\p"
-	.string "It sits in that PokéBall Right\n"
-	.string "in front of you!$"
+	.string "Surprised? It is I, a MAGA Scientist,\n"
+	.string "responsible for all you've seen here.\p"
+	.string "My goal is simple: to create the\n"
+	.string "ultimate Pokémon, one beyond limits.\p"
+	.string "For years, we have worked to push\n"
+	.string "the boundaries of Pokémon potential.\p"
+	.string "Using advanced DNA manipulation, we\n"
+	.string "aim to forge a new evolutionary\l"
+	.string "path.\p"
+	.string "Our methods? Ruthless but necessary.\n"
+	.string "Greatness demands sacrifice and\l"
+	.string "vision.\p"
+	.string "You see, normal evolution is too slow.\n"
+	.string "Science can expedite what nature\l"
+	.string "takes centuries to achieve.\p"
+	.string "By blending genes of powerful species,\n"
+	.string "we unlock untapped power and skill.\p"
+	.string "However, controlling these creations\n"
+	.string "requires precision only I can offer.\p"
+	.string "Some experiments failed, but others\n"
+	.string "produced extraordinary results.\p"
+	.string "Our latest success is before you now.\n"
+	.string "A Pokémon that defies all limits.\p"
+	.string "Blaine, our Gym Leader, provided the\n"
+	.string "species. It exceeded all expectations.\p"
+	.string "In that PokéBall lies the pinnacle of\n"
+	.string "my research. Are you ready to face it?$"
 
 
 NCC_Underground_BossLab_Text_Scientist1:

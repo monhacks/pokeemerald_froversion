@@ -69,12 +69,12 @@ CinnabarIsland_PostShipwreck_EventScript_DiscoverShipDamage:
 		applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 		waitmovement OBJ_EVENT_ID_PLAYER
 		msgbox CinnabarIsland_PostShipwreck_Text_AreYouGoingToInvestigate, MSGBOX_DEFAULT
-		scrollingmultichoice 10, 2, 3, 3, TRUE
-		switch VAR_RESULT
-			case 0, CinnabarIsland_EventScript_GiveAggron
-			case 1, CinnabarIsland_EventScript_GiveSteelix
-			case 2, CinnabarIsland_EventScript_GiveScizor
-			case MULTI_B_PRESSED, CinnabarIsland_PostShipwreck_Eventscript_YouNeedToTakeAPokemon
+		//scrollingmultichoice 10, 2, 3, 3, TRUE
+		//switch VAR_RESULT
+		//	case 0, CinnabarIsland_EventScript_GiveAggron
+		//	case 1, CinnabarIsland_EventScript_GiveSteelix
+		//	case 2, CinnabarIsland_EventScript_GiveScizor
+		//	case MULTI_B_PRESSED, CinnabarIsland_PostShipwreck_Eventscript_YouNeedToTakeAPokemon
 		setvar VAR_ROUTE101_STATE, 5
 		hideobjectat LOCAL_ID_VOLCANO_GUY, MAP_CINNABAR_ISLAND_POST_SHIP_WRECK
 		setflag FLAG_HIDE_VOLCANO_GUY
@@ -232,11 +232,11 @@ CinnabarIsland_PostShipwreck_Text_AreYouGoingToInvestigate:
 	.string "Oh you are? Good. I think you should\n"
 	.string "look for more traces of the Pokemon\l"
 	.string "and see what you can find.\p"
-	.string "Oh, you know what? I brought three\n"
-	.string "Pokemon along with me, why don't you\l"
-	.string "take one in case things get\l"
-	.string "dangerous.\p"
-	.string "Which one would you like?$"
+	//.string "Oh, you know what? I brought three\n"
+	//.string "Pokemon along with me, why don't you\l"
+	//.string "take one in case things get\l"
+	//.string "dangerous.\p"
+	//.string "Which one would you like?$"
 
 CinnabarIsland_PostShipwreck_Text_Guy_GotUp:
 	.string "I got up tonight because I heard loud\n"

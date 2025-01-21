@@ -11,7 +11,7 @@ VermillionCityArnoldsBoatRepair_EventScript_Arnold::
 VermillionCityArnoldsBoatRepair_EventScript_Arnold_Fuel:
 	compare VAR_MAGEE_VERSION, 8
 	goto_if_eq VermillionCityArnoldsBoatRepair_EventScript_ArnoldReturn
-	msgbox VermillionCityArnoldsBoatRepair_Text_Arnold_Fuel, MSGBOX_NPC
+	msgbox VermillionCityArnoldsBoatRepair_Text_Arnold_Fuel, MSGBOX_AUTOCLOSE
 	giveitem ITEM_COIN_CASE, 1
 	setvar VAR_MAGEE_VERSION, 8
 	end

@@ -22,35 +22,35 @@
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_MOUNT_CINNABAR_1F_WEST",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     },
     {
       "x": 15,
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_MOUNT_CINNABAR_1F_NORTH",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 24,
       "y": 15,
       "elevation": 0,
       "dest_map": "MAP_MOUNT_CINNABAR_1F_EAST",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 11,
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": 127
+      "dest_warp_id": "127"
     },
     {
       "x": 12,
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": 127
+      "dest_warp_id": "127"
     }
   ],
   "coord_events": [

@@ -5344,6 +5344,9 @@ BattleScript_FaintTarget::
 
 BattleScript_GiveExp::
 	setbyte sGIVEEXP_STATE, 0x0
+	getmoneyreward
+	printstring STRINGID_PLAYERGOTMONEY
+	waitmessage 0x40
 	getexp BS_TARGET
 	end2
 

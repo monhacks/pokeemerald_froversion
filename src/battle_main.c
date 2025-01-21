@@ -1838,27 +1838,35 @@ static void TrySetCustomMonStats(struct Pokemon *mon, const struct TrainerMonSta
         s32 modifiedSpDef;
         s32 modifiedHP;
         s32 modifiedMaxHP;
+        s32 dynamicLevel;
+        dynamicLevel = GetMonData(mon, MON_DATA_LEVEL);
 
-        Printf("stats->statMaxHP = %d", stats->statMaxHP);
+        Printf("dynamicLevel = %d,", dynamicLevel);
 
         if (stats->statDef > 0)
         {
-            modifiedDef = ((stats->statDef * difficultyModification) / 100);
+            Printf("stats->statDef = %d", stats->statDef);
+            Printf("dynamicLevel / 8 = %d",dynamicLevel / 8);
+            Printf("stats->statDef / 12 = %d", stats->statDef / 12);
+
+            modifiedDef = ((stats->statDef * (dynamicLevel / 8) - (stats->statDef * (dynamicLevel / 12)) + (dynamicLevel * 2)));
             SetMonData(mon, MON_DATA_DEF, &modifiedDef); 
         } 
         if (stats->statSpDef > 0)
         {
-            modifiedSpDef = ((stats->statSpDef * difficultyModification) / 100);
+            modifiedSpDef = ((stats->statSpDef * (dynamicLevel / 8) - (stats->statSpDef * (dynamicLevel / 12)) + (dynamicLevel * 2)));
             SetMonData(mon, MON_DATA_SPDEF, &modifiedSpDef); 
         }
         if (stats->statHP > 0)
         {
-            modifiedHP = ((stats->statHP * difficultyModification) / 100);
+            modifiedHP = ((stats->statHP * (dynamicLevel / 8) - (stats->statHP * (dynamicLevel / 12)) + (dynamicLevel * 2)));
+            Printf("ModHP = %d", modifiedHP);
             SetMonData(mon, MON_DATA_HP, &modifiedHP); 
         }
         if (stats->statMaxHP > 0)
         {
-            modifiedMaxHP = ((stats->statMaxHP * difficultyModification) / 100);
+            modifiedMaxHP= ((stats->statMaxHP* (dynamicLevel / 8) - (stats->statMaxHP * (dynamicLevel / 12)) + (dynamicLevel * 2)));
+            Printf("ModHP = %d", modifiedMaxHP);
             SetMonData(mon, MON_DATA_MAX_HP, &modifiedMaxHP); 
         }
         if (stats->movePP1 > 0)
