@@ -5344,8 +5344,6 @@ BattleScript_FaintTarget::
 
 BattleScript_GiveExp::
 	setbyte sGIVEEXP_STATE, 0x0
-	getmoneyreward
-	printstring STRINGID_PLAYERGOTMONEY
 	waitmessage 0x40
 	getexp BS_TARGET
 	end2
@@ -5474,6 +5472,8 @@ BattleScript_PayDayMoneyAndPickUpItems::
 BattleScript_ItemDropped::
 	playse SE_BALL_BOUNCE_1
 	printfromtable gItemDroppedStringIds
+	getmoneyreward
+	printstring STRINGID_PLAYERGOTMONEY
 	waitmessage 0x40
 	return
 
