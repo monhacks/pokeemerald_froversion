@@ -5285,12 +5285,12 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-[NATIONAL_DEX_FILLER_17] =
+[NATIONAL_DEX_OLIVE] =
     {
-        .categoryName = _("NEW SPECIES"),
-        .height = 15,
-        .weight = 330,
-        .description = gFiller_17PokedexText,
+        .categoryName = _("Cat"),
+        .height = 6,
+        .weight = 385,
+        .description = gOlivePokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 290,

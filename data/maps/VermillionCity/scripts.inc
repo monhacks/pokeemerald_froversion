@@ -174,7 +174,7 @@ VermillionCity_EventScript_TommyTaskStarted:
 
 SaltLakeCity_EventScript_ThanksAndReward:
 		msgbox SaltLakeCity_Text_ThanksAndReward, MSGBOX_DEFAULT
-		givemon SPECIES_MACHOP, 10, ITEM_NONE
+		givemon SPECIES_OLIVE, 10, ITEM_NONE
 		msgbox SaltLakeCity_Text_PlayerReceivesPokemon, MSGBOX_AUTOCLOSE
 		playfanfare MUS_OBTAIN_ITEM
 		waitfanfare
@@ -408,7 +408,7 @@ SaltLakeCity_Text_ThanksAndReward:
 	.string "this, {PLAYER}!$"
 
 SaltLakeCity_Text_PlayerReceivesPokemon:
-	.string "{PLAYER} has received Machop!$"
+	.string "{PLAYER} has received Olive!$"
 
 SaltLakeCity_Text_BetterNotLeaveBeforeGoingToTheOffice:
 	.string "Team MAGA was looking for me. Better\n"

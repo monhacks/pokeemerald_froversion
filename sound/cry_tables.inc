@@ -447,7 +447,7 @@ gCryTable:: @ 869DCF4
 	cry Cry_Abyssaldragonsecondevo
 	cry Cry_Abyssaldragonfirstevo
 	cry Cry_Cheeto
-	cry Cry_Filler_17
+	cry Cry_Olive
 	cry Cry_Filler_18
 	cry Cry_Filler_19
 	cry Cry_Filler_20
@@ -941,7 +941,7 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Abyssaldragonsecondevo
 	cry2 Cry_Abyssaldragonfirstevo
 	cry2 Cry_Cheeto
-	cry2 Cry_Filler_17
+	cry2 Cry_Olive
 	cry2 Cry_Filler_18
 	cry2 Cry_Filler_19
 	cry2 Cry_Filler_20

@@ -1191,6 +1191,16 @@ static const struct AbilitySetter sCheetoAbilitySet[] =
     ABILITY_SET_END
 };
 
+static const struct AbilitySetter sOliveAbilitySet[] = 
+{
+    {ABILITY_OWN_TEMPO, 1},
+    {ABILITY_CUTE_CHARM, 15},
+    {ABILITY_FUR_COAT, 25},
+    {ABILITY_ADAPTABILITY, 35},
+    {ABILITY_SERENE_GRACE, 35},
+    ABILITY_SET_END
+};
+
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
     [SPECIES_BULBASAUR] = sBulbasaurAbilitySet,
@@ -1405,6 +1415,7 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_ABYSSALDRAGONTHIRDEVO] = sAbyssalDragonAbilitySet,
     [SPECIES_CHEETO] = sCheetoAbilitySet,
     [SPECIES_ARIADOS_GHOST] = sCheetoAbilitySet,
+    [SPECIES_OLIVE] = sOliveAbilitySet,
     
     
 

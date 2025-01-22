@@ -2601,11 +2601,11 @@ const u8 gCheetoPokedexText[] = _(
     "Entry is a test.\n"
     "Line 3.\n"
     "Line 4.");
-const u8 gFiller_17PokedexText[] = _(
-    "This is a test.\n"
-    "Entry is a test.\n"
-    "Line 3.\n"
-    "Line 4.");
+const u8 gOlivePokedexText[] = _(
+    "Olive is a lazy Pokémon that loves to\n"
+    "nap in sunny spots. Though it appears\n"
+    "inactive, it is surprisingly agile when\n"
+    "startled and defends itself effectively.");
 const u8 gFiller_18PokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
