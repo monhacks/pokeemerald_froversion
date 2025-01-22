@@ -309,7 +309,7 @@ const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES] =
     [REMATCH_EDWIN] = REMATCH(TRAINER_EDWIN_1, TRAINER_EDWIN_2, TRAINER_EDWIN_3, TRAINER_EDWIN_4, TRAINER_EDWIN_5, ROUTE110),
     [REMATCH_LYDIA] = REMATCH(TRAINER_LYDIA_1, TRAINER_LYDIA_2, TRAINER_LYDIA_3, TRAINER_LYDIA_4, TRAINER_LYDIA_5, ROUTE117),
     [REMATCH_ISAAC] = REMATCH(TRAINER_ISAAC_1, TRAINER_ISAAC_2, TRAINER_ISAAC_3, TRAINER_ISAAC_4, TRAINER_ISAAC_5, ROUTE117),
-    [REMATCH_GABRIELLE] = REMATCH(TRAINER_GABRIELLE_1, TRAINER_GABRIELLE_2, TRAINER_GABRIELLE_3, TRAINER_GABRIELLE_4, TRAINER_GABRIELLE_5, MT_PYRE_3F),
+    [REMATCH_GABRIELLE] = REMATCH(TRAINER_CLARA, TRAINER_GABRIELLE_2, TRAINER_GABRIELLE_3, TRAINER_GABRIELLE_4, TRAINER_GABRIELLE_5, MT_PYRE_3F),
     [REMATCH_CATHERINE] = REMATCH(TRAINER_CATHERINE_1, TRAINER_CATHERINE_2, TRAINER_CATHERINE_3, TRAINER_CATHERINE_4, TRAINER_CATHERINE_5, ROUTE119),
     [REMATCH_JACKSON] = REMATCH(TRAINER_JACKSON_1, TRAINER_JACKSON_2, TRAINER_JACKSON_3, TRAINER_JACKSON_4, TRAINER_JACKSON_5, ROUTE119),
     [REMATCH_HALEY] = REMATCH(TRAINER_HALEY_1, TRAINER_HALEY_2, TRAINER_HALEY_3, TRAINER_HALEY_4, TRAINER_HALEY_5, ROUTE104),
@@ -621,8 +621,8 @@ void StartPrimeapeBattle(void)
 {
     u8 transitionId;
     u16 species;
-    s32 newDef = 350;
-    s32 newSpDef = 250;
+    s32 newDef;
+    s32 newSpDef;
     s32 newMaxHP;
     s32 newCurrentHp;
     s32 move1 = MOVE_DRAIN_PUNCH;
@@ -696,6 +696,8 @@ void StartPrimeapeBattle(void)
     species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
     newMaxHP = ((gBaseStats[species].baseHP * (dynamicLevel / 8)) - (gBaseStats[species].baseHP *(dynamicLevel / 12)) + (dynamicLevel * 2));
     newCurrentHp = ((gBaseStats[species].baseHP * (dynamicLevel / 8)) - (gBaseStats[species].baseHP *(dynamicLevel / 12)) + (dynamicLevel * 2));
+    newDef = ((gBaseStats[species].baseDefense * (dynamicLevel / 8)) - (gBaseStats[species].baseDefense *(dynamicLevel / 12)) + (dynamicLevel * 2));
+    newSpDef = ((gBaseStats[species].baseSpDefense * (dynamicLevel / 8)) - (gBaseStats[species].baseSpDefense *(dynamicLevel / 12)) + (dynamicLevel * 2));
     
     switch (species)
     {

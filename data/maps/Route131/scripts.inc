@@ -27,7 +27,7 @@ Route131_EventScript_Herman:: @ 81F7440
 	end
 
 Route131_EventScript_Susie:: @ 81F7457
-	trainerbattle_single TRAINER_SUSIE, Route131_Text_SusieIntro, Route131_Text_SusieDefeat
+	trainerbattle_single TRAINER_SIERRA, Route131_Text_SusieIntro, Route131_Text_SusieDefeat
 	msgbox Route131_Text_SusiePostBattle, MSGBOX_AUTOCLOSE
 	end
 

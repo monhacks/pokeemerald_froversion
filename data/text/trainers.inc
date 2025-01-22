@@ -4854,3 +4854,209 @@ Route2_Text_BarbPostBattle:
 	.string "I need to practice more if I'm going\n"
 	.string "to have any shot at beating Lt.\l"
 	.string "Surge.$"
+
+MountCinnibar_EventScript_Eli::
+	trainerbattle_single TRAINER_ELI2, MountCinnibar_Text_EliIntro, MountCinnibar_Text_EliDefeated
+	msgbox MountCinnibar_Text_EliPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MountCinnibar_Text_EliIntro:
+	.string "Careful where you step, traveler.\n"
+	.string "The rocks here tell ancient tales.\p"
+	.string "But first, let's see your skills.$"
+
+MountCinnibar_Text_EliDefeated:
+	.string "Your moves hit harder than lava.$"
+
+MountCinnibar_Text_EliPostBattle:
+	.string "You've earned respect from this\n"
+	.string "fossil hunter. Tread carefully.$"
+
+
+MountCinnibar_EventScript_Amber::
+	trainerbattle_single TRAINER_AMBER, MountCinnibar_Text_AmberIntro, MountCinnibar_Text_AmberDefeated
+	msgbox MountCinnibar_Text_AmberPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MountCinnibar_Text_AmberIntro:
+	.string "Welcome to the fiery depths! Can\n"
+	.string "you handle my burning spirit?\p"
+	.string "Let's heat things up!$"
+
+MountCinnibar_Text_AmberDefeated:
+	.string "The flames burned out too fast.$"
+
+MountCinnibar_Text_AmberPostBattle:
+	.string "I'll keep training to reignite my\n"
+	.string "passion! Great battle!$"
+
+MountCinnibar_EventScript_Bruno::
+	trainerbattle_single TRAINER_BRUNO2, MountCinnibar_Text_BrunoIntro, MountCinnibar_Text_BrunoDefeated
+	msgbox MountCinnibar_Text_BrunoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MountCinnibar_Text_BrunoIntro:
+	.string "Strength is everything! Can you\n"
+	.string "overcome my power?\p"
+	.string "Let's test your mettle!$"
+
+MountCinnibar_Text_BrunoDefeated:
+	.string "Your strength is impressive.$"
+
+MountCinnibar_Text_BrunoPostBattle:
+	.string "Keep training and you'll conquer\n"
+	.string "even the toughest opponents.$"
+
+MountCinnibar_EventScript_Lila::
+	trainerbattle_single TRAINER_LILA2, MountCinnibar_Text_LilaIntro, MountCinnibar_Text_LilaDefeated
+	msgbox MountCinnibar_Text_LilaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MountCinnibar_Text_LilaIntro:
+	.string "The shadows hold secrets you can't\n"
+	.string "imagine. Are you brave enough?\p"
+	.string "Let's see if you can outlast me.$"
+
+MountCinnibar_Text_LilaDefeated:
+	.string "The shadows fade... for now.$"
+
+MountCinnibar_Text_LilaPostBattle:
+	.string "Your courage is remarkable. Don't\n"
+	.string "lose it in the darkness ahead.$"
+
+MountCinnibar_EventScript_Victor::
+	trainerbattle_single TRAINER_VICTOR, MountCinnibar_Text_VictorIntro, MountCinnibar_Text_VictorDefeated
+	msgbox MountCinnibar_Text_VictorPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MountCinnibar_Text_VictorIntro:
+	.string "Victory is mine for the taking.\n"
+	.string "You don't stand a chance!\p"
+	.string "Let's battle and see who wins.$"
+
+MountCinnibar_Text_VictorDefeated:
+	.string "I've underestimated you.$"
+
+MountCinnibar_Text_VictorPostBattle:
+	.string "Defeat is just a step to success.\n"
+	.string "I'll come back stronger!$"
+
+MountCinnibar_EventScript_Faye::
+	trainerbattle_single TRAINER_FAYE, MountCinnibar_Text_FayeIntro, MountCinnibar_Text_FayeDefeated
+	msgbox MountCinnibar_Text_FayePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MountCinnibar_Text_FayeIntro:
+	.string "The mountain is alive with energy!\n"
+	.string "Let's see if you can keep up!\p"
+	.string "Nature and I are unstoppable!$"
+
+MountCinnibar_Text_FayeDefeated:
+	.string "Even nature has its limits.$"
+
+MountCinnibar_Text_FayePostBattle:
+	.string "Great battle! Stay in tune with\n"
+	.string "the mountain's power!$"
+
+MountCinnibar_EventScript_Grayson::
+	trainerbattle_single TRAINER_GRAYSON, MountCinnibar_Text_GraysonIntro, MountCinnibar_Text_GraysonDefeated
+	msgbox MountCinnibar_Text_GraysonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MountCinnibar_Text_GraysonIntro:
+	.string "Every climb is a challenge. Every\n"
+	.string "battle is a test. Ready to fight?\p"
+	.string "Let's make this intense!$"
+
+MountCinnibar_Text_GraysonDefeated:
+	.string "You've climbed higher than me.$"
+
+MountCinnibar_Text_GraysonPostBattle:
+	.string "I'll keep training until I reach\n"
+	.string "the summit. Well done!$"
+
+MountCinnibar_EventScript_Clara::
+	trainerbattle_single TRAINER_CLARA, MountCinnibar_Text_ClaraIntro, MountCinnibar_Text_ClaraDefeated
+	msgbox MountCinnibar_Text_ClaraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MountCinnibar_Text_ClaraIntro:
+	.string "Battles are like puzzles, every\n"
+	.string "move matters. Can you solve me?\p"
+	.string "Let's test your strategy!$"
+
+MountCinnibar_Text_ClaraDefeated:
+	.string "You cracked my code... well done.$"
+
+MountCinnibar_Text_ClaraPostBattle:
+	.string "Keep solving puzzles, and you'll\n"
+	.string "reach new heights as a trainer.$"
+
+MountCinnibar_EventScript_Nina::
+	trainerbattle_single TRAINER_NINA, MountCinnibar_Text_NinaIntro, MountCinnibar_Text_NinaDefeated
+	msgbox MountCinnibar_Text_NinaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MountCinnibar_Text_NinaIntro:
+	.string "Confidence is key! Let's see if\n"
+	.string "you can break through my style.\p"
+	.string "This battle will be fierce!$"
+
+MountCinnibar_Text_NinaDefeated:
+	.string "Looks like my confidence wasn't\n"
+	.string "enough this time.$"
+
+MountCinnibar_Text_NinaPostBattle:
+	.string "Keep that energy going! You're\n"
+	.string "meant for great things.$"
+
+MountCinnibar_EventScript_Ezra::
+	trainerbattle_single TRAINER_EZRA, MountCinnibar_Text_EzraIntro, MountCinnibar_Text_EzraDefeated
+	msgbox MountCinnibar_Text_EzraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MountCinnibar_Text_EzraIntro:
+	.string "Battles are a chessboard. Every\n"
+	.string "move matters. Let's begin.\p"
+	.string "Show me your tactics!$"
+
+MountCinnibar_Text_EzraDefeated:
+	.string "You played the game perfectly.$"
+
+MountCinnibar_Text_EzraPostBattle:
+	.string "You've earned your victory. Keep\n"
+	.string "improving your strategy!$"
+
+MountCinnibar_EventScript_Sierra::
+	trainerbattle_single TRAINER_SIERRA, MountCinnibar_Text_SierraIntro, MountCinnibar_Text_SierraDefeated
+	msgbox MountCinnibar_Text_SierraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MountCinnibar_Text_SierraIntro:
+	.string "This volcano burns hot, and so do\n"
+	.string "my Pokémon! Ready to face fire?\p"
+	.string "Here we go!$"
+
+MountCinnibar_Text_SierraDefeated:
+	.string "The flames cooled too quickly.$"
+
+MountCinnibar_Text_SierraPostBattle:
+	.string "Keep that fiery spirit alive,\n"
+	.string "trainer! You'll go far!$"
+
+MountCinnibar_EventScript_Derek::
+	trainerbattle_single TRAINER_DEREK, MountCinnibar_Text_DerekIntro, MountCinnibar_Text_DerekDefeated
+	msgbox MountCinnibar_Text_DerekPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MountCinnibar_Text_DerekIntro:
+	.string "The summit calls to me, but first\n"
+	.string "I must conquer you in battle!\p"
+	.string "Let's go all out!$"
+
+MountCinnibar_Text_DerekDefeated:
+	.string "You've bested me this time.$"
+
+MountCinnibar_Text_DerekPostBattle:
+	.string "One loss won't stop me. I'll\n"
+	.string "train harder for the climb!$"

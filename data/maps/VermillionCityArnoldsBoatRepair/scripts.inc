@@ -13,6 +13,7 @@ VermillionCityArnoldsBoatRepair_EventScript_Arnold_Fuel:
 	goto_if_eq VermillionCityArnoldsBoatRepair_EventScript_ArnoldReturn
 	msgbox VermillionCityArnoldsBoatRepair_Text_Arnold_Fuel, MSGBOX_AUTOCLOSE
 	giveitem ITEM_COIN_CASE, 1
+	closemessage
 	setvar VAR_MAGEE_VERSION, 8
 	end
 

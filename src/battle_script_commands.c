@@ -6696,9 +6696,18 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
 {
     u32 i = 0;
     u32 lastMonLevel = 0;
-    u32 moneyReward = 200;
+    u32 moneyReward;
+    u8 rand10 = Random() % 10;
+    u8 rand3 = 20 - Random() % 5;
+    u32 moneyLevel = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL);
+
+    if(trainerId == 0)
+    {
+        Printf("GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) = %d", GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL));
+        moneyReward = (rand3 * moneyLevel) - (rand10 * moneyLevel);
+    }
     
-    if (trainerId == TRAINER_SECRET_BASE)
+    else if (trainerId == TRAINER_SECRET_BASE)
     {
         moneyReward = 20 * gBattleResources->secretBase->party.levels[0] * gBattleStruct->moneyMultiplier;
     }

@@ -83,7 +83,7 @@ Route125_EventScript_Presley:: @ 81F6898
 	end
 
 Route125_EventScript_Auron:: @ 81F68AF
-	trainerbattle_single TRAINER_AURON, Route125_Text_AuronIntro, Route125_Text_AuronDefeat
+	trainerbattle_single TRAINER_EZRA, Route125_Text_AuronIntro, Route125_Text_AuronDefeat
 	msgbox Route125_Text_AuronPostBattle, MSGBOX_AUTOCLOSE
 	end
 
