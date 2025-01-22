@@ -27,6 +27,7 @@
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/rgb.h"
+#include "battle_script_commands.h"
 
 // This file's functions.
 static void InitArenaChallenge(void);

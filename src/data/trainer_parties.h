@@ -14743,10 +14743,10 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowRhydon[] = {
     .moves = {MOVE_ROCK_SMASH, MOVE_SHADOW_SNEAK, MOVE_CURSE, MOVE_EARTHQUAKE},
     .stats =
         {
-        .statDef = 300,
-        .statSpDef = 150,
-        .statHP = 450,
-        .statMaxHP = 450,
+        .statDef = 99,
+        .statSpDef = 25,
+        .statHP = 150,
+        .statMaxHP = 150,
         },
     },
 };
@@ -14761,10 +14761,10 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowDugtrio[] = {
     .moves = {MOVE_BULLDOZE, MOVE_FEINT_ATTACK, MOVE_TRICK_OR_TREAT, MOVE_SHADOW_CLAW},
     .stats = 
         {
-        .statDef = 165,
-        .statSpDef = 215,
-        .statHP = 270,
-        .statMaxHP = 270,
+        .statDef = 38,
+        .statSpDef = 65,
+        .statHP = 95,
+        .statMaxHP = 95,
         },
     },
 };
@@ -14812,8 +14812,8 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowCharizard[] = {
     .moves = {MOVE_DRAGON_DANCE, MOVE_NASTY_PLOT, MOVE_SUNNY_DAY, MOVE_QUIVER_DANCE},
     .stats =
         {
-        //.statDef = 180,
-        //.statSpDef = 180,
+        .statDef = 38,
+        .statSpDef = 38,
         // .statHP = 2600,
         // .statMaxHP = 2600,
         .movePP1 = 99,
