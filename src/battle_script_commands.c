@@ -6701,15 +6701,21 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     u8 rand3 = 20 - Random() % 5;
     u32 moneyLevel = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL);
 
-    if(trainerId == 0)
+    Printf("trainerId = %d", trainerId);
+
+    if(!(gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS) &&
+        !(gBattleTypeFlags & BATTLE_TYPE_TRAINER) &&
+        !(gBattleTypeFlags & BATTLE_TYPE_SECRET_BASE))
     {
-        Printf("GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) = %d", GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL));
+        Printf("PLZ WORK");
         moneyReward = (rand3 * moneyLevel) - (rand10 * moneyLevel);
     }
     
     else if (trainerId == TRAINER_SECRET_BASE)
     {
         moneyReward = 20 * gBattleResources->secretBase->party.levels[0] * gBattleStruct->moneyMultiplier;
+        trainerId = 0;
+        Printf("trainerIdSecretBase = %d", trainerId);
     }
     else
     {
@@ -6748,13 +6754,22 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
         }
 
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-            moneyReward = 6 * lastMonLevel * gBattleStruct->moneyMultiplier * gTrainerMoneyTable[i].value;
+            {
+                moneyReward = 6 * lastMonLevel * gBattleStruct->moneyMultiplier * gTrainerMoneyTable[i].value;
+                trainerId = 0;
+                Printf("trainerIdtwoopponents = %d", trainerId);
+            }
         else if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
-            moneyReward = 6 * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * gTrainerMoneyTable[i].value;
+            {
+                moneyReward = 6 * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * gTrainerMoneyTable[i].value;
+                trainerId = 0;
+                Printf("trainerIddoublebbatle = %d", trainerId);
+            }
         else
             moneyReward = 6 * lastMonLevel * gBattleStruct->moneyMultiplier * gTrainerMoneyTable[i].value;
+            trainerId = 0;
+            Printf("trainerIdallothercases = %d", trainerId);
     }
-
     return moneyReward;
 }
 

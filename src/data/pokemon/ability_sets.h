@@ -1181,7 +1181,7 @@ static const struct AbilitySetter sRhydonAbilitySet[] =
 
 static const struct AbilitySetter sShadowCharizardAbilitySet[] = 
 {
-    {ABILITY_ABYSSAL, 1},
+    {ABILITY_SHADOW_CHARIZARD, 1},
     ABILITY_SET_END
 };
 

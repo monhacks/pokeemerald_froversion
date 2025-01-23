@@ -26,7 +26,6 @@ NCC_Underground_BossLab_OnLoad_ShowItemBall:
 
 NCC_Underground_BossLab_BossBattleInitiate::
 	lockall
-		goto NCC_Underground_BossLab_BossBattleStart
 		applymovement LOCAL_ID_SCIENTIST_5, Common_Movement_FaceUp
 		waitmovement LOCAL_ID_SCIENTIST_5
 		applymovement LOCAL_ID_SCIENTIST_5, Common_Movement_ExclamationMark
@@ -55,12 +54,7 @@ NCC_Underground_BossLab_BossBattleInitiate::
 		waitse
 		removeobject LOCAL_ID_POKE_BALL
 		setflag FLAG_HIDE_LAB_ITEM_BALL
-	NCC_Underground_BossLab_BossBattleStart:
-		msgbox StartBattle, MSGBOX_YESNO
-		compare VAR_RESULT, FALSE
-		goto_if_eq NCC_Underground_BossLab_Release
-		@@trainerbattle_no_intro TRAINER_SUMMIT_CAVERNS_LATTKA_2, NCC_Underground_BossLab_Text_MewtwoDefeat
-		trainerbattle_no_intro TRAINER_WINSTON_5, NCC_Underground_BossLab_Text_MewtwoDefeat
+		trainerbattle_no_intro TRAINER_SUMMIT_CAVERNS_LATTKA_2, NCC_Underground_BossLab_Text_MewtwoDefeat
 		playbgm MUS_HALL_OF_FAME_ROOM, 0
 		msgbox NCC_Underground_BossLab_Text_MewtwoPostBattle, MSGBOX_DEFAULT
 		fadescreen FADE_TO_BLACK
@@ -71,6 +65,7 @@ NCC_Underground_BossLab_BossBattleInitiate::
 		removeobject LOCAL_ID_SCIENTIST_5
 		setflag FLAG_HIDE_NCC_LAB_MEWTWO
 		setflag FLAG_HIDE_NCC_LAB_SCIENTIST
+		setflag FLAG_DEFEATED_SHADOW_CHARIZARD
 		setvar VAR_ROUTE101_STATE, 7
 		warpsilent MAP_CINNIBAR_ISLAND, 255, 62, 53
 	NCC_Underground_BossLab_Release:
@@ -180,7 +175,27 @@ NCC_Underground_BossLab_Text_MewtwoPostBattle:
 	.string "I am not going to waste my energy and\n"
 	.string "fight you myself...\p"
 	.string "Enjoy your victory, but this isn't\n"
-	.string "over.$"
+	.string "over.\p"
+	.string "This is just one of our locations\n"
+	.string "to conduct these experiments.\p"
+	.string "I'll just return to Sandy Beach where\n"
+	.string "some chump opened up a store front\l"
+	.string "using our very own Team MAGA loan\l"
+	.string "services.\p"
+	.string "Little did he know that his store\n"
+	.string "was actually a front for one of\n"
+	.string "our hidden labs.\p"
+	.string "And the best part is you can't\n"
+	.string "get in unless you know the code,\l"
+	.string "1 2 6 5...\p"
+	.string "\p"
+	.string "I really need to stop rambling.\p"
+	.string "Oh well, that's only HALF the code\n"
+	.string "anyway, how much can anyone do with\l"
+	.string "half the code!\p"
+	.string "See ya later chump, I'm off to\n"
+	.string "Do more experiments where you can't\l"
+	.string "interfere.$"
 
 StartBattle:
 	.string "Are you ready to test this boss\n"

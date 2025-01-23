@@ -78,7 +78,7 @@ BlackForest1_EventScript_WildBattleSpecialGastlyLocationCheck4::
 	goto EventScript_IsBadMushroom
 end
 
-BlackForest1_EventScript_WildBattleSpecialGastly:
+BlackForest1_EventScript_WildBattleSpecialGastly::
 	goto_if_set FLAG_FOUND_CIPHER, EventScript_IsBadMushroom
 	msgbox BlackForest1_Text_WildGastlyBattle, MSGBOX_DEFAULT
 	playmoncry SPECIES_GASTLY, 2
@@ -92,13 +92,8 @@ BlackForest1_EventScript_WildBattleSpecialGastly:
 	msgbox BlackForest1_Text_WildGastlyDroppedThis, MSGBOX_DEFAULT
 	// FROVERSION SCRIPT giveitem ITEM_SPELLBOOK, 1
 	giveitem ITEM_POKEPRIMER, 1
-	msgbox BlackForest1_Text_WildGastlyWantsToJoinParty, MSGBOX_DEFAULT
-	playmoncry SPECIES_GASTLY, 2
 	removeobject 6
 	waitmoncry
-	playfanfare MUS_OBTAIN_ITEM
-	givecustommon SPECIES_GASTLY, 50, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_GIGA_DRAIN, MOVE_SUBSTITUTE, 0
-	waitfanfare
 	setflag FLAG_FOUND_CIPHER
 	release
 end

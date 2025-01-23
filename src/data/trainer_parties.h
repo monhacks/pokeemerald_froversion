@@ -14776,7 +14776,7 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowRhydon[] = {
     {
     .abilityNum = 0,
     .iv = 250,
-    .lvl = 49,
+    .lvl = 23,
     .species = SPECIES_RHYDON,
     .heldItem = ITEM_SCOPE_LENS,
     .moves = {MOVE_ROCK_SMASH, MOVE_SHADOW_SNEAK, MOVE_CURSE, MOVE_EARTHQUAKE},
@@ -14794,7 +14794,7 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowDugtrio[] = {
     {
     .abilityNum = 4,
     .iv = 250,
-    .lvl = 46,
+    .lvl = 22,
     .species = SPECIES_DUGTRIO,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_BULLDOZE, MOVE_FEINT_ATTACK, MOVE_TRICK_OR_TREAT, MOVE_SHADOW_CLAW},
@@ -14812,7 +14812,7 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowNidokingAndQueen[] = 
     {
     .abilityNum = 0,
     .iv = 250,
-    .lvl = 25,
+    .lvl = 22,
     .species = SPECIES_NIDOKING,
     .heldItem = ITEM_LUM_BERRY,
     .moves = {MOVE_EARTH_POWER, MOVE_HORN_ATTACK, MOVE_ICE_BEAM, MOVE_SHOCK_WAVE},
@@ -14827,7 +14827,7 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowNidokingAndQueen[] = 
     {
     .abilityNum = 0,
     .iv = 250,
-    .lvl = 25,
+    .lvl = 22,
     .species = SPECIES_NIDOQUEEN,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_HEAL_PULSE, MOVE_FOLLOW_ME, MOVE_HELPING_HAND, MOVE_EARTH_POWER},
@@ -14853,111 +14853,15 @@ static const struct TrainerMonItemCustomMoves sParty_ShadowCharizard[] = {
         {
         .statDef = 38,
         .statSpDef = 38,
-        // .statHP = 2600,
-        // .statMaxHP = 2600,
+        // .statHP = 0,
+        // .statMaxHP = 0,
         .movePP1 = 99,
         .movePP2 = 99,
         .movePP3 = 99,
         .movePP4 = 99,
         .nickname = gText_WesRamNickname,
         },
-    },
-
-    {
-    .abilityNum = 0,
-    .iv = 225,
-    .lvl = 50,
-    .species = SPECIES_DRAGONAIR,
-    .heldItem = ITEM_RED_CARD,
-    .moves = {MOVE_DRAGON_DANCE, MOVE_NASTY_PLOT, MOVE_SUNNY_DAY, MOVE_QUIVER_DANCE},
-    .stats =
-        {
-        //.statDef = 180,
-        //.statSpDef = 180,
-        // .statHP = 2600,
-        // .statMaxHP = 2600,
-        .movePP1 = 99,
-        .movePP2 = 99,
-        .movePP3 = 99,
-        .movePP4 = 99,
-        },
-    },
-    {
-    .abilityNum = 0,
-    .iv = 225,
-    .lvl = 50,
-    .species = SPECIES_ALTARIA,
-    .heldItem = ITEM_RED_CARD,
-    .moves = {MOVE_DRAGON_DANCE, MOVE_NASTY_PLOT, MOVE_SUNNY_DAY, MOVE_QUIVER_DANCE},
-    .stats =
-        {
-        //.statDef = 180,
-        //.statSpDef = 180,
-        // .statHP = 2600,
-        // .statMaxHP = 2600,
-        .movePP1 = 99,
-        .movePP2 = 99,
-        .movePP3 = 99,
-        .movePP4 = 99,
-        },
-    },
-    {
-    .abilityNum = 0,
-    .iv = 225,
-    .lvl = 50,
-    .species = SPECIES_KINGDRA,
-    .heldItem = ITEM_RED_CARD,
-    .moves = {MOVE_DRAGON_DANCE, MOVE_NASTY_PLOT, MOVE_SUNNY_DAY, MOVE_QUIVER_DANCE},
-    .stats =
-        {
-        //.statDef = 180,
-        //.statSpDef = 180,
-        // .statHP = 2600,
-        // .statMaxHP = 2600,
-        .movePP1 = 99,
-        .movePP2 = 99,
-        .movePP3 = 99,
-        .movePP4 = 99,
-        },
-    },
-    {
-    .abilityNum = 0,
-    .iv = 225,
-    .lvl = 50,
-    .species = SPECIES_BLUE_EYES,
-    .heldItem = ITEM_RED_CARD,
-    .moves = {MOVE_DRAGON_DANCE, MOVE_NASTY_PLOT, MOVE_SUNNY_DAY, MOVE_QUIVER_DANCE},
-    .stats =
-        {
-        //.statDef = 180,
-        //.statSpDef = 180,
-        // .statHP = 2600,
-        // .statMaxHP = 2600,
-        .movePP1 = 99,
-        .movePP2 = 99,
-        .movePP3 = 99,
-        .movePP4 = 99,
-        },
-    },
-    {
-    .abilityNum = 0,
-    .iv = 225,
-    .lvl = 50,
-    .species = SPECIES_REDEYES,
-    .heldItem = ITEM_RED_CARD,
-    .moves = {MOVE_DRAGON_DANCE, MOVE_NASTY_PLOT, MOVE_SUNNY_DAY, MOVE_QUIVER_DANCE},
-    .stats =
-        {
-        //.statDef = 180,
-        //.statSpDef = 180,
-        // .statHP = 2600,
-        // .statMaxHP = 2600,
-        .movePP1 = 99,
-        .movePP2 = 99,
-        .movePP3 = 99,
-        .movePP4 = 99,
-        },
-    },
+    }
 };
 static const struct TrainerMonItemCustomMoves sParty_AbyssalHighDragon[] = {
     {

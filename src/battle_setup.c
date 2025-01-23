@@ -857,16 +857,85 @@ void StartAriadosBossBattle(void)
 {
     u8 transitionId;
     u16 species;
+    s32 newDef;
+    s32 newSpDef;
+    s32 newMaxHP;
+    s32 newCurrentHp;
     s32 move1 = MOVE_SLUDGE_BOMB;
     s32 move2 = MOVE_SIGNAL_BEAM;
     s32 move3 = MOVE_EARTHQUAKE;
     s32 move4 = MOVE_GIGA_DRAIN;
     s32 movePP = 200;
-    s32 hp = 500;
+    u8 min;
+    u8 max;
+    u8 range;
+    u8 rand;
+    u16 dynamicLevel = 0;
+    static const u8 minDynamicLevel = 3;
+    static const u8 maxDynamicLevel = 98;
+    u8 levelDifference = Random() % 2;
+    s32 difficultyModification, marriottModifier, i;
+
 
     ScriptContext2_Enable();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_REGI;
+
+     switch (gSaveBlock2Ptr->optionsWindowDifficulty)
+    {
+    case OPTIONS_DIFFICULTY_EASY:
+        difficultyModification = 90;
+        marriottModifier = 5;
+        break;
+    case OPTIONS_DIFFICULTY_NORMAL:
+        difficultyModification = 100;
+        marriottModifier = 5;
+        break;
+    case OPTIONS_DIFFICULTY_HARD:
+        difficultyModification = 110;
+        marriottModifier = 5;
+        break;
+    }
+
+        min = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL);
+        max = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL) + 20;
+
+    range = max - min + 1;
+    rand = Random() % range;
+
+    for(i = 0; i < PARTY_SIZE; i++)
+        {
+            if(GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)
+                {
+                    if( i != 0) dynamicLevel /= i;
+                    break;
+                }
+            dynamicLevel += GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+        }
+    if(i == PARTY_SIZE)
+        dynamicLevel /=i;
+    if(dynamicLevel < minDynamicLevel)
+        dynamicLevel = minDynamicLevel;
+    if(dynamicLevel > maxDynamicLevel)
+        dynamicLevel = maxDynamicLevel;
+
+    if((min + rand) > dynamicLevel)
+    {
+        dynamicLevel = (((min + rand) * difficultyModification) / 100);
+    }
+    else
+    {
+        if(B_VERSION_MARRIOTT)
+            dynamicLevel = ((((dynamicLevel + Random () % 2) * difficultyModification) / 100) - marriottModifier);
+        else
+            dynamicLevel = (((dynamicLevel + Random () % 2) * difficultyModification) / 100);
+    }
+
+    species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
+    newMaxHP = ((gBaseStats[species].baseHP * (dynamicLevel / 8)) - (gBaseStats[species].baseHP *(dynamicLevel / 12)) + (dynamicLevel * 2));
+    newCurrentHp = ((gBaseStats[species].baseHP * (dynamicLevel / 8)) - (gBaseStats[species].baseHP *(dynamicLevel / 12)) + (dynamicLevel * 2));
+    newDef = ((gBaseStats[species].baseDefense * (dynamicLevel / 8)) - (gBaseStats[species].baseDefense *(dynamicLevel / 12)) + (dynamicLevel * 2));
+    newSpDef = ((gBaseStats[species].baseSpDefense * (dynamicLevel / 8)) - (gBaseStats[species].baseSpDefense *(dynamicLevel / 12)) + (dynamicLevel * 2));
 
     species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
     switch (species)
@@ -893,8 +962,11 @@ void StartAriadosBossBattle(void)
     SetMonData(&gEnemyParty[0], MON_DATA_PP2, &movePP);
     SetMonData(&gEnemyParty[0], MON_DATA_PP3, &movePP);
     SetMonData(&gEnemyParty[0], MON_DATA_PP4, &movePP);
-    SetMonData(&gEnemyParty[0], MON_DATA_HP, &hp);
-    SetMonData(&gEnemyParty[0], MON_DATA_MAX_HP, &hp);
+    SetMonData(&gEnemyParty[0], MON_DATA_HP, &newCurrentHp);
+    SetMonData(&gEnemyParty[0], MON_DATA_MAX_HP, &newMaxHP);
+    SetMonData(&gEnemyParty[0], MON_DATA_DEF, &newDef);
+    SetMonData(&gEnemyParty[0], MON_DATA_MAX_HP, &newSpDef);
+    SetMonData(&gEnemyParty[0], MON_DATA_LEVEL, &dynamicLevel);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
     IncrementDailyWildBattles();

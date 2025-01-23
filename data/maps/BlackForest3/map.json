@@ -67,19 +67,6 @@
       "flag": "FLAG_ITEM_MAGMA_HIDEOUT_3F_2R_PP_MAX"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MURKROW",
-      "x": 25,
-      "y": 30,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_BlackForest3_Murkrow",
-      "flag": "FLAG_ITEM_MOUNT_CINNABAR_WEST_1F_ULTRA_BALL"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_GASTLY_1",
       "x": 33,
       "y": 71,
@@ -89,7 +76,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "BlackForest1_EventScript_WildBattleSpecialGastly",
       "flag": "FLAG_FOUND_CIPHER"
     },
     {
@@ -158,24 +145,6 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 28,
-      "y": 56,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "EventScript_BlackForestForceSpinarakEnterTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 28,
-      "y": 55,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "EventScript_BlackForestForceSpinarakEnterTrigger"
-    },
-    {
-      "type": "trigger",
       "x": 27,
       "y": 56,
       "elevation": 0,
@@ -191,6 +160,24 @@
       "var": "VAR_TEMP_0",
       "var_value": "1",
       "script": "EventScript_BlackForestForceSpinarakExitTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 55,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EventScript_BlackForestForceSpinarakEnterTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "EventScript_BlackForestForceSpinarakEnterTrigger"
     }
   ],
   "bg_events": [
@@ -200,7 +187,7 @@
       "y": 70,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "BlackForest1_EventScript_WildBattleSpecialGastlyLocationCheck3"
+      "script": "BlackForest1_EventScript_WildBattleSpecialGastly"
     }
   ]
 }

@@ -1889,5 +1889,5 @@ const u8 gText_TypeEffectiveness[] = _("Types");
 ////////////////////////////
 
 const u8 gText_MarriottVaporeonNickname[] = _("Newton");
-const u8 gText_WesRamNickname[] = _("Bruce");
+const u8 gText_WesRamNickname[] = _("Zardy");
 const u8 gText_JordanCactusNickname[] = _("Zion");

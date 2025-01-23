@@ -99,9 +99,9 @@ CinnabarIsland_EventScript_SailorReturnToVermillionYes:
 		applymovement OBJ_EVENT_ID_PLAYER, CinnabarIsland_Movement_PlayerEnterBoat
 		waitmovement OBJ_EVENT_ID_PLAYER
 		hideobjectat OBJ_EVENT_ID_PLAYER, 0
-		applymovement LOCALID_CAPTAIN, CinnabarIsland_Movement_CaptainEnterBoat
-		waitmovement LOCALID_CAPTAIN
-		removeobject LOCALID_CAPTAIN
+		applymovement LOCALID_SAILOR, CinnabarIsland_Movement_CaptainEnterBoat
+		waitmovement LOCALID_SAILOR
+		removeobject LOCALID_SAILOR
 		applymovement LOCALID_SS_TIDAL, Common_Movement_WalkLeft
 		waitmovement LOCALID_SS_TIDAL
 		warpsilent MAP_VERMILLION_CITY_HARBOR, 255, 56, 14
@@ -111,7 +111,7 @@ CinnabarIsland_EventScript_SailorReturnToVermillionYes:
 CinnabarIsland_Movement_PlayerEnterBoat:
 	walk_right
 	walk_right
-	walk_down
+	walk_right
 	walk_down
 	walk_down
 	step_end

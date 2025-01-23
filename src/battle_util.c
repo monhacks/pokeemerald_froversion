@@ -2648,7 +2648,7 @@ u8 DoBattlerEndTurnEffects(void)
                 gBattlerTarget = gStatuses3[gActiveBattler] & STATUS3_LEECHSEED_BATTLER; // Notice gBattlerTarget is actually the HP receiver.
                 if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
                 {
-                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 24;
+                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 32;
                 }
                 else 
                 {
@@ -5006,6 +5006,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                     }  
                 break;
             case ABILITY_SHADOW_CHARIZARD:
+                Printf("gBattleResults.battleTurnCounter = %d", gBattleResults.battleTurnCounter);
                 if(gBattleResults.battleTurnCounter % 5 == 3
                 && gBattleMons[gBattlerAttacker].species == SPECIES_SHADOW_CHARIZARD)
                 {

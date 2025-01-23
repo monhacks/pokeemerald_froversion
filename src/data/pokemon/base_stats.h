@@ -14087,7 +14087,7 @@ const struct BaseStats gBaseStats[] =
     },
 [SPECIES_SHADOW_CHARIZARD] =
     {
-        .baseHP        = 255,
+        .baseHP        = 122,
         .baseAttack    = 130,
         .baseDefense   = 111,
         .baseSpeed     = 100,

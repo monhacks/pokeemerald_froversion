@@ -137,8 +137,7 @@ Eventscript_Porygon_AccessHallOfFame:: @ 8271E54
 
 EventScript_IsBadMushroom:: @ 8271D92
 	lockall
-	goto_if_unset FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU, EventScript_IsBadMushroom_PreInfection
-	goto_if_set FLAG_LAKE_MEAD_VILLAGE_HIDE_TILYOU, EventScript_IsBadMushroom_CheckInfectionState
+	goto EventScript_BadMushroomDiceRoll
 	releaseall	
 end
 EventScript_BadMushroomDiceRoll:
@@ -208,21 +207,21 @@ EventScript_BlackForestForceSpinarakExitTrigger::
 
 Eventscript_SetWildBattleWeedle:
 	//setwildbattle SPECIES_ARIADOS, 50, ITEM_NONE
-	setwildbattle SPECIES_WEEDLE, 50, ITEM_NONE
+	setwildbattle SPECIES_WEEDLE, 15, ITEM_NONE
 dowildbattle
 releaseall
 end
 
 Eventscript_SetWildBattleAriados:
 	//setwildbattle SPECIES_ARIADOS, 50, ITEM_NONE
-	setwildbattle SPECIES_SPINARAK, 50, ITEM_NONE
+	setwildbattle SPECIES_SPINARAK, 15, ITEM_NONE
 dowildbattle
 releaseall
 end
 
 Eventscript_SetWildBattleEscarataco:
 		//setwildbattle SPECIES_ESCARATACO, 50, ITEM_NONE
-		setwildbattle SPECIES_PARAS, 50, ITEM_NONE
+		setwildbattle SPECIES_PARAS, 15, ITEM_NONE
 	dowildbattle
 	goto_if_unset FLAG_HIDE_LAKE_MEAD_VILLAGE_TILYOUS_LAB_TILYOU, EventScript_IsBadMushroom_AfterFirstBattle
 	releaseall
@@ -233,20 +232,20 @@ EventScript_IsBadMushroom_AfterFirstBattle:
 	releaseall
 end
 Eventscript_SetWildBattleShedinja:
-	setwildbattle SPECIES_SHEDINJA, 50, ITEM_NONE
+	setwildbattle SPECIES_SHEDINJA, 15, ITEM_NONE
 	dowildbattle
 	releaseall
 end
 
 Eventscript_SetWildBattleScyther:
 	//setwildbattle SPECIES_SCYTHER, 50, ITEM_NONE
-	setwildbattle SPECIES_CATERPIE, 50, ITEM_NONE
+	setwildbattle SPECIES_CATERPIE, 15, ITEM_NONE
 dowildbattle
 releaseall
 end
 
 Eventscript_SetWildBattleNinjask:
-	setwildbattle SPECIES_NINJASK, 50, ITEM_NONE
+	setwildbattle SPECIES_NINJASK, 15, ITEM_NONE
 dowildbattle
 releaseall
 end

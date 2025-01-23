@@ -14815,29 +14815,29 @@
             "encounter_rate": 22,
             "mons": [
               {
-                "min_level": 50,
-                "max_level": 50,
-                "species": "SPECIES_MUDKIP"
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_MARILL"
               },
               {
-                "min_level": 50,
-                "max_level": 50,
-                "species": "SPECIES_QUAGSIRE"
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_POLIWAG"
               },
               {
-                "min_level": 50,
-                "max_level": 50,
-                "species": "SPECIES_PSYDUCK"
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_CATERPIE"
               },
               {
-                "min_level": 50,
-                "max_level": 50,
+                "min_level": 15,
+                "max_level": 15,
                 "species": "SPECIES_ZUBAT"
               },
               {
-                "min_level": 50,
-                "max_level": 50,
-                "species": "SPECIES_YANMA"
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_CHAD_BUG_1"
               }
             ]
           }

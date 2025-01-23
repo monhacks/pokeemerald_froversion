@@ -93,19 +93,6 @@
       "flag": "FLAG_ITEM_ROUTE_114_ENERGY_POWDER"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_VENUSAUR_1",
-      "x": 71,
-      "y": 34,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_BlackForest1_Venusaur",
-      "flag": "FLAG_ITEM_MOUNT_CINNABAR_NORTHWEST_1F_MAX_REVIVE"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 10,
       "y": 68,

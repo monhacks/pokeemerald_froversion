@@ -3224,7 +3224,6 @@ void CalculateMonStats(struct Pokemon *mon)
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
     s32 level = GetLevelFromMonExp(mon);
     s32 newMaxHP;
-    s32 speciesCharizardXMaxHP;
 
 
     SetMonData(mon, MON_DATA_LEVEL, &level);
@@ -3235,12 +3234,7 @@ void CalculateMonStats(struct Pokemon *mon)
     }
     else if (species == SPECIES_SHADOW_CHARIZARD)
     {
-        newMaxHP = speciesCharizardXMaxHP + (speciesCharizardXMaxHP / 2);
-    }
-    else if (species == SPECIES_CHARIZARD_X)
-    {
-        newMaxHP = ((gBaseStats[species].baseHP * level) - (gBaseStats[species].baseHP *(level / 2)) + (level * 2));
-        speciesCharizardXMaxHP = newMaxHP;
+        newMaxHP = ((gBaseStats[species].baseHP * (level / 2) - (gBaseStats[species].baseHP * (level / 40)) + (level * 2)));
     }
     else if (species == SPECIES_ARIADOS_GHOST && B_VERSION_MAGEE)
     {
@@ -3328,6 +3322,7 @@ void CalculateTrainerMonStats(struct Pokemon *mon)
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
     s32 level = GetLevelFromMonExp(mon);
     s32 newMaxHP;
+    s32 speciesCharizardXMaxHP;
 
     SetMonData(mon, MON_DATA_LEVEL, &level);
 
@@ -3335,13 +3330,9 @@ void CalculateTrainerMonStats(struct Pokemon *mon)
     {
         newMaxHP = 1;
     }
-    else if (species == SPECIES_SHADOW_CHARIZARD)
-    {
-        newMaxHP = 3000;
-    }
     else if (species == SPECIES_CHARIZARD_X)
     {
-        newMaxHP = 2000;
+        newMaxHP = ((gBaseStats[species].baseHP * (level / 2) - (gBaseStats[species].baseHP * (level / 40)) + (level * 2)));
     }
     else if (IsSpeciesOneOf(species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS)
     {
