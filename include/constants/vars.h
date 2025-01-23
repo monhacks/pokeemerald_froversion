@@ -145,7 +145,7 @@
 #define VAR_ROUTE131_STATE                   0x407E // Unused Var
 #define VAR_ROUTE132_STATE                   0x407F // Unused Var
 #define VAR_ROUTE133_STATE                   0x4080 // Unused Var
-#define VAR_ROUTE134_STATE                   0x4081 // Unused Var
+#define VAR_INFECTED_WOODS_STATE                   0x4081 // Unused Var
 #define VAR_LITTLEROOT_HOUSES_STATE_MAY      0x4082
 #define VAR_ELITE_4_REMATCH_STATE                    0x4083 // How Many Times You've beat the elite 4 post game
 #define VAR_BIRCH_LAB_STATE                  0x4084

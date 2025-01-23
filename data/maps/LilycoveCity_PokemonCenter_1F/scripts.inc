@@ -61,18 +61,18 @@ LilycoveCity_PokemonCenter_EventScript_RemovePokeball::
 LilycoveCity_PokemonCenter_EventScript_TryHeal:: @ 821C5FF
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_BLAZIKEN, LilycoveCity_PokemonCenter_EventScript_Heal
+	goto_if_set FLAG_BADGE01_GET, LilycoveCity_PokemonCenter_EventScript_Heal
 	msgbox LilycoveCity_PokemonCenter_1F_Text_BallStuckInMachine, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_BLAZIKEN
+	setflag FLAG_BADGE01_GET
 	playmoncry SPECIES_ASH, 2
     delay 40
     waitmoncry
 	msgbox LilycoveCity_PokemonCenter_1F_Text_ThePokeballContainedBlaziken, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
-    givecustommon SPECIES_ASH, 15, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_CUT, MOVE_SWORDS_DANCE, MOVE_OVERHEAT, MOVE_ROCK_SLIDE, 0
+    givecustommon SPECIES_ASH, 15, ITEM_LEFTOVERS, ITEM_DUSK_BALL, NATURE_CALM, 1, 100, 0, 4, 0, 75, 75, 16, 16, 16, 16, 16, 16, MOVE_CUT, MOVE_NONE, MOVE_NONE, MOVE_NONE, 0
     setmetatile 5, 1, METATILE_PokemonCenter_HealingMachineEmpty, 1
 	special DrawWholeMapView
-    setflag FLAG_RECEIVED_BLAZIKEN
+    setflag FLAG_BADGE01_GET
 	release
 	end
 
@@ -80,7 +80,7 @@ LilycoveCity_PokemonCenter_EventScript_Heal::
 	lock
 	msgbox LilycoveCity_PokemonCenter_1F_Text_HealYourPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq LilycoveCity_PokemonCenter_EventScript_Heal2
+	call Common_EventScript_OutOfCenterPartyHeal
 	release
 	end
 

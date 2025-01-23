@@ -82,7 +82,7 @@ BlackForest1_EventScript_WildBattleSpecialGastly::
 	goto_if_set FLAG_FOUND_CIPHER, EventScript_IsBadMushroom
 	msgbox BlackForest1_Text_WildGastlyBattle, MSGBOX_DEFAULT
 	playmoncry SPECIES_GASTLY, 2
-	setwildbattle SPECIES_GASTLY, 50, ITEM_NONE
+	setwildbattle SPECIES_GASTLY, 20, ITEM_NONE
 	waitmoncry
 	special StartGastlyBattle
 	waitstate
@@ -92,7 +92,7 @@ BlackForest1_EventScript_WildBattleSpecialGastly::
 	msgbox BlackForest1_Text_WildGastlyDroppedThis, MSGBOX_DEFAULT
 	// FROVERSION SCRIPT giveitem ITEM_SPELLBOOK, 1
 	giveitem ITEM_POKEPRIMER, 1
-	removeobject 6
+	removeobject 5
 	waitmoncry
 	setflag FLAG_FOUND_CIPHER
 	release
@@ -100,7 +100,7 @@ end
 
 WildBattleSpecialGastlyOutcomeRan:
 	playmoncry SPECIES_GASTLY, 2
-	removeobject 6
+	removeobject 5
 	waitmoncry
 	msgbox BlackForest1_Text_WildGastlyRan, MSGBOX_DEFAULT
 	closemessage

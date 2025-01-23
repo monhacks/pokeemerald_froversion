@@ -14862,7 +14862,7 @@ const struct BaseStats gBaseStats[] =
     },
 [SPECIES_ARIADOS_GHOST] =
     {
-        .baseHP        = 255,
+        .baseHP        = 27,
         .baseAttack    = 100,
         .baseDefense   = 225,
         .baseSpeed     = 50,

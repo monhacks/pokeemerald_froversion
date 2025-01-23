@@ -898,7 +898,7 @@ void StartAriadosBossBattle(void)
     }
 
         min = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL);
-        max = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL) + 20;
+        max = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL) + 2;
 
     range = max - min + 1;
     rand = Random() % range;
@@ -965,7 +965,8 @@ void StartAriadosBossBattle(void)
     SetMonData(&gEnemyParty[0], MON_DATA_HP, &newCurrentHp);
     SetMonData(&gEnemyParty[0], MON_DATA_MAX_HP, &newMaxHP);
     SetMonData(&gEnemyParty[0], MON_DATA_DEF, &newDef);
-    SetMonData(&gEnemyParty[0], MON_DATA_MAX_HP, &newSpDef);
+    SetMonData(&gEnemyParty[0], MON_DATA_SPDEF, &newSpDef);
+    SetMonData(&gEnemyParty[0], MON_DATA_MAX_HP, &newMaxHP);
     SetMonData(&gEnemyParty[0], MON_DATA_LEVEL, &dynamicLevel);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);

@@ -3238,7 +3238,7 @@ void CalculateMonStats(struct Pokemon *mon)
     }
     else if (species == SPECIES_ARIADOS_GHOST && B_VERSION_MAGEE)
     {
-        newMaxHP = 700;
+        newMaxHP = ((gBaseStats[species].baseHP * (level / 2) - (gBaseStats[species].baseHP * (level / 40)) + (level * 2)));
     }
     else if (IsSpeciesOneOf(species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS)
     {
