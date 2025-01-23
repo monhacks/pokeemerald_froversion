@@ -22,7 +22,7 @@
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND_INN",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -33,6 +33,15 @@
       "elevation": 0,
       "var": "VAR_ROUTE101_STATE",
       "var_value": "2",
+      "script": "CinnabarIsland_Inn_2F_WouldYouLikeToSleep"
+    },
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
       "script": "CinnabarIsland_Inn_2F_WouldYouLikeToSleep"
     }
   ],

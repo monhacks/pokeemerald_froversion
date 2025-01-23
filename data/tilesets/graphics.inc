@@ -2589,3 +2589,43 @@ gTilesetPalettes_BlackForesstPreInfectionSecondary::
 	.align 2
 gTilesetTiles_BlackForesstPreInfectionSecondary::
 	.incbin "data/tilesets/secondary/black_foresst_pre_infection_secondary/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CenterAndMartPostInfection::
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CenterAndMartPostInfection::
+	.incbin "data/tilesets/secondary/center_and_mart_post_infection/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_CenterPostInfection::
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/center_post_infection/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_CenterPostInfection::
+	.incbin "data/tilesets/secondary/center_post_infection/tiles.4bpp.lz"

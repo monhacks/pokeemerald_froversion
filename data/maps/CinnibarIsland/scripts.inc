@@ -296,7 +296,14 @@ CinnabarIsland_Text_PleaseTakePackageToNCC:
 	.string "off at the Nautical Communication\l"
 	.string "center for me while we're here.\p"
 	.string "I always have sea legs after a long\n"
-	.string "sail and need to rest.$"
+	.string "sail and need to rest.\p"
+	.string "Speaking of rest, I booked a room for\n"
+	.string "you at the local inn, wasn't sure\l"
+	.string "how long you were going to want to\l"
+	.string "stay.\p"
+	.string "You should go check in and let them\n"
+	.string "know you're here after you drop the\l"
+	.string "package off!$"
 
 CinnabarIsland_Text_SailorReturnToVermillion:
 	.string "Would you like to return to Riverton\n"

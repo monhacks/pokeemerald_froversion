@@ -22,28 +22,28 @@
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_NCC_UNDERGROUND_ENTRANCE",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 10,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_NCC_ELEVATOR",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 9,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_NCC_ELEVATOR",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 11,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_NCC_ELEVATOR",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -26,6 +26,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 17,
+      "y": 25,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MAGM8ForestTownPostInfection_EventScript_CaptainGreg",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -47,14 +60,14 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY_UNUSED_MART",
+      "dest_map": "MAP_MAGM8FOREST_TOWN_POST_INFECTION_MART",
       "dest_warp_id": "0"
     },
     {
       "x": 13,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY_POKEMON_CENTER_1F",
+      "dest_map": "MAP_MAGM8FOREST_TOWN_POST_INFECTION_CENTER",
       "dest_warp_id": "0"
     },
     {

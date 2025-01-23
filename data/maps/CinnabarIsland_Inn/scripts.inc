@@ -56,7 +56,6 @@ CinnabarIsland_Inn_EventScript_InnReceptionist::
 	end
 
 CinnabarIsland_Inn_EventScript_CheckIn::
-		showmoneybox 0, 0, 0
 		msgbox CinnabarIsland_Inn_Text_TheRoomIsReadyForYou, MSGBOX_YESNO
 		switch VAR_RESULT
 		case NO, CinnabarIsland_Inn_EventScript_ComeBackWhenReady
@@ -72,10 +71,6 @@ CinnabarIsland_Inn_EventScript_ComeBackWhenReady::
 	end
 
 CinnabarIsland_Inn_EventScript_CompleteCheckIn::
-		checkmoney 500, 0
-		compare VAR_RESULT, FALSE
-		goto_if_eq CinnabarIsland_Inn_EventScript_NotEnoughMoney
-		removemoney 500, 0
 		msgbox CinnabarIsland_Inn_Text_ThankYouForStayingWithUs, MSGBOX_DEFAULT
 		setvar VAR_ROUTE101_STATE, 2
 		hidemoneybox
@@ -171,7 +166,7 @@ CinnabarIsland_Inn_Text_WeAreStillCleaningRoom:
 CinnabarIsland_Inn_Text_TheRoomIsReadyForYou:
 	.string "We have finished cleaning your\n"
 	.string "room. Would you like to check\l"
-	.string "in for ¥500?$"
+	.string "in$"
 
 CinnabarIsland_Inn_Text_ComeBackWhenReady:
 	.string "Okay, come back whenever you're\n"

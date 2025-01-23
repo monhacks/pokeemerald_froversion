@@ -1305,3 +1305,25 @@ gTileset_BlackForesstPreInfectionSecondary::
 	.4byte gMetatiles_BlackForesstPreInfectionSecondary
 	.4byte gMetatileAttributes_BlackForesstPreInfectionSecondary
 	.4byte NULL @ animation callback
+
+	.align 2
+gTileset_CenterAndMartPostInfection::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_CenterAndMartPostInfection
+	.4byte gTilesetPalettes_CenterAndMartPostInfection
+	.4byte gMetatiles_CenterAndMartPostInfection
+	.4byte gMetatileAttributes_CenterAndMartPostInfection
+	.4byte NULL @ animation callback
+
+	.align 2
+gTileset_CenterPostInfection::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0 @ padding
+	.4byte gTilesetTiles_CenterPostInfection
+	.4byte gTilesetPalettes_CenterPostInfection
+	.4byte gMetatiles_CenterPostInfection
+	.4byte gMetatileAttributes_CenterPostInfection
+	.4byte NULL @ animation callback

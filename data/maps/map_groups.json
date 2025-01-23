@@ -299,7 +299,9 @@
     "MAGM8ExtendedForest",
     "MAGM8ForestTownPostInfection",
     "BlackForest3",
-    "MAGM8CaveHiddenBehindWaterfall"
+    "MAGM8CaveHiddenBehindWaterfall",
+    "MAGM8ForestTownPostInfectionMart",
+    "MAGM8ForestTownPostInfectionCenter"
   ],
   "gMapGroup9": [
     "SlateportCity_SternsShipyard_1F",

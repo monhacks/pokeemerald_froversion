@@ -2678,7 +2678,7 @@
       "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFrontier",
-      "border_filepath": "data/layouts/BattleFrontier_BattleTowerBattleRoom/border.bin",
+      "border_filepath": "data/layouts/BattleFrontier_BattleTo\u0000\u0000\u0000\u0000attleRoom/border.bin",
       "blockdata_filepath": "data/layouts/BattleFrontier_BattleTowerBattleRoom/map.bin"
     },
     {
@@ -6350,6 +6350,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/VermillionCity_House3/border.bin",
       "blockdata_filepath": "data/layouts/VermillionCity_House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGM8FOREST_TOWN_POST_INFECTION_MART",
+      "name": "MAGM8ForestTownPostInfectionMart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_CenterAndMartPostInfection",
+      "border_filepath": "data/layouts/MAGM8ForestTownPostInfectionMart/border.bin",
+      "blockdata_filepath": "data/layouts/MAGM8ForestTownPostInfectionMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_MAGM8FOREST_TOWN_POST_INFECTION_CENTER",
+      "name": "MAGM8ForestTownPostInfectionCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_CenterPostInfection",
+      "border_filepath": "data/layouts/MAGM8ForestTownPostInfectionCenter/border.bin",
+      "blockdata_filepath": "data/layouts/MAGM8ForestTownPostInfectionCenter/map.bin"
     }
   ]
 }

@@ -13,7 +13,7 @@ NewMap1_OnLoad:
 	//end
 
 NewMap1_EventScript_SetDynamicWarpForTown::
-	call_if_set FLAG_MAGEE_VERSION, NewMap1_EventScript_SetDynamicWarpMageeVersion
+	call_if_set FLAG_MAGEE_VERSION, NewMap1_EventScript_SetDynamicWarpMageeVersionPostInfection
 	call_if_unset FLAG_MAGEE_VERSION, NewMap1_EventScript_SetDynamicWarpFroVersion
 	end
 

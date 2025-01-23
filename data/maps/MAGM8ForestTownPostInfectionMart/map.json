@@ -1,0 +1,48 @@
+{
+  "id": "MAP_MAGM8FOREST_TOWN_POST_INFECTION_MART",
+  "name": "MAGM8ForestTownPostInfectionMart",
+  "layout": "LAYOUT_MAGM8FOREST_TOWN_POST_INFECTION_MART",
+  "music": "MUS_FV_HAUNTED",
+  "region_map_section": "MAPSEC_PEWTER_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8FOREST_TOWN_POST_INFECTION",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_MAGM8FOREST_TOWN_POST_INFECTION",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 0,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LilycoveCity_UnusedMart_EventScript_VendingMachine"
+    }
+  ]
+}
