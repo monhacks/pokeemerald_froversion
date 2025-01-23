@@ -5163,7 +5163,7 @@ static const union AnimCmd sAnim_OLIVE_1[] =
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
-static const union AnimCmd sAnim_FILLER_18_1[] = 
+static const union AnimCmd sAnim_ASH_1[] = 
 {
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 20),
@@ -7802,9 +7802,9 @@ static const union AnimCmd *const sAnims_OLIVE[] ={
     sAnim_GeneralFrame0,
     sAnim_OLIVE_1,
 };
-static const union AnimCmd *const sAnims_FILLER_18[] ={
+static const union AnimCmd *const sAnims_ASH[] ={
     sAnim_GeneralFrame0,
-    sAnim_FILLER_18_1,
+    sAnim_ASH_1,
 };
 static const union AnimCmd *const sAnims_FILLER_19[] ={
     sAnim_GeneralFrame0,
@@ -8483,7 +8483,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(ABYSSALDRAGONFIRSTEVO),
     ANIM_CMD(CHEETO),
     ANIM_CMD(OLIVE),
-    ANIM_CMD(FILLER_18),
+    ANIM_CMD(ASH),
     ANIM_CMD(FILLER_19),
     ANIM_CMD(FILLER_20),
     ANIM_CMD(FILLER_21),

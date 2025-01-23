@@ -2352,8 +2352,8 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
     Cry_Olive::
 	.incbin "sound/direct_sound_samples/cries/olive.bin"
 .align 2
-    Cry_Filler_18::
-	.incbin "sound/direct_sound_samples/cries/filler_18.bin"
+    Cry_Ash::
+	.incbin "sound/direct_sound_samples/cries/Ash.bin"
 .align 2
     Cry_Filler_19::
 	.incbin "sound/direct_sound_samples/cries/filler_19.bin"

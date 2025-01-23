@@ -502,7 +502,7 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(ABYSSALDRAGONFIRSTEVO, gMonFrontPic_Abyssaldragonfirstevo),
     SPECIES_SPRITE(CHEETO, gMonFrontPic_Cheeto),
     SPECIES_SPRITE(OLIVE, gMonFrontPic_Olive),
-    SPECIES_SPRITE(FILLER_18, gMonFrontPic_Filler_18),
+    SPECIES_SPRITE(ASH, gMonFrontPic_Ash),
     SPECIES_SPRITE(FILLER_19, gMonFrontPic_Filler_19),
     SPECIES_SPRITE(FILLER_20, gMonFrontPic_Filler_20),
     SPECIES_SPRITE(FILLER_21, gMonFrontPic_Filler_21),

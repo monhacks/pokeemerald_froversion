@@ -2606,7 +2606,7 @@ const u8 gOlivePokedexText[] = _(
     "nap in sunny spots. Though it appears\n"
     "inactive, it is surprisingly agile when\n"
     "startled and defends itself effectively.");
-const u8 gFiller_18PokedexText[] = _(
+const u8 gAshPokedexText[] = _(
     "This is a test.\n"
     "Entry is a test.\n"
     "Line 3.\n"
