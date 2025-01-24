@@ -30,7 +30,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_AQUA_HIDEOUT_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -44,7 +44,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_AQUA_HIDEOUT_2] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -58,7 +58,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_AQUA_HIDEOUT_3] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -72,7 +72,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_AQUA_HIDEOUT_4] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -86,7 +86,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_SEAFLOOR_CAVERN_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -100,7 +100,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_SEAFLOOR_CAVERN_2] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -114,7 +114,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_SEAFLOOR_CAVERN_3] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -156,7 +156,7 @@ const struct Trainer gTrainers[] = {
     // [TRAINER_GRAYSON] =
     // {
     //     .partyFlags = 0,
-    //     .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+    //     .trainerClass = TRAINER_CLASS_TEAM_MAGA,
     //     .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
     //     .trainerPic = TRAINER_PIC_HAIGH,
     //     .trainerName = _("Paul"),
@@ -267,7 +267,7 @@ const struct Trainer gTrainers[] = {
     // [TRAINER_AMBER] =
     // {
     //     .partyFlags = 0,
-    //     .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+    //     .trainerClass = TRAINER_CLASS_TEAM_MAGA,
     //     .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
     //     .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
     //     .trainerName = _("Grunt"),
@@ -324,7 +324,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_SALT_LAKE] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_A,
         .trainerName = _("Grunt"),
@@ -338,7 +338,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_WEATHER_INST_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -352,7 +352,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_WEATHER_INST_2] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -366,7 +366,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_WEATHER_INST_3] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -380,7 +380,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGA_HIDEOUT_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_A,
         .trainerName = _("Grunt"),
@@ -394,7 +394,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGA_HIDEOUT_2] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_B,
         .trainerName = _("Grunt"),
@@ -408,7 +408,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGA_HIDEOUT_3] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_B,
         .trainerName = _("Grunt"),
@@ -422,7 +422,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGA_HIDEOUT_4] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -436,7 +436,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGA_HIDEOUT_5] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -450,7 +450,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGA_HIDEOUT_6] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -464,7 +464,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGA_HIDEOUT_7] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -478,7 +478,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_AQUA_HIDEOUT_5] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -492,7 +492,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_AQUA_HIDEOUT_6] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -1024,7 +1024,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_CHARLIE] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_A,
         .trainerName = _("Grunt"),
@@ -1556,7 +1556,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_SPACE_CENTER_2] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_B,
         .trainerName = _("Grunt"),
@@ -1912,7 +1912,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MT_CHIMNEY_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_B,
         .trainerName = _("Grunt"),
@@ -2560,7 +2560,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_AQUA_HIDEOUT_7] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -2574,7 +2574,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_AQUA_HIDEOUT_8] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -2700,7 +2700,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_JEFF] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_A,
         .trainerName = _("Grunt"),
@@ -2728,7 +2728,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_JACE] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_B,
         .trainerName = _("Grunt"),
@@ -2742,7 +2742,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_KEEGAN] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_A,
         .trainerName = _("Grunt"),
@@ -3848,7 +3848,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_KAREN_2] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_A,
         .trainerName = _("Grunt"),
@@ -3862,7 +3862,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_KAREN_3] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_A,
         .trainerName = _("Grunt"),
@@ -3876,7 +3876,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_KAREN_4] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_A,
         .trainerName = _("Grunt"),
@@ -3890,7 +3890,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_KAREN_5] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_GIRL,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_A,
         .trainerName = _("Grunt"),
@@ -6178,7 +6178,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_MISSY] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SWIMMER,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_B,
         .trainerName = _("Grunt"),
@@ -6948,7 +6948,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_ELI] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_A,
         .trainerName = _("Grunt"),
@@ -7918,7 +7918,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_SEAFLOOR_CAVERN_5] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -7932,7 +7932,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_UNUSED] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -7946,7 +7946,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MT_PYRE_4] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -7960,7 +7960,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_JAGGED_PASS] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_B,
         .trainerName = _("Grunt"),
@@ -8095,7 +8095,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MT_CHIMNEY_2] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_B,
         .trainerName = _("Grunt"),
@@ -8193,7 +8193,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_SPACE_CENTER_3] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_A,
         .trainerName = _("Grunt"),
@@ -8207,7 +8207,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_SPACE_CENTER_4] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_B,
         .trainerName = _("Grunt"),
@@ -8221,7 +8221,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_SPACE_CENTER_5] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_B,
         .trainerName = _("Grunt"),
@@ -8235,7 +8235,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_SPACE_CENTER_6] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_B,
         .trainerName = _("Grunt"),
@@ -8249,7 +8249,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_SPACE_CENTER_7] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNT_B,
         .trainerName = _("Grunt"),
@@ -8333,7 +8333,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_WEATHER_INST_5] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ANTIFA_GRUNT,
         .trainerName = _("Grunt"),
@@ -8347,7 +8347,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_TABITHA_MT_CHIMNEY] =
     {
         .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_HAIGH,
         .trainerName = _("Paul"),
@@ -8421,7 +8421,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_MAXIE_MT_CHIMNEY] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_ZENDANO,
         .trainerName = _("Zendano"),
@@ -9535,7 +9535,7 @@ const struct Trainer gTrainers[] = {
     {
         //.partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Bud & Stone"),
@@ -10027,7 +10027,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_1] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10041,7 +10041,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_2] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10055,7 +10055,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_3] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10069,7 +10069,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_4] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10083,7 +10083,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_5] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10097,7 +10097,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_6] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10111,7 +10111,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_7] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10125,7 +10125,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_8] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10139,7 +10139,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_9] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10153,7 +10153,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_10] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10167,7 +10167,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_11] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10181,7 +10181,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_12] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10195,7 +10195,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_13] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10209,7 +10209,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_14] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10223,7 +10223,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_15] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -10237,7 +10237,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_GRUNT_MAGMA_HIDEOUT_16] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -11865,7 +11865,7 @@ const struct Trainer gTrainers[] = {
     [TRAINER_MAGA_GRUNT_A_LAKE_MEAD] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_MAGA_GRUNTS,
         .trainerName = _("Grunt"),
@@ -11896,7 +11896,7 @@ const struct Trainer gTrainers[] = {
         .hasCustomTransition = TRUE,
         .transition = B_TRANSITION_MUGSHOT,
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
         .trainerPic = TRAINER_PIC_LATTKA,
         .trainerName = _("Lattka"),
