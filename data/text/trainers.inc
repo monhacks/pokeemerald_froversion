@@ -5060,3 +5060,88 @@ MountCinnibar_Text_DerekDefeated:
 MountCinnibar_Text_DerekPostBattle:
 	.string "One loss won't stop me. I'll\n"
 	.string "train harder for the climb!$"
+
+
+MAGAHideout1F_Text_MarkIntro:
+	.string "Hey! You're not supposed to be\n"
+	.string "here! Leave before it's too late!\p"
+	.string "You'll regret interfering!$"
+
+MAGAHideout1F_Text_MarkDefeated:
+	.string "How did you get past me?!$"
+
+MAGAHideout1F_Text_MarkPostBattle:
+	.string "No matter. The others will make\n"
+	.string "sure you don't get any further!$"
+
+MAGAHideout1F_Text_EllaIntro:
+	.string "What are you doing here?! This\n"
+	.string "area is off-limits to outsiders!\p"
+	.string "You won't disrupt our plans!$"
+
+MAGAHideout1F_Text_EllaDefeated:
+	.string "No... how could I lose?!$"
+
+MAGAHideout1F_Text_EllaPostBattle:
+	.string "The experiments must continue...\n"
+	.string "You can't stop Team MAGA!$"
+
+MAGAHideout1F_Text_TheoIntro:
+	.string "You won't stop our experiments!\n"
+	.string "The generators must stay active!\p"
+	.string "You'll be dealt with here and now!$"
+
+MAGAHideout1F_Text_TheoDefeated:
+	.string "Impossible... the generators...$"
+
+MAGAHideout1F_Text_TheoPostBattle:
+	.string "Even if I'm defeated, the others\n"
+	.string "will keep the power running!$"
+
+MAGAHideout1F_Text_LaraIntro:
+	.string "Intruder alert! You shouldn't\n"
+	.string "have made it this far!\p"
+	.string "Time to shut you down!$"
+
+MAGAHideout1F_Text_LaraDefeated:
+	.string "No... I can't believe this!$"
+
+MAGAHideout1F_Text_LaraPostBattle:
+	.string "The generators are too important.\n"
+	.string "You can't stop our mission!$"
+
+MAGAHideout1F_Text_VinceIntro:
+	.string "You think you can stop us?\n"
+	.string "You're in way over your head!\p"
+	.string "Prepare for battle!$"
+
+MAGAHideout1F_Text_VinceDefeated:
+	.string "How did you overpower me?!$"
+
+MAGAHideout1F_Text_VincePostBattle:
+	.string "The experiments can't be stopped.\n"
+	.string "You'll never succeed!$"
+
+MAGAHideout1F_Text_MiaIntro:
+	.string "I'll defend the generators at all\n"
+	.string "costs! You won't interfere!\p"
+	.string "Time to fight!$"
+
+MAGAHideout1F_Text_MiaDefeated:
+	.string "This can't be happening...$"
+
+MAGAHideout1F_Text_MiaPostBattle:
+	.string "The power supply is critical. You\n"
+	.string "must be stopped!$"
+
+MAGAHideout1F_Text_NateIntro:
+	.string "You're out of your league!\n"
+	.string "This hideout is impenetrable!\p"
+	.string "Let's end this!$"
+
+MAGAHideout1F_Text_NateDefeated:
+	.string "I failed... the mission...$"
+
+MAGAHideout1F_Text_NatePostBattle:
+	.string "The others will ensure success.\n"
+	.string "You'll never escape!$"

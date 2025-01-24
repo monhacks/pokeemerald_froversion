@@ -1,2 +1,106 @@
 VermillionCity_MAGAHideout_1F_MapScripts::
 	.byte 0
+
+
+VermillionCity_MAGAHideout_1F_EventScript_Generator1::
+lock
+	goto_if_set FLAG_TURNED_OFF_GENERATOR_1, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
+	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
+	setflag FLAG_TURNED_OFF_GENERATOR_1
+release
+end
+
+VermillionCity_MAGAHideout_1F_EventScript_Generator2::
+lock
+	goto_if_set FLAG_TURNED_OFF_GENERATOR_2, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
+	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
+	setflag FLAG_TURNED_OFF_GENERATOR_2
+release
+end
+
+VermillionCity_MAGAHideout_1F_EventScript_Generator3::
+lock
+	goto_if_set FLAG_TURNED_OFF_GENERATOR_3, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
+	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
+	setflag FLAG_TURNED_OFF_GENERATOR_3
+release
+end
+
+VermillionCity_MAGAHideout_1F_EventScript_Generator4::
+lock
+	goto_if_set FLAG_TURNED_OFF_GENERATOR_4, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
+	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
+	setflag FLAG_TURNED_OFF_GENERATOR_4
+release
+end
+
+VermillionCity_MAGAHideout_1F_EventScript_Generator5::
+lock
+	goto_if_set FLAG_TURNED_OFF_GENERATOR_5, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
+	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
+	setflag FLAG_TURNED_OFF_GENERATOR_5
+release
+end
+
+VermillionCity_MAGAHideout_1F_EventScript_Generator6::
+lock
+	goto_if_set FLAG_TURNED_OFF_GENERATOR_6, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
+	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
+	setflag FLAG_TURNED_OFF_GENERATOR_6
+release
+end
+
+VermillionCity_MAGAHideout_1F_EventScript_Generator7::
+lock
+	goto_if_set FLAG_TURNED_OFF_GENERATOR_7, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
+	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
+	setflag FLAG_TURNED_OFF_GENERATOR_7
+release
+end
+
+VermillionCity_MAGAHideout1F_EventScript_Mark::
+	trainerbattle_single TRAINER_GRUNT_MAGA_HIDEOUT_1, MAGAHideout1F_Text_MarkIntro, MAGAHideout1F_Text_MarkDefeated
+	msgbox MAGAHideout1F_Text_MarkPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout1F_EventScript_Ella::
+	trainerbattle_single TRAINER_GRUNT_MAGA_HIDEOUT_2, MAGAHideout1F_Text_EllaIntro, MAGAHideout1F_Text_EllaDefeated
+	msgbox MAGAHideout1F_Text_EllaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout1F_EventScript_Theo::
+	trainerbattle_single TRAINER_GRUNT_MAGA_HIDEOUT_3, MAGAHideout1F_Text_TheoIntro, MAGAHideout1F_Text_TheoDefeated
+	msgbox MAGAHideout1F_Text_TheoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout1F_EventScript_Lara::
+	trainerbattle_single TRAINER_GRUNT_MAGA_HIDEOUT_4, MAGAHideout1F_Text_LaraIntro, MAGAHideout1F_Text_LaraDefeated
+	msgbox MAGAHideout1F_Text_LaraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout1F_EventScript_Vince::
+	trainerbattle_single TRAINER_GRUNT_MAGA_HIDEOUT_5, MAGAHideout1F_Text_VinceIntro, MAGAHideout1F_Text_VinceDefeated
+	msgbox MAGAHideout1F_Text_VincePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout1F_EventScript_Mia::
+	trainerbattle_single TRAINER_GRUNT_MAGA_HIDEOUT_6, MAGAHideout1F_Text_MiaIntro, MAGAHideout1F_Text_MiaDefeated
+	msgbox MAGAHideout1F_Text_MiaPostBattle, MSGBOX_AUTOCLOSE
+	end
+	
+VermillionCity_MAGAHideout1F_EventScript_Nate::
+	trainerbattle_single TRAINER_GRUNT_MAGA_HIDEOUT_7,MAGAHideout1F_Text_NateIntro, MAGAHideout1F_Text_NateDefeated
+	msgbox MAGAHideout1F_Text_NatePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff:
+	msgbox VermillionCity_MAGAHideout_1F_Text_GeneratorAlreadyOff, MSGBOX_AUTOCLOSE
+release
+end
+
+VermillionCity_MAGAHideout_1F_Text_GeneratorAlreadyOff:
+	.string "You've already shut the generator off!$"
+
+VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator:
+	.string "{PLAYER} turned off the generator!$"
+
