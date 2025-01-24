@@ -1459,3 +1459,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/MAGM8ForestTownPostInfectionMart/scripts.inc"
 
 	.include "data/maps/MAGM8ForestTownPostInfectionCenter/scripts.inc"
+
+	.include "data/maps/VermillionCity_MAGAHideout_1F/scripts.inc"

@@ -6370,6 +6370,16 @@
       "secondary_tileset": "gTileset_CenterPostInfection",
       "border_filepath": "data/layouts/MAGM8ForestTownPostInfectionCenter/border.bin",
       "blockdata_filepath": "data/layouts/MAGM8ForestTownPostInfectionCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILLION_CITY_MAGAHIDEOUT_1F",
+      "name": "VermillionCity_MAGAHideout_1F_Layout",
+      "width": 72,
+      "height": 62,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/VermillionCity_MAGAHideout_1F/border.bin",
+      "blockdata_filepath": "data/layouts/VermillionCity_MAGAHideout_1F/map.bin"
     }
   ]
 }

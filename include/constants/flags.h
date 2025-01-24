@@ -654,8 +654,8 @@
 #define FLAG_HIDE_FREDERIC  0x265 // Hide Frederic in Western Approach
 #define FLAG_HIDE_FREDERIC_2  0x266 // Hide Frederic for boss battle
 #define FLAG_HIDE_FLANNERY_WESTERN_APPROACH  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
+#define FLAG_OPENED_HIDDEN_DOOR_MAGEES_PLEASURE_FACTORY  0x268 // Unused Flag
+#define FLAG_TALKED_TO_JEN_AFTER_BEATING_BOSSES  0x269 // Unused Flag
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag
 #define FLAG_UNUSED_0x26C  0x26C // Unused Flag

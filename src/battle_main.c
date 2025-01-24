@@ -3937,7 +3937,7 @@ const u16 gCheetoMiscMoves[] =
 const u16 gAriadosBossMiscMoves[] =
     {
         MOVE_SCREECH,
-        MOVE_COPYCAT,
+        MOVE_CURSE,
         MOVE_LIGHT_SCREEN,
         MOVE_REFLECT,
         0xFFFF

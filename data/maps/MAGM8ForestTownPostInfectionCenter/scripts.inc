@@ -1,2 +1,7 @@
 MAGM8ForestTownPostInfectionCenter_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MAGM8ForestTownPostInfectionCenter_OnTransition
 	.byte 0
+
+MAGM8ForestTownPostInfectionCenter_OnTransition: @ 821C5BD
+	setrespawn HEAL_LOCATION_PC_IN_THE_WOODS
+	end

@@ -32,6 +32,7 @@ EventScript_NewMap3_AriadosBossBattle::
 	playmoncry SPECIES_ARIADOS, 2
 	removeobject 1
 	setflag FLAG_RECEIVED_BIKE
+	clearflag FLAG_BATTLE_HAUNTING
 	releaseall
 	end
 

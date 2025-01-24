@@ -14273,12 +14273,12 @@ const struct BaseStats gBaseStats[] =
     },
 [SPECIES_ASH] =
     {
-        .baseHP        = 48,
-        .baseAttack    = 51,
-        .baseDefense   = 53,
-        .baseSpeed     = 76,
-        .baseSpAttack  = 41,
-        .baseSpDefense = 41,
+        .baseHP        = 59,
+        .baseAttack    = 139,
+        .baseDefense   = 69,
+        .baseSpeed     = 80,
+        .baseSpAttack  = 59,
+        .baseSpDefense = 69,
         .type1 = TYPE_GRASS,
         .type2 = TYPE_GRASS,
         .catchRate = 45,
@@ -14862,7 +14862,7 @@ const struct BaseStats gBaseStats[] =
     },
 [SPECIES_ARIADOS_GHOST] =
     {
-        .baseHP        = 27,
+        .baseHP        = 55,
         .baseAttack    = 100,
         .baseDefense   = 225,
         .baseSpeed     = 50,

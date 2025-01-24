@@ -138,42 +138,42 @@
       "y": 29,
       "elevation": 0,
       "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": 127
+      "dest_warp_id": "127"
     },
     {
       "x": 15,
       "y": 29,
       "elevation": 0,
       "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": 127
+      "dest_warp_id": "127"
     },
     {
       "x": 14,
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND_NCC",
-      "dest_warp_id": 4
+      "dest_warp_id": "4"
     },
     {
       "x": 15,
       "y": 1,
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND_NCC",
-      "dest_warp_id": 5
+      "dest_warp_id": "5"
     },
     {
       "x": 14,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND_NCC",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 15,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND_NCC",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [
