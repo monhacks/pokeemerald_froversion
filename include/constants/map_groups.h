@@ -787,6 +787,7 @@
 #define MAP_BLACK_FOREST_WITCHES_HOUSE             (21 | (33 << 8))
 #define MAP_NEW_MAP3                               (22 | (33 << 8))
 #define MAP_VERMILLION_CITY_MAGAHIDEOUT_1F         (23 | (33 << 8))
+#define MAP_VERMILLION_CITY_MAGAHIDEOUT_2F         (24 | (33 << 8))
 
 #define MAP_GROUPS_COUNT 34
 

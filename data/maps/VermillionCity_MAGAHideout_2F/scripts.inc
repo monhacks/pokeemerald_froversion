@@ -1,0 +1,35 @@
+VermillionCity_MAGAHideout_2F_MapScripts::
+	.byte 0
+
+
+VermillionCity_MAGAHideout_2F_EventScript_Generator8::
+lock
+	goto_if_set FLAG_TURNED_OFF_GENERATOR_8, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
+	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
+	setflag FLAG_TURNED_OFF_GENERATOR_8
+release
+end
+
+VermillionCity_MAGAHideout_2F_EventScript_Generator9::
+lock
+	goto_if_set FLAG_TURNED_OFF_GENERATOR_9, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
+	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
+	setflag FLAG_TURNED_OFF_GENERATOR_9
+release
+end
+
+VermillionCity_MAGAHideout_2F_EventScript_Generator10::
+lock
+	goto_if_set FLAG_TURNED_OFF_GENERATOR_10, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
+	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
+	setflag FLAG_TURNED_OFF_GENERATOR_10
+release
+end
+
+VermillionCity_MAGAHideout_2F_EventScript_Generator11::
+lock
+	goto_if_set FLAG_TURNED_OFF_GENERATOR_11, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
+	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
+	setflag FLAG_TURNED_OFF_GENERATOR_11
+release
+end
