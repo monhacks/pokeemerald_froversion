@@ -6390,6 +6390,16 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/VermillionCity_MAGAHideout_2F/border.bin",
       "blockdata_filepath": "data/layouts/VermillionCity_MAGAHideout_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_VERMILLION_CITY_MAGAHIDEOUT_3F",
+      "name": "VermillionCity_MAGAHideout_3F_Layout",
+      "width": 29,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/VermillionCity_MAGAHideout_3F/border.bin",
+      "blockdata_filepath": "data/layouts/VermillionCity_MAGAHideout_3F/map.bin"
     }
   ]
 }

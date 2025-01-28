@@ -51,7 +51,7 @@ Route110_EventScript_ItemRareCandy:: @ 8290D74
 	end
 
 Route110_EventScript_ItemDireHit:: @ 8290D81
-	finditem ITEM_DIRE_HIT
+	finditem ITEM_MASTER_BALL
 	end
 
 Route110_EventScript_ItemElixir:: @ 8290D8E

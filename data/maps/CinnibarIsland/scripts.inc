@@ -3,7 +3,12 @@
 
 CinnibarIsland_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, CinnabarIsland_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarIsland_OnTransition
 	.byte 0
+
+CinnabarIsland_OnTransition: @ 81FC52E
+	setrespawn HEAL_LOCATION_CINNABAR_ISLAND_POST_SHIP_WRECK
+	end
 
 CinnabarIsland_OnFrame: @ 8238C4F
 	map_script_2 VAR_ROUTE101_STATE, 0, CinnabarIsland_NewGameEvents
@@ -45,7 +50,6 @@ CinnabarIsland_PostBoss::
 		applymovement LOCALID_SAILOR, Common_Movement_FacePlayer
 		waitmovement LOCALID_SAILOR
 		msgbox CinnabarIsland_Text_BoatFixed, MSGBOX_DEFAULT
-		setvar VAR_ROUTE101_STATE, 8
 	release
 	end
 	
@@ -77,8 +81,7 @@ CinnabarIsland_EventScript_ManMovingBoxes::
 end
 
 CinnabarIsland_EventScript_Sailor::
-	compare VAR_ROUTE101_STATE, 8
-	goto_if_ge CinnabarIsland_EventScript_SailorReturnToVermillion
+	goto_if_set FLAG_DEFEATED_SHADOW_CHARIZARD, CinnabarIsland_EventScript_SailorReturnToVermillion
 	msgbox CinnabarIsland_Text_Sailor, MSGBOX_NPC
 end
 

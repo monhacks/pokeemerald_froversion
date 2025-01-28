@@ -35,6 +35,7 @@ extern const u16 gCheetoSecondaryItems[];
 extern const u16 gAriadosBossSecondaryItems[];
 extern const u16 gNonStealItems[];
 extern const u16 gWildPokemonDropItems[];
+extern const u16 gWildPokemonRareDropItems[];
 extern const u16 gNonOrganicItems[];
 extern const u16 gMetagrossMetamorphForms[];
 

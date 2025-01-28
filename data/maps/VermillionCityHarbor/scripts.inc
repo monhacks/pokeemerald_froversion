@@ -3,6 +3,12 @@
 .set LOCALID_SS_TIDAL, 2
 
 VermillionCityHarbor_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, VermillionCityHarbors_OnTransition
+	.byte 0
+
+VermillionCityHarbors_OnTransition:
+	setrespawn HEAL_LOCATION_RIVERTON_TOWN
+	end
 	.byte 0
 
 Riverton_EventScript_CaptainGreg::

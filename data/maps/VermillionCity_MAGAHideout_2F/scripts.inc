@@ -33,3 +33,63 @@ lock
 	setflag FLAG_TURNED_OFF_GENERATOR_11
 release
 end
+
+VermillionCity_MAGAHideout2F_EventScript_Carter::
+	trainerbattle_single TRAINER_CARTER, MAGAHideout2F_Text_CarterIntro, MAGAHideout2F_Text_CarterDefeated
+	msgbox MAGAHideout2F_Text_CarterPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout2F_EventScript_Evelyn::
+	trainerbattle_single TRAINER_ELLIOT_2, MAGAHideout2F_Text_EvelynIntro, MAGAHideout2F_Text_EvelynDefeated
+	msgbox MAGAHideout2F_Text_EvelynPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout2F_EventScript_Max::
+	trainerbattle_single TRAINER_ELLIOT_3, MAGAHideout2F_Text_MaxIntro, MAGAHideout2F_Text_MaxDefeated
+	msgbox MAGAHideout2F_Text_MaxPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout2F_EventScript_Alice::
+	trainerbattle_single TRAINER_ELLIOT_4, MAGAHideout2F_Text_AliceIntro, MAGAHideout2F_Text_AliceDefeated
+	msgbox MAGAHideout2F_Text_AlicePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout2F_EventScript_Walter::
+	trainerbattle_single TRAINER_ELLIOT_5, MAGAHideout2F_Text_WalterIntro, MAGAHideout2F_Text_WalterDefeated
+	msgbox MAGAHideout2F_Text_WalterPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout2F_EventScript_Rachel::
+	trainerbattle_single TRAINER_RONALD, MAGAHideout2F_Text_RachelIntro, MAGAHideout2F_Text_RachelDefeated
+	msgbox MAGAHideout2F_Text_RachelPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout2F_EventScript_Xavier::
+	trainerbattle_single TRAINER_JACOB, MAGAHideout2F_Text_XavierIntro, MAGAHideout2F_Text_XavierDefeated
+	msgbox MAGAHideout2F_Text_XavierPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout2F_EventScript_Olivia::
+	trainerbattle_single TRAINER_ANTHONY, MAGAHideout2F_Text_OliviaIntro, MAGAHideout2F_Text_OliviaDefeated
+	msgbox MAGAHideout2F_Text_OliviaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout2F_EventScript_Logan::
+	trainerbattle_single TRAINER_BENJAMIN_1, MAGAHideout2F_Text_LoganIntro, MAGAHideout2F_Text_LoganDefeated
+	msgbox MAGAHideout2F_Text_LoganPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout2F_EventScript_Claire::
+	trainerbattle_single TRAINER_BENJAMIN_2, MAGAHideout2F_Text_ClaireIntro, MAGAHideout2F_Text_ClaireDefeated
+	msgbox MAGAHideout2F_Text_ClairePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout2F_EventScript_Henry::
+	trainerbattle_single TRAINER_BENJAMIN_3, MAGAHideout2F_Text_HenryIntro, MAGAHideout2F_Text_HenryDefeated
+	msgbox MAGAHideout2F_Text_HenryPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+VermillionCity_MAGAHideout2F_EventScript_Lila::
+	trainerbattle_single TRAINER_DYLAN_4, MAGAHideout2F_Text_LilaIntro, MAGAHideout2F_Text_LilaDefeated
+	msgbox MAGAHideout2F_Text_LilaPostBattle, MSGBOX_AUTOCLOSE
+	end

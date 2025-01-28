@@ -93,6 +93,56 @@ VermillionCity_MAGAHideout1F_EventScript_Nate::
 	msgbox MAGAHideout1F_Text_NatePostBattle, MSGBOX_AUTOCLOSE
 	end
 
+MAGAHideout1F_EventScript_Malcolm::
+	trainerbattle_single TRAINER_DYLAN_4, MAGAHideout1F_Text_MalcolmIntro, MAGAHideout1F_Text_MalcolmDefeated
+	msgbox MAGAHideout1F_Text_MalcolmPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MAGAHideout1F_EventScript_Fiona::
+	trainerbattle_single TRAINER_BENJAMIN_5, MAGAHideout1F_Text_FionaIntro, MAGAHideout1F_Text_FionaDefeated
+	msgbox MAGAHideout1F_Text_FionaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MAGAHideout1F_EventScript_Victor::
+	trainerbattle_single TRAINER_JASMINE, MAGAHideout1F_Text_VictorIntro, MAGAHideout1F_Text_VictorDefeated
+	msgbox MAGAHideout1F_Text_VictorPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MAGAHideout1F_EventScript_Sylvia::
+	trainerbattle_single TRAINER_ABIGAIL_2, MAGAHideout1F_Text_SylviaIntro, MAGAHideout1F_Text_SylviaDefeated
+	msgbox MAGAHideout1F_Text_SylviaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MAGAHideout1F_EventScript_Theo::
+	trainerbattle_single TRAINER_ABIGAIL_3, MAGAHideout1F_Text_TheoIntro, MAGAHideout1F_Text_TheoDefeated
+	msgbox MAGAHideout1F_Text_TheoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MAGAHideout1F_EventScript_Lydia::
+	trainerbattle_single TRAINER_ABIGAIL_4, MAGAHideout1F_Text_LydiaIntro, MAGAHideout1F_Text_LydiaDefeated
+	msgbox MAGAHideout1F_Text_LydiaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MAGAHideout1F_EventScript_Nolan::
+	trainerbattle_single TRAINER_ABIGAIL_5, MAGAHideout1F_Text_NolanIntro, MAGAHideout1F_Text_NolanDefeated
+	msgbox MAGAHideout1F_Text_NolanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MAGAHideout1F_EventScript_Iris::
+	trainerbattle_single TRAINER_DYLAN_1, MAGAHideout1F_Text_IrisIntro, MAGAHideout1F_Text_IrisDefeated
+	msgbox MAGAHideout1F_Text_IrisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MAGAHideout1F_EventScript_Clara::
+	trainerbattle_single TRAINER_DYLAN_2, MAGAHideout1F_Text_ClaraIntro, MAGAHideout1F_Text_ClaraDefeated
+	msgbox MAGAHideout1F_Text_ClaraPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MAGAHideout1F_EventScript_Lyris::
+	trainerbattle_single TRAINER_DYLAN_3, MAGAHideout1F_Text_LyrisIntro, MAGAHideout1F_Text_LyrisDefeated
+	msgbox MAGAHideout1F_Text_LyrisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff:
 	msgbox VermillionCity_MAGAHideout_1F_Text_GeneratorAlreadyOff, MSGBOX_AUTOCLOSE
 release

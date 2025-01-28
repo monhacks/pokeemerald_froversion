@@ -1463,3 +1463,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/VermillionCity_MAGAHideout_1F/scripts.inc"
 
 	.include "data/maps/VermillionCity_MAGAHideout_2F/scripts.inc"
+
+	.include "data/maps/VermillionCity_MAGAHideout_3F/scripts.inc"

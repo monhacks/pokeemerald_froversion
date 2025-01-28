@@ -58,6 +58,7 @@ FallarborTown_PokemonCenter_1F_EventScript_LanetteExited:: @ 8200C48
 
 VermillionCity_Pokemart_EventScript_Clerk::
 	lock
+	goto_if_set FLAG_RIVERTON_FUEL_QUEST_COMPLETED, VermillionCity_Pokemart_EventScript_Clerk2
 	faceplayer
 	playbgm MUS_FV_PIMP, 0
 	message VermillionCity_Pokemart_Text_Clerk
@@ -75,6 +76,42 @@ VermillionCity_Pokemart_Amneet:
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
+	.2byte ITEM_NONE
+	release
+	end
+
+VermillionCity_Pokemart_EventScript_Clerk2::
+	lock
+	faceplayer
+	playbgm MUS_FV_PIMP, 0
+	message VermillionCity_Pokemart_Text_Clerk
+	waitmessage
+	pokemart VermillionCity_Pokemart_Amneet2
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	fadedefaultbgm
+	release
+	end
+
+.align 2
+VermillionCity_Pokemart_Amneet2:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_REPEL
+	.2byte ITEM_REVIVE
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_X_ATTACK
+	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_X_SPEED
+	.2byte ITEM_X_ACCURACY
+	.2byte ITEM_X_SP_ATK
+	.2byte ITEM_X_SP_DEF
+	.2byte ITEM_FOCUS_SASH
+	.2byte ITEM_CHOICE_SPECS
+	.2byte ITEM_CHOICE_SCARF
+	.2byte ITEM_CHOICE_BAND
+	.2byte ITEM_LIFE_ORB
+	.2byte ITEM_ASSAULT_VEST
 	.2byte ITEM_NONE
 	release
 	end

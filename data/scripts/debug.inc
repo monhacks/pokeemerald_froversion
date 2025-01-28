@@ -60,8 +60,12 @@ Debug_CheatStart::
 	end
 
 Debug_Script_1::
-	trainerbattle_double TRAINER_MATT_FINAL_BOSS, AbandonedShip_Rooms2_1F_Text_KiraIntro, AbandonedShip_Rooms2_1F_Text_KiraDefeat, AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons, AbandonedShip_Rooms2_1F_EventScript_RegisterKira
-	cleartrainerflag TRAINER_MATT_FINAL_BOSS
+	cleartrainerflag TRAINER_DYLAN_5
+	cleartrainerflag TRAINER_MARIA_1
+	cleartrainerflag TRAINER_MARIA_2
+	cleartrainerflag TRAINER_MARIA_3
+	cleartrainerflag TRAINER_MARIA_4
+	cleartrainerflag TRAINER_MARIA_5
 	end
 
 Debug_Script_2::

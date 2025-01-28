@@ -5145,3 +5145,329 @@ MAGAHideout1F_Text_NateDefeated:
 MAGAHideout1F_Text_NatePostBattle:
 	.string "The others will ensure success.\n"
 	.string "You'll never escape!$"
+
+MAGAHideout2F_Text_CarterIntro:
+	.string "You won't make it past this floor!\n"
+	.string "Team MAGA controls everything!\p"
+	.string "Prepare for defeat!$"
+
+MAGAHideout2F_Text_CarterDefeated:
+	.string "This isn't over... not yet!$"
+
+MAGAHideout2F_Text_CarterPostBattle:
+	.string "You'll regret stepping into our\n"
+	.string "territory. Just wait!$"
+
+MAGAHideout2F_Text_EvelynIntro:
+	.string "You'll never uncover our plans!\n"
+	.string "Team MAGA will crush you!\p"
+	.string "Time to battle!$"
+
+MAGAHideout2F_Text_EvelynDefeated:
+	.string "How could you win?!$"
+
+MAGAHideout2F_Text_EvelynPostBattle:
+	.string "There's no stopping us, even if\n"
+	.string "you defeat me!$"
+
+MAGAHideout2F_Text_MaxIntro:
+	.string "You won't stand a chance against\n"
+	.string "my Pokémon! Team MAGA rules!\p"
+	.string "Let's fight!$"
+
+MAGAHideout2F_Text_MaxDefeated:
+	.string "This can't be happening...$"
+
+MAGAHideout2F_Text_MaxPostBattle:
+	.string "You've won this battle, but you\n"
+	.string "won't win the war!$"
+
+MAGAHideout2F_Text_AliceIntro:
+	.string "Intruder detected! You're not\n"
+	.string "going any further!\p"
+	.string "Prepare yourself!$"
+
+MAGAHideout2F_Text_AliceDefeated:
+	.string "How did you win?!$"
+
+MAGAHideout2F_Text_AlicePostBattle:
+	.string "You may have defeated me, but\n"
+	.string "our plans are unstoppable!$"
+
+MAGAHideout2F_Text_WalterIntro:
+	.string "Our DNA modification experiments\n"
+	.string "are revolutionary! You can't\p"
+	.string "stop our progress!$"
+
+MAGAHideout2F_Text_WalterDefeated:
+	.string "This setback is only temporary!$"
+
+MAGAHideout2F_Text_WalterPostBattle:
+	.string "The future of Pokémon evolution\n"
+	.string "belongs to us!$"
+
+MAGAHideout2F_Text_RachelIntro:
+	.string "You dare interfere with our DNA\n"
+	.string "enhancement research? Prepare to\p"
+	.string "face the consequences!$"
+
+MAGAHideout2F_Text_RachelDefeated:
+	.string "This... wasn't in the equations!$"
+
+MAGAHideout2F_Text_RachelPostBattle:
+	.string "Our genetically modified Pokémon\n"
+	.string "will soon be unstoppable!$"
+
+MAGAHideout2F_Text_XavierIntro:
+	.string "Our experiments will create the\n"
+	.string "strongest Pokémon ever seen!\p"
+	.string "You're too late to stop us!$"
+
+MAGAHideout2F_Text_XavierDefeated:
+	.string "You... won't stop the project!$"
+
+MAGAHideout2F_Text_XavierPostBattle:
+	.string "Our modified Pokémon will obey\n"
+	.string "without question!$"
+
+MAGAHideout2F_Text_OliviaIntro:
+	.string "We've spliced the DNA of Pokémon\n"
+	.string "to amplify their power!\p"
+	.string "You won't ruin this!$"
+
+MAGAHideout2F_Text_OliviaDefeated:
+	.string "How could this happen?!$"
+
+MAGAHideout2F_Text_OliviaPostBattle:
+	.string "Our work will shape the future\n"
+	.string "of Pokémon battles!$"
+
+MAGAHideout2F_Text_LoganIntro:
+	.string "Our research ensures absolute\n"
+	.string "control over modified Pokémon!\p"
+	.string "You're in over your head!$"
+
+MAGAHideout2F_Text_LoganDefeated:
+	.string "This isn't the end...$"
+
+MAGAHideout2F_Text_LoganPostBattle:
+	.string "You can't stop science!$"
+
+MAGAHideout2F_Text_ClaireIntro:
+	.string "Our Pokémon enhancement project\n"
+	.string "is the pinnacle of science!\p"
+	.string "You'll fail here!$"
+
+MAGAHideout2F_Text_ClaireDefeated:
+	.string "I... underestimated you!$"
+
+MAGAHideout2F_Text_ClairePostBattle:
+	.string "The future of Pokémon belongs\n"
+	.string "to our experiments!$"
+
+
+MAGAHideout2F_Text_HenryIntro:
+	.string "Our DNA research is nearing\n"
+	.string "perfection! You can't stop us!\p"
+	.string "Time to teach you a lesson!$"
+
+MAGAHideout2F_Text_HenryDefeated:
+	.string "This setback is nothing!$"
+
+MAGAHideout2F_Text_HenryPostBattle:
+	.string "Our modified Pokémon will define\n"
+	.string "a new era of strength!$"
+
+MAGAHideout2F_Text_LilaIntro:
+	.string "We've perfected obedience in\n"
+	.string "our enhanced Pokémon! You're\p"
+	.string "no match for us!$"
+
+MAGAHideout2F_Text_LilaDefeated:
+	.string "Impossible... my calculations!$"
+
+MAGAHideout2F_Text_LilaPostBattle:
+	.string "Our work will soon redefine\n"
+	.string "the world of Pokémon!$"
+
+MAGAHideout1F_Text_MalcolmIntro:
+	.string "You've walked into the heart of\n"
+	.string "our Pokémon enhancement project!\p"
+	.string "Time to teach you a lesson!$"
+
+MAGAHideout1F_Text_MalcolmDefeated:
+	.string "My work... undone?!$"
+
+MAGAHideout1F_Text_MalcolmPostBattle:
+	.string "You may have won, but our DNA\n"
+	.string "research won't stop!$"
+
+MAGAHideout1F_Text_FionaIntro:
+	.string "DNA splicing is the future of\n"
+	.string "Pokémon battles! You won't stop\p"
+	.string "our progress!$"
+
+MAGAHideout1F_Text_FionaDefeated:
+	.string "No! My calculations were perfect!$"
+
+MAGAHideout1F_Text_FionaPostBattle:
+	.string "You've only delayed the inevitable.\n"
+	.string "Our Pokémon are evolving!$"
+
+MAGAHideout1F_Text_VictorIntro:
+	.string "We're on the brink of creating\n"
+	.string "perfect Pokémon. You'll fail\p"
+	.string "against my creations!$"
+
+MAGAHideout1F_Text_VictorDefeated:
+	.string "How could you win against us?!$"
+
+MAGAHideout1F_Text_VictorPostBattle:
+	.string "You've only delayed perfection.\n"
+	.string "We'll succeed soon enough!$"
+
+MAGAHideout1F_Text_SylviaIntro:
+	.string "You've stumbled into history in\n"
+	.string "the making! Prepare to be beaten!$"
+
+MAGAHideout1F_Text_SylviaDefeated:
+	.string "My work isn't finished yet!$"
+
+MAGAHideout1F_Text_SylviaPostBattle:
+	.string "You'll see the results of our\n"
+	.string "research soon enough!$"
+
+MAGAHideout1F_Text_Theo2Intro:
+	.string "Our Pokémon are evolving into the\n"
+	.string "perfect battle machines! You'll\p"
+	.string "regret interfering!$"
+
+MAGAHideout1F_Text_Theo2Defeated:
+	.string "This is a temporary setback!$"
+
+MAGAHideout1F_Text_Theo2PostBattle:
+	.string "You can't stop science. We will\n"
+	.string "prevail!$"
+
+MAGAHideout1F_Text_LydiaIntro:
+	.string "Our genetically enhanced Pokémon\n"
+	.string "are unstoppable! Prepare to lose!$"
+
+MAGAHideout1F_Text_LydiaDefeated:
+	.string "No... this wasn't supposed to\n"
+	.string "happen!$"
+
+MAGAHideout1F_Text_LydiaPostBattle:
+	.string "You've only delayed our progress.\n"
+	.string "We will achieve perfection!$"
+
+MAGAHideout1F_Text_NolanIntro:
+	.string "My enhanced Pokémon will\n"
+	.string "prove unstoppable!$"
+
+MAGAHideout1F_Text_NolanDefeated:
+	.string "My creations... defeated?!$"
+
+MAGAHideout1F_Text_NolanPostBattle:
+	.string "Science always finds a way!\n"
+	.string "You'll see soon enough!$"
+
+MAGAHideout1F_Text_IrisIntro:
+	.string "You've stumbled into the most\n"
+	.string "advanced lab in the region!$"
+
+MAGAHideout1F_Text_IrisDefeated:
+	.string "No... not my work!$"
+
+MAGAHideout1F_Text_IrisPostBattle:
+	.string "Team MAGA will finish what\n"
+	.string "we've started!$"
+
+MAGAHideout1F_Text_ClaraIntro:
+	.string "Our lab is where science meets\n"
+	.string "power! You'll lose here!$"
+
+MAGAHideout1F_Text_ClaraDefeated:
+	.string "I didn't expect this result!$"
+
+MAGAHideout1F_Text_ClaraPostBattle:
+	.string "You'll never stop our plans!\n"
+	.string "The project will continue!$"
+
+MAGAHideout1F_Text_LyrisIntro:
+	.string "We're engineering perfection\n"
+	.string "in every battle! You're too late!$"
+
+MAGAHideout1F_Text_LyrisDefeated:
+	.string "You can't stop our progress!$"
+
+MAGAHideout1F_Text_LyrisPostBattle:
+	.string "We'll create the ultimate\n"
+	.string "Pokémon, no matter what!$"
+
+MAGAHideout3F_Text_Grunt1Intro:
+	.string "You've come too far! I won't\n"
+	.string "let you shut down the generator!$"
+
+MAGAHideout3F_Text_Grunt1Defeated:
+	.string "No... the generator must stay\n"
+	.string "active!$"
+
+MAGAHideout3F_Text_Grunt1PostBattle:
+	.string "Even if you win, the others will\n"
+	.string "stop you!$"
+
+MAGAHideout3F_Text_Grunt2Intro:
+	.string "This is the final generator!\n"
+	.string "I'll stop you here and now!$"
+
+MAGAHideout3F_Text_Grunt2Defeated:
+	.string "No! The lab depends on this!$"
+
+MAGAHideout3F_Text_Grunt2PostBattle:
+	.string "You'll regret challenging Team\n"
+	.string "MAGA!$"
+
+MAGAHideout3F_Text_Grunt3Intro:
+	.string "We must protect the lab at all\n"
+	.string "costs! You won't get past me!$"
+
+MAGAHideout3F_Text_Grunt3Defeated:
+	.string "The lab... it's too important!$"
+
+MAGAHideout3F_Text_Grunt3PostBattle:
+	.string "Even if you beat me, the others\n"
+	.string "will hold you off!$"
+
+MAGAHideout3F_Text_Grunt4Intro:
+	.string "You can't be here! The lab is\n"
+	.string "critical to our plans!$"
+
+MAGAHideout3F_Text_Grunt4Defeated:
+	.string "How did this happen?!$"
+
+MAGAHideout3F_Text_Grunt4PostBattle:
+	.string "The lab's security won't fail\n"
+	.string "against you!$"
+
+MAGAHideout3F_Text_Grunt5Intro:
+	.string "No one gets past us! This lab\n"
+	.string "is vital to our research!$"
+
+MAGAHideout3F_Text_Grunt5Defeated:
+	.string "I can't believe this!$"
+
+MAGAHideout3F_Text_Grunt5PostBattle:
+	.string "You'll regret coming here!\n"
+	.string "Team MAGA is unstoppable!$"
+
+MAGAHideout3F_Text_Grunt6Intro:
+	.string "Protect the lab! Don't let them\n"
+	.string "interfere with our experiments!$"
+
+MAGAHideout3F_Text_Grunt6Defeated:
+	.string "This... isn't over!$"
+
+MAGAHideout3F_Text_Grunt6PostBattle:
+	.string "We'll secure the lab again!\n"
+	.string "Just wait!$"

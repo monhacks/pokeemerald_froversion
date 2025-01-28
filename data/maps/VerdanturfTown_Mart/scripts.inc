@@ -13,17 +13,22 @@ VerdanturfTown_Mart_EventScript_Clerk:: @ 8202587
 
 	.align 2
 VerdanturfTown_Mart_Pokemart: @ 82025A0
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_NEST_BALL
+	.2byte ITEM_POKE_BALL
 	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_REPEL
+	.2byte ITEM_REVIVE
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	.2byte ITEM_BURN_HEAL
-	.2byte ITEM_ICE_HEAL
-	.2byte ITEM_REPEL
+	.2byte ITEM_X_ATTACK
+	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_X_SPEED
+	.2byte ITEM_X_ACCURACY
 	.2byte ITEM_X_SP_ATK
-	.2byte ITEM_FLUFFY_TAIL
+	.2byte ITEM_X_SP_DEF
+	.2byte ITEM_ROCKY_HELMET
+	.2byte ITEM_TOXIC_ORB
+	.2byte ITEM_EVIOLITE
+	.2byte ITEM_SILK_SCARF
 	.2byte ITEM_NONE
 	release
 	end

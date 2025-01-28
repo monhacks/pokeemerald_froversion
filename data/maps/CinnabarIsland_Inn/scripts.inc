@@ -29,14 +29,23 @@ CinnabarIsland_Inn_EventScript_InnSalesMan::
 
 	.align 2
 CinnabarIsland_Inn_Pokemart: @ 81FFCD8
-	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_REPEL
 	.2byte ITEM_REVIVE
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_SUPER_REPEL
-	.2byte ITEM_ETHER
-	.2byte ITEM_ELIXIR
+	.2byte ITEM_X_ATTACK
+	.2byte ITEM_X_DEFENSE
+	.2byte ITEM_X_SPEED
+	.2byte ITEM_X_ACCURACY
+	.2byte ITEM_X_SP_ATK
+	.2byte ITEM_X_SP_DEF
+	.2byte ITEM_ROCKY_HELMET
+	.2byte ITEM_AIR_BALLOON
+	.2byte ITEM_FLAME_ORB
+	.2byte ITEM_CHOICE_BAND
+	.2byte ITEM_SILK_SCARF
 	.2byte ITEM_NONE
 	release
 	end
