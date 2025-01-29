@@ -1,12 +1,29 @@
 VermillionCity_MAGAHideout_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, VermillionCity_MAGAHideout_1F_OnLoad
 	.byte 0
 
+VermillionCity_MAGAHideout_1F_OnLoad:
+	compare VAR_MAGA_HIDEOUT_GENERATOR_STATE, 0
+	goto_if_gt VermillionCity_MAGAHideout_1F_EventScript_RevealHiddenStaircaseOnLoad
+	end
+
+VermillionCity_MAGAHideout_1F_EventScript_RevealHiddenStaircaseOnLoad:
+	setmetatile 31, 29, METATILE_Facility_NewMauvilleDoor_Open_Tile0 , 1
+	setmetatile 32, 29, METATILE_Facility_NewMauvilleDoor_Open_Tile1 , 1
+	setmetatile 33, 29, METATILE_Facility_NewMauvilleDoor_Open_Tile2 , 1
+	setmetatile 31, 30, METATILE_Facility_NewMauvilleDoor_Open_Tile3 , 1
+	setmetatile 32, 30, METATILE_Facility_NewMauvilleDoor_Open_Tile4 , 0
+	setmetatile 33, 30, METATILE_Facility_NewMauvilleDoor_Open_Tile5 , 1
+	special DrawWholeMapView
+	release
+	end
 
 VermillionCity_MAGAHideout_1F_EventScript_Generator1::
 lock
 	goto_if_set FLAG_TURNED_OFF_GENERATOR_1, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
 	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
 	setflag FLAG_TURNED_OFF_GENERATOR_1
+	call VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheck1F
 release
 end
 
@@ -15,6 +32,7 @@ lock
 	goto_if_set FLAG_TURNED_OFF_GENERATOR_2, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
 	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
 	setflag FLAG_TURNED_OFF_GENERATOR_2
+	call VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheck1F
 release
 end
 
@@ -23,6 +41,7 @@ lock
 	goto_if_set FLAG_TURNED_OFF_GENERATOR_3, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
 	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
 	setflag FLAG_TURNED_OFF_GENERATOR_3
+	call VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheck1F
 release
 end
 
@@ -31,6 +50,7 @@ lock
 	goto_if_set FLAG_TURNED_OFF_GENERATOR_4, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
 	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
 	setflag FLAG_TURNED_OFF_GENERATOR_4
+	call VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheck1F
 release
 end
 
@@ -39,6 +59,7 @@ lock
 	goto_if_set FLAG_TURNED_OFF_GENERATOR_5, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
 	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
 	setflag FLAG_TURNED_OFF_GENERATOR_5
+	call VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheck1F
 release
 end
 
@@ -47,6 +68,7 @@ lock
 	goto_if_set FLAG_TURNED_OFF_GENERATOR_6, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
 	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
 	setflag FLAG_TURNED_OFF_GENERATOR_6
+	call VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheck1F
 release
 end
 
@@ -55,8 +77,32 @@ lock
 	goto_if_set FLAG_TURNED_OFF_GENERATOR_7, VermillionCity_MAGAHideout_1F_EventScript_GeneratorAlreadyOff
 	msgbox VermillionCity_MAGAHideout_1F_Text_YouTurnedOffTheGenerator, MSGBOX_AUTOCLOSE
 	setflag FLAG_TURNED_OFF_GENERATOR_7
+	call VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheck1F
 release
 end
+
+VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheck1F:
+	compare VAR_MAGA_HIDEOUT_GENERATOR_STATE, 3
+	goto_if_eq VermillionCity_MAGAHideout_1F_EventScript_End
+	goto_if_unset FLAG_TURNED_OFF_GENERATOR_1, VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheckFail
+	goto_if_unset FLAG_TURNED_OFF_GENERATOR_2, VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheckFail
+	goto_if_unset FLAG_TURNED_OFF_GENERATOR_3, VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheckFail
+	goto_if_unset FLAG_TURNED_OFF_GENERATOR_4, VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheckFail
+	goto_if_unset FLAG_TURNED_OFF_GENERATOR_5, VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheckFail
+	goto_if_unset FLAG_TURNED_OFF_GENERATOR_6, VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheckFail
+	goto_if_unset FLAG_TURNED_OFF_GENERATOR_7, VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheckFail
+	goto_if_unset FLAG_TURNED_OFF_GENERATOR_8, VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheckFail
+	goto_if_unset FLAG_TURNED_OFF_GENERATOR_9, VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheckFail
+	goto_if_unset FLAG_TURNED_OFF_GENERATOR_10, VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheckFail
+	goto_if_unset FLAG_TURNED_OFF_GENERATOR_11, VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheckFail
+	setvar VAR_MAGA_HIDEOUT_GENERATOR_STATE, 1
+	getplayerxy VAR_PLAYER_X, VAR_PLAYER_Y
+	warpsilent MAP_VERMILLION_CITY_MAGAHIDEOUT_1F_CUTSCENE, 255, 32, 32
+	release
+	end
+
+VermillionCity_MAGAHideout_1F_EventScript_AllGeneratorsOffCheckFail:
+	return
 
 VermillionCity_MAGAHideout1F_EventScript_Mark::
 	trainerbattle_single TRAINER_GRUNT_MAGA_HIDEOUT_1, MAGAHideout1F_Text_MarkIntro, MAGAHideout1F_Text_MarkDefeated
