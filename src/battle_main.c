@@ -4594,122 +4594,333 @@ static void SetOpponentMovesAbyssalHighDragon(void)
 }
 
 static void SetOpponentMovesMetagrossBossTest(void)
-{
-    Printf("turn = %d", gBattleResults.battleTurnCounter);
-     switch(gBattleResults.battleTurnCounter)
+    {
+        s32 playerPositionLeft = GetBattlerAtPosition(B_POSITION_PLAYER_LEFT);
+        s32 playerPositionRight = GetBattlerAtPosition(B_POSITION_PLAYER_RIGHT);
+        s32 metagrossBoss = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
+        s32 metagrossPrimaryTarget;
+        s32 metagrossSecondaryTarget;
+        s32 i;
+        s32 typeEffectiveness;
+        s32 moveType;
+        s32 fourTimesEffective = 16384;
+        s32 twoTimesEffective = 8192;
+        s32 neutalEffective = 4096;
+        s32 moveTypeFinal;
+
+        if (gBattleMons[playerPositionLeft].hp < gBattleMons[playerPositionRight].hp)
+            {
+                metagrossPrimaryTarget = playerPositionLeft;
+                metagrossSecondaryTarget = playerPositionRight;
+            }
+        else
+            {
+                metagrossPrimaryTarget = playerPositionRight;
+                metagrossSecondaryTarget = playerPositionLeft;
+            }
+
+        for (i = 0; i < 18; i++)
+            {
+                GET_MOVE_TYPE(gMovePoolTypeCheck[i], moveType);
+                typeEffectiveness = CalcTypeEffectivenessMultiplier(gMovePoolTypeCheck[i], moveType, metagrossBoss, metagrossPrimaryTarget, TRUE);
+                    if(typeEffectiveness == fourTimesEffective)
+                        {
+                            i = 18;
+                            moveTypeFinal = moveType;
+                            Printf("Fallthough1");
+                        }
+            }
+
+        if(typeEffectiveness < fourTimesEffective)
+            {
+                for (i = 0; i < 18; i++)
+                {
+                    GET_MOVE_TYPE(gMovePoolTypeCheck[i], moveType);
+                    typeEffectiveness = CalcTypeEffectivenessMultiplier(gMovePoolTypeCheck[i], moveType, metagrossBoss, metagrossSecondaryTarget, TRUE);
+                        if(typeEffectiveness == fourTimesEffective)
+                            {
+                                i = 18;
+                                moveTypeFinal = moveType;
+                            Printf("Fallthough2");
+                            }
+                }
+            }
+        else if(typeEffectiveness < twoTimesEffective)
+                for (i = 0; i < 18; i++)
+                {
+                    GET_MOVE_TYPE(gMovePoolTypeCheck[i], moveType);
+                    typeEffectiveness = CalcTypeEffectivenessMultiplier(gMovePoolTypeCheck[i], moveType, metagrossBoss, metagrossPrimaryTarget, TRUE);
+                        if(typeEffectiveness == twoTimesEffective)
+                            {
+                                i = 18;
+                                moveTypeFinal = moveType;
+                            Printf("Fallthough3");
+                            }
+                }
+        else if(typeEffectiveness < twoTimesEffective)
+                for (i = 0; i < 18; i++)
+                {
+                    GET_MOVE_TYPE(gMovePoolTypeCheck[i], moveType);
+                    typeEffectiveness = CalcTypeEffectivenessMultiplier(gMovePoolTypeCheck[i], moveType, metagrossBoss, metagrossSecondaryTarget, TRUE);
+                        if(typeEffectiveness == twoTimesEffective)
+                            {
+                                i = 18;
+                                moveTypeFinal = moveType;
+                            Printf("Fallthough4");
+                            }
+                        else
+                            {
+                                moveTypeFinal = TYPE_NONE;
+                            
+                            }
+                }
+    if (moveTypeFinal > 18)
+        {
+            gBattleMons[metagrossBoss].moves[0] = MOVE_ASSURANCE;
+            gBattleMons[metagrossBoss].moves[1] = MOVE_ASSURANCE;
+            gBattleMons[metagrossBoss].moves[2] = MOVE_ASSURANCE;
+            gBattleMons[metagrossBoss].moves[3] = MOVE_ASSURANCE;
+        }
+    else
+    {    
+    switch(moveTypeFinal)
      {
         {
-                case 1:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_TAKE_DOWN;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TAKE_DOWN;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_TAKE_DOWN;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_TAKE_DOWN;
+                case TYPE_NORMAL:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_ASSURANCE;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_ASSURANCE;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_ASSURANCE;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_ASSURANCE;
+                case TYPE_FIGHTING:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_FOCUS_BLAST;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_BULK_UP;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_POWER_UP_PUNCH;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_FAKE_TEARS;
                     break;
-                case 2:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_FOCUS_BLAST;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_FOCUS_BLAST;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_FOCUS_BLAST;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_FOCUS_BLAST;
+                case TYPE_FLYING:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_FOCUS_BLAST;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_FOCUS_BLAST;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_FOCUS_BLAST;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_FOCUS_BLAST;
                     break;
-                case 3:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_TAILWIND;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TAILWIND;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_TAILWIND;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_TAILWIND;
+                case TYPE_POISON:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_TAILWIND;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_TAILWIND;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_TAILWIND;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_TAILWIND;
                     break;
-                case 4:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_POISON_JAB;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_POISON_JAB;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_POISON_JAB;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_POISON_JAB;
+                case TYPE_GROUND:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_POISON_JAB;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_POISON_JAB;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_POISON_JAB;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_POISON_JAB;
                     break;
-                case 5:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_EARTHQUAKE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_EARTHQUAKE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_EARTHQUAKE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_EARTHQUAKE;
+                case TYPE_ROCK:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_EARTHQUAKE;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_EARTHQUAKE;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_EARTHQUAKE;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_EARTHQUAKE;
                     break;
-                case 6:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_STONE_EDGE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_STONE_EDGE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_STONE_EDGE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_STONE_EDGE;
+                case TYPE_BUG:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_STONE_EDGE;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_STONE_EDGE;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_STONE_EDGE;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_STONE_EDGE;
                     break;
-                case 7:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_BUG_BUZZ;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_BUG_BUZZ;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_BUG_BUZZ;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_BUG_BUZZ;
+                case TYPE_GHOST:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_BUG_BUZZ;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_BUG_BUZZ;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_BUG_BUZZ;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_BUG_BUZZ;
                     break;
-                case 8:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SHADOW_BALL;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_SHADOW_BALL;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_SHADOW_BALL;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_SHADOW_BALL;
+                case TYPE_STEEL:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_SHADOW_BALL;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_SHADOW_BALL;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_SHADOW_BALL;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_SHADOW_BALL;
                     break;
-                case 9:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_IRON_DEFENSE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_IRON_DEFENSE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_IRON_DEFENSE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_IRON_DEFENSE;
+                case TYPE_FIRE:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_IRON_DEFENSE;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_IRON_DEFENSE;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_IRON_DEFENSE;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_IRON_DEFENSE;
                     break;
-                case 10:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_FIRE_SPIN;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_FIRE_SPIN;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_FIRE_SPIN;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_FIRE_SPIN;
+                case TYPE_WATER:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_FIRE_SPIN;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_FIRE_SPIN;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_FIRE_SPIN;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_FIRE_SPIN;
                     break;
-                case 11:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_WATER_PULSE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_WATER_PULSE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_WATER_PULSE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_WATER_PULSE;
+                case TYPE_GRASS:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_WATER_PULSE;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_WATER_PULSE;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_WATER_PULSE;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_WATER_PULSE;
                     break;
-                case 12:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_LEAF_BLADE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_LEAF_BLADE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_LEAF_BLADE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_LEAF_BLADE;
+                case TYPE_ELECTRIC:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_LEAF_BLADE;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_LEAF_BLADE;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_LEAF_BLADE;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_LEAF_BLADE;
                     break;
-                case 13:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_THUNDERBOLT;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_THUNDERBOLT;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_THUNDERBOLT;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_THUNDERBOLT;
+                case TYPE_PSYCHIC:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_THUNDERBOLT;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_THUNDERBOLT;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_THUNDERBOLT;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_THUNDERBOLT;
                     break;
-                case 14:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_PSYCHIC;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_PSYCHIC;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_PSYCHIC;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_PSYCHIC;
+                case TYPE_ICE:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_PSYCHIC;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_PSYCHIC;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_PSYCHIC;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_PSYCHIC;
                     break;
-                case 15:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ICICLE_CRASH;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_ICICLE_CRASH;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_ICICLE_CRASH;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_ICICLE_CRASH;
+                case TYPE_DRAGON:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_ICICLE_CRASH;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_ICICLE_CRASH;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_ICICLE_CRASH;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_ICICLE_CRASH;
                     break;
-                case 16:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DRAGON_BREATH;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_DRAGON_BREATH;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_DRAGON_BREATH;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_DRAGON_BREATH;
+                case TYPE_DARK:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_DRAGON_BREATH;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_DRAGON_BREATH;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_DRAGON_BREATH;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_DRAGON_BREATH;
                     break;
-                case 17:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ASSURANCE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_ASSURANCE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_ASSURANCE;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_ASSURANCE;
+                case TYPE_FAIRY:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_ASSURANCE;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_ASSURANCE;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_ASSURANCE;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_ASSURANCE;
                     break;
-                case 18:
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_MOONBLAST;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_MOONBLAST;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_MOONBLAST;
-                    gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_MOONBLAST;
+                case TYPE_NONE:
+                    gBattleMons[metagrossBoss].moves[0] = MOVE_ASSURANCE;
+                    gBattleMons[metagrossBoss].moves[1] = MOVE_ASSURANCE;
+                    gBattleMons[metagrossBoss].moves[2] = MOVE_ASSURANCE;
+                    gBattleMons[metagrossBoss].moves[3] = MOVE_ASSURANCE;
                     break;
             }
      }
-}
+    }   
+             
+                
+    }
+// 
+//     
+//      switch(gBattleResults.battleTurnCounter)
+//      {
+//         {
+//                 case 1:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_TAKE_DOWN;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TAKE_DOWN;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_TAKE_DOWN;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_TAKE_DOWN;
+//                     break;
+//                 case 2:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_FOCUS_BLAST;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_FOCUS_BLAST;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_FOCUS_BLAST;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_FOCUS_BLAST;
+//                     break;
+//                 case 3:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_TAILWIND;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_TAILWIND;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_TAILWIND;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_TAILWIND;
+//                     break;
+//                 case 4:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_POISON_JAB;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_POISON_JAB;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_POISON_JAB;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_POISON_JAB;
+//                     break;
+//                 case 5:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_EARTHQUAKE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_EARTHQUAKE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_EARTHQUAKE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_EARTHQUAKE;
+//                     break;
+//                 case 6:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_STONE_EDGE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_STONE_EDGE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_STONE_EDGE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_STONE_EDGE;
+//                     break;
+//                 case 7:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_BUG_BUZZ;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_BUG_BUZZ;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_BUG_BUZZ;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_BUG_BUZZ;
+//                     break;
+//                 case 8:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SHADOW_BALL;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_SHADOW_BALL;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_SHADOW_BALL;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_SHADOW_BALL;
+//                     break;
+//                 case 9:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_IRON_DEFENSE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_IRON_DEFENSE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_IRON_DEFENSE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_IRON_DEFENSE;
+//                     break;
+//                 case 10:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_FIRE_SPIN;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_FIRE_SPIN;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_FIRE_SPIN;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_FIRE_SPIN;
+//                     break;
+//                 case 11:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_WATER_PULSE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_WATER_PULSE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_WATER_PULSE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_WATER_PULSE;
+//                     break;
+//                 case 12:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_LEAF_BLADE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_LEAF_BLADE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_LEAF_BLADE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_LEAF_BLADE;
+//                     break;
+//                 case 13:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_THUNDERBOLT;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_THUNDERBOLT;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_THUNDERBOLT;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_THUNDERBOLT;
+//                     break;
+//                 case 14:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_PSYCHIC;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_PSYCHIC;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_PSYCHIC;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_PSYCHIC;
+//                     break;
+//                 case 15:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ICICLE_CRASH;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_ICICLE_CRASH;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_ICICLE_CRASH;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_ICICLE_CRASH;
+//                     break;
+//                 case 16:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_DRAGON_BREATH;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_DRAGON_BREATH;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_DRAGON_BREATH;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_DRAGON_BREATH;
+//                     break;
+//                 case 17:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_ASSURANCE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_ASSURANCE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_ASSURANCE;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_ASSURANCE;
+//                     break;
+//                 case 18:
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_MOONBLAST;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_MOONBLAST;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_MOONBLAST;
+//                     gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_MOONBLAST;
+//                     break;
+//             }
+//      }
+// }
 
 u8 IsRunningFromBattleImpossible(void)
 {
@@ -5523,6 +5734,29 @@ const u16 gSlashingMoves[] =
         SPECIES_METAGROSS_FAIRY,
         SPECIES_METAGROSS_ROCK,
         SPECIES_METAGROSS_STEEL,
+        0xFFFF
+    };
+
+const u16 gMovePoolTypeCheck[] =
+    {
+        MOVE_PSYCHIC,
+        MOVE_OVERHEAT,
+        MOVE_HYDRO_PUMP,
+        MOVE_RAZOR_LEAF,
+        MOVE_THUNDERBOLT,
+        MOVE_TAKE_DOWN,
+        MOVE_ICE_BEAM,
+        MOVE_FOCUS_BLAST,
+        MOVE_SLUDGE_WAVE,
+        MOVE_EARTHQUAKE,
+        MOVE_TAILWIND,
+        MOVE_BUG_BUZZ,
+        MOVE_SHADOW_BALL,
+        MOVE_DRAGON_PULSE,
+        MOVE_ASSURANCE,
+        MOVE_DAZZLING_GLEAM,
+        MOVE_STONE_EDGE,
+        MOVE_IRON_DEFENSE,
         0xFFFF
     };
 

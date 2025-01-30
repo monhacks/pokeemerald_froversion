@@ -1,0 +1,8 @@
+VermillionCity_MAGAHideout_Lab_MapScripts::
+	.byte 0
+
+
+VermillionCity_MAGAHideout_Lab_EventScripts_FinalBoss::
+trainerbattle_no_intro TRAINER_MATT_FINAL_BOSS,Text_ChampionsHall_JohnDefeated
+release
+end

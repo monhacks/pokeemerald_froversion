@@ -871,6 +871,8 @@ void StartAriadosBossBattle(void)
     u8 range;
     u8 rand;
     u16 dynamicLevel = 0;
+    s32 levelSquared = dynamicLevel * dynamicLevel;
+    s32 scalingFactor = 100;
     static const u8 minDynamicLevel = 3;
     static const u8 maxDynamicLevel = 98;
     u8 levelDifference = Random() % 2;
@@ -932,10 +934,10 @@ void StartAriadosBossBattle(void)
     }
 
     species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
-    newMaxHP = ((gBaseStats[species].baseHP * (dynamicLevel / 8)) - (gBaseStats[species].baseHP *(dynamicLevel / 12)) + (dynamicLevel * 2));
-    newCurrentHp = ((gBaseStats[species].baseHP * (dynamicLevel / 8)) - (gBaseStats[species].baseHP *(dynamicLevel / 12)) + (dynamicLevel * 2));
-    newDef = ((gBaseStats[species].baseDefense * (dynamicLevel / 8)) - (gBaseStats[species].baseDefense *(dynamicLevel / 12)) + (dynamicLevel * 2));
-    newSpDef = ((gBaseStats[species].baseSpDefense * (dynamicLevel / 8)) - (gBaseStats[species].baseSpDefense *(dynamicLevel / 12)) + (dynamicLevel * 2));
+    newMaxHP = (gBaseStats[species].baseHP * (1 + levelSquared / scalingFactor) + (levelSquared/scalingFactor));
+    newCurrentHp = (gBaseStats[species].baseHP * (1 + levelSquared / scalingFactor) + (levelSquared/scalingFactor));
+    newDef = ((gBaseStats[species].baseDefense * (1 + levelSquared / scalingFactor) + (levelSquared/scalingFactor))) / 4;
+    newSpDef = ((gBaseStats[species].baseSpDefense * (1 + levelSquared / scalingFactor) + (levelSquared/scalingFactor))) / 4;
 
     species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
     switch (species)

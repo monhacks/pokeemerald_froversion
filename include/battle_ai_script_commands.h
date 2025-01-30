@@ -38,6 +38,7 @@ extern const u16 gWildPokemonDropItems[];
 extern const u16 gWildPokemonRareDropItems[];
 extern const u16 gNonOrganicItems[];
 extern const u16 gMetagrossMetamorphForms[];
+extern const u16 gMovePoolTypeCheck[];
 
 
 #endif // GUARD_BATTLE_AI_SCRIPT_COMMANDS_H

@@ -3222,7 +3222,9 @@ void CalculateMonStats(struct Pokemon *mon)
     s32 spDefenseIV = GetMonData(mon, MON_DATA_SPDEF_IV, NULL);
     s32 spDefenseEV = GetMonData(mon, MON_DATA_SPDEF_EV, NULL);
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    s32 scalingFactor = 100;
     s32 level = GetLevelFromMonExp(mon);
+    s32 levelSquared = level * level;
     s32 newMaxHP;
 
 
@@ -3234,16 +3236,19 @@ void CalculateMonStats(struct Pokemon *mon)
     }
     else if (species == SPECIES_SHADOW_CHARIZARD)
     {
-        newMaxHP = ((gBaseStats[species].baseHP * (level / 2) - (gBaseStats[species].baseHP * (level / 40)) + (level * 2)));
+        newMaxHP = (gBaseStats[species].baseHP * (1 + levelSquared / scalingFactor) + (levelSquared/scalingFactor));
     }
     else if (species == SPECIES_ARIADOS_GHOST && B_VERSION_MAGEE)
     {
-        newMaxHP = ((gBaseStats[species].baseHP * (level / 2) - (gBaseStats[species].baseHP * (level / 40)) + (level * 2)));
+        newMaxHP = (gBaseStats[species].baseHP * (1 + levelSquared / scalingFactor) + (levelSquared/scalingFactor));
     }
     else if (IsSpeciesOneOf(species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS)
     {
-        newMaxHP = ((gBaseStats[species].baseHP * level) - (gBaseStats[species].baseHP *(level / 4)) + (level * 2));
-        
+        Printf("gBaseStats[species].baseHP = %d", gBaseStats[species].baseHP);
+        Printf("levelSquared = %d", levelSquared);
+        newMaxHP = (gBaseStats[species].baseHP * (1 + levelSquared / scalingFactor) + (levelSquared / scalingFactor));
+        Printf("Testing");
+        Printf("NewMaxHPInsideCase = %d", newMaxHP);
     }
     else
     {
@@ -3320,9 +3325,10 @@ void CalculateTrainerMonStats(struct Pokemon *mon)
     s32 spDefenseIV = GetMonData(mon, MON_DATA_SPDEF_IV, NULL);
     s32 spDefenseEV = GetMonData(mon, MON_DATA_SPDEF_EV, NULL);
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    s32 scalingFactor = 100;
     s32 level = GetLevelFromMonExp(mon);
+    s32 levelSquared = level * level;
     s32 newMaxHP;
-    s32 speciesCharizardXMaxHP;
 
     SetMonData(mon, MON_DATA_LEVEL, &level);
 
@@ -3332,12 +3338,11 @@ void CalculateTrainerMonStats(struct Pokemon *mon)
     }
     else if (species == SPECIES_CHARIZARD_X)
     {
-        newMaxHP = ((gBaseStats[species].baseHP * (level / 2) - (gBaseStats[species].baseHP * (level / 40)) + (level * 2)));
+        newMaxHP = (gBaseStats[species].baseHP * (1 + levelSquared / scalingFactor) + (levelSquared/scalingFactor));
     }
     else if (IsSpeciesOneOf(species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS)
     {
-        newMaxHP = ((gBaseStats[species].baseHP * level) - (gBaseStats[species].baseHP *(level / 4)) + (level * 2));
-        Printf("NewMaxHPInsideElseIf = %d", newMaxHP);
+        newMaxHP = (gBaseStats[species].baseHP * (1 + levelSquared / scalingFactor) + (levelSquared/scalingFactor));
     }
     else
     {
