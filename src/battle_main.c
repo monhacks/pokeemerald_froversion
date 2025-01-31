@@ -4064,7 +4064,7 @@ const u16 gMetagrossBossFireMoves[] =
 const u16 gMetagrossBossWaterMoves[] =
     {
         MOVE_WATER_PULSE,
-        MOVE_AQUA_RING,
+        MOVE_MUDDY_WATER,
         MOVE_WHIRLPOOL,
         MOVE_ACID_ARMOR,
         0xFFFF
@@ -4072,7 +4072,7 @@ const u16 gMetagrossBossWaterMoves[] =
 
 const u16 gMetagrossBossGrassMoves[] =
     {
-        MOVE_MEGA_DRAIN,
+        MOVE_ENERGY_BALL,
         MOVE_SPORE,
         MOVE_RAZOR_LEAF,
         MOVE_STRENGTH_SAP,
@@ -4788,6 +4788,8 @@ static void SetOpponentMovesMetagrossBossTest(void)
         u32 fourTimesEffectiveTypesCount = 0;
         u32 twoTimesEffectiveTypesCount = 0;
 
+
+        Printf("gBattleResults.battleTurnCounter 4 = %d",gBattleResults.battleTurnCounter % 4);
         if(gBattleMons[playerPositionLeft].hp == 0)
             {
                 metagrossPrimaryTarget = playerPositionRight;
@@ -4949,7 +4951,13 @@ static void SetOpponentMovesMetagrossBossTest(void)
                     gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_WATER:
-                    if(gBattleMons[metagrossBoss].statStages[STAT_DEF] >= 8)
+                Printf("(gStatuses3[metagrossBoss] & STATUS3_AQUA_RING) == 0) = %d", ((gStatuses3[metagrossBoss] & STATUS3_AQUA_RING) == 0));
+                    if(gBattleMons[metagrossBoss].hp < (gBattleMons[metagrossBoss].maxHP / 3) && ((gStatuses3[metagrossBoss] & STATUS3_AQUA_RING) == 0))
+                        {
+                            move = MOVE_AQUA_RING;
+                            move2 = MOVE_AQUA_RING;
+                        }
+                    else if(gBattleMons[metagrossBoss].statStages[STAT_DEF] >= 8)
                     {   
                         move = gMetagrossBossWaterMoves[Random() % 3];
                         move2 = gMetagrossBossWaterMoves[(Random() % 1 + 2)];
@@ -4959,19 +4967,27 @@ static void SetOpponentMovesMetagrossBossTest(void)
                         move = gMetagrossBossWaterMoves[Random() % 4];
                         move2 = gMetagrossBossWaterMoves[(Random() % 2) + 2];
                     }
-                    gBattleMons[metagrossBoss].moves[0] = move;
-                    gBattleMons[metagrossBoss].moves[1] = move;
-                    gBattleMons[metagrossBoss].moves[2] = move2;
-                    gBattleMons[metagrossBoss].moves[3] = move2;
-                    break;
+                        gBattleMons[metagrossBoss].moves[0] = move;
+                        gBattleMons[metagrossBoss].moves[1] = move;
+                        gBattleMons[metagrossBoss].moves[2] = move2;
+                        gBattleMons[metagrossBoss].moves[3] = move2;
+                        break;
                 case TYPE_GRASS:
-                    move = gMetagrossBossGrassMoves[Random() % 4];
-                    move2 = gMetagrossBossGrassMoves[(Random() % 2) + 2];
-                    gBattleMons[metagrossBoss].moves[0] = move;
-                    gBattleMons[metagrossBoss].moves[1] = move;
-                    gBattleMons[metagrossBoss].moves[2] = move2;
-                    gBattleMons[metagrossBoss].moves[3] = move2;
-                    break;
+                    if(gBattleMons[metagrossBoss].hp < (gBattleMons[metagrossBoss].maxHP / 3) && gBattleResults.battleTurnCounter % 4 == 3)
+                        {
+                            move = MOVE_MEGA_DRAIN;
+                            move2 = MOVE_MEGA_DRAIN;
+                        }
+                    else    
+                        {
+                            move = gMetagrossBossGrassMoves[Random() % 4];
+                            move2 = gMetagrossBossGrassMoves[(Random() % 2) + 2];
+                        }
+                        gBattleMons[metagrossBoss].moves[0] = move;
+                        gBattleMons[metagrossBoss].moves[1] = move;
+                        gBattleMons[metagrossBoss].moves[2] = move2;
+                        gBattleMons[metagrossBoss].moves[3] = move2;
+                        break;
                 case TYPE_ELECTRIC:
                     move = gMetagrossBossElectricMoves[Random() % 4];
                     move2 = gMetagrossBossElectricMoves[(Random() % 2) + 2];
@@ -5029,10 +5045,7 @@ static void SetOpponentMovesMetagrossBossTest(void)
                     gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
             }
-         }
-            checkSecondaryTargetForFourTimesEffective = FALSE;
-            checkPrimaryTargetForTwoTimesEffective = FALSE;
-            checkSecondaryTargetForTwoTimesEffective = FALSE;               
+         }          
     }
 // 
 //     
