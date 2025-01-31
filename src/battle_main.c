@@ -4783,8 +4783,10 @@ static void SetOpponentMovesMetagrossBossTest(void)
         s32 checkSecondaryTargetForTwoTimesEffective = FALSE;
         s32 moveTypeFinal;
         s32 move, move2;
-        u16 fourTimesEffectiveMoves[18];
-        u32 fourTimesEffectiveMovesCount = 0;
+        u16 fourTimesEffectiveTypes [18];
+        u16 twoTimesEffectiveTypes [18];
+        u32 fourTimesEffectiveTypesCount = 0;
+        u32 twoTimesEffectiveTypesCount = 0;
 
         if(gBattleMons[playerPositionLeft].hp == 0)
             {
@@ -4806,28 +4808,18 @@ static void SetOpponentMovesMetagrossBossTest(void)
                 metagrossPrimaryTarget = playerPositionRight;
                 metagrossSecondaryTarget = playerPositionLeft;
             }
+        
         for (i = 0; i < 18; i++)
             {
                 GET_MOVE_TYPE(gMovePoolTypeCheck[i], moveType);
                 typeEffectiveness = CalcTypeEffectivenessMultiplier(gMovePoolTypeCheck[i], moveType, metagrossBoss, metagrossPrimaryTarget, TRUE);
                     if(typeEffectiveness == fourTimesEffective)
                         {
-                            i = 18;
-                            moveTypeFinal = moveType;
-                            checkSecondaryTargetForFourTimesEffective = FALSE;
-                        }
-                    else    
-                        {
-                        if(gBattleMons[metagrossSecondaryTarget].hp == 0)
-                            {                        
-                            checkSecondaryTargetForFourTimesEffective = FALSE;
-                            checkPrimaryTargetForTwoTimesEffective = TRUE;
-                            }
-                        else
-                            checkSecondaryTargetForFourTimesEffective = TRUE;
+                            fourTimesEffectiveTypes [fourTimesEffectiveTypesCount] = moveType;
+                            fourTimesEffectiveTypesCount++;
                         }
             }
-        if(checkSecondaryTargetForFourTimesEffective == TRUE)
+        if(fourTimesEffectiveTypesCount == 0)
             {
                 for (i = 0; i < 18; i++)
                 {
@@ -4835,17 +4827,12 @@ static void SetOpponentMovesMetagrossBossTest(void)
                     typeEffectiveness = CalcTypeEffectivenessMultiplier(gMovePoolTypeCheck[i], moveType, metagrossBoss, metagrossSecondaryTarget, TRUE);
                         if(typeEffectiveness == fourTimesEffective)
                             {
-                                i = 18;
-                                moveTypeFinal = moveType;
-                                checkPrimaryTargetForTwoTimesEffective = FALSE;
-                            }
-                        else
-                            {
-                            checkPrimaryTargetForTwoTimesEffective = TRUE;
-                            }       
+                                fourTimesEffectiveTypes [fourTimesEffectiveTypesCount] = moveType;
+                                fourTimesEffectiveTypesCount++;
+                            }  
                 }
             }
-        if(checkPrimaryTargetForTwoTimesEffective == TRUE)
+        if(fourTimesEffectiveTypesCount == 0)
             {
                     for (i = 0; i < 18; i++)
                 {
@@ -4853,38 +4840,31 @@ static void SetOpponentMovesMetagrossBossTest(void)
                     typeEffectiveness = CalcTypeEffectivenessMultiplier(gMovePoolTypeCheck[i], moveType, metagrossBoss, metagrossPrimaryTarget, TRUE);
                         if(typeEffectiveness == twoTimesEffective)
                             {
-                                i = 18;
-                                moveTypeFinal = moveType;
-                                checkSecondaryTargetForTwoTimesEffective = FALSE;
-                            }
-                        else
-                            {
-                                if(gBattleMons[metagrossSecondaryTarget].hp == 0)
-                                {
-                                    checkSecondaryTargetForTwoTimesEffective = FALSE;
-                                    moveTypeFinal = TYPE_NONE;
-                                }
-                                else
-                                    checkSecondaryTargetForTwoTimesEffective = TRUE;
+                               twoTimesEffectiveTypes [twoTimesEffectiveTypesCount] = moveType;
+                               twoTimesEffectiveTypesCount++;
                             }
                 }
             }
-        if(checkSecondaryTargetForTwoTimesEffective == TRUE)
+        if(twoTimesEffectiveTypesCount == 0 && fourTimesEffectiveTypesCount == 0)
                 for (i = 0; i < 18; i++)
                 {
                     GET_MOVE_TYPE(gMovePoolTypeCheck[i], moveType);
-                    
                     typeEffectiveness = CalcTypeEffectivenessMultiplier(gMovePoolTypeCheck[i], moveType, metagrossBoss, metagrossSecondaryTarget, TRUE);
                         if(typeEffectiveness == twoTimesEffective)
                             {
-                                i = 18;
-                                moveTypeFinal = moveType;
-                            }
-                        else
-                            {
-                                moveTypeFinal = TYPE_NONE;
+                                twoTimesEffectiveTypes [twoTimesEffectiveTypesCount] = moveType;
+                                twoTimesEffectiveTypesCount++;
                             }
                 }
+        if(fourTimesEffectiveTypesCount > 0)
+            moveTypeFinal = fourTimesEffectiveTypes [Random() % fourTimesEffectiveTypesCount];
+        else if(twoTimesEffectiveTypesCount > 0)   
+            moveTypeFinal = twoTimesEffectiveTypes [Random() % twoTimesEffectiveTypesCount];
+        else
+            moveTypeFinal = gMovePoolTypeCheck[Random() % 18];
+
+        Printf("moveTypeFinal = %d", moveTypeFinal);
+
     switch(moveTypeFinal)
      {
         {
@@ -6008,15 +5988,6 @@ const u16 gMovePoolTypeCheck[] =
         MOVE_IRON_DEFENSE,
         0xFFFF
     };
-
-gFourTimesEffectiveMove[] = 
-    {
-        MOVE_NONE,
-        MOVE_NONE,
-        MOVE_NONE,
-        MOVE_NONE,
-        0xFFFF
-    }
 
 //Items Arrays
 
