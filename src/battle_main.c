@@ -426,6 +426,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_SHADOW_CHARIZARD, 22},
     {TRAINER_CLASS_SCIENTIST, 75},
     {TRAINER_CLASS_FRO, 255},
+    {TRAINER_CLASS_FINAL_BOSS, 255},
     {0xFF, 5},
 };
 
@@ -3970,6 +3971,177 @@ const u16 gAriadosBossPoisonMoves[] =
         0xFFFF
     };
 
+const u16 gMetagrossBossNormalMoves[] =
+    {
+        MOVE_LEER,
+        MOVE_SCREECH,
+        MOVE_BODY_SLAM,
+        MOVE_HEADBUTT,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossFightingMoves[] =
+    {
+        MOVE_DRAIN_PUNCH,
+        MOVE_BULK_UP,
+        MOVE_POWER_UP_PUNCH,
+        MOVE_AURA_SPHERE,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossFlyingMoves[] =
+    {
+        MOVE_AGILITY,
+        MOVE_ACROBATICS,
+        MOVE_AEROBLAST,
+        MOVE_AIR_SLASH,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossPoisonMoves[] =
+    {
+        MOVE_ACID_ARMOR,
+        MOVE_CLEAR_SMOG,
+        MOVE_TOXIC,
+        MOVE_SLUDGE_BOMB,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossGroundMoves[] =
+    {
+        MOVE_EARTHQUAKE,
+        MOVE_EARTH_POWER,
+        MOVE_SAND_ATTACK,
+        MOVE_BULLDOZE,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossRockMoves[] =
+    {
+        MOVE_STONE_EDGE,
+        MOVE_ANCIENT_POWER,
+        MOVE_STEALTH_ROCK,
+        MOVE_SMACK_DOWN,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossBugMoves[] =
+    {
+        MOVE_SPIDER_WEB,
+        MOVE_QUIVER_DANCE,
+        MOVE_SIGNAL_BEAM,
+        MOVE_BUG_BUZZ,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossGhostMoves[] =
+    {
+        MOVE_CONFUSE_RAY,
+        MOVE_SHADOW_BALL,
+        MOVE_CURSE,
+        MOVE_OMINOUS_WIND,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossSteelMoves[] =
+    {
+        MOVE_IRON_DEFENSE,
+        MOVE_IRON_HEAD,
+        MOVE_SHIFT_GEAR,
+        MOVE_FLASH_CANNON,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossFireMoves[] =
+    {
+        MOVE_FIRE_SPIN,
+        MOVE_FLAME_CHARGE,
+        MOVE_FLAMETHROWER,
+        MOVE_WILL_O_WISP,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossWaterMoves[] =
+    {
+        MOVE_WATER_PULSE,
+        MOVE_AQUA_RING,
+        MOVE_WHIRLPOOL,
+        MOVE_ACID_ARMOR,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossGrassMoves[] =
+    {
+        MOVE_MEGA_DRAIN,
+        MOVE_SPORE,
+        MOVE_RAZOR_LEAF,
+        MOVE_STRENGTH_SAP,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossElectricMoves[] =
+    {
+        MOVE_THUNDERBOLT,
+        MOVE_THUNDER_WAVE,
+        MOVE_CHARGE_BEAM,
+        MOVE_ZAP_CANNON,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossPsychicMoves[] =
+    {
+        MOVE_PSYCHIC,
+        MOVE_CALM_MIND,
+        MOVE_ZEN_HEADBUTT,
+        MOVE_FUTURE_SIGHT,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossIceMoves[] =
+    {
+        MOVE_ICICLE_CRASH,
+        MOVE_ICE_BEAM,
+        MOVE_ICY_WIND,
+        MOVE_MIST,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossDragonMoves[] =
+    {
+        MOVE_DRAGON_BREATH,
+        MOVE_DRACO_METEOR,
+        MOVE_DRAGON_DANCE,
+        MOVE_DRAGON_DANCE,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossDarkMoves[] =
+    {
+        MOVE_ASSURANCE,
+        MOVE_NASTY_PLOT,
+        MOVE_DARK_PULSE,
+        MOVE_NASTY_PLOT,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossFairyMoves[] =
+    {
+        MOVE_MOONBLAST,
+        MOVE_DAZZLING_GLEAM,
+        MOVE_GEOMANCY,
+        MOVE_DRAINING_KISS,
+        0xFFFF
+    };
+
+const u16 gMetagrossBossGenericMoves[] =
+    {
+        MOVE_LAVA_PLUME,
+        MOVE_SURF,
+        MOVE_SLUDGE_WAVE,
+        MOVE_PETAL_BLIZZARD,
+        0xFFFF
+    };
+
 void BattleTurnPassed(void)
 {
     s32 i;
@@ -4606,9 +4778,25 @@ static void SetOpponentMovesMetagrossBossTest(void)
         s32 fourTimesEffective = 16384;
         s32 twoTimesEffective = 8192;
         s32 neutalEffective = 4096;
+        s32 checkSecondaryTargetForFourTimesEffective = FALSE;
+        s32 checkPrimaryTargetForTwoTimesEffective = FALSE;
+        s32 checkSecondaryTargetForTwoTimesEffective = FALSE;
         s32 moveTypeFinal;
+        s32 move, move2;
+        u16 fourTimesEffectiveMoves[18];
+        u32 fourTimesEffectiveMovesCount = 0;
 
-        if (gBattleMons[playerPositionLeft].hp < gBattleMons[playerPositionRight].hp)
+        if(gBattleMons[playerPositionLeft].hp == 0)
+            {
+                metagrossPrimaryTarget = playerPositionRight;
+                metagrossSecondaryTarget = playerPositionLeft;
+            }
+        else if(gBattleMons[playerPositionRight].hp == 0)
+            {
+                metagrossPrimaryTarget = playerPositionLeft;
+                metagrossSecondaryTarget = playerPositionRight;
+            }
+        else if (gBattleMons[playerPositionLeft].hp < gBattleMons[playerPositionRight].hp)
             {
                 metagrossPrimaryTarget = playerPositionLeft;
                 metagrossSecondaryTarget = playerPositionRight;
@@ -4618,7 +4806,6 @@ static void SetOpponentMovesMetagrossBossTest(void)
                 metagrossPrimaryTarget = playerPositionRight;
                 metagrossSecondaryTarget = playerPositionLeft;
             }
-
         for (i = 0; i < 18; i++)
             {
                 GET_MOVE_TYPE(gMovePoolTypeCheck[i], moveType);
@@ -4627,11 +4814,20 @@ static void SetOpponentMovesMetagrossBossTest(void)
                         {
                             i = 18;
                             moveTypeFinal = moveType;
-                            Printf("Fallthough1");
+                            checkSecondaryTargetForFourTimesEffective = FALSE;
+                        }
+                    else    
+                        {
+                        if(gBattleMons[metagrossSecondaryTarget].hp == 0)
+                            {                        
+                            checkSecondaryTargetForFourTimesEffective = FALSE;
+                            checkPrimaryTargetForTwoTimesEffective = TRUE;
+                            }
+                        else
+                            checkSecondaryTargetForFourTimesEffective = TRUE;
                         }
             }
-
-        if(typeEffectiveness < fourTimesEffective)
+        if(checkSecondaryTargetForFourTimesEffective == TRUE)
             {
                 for (i = 0; i < 18; i++)
                 {
@@ -4641,12 +4837,17 @@ static void SetOpponentMovesMetagrossBossTest(void)
                             {
                                 i = 18;
                                 moveTypeFinal = moveType;
-                            Printf("Fallthough2");
+                                checkPrimaryTargetForTwoTimesEffective = FALSE;
                             }
+                        else
+                            {
+                            checkPrimaryTargetForTwoTimesEffective = TRUE;
+                            }       
                 }
             }
-        else if(typeEffectiveness < twoTimesEffective)
-                for (i = 0; i < 18; i++)
+        if(checkPrimaryTargetForTwoTimesEffective == TRUE)
+            {
+                    for (i = 0; i < 18; i++)
                 {
                     GET_MOVE_TYPE(gMovePoolTypeCheck[i], moveType);
                     typeEffectiveness = CalcTypeEffectivenessMultiplier(gMovePoolTypeCheck[i], moveType, metagrossBoss, metagrossPrimaryTarget, TRUE);
@@ -4654,156 +4855,204 @@ static void SetOpponentMovesMetagrossBossTest(void)
                             {
                                 i = 18;
                                 moveTypeFinal = moveType;
-                            Printf("Fallthough3");
+                                checkSecondaryTargetForTwoTimesEffective = FALSE;
+                            }
+                        else
+                            {
+                                if(gBattleMons[metagrossSecondaryTarget].hp == 0)
+                                {
+                                    checkSecondaryTargetForTwoTimesEffective = FALSE;
+                                    moveTypeFinal = TYPE_NONE;
+                                }
+                                else
+                                    checkSecondaryTargetForTwoTimesEffective = TRUE;
                             }
                 }
-        else if(typeEffectiveness < twoTimesEffective)
+            }
+        if(checkSecondaryTargetForTwoTimesEffective == TRUE)
                 for (i = 0; i < 18; i++)
                 {
                     GET_MOVE_TYPE(gMovePoolTypeCheck[i], moveType);
+                    
                     typeEffectiveness = CalcTypeEffectivenessMultiplier(gMovePoolTypeCheck[i], moveType, metagrossBoss, metagrossSecondaryTarget, TRUE);
                         if(typeEffectiveness == twoTimesEffective)
                             {
                                 i = 18;
                                 moveTypeFinal = moveType;
-                            Printf("Fallthough4");
                             }
                         else
                             {
                                 moveTypeFinal = TYPE_NONE;
-                            
                             }
                 }
-    if (moveTypeFinal > 18)
-        {
-            gBattleMons[metagrossBoss].moves[0] = MOVE_ASSURANCE;
-            gBattleMons[metagrossBoss].moves[1] = MOVE_ASSURANCE;
-            gBattleMons[metagrossBoss].moves[2] = MOVE_ASSURANCE;
-            gBattleMons[metagrossBoss].moves[3] = MOVE_ASSURANCE;
-        }
-    else
-    {    
     switch(moveTypeFinal)
      {
         {
                 case TYPE_NORMAL:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_ASSURANCE;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_ASSURANCE;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_ASSURANCE;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_ASSURANCE;
+                    move = gMetagrossBossNormalMoves[Random() % 4];
+                    move2 = gMetagrossBossNormalMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
+                    break;
                 case TYPE_FIGHTING:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_FOCUS_BLAST;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_BULK_UP;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_POWER_UP_PUNCH;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_FAKE_TEARS;
+                    move = gMetagrossBossFightingMoves[Random() % 4];
+                    move2 = gMetagrossBossFightingMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_FLYING:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_FOCUS_BLAST;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_FOCUS_BLAST;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_FOCUS_BLAST;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_FOCUS_BLAST;
+                    move = gMetagrossBossFlyingMoves[Random() % 4];
+                    move2 = gMetagrossBossFlyingMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_POISON:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_TAILWIND;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_TAILWIND;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_TAILWIND;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_TAILWIND;
+                    move = gMetagrossBossPoisonMoves[Random() % 4];
+                    move2 = gMetagrossBossPoisonMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_GROUND:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_POISON_JAB;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_POISON_JAB;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_POISON_JAB;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_POISON_JAB;
+                    move = gMetagrossBossGroundMoves[Random() % 4];
+                    move2 = gMetagrossBossGroundMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_ROCK:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_EARTHQUAKE;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_EARTHQUAKE;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_EARTHQUAKE;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_EARTHQUAKE;
+                    move = gMetagrossBossRockMoves[Random() % 4];
+                    move2 = gMetagrossBossRockMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_BUG:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_STONE_EDGE;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_STONE_EDGE;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_STONE_EDGE;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_STONE_EDGE;
+                    move = gMetagrossBossBugMoves[Random() % 4];
+                    move2 = gMetagrossBossBugMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_GHOST:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_BUG_BUZZ;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_BUG_BUZZ;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_BUG_BUZZ;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_BUG_BUZZ;
+                    move = gMetagrossBossGhostMoves[Random() % 4];
+                    move2 = gMetagrossBossGhostMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_STEEL:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_SHADOW_BALL;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_SHADOW_BALL;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_SHADOW_BALL;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_SHADOW_BALL;
+                    move = gMetagrossBossSteelMoves[Random() % 4];
+                    move2 = gMetagrossBossSteelMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_FIRE:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_IRON_DEFENSE;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_IRON_DEFENSE;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_IRON_DEFENSE;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_IRON_DEFENSE;
+                    move = gMetagrossBossFireMoves[Random() % 4];
+                    move2 = gMetagrossBossFireMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_WATER:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_FIRE_SPIN;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_FIRE_SPIN;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_FIRE_SPIN;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_FIRE_SPIN;
+                    if(gBattleMons[metagrossBoss].statStages[STAT_DEF] >= 8)
+                    {   
+                        move = gMetagrossBossWaterMoves[Random() % 3];
+                        move2 = gMetagrossBossWaterMoves[(Random() % 1 + 2)];
+                    }
+                    else
+                    {
+                        move = gMetagrossBossWaterMoves[Random() % 4];
+                        move2 = gMetagrossBossWaterMoves[(Random() % 2) + 2];
+                    }
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_GRASS:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_WATER_PULSE;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_WATER_PULSE;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_WATER_PULSE;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_WATER_PULSE;
+                    move = gMetagrossBossGrassMoves[Random() % 4];
+                    move2 = gMetagrossBossGrassMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_ELECTRIC:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_LEAF_BLADE;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_LEAF_BLADE;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_LEAF_BLADE;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_LEAF_BLADE;
+                    move = gMetagrossBossElectricMoves[Random() % 4];
+                    move2 = gMetagrossBossElectricMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_PSYCHIC:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_THUNDERBOLT;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_THUNDERBOLT;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_THUNDERBOLT;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_THUNDERBOLT;
+                    move = gMetagrossBossPsychicMoves[Random() % 4];
+                    move2 = gMetagrossBossPsychicMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_ICE:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_PSYCHIC;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_PSYCHIC;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_PSYCHIC;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_PSYCHIC;
+                    move = gMetagrossBossIceMoves[Random() % 4];
+                    move2 = gMetagrossBossIceMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_DRAGON:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_ICICLE_CRASH;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_ICICLE_CRASH;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_ICICLE_CRASH;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_ICICLE_CRASH;
+                    move = gMetagrossBossDragonMoves[Random() % 4];
+                    move2 = gMetagrossBossDragonMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_DARK:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_DRAGON_BREATH;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_DRAGON_BREATH;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_DRAGON_BREATH;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_DRAGON_BREATH;
+                    move = gMetagrossBossDarkMoves[Random() % 4];
+                    move2 = gMetagrossBossDarkMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_FAIRY:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_ASSURANCE;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_ASSURANCE;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_ASSURANCE;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_ASSURANCE;
+                    move = gMetagrossBossFairyMoves[Random() % 4];
+                    move2 = gMetagrossBossFairyMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_NONE:
-                    gBattleMons[metagrossBoss].moves[0] = MOVE_ASSURANCE;
-                    gBattleMons[metagrossBoss].moves[1] = MOVE_ASSURANCE;
-                    gBattleMons[metagrossBoss].moves[2] = MOVE_ASSURANCE;
-                    gBattleMons[metagrossBoss].moves[3] = MOVE_ASSURANCE;
+                    move = gMetagrossBossGenericMoves[Random() % 4];
+                    move2 = gMetagrossBossGenericMoves[(Random() % 2) + 2];
+                    gBattleMons[metagrossBoss].moves[0] = move;
+                    gBattleMons[metagrossBoss].moves[1] = move;
+                    gBattleMons[metagrossBoss].moves[2] = move2;
+                    gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
             }
-     }
-    }   
-             
-                
+         }
+            checkSecondaryTargetForFourTimesEffective = FALSE;
+            checkPrimaryTargetForTwoTimesEffective = FALSE;
+            checkSecondaryTargetForTwoTimesEffective = FALSE;               
     }
 // 
 //     
@@ -5759,6 +6008,15 @@ const u16 gMovePoolTypeCheck[] =
         MOVE_IRON_DEFENSE,
         0xFFFF
     };
+
+gFourTimesEffectiveMove[] = 
+    {
+        MOVE_NONE,
+        MOVE_NONE,
+        MOVE_NONE,
+        MOVE_NONE,
+        0xFFFF
+    }
 
 //Items Arrays
 

@@ -1926,11 +1926,11 @@ const struct Trainer gTrainers[] = {
     [TRAINER_MATT_FINAL_BOSS] =
     {
         .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
-        .trainerClass = TRAINER_CLASS_GMP,
+        .trainerClass = TRAINER_CLASS_FINAL_BOSS,
         // .trainerClass = TRAINER_CLASS_SHADOW_CHARIZARD,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_MEWTWO,
-        .trainerName = _("BossTest"),
+        .trainerPic = TRAINER_PIC_LATTKA,
+        .trainerName = _("Gordy"),
         .items = {},
         .doubleBattle = TRUE,
         .twoVsOne = TRUE,

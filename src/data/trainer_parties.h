@@ -14991,12 +14991,15 @@ static const struct TrainerMonItemCustomMoves sParty_MattBossTest[] = {
     {
     .abilityNum = 0,
     .iv = 255,
-    .lvl = 65,
+    .lvl = 40,
     .species = SPECIES_METAGROSS,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SNEER, MOVE_SNEER, MOVE_SNEER, MOVE_SNEER},
+    .evs = {0, 60, 255, 0, 255, 0},
     .stats =
         {
+        .statDef = 65,
+        .statSpDef = 50,
         .movePP1 = 255,
         .movePP2 = 255,
         .movePP3 = 255,

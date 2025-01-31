@@ -1194,12 +1194,139 @@ static const struct AbilitySetter sCheetoAbilitySet[] =
 static const struct AbilitySetter sOliveAbilitySet[] = 
 {
     {ABILITY_OWN_TEMPO, 1},
-    {ABILITY_CUTE_CHARM, 15},
-    {ABILITY_FUR_COAT, 25},
-    {ABILITY_ADAPTABILITY, 35},
-    {ABILITY_SERENE_GRACE, 35},
+    {ABILITY_CUTE_CHARM, 12},
+    {ABILITY_FUR_COAT, 20},
+    {ABILITY_ADAPTABILITY, 30},
+    {ABILITY_SERENE_GRACE, 40},
     ABILITY_SET_END
 };
+
+static const struct AbilitySetter sMetagrossAbilitySet[] = 
+{
+    {ABILITY_CLEAR_BODY, 1},
+    {ABILITY_LIGHT_METAL, 15},
+    {ABILITY_TOUGH_CLAWS, 25},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossNormalAbilitySet[] = 
+{
+    {ABILITY_OWN_TEMPO, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossFightingAbilitySet[] = 
+{
+    {ABILITY_GUTS, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossFlyingAbilitySet[] = 
+{
+    {ABILITY_DEFIANT, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossPoisonAbilitySet[] = 
+{
+    {ABILITY_STENCH, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossGroundAbilitySet[] = 
+{
+    {ABILITY_ARENA_TRAP, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossRockAbilitySet[] = 
+{
+    {ABILITY_SOLID_ROCK, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossBugAbilitySet[] = 
+{
+    {ABILITY_SHED_SKIN, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossGhostAbilitySet[] = 
+{
+    {ABILITY_PRESSURE, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossSteelAbilitySet[] = 
+{
+    {ABILITY_CLEAR_BODY, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossFireAbilitySet[] = 
+{
+    {ABILITY_BLAZE, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossWaterAbilitySet[] = 
+{
+    {ABILITY_TORRENT, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossGrassAbilitySet[] = 
+{
+    {ABILITY_OVERGROW, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossElectricAbilitySet[] = 
+{
+    {ABILITY_STATIC, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossPsychicAbilitySet[] = 
+{
+    {ABILITY_SYNCHRONIZE, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossIceAbilitySet[] = 
+{
+    {ABILITY_MOODY, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossDragonAbilitySet[] = 
+{
+    {ABILITY_UNNERVE, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossDarkAbilitySet[] = 
+{
+    {ABILITY_SUPER_LUCK, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sMetagrossFairyAbilitySet[] = 
+{
+    {ABILITY_CUTE_CHARM, 1},
+    ABILITY_SET_END
+};
+
+static const struct AbilitySetter sAshAbilitySet[] = 
+{
+    {ABILITY_STRONG_JAW, 1},
+    {ABILITY_MOXIE, 12},
+    {ABILITY_FLUFFY, 20},
+    {ABILITY_INTIMIDATE, 30},
+    {ABILITY_VITAL_SPIRIT, 40},
+    ABILITY_SET_END
+};
+
 
 static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] = 
 {
@@ -1416,7 +1543,25 @@ static const struct AbilitySetter *const sAbilitySetterLearnsets[NUM_SPECIES] =
     [SPECIES_CHEETO] = sCheetoAbilitySet,
     [SPECIES_ARIADOS_GHOST] = sCheetoAbilitySet,
     [SPECIES_OLIVE] = sOliveAbilitySet,
-    
+    [SPECIES_METAGROSS] = sMetagrossAbilitySet,
+    [SPECIES_METAGROSS_NORMAL] = sMetagrossNormalAbilitySet,
+    [SPECIES_METAGROSS_FIGHTING] = sMetagrossFightingAbilitySet,
+    [SPECIES_METAGROSS_FLYING] = sMetagrossFlyingAbilitySet,
+    [SPECIES_METAGROSS_POISON] = sMetagrossPoisonAbilitySet,
+    [SPECIES_METAGROSS_GROUND] = sMetagrossGroundAbilitySet,
+    [SPECIES_METAGROSS_ROCK] = sMetagrossRockAbilitySet,
+    [SPECIES_METAGROSS_BUG] = sMetagrossBugAbilitySet,
+    [SPECIES_METAGROSS_GHOST] = sMetagrossGhostAbilitySet,
+    [SPECIES_METAGROSS_STEEL] = sMetagrossSteelAbilitySet,
+    [SPECIES_METAGROSS_FIRE] = sMetagrossFireAbilitySet,
+    [SPECIES_METAGROSS_WATER] = sMetagrossWaterAbilitySet,
+    [SPECIES_METAGROSS_GRASS] = sMetagrossGrassAbilitySet,
+    [SPECIES_METAGROSS_ELECTRIC] = sMetagrossElectricAbilitySet,
+    [SPECIES_METAGROSS_ICE] = sMetagrossIceAbilitySet,
+    [SPECIES_METAGROSS_DRAGON] = sMetagrossDragonAbilitySet,
+    [SPECIES_METAGROSS_DARK] = sMetagrossDarkAbilitySet,
+    [SPECIES_METAGROSS_FAIRY] = sMetagrossFairyAbilitySet,
+    [SPECIES_ASH] = sAshAbilitySet,
     
 
 

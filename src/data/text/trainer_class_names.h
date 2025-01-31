@@ -86,4 +86,5 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_SHADOW_CHARIZARD] = _("Engineer"),
     [TRAINER_CLASS_SCIENTIST] = _("Scientist"),
     [TRAINER_CLASS_FRO] = _("Novice"),
+    [TRAINER_CLASS_FINAL_BOSS] = _("HeadEngineer"),
 };

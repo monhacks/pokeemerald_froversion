@@ -3226,6 +3226,8 @@ void CalculateMonStats(struct Pokemon *mon)
     s32 level = GetLevelFromMonExp(mon);
     s32 levelSquared = level * level;
     s32 newMaxHP;
+    s32 newDef;
+    s32 newSpDef;
 
 
     SetMonData(mon, MON_DATA_LEVEL, &level);
@@ -3244,11 +3246,9 @@ void CalculateMonStats(struct Pokemon *mon)
     }
     else if (IsSpeciesOneOf(species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS)
     {
-        Printf("gBaseStats[species].baseHP = %d", gBaseStats[species].baseHP);
-        Printf("levelSquared = %d", levelSquared);
         newMaxHP = (gBaseStats[species].baseHP * (1 + levelSquared / scalingFactor) + (levelSquared / scalingFactor));
-        Printf("Testing");
-        Printf("NewMaxHPInsideCase = %d", newMaxHP);
+        newDef = (((2 * gBaseStats[species].baseDefense + 31 + 512 / 4) * level) / 100) + 5;
+        newSpDef = (((2 * gBaseStats[species].baseSpDefense + 31 + 512 / 4) * level) / 100) + 5;
     }
     else
     {
@@ -3268,6 +3268,12 @@ void CalculateMonStats(struct Pokemon *mon)
     CALC_STAT(baseSpeed, speedIV, speedEV, STAT_SPEED, MON_DATA_SPEED)
     CALC_STAT(baseSpAttack, spAttackIV, spAttackEV, STAT_SPATK, MON_DATA_SPATK)
     CALC_STAT(baseSpDefense, spDefenseIV, spDefenseEV, STAT_SPDEF, MON_DATA_SPDEF)
+
+    if (IsSpeciesOneOf(species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS)
+    {
+        SetMonData(mon, MON_DATA_DEF, &newDef);
+        SetMonData(mon, MON_DATA_SPDEF, &newSpDef);
+    }
 
     if (species == SPECIES_SHEDINJA)
     {
@@ -3293,6 +3299,8 @@ void CalculateMonStats(struct Pokemon *mon)
     }
 
     SetMonData(mon, MON_DATA_HP, &currentHP);
+
+
 
     // if (species == SPECIES_PRIMEAPE)
     //             newMaxHP = 600;
@@ -6734,6 +6742,8 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_MAGA_LEADER:
         case TRAINER_CLASS_ANTIFA_LEADER:
             return MUS_VS_AQUA_MAGMA_LEADER;
+        case TRAINER_CLASS_FINAL_BOSS:
+            return MUS_FV_MAD_WORLD;
         case TRAINER_CLASS_TEAM_MAGA:
         case TRAINER_CLASS_TEAM_MAGMA:
         case TRAINER_CLASS_AQUA_ADMIN:

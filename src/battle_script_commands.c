@@ -3463,12 +3463,19 @@ void SetMoveEffect(bool32 primary, u32 certain)
 static void Cmd_seteffectwithchance(void)
 {
     u32 percentChance;
-
-    if ((GetBattlerAbility(gBattlerAttacker) == ABILITY_SERENE_GRACE || GetBattlerAbility(gBattlerAttacker) == ABILITY_MATT_BOSS_FIGHT)
-        || IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gRiptorypsLine))
+    Printf("percentChanceOutside = %d", percentChance);
+    Printf("gBattleMons[gBattlerAttacker].species = %d",gBattleMons[gBattlerAttacker].species);
+    if (IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS)
+        {
+            percentChance = 100;
+            Printf("percentChanceInsideMetagross = %d", percentChance);
+        }
+    else if ((GetBattlerAbility(gBattlerAttacker) == ABILITY_SERENE_GRACE || GetBattlerAbility(gBattlerAttacker) == ABILITY_MATT_BOSS_FIGHT)
+        || IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gRiptorypsLine))
         percentChance = gBattleMoves[gCurrentMove].secondaryEffectChance * 2;
     else
         percentChance = gBattleMoves[gCurrentMove].secondaryEffectChance;
+        Printf("percentChanceInsideMetagrossAfter = %d", percentChance);
 
     if (gBattleScripting.moveEffect & MOVE_EFFECT_CERTAIN
         && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
@@ -7921,7 +7928,7 @@ static void Cmd_various(void)
         }
         else
         {
-            if (IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gMegaBosses))
+            if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
             gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 48;
             else
             gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
@@ -10646,7 +10653,7 @@ static void Cmd_weatherdamage(void)
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_HEAL_BLOCK))
             {
                 gBattlerAbility = gBattlerAttacker;
-                if (IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gMegaBosses))
+                if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
                     {
                     gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 32;
                     }
@@ -10665,7 +10672,7 @@ static void Cmd_weatherdamage(void)
                 && !(gStatuses3[gBattlerAttacker] & (STATUS3_UNDERGROUND | STATUS3_UNDERWATER))
                 && GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_SAFETY_GOOGLES)
             {
-                if (IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gMegaBosses))
+                if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
                     {
                     gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 32;
                     }
@@ -12354,10 +12361,9 @@ static void Cmd_setyawn(void)
 
 static void Cmd_setdamagetohealthdifference(void)
 {
-    Printf("gBattlerTarget = %d", gBattlerTarget);
-    Printf("IsSpeciesOneOf(gBattleMons[gBattlerTarget].species, gMegaBosses) = %d", IsSpeciesOneOf(gBattleMons[gBattlerTarget].species, gMegaBosses));
+
     if (gBattleMons[gBattlerTarget].hp <= gBattleMons[gBattlerAttacker].hp
-        || IsSpeciesOneOf(gBattleMons[gBattlerTarget].species, gMegaBosses))
+        || IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     }

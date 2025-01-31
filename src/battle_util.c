@@ -2609,6 +2609,12 @@ u8 DoBattlerEndTurnEffects(void)
                     BattleScriptExecute(BattleScript_AquaRingHeal);
                     effect++;
                 }
+                else if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
+                {
+                    gBattleMoveDamage = GetDrainedBigRootHp(gActiveBattler, gBattleMons[gActiveBattler].maxHP / 48);
+                    BattleScriptExecute(BattleScript_AquaRingHeal);
+                    effect++;
+                }
                 else
                 {
                     gBattleMoveDamage = GetDrainedBigRootHp(gActiveBattler, gBattleMons[gActiveBattler].maxHP / 16);                
@@ -2646,9 +2652,10 @@ u8 DoBattlerEndTurnEffects(void)
                 MAGIC_GAURD_CHECK;
 
                 gBattlerTarget = gStatuses3[gActiveBattler] & STATUS3_LEECHSEED_BATTLER; // Notice gBattlerTarget is actually the HP receiver.
-                if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
+                if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
                 {
-                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 32;
+                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 64;
+                Printf("working>");
                 }
                 else 
                 {
@@ -2704,7 +2711,7 @@ u8 DoBattlerEndTurnEffects(void)
                 }
                 else
                 {
-                    if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
+                    if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
                     {
                         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 32;
                     }
@@ -2738,9 +2745,9 @@ u8 DoBattlerEndTurnEffects(void)
                         effect++;
                     }
                 }
-                else if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
+                else if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
                 {
-                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 32;
+                gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 64;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     BattleScriptExecute(BattleScript_PoisonTurnDmg);
@@ -2766,7 +2773,7 @@ u8 DoBattlerEndTurnEffects(void)
             {
                 MAGIC_GAURD_CHECK;
                 gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / (B_BURN_DAMAGE >= GEN_7 ? 16 : 8);
-                if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses))
+                if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
                 {
                 gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 48;
                     if (gBattleMoveDamage == 0)
@@ -2833,7 +2840,7 @@ u8 DoBattlerEndTurnEffects(void)
                     gBattleScripting.animArg2 = gBattleStruct->wrappedMove[gActiveBattler] >> 8;
                     PREPARE_MOVE_BUFFER(gBattleTextBuff1, gBattleStruct->wrappedMove[gActiveBattler]);
                     gBattlescriptCurrInstr = BattleScript_WrapTurnDmg;
-                    if (IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gMegaBosses))
+                    if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
                         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 32;
                     else if (GetBattlerHoldEffect(gBattleStruct->wrappedBy[gActiveBattler], TRUE) == HOLD_EFFECT_BINDING_BAND)
                         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / ((B_BINDING_DAMAGE >= GEN_6) ? 6 : 8);
@@ -7287,7 +7294,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     && GetBattlerAbility(gBattlerAttacker) != ABILITY_MAGIC_GUARD
                     && gBattleStruct->rouletteEffect != 2)
                 {
-                    if (IsSpeciesOneOf(gBattleMons[gBattlerAttacker].species, gMegaBosses))
+                    if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
                     {
                         gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 32;
                     }
