@@ -24,8 +24,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "MAGAHideout3F_EventScript_Scientist3",
+      "flag": "FLAG_HIDE_MAGA_HIDEOUT_SCIENTISTS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
@@ -37,8 +37,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "MAGAHideout3F_EventScript_Scientist1",
+      "flag": "FLAG_HIDE_MAGA_HIDEOUT_SCIENTISTS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
@@ -50,8 +50,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "MAGAHideout3F_EventScript_Scientist2",
+      "flag": "FLAG_HIDE_MAGA_HIDEOUT_SCIENTISTS"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LATTKA",
@@ -64,7 +64,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "VermillionCity_MAGAHideout_Lab_EventScripts_FinalBoss",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MAGA_HIDEOUT_SCIENTISTS"
     }
   ],
   "warp_events": [

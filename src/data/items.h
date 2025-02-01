@@ -3556,7 +3556,7 @@ const struct Item gItems[] =
 
     [ITEM_COIN_CASE] =
     {
-        .name = _("Coin Case"),
+        .name = _("Boat Fuel"),
         .itemId = ITEM_COIN_CASE,
         .price = 0,
         .description = sCoinCaseDesc,
@@ -4529,7 +4529,7 @@ const struct Item gItems[] =
 
     [ITEM_OAKS_PARCEL] =
     {
-        .name = _("Tilyou's Box"),
+        .name = _("Fresh Goods"),
         .itemId = ITEM_OAKS_PARCEL,
         .price = 0,
         .description = sOaksParcelDesc,

@@ -1180,6 +1180,9 @@ void Overworld_PlaySpecialMapMusic(void)
 {
     u16 music = GetCurrLocationDefaultMusic();
 
+    if(HasTrainerBeenFought(TRAINER_MATT_FINAL_BOSS))
+        music = MUS_FV_MAD_WORLD;
+
     if (music != MUS_ABNORMAL_WEATHER && music != 0xFFFF)
     {
         if (gSaveBlock1Ptr->savedMusic)
@@ -1189,7 +1192,6 @@ void Overworld_PlaySpecialMapMusic(void)
         else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
             music = MUS_SURF;
     }
-
     if (music != GetCurrentMapMusic())
         PlayNewMapMusic(music);
 }

@@ -1552,7 +1552,7 @@ void StartUnionRoomBattle(u16 battleFlags)
     gLinkPlayers[GetMultiplayerId() ^ 1].id = GetMultiplayerId() ^ 1;
     gMain.savedCallback = CB2_ReturnFromCableClubBattle;
     gBattleTypeFlags = battleFlags;
-    PlayBattleBGM();
+    //PlayBattleBGM();
 }
 
 static void WarpForWirelessMinigame(u16 linkService, u16 x, u16 y)

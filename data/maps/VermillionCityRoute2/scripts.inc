@@ -34,6 +34,7 @@ VermillionCityRoute2_EventScript_WildPokemonAttacks::
 		playse SE_WALL_HIT
 		waitse
 		msgbox VermillionCityRoute2_Text_StopThat, MSGBOX_AUTOCLOSE
+		clearflag FLAG_HIDE_MATTS_HOUSE_NPCS
 		setvar VAR_MAGEE_VERSION, 4
 		warpsilent MAP_VERMILLION_CITY_MATTS_HOUSE, 255, 1, 4												
 	releaseall

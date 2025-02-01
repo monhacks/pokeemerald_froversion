@@ -1398,7 +1398,7 @@ static const u8 sMachBikeDesc[] = _(
 
 static const u8 sCoinCaseDesc[] = _(
     "A case that holds\n"
-    "up to 9,999 COINS.");
+    "up to 9,999 FUEL.");
 
 static const u8 sItemfinderDesc[] = _(
     "A device that\n"
@@ -1828,9 +1828,8 @@ static const u8 sHM08Desc[] = _(
 
 // FireRed/LeafGreen key items
 static const u8 sOaksParcelDesc[] = _(
-    "A parcel for Prof.\n"
-    "Tilyou from a Pokémon\n"
-    "Mart's clerk.");
+    "A supply of fresh\n"
+    "fruits for Tommy.");
 
 static const u8 sPokeFluteDesc[] = _(
     "A sweet-sounding\n"

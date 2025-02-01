@@ -76,14 +76,12 @@ CinnabarIsland_Inn_EventScript_CheckIn::
 
 CinnabarIsland_Inn_EventScript_ComeBackWhenReady::
 		msgbox CinnabarIsland_Inn_Text_ComeBackWhenReady, MSGBOX_DEFAULT
-		hidemoneybox
 	releaseall
 	end
 
 CinnabarIsland_Inn_EventScript_CompleteCheckIn::
 		msgbox CinnabarIsland_Inn_Text_ThankYouForStayingWithUs, MSGBOX_DEFAULT
 		setvar VAR_ROUTE101_STATE, 2
-		hidemoneybox
 	releaseall
 	end
 

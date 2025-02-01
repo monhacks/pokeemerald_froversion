@@ -6742,8 +6742,6 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_MAGA_LEADER:
         case TRAINER_CLASS_ANTIFA_LEADER:
             return MUS_VS_AQUA_MAGMA_LEADER;
-        case TRAINER_CLASS_FINAL_BOSS:
-            return MUS_FV_MAD_WORLD;
         case TRAINER_CLASS_TEAM_MAGA:
         case TRAINER_CLASS_TEAM_MAGMA:
         case TRAINER_CLASS_AQUA_ADMIN:
@@ -6769,6 +6767,8 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PIKE_QUEEN:
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
+        case TRAINER_CLASS_FINAL_BOSS:
+            return MUS_FV_MAD_WORLD;
         default:
             return MUS_VS_TRAINER;
         }
@@ -6779,19 +6779,23 @@ u16 GetBattleBGM(void)
 
 void PlayBattleBGM(void)
 {
+    
+    {
     ResetMapMusic();
     m4aMPlayAllStop();
     PlayBGM(GetBattleBGM());
+    }
 }
 
 void PlayMapChosenOrBattleBGM(u16 songId)
 {
-    ResetMapMusic();
-    m4aMPlayAllStop();
-    if (songId)
-        PlayNewMapMusic(songId);
-    else
-        PlayNewMapMusic(GetBattleBGM());
+        ResetMapMusic();
+        m4aMPlayAllStop();
+        if (songId)
+            PlayNewMapMusic(songId);
+        else
+            PlayNewMapMusic(GetBattleBGM());
+    
 }
 
 // Identical to PlayMapChosenOrBattleBGM, but uses a task instead
@@ -6800,7 +6804,7 @@ void PlayMapChosenOrBattleBGM(u16 songId)
 void CreateTask_PlayMapChosenOrBattleBGM(u16 songId)
 {
     u8 taskId;
-
+    Printf("trigger2");
     ResetMapMusic();
     m4aMPlayAllStop();
 
@@ -6810,6 +6814,7 @@ void CreateTask_PlayMapChosenOrBattleBGM(u16 songId)
 
 static void Task_PlayMapChosenOrBattleBGM(u8 taskId)
 {
+
     if (gTasks[taskId].tSongId)
         PlayNewMapMusic(gTasks[taskId].tSongId);
     else

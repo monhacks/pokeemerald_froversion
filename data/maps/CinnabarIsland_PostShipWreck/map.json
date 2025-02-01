@@ -3,7 +3,7 @@
   "name": "CinnabarIsland_PostShipWreck",
   "layout": "LAYOUT_CINNABAR_ISLAND_POST_SHIP_WRECK",
   "music": "MUS_FV_CINNABAR_ISLAND_POSTSHIPWRECK",
-  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "region_map_section": "MAPSEC_CINNABAR_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",
