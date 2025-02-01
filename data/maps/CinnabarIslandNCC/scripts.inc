@@ -3,6 +3,7 @@ CinnabarIslandNCC_MapScripts::
 	.byte 0
 
 CinnabarIslandNCC_OnLoad:
+	goto_if_defeated TRAINER_SUMMIT_CAVERNS_LATTKA_2, CinnabarIslandWarehouse_EventScript_SetDynamicWarpPreSleep
 	compare VAR_ROUTE101_STATE, 3
 	call_if_ge CinnabarIslandNCC_EventScript_SetDynamicWarpPostSleep
 	call_if_lt CinnabarIslandNCC_EventScript_SetDynamicWarpPreSleep

@@ -3982,7 +3982,7 @@ const u16 gMetagrossBossNormalMoves[] =
 
 const u16 gMetagrossBossFightingMoves[] =
     {
-        MOVE_DRAIN_PUNCH,
+        MOVE_DYNAMIC_PUNCH,
         MOVE_BULK_UP,
         MOVE_POWER_UP_PUNCH,
         MOVE_AURA_SPHERE,
@@ -4879,13 +4879,21 @@ static void SetOpponentMovesMetagrossBossTest(void)
                     gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_FIGHTING:
-                    move = gMetagrossBossFightingMoves[Random() % 4];
-                    move2 = gMetagrossBossFightingMoves[(Random() % 2) + 2];
-                    gBattleMons[metagrossBoss].moves[0] = move;
-                    gBattleMons[metagrossBoss].moves[1] = move;
-                    gBattleMons[metagrossBoss].moves[2] = move2;
-                    gBattleMons[metagrossBoss].moves[3] = move2;
-                    break;
+                    if(gBattleMons[metagrossBoss].hp < (gBattleMons[metagrossBoss].maxHP / 3) && gBattleResults.battleTurnCounter % 4 == 3)
+                        {
+                            move = MOVE_DRAIN_PUNCH;
+                            move2 = MOVE_DRAIN_PUNCH;
+                        }
+                    else    
+                        {
+                            move = gMetagrossBossFightingMoves[Random() % 4];
+                            move2 = gMetagrossBossFightingMoves[(Random() % 2) + 2];
+                        }
+                        gBattleMons[metagrossBoss].moves[0] = move;
+                        gBattleMons[metagrossBoss].moves[1] = move;
+                        gBattleMons[metagrossBoss].moves[2] = move2;
+                        gBattleMons[metagrossBoss].moves[3] = move2;
+                        break;
                 case TYPE_FLYING:
                     move = gMetagrossBossFlyingMoves[Random() % 4];
                     move2 = gMetagrossBossFlyingMoves[(Random() % 2) + 2];
@@ -5029,13 +5037,21 @@ static void SetOpponentMovesMetagrossBossTest(void)
                     gBattleMons[metagrossBoss].moves[3] = move2;
                     break;
                 case TYPE_FAIRY:
-                    move = gMetagrossBossFairyMoves[Random() % 4];
-                    move2 = gMetagrossBossFairyMoves[(Random() % 2) + 2];
-                    gBattleMons[metagrossBoss].moves[0] = move;
-                    gBattleMons[metagrossBoss].moves[1] = move;
-                    gBattleMons[metagrossBoss].moves[2] = move2;
-                    gBattleMons[metagrossBoss].moves[3] = move2;
-                    break;
+                    if(gBattleMons[metagrossBoss].hp < (gBattleMons[metagrossBoss].maxHP / 3) && gBattleResults.battleTurnCounter % 4 == 3)
+                        {
+                            move = MOVE_DRAINING_KISS;
+                            move2 = MOVE_DRAINING_KISS;
+                        }
+                    else    
+                        {
+                            move = gMetagrossBossFairyMoves[Random() % 4];
+                            move2 = gMetagrossBossFairyMoves[(Random() % 2) + 2];
+                        }
+                        gBattleMons[metagrossBoss].moves[0] = move;
+                        gBattleMons[metagrossBoss].moves[1] = move;
+                        gBattleMons[metagrossBoss].moves[2] = move2;
+                        gBattleMons[metagrossBoss].moves[3] = move2;
+                        break;
                 case TYPE_NONE:
                     move = gMetagrossBossGenericMoves[Random() % 4];
                     move2 = gMetagrossBossGenericMoves[(Random() % 2) + 2];
@@ -6079,7 +6095,7 @@ const u16 gWildPokemonRareDropItems[] =
     ITEM_RAWST_BERRY,
     ITEM_ASPEAR_BERRY,
     ITEM_LEPPA_BERRY,
-    ITEM_ORAN_BERRY,
+    ITEM_RED_SHARD,
     ITEM_PERSIM_BERRY,
     ITEM_LUM_BERRY,
     ITEM_REVIVE,

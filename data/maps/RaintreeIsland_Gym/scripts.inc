@@ -79,13 +79,6 @@ EventScript_RaintreeIsland_IceRoom_GymLeaderIce::
 	msgbox RaintreeIsland_Leader_Text_ExplainIceBeam, MSGBOX_DEFAULT
 	giveitem ITEM_TM35, 1
 	msgbox RaintreeIsland_Leader_Text_ExplainFlamethrower, MSGBOX_DEFAULT
-	msgbox RaintreeIsland_Gym_Text_TakeAPokemon, MSGBOX_DEFAULT
-		scrollingmultichoice 12, 2, 3, 3, TRUE
-		switch VAR_RESULT
-		case 0, RaintreeIsland_Gym_EventScript_GiveChansey
-		case 1, RaintreeIsland_Gym_EventScript_GiveUmbreon
-		case 2, RaintreeIsland_Gym_EventScript_GiveMilotic
-		case MULTI_B_PRESSED, RaintreeIsland_Gym_EventScript_ChooseAPokemon
 	goto EventScript_RaintreeIsland_IceRoom_GymLeaderPostBattle
 	release
 	end

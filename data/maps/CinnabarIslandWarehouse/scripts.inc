@@ -3,7 +3,9 @@ CinnabarIslandWarehouse_MapScripts::
 	.byte 0
 
 CinnabarIslandWarehouse_OnLoad:
+	goto_if_defeated TRAINER_SUMMIT_CAVERNS_LATTKA_2, CinnabarIslandWarehouse_EventScript_SetDynamicWarpPreSleep
 	compare VAR_ROUTE101_STATE, 3
+	goto_if_defeated TRAINER_SUMMIT_CAVERNS_LATTKA_2, CinnabarIslandWarehouse_EventScript_SetDynamicWarpPreSleep
 	call_if_ge CinnabarIslandWarehouse_EventScript_SetDynamicWarpPostSleep
 	call_if_lt CinnabarIslandWarehouse_EventScript_SetDynamicWarpPreSleep
 end

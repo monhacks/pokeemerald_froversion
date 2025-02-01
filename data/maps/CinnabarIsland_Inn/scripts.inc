@@ -10,6 +10,7 @@ CinnabarIsland_Inn_OnFrame:
 	.2byte 0
 
 CinnabarIsland_Inn_OnLoad:
+	goto_if_defeated TRAINER_SUMMIT_CAVERNS_LATTKA_2, CinnabarIslandWarehouse_EventScript_SetDynamicWarpPreSleep
 	compare VAR_ROUTE101_STATE, 3
 	call_if_ge CinnabarIsland_Inn_EventScript_SetDynamicWarpPostSleep
 	call_if_lt CinnabarIsland_Inn_EventScript_SetDynamicWarpPreSleep

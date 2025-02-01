@@ -3,6 +3,7 @@ MountCinnabar_1F_MapScripts::
 	.byte 0
 
 MountCinnabar_1F_OnLoad:
+	goto_if_defeated TRAINER_SUMMIT_CAVERNS_LATTKA_2, CinnabarIslandWarehouse_EventScript_SetDynamicWarpPreSleep
 	compare VAR_ROUTE101_STATE, 3
 	call_if_ge MountCinnabar_1F_EventScript_SetDynamicWarpPostSleep
 	call_if_lt MountCinnabar_1F_EventScript_SetDynamicWarpPreSleep
