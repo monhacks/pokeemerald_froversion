@@ -6781,16 +6781,16 @@ void PlayBattleBGM(void)
 {
     
     {
-    ResetMapMusic();
-    m4aMPlayAllStop();
+    //ResetMapMusic();
+    //m4aMPlayAllStop();
     PlayBGM(GetBattleBGM());
     }
 }
 
 void PlayMapChosenOrBattleBGM(u16 songId)
 {
-        ResetMapMusic();
-        m4aMPlayAllStop();
+        //ResetMapMusic();
+        //m4aMPlayAllStop();
         if (songId)
             PlayNewMapMusic(songId);
         else

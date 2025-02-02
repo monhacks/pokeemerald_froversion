@@ -1735,8 +1735,6 @@ static void CB2_EndTrainerBattle(void)
         else
             SetMainCallback2(CB2_WhiteOut);
     }
-    else if(gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS)
-        SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
     else
     {
         SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);

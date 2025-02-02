@@ -3,7 +3,7 @@
   "name": "CinnabarIslandHouse1Post",
   "layout": "LAYOUT_CINNABAR_ISLAND_HOUSE1POST",
   "music": "MUS_ABANDONED_SHIP",
-  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "region_map_section": "MAPSEC_CINNABAR_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -112,14 +112,14 @@
       "y": 15,
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND_POST_SHIP_WRECK",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 5,
       "y": 15,
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND_POST_SHIP_WRECK",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [

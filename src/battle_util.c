@@ -2821,6 +2821,9 @@ u8 DoBattlerEndTurnEffects(void)
                 && gBattleMons[gActiveBattler].hp != 0)
             {
                 MAGIC_GAURD_CHECK;
+                if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
+                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 32;
+                else
                 gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 4;
                 if (gBattleMoveDamage == 0)
                     gBattleMoveDamage = 1;

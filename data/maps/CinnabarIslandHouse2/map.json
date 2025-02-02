@@ -3,7 +3,7 @@
   "name": "CinnabarIslandHouse2",
   "layout": "LAYOUT_CINNABAR_ISLAND_HOUSE2",
   "music": "MUS_RG_CINNABAR",
-  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "region_map_section": "MAPSEC_CINNABAR_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",

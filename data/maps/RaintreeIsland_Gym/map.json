@@ -3,7 +3,7 @@
   "name": "RaintreeIsland_Gym",
   "layout": "LAYOUT_RAINTREE_ISLAND_GYM",
   "music": "MUS_FV_RAINTREE_ISLAND_GYM_ICE_2",
-  "region_map_section": "MAPSEC_LAKE_MEAD_VILLAGE",
+  "region_map_section": "MAPSEC_CINNABAR_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

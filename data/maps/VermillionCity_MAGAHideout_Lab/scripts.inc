@@ -15,6 +15,7 @@ lock
 	setflag FLAG_HIDE_MAGA_HIDEOUT_SCIENTISTS
 	fadescreen FADE_FROM_BLACK
 	msgbox MAGAHideout3F_Text_PlayerSad, MSGBOX_AUTOCLOSE
+	special GameClear
 	release
 	end
 
@@ -38,17 +39,17 @@ MAGAHideout3F_EventScript_Scientist3::
 
 MAGAHideout3F_Text_Scientist1:
 	.string "We were on the verge of a major\n"
-	.string "breakthrough! Now the lab is in\p"
+	.string "breakthrough! Now the lab is in\l"
 	.string "chaos! Was this your doing?!$"
 
 MAGAHideout3F_Text_Scientist2:
 	.string "The generators... they're down?!\n"
-	.string "Did you do this?! This will set\p"
+	.string "Did you do this?! This will set\l"
 	.string "our experiments back by months!$"
 
 MAGAHideout3F_Text_Scientist3:
 	.string "The generators... they're down?!\n"
-	.string "Did you do this?! This will set\p"
+	.string "Did you do this?! This will set\l"
 	.string "our experiments back by months!$"
 
 MAGAHideout3F_Text_FinalBossDefeated:

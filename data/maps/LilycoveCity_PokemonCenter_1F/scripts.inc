@@ -174,5 +174,6 @@ LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels: @ 821C6F6
 	.string "I haven't seen them around recently.$"
 
 LilycoveCity_PokemonCenter_1F_Text_ThePokeballContainedBlaziken:
-	.string "The Pokéball contained a Blaziken!$"
+	.string "The Pokéball contained an Ash!\p"
+	.string "Ash joins your party!$"
 
