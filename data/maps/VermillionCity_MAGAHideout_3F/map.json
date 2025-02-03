@@ -121,6 +121,34 @@
       "elevation": 0,
       "dest_map": "MAP_VERMILLION_CITY_MAGAHIDEOUT_LAB",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 6,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILLION_CITY_MAGAHIDEOUT_3F",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 6,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILLION_CITY_MAGAHIDEOUT_3F",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 21,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILLION_CITY_MAGAHIDEOUT_3F",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 21,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILLION_CITY_MAGAHIDEOUT_3F",
+      "dest_warp_id": "6"
     }
   ],
   "coord_events": [

@@ -12,7 +12,7 @@ CinnabarIsland_OnTransition: @ 81FC52E
 
 CinnabarIsland_OnFrame: @ 8238C4F
 	map_script_2 VAR_ROUTE101_STATE, 0, CinnabarIsland_NewGameEvents
-	map_script_2 VAR_ROUTE101_STATE, 7, CinnabarIsland_PostBoss
+	map_script_2 VAR_CINNIBAR_ISLAND_BOAT_STATE, 0, CinnabarIsland_PostBoss
 	.2byte 0
 
 @--------------------------------------------------------------------------------
@@ -50,6 +50,7 @@ CinnabarIsland_PostBoss::
 		applymovement LOCALID_SAILOR, Common_Movement_FacePlayer
 		waitmovement LOCALID_SAILOR
 		msgbox CinnabarIsland_Text_BoatFixed, MSGBOX_DEFAULT
+		setvar VAR_CINNIBAR_ISLAND_BOAT_STATE, 1
 	release
 	end
 	

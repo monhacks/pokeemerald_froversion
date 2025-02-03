@@ -4531,6 +4531,8 @@ static void SetOpponentMovesShadowCharizard(void)
     u8 shadowCharizardHazeChance = Random() % 256;
     bool32 hasDrops = FALSE;
     bool32 hasBigBoosts = FALSE;
+    s32 playerPositionLeft = B_POSITION_PLAYER_LEFT;
+    s32 playerPositionRight = B_POSITION_PLAYER_RIGHT;
 
     if((gBattleResults.battleTurnCounter % 5 == 4)
             && gBattleMons[B_POSITION_OPPONENT_LEFT].species == SPECIES_SHADOW_CHARIZARD)
@@ -4546,17 +4548,31 @@ static void SetOpponentMovesShadowCharizard(void)
     {
         if (gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] < 6)
                 hasDrops = TRUE;
-        if (gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] > 9)
+        if (gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] >= 9)
                 hasBigBoosts = TRUE;
-        if ((gBattleMons[B_POSITION_PLAYER_LEFT].statStages[i] >= 9 || gBattleMons[B_POSITION_PLAYER_RIGHT].statStages[i] >= 9) && gBattleMons[B_POSITION_OPPONENT_LEFT].statStages[i] < 12)
+        if ((gBattleMons[playerPositionLeft].statStages[i] >= 9 || gBattleMons[playerPositionRight].statStages[i] >= 9) && !hasBigBoosts)
             {
-                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SPECTRAL_THIEF;
-                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_SPECTRAL_THIEF;
-                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_SPECTRAL_THIEF;
-                gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_SPECTRAL_THIEF;
-                return;
+                if(gBattleMons[playerPositionLeft].type1 == TYPE_NORMAL || gBattleMons[playerPositionRight].type1 == TYPE_NORMAL)
+                    {
+                        if (shadowCharizardHazeChance > 127)
+                        {
+                            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_HAZE;
+                            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_HAZE;
+                            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_HAZE;
+                            gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_HAZE;
+                            return;
+                        }
+                    }
+                else if (shadowCharizardHazeChance > 127)
+                    {
+                        gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_SPECTRAL_THIEF;
+                        gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_SPECTRAL_THIEF;
+                        gBattleMons[B_POSITION_OPPONENT_LEFT].moves[2] = MOVE_SPECTRAL_THIEF;
+                        gBattleMons[B_POSITION_OPPONENT_LEFT].moves[3] = MOVE_SPECTRAL_THIEF;
+                        return;
+                    }
             }
-        if (hasDrops && !hasBigBoosts && shadowCharizardHazeChance > 127)
+        else if (hasDrops && !hasBigBoosts && shadowCharizardHazeChance > 127)
             {
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[0] = MOVE_HAZE;
                 gBattleMons[B_POSITION_OPPONENT_LEFT].moves[1] = MOVE_HAZE;

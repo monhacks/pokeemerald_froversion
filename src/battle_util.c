@@ -7299,7 +7299,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 {
                     if (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMegaBosses) || (IsSpeciesOneOf(gBattleMons[gActiveBattler].species, gMetagrossMetamorphForms) && gTrainerBattleOpponent_A == TRAINER_MATT_FINAL_BOSS))
                     {
-                        gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 32;
+                        gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 64;
                     }
                     else 
                     {

@@ -277,14 +277,15 @@ AI_CheckBadMove_CheckEffect: @ 82DC045
 	end
 	
 AI_CBM_SpectralThief:
-	if_stat_level_more_than AI_TARGET, STAT_ATK, DEFAULT_STAT_STAGE, Score_Plus6
-	if_stat_level_more_than AI_TARGET, STAT_DEF, DEFAULT_STAT_STAGE, Score_Plus6
-	if_stat_level_more_than AI_TARGET, STAT_SPEED, DEFAULT_STAT_STAGE, Score_Plus6
-	if_stat_level_more_than AI_TARGET, STAT_SPATK, DEFAULT_STAT_STAGE, Score_Plus6
-	if_stat_level_more_than AI_TARGET, STAT_SPDEF, DEFAULT_STAT_STAGE, Score_Plus6
-	if_stat_level_more_than AI_TARGET, STAT_ACC, DEFAULT_STAT_STAGE, Score_Plus6
-	if_stat_level_more_than AI_TARGET, STAT_EVASION, DEFAULT_STAT_STAGE, Score_Plus6
+	if_stat_level_more_than AI_TARGET, STAT_ATK, DEFAULT_STAT_STAGE, Score_Plus100
+	if_stat_level_more_than AI_TARGET, STAT_DEF, DEFAULT_STAT_STAGE, Score_Plus100
+	if_stat_level_more_than AI_TARGET, STAT_SPEED, DEFAULT_STAT_STAGE, Score_Plus100
+	if_stat_level_more_than AI_TARGET, STAT_SPATK, DEFAULT_STAT_STAGE, Score_Plus100
+	if_stat_level_more_than AI_TARGET, STAT_SPDEF, DEFAULT_STAT_STAGE, Score_Plus100
+	if_stat_level_more_than AI_TARGET, STAT_ACC, DEFAULT_STAT_STAGE, Score_Plus100
+	if_stat_level_more_than AI_TARGET, STAT_EVASION, DEFAULT_STAT_STAGE, Score_Plus100
 	end
+
 
 AI_CBM_Defense_Up_2:
 	if_stat_level_equal AI_USER, STAT_DEF, 7, Score_Minus3
@@ -1073,6 +1074,10 @@ Score_Plus15:
 
 Score_Plus8:
 	score +8
+	end
+
+Score_Plus100:
+	score +100
 	end
 	
 @ omae wa mou shindeiru

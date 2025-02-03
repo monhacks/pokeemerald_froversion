@@ -286,7 +286,7 @@ VermillionCity_Text_BoyTellsPlayAquaMemberIsAtHisShop:
 	.string "Pleasure Factory{COLOR DARK_GREY}.\p"
 	.string "Please hurry, I am afraid to bring\n"
 	.string "Chimchar in for his usual pedicure\l"
-	.string "while Team Aqua is hanging around!$"
+	.string "while Team MAGA is hanging around!$"
 
 VermillionCity_Text_MageePleasureFactory:
 	.string "Magee's Pleasure Factory$"

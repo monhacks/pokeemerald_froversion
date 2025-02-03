@@ -13715,12 +13715,12 @@
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_RHYHORN"
+                "species": "SPECIES_NUMEL"
               },
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_DIGLETT"
+                "species": "SPECIES_NUMEL"
               },
               {
                 "min_level": 21,
@@ -13730,7 +13730,7 @@
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_NUMEL"
+                "species": "SPECIES_CUBONE"
               },
               {
                 "min_level": 21,
@@ -13750,17 +13750,17 @@
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_ARON"
+                "species": "SPECIES_MAGMAR"
               },
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_SABLEYE"
+                "species": "HOENN_DEX_GEODUDE"
               },
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_PHANPY"
+                "species": "HOENN_DEX_GEODUDE"
               },
               {
                 "min_level": 21,
@@ -13784,7 +13784,7 @@
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_MAGMAR"
               },
               {
                 "min_level": 21,
@@ -13794,7 +13794,7 @@
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_HOUNDOUR"
+                "species": "SPECIES_MACHOP"
               },
               {
                 "min_level": 21,
@@ -13804,7 +13804,7 @@
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_HOUNDOUR"
+                "species": "SPECIES_MAGMAR"
               },
               {
                 "min_level": 21,
@@ -13814,17 +13814,12 @@
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_HOUNDOUR"
+                "species": "SPECIES_VAYPING"
               },
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_CHARMANDER"
-              },
-              {
-                "min_level": 21,
-                "max_level": 21,
-                "species": "SPECIES_CLEFAIRY"
+                "species": "HOENN_DEX_GEODUDE"
               },
               {
                 "min_level": 21,
@@ -13834,12 +13829,17 @@
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_CHARMANDER"
+                "species": "SPECIES_CLEFAIRY"
               },
               {
                 "min_level": 21,
                 "max_level": 21,
-                "species": "SPECIES_HOUNDOUR"
+                "species": "HOENN_DEX_GEODUDE"
+              },
+              {
+                "min_level": 21,
+                "max_level": 21,
+                "species": "HOENN_DEX_GEODUDE"
               }
             ]
           }
